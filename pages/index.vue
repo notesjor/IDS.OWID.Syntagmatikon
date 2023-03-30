@@ -34,28 +34,12 @@ export default {
   theme: { dark: false },
   data() {
     return {
-      appName: null,
-      appDescription: null,
-
-      leftIconHref: null,
-      rightIconHref: null,
-
-      footerContact: null,
-      footerImpressum: null,
-      footerDsgvo: null,
+      appName: null
     }
   },
 
   mounted() {
     this.appName = this.$config.public.appName;
-    this.appDescription = this.$config.public.appDescription;
-
-    this.leftIconHref = this.$config.public.leftIconHref;
-    this.rightIconHref = this.$config.public.rightIconHref;
-
-    this.footerContact = this.$config.public.footerContact;
-    this.footerImpressum = this.$config.public.footerImpressum;
-    this.footerDsgvo = this.$config.public.footerDsgvo;
   },
 
   methods: {
