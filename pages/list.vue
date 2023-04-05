@@ -18,9 +18,7 @@
   <v-row>
     <v-col>
       <div>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt esse corrupti minima in aspernatur rerum
-        officia quidem quibusdam explicabo accusamus obcaecati placeat at ex, quia cum. Dignissimos perspiciatis libero
-        eveniet?
+        <v-data-table :headers="headers" :items="table"></v-data-table>
       </div>
     </v-col>
   </v-row>
@@ -34,6 +32,9 @@
 </template>
 
 <script>
+import { useRessourcesStore } from '../stores/ressources'
+const rStore = useRessourcesStore()
+
 export default {
   name: "Ressourcen - Liste",
   theme: { dark: false },
@@ -41,8 +42,12 @@ export default {
     return {
       alert: true,
       overviewTable: null,
+
+      riStore: null
     }
   },
+
+
 
   mounted() {
     setTimeout(() => {
@@ -57,13 +62,11 @@ export default {
   },
 
   computed: {
-    headers() {
-      console.log(this.$store);      
-      return null;//this.$store.state.ressourceData.uniqueCategories;
+    headers() {    
+      return rStore.uniqueCategories;
     },
-    overviewTable(){
-      console.log(this.$store);
-      return null;//this.$store.state.ressourceData.overviewTable;
+    table(){
+      return rStore.info;
     }
   }
 }
