@@ -26,10 +26,19 @@
             </div>
           </v-col>
         </v-row>
+        <v-row>
+          <v-col>
+            <div>
+              <annotatedSampel></annotatedSampel>
+            </div>
+          </v-col>
+        </v-row>
 </template>
 
 <script>
+import annotatedSampel from '~~/components/annotatedSampel.vue';
 export default {
+  components: { annotatedSampel },
   name: "Index",
   theme: { dark: false },
   data() {
