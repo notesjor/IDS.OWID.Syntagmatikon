@@ -33,8 +33,7 @@
           <v-divider></v-divider>
           <v-list density="compact" nav>
             <v-list-subheader>Ressourcen</v-list-subheader>
-            <router-link to="/search"><v-list-item prepend-icon="mdi-magnify"
-                title="Suche"></v-list-item></router-link>
+            <router-link to="/search"><v-list-item prepend-icon="mdi-magnify" title="Suche"></v-list-item></router-link>
             <router-link to="/list"><v-list-item prepend-icon="mdi-format-list-bulleted-type"
                 title="Liste"></v-list-item></router-link>
             <router-link to="/network"><v-list-item prepend-icon="mdi-graph"
@@ -48,7 +47,11 @@
               variant="tonal"></v-alert>
           </v-col>
         </v-row>
-        <slot />
+        <div style="align-content: center;">
+          <div style="max-width: 1150px;">
+            <slot />
+          </div>
+        </div>
       </v-container>
     </v-main>
 
@@ -84,8 +87,30 @@
 div.v-list-subheader {
   margin: -10px 58px -10px 0
 }
+
+body {
+  hyphens: auto;
+  hyphenate-character: auto 5;
+  hyphenate-limit-chars: auto 5;
+  hyphenate-limit-lines: 2;
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-chars: auto 3;
+  -webkit-hyphenate-limit-lines: 4;
+  -ms-hyphens: auto;
+  -ms-hyphenate-limit-chars: auto 3;
+  -ms-hyphenate-limit-lines: 4;
+  text-align: justify;
+}
 </style>
-  
+
+<script setup>
+useHead({
+  htmlAttrs: {
+    lang: 'de',
+  }
+})
+</script>
+
 <script>
 export default {
   name: "Index",
@@ -110,7 +135,7 @@ export default {
     //
     setTimeout(() => {
       this.alert = false
-    }, 5000);  
+    }, 5000);
     //
     this.appName = this.$config.public.appName;
     this.appDescription = this.$config.public.appDescription;
@@ -130,5 +155,3 @@ export default {
   }
 }
 </script>
-  
-<style></style>
