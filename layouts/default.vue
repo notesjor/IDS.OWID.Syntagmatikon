@@ -41,6 +41,13 @@
                 title="Vernetzungen"></v-list-item></router-link>
           </v-list>
         </v-navigation-drawer>
+        <v-row v-if="alert">
+          <v-col>
+            <v-alert type="info" title="Hinweis - Prototyp v0.1"
+              text="Alle Inhalte dieser Version sind experimentell. Texte, Farben, Grafiken werden im späteren Projektverlauf angepasst."
+              variant="tonal"></v-alert>
+          </v-col>
+        </v-row>
         <slot />
       </v-container>
     </v-main>
@@ -85,6 +92,8 @@ export default {
   theme: { dark: false },
   data() {
     return {
+      alert: true,
+
       appName: null,
       appDescription: null,
 
@@ -98,6 +107,11 @@ export default {
   },
 
   mounted() {
+    //
+    setTimeout(() => {
+      this.alert = false
+    }, 5000);  
+    //
     this.appName = this.$config.public.appName;
     this.appDescription = this.$config.public.appDescription;
 

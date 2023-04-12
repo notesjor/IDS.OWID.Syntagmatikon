@@ -28,7 +28,7 @@ export default {
   name: "SlideBox",
   data() {
     return {
-      html: 'Droht also demnächst eine unangenehme <a href="http://owid.de" topic="Eintrag XYZ" subtopic="Sprachgebrauchsmuster" source="Wörterbuch ABC">Aussprache mit</a> dem Chef oder ein leidiger <a href="" topic="" subtopic="" source="XXX">Besuch bei</a> Verwandten, wissen wir es besser: Statt den <a href="https://www.owid.de/artikel/401610" topic="Kopf in den Sand stecken" subtopic="Sprichwort" source="Sprichwörterbuch">Kopf in den Sand</a> zu stecken, sollten wir das Ganze lieber schnell hinter uns bringen. Denn unsere Großhirnrinde weiß schon lange: besser <a href="https://www.owid.de/artikel/401610" topic="Kopf in den Sand stecken" subtopic="Sprichwort" source="Sprichwörterbuch">ein Ende mit Schrecken als ein Schrecken ohne Ende</a>',
+      html: 'Droht also demnächst eine unangenehme <a href="http://owid.de" topic="Eintrag XYZ" subtopic="Sprachgebrauchsmuster" source="Wörterbuch ABC">Aussprache mit</a> dem Chef oder ein leidiger <a href="" topic="" subtopic="" source="XXX">Besuch bei</a> Verwandten, wissen wir es besser: Statt den <a href="https://www.owid.de/artikel/401610" topic="Den Kopf in den Sand stecken" subtopic="Sprichwort" source="Sprichwörterbuch">Kopf in den Sand</a> zu stecken, sollten wir das Ganze lieber schnell hinter uns bringen. Denn unsere Großhirnrinde weiß schon lange: besser <a href="https://www.owid.de/artikel/401610" topic="Kopf in den Sand stecken" subtopic="Sprichwort" source="Sprichwörterbuch">ein Ende mit Schrecken als ein Schrecken ohne Ende</a>',
       tooltip: {
         topic: 'Den Tag nicht vor dem Abend loben',
         subtopic: 'Sprichwort',
@@ -63,23 +63,26 @@ export default {
 }
 
 a[source="Sprichwörterbuch"] {
-  color: #0d65c2;
+  color: rgb(13, 101, 194);
+  background-color: rgba(13, 101, 194, 0.1);
   border-radius: 3px;
-  border: 2px solid #0d65c2;
+  border: 2px solid rgb(13, 101, 194);
   padding: 0 3px;
 }
 
 a[source="XXX"] {
-  color: #008702;
+  color: rgb(0, 135, 2);
+  background-color: rgba(0, 135, 2, 0.1);
   border-radius: 3px;
-  border: 2px solid #008702;
+  border: 2px solid rgb(0, 135, 2);
   padding: 0 3px;
 }
 
 a[source="Wörterbuch ABC"] {
-  color: #c5049b;
+  color: rgb(197, 4, 155);
+  background-color: rgba(197, 4, 155, 0.1);
   border-radius: 3px;
-  border: 2px solid #c5049b;
+  border: 2px solid rgb(197, 4, 155);
   padding: 0 3px;
 }
 </style>

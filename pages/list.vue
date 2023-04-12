@@ -1,13 +1,6 @@
 <template>
   <v-row>
     <v-col>
-      <v-alert type="info" title="Hinweis - Prototyp v0.1"
-        text="Alle Inhalte dieser Version sind experimentell. Texte, Farben, Grafiken werden im späteren Projektverlauf angepasst."
-        variant="tonal" v-if="alert"></v-alert>
-    </v-col>
-  </v-row>
-  <v-row>
-    <v-col>
       <div>
         <h1 class="text-3xl font-bold">
           Ressourcen - Liste
@@ -45,14 +38,6 @@ export default {
 
       riStore: null
     }
-  },
-
-
-
-  mounted() {
-    setTimeout(() => {
-      this.alert = false
-    }, 10000);    
   },
 
   methods: {
