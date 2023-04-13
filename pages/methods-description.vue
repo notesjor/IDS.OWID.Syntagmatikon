@@ -38,14 +38,21 @@
         Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
         feugiat nulla facilisis.
       </div>
+      <TreeView :items="treeData"/>
     </v-col>
   </v-row>
 </template>
 
 <script>
+
+import TreeView from "../components/TreeView.vue";
+
 export default {
   name: "Index",
   theme: { dark: false },
+  components: {
+    TreeView
+  },
   data() {
     return {
       treeData: [
