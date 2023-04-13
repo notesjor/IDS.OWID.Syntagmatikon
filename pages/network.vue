@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col>
-      <div ref="cydiv" style="width:70vw; height:82vh;"></div>
+      <div ref="cydiv" style="width:93.5vw; height:82vh; margin-left:-12vw"></div>
     </v-col>
   </v-row>
   <div style="scripts"></div>
@@ -17,18 +17,19 @@ export default {
   data() {
     return {
       nodes: [
-        { data: { id: 'n1', label: '<i>Knoten 1</i>' }, classes: 'html' },
-        { data: { id: 'n2', label: 'https://www.owid.de' }, classes: 'html' },
-        { data: { id: 'n3', label: '<div>Knoten 3</div>' }, classes: 'html' },
-        { data: { id: 'n4', label: '<div>Knoten 4</div>' }, classes: 'html' }
+        { data: { id: 'root', label: 'ENDE' }, classes: 'token' },
+        { data: { id: 'n2', label: 'https://www.owid.de/suche/wort?wort=Ende' }, classes: 'www' },
+        { data: { id: 'n3', label: 'http://uwv.ids-mannheim.de/prepcon/modul1/tables.html' }, classes: 'www' },
+        { data: { id: 'n4', label: 'http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Ende/index.html' }, classes: 'www' },
+        { data: { id: 'n5', label: 'http://wvonline.ids-mannheim.de/dtww/dtww_e.htm' }, classes: 'www' },
+        { data: { id: 'n6', label: 'http://uwv.ids-mannheim.de/spruchlist/' }, classes: 'www' }
       ],
       edges: [
-        { data: { source: 'n1', target: 'n2' } },
-        { data: { source: 'n1', target: 'n3' } },
-        { data: { source: 'n1', target: 'n4' } },
-        { data: { source: 'n2', target: 'n3' } },
-        { data: { source: 'n2', target: 'n4' } },
-        { data: { source: 'n3', target: 'n4' } }
+        { data: { source: 'root', target: 'n2', width: '50px', label: 'OWID-Suche um WB-Selektion ergänzen' } },
+        { data: { source: 'root', target: 'n3', width: '5px', label: 'PREPCON braucht Filter' } },
+        { data: { source: 'root', target: 'n4', width: '75px', label: 'OK' } },
+        { data: { source: 'root', target: 'n5', width: '150px', label: 'Belege müssen ausklappen' } },
+        { data: { source: 'root', target: 'n6', width: '50px', label: 'SpruchList braucht Filter' } }
       ],
     }
   },
@@ -52,13 +53,13 @@ export default {
           selector: 'node',
           style: {
             'shape': 'rectangle',
-            'width': '1020',
-            'height': '800',
+            'width': '1920',
+            'height': '1080',
             'text-halign': 'center',
             'text-valign': 'center',
             'background-color': '#fff',
             'border-color': '#000',
-            'border-width': '2px'
+            'border-width': '5px'
           }
         },
         {
@@ -66,25 +67,43 @@ export default {
           style: {
             'curve-style': 'bezier',
             'line-color': '#ccc',
-            'width': '50px',
+            'width': 'data(width)',
             'target-arrow-color': '#ccc',
             'target-arrow-shape': 'triangle',
             'source-arrow-color': '#ccc',
             'source-arrow-shape': 'none',
-            'line-style': 'dotted'
+            'label': 'data(label)',
+            'font-size': '150px'
+            //'line-style': 'dotted'
+          }
+        },
+        {
+          selector: '.token',
+          style: {
+            'shape': 'rectangle',
+            'width': '1920',
+            'height': '1080',
+            'text-halign': 'center',
+            'text-valign': 'center',
+            'background-color': '#fff',
+            'border-color': '#000',
+            'border-width': '5px',
+            'font-size': '250px',
+            'font-weight': 'bold',
+            'label': 'data(label)'
           }
         }
       ],
 
       zoom: 0.2,
-      minZoom: 0.1,
+      minZoom: 0.01,
       maxZoom: 4
     });
 
     cy.nodeHtmlLabel([{
-      query: 'node',
+      query: '.www',
       tpl: function (data) {
-        return "<iframe height=\"800\" width=\"1020\" src=\"" + data.label + "\"></iframe>";
+        return "<iframe height=\"1080\" width=\"1920\" src=\"" + data.label + "\"></iframe>";
       }
     }
     ]);
