@@ -1534,6 +1534,19 @@ cuint@^0.2.2:
   resolved "https://registry.npmjs.org/cuint/-/cuint-0.2.2.tgz"
   integrity sha512-d4ZVpCW31eWwCMe1YT3ur7mUDnTXbgwyzaL320DrcRT45rfjYxkt5QWLrmOJ+/UEAI2+fQgKe/fCjR8l4TpRgw==
 
+cytoscape-node-html-label@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.npmjs.org/cytoscape-node-html-label/-/cytoscape-node-html-label-1.2.2.tgz"
+  integrity sha512-oUVwrlsIlaJJ8QrQFSMdv3uXVXPg6tMH/Tfofr8JuZIovqI4fPqBi6sQgCMcVpS6k9Td0TTjowBsNRw32CESWg==
+
+cytoscape@^3.0.0, cytoscape@^3.23.0:
+  version "3.23.0"
+  resolved "https://registry.npmjs.org/cytoscape/-/cytoscape-3.23.0.tgz"
+  integrity sha512-gRZqJj/1kiAVPkrVFvz/GccxsXhF3Qwpptl32gKKypO4IlqnKBjTOu+HbXtEggSGzC5KCaHp3/F7GgENrtsFkA==
+  dependencies:
+    heap "^0.2.6"
+    lodash "^4.17.21"
+
 data-uri-to-buffer@^4.0.0:
   version "4.0.1"
   resolved "https://registry.npmjs.org/data-uri-to-buffer/-/data-uri-to-buffer-4.0.1.tgz"
@@ -2183,6 +2196,11 @@ hash-sum@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/hash-sum/-/hash-sum-2.0.0.tgz"
   integrity sha512-WdZTbAByD+pHfl/g9QSsBIIwy8IT+EsPiKDs0KNX+zSHhdDLFKdZu0BQHljvO+0QI/BasbMSUa8wYNCZTvhslg==
+
+heap@^0.2.6:
+  version "0.2.7"
+  resolved "https://registry.npmjs.org/heap/-/heap-0.2.7.tgz"
+  integrity sha512-2bsegYkkHO+h/9MGbn6KWcE45cHZgPANo5LXF7EvWdT0yT2EguSVO1nDgU5c8+ZOPwp2vMNa7YFsJhVcDR9Sdg==
 
 hookable@^5.5.0, hookable@^5.5.1:
   version "5.5.2"
