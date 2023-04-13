@@ -22,7 +22,9 @@
 	"dependencies": {
 		"@pinia/nuxt": "^0.4.7",
 		"cytoscape": "^3.23.0",
+		"cytoscape-navigator": "^2.0.2",
 		"cytoscape-node-html-label": "^1.2.2",
+		"cytoscape-panzoom": "^2.5.3",
 		"pinia": "^2.0.33",
 		"vuetify": "^3.1.11"
 	},

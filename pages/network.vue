@@ -1,7 +1,23 @@
 <template>
   <v-row>
-    <v-col>
-      <div ref="cydiv" style="width:93.5vw; height:82vh; margin-left:-12vw;"></div>
+    <v-col><h2 class="text-xl">Netzwerk zum Suchausdruck "ENDE"</h2></v-col>
+  </v-row>
+  <v-row>
+    <v-col cols="6">
+      <v-card style="width:33vw; height:70vh;">
+        <v-card-title>
+          <h3 class="text-xl">Interaktive Darstellung</h3>
+        </v-card-title>
+        <v-card-subtitle>
+          Sie können die Grafik dem Mausrad vergrößern<br/>und per 'Drag & Drop' verschieben.
+        </v-card-subtitle>
+        <v-card-text>
+          <div ref="cydiv" style="width:33vw; height:60vh;"></div>
+        </v-card-text>
+      </v-card>
+    </v-col>
+    <v-col cols="6">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem voluptatum autem eligendi saepe, laudantium, illo sunt corrupti culpa et magnam assumenda nostrum! Aspernatur dolores, corporis rem debitis exercitationem doloremque consequuntur.
     </v-col>
   </v-row>
   <div style="scripts"></div>
@@ -10,11 +26,15 @@
 <script>
 import cytoscape from "cytoscape";
 import nodeHtmlLabel from "cytoscape-node-html-label";
+import navigator from "cytoscape-navigator";
 import panzoom from "cytoscape-panzoom";
 
 export default {
   name: "Index",
   theme: { dark: false },
+  css: [
+    'cytoscape-panzoom/cytoscape.js-panzoom.css',
+  ],
   data() {
     return {
       nodes: [
@@ -46,6 +66,7 @@ export default {
   mounted() {
     cytoscape.use(nodeHtmlLabel);
     cytoscape.use(panzoom);
+    cytoscape.use(navigator);
 
     var cy = cytoscape({
       container: this.$refs.cydiv,
@@ -118,7 +139,6 @@ export default {
     }
     ]);
 
-    // the default values of each option are outlined below:
     var defaults = {
       zoomFactor: 0.05, // zoom factor per zoom tick
       zoomDelay: 45, // how many ms between zoom ticks
@@ -147,6 +167,20 @@ export default {
 
     // add the panzoom control
     cy.panzoom(defaults);
+
+    // the default values of each option are outlined below:
+    defaults = {
+      container: false, // html dom element
+      viewLiveFramerate: 0, // set false to update graph pan only on drag end; set 0 to do it instantly; set a number (frames per second) to update not more than N times per second
+      thumbnailEventFramerate: 30, // max thumbnail's updates per second triggered by graph updates
+      thumbnailLiveFramerate: false, // max thumbnail's updates per second. Set false to disable
+      dblClickDelay: 200, // milliseconds
+      removeCustomContainer: false, // destroy the container specified by user on plugin destroy
+      rerenderDelay: 100 // ms to throttle rerender updates to the panzoom for performance
+    };
+
+    // add the panzoom control
+    cy.navigator(defaults);
   },
 
   methods: {
