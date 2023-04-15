@@ -22,7 +22,14 @@
   <v-row>
     <v-col>
       <div>
-        <annotatedSampel></annotatedSampel>
+        <!--<annotatedSampel></annotatedSampel>-->
+      </div>
+    </v-col>
+  </v-row>
+  <v-row>
+    <v-col>
+      <div>
+        <annotatedSampelMulti></annotatedSampelMulti>
       </div>
     </v-col>
   </v-row>
