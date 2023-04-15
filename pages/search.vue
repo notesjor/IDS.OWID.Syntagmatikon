@@ -14,11 +14,7 @@
   </v-row>
   <v-row>
     <v-col>
-      <v-text-field
-            label="Bitte Suchausruck eingeben..."
-            append-inner-icon="mdi-magnify"
-            variant="solo"
-          ></v-text-field>
+      <v-text-field label="Bitte Suchausruck eingeben..." append-inner-icon="mdi-magnify" variant="solo"></v-text-field>
     </v-col>
   </v-row>
   <v-row>
@@ -28,7 +24,8 @@
           <v-expansion-panel-text>
             <ul>
               <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">KoMuX</span></li>
-              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">PREPCON <sup>(explorativ)</sup></span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">PREPCON
+                  <sup>(explorativ)</sup></span></li>
             </ul>
           </v-expansion-panel-text>
         </v-expansion-panel>
@@ -36,7 +33,8 @@
           <v-expansion-panel-text>
             <ul>
               <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">MAP</span></li>
-              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">Wörterbuch Redeeinleiter</span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">Wörterbuch
+                  Redeeinleiter</span></li>
             </ul>
           </v-expansion-panel-text>
         </v-expansion-panel>
@@ -45,7 +43,8 @@
             <ul>
               <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">PhK-Liste</span></li>
               <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">SpruuchList</span></li>
-              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">PREPCON <sup>teporal</sup></span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">PREPCON
+                  <sup>teporal</sup></span></li>
               <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">DTWW</span></li>
             </ul>
           </v-expansion-panel-text>
@@ -53,18 +52,24 @@
         <v-expansion-panel title="ONLINE WÖRTERBÜCHER" value="ow">
           <v-expansion-panel-text>
             <ul>
-              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">OWID Sprichwörterbuch</span></li>
-              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">OWID Kleines Wörterbuch der Verlaufsformen im Deutschen</span></li>
-              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">OWID Feste Wortverbindungen</span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">OWID Sprichwörterbuch</span>
+              </li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">OWID Kleines Wörterbuch der
+                  Verlaufsformen im Deutschen</span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">OWID Feste
+                  Wortverbindungen</span></li>
             </ul>
           </v-expansion-panel-text>
         </v-expansion-panel>
         <v-expansion-panel title="KORPUSZENTRIERTE PRÄSENTATIONSFORMATE" value="kp">
           <v-expansion-panel-text>
             <ul>
-              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">OWID Sprichwörterbuch</span></li>
-              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">PREPCON <sup>(temporal)</sup> Kurzartikel</span></li>
-              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">PREPCON <sup>(explorativ)</sup></span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">OWID Sprichwörterbuch</span>
+              </li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">PREPCON
+                  <sup>(temporal)</sup> Kurzartikel</span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">PREPCON
+                  <sup>(explorativ)</sup></span></li>
             </ul>
           </v-expansion-panel-text>
         </v-expansion-panel>
@@ -72,8 +77,10 @@
           <v-expansion-panel-text>
             <ul>
               <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">DRI online</span></li>
-              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">Verietäten Kontakt</span></li>
-              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">Probandenbefragungen Redewendungen</span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">Verietäten Kontakt</span>
+              </li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">Probandenbefragungen
+                  Redewendungen</span></li>
             </ul>
           </v-expansion-panel-text>
         </v-expansion-panel>
@@ -81,7 +88,7 @@
     </v-col>
     <v-col cols="6">
       <v-card>
-        <v-card-title>          
+        <v-card-title>
           <h2 class="text-2xl">
             KoMuX
           </h2>
@@ -91,9 +98,10 @@
             Durchsuche mehr als 50.000 Komposita
           </h2>
         </v-card-sub-title>
-        <v-card-text>                    
+        <v-card-text>
           <p style="font-size: 16px;">
-            <img src="https://www.owid.de/plus/data/img/owidpluslive.png" alt="KoMuX Logo" style="width:50%; margin-right: 10px; float: left;">
+            <img src="https://www.owid.de/plus/data/img/owidpluslive.png" alt="KoMuX Logo"
+              style="width:50%; margin-right: 10px; float: left;">
             KoMuX, der Kompositamuster-Explorer, wurde vom Arbeitsbereich Wortbildungsmuster am Leibniz-Institut für
             deutsche Sprache entwickelt und bietet die Möglichkeit, ein Inventar von ca. 50.000 nominalen Komposita
             gezielt nach zugrundeliegenden abstrakten oder lexikalisch-teilspezifizierten Mustern zu durchsuchen. KoMuX
@@ -106,7 +114,8 @@
             (semantisch-)thematischen (Kategorien basierend auf GermaNet-Wortfeldern) oder lexikalischen Eigenschaften
             (konkretes Lemma) definieren.
             <br />
-            <img src="https://www.owid.de/plus/data/img/cowidplus.png" alt="KoMuX Logo" style="width:50%; margin-left: 10px; float: right;">
+            <img src="https://www.owid.de/plus/data/img/cowidplus.png" alt="KoMuX Logo"
+              style="width:50%; margin-left: 10px; float: right;">
             Der Muster-Zugang zum Komposita-Inventar bildet nicht nur die zentrale Suchfunktionalität von KoMuX, sondern
             ist auch linguistisch motiviert. Wir betrachten Komposita als konkrete sprachliche Realisierungen von
             zugrundeliegenden abstrakten oder lexikalisch-teilspezifizierten Mustern. Diese Muster wiederum können z.B.
@@ -115,10 +124,19 @@
             Inventar von Komposita systematisieren lässt. Der Musteransatz bietet darüber hinaus eine direkte
             Anschlussfähigkeit an Grammatiktheorien wie die Konstruktionsgrammatik (KxG).
           </p>
+          <br/>
+          <div>
+            <v-chip class="ma-2" label text-color="white" variant="outlined"> <v-icon start icon="mdi-tag-outline"></v-icon> Datenbank </v-chip>
+            <v-chip class="ma-2" label text-color="white" variant="outlined"> <v-icon start icon="mdi-tag-outline"></v-icon> Explorativ </v-chip>
+            <v-chip class="ma-2" label text-color="white" variant="outlined"> <v-icon start icon="mdi-tag-outline"></v-icon> Komposita </v-chip>
+            <v-chip class="ma-2" label text-color="white" variant="outlined"> <v-icon start icon="mdi-tag-outline"></v-icon> Häufigkeit </v-chip>
+            <v-chip class="ma-2" label text-color="white" variant="outlined"> <v-icon start icon="mdi-tag-outline"></v-icon> Visualisierung </v-chip>
+          </div>
         </v-card-text>
       </v-card>
-  </v-col>
-</v-row></template>
+    </v-col>
+  </v-row>
+</template>
 
 <script>
 export default {
