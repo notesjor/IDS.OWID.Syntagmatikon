@@ -1,6 +1,8 @@
 <template>
   <v-row>
-    <v-col><h2 class="text-xl">Netzwerk zum Suchausdruck "ENDE"</h2></v-col>
+    <v-col>
+      <h2 class="text-xl">Netzwerk zum Suchausdruck "ENDE"</h2>
+    </v-col>
   </v-row>
   <v-row>
     <v-col cols="6">
@@ -9,7 +11,7 @@
           <h3 class="text-xl">Interaktive Darstellung</h3>
         </v-card-title>
         <v-card-subtitle>
-          Sie können die Grafik dem Mausrad vergrößern<br/>und per 'Drag & Drop' verschieben.
+          Sie können die Grafik dem Mausrad vergrößern<br />und per 'Drag & Drop' verschieben.
         </v-card-subtitle>
         <v-card-text>
           <div ref="cydiv" style="width:33vw; height:60vh;"></div>
@@ -17,9 +19,91 @@
       </v-card>
     </v-col>
     <v-col cols="6">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem voluptatum autem eligendi saepe, laudantium, illo sunt corrupti culpa et magnam assumenda nostrum! Aspernatur dolores, corporis rem debitis exercitationem doloremque consequuntur.
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem voluptatum autem eligendi saepe, laudantium, illo
+        sunt corrupti culpa et magnam assumenda nostrum! Aspernatur dolores, corporis rem debitis exercitationem
+        doloremque consequuntur.
+      </div>
+      <br />
+      <div class="rounded-md" style="border: 1px solid #000">
+        <h1 style="margin:5px 5px 5px 15px">OWID-Suche:</h1>
+        <div class="rounded-md" style="border: 1px solid #000; margin: 10px">
+          <h1 style="margin:5px 5px 5px 15px">
+            <div
+              style="display:grid; grid-template-columns: auto 100%; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas:'icon value'; ">
+              <div style="grid-area: icon;"><v-icon>mdi-book-arrow-right-outline</v-icon></div>
+              <div style="grid-area: value; margin-left:5px">Ende gut alles Gut.</div>
+            </div>
+          </h1>
+        </div>
+        <div class="rounded-md" style="border: 1px solid #000; margin: 10px">
+          <h1 style="margin:5px 15px 5px 15px">
+            <div
+              style="display:grid; grid-template-columns: auto 100%; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas:'icon value'; ">
+              <div style="grid-area: icon;"><v-icon>mdi-book-arrow-right-outline</v-icon></div>
+              <div style="grid-area: value; margin-left:5px">Alles hat ein Ende.</div>
+            </div>
+          </h1>
+        </div>
+        <div class="rounded-md" style="border: 1px solid #000; margin: 10px">
+          <h1 style="margin:5px 15px 5px 15px;">
+            <div
+              style="display:grid; grid-template-columns: auto 100%; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas:'icon value'; ">
+              <div style="grid-area: icon;"><v-icon>mdi-book-arrow-right-outline</v-icon></div>
+              <div style="grid-area: value; margin-left:5px">Lieber ein Ende mit Schrecken als ein Schrecken ohne Ende.
+              </div>
+            </div>
+          </h1>
+        </div>
+        <div class="rounded-md" style="border: 1px solid #000; margin: 10px">
+          <h1 style="margin:5px 15px 5px 15px">
+            <div
+              style="display:grid; grid-template-columns: auto 100%; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas:'icon value'; ">
+              <div style="grid-area: icon;"><v-icon>mdi-book-arrow-right-outline</v-icon></div>
+              <div style="grid-area: value; margin-left:5px">Viele Hände, schnelles Ende.</div>
+            </div>
+          </h1>
+        </div>
+      </div>
+      <div class="rounded-md" style="border: 1px solid #000; margin: 10px">
+        <h1 style="margin:5px 15px 5px 15px">
+          <div
+            style="display:grid; grid-template-columns: auto 100%; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas:'icon value'; ">
+            <div style="grid-area: icon;"><v-icon>mdi-book-arrow-right-outline</v-icon></div>
+            <div style="grid-area: value; margin-left:5px">SpruchList: 5 Einträge mit Bezug zu 'Ende'</div>
+          </div>
+        </h1>
+      </div>
+      <div class="rounded-md" style="border: 1px solid #000; margin: 10px">
+        <h1 style="margin:5px 15px 5px 15px">
+          <div
+            style="display:grid; grid-template-columns: auto 100%; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas:'icon value'; ">
+            <div style="grid-area: icon;"><v-icon>mdi-book-arrow-right-outline</v-icon></div>
+            <div style="grid-area: value; margin-left:5px">Deutsch-trürkische Wortverbindungen: 2 Einträge mit Bezug zu 'Ende'</div>
+          </div>
+        </h1>
+      </div>
+      <div class="rounded-md" style="border: 1px solid #000; margin: 10px">
+        <h1 style="margin:5px 15px 5px 15px">
+          <div
+            style="display:grid; grid-template-columns: auto 100%; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas:'icon value'; ">
+            <div style="grid-area: icon;"><v-icon>mdi-book-arrow-right-outline</v-icon></div>
+            <div style="grid-area: value; margin-left:5px">PREPCON <sup>(temporal)</sup>: ohne Ende</div>
+          </div>
+        </h1>
+      </div>
+      <div class="rounded-md" style="border: 1px solid #000; margin: 10px">
+        <h1 style="margin:5px 15px 5px 15px">
+          <div
+            style="display:grid; grid-template-columns: auto 100%; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas:'icon value'; ">
+            <div style="grid-area: icon;"><v-icon>mdi-book-arrow-right-outline</v-icon></div>
+            <div style="grid-area: value; margin-left:5px">PREPCON <sup>(explorativ)</sup>: Tabelle mit 15 Einträgen zu 'Ende'</div>
+          </div>
+        </h1>
+      </div>
+      <v-alert type="warning">Hinweis: Alle Ressourcen müssten für diese Funktion folgende API-Abfragen unterstützten?: /search (contains/detail) und /get/{id} (link)</v-alert>
     </v-col>
-  </v-row>
+  </v-row>  
   <div style="scripts"></div>
 </template>
 
