@@ -3,229 +3,130 @@
     <v-col>
       <div>
         <h1 class="text-3xl font-bold">
-          {{ appName }}
+          Ressourcen finden und durchsuchen
         </h1>
+        <p>
+          Die Folgende Liste erlaubt einen Überblickssuche in den Ressourcen des Syntagmatikons. <br />
+          Die Ressourcen sind nach Kategorien sortiert und können nach verschiedenen Kriterien gefiltert werden.
+        </p>
       </div>
     </v-col>
   </v-row>
   <v-row>
     <v-col>
-      <div>
-        Herzlich willkommen im Syntagmatikon, einer lexikalischen Plattform, die sich ganz der syntagmatischen
-        Beziehung der Sprache widmet! Hier finden Sie eine umfassende Sammlung von Wörtern und Ausdrücken aus
-        verschiedenen lexikographischen Ressourcen, die sich durch ihre lineare Abfolge beim Schreiben, Lesen oder
-        Sprechen definieren. Die einzelnen Ressourcen sind miteinander verknüpft und es entstehen im Zusammenspiel
-        neue Bedeutungskontexte, die sich überblicksartig aber auch im Detail explorativ erkunden lassen.
-      </div>
+      <v-text-field
+            label="Bitte Suchausruck eingeben..."
+            append-inner-icon="mdi-magnify"
+            variant="solo"
+          ></v-text-field>
     </v-col>
   </v-row>
-  <br />
-  <div style="width: 100%;">
-    <table id="kreuztabelle" style=" margin-left: auto; margin-right: auto;">
-      <thead>
-        <tr>
-          <th rowspan="2"></th>
-          <th colspan="2" class="text-xl" style="text-align:center; background-color: rgba(0,0,0,0.05);">Datenbank</th>
-          <th colspan="3" class="text-xl" style="text-align:center; background-color: rgba(0,0,0,0.10);">Nachschlagen</th>
-          <th colspan="2" class="text-xl" style="text-align:center; background-color: rgba(0,0,0,0.15);">Analysen</th>
-        </tr>
-        <tr>
-          <th class="text-lg" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.05);">
-            <span>Explorativ</span></th>
-          <th class="text-lg" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.05);">
-            <span>Deskriptiv</span></th>
-          <th class="text-lg" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.10);">
-            <span>Inventar</span></th>
-          <th class="text-lg" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.10);">
-            <span>Sammlung</span></th>
-          <th class="text-lg" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.10);">
-            <span>Wörterbuch</span></th>
-          <th class="text-lg" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.15);">
-            <span>Korpusanalyse</span></th>
-          <th class="text-lg" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.15);">
-            <span>Pilot-/Einzelstudie</span></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="background-color: rgba(0,0,0,0.2);">
-          <!--<td rowspan="2" class="text-lg">Zeile 1</td>-->
-          <td style="text-align: right;">KoMuX</td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-        </tr>
-        <tr>
-          <td style="text-align: right;">Prepcon <sup>(explorativ)</sup></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-        </tr>
-        <tr style="background-color: rgba(0,0,0,0.2);">
-          <td style="text-align: right;">MAP</td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-        </tr>
-        <tr>
-          <td style="text-align: right;">Wörterbuch Redeeinleiter</td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-        </tr>
-        <tr style="background-color: rgba(0,0,0,0.2);">
-          <td style="text-align: right;">PhK-Liste</td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-        </tr>
-        <tr>
-          <td style="text-align: right;">Prepcon <sup>(explorativ)</sup></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-        </tr>
-        <tr style="background-color: rgba(0,0,0,0.2);">
-          <td style="text-align: right;">MAP</td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-        </tr>
-        <tr>
-          <td style="text-align: right;">Wörterbuch Redeeinleiter</td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-        </tr>
-        <tr style="background-color: rgba(0,0,0,0.2);">
-          <td style="text-align: right;">PhK-Liste</td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-        </tr>
-        <tr>
-          <td style="text-align: right;">Prepcon <sup>(explorativ)</sup></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-        </tr>
-        <tr style="background-color: rgba(0,0,0,0.2);">
-          <td style="text-align: right;">MAP</td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-        </tr>
-        <tr>
-          <td style="text-align: right;">Wörterbuch Redeeinleiter</td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>          
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-        </tr>
-        <tr style="background-color: rgba(0,0,0,0.2);">
-          <td style="text-align: right;">PhK-Liste</td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <br/>
   <v-row>
-    <v-col cols="4">
-      <h1 class="text-xl">Datenbanken</h1>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nobis, eligendi officiis ducimus consequuntur laudantium quas odio quos qui nemo. At itaque eos dolorum, expedita dolores culpa suscipit ea. Aspernatur.
+    <v-col cols="6">
+      <v-expansion-panels multiple v-model="panels">
+        <v-expansion-panel title="EXPLORATIVE DATENBANKEN" value="edb">
+          <v-expansion-panel-text>
+            <ul>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">KoMuX</span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">PREPCON <sup>(explorativ)</sup></span></li>
+            </ul>
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+        <v-expansion-panel title="DESKRIPTIVE DATENBANKEN" value="ddb">
+          <v-expansion-panel-text>
+            <ul>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">MAP</span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">Wörterbuch Redeeinleiter</span></li>
+            </ul>
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+        <v-expansion-panel title="INVENTARE / SAMMLUNGEN" value="ius">
+          <v-expansion-panel-text>
+            <ul>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">PhK-Liste</span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">SpruuchList</span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">PREPCON <sup>teporal</sup></span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">DTWW</span></li>
+            </ul>
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+        <v-expansion-panel title="ONLINE WÖRTERBÜCHER" value="ow">
+          <v-expansion-panel-text>
+            <ul>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">OWID Sprichwörterbuch</span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">OWID Kleines Wörterbuch der Verlaufsformen im Deutschen</span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">OWID Feste Wortverbindungen</span></li>
+            </ul>
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+        <v-expansion-panel title="KORPUSZENTRIERTE PRÄSENTATIONSFORMATE" value="kp">
+          <v-expansion-panel-text>
+            <ul>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">OWID Sprichwörterbuch</span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">PREPCON <sup>(temporal)</sup> Kurzartikel</span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">PREPCON <sup>(explorativ)</sup></span></li>
+            </ul>
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+        <v-expansion-panel title="PILOT UND EINZELSTUDIEN" value="pue">
+          <v-expansion-panel-text>
+            <ul>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">DRI online</span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">Verietäten Kontakt</span></li>
+              <li><v-icon>mdi-book-arrow-right-outline</v-icon><span style="margin-left:10px">Probandenbefragungen Redewendungen</span></li>
+            </ul>
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+      </v-expansion-panels>
     </v-col>
-    <v-col cols="4">
-      <h1 class="text-xl">Nachschlagen</h1>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nobis, eligendi officiis ducimus consequuntur laudantium quas odio quos qui nemo. At itaque eos dolorum, expedita dolores culpa suscipit ea. Aspernatur.
-    </v-col>
-    <v-col cols="4">
-      <h1 class="text-xl">Analysen</h1>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nobis, eligendi officiis ducimus consequuntur laudantium quas odio quos qui nemo. At itaque eos dolorum, expedita dolores culpa suscipit ea. Aspernatur.
-    </v-col>
-  </v-row>
-</template>
+    <v-col cols="6">
+      <v-card>
+        <v-card-title>          
+          <h2 class="text-2xl">
+            KoMuX
+          </h2>
+        </v-card-title>
+        <v-card-sub-title>
+          <h2 class="text-lg" style="margin-left:15px">
+            Durchsuche mehr als 50.000 Komposita
+          </h2>
+        </v-card-sub-title>
+        <v-card-text>                    
+          <p style="font-size: 16px;">
+            <img src="https://www.owid.de/plus/data/img/owidpluslive.png" alt="KoMuX Logo" style="width:50%; margin-right: 10px; float: left;">
+            KoMuX, der Kompositamuster-Explorer, wurde vom Arbeitsbereich Wortbildungsmuster am Leibniz-Institut für
+            deutsche Sprache entwickelt und bietet die Möglichkeit, ein Inventar von ca. 50.000 nominalen Komposita
+            gezielt nach zugrundeliegenden abstrakten oder lexikalisch-teilspezifizierten Mustern zu durchsuchen. KoMuX
+            basiert auf einer systematischen Datenerhebung, bei der erstmals alle nominalen Komposita automatisch aus dem
+            KoGra Untersuchungskorpus, einem Ausschnitt des Deutschen Referenzkorpus (DeReKo), extrahiert wurden – diese
+            Datengrundlage ist unseres Wissens bisher die erste ihrer Art. Mit KoMuX wird nun ein Teil dieses
+            Komposita-Inventars des Deutschen systematisch durchsuchbar gemacht, und zwar aus einer Muster-Perspektive
+            heraus. Auf diese Weise kann man sich Gruppen von Komposita anzeigen lassen, die sich durch die Kombination
+            von Erst- und Zweitgliedern mit jeweils spezifischen grammatischen (Wortbildungstyp oder Wortart),
+            (semantisch-)thematischen (Kategorien basierend auf GermaNet-Wortfeldern) oder lexikalischen Eigenschaften
+            (konkretes Lemma) definieren.
+            <br />
+            <img src="https://www.owid.de/plus/data/img/cowidplus.png" alt="KoMuX Logo" style="width:50%; margin-left: 10px; float: right;">
+            Der Muster-Zugang zum Komposita-Inventar bildet nicht nur die zentrale Suchfunktionalität von KoMuX, sondern
+            ist auch linguistisch motiviert. Wir betrachten Komposita als konkrete sprachliche Realisierungen von
+            zugrundeliegenden abstrakten oder lexikalisch-teilspezifizierten Mustern. Diese Muster wiederum können z.B.
+            zur Erklärung von beobachtbaren Produktivitätsunterschieden herangezogen oder – ganz allgemein - als
+            Grundprinzip verstanden werden, das erklärt, wie die Komposition grundsätzlich funktioniert bzw. wie sich das
+            Inventar von Komposita systematisieren lässt. Der Musteransatz bietet darüber hinaus eine direkte
+            Anschlussfähigkeit an Grammatiktheorien wie die Konstruktionsgrammatik (KxG).
+          </p>
+        </v-card-text>
+      </v-card>
+  </v-col>
+</v-row></template>
 
 <script>
 export default {
-  name: "Index",
   theme: { dark: false },
   data() {
     return {
-      appName: null
-    }
-  },
-
-  mounted() {
-    this.appName = this.$config.public.appName;
-  },
-
-  methods: {
-    test() {
-      alert("test");
+      panels: ['edb', 'ddb', 'ius', 'ow', 'kp', 'pue']
     }
   }
 }
 </script>
-
-<style>
-th {
-  font-weight: 400;
-  padding: 5px
-}
-
-td {
-  text-align: center;
-}</style>
