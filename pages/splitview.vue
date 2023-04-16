@@ -22,16 +22,16 @@
             <v-col></v-col>
         </v-row>
         <splitpanes style="height: 77vh" class="default-theme" v-if="panes == 1">
-            <pane><iframe :src="urls[0]" style="width:100%; height:100%;"/></pane>
+            <pane><iframe :src="urls[0]" style="width:100%; height:100%;" v-if="!editor"/><TinyEditor style="height: 100%;" v-else/></pane>
         </splitpanes>
         <splitpanes style="height: 77vh" class="default-theme" v-else-if="panes == 2">
             <pane><iframe :src="urls[0]" style="width:100%; height:100%;"/></pane>
-            <pane><iframe :src="urls[1]" style="width:100%; height:100%;"/></pane>
+            <pane><iframe :src="urls[1]" style="width:100%; height:100%;" v-if="!editor"/><TinyEditor style="height: 100%;" v-else/></pane>
         </splitpanes>
         <splitpanes style="height: 77vh" class="default-theme" v-else>
             <pane><iframe :src="urls[0]" style="width:100%; height:100%;"/></pane>
             <pane><iframe :src="urls[1]" style="width:100%; height:100%;"/></pane>
-            <pane><iframe :src="urls[2]" style="width:100%; height:100%;"/></pane>
+            <pane><iframe :src="urls[2]" style="width:100%; height:100%;" v-if="!editor"/><TinyEditor style="height: 100%;" v-else/></pane>            
         </splitpanes>
     </div>
 </template>
@@ -40,9 +40,10 @@
 import { Splitpanes, Pane } from 'splitpanes'
 // import 'splitpanes/dist/splitpanes.min.css'
 import 'splitpanes/dist/splitpanes.css'
+import TinyEditor from '../components/TinyEditor.vue'
 
 export default {
-    components: { Splitpanes, Pane },
+    components: { Splitpanes, Pane, TinyEditor },
     data: () => ({
         panes: 3,
         urls: [
