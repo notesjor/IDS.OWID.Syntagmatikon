@@ -22,7 +22,7 @@
         <h2 class="text-2xl font-bold">
           Projektziele
         </h2>
-
+        <br/>
 
         <h3 class="text-xl font-bold">
           1. Erstellung einer umfassenden Sammlung von Wörtern und Ausdrücken
@@ -34,7 +34,7 @@
           verknüpft und es entstehen im Zusammenspiel neue Bedeutungskontexte, die sich überblicksartig aber auch im
           Detail explorativ erkunden lassen.
         </p>
-
+        <br/>
         <h3 class="text-xl font-bold">
           2. Erstellung einer umfassenden Sammlung von Wörtern und Ausdrücken
         </h3>
