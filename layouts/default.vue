@@ -1,20 +1,20 @@
 <template>
   <v-app>
-    <v-app-bar app theme="dark" class="d-print-none" style="z-index:999">
-      <div style="margin-left:20px">
-        <div class="text-xl"><v-icon>mdi-arrow-decision-outline</v-icon> {{ appName }}</div>
-        <div class="text-xs">{{ appDescription }}</div>
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <div>
-        <a :href="leftIconHref" target="_blank">
-          <img alt="Logo" src="../assets/logo_left.svg" style="min-height:40px; margin-right:20px" />
-        </a>
-      </div>
-    </v-app-bar>
     <v-main>
+      <div class="d-print-none" style="max-height: 55px; background-color: black; padding:5px 10px 0px 30px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right'; ">
+        <div class="inline" style="color:white; grid-area: left;">
+          <div class="text-xl"><v-icon>mdi-arrow-decision-outline</v-icon> {{ appName }}</div>
+          <div class="text-xs" style="text-align: left;">{{ appDescription }}</div>
+        </div>
+
+        <div style="grid-area: middle;"></div>
+
+        <div class="inline justify-items-end" style="grid-area: right; align-content: center;">
+          <a :href="leftIconHref" target="_blank">
+            <img alt="Logo" src="../assets/logo_left.svg" style="max-height:40px; margin-right:20px" />
+          </a>
+        </div>
+      </div>
       <v-container>
         <v-navigation-drawer expand-on-hover rail>
           <v-list density="compact" nav>
@@ -49,10 +49,8 @@
               variant="tonal"></v-alert>
           </v-col>
         </v-row>
-        <div style="align-content: center;">
-          <div style="max-width: 1150px;">
+        <div style="align-content: center; max-width: 90ch;">
             <slot />
-          </div>
         </div>
       </v-container>
     </v-main>
