@@ -1,5 +1,5 @@
 <template>
-    <div style="margin-left:-17%; margin-right: -19%;">
+    <div style="margin-left:-10%; margin-right: -12%;">
         <v-row>
             <v-col>
                 <div
@@ -22,16 +22,16 @@
             <v-col></v-col>
         </v-row>
         <splitpanes style="height: 77vh" class="default-theme" v-if="panes == 1">
-            <pane><iframe :src="urls[0]" style="width:100%; height:100%;" v-if="!editor"/><TinyEditor style="height: 100%;" v-else/></pane>
+            <pane><iframe :src="urls[0]" style="width:100%; height:100%;" v-if="!editor" scrolling="yes"/><TinyEditor style="height: 100%;" v-else/></pane>
         </splitpanes>
         <splitpanes style="height: 77vh" class="default-theme" v-else-if="panes == 2">
-            <pane><iframe :src="urls[0]" style="width:100%; height:100%;"/></pane>
-            <pane><iframe :src="urls[1]" style="width:100%; height:100%;" v-if="!editor"/><TinyEditor style="height: 100%;" v-else/></pane>
+            <pane><iframe :src="urls[0]" style="width:100%; height:100%;" scrolling="yes"/></pane>
+            <pane><iframe :src="urls[1]" style="width:100%; height:100%;" scrolling="yes" v-if="!editor"/><TinyEditor style="height: 100%;" v-else/></pane>
         </splitpanes>
         <splitpanes style="height: 77vh" class="default-theme" v-else>
-            <pane><iframe :src="urls[0]" style="width:100%; height:100%;"/></pane>
-            <pane><iframe :src="urls[1]" style="width:100%; height:100%;"/></pane>
-            <pane><iframe :src="urls[2]" style="width:100%; height:100%;" v-if="!editor"/><TinyEditor style="height: 100%;" v-else/></pane>            
+            <pane><iframe :src="urls[0]" style="width:100%; height:100%;" scrolling="yes"/></pane>
+            <pane><iframe :src="urls[1]" style="width:100%; height:100%;" scrolling="yes"/></pane>
+            <pane><iframe :src="urls[2]" style="width:100%; height:100%;" scrolling="yes" v-if="!editor"/><TinyEditor style="height: 100%;" v-else/></pane>            
         </splitpanes>
     </div>
 </template>

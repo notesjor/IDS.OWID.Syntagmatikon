@@ -36,10 +36,10 @@
             <router-link to="/search"><v-list-item prepend-icon="mdi-magnify" title="Suche"></v-list-item></router-link>
             <router-link to="/list"><v-list-item prepend-icon="mdi-format-list-bulleted-type"
                 title="Liste"></v-list-item></router-link>
-            <router-link to="/network"><v-list-item prepend-icon="mdi-graph"
-                title="Vernetzungen"></v-list-item></router-link>
             <router-link to="/splitview"><v-list-item prepend-icon="mdi-compare"
                 title="Vergleich"></v-list-item></router-link>
+            <router-link to="/network"><v-list-item prepend-icon="mdi-graph"
+                title="Vernetzungen"></v-list-item></router-link>
           </v-list>
         </v-navigation-drawer>
         <v-row v-if="alert">
