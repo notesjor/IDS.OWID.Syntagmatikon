@@ -1,85 +1,81 @@
 <template>
   <v-app>
-    <v-main>
-      <div class="d-print-none" style="max-height: 55px; background-color: black; padding:5px 10px 0px 30px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right'; ">
-        <div class="inline" style="color:white; grid-area: left;">
-          <div class="text-xl"><v-icon>mdi-arrow-decision-outline</v-icon> {{ appName }}</div>
-          <div class="text-xs" style="text-align: left;">{{ appDescription }}</div>
-        </div>
-
-        <div style="grid-area: middle;"></div>
-
-        <div class="inline justify-items-end" style="grid-area: right; align-content: center;">
-          <a :href="leftIconHref" target="_blank">
-            <img alt="Logo" src="../assets/logo_left.svg" style="max-height:40px; margin-right:20px" />
-          </a>
-        </div>
+    <div class="d-print-none"
+      style="max-height: 65px; margin-left: 45px; background-color: black; padding:5px 10px 5px 30px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right'; ">
+      <div class="inline" style="color:white; grid-area: left;">
+        <div class="text-xl"><v-icon>mdi-arrow-decision-outline</v-icon> {{ appName }}</div>
+        <div class="text-xs" style="text-align: left;">{{ appDescription }}</div>
       </div>
-      <v-container>
-        <v-navigation-drawer expand-on-hover rail>
-          <v-list density="compact" nav>
-            <v-list-subheader>Übersicht</v-list-subheader>
-            <router-link to="/"><v-list-item prepend-icon="mdi-home"
-                title="Projekt-Startseite"></v-list-item></router-link>
-          </v-list>
-          <v-divider></v-divider>
-          <v-list density="compact" nav>
-            <v-list-subheader>Vertiefende Informationen</v-list-subheader>
-            <router-link to="/project-description"><v-list-item prepend-icon="mdi-information"
-                title="Was ist ein Syntagmatikon?"></v-list-item></router-link>
-            <router-link to="/methods-description"><v-list-item prepend-icon="mdi-file-cabinet"
-                title="Korpusmethoden erklärt"></v-list-item></router-link>
-          </v-list>
-          <v-divider></v-divider>
-          <v-list density="compact" nav>
-            <v-list-subheader>Ressourcen</v-list-subheader>
-            <router-link to="/search"><v-list-item prepend-icon="mdi-magnify" title="Suche"></v-list-item></router-link>
-            <router-link to="/list"><v-list-item prepend-icon="mdi-format-list-bulleted-type"
-                title="Liste"></v-list-item></router-link>
-            <router-link to="/splitview"><v-list-item prepend-icon="mdi-compare"
-                title="Vergleich"></v-list-item></router-link>
-            <router-link to="/network"><v-list-item prepend-icon="mdi-graph"
-                title="Vernetzungen"></v-list-item></router-link>
-          </v-list>
-        </v-navigation-drawer>
-        <v-row v-if="alert">
-          <v-col>
-            <v-alert type="info" title="Hinweis - Prototyp v0.1"
-              text="Alle Inhalte dieser Version sind experimentell. Texte, Farben, Grafiken werden im späteren Projektverlauf angepasst."
-              variant="tonal"></v-alert>
-          </v-col>
-        </v-row>
-        <div style="align-content: center; max-width: 90ch;">
-            <slot />
-        </div>
-      </v-container>
-    </v-main>
 
-    <v-footer theme="dark" style="max-height:64px; z-index:10000">
-      <v-card class="flex" flat tile>
-        <v-card-text class="py-2" style="text-align:right; margin-left:-10px">
-          <div style="display:inline-block">
-            {{ new Date().getFullYear() }} — <strong>{{ appName }}</strong>
-          </div>
-          <div style="display:inline-block">
-            <a :href="footerContact" style="margin-left:15px" v-if="footerContact != null && footerContact.length > 1">{{
-              $t("footer_Contact") }}</a>
-            <a :href="footerImpressum" style="margin-left:15px"
-              v-if="footerImpressum != null && footerImpressum.length > 1">{{ $t("footer_Impressum") }}</a>
-            <a :href="footerDsgvo" style="margin-left:15px" v-if="footerDsgvo != null && footerDsgvo.length > 1">{{
-              $t("footer_Dsgvo") }}</a>
-          </div>
-        </v-card-text>
-      </v-card>
+      <div style="grid-area: middle;"></div>
 
-      <v-spacer></v-spacer>
-
-      <div style="margin-right:-10px">
-        <a :href="rightIconHref" target="_blank">
-          <img alt="Logo" src="../assets/logo_right.svg" style="min-height:70px;" />
+      <div class="inline" style="grid-area: right;">
+        <a :href="leftIconHref" target="_blank">
+          <img alt="Logo" src="../assets/logo_left.svg" style="margin-left: auto; max-height:40px; margin-right:20px" />
         </a>
       </div>
-    </v-footer>
+    </div>
+
+    <v-navigation-drawer expand-on-hover rail>
+      <v-list density="compact" nav>
+        <v-list-subheader>Übersicht</v-list-subheader>
+        <router-link to="/"><v-list-item prepend-icon="mdi-home" title="Projekt-Startseite"></v-list-item></router-link>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list density="compact" nav>
+        <v-list-subheader>Vertiefende Informationen</v-list-subheader>
+        <router-link to="/project-description"><v-list-item prepend-icon="mdi-information"
+            title="Was ist ein Syntagmatikon?"></v-list-item></router-link>
+        <router-link to="/methods-description"><v-list-item prepend-icon="mdi-file-cabinet"
+            title="Korpusmethoden erklärt"></v-list-item></router-link>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list density="compact" nav>
+        <v-list-subheader>Ressourcen</v-list-subheader>
+        <router-link to="/search"><v-list-item prepend-icon="mdi-magnify" title="Suche"></v-list-item></router-link>
+        <router-link to="/list"><v-list-item prepend-icon="mdi-format-list-bulleted-type"
+            title="Liste"></v-list-item></router-link>
+        <router-link to="/splitview"><v-list-item prepend-icon="mdi-compare"
+            title="Vergleich"></v-list-item></router-link>
+        <router-link to="/network"><v-list-item prepend-icon="mdi-graph" title="Vernetzungen"></v-list-item></router-link>
+      </v-list>
+    </v-navigation-drawer>
+
+    <div style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
+      <div style="max-width: 90ch;">
+        <div style="padding-top:25px">
+          <v-alert v-if="alert" type="info" title="Hinweis - Prototyp v0.1"
+            text="Alle Inhalte dieser Version sind experimentell. Texte, Farben, Grafiken werden im späteren Projektverlauf angepasst."
+            variant="tonal"></v-alert>
+
+          <slot />
+        </div>
+      </div>
+    </div>
+
+    <div style="position: absolute; bottom: 0; width: 100%; max-height:64px; background-color: black; padding-left:75px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right';">
+      <div style="color:white; grid-area: left; margin-top: 20px; font-size: 12px;">
+        <div style="display:inline-block">
+          {{ new Date().getFullYear() }} — <strong>{{ appName }}</strong>
+        </div>
+        <div style="display:inline-block">
+          <a :href="footerContact" style="margin-left:15px" v-if="footerContact != null && footerContact.length > 1">{{
+            $t("footer_Contact") }}</a>
+          <a :href="footerImpressum" style="margin-left:15px;"
+            v-if="footerImpressum != null && footerImpressum.length > 1">{{ $t("footer_Impressum") }}</a>
+          <a :href="footerDsgvo" style="margin-left:15px" v-if="footerDsgvo != null && footerDsgvo.length > 1">{{
+            $t("footer_Dsgvo") }}</a>
+        </div>
+      </div>
+
+      <div style="grid-area: middle;"></div>
+
+      <div style="text-align: right; grid-area: right">
+        <a :href="rightIconHref" target="_blank">
+          <img alt="Logo" src="../assets/logo_right.svg" style="max-height:65px; margin-left: auto; " />
+        </a>
+      </div>
+    </div>
   </v-app>
 </template>
 
