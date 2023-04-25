@@ -8,10 +8,14 @@
   </v-row>
   <v-row>
     <v-col>
-      <v-carousel ref="carousel" v-model="tab" continuous :cycle="cycle" style="max-height: 275px;">
+      <v-carousel hide-delimiter-background hide-delimiters continuous ref="carousel" v-model="tab" :cycle="cycle">
         <v-carousel-item v-for="(item, i) in items" :key="i">
-          <v-sheet height="100%" tile>
-            <AnnotatedSampel :html="item" style="padding:5px 75px 5px 75px" />
+          <v-sheet height="100%">
+            <div>
+              <div style="padding:5px 75px 5px 75px">
+                <AnnotatedSampel :html="item" />
+              </div>
+            </div>
           </v-sheet>
         </v-carousel-item>
       </v-carousel>
