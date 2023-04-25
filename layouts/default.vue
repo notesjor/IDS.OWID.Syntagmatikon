@@ -16,7 +16,8 @@
       </div>
     </div>
 
-    <v-navigation-drawer expand-on-hover permanent style="padding-top: 65px; z-index:0">
+    <v-navigation-drawer expand-on-hover permanent style="z-index:0">
+      <div class="text-xl" style="margin:7px 0px 20px 10px"><v-icon>mdi-arrow-decision-outline</v-icon> {{ appName }}</div>
       <v-list density="compact" nav>
         <v-list-subheader>Übersicht</v-list-subheader>
         <router-link to="/"><v-list-item prepend-icon="mdi-home" title="Projekt-Startseite"></v-list-item></router-link>
@@ -113,6 +114,10 @@ export default {
   theme: { dark: false },
   data() {
     return {
+      showSecondLogo: false,
+
+
+
       alert: true,
 
       appName: null,
@@ -145,9 +150,7 @@ export default {
   },
 
   methods: {
-    test() {
-      alert("test");
-    }
+    
   }
 }
 </script>

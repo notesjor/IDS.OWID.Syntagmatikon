@@ -1,33 +1,28 @@
 <template>
-<!--
-  <v-row>
-    <v-col>
-      <h1 class="text-xl">Interaktives-Beispiel</h1>
-      <h2 class="text-l">Bewegen Sie die Maus über die hervorgehobenen Stellen, um passende Ressourcen im Syntagmatikon zu
-        finden...</h2>
-    </v-col>
-  </v-row>
--->
-  <v-row>
-    <v-col cols="8">
-      <v-card>
-        <v-card-text>
-          <div ref="content" v-html="$props.html" class="text"></div>
-        </v-card-text>
-      </v-card>
-    </v-col>
-    <v-col cols="4">
-      <div ref="info" style="display:none;">
-        <v-card style="width:100%">
-          <v-card-title :style="styleHead">{{ tooltip.source }}</v-card-title>
-          <v-card-subtitle>{{ tooltip.rtype }}</v-card-subtitle>
+  <div>
+    <v-row>
+      <v-col>
+        <v-card elevation="5">
           <v-card-text>
-            <v-icon>mdi-arrow-right</v-icon> {{ tooltip.article }}
+            <div ref="content" v-html="$props.html" class="text"></div>
           </v-card-text>
         </v-card>
-      </div>
-    </v-col>
-  </v-row>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <div ref="info" style="display:none;">
+          <v-card style="width:90%; margin-left:auto; margin-right: auto;">
+            <v-card-title :style="styleHead">{{ tooltip.source }}</v-card-title>
+            <v-card-subtitle>{{ tooltip.rtype }}</v-card-subtitle>
+            <v-card-text>
+              <v-icon>mdi-arrow-right</v-icon> {{ tooltip.article }}
+            </v-card-text>
+          </v-card>
+        </div>
+      </v-col>
+    </v-row>
+  </div>
 </template>
 
 <script>
@@ -67,7 +62,7 @@ export default {
 
       this.$refs.info.style.display = 'block';
     },
-  }, 
+  },
   computed: {
     styleHead() {
       return {
