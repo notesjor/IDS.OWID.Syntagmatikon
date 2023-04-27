@@ -1,5 +1,5 @@
 <template>
-    <div style="margin-left:-10%; margin-right: -12%;">
+    <div style="margin-left:-18%; margin-right: -17%;">
         <v-row>
             <v-col>
                 <div
@@ -22,16 +22,22 @@
             <v-col></v-col>
         </v-row>
         <splitpanes style="height: 77vh" class="default-theme" v-if="panes == 1">
-            <pane><iframe :src="urls[0]" style="width:100%; height:100%;" v-if="!editor" scrolling="yes"/><TinyEditor style="height: 100%;" v-else/></pane>
+            <pane><iframe :src="urls[0]" style="width:100%; height:100%;" v-if="!editor" scrolling="yes" />
+                <TinyEditor style="height: 100%;" v-else />
+            </pane>
         </splitpanes>
         <splitpanes style="height: 77vh" class="default-theme" v-else-if="panes == 2">
-            <pane><iframe :src="urls[0]" style="width:100%; height:100%;" scrolling="yes"/></pane>
-            <pane><iframe :src="urls[1]" style="width:100%; height:100%;" scrolling="yes" v-if="!editor"/><TinyEditor style="height: 100%;" v-else/></pane>
+            <pane><iframe :src="urls[0]" style="width:100%; height:100%;" scrolling="yes" /></pane>
+            <pane><iframe :src="urls[1]" style="width:100%; height:100%;" scrolling="yes" v-if="!editor" />
+                <TinyEditor style="height: 100%;" v-else />
+            </pane>
         </splitpanes>
         <splitpanes style="height: 77vh" class="default-theme" v-else>
-            <pane><iframe :src="urls[0]" style="width:100%; height:100%;" scrolling="yes"/></pane>
-            <pane><iframe :src="urls[1]" style="width:100%; height:100%;" scrolling="yes"/></pane>
-            <pane><iframe :src="urls[2]" style="width:100%; height:100%;" scrolling="yes" v-if="!editor"/><TinyEditor style="height: 100%;" v-else/></pane>            
+            <pane><iframe :src="urls[0]" style="width:100%; height:100%;" scrolling="yes" /></pane>
+            <pane><iframe :src="urls[1]" style="width:100%; height:100%;" scrolling="yes" /></pane>
+            <pane><iframe :src="urls[2]" style="width:100%; height:100%;" scrolling="yes" v-if="!editor" />
+                <TinyEditor style="height: 100%;" v-else />
+            </pane>
         </splitpanes>
     </div>
 </template>
@@ -47,17 +53,16 @@ export default {
     data: () => ({
         panes: 3,
         urls: [
-            'http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Ende/index.html',
+            'https://www.owid.de/plus/',
             'https://www.owid.de/artikel/401702',
-            'https://www.owid.de/plus/live-2021/?locale=null&data=W3sibGF5ZXIiOjAsInBvc2l0aW9uIjowLCJ0b2tlbiI6ImVuZGUifV0='],
+            'http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Ende/index.html',
+        ],
         editor: false
     }),
 }
 </script>
 
-<style>
-.splitpanes.default-theme .splitpanes__splitter:before,
+<style>.splitpanes.default-theme .splitpanes__splitter:before,
 .splitpanes.default-theme .splitpanes__splitter:after {
     background-color: #333333;
-}
-</style>
+}</style>

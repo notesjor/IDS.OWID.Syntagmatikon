@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <div class="d-print-none"
-      style="z-index:1; max-height: 65px; min-height:65px; background-color: black; padding:7px 10px 5px 5px; display: grid; grid-template-columns: 1fr auto 250px; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right'; ">
+      style="z-index:1; max-height: 65px; min-height:65px; background-color: black; padding:7px 10px 5px 10px; display: grid; grid-template-columns: 1fr auto 250px; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right'; ">
       <div class="inline" style="color:white; grid-area: left; margin-left:5px">
         <div class="text-xl"><v-icon>mdi-arrow-decision-outline</v-icon> {{ appName }}</div>
         <div class="text-xs" style="text-align: left;">{{ appDescription }}</div>
@@ -11,13 +11,15 @@
 
       <div class="inline" style="grid-area: right;">
         <a :href="leftIconHref" target="_blank">
-          <img alt="Logo" src="../assets/logo_left.svg" style="margin-left: auto; max-height:40px; margin-right:20px; margin-top:5px" />
+          <img alt="Logo" src="../assets/logo_left.svg"
+            style="margin-left: auto; max-height:40px; margin-right:20px; margin-top:5px" />
         </a>
       </div>
     </div>
 
     <v-navigation-drawer expand-on-hover permanent style="z-index:0">
-      <div class="text-xl" style="margin:7px 0px 20px 10px"><v-icon>mdi-arrow-decision-outline</v-icon> {{ appName }}</div>
+      <div class="text-xl" :style="secondLogoStyle"><v-icon>mdi-arrow-decision-outline</v-icon> {{ appName }}
+      </div>
       <v-list density="compact" nav>
         <v-list-subheader>Übersicht</v-list-subheader>
         <router-link to="/"><v-list-item prepend-icon="mdi-home" title="Projekt-Startseite"></v-list-item></router-link>
@@ -43,18 +45,17 @@
     </v-navigation-drawer>
 
     <div style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
-      <div style="max-width: 90ch; margin-left:220px">
-        <div style="padding-top:25px">
-          <v-alert v-if="alert" type="info" title="Hinweis - Prototyp v0.1"
-            text="Alle Inhalte dieser Version sind experimentell. Texte, Farben, Grafiken werden im späteren Projektverlauf angepasst."
-            variant="tonal"></v-alert>
+      <div style="margin:10px 10px 0px 275px">
+        <v-alert v-if="alert" type="info" title="Hinweis - Prototyp v0.1"
+          text="Alle Inhalte dieser Version sind experimentell. Texte, Farben, Grafiken werden im späteren Projektverlauf angepasst."
+          variant="tonal"></v-alert>
 
-          <slot />
-        </div>
+        <slot />
       </div>
     </div>
 
-    <div style="position: absolute; bottom: 0; width: 100%; max-height:64px; background-color: black; padding-left:25px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right';">
+    <div
+      style="position: absolute; bottom: 0; width: 100%; max-height:64px; background-color: black; padding-left:25px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right';">
       <div style="color:white; grid-area: left; margin-top: 20px; font-size: 12px;">
         <div style="display:inline-block">
           {{ new Date().getFullYear() }} — <strong>{{ appName }}</strong>
@@ -81,10 +82,6 @@
 </template>
 
 <style>
-div.v-list-subheader {
-  margin: -10px 58px -10px 0
-}
-
 body {
   hyphens: auto;
   hyphenate-character: auto 5;
@@ -114,9 +111,12 @@ export default {
   theme: { dark: false },
   data() {
     return {
-      showSecondLogo: false,
+      secondLogoStyle: {
+        margin: "7px 0px 15px 15px",
+        opacity: 0
+      },
 
-
+      //
 
       alert: true,
 
@@ -133,6 +133,7 @@ export default {
   },
 
   mounted() {
+    window.addEventListener('scroll', this.handleScroll);
     //
     setTimeout(() => {
       this.alert = false
@@ -149,8 +150,16 @@ export default {
     this.footerDsgvo = this.$config.public.footerDsgvo;
   },
 
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+
   methods: {
-    
+    handleScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      this.$data.secondLogoStyle.opacity = scrollTop / 130;
+      console.log(this.$data.secondLogoStyle.opacity);
+    }
   }
 }
 </script>

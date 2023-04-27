@@ -1,5 +1,6 @@
 <template>
-  <v-row>
+  <div style="max-width: 80ch;">
+    <v-row>
     <v-col>
       <div>
         <h1 class="text-3xl font-bold">
@@ -41,6 +42,7 @@
       <TreeView :items="treeData"/>
     </v-col>
   </v-row>
+  </div>
 </template>
 
 <script>
