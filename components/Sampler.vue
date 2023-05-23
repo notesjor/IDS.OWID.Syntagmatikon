@@ -63,7 +63,7 @@ export default {
               from: 49,
               to: 59,
               source: 'XXX',
-              article: 'Ein Ende mit Schrecken ist besser als ein Schrecken ohne Ende',
+              article: 'Ein Ende mit Schrecken',
               type: 'XXX',
               href: 'https://www.owid.de/artikel/401613',
               color: '#c5049b'

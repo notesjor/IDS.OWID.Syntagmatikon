@@ -3,12 +3,20 @@
     <v-row style="padding:20px 5px 5px 5px">
       <v-card elevation="8">
         <v-card-text class="text" style="line-height: 24px;">
-          <sampler-item-text v-for="(t, i) in text" :key="i" :text="t" :num="i"></sampler-item-text>
+          <sampler-item-text v-for="(t, i) in text" :key="i" :text="t" :num="i" @publish="publish"></sampler-item-text>
         </v-card-text>
       </v-card>
     </v-row>
-    <v-row style="padding: 10px 25px 5px 25px;">
-      <div id="samplerInfo" />
+    <v-row style="padding: 10px 25px 5px 25px;" v-if="info != null">
+      <div style="width: 100%;">
+        <v-card>
+          <v-card-title :style="infoStyle">{{ info.source }}</v-card-title>
+          <v-card-subtitle>{{ info.type }}</v-card-subtitle>
+          <v-card-text>
+            <v-btn prepend-icon="mdi-arrow-right" style="text-transform: none;" :href="info.href">{{ info.article }}</v-btn>
+          </v-card-text>
+        </v-card>
+      </div>
     </v-row>
   </div>
 </template>
@@ -29,6 +37,9 @@ export default {
       article: "",
       type: "",
       href: "",
+
+      info: null,
+      infoStyle: "",
     };
   },
 
@@ -100,13 +111,12 @@ export default {
 
       return texts;
     },
-    activateNode(event) {
-      var attr = event.target.attributes;
-
-      this.$data.source = attr.getNamedItem('source').value;
-      this.$data.article = attr.getNamedItem('article').value;
-      this.$data.type = attr.getNamedItem('type').value;
-      this.$data.href = attr.getNamedItem('href').value;
+    publish(data) {
+      if(data == null || data.color == "black") {
+        return;
+      }
+      this.$data.info = data;
+      this.$data.infoStyle = `color:${data.color};`;
     },
   }
 }
