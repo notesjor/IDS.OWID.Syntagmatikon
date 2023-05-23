@@ -72,11 +72,85 @@ export default {
         },
         {
           tokens: ["Für", "Jahrelang", "haben", "welche", "von", "die", "ältere", "Leute", "versucht", ",", "ein", "Museum", "und", "Archives", "zu", "bauen", "hier", ",", "aber", "die", "konnten", "nie", "das", "Material", "zusammenfind'n", ".", "Dann", "kam", "ein", "Immigrant", ",", "Jonas", "Vanagers", ",", "der", "kam", "hier", ",", "und", "der", "war", "sehr", "interesstessiert", "in", "der", "Sache", ",", "und", "er", "is'", "von", "Haus", "zu", "Haus", "gegangen", ",", "und", "hat", "alles", "Sachen", "zusammengesucht", ",", "und", "the", "Historie", "von", "Lobethal", "ganz", "auf", "den", "Grund", "gegangen", "."],
-
+          annotations: [
+            {
+              from: 3,
+              to: 6,
+              source: 'Sprichwörterbuch',
+              article: 'Eine unangenehme Aussprache haben',
+              type: 'Sprichwort',
+              href: 'https://www.owid.de/artikel/401610',
+              color: '#0d65c2'
+            },
+            {
+              from: 23,
+              to: 29,
+              source: 'Wörterbuch ABC',
+              article: 'Kopf in den Sand stecken',
+              type: 'Redewendung',
+              href: 'https://www.owid.de/artikel/401611',
+              color: '#008702'
+            },
+            {
+              from: 35,
+              to: 39,
+              source: 'Sprichwörterbuch',
+              article: 'Etwas schnell hinter sich brinden',
+              type: 'Sprachgebrauchsmuster',
+              href: 'https://www.owid.de/artikel/401612',
+              color: '#0d65c2'
+            },
+            {
+              from: 49,
+              to: 59,
+              source: 'XXX',
+              article: 'Ein Ende mit Schrecken',
+              type: 'XXX',
+              href: 'https://www.owid.de/artikel/401613',
+              color: '#c5049b'
+            },
+          ]
         },
         {
           tokens: ["Deutsche", "Fans", "sind", "laut", "und", "viel", "am", "Feiern", ".", "Aber", "nicht", "immer", "textsicher", ".", "Nach", "dem", "Viertelfinalsieg", "gegen", "Argentinien", "versuchte", "ein", "weiblicher", "Teenager", "in", "der", "Straßenbahn", "die", "Nationalhymne", "anstimmen", ".", "Nach", "„", "Einigkeit", "und", "Recht", "”", "musste", "sie", "sich", "erkundigen", ":", "„", "Wie", "geht", "der", "Text", "nochmal", "?", "”"],
-
+          annotations: [
+            {
+              from: 3,
+              to: 6,
+              source: 'Sprichwörterbuch',
+              article: 'Eine unangenehme Aussprache haben',
+              type: 'Sprichwort',
+              href: 'https://www.owid.de/artikel/401610',
+              color: '#0d65c2'
+            },
+            {
+              from: 23,
+              to: 29,
+              source: 'Wörterbuch ABC',
+              article: 'Kopf in den Sand stecken',
+              type: 'Redewendung',
+              href: 'https://www.owid.de/artikel/401611',
+              color: '#008702'
+            },
+            {
+              from: 35,
+              to: 39,
+              source: 'Sprichwörterbuch',
+              article: 'Etwas schnell hinter sich brinden',
+              type: 'Sprachgebrauchsmuster',
+              href: 'https://www.owid.de/artikel/401612',
+              color: '#0d65c2'
+            },
+            {
+              from: 49,
+              to: 59,
+              source: 'XXX',
+              article: 'Ein Ende mit Schrecken',
+              type: 'XXX',
+              href: 'https://www.owid.de/artikel/401613',
+              color: '#c5049b'
+            },
+          ]
         }
       ],
       isPaused: true,
