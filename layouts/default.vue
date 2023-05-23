@@ -158,7 +158,6 @@ export default {
     handleScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       this.$data.secondLogoStyle.opacity = scrollTop / 130;
-      console.log(this.$data.secondLogoStyle.opacity);
     }
   }
 }

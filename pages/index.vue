@@ -30,7 +30,8 @@
     <v-row>
       <v-col>
         <div>
-          <annotatedSampelMulti></annotatedSampelMulti>
+          <!--<annotatedSampelMulti></annotatedSampelMulti>-->
+          <Sampler></Sampler>
         </div>
       </v-col>
     </v-row>
