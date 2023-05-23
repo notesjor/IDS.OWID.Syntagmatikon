@@ -33,12 +33,13 @@ export default {
           tokens: ["Droht", "also", "demnächst", "eine", "unangenehme", "Aussprache", "mit", "dem", "Chef", "oder", "ein", "leidiger", "Besuch", "bei", "Verwandten", ",", "wissen", "wir", "es", "besser", ":", "Statt", "den", "Kopf", "in", "den", "Sand", "zu", "stecken", ",", "sollten", "wir", "das", "Ganze", "lieber", "schnell", "hinter", "uns", "bringen", ".", "Denn", "unsere", "&bdquo;","Großhirnrinde", "&ldquo;", "weiß", "schon", "lange", ":", "besser", "ein", "Ende", "mit", "Schrecken", "als", "ein", "Schrecken", "ohne", "Ende", "."],
           annotations: [
             {
-              from: 5,
-              to: 7,
+              from: 3,
+              to: 6,
               source: 'Sprichwörterbuch',
               article: 'Eine unangenehme Aussprache haben',
               type: 'Sprichwort',
               href: 'https://www.owid.de/artikel/401610',
+              color: '#0d65c2'
             },
             {
               from: 23,
@@ -47,6 +48,7 @@ export default {
               article: 'Kopf in den Sand stecken',
               type: 'Redewendung',
               href: 'https://www.owid.de/artikel/401611',
+              color: '#008702'
             },
             {
               from: 35,
@@ -55,14 +57,16 @@ export default {
               article: 'Etwas schnell hinter sich brinden',
               type: 'Sprachgebrauchsmuster',
               href: 'https://www.owid.de/artikel/401612',
+              color: '#0d65c2'
             },
             {
-              from: 50,
+              from: 49,
               to: 59,
               source: 'XXX',
               article: 'Ein Ende mit Schrecken ist besser als ein Schrecken ohne Ende',
               type: 'XXX',
               href: 'https://www.owid.de/artikel/401613',
+              color: '#c5049b'
             },
           ]
         },

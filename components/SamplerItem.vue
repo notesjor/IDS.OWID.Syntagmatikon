@@ -2,19 +2,13 @@
   <div>
     <v-row style="padding:20px 5px 5px 5px">
       <v-card elevation="8">
-        <v-card-text>
-          <div class="text" ref="htmlContainer"></div>
+        <v-card-text class="text" style="line-height: 24px;">
+          <sampler-item-text v-for="(t, i) in text" :key="i" :text="t" :num="i"></sampler-item-text>
         </v-card-text>
       </v-card>
     </v-row>
     <v-row style="padding: 10px 25px 5px 25px;">
-      <v-card elevation="4" style="width: 100%;">
-        <v-card-title>{{ source }}</v-card-title>
-        <v-card-subtitle>{{ type }}</v-card-subtitle>
-        <v-card-text>
-          <v-btn prepend-icon="mdi-arrow-right" :href="href" style="text-transform: none;">{{ article }}</v-btn>
-        </v-card-text>
-      </v-card>
+      <div id="samplerInfo" />
     </v-row>
   </div>
 </template>
@@ -30,6 +24,7 @@ export default {
 
   data() {
     return {
+      text: [],
       source: "",
       article: "",
       type: "",
@@ -38,47 +33,72 @@ export default {
   },
 
   mounted() {
-    var self = this;
-
-    self.$refs.htmlContainer.innerHTML = self.getText();
-    var spans = self.$refs.htmlContainer.querySelectorAll('span');
-    for (let i = 0; i < spans.length; i++) {
-      spans[i].addEventListener('mouseenter', self.activateNode);
-    }
+    this.$data.text = this.getText();
   },
 
   methods: {
     getText() {
-      let html = "";
+      var texts = [];
+      var current = {
+        text: "",
+        color: "black",
+        source: "",
+        article: "",
+        type: "",
+        href: ""
+      };
       const { tokens, annotations } = this.data;
 
-      var annotation = null;
-
-
+      var stop = -1;
       for (let i = 0; i < tokens.length; i++) {
-        if (i > 0)
-
-          if (annotation && i >= annotation.to) {
-            // remove last char from html
-            html = html.substring(0, html.length - 1);
-            html += "</span> ";
-            annotation = null;
+        if (stop > -1 && i === stop) {
+          if (current.text != "") {
+            texts.push(current);
           }
 
-        const tmp = annotations.find(a => a.from === i);
-        if (tmp) {
-          annotation = tmp;
-          html += `<span source="${annotation.source}" article="${annotation.article}" type="${annotation.type}" href="${annotation.href}">`;
+          current = {
+            text: "",
+            color: "black",
+            source: "",
+            article: "",
+            type: "",
+            href: ""
+          };
+          stop = -1;
         }
 
-        html += tokens[i];
+        if (stop === -1) {
+          let annotation = annotations.find(a => a.from === i);
+          if (annotation) {
+            stop = annotation.to;
 
-        if (i < tokens.length - 1) {
-          html += " ";
+            if (current.text != "") {
+              texts.push(current);
+            }
+
+            current = {
+              text: tokens[i] + " ",
+              color: annotation.color,
+              source: annotation.source,
+              article: annotation.article,
+              type: annotation.type,
+              href: annotation.href
+            };
+          }
+          else {
+            current.text += tokens[i] + " ";
+          }
+        }
+        else {
+          current.text += tokens[i] + " ";
         }
       }
 
-      return html;
+      if (current.text != "") {
+        texts.push(current);
+      }
+
+      return texts;
     },
     activateNode(event) {
       var attr = event.target.attributes;
@@ -100,7 +120,7 @@ export default {
 }
 
 span[source="Sprichwörterbuch"] {
-  color: rgb(13, 101, 194);
+  color: #0d65c2;
   background-color: rgba(13, 101, 194, 0.1);
   border-radius: 3px;
   border: 2px solid rgb(13, 101, 194);
@@ -108,7 +128,7 @@ span[source="Sprichwörterbuch"] {
 }
 
 span[source="XXX"] {
-  color: rgb(0, 135, 2);
+  color: #008702;
   background-color: rgba(0, 135, 2, 0.1);
   border-radius: 3px;
   border: 2px solid rgb(0, 135, 2);
@@ -116,7 +136,7 @@ span[source="XXX"] {
 }
 
 span[source="Wörterbuch ABC"] {
-  color: rgb(197, 4, 155);
+  color: #c5049b;
   background-color: rgba(197, 4, 155, 0.1);
   border-radius: 3px;
   border: 2px solid rgb(197, 4, 155);
