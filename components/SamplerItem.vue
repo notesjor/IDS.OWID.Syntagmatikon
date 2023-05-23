@@ -12,7 +12,7 @@
         <v-card-title>{{ source }}</v-card-title>
         <v-card-subtitle>{{ type }}</v-card-subtitle>
         <v-card-text>
-          <v-icon>mdi-arrow-right</v-icon> {{ article }}
+          <v-btn prepend-icon="mdi-arrow-right" :href="href" style="text-transform: none;">{{ article }}</v-btn>
         </v-card-text>
       </v-card>
     </v-row>
@@ -81,12 +81,12 @@ export default {
       return html;
     },
     activateNode(event) {
-      const { source, article, type, href } = event.target.attributes;
+      var attr = event.target.attributes;
 
-      this.$data.source = source.value;
-      this.$data.article = article.value;
-      this.$data.type = type.value;
-      this.$data.href = href.value;
+      this.$data.source = attr.getNamedItem('source').value;
+      this.$data.article = attr.getNamedItem('article').value;
+      this.$data.type = attr.getNamedItem('type').value;
+      this.$data.href = attr.getNamedItem('href').value;
     },
   }
 }

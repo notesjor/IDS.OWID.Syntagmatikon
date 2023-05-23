@@ -37,7 +37,7 @@ export default {
               to: 7,
               source: 'Sprichwörterbuch',
               article: 'Eine unangenehme Aussprache haben',
-              type: 'Sprichwörterbuch',
+              type: 'Sprichwort',
               href: 'https://www.owid.de/artikel/401610',
             },
             {
@@ -45,7 +45,7 @@ export default {
               to: 29,
               source: 'Wörterbuch ABC',
               article: 'Kopf in den Sand stecken',
-              type: 'Sprichwörterbuch',
+              type: 'Redewendung',
               href: 'https://www.owid.de/artikel/401611',
             },
             {
@@ -53,7 +53,7 @@ export default {
               to: 39,
               source: 'Sprichwörterbuch',
               article: 'Etwas schnell hinter sich brinden',
-              type: 'Sprichwörterbuch',
+              type: 'Sprachgebrauchsmuster',
               href: 'https://www.owid.de/artikel/401612',
             },
             {
@@ -61,7 +61,7 @@ export default {
               to: 59,
               source: 'XXX',
               article: 'Ein Ende mit Schrecken ist besser als ein Schrecken ohne Ende',
-              type: 'Sprichwörterbuch',
+              type: 'XXX',
               href: 'https://www.owid.de/artikel/401613',
             },
           ]
