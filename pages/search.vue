@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="2"></v-col>    
+    <v-col cols="2"></v-col>
     <v-col cols="8">
       <div>
         <h1 class="text-3xl font-bold">
@@ -10,21 +10,21 @@
           Die Folgende Liste erlaubt einen Überblickssuche in den Ressourcen des Syntagmatikons. <br />
           Die Ressourcen sind nach Kategorien sortiert und können nach verschiedenen Kriterien gefiltert werden.
         </p>
-        <br/>
+        <br />
         <v-text-field label="Bitte Suchausruck eingeben..." append-inner-icon="mdi-magnify" variant="solo"></v-text-field>
       </div>
     </v-col>
-    <v-col cols="2"></v-col>    
+    <v-col cols="2"></v-col>
   </v-row>
   <v-row>
     <v-col cols="6">
       <v-card class="mx-auto">
         <v-list style="margin-top:-20px">
-          <v-list-item v-for="x in ressources" :key="x.value">
+          <v-list-item v-for="x in ressources" :key="x.value" style="margin:-20px 0px 0px 0px">
             <v-list-subheader v-if="x.type === 'subheader'">
               {{ x.title }}
             </v-list-subheader>
-            <v-list-item v-else :value="x.value">
+            <v-list-item v-else :value="x.value" style="margin:5px 0px 5px 20px">
               <v-list-item-content>
                 <v-list-item-title>
                   {{ x.title }}
@@ -33,11 +33,13 @@
                   {{ x.subtitle }}
                 </v-list-item-subtitle>
               </v-list-item-content>
+              <!--
               <div style="margin:3px -7px 0px -7px">
                 <v-chip class="ma-2" label text-color="white" variant="outlined" v-for="tag in x.tags" :key="tag">
                   <v-icon start icon="mdi-tag-outline"></v-icon> {{ tag }}
                 </v-chip>
               </div>
+            -->
             </v-list-item>
           </v-list-item>
         </v-list>
@@ -56,6 +58,22 @@
           </h2>
         </v-card-sub-title>
         <v-card-text>
+          <div>
+            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
+                icon="mdi-tag-outline"></v-icon> Datenbank </v-chip>
+            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
+                icon="mdi-tag-outline"></v-icon> Explorativ </v-chip>
+            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
+                icon="mdi-tag-outline"></v-icon> Komposita </v-chip>
+            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
+                icon="mdi-tag-outline"></v-icon> Häufigkeit </v-chip>
+            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
+                icon="mdi-tag-outline"></v-icon> Visualisierung </v-chip>
+            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
+                icon="mdi-tag-outline"></v-icon> Daten </v-chip>
+            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
+                icon="mdi-tag-outline"></v-icon> Sonstiges </v-chip>
+          </div>
           <p style="font-size: 16px; line-height: 23px;">
             <img src="https://www.owid.de/plus/data/img/owidpluslive.png" alt="KoMuX Logo"
               style="width:50%; margin-right: 10px; float: left;">
@@ -82,18 +100,6 @@
             Anschlussfähigkeit an Grammatiktheorien wie die Konstruktionsgrammatik (KxG).
           </p>
           <br />
-          <div>
-            <v-chip class="ma-2" label text-color="white" variant="outlined"> <v-icon start
-                icon="mdi-tag-outline"></v-icon> Datenbank </v-chip>
-            <v-chip class="ma-2" label text-color="white" variant="outlined"> <v-icon start
-                icon="mdi-tag-outline"></v-icon> Explorativ </v-chip>
-            <v-chip class="ma-2" label text-color="white" variant="outlined"> <v-icon start
-                icon="mdi-tag-outline"></v-icon> Komposita </v-chip>
-            <v-chip class="ma-2" label text-color="white" variant="outlined"> <v-icon start
-                icon="mdi-tag-outline"></v-icon> Häufigkeit </v-chip>
-            <v-chip class="ma-2" label text-color="white" variant="outlined"> <v-icon start
-                icon="mdi-tag-outline"></v-icon> Visualisierung </v-chip>
-          </div>
         </v-card-text>
       </v-card>
     </v-col>
@@ -108,22 +114,22 @@ export default {
       ressources: [
         { "title": "Explorative Datenbanken", type: "subheader", value: 1000 },
         { "title": "KoMuX", value: 1100, tags: ["Datenbank", "Explorativ", "Komposita", "Häufigkeit"], subtitle: "Durchsuche mehr als 50.000 Komposita" },
-        { "title": "PREPCON (explorativ)", value: 1200 },
+        { "title": "PREPCON (explorativ)", value: 1200, subtitle: "Präpositionale Wortverbindungen in unterschiedlichen Beschreibungstiefen" },
 
         { "title": "Deskriptive Datenbanken", type: "subheader", value: 2000 },
-        { "title": "MAP", value: 2100 },
-        { "title": "Wörterbuch Redeeinleiter", value: 2200 },
+        { "title": "MAP", value: 2100, subtitle: "Musterbank Argumentmarkierender Präpositionen" },
+        { "title": "Wörterbuch Redeeinleiter", value: 2200, subtitle: "Musterbank Argumentmarkierender Präpositionen" },
 
         { "title": "Inventare und Sammlungen", type: "subheader", value: 3000 },
-        { "title": "PhK-Liste", value: 3100 },
-        { "title": "SpruchList", value: 3200 },
-        { "title": "PREPCON (teporal)", value: 3300 },
-        { "title": "DTWW", value: 3400 },
+        { "title": "PhK-Liste", value: 3100, subtitle: "Musterbank unterschiedlichen Präpositionen" },
+        { "title": "SpruchList", value: 3200, subtitle: "Wortverbindungen Durchsuche Präpositionen" },
+        { "title": "PREPCON (teporal)", value: 3300, subtitle: "Musterbank Argumentmarkierender Präpositionen" },
+        { "title": "DTWW", value: 3400, subtitle: "Musterbank Beschreibungstiefen Präpositionen" },
 
         { "title": "Online Wörterbücher", type: "subheader", value: 4000 },
-        { "title": "OWID Sprichwörterbuch", value: 4100 },
-        { "title": "OWID Kleines Wörterbuch der Verlaufsformen im Deutschen", value: 4200 },
-        { "title": "OWID Feste Wortverbindungen", value: 4300 },
+        { "title": "OWID Sprichwörterbuch", value: 4100, subtitle: "Musterbank unterschiedlichen Komposita" },
+        { "title": "OWID Kleines Wörterbuch der Verlaufsformen im Deutschen", value: 4200, subtitle: "Wortverbindungen unterschiedlichen Präpositionen" },
+        { "title": "OWID Feste Wortverbindungen", value: 4300, subtitle: "Musterbank Beschreibungstiefen Präpositionen" },
 
         { "title": "Korpuszentrierte Präsentationsformate", type: "subheader", value: 5000 },
         { "title": "OWID Sprichwörterbuch", value: 5100 },

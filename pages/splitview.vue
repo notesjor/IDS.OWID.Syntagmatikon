@@ -1,5 +1,5 @@
 <template>
-    <div style="margin-left:-18%; margin-right: -17%;">
+    <div style="margin-left:-25%; margin-right: -25%;">
         <v-row>
             <v-col>
                 <div
@@ -19,26 +19,27 @@
             </v-col>
         </v-row>
         <v-row>
-            <v-col></v-col>
+            <v-col style="min-width:57vw">
+                <splitpanes style="height: 77vh;" class="default-theme" v-if="panes == 1">
+                    <pane><iframe :src="urls[0]" style="width:100%; height:100%;" v-if="!editor" scrolling="yes" />
+                        <TinyEditor style="height: 100%;" v-else />
+                    </pane>
+                </splitpanes>
+                <splitpanes style="height: 77vh" class="default-theme" v-else-if="panes == 2">
+                    <pane><iframe :src="urls[0]" style="width:100%; height:100%;" scrolling="yes" /></pane>
+                    <pane><iframe :src="urls[1]" style="width:100%; height:100%;" scrolling="yes" v-if="!editor" />
+                        <TinyEditor style="height: 100%;" v-else />
+                    </pane>
+                </splitpanes>
+                <splitpanes style="height: 77vh" class="default-theme" v-else>
+                    <pane><iframe :src="urls[0]" style="width:100%; height:100%;" scrolling="yes" /></pane>
+                    <pane><iframe :src="urls[1]" style="width:100%; height:100%;" scrolling="yes" /></pane>
+                    <pane><iframe :src="urls[2]" style="width:100%; height:100%;" scrolling="yes" v-if="!editor" />
+                        <TinyEditor style="height: 100%;" v-else />
+                    </pane>
+                </splitpanes>
+            </v-col>
         </v-row>
-        <splitpanes style="height: 77vh" class="default-theme" v-if="panes == 1">
-            <pane><iframe :src="urls[0]" style="width:100%; height:100%;" v-if="!editor" scrolling="yes" />
-                <TinyEditor style="height: 100%;" v-else />
-            </pane>
-        </splitpanes>
-        <splitpanes style="height: 77vh" class="default-theme" v-else-if="panes == 2">
-            <pane><iframe :src="urls[0]" style="width:100%; height:100%;" scrolling="yes" /></pane>
-            <pane><iframe :src="urls[1]" style="width:100%; height:100%;" scrolling="yes" v-if="!editor" />
-                <TinyEditor style="height: 100%;" v-else />
-            </pane>
-        </splitpanes>
-        <splitpanes style="height: 77vh" class="default-theme" v-else>
-            <pane><iframe :src="urls[0]" style="width:100%; height:100%;" scrolling="yes" /></pane>
-            <pane><iframe :src="urls[1]" style="width:100%; height:100%;" scrolling="yes" /></pane>
-            <pane><iframe :src="urls[2]" style="width:100%; height:100%;" scrolling="yes" v-if="!editor" />
-                <TinyEditor style="height: 100%;" v-else />
-            </pane>
-        </splitpanes>
     </div>
 </template>
 
@@ -62,7 +63,9 @@ export default {
 }
 </script>
 
-<style>.splitpanes.default-theme .splitpanes__splitter:before,
+<style>
+.splitpanes.default-theme .splitpanes__splitter:before,
 .splitpanes.default-theme .splitpanes__splitter:after {
     background-color: #333333;
-}</style>
+}
+</style>
