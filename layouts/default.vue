@@ -1,10 +1,11 @@
 <template>
   <v-app>
     <div class="d-print-none"
-      style="z-index:1; max-height: 65px; min-height:65px; background-color: black; padding:7px 10px 5px 10px; display: grid; grid-template-columns: 1fr auto 250px; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right'; ">
+      style="z-index:100; max-height: 65px; min-height:65px; background-color: black; padding:7px 10px 5px 10px; display: grid; grid-template-columns: 1fr auto 250px; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right'; ">
       <div class="inline" style="color:white; grid-area: left; margin-left:5px">
+        <div style="min-height: 10px;" v-if="mobileView"></div>
         <div class="text-xl"><v-icon>mdi-arrow-decision-outline</v-icon> {{ appName }}</div>
-        <div class="text-xs" style="text-align: left;">{{ appDescription }}</div>
+        <div class="text-xs" style="text-align: left;">{{ mobileView ? " " : appDescription }}</div>
       </div>
 
       <div style="grid-area: middle;"></div>
@@ -17,7 +18,7 @@
       </div>
     </div>
 
-    <v-navigation-drawer expand-on-hover permanent style="z-index:0">
+    <v-navigation-drawer expand-on-hover permanent style="z-index:0;" v-if="desktopView">
       <div class="text-xl" :style="secondLogoStyle"><v-icon>mdi-arrow-decision-outline</v-icon> {{ appName }}
       </div>
       <v-list density="compact" nav>
@@ -43,9 +44,42 @@
         <router-link to="/network"><v-list-item prepend-icon="mdi-graph" title="Vernetzungen"></v-list-item></router-link>
       </v-list>
     </v-navigation-drawer>
+    <v-navigation-drawer expand-on-hover rail style="z-index:1; transform: none; padding-top:75px" v-else>
+      <v-list-item :title="appName" style="background-color: black; color: white; position:absolute; top:0px; width:100%; font-size:18px;">
+        <template v-slot:prepend>
+          <v-icon color="white" style="opacity: 1;">mdi-arrow-decision-outline</v-icon>
+        </template>
+      </v-list-item>
+      <v-list density="compact" nav>
+        <router-link to="/"><v-list-item prepend-icon="mdi-home" title="Projekt-Startseite"></v-list-item></router-link>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list density="compact" nav>
+        <router-link to="/project-description"><v-list-item prepend-icon="mdi-information"
+            title="Was ist ein Syntagmatikon?"></v-list-item></router-link>
+        <router-link to="/methods-description"><v-list-item prepend-icon="mdi-file-cabinet"
+            title="Korpusmethoden erklärt"></v-list-item></router-link>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list density="compact" nav>
+        <router-link to="/search"><v-list-item prepend-icon="mdi-magnify" title="Suche"></v-list-item></router-link>
+        <router-link to="/list"><v-list-item prepend-icon="mdi-format-list-bulleted-type"
+            title="Liste"></v-list-item></router-link>
+        <router-link to="/splitview"><v-list-item prepend-icon="mdi-compare"
+            title="Vergleich"></v-list-item></router-link>
+        <router-link to="/network"><v-list-item prepend-icon="mdi-graph" title="Vernetzungen"></v-list-item></router-link>
+      </v-list>
+    </v-navigation-drawer>
 
     <div style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
-      <div style="margin:10px 10px 0px 275px">
+      <div style="margin:10px 10px 0px 275px" v-if="desktopView">
+        <v-alert v-if="alert" type="info" title="Hinweis - Prototyp v0.1"
+          text="Alle Inhalte dieser Version sind experimentell. Texte, Farben, Grafiken werden im späteren Projektverlauf angepasst."
+          variant="tonal"></v-alert>
+
+        <slot />
+      </div>
+      <div style="margin:10px 20px 0px 85px" v-else>
         <v-alert v-if="alert" type="info" title="Hinweis - Prototyp v0.1"
           text="Alle Inhalte dieser Version sind experimentell. Texte, Farben, Grafiken werden im späteren Projektverlauf angepasst."
           variant="tonal"></v-alert>
@@ -55,8 +89,8 @@
     </div>
 
     <div
-      style="position: absolute; bottom: 0; width: 100%; max-height:64px; background-color: black; padding-left:25px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right';">
-      <div style="color:white; grid-area: left; margin-top: 20px; font-size: 12px;">
+      style="z-index: 100; position: absolute; bottom: 0; width: 100%; max-height:64px; background-color: black; padding-left:25px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right';">
+      <div style="color:white; grid-area: left; margin-top: 20px; font-size: 12px;" v-if="desktopView">
         <div style="display:inline-block">
           {{ new Date().getFullYear() }} — <strong>{{ appName }}</strong>
         </div>
@@ -69,15 +103,29 @@
             $t("footer_Dsgvo") }}</a>
         </div>
       </div>
+      <div style="color:white; grid-area: left; margin: 15px 0px 5px 0px; font-size: 12px; min-width: 250px;" v-else>
+        <div>
+          {{ new Date().getFullYear() }} — <strong>{{ appName }}</strong>
+        </div>
+        <div>
+          <a :href="footerContact" v-if="footerContact != null && footerContact.length > 1">{{
+            $t("footer_Contact") }}</a>
+          <a :href="footerImpressum" style="margin-left:15px;"
+            v-if="footerImpressum != null && footerImpressum.length > 1">{{ $t("footer_Impressum") }}</a>
+          <a :href="footerDsgvo" style="margin-left:15px;" v-if="footerDsgvo != null && footerDsgvo.length > 1">{{
+            $t("footer_Dsgvo") }}</a>
+        </div>
+      </div>
 
       <div style="grid-area: middle;"></div>
 
       <div style="text-align: right; grid-area: right">
         <a :href="rightIconHref" target="_blank">
-          <img alt="Logo" src="../assets/logo_right.svg" style="max-height:65px; margin-left: auto; " />
+          <img alt="Logo" src="../assets/logo_right.svg" style="max-height:65px; min-height: 45px; min-width: 200px; margin-left: auto; " />
         </a>
       </div>
     </div>
+
   </v-app>
 </template>
 
@@ -158,6 +206,15 @@ export default {
     handleScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       this.$data.secondLogoStyle.opacity = scrollTop / 130;
+    }
+  },
+
+  computed: {
+    desktopView() {
+      return this.$vuetify.display.mdAndUp;
+    },
+    mobileView(){
+      return this.$vuetify.display.smAndDown;
     }
   }
 }

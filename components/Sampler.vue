@@ -1,26 +1,28 @@
 <template>
-  <v-row>
-    <v-col>
-      <h1 class="text-xl">Interaktive-Beispiele</h1>
-      <h2 class="text-l">Bewegen Sie die Maus über hervorgehobenen Stellen, um passende Ressourcen im Syntagmatikon zu
-        finden.</h2>
-    </v-col>
-  </v-row>
-  <v-row>
-    <v-col>
-      <v-carousel hide-delimiter-background hide-delimiters continuous ref="carousel" v-model="tab" :cycle="false">
-        <v-carousel-item v-for="(item, i) in items" :key="i">
-          <v-sheet height="100%">
-            <div>
-              <div style="padding:5px 75px 5px 75px">
-                <sampler-item :data="item"></sampler-item>
+  <div>
+    <v-row>
+      <v-col>
+        <h1 class="text-xl">Interaktive-Beispiele</h1>
+        <h2 class="text-l">Bewegen Sie die Maus über hervorgehobenen Stellen, um passende Ressourcen im Syntagmatikon zu
+          finden.</h2>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <v-carousel hide-delimiter-background hide-delimiters continuous ref="carousel" v-model="tab" :cycle="false">
+          <v-carousel-item v-for="(item, i) in items" :key="i">
+            <v-sheet height="100%">
+              <div>
+                <div style="padding:5px 75px 5px 75px">
+                  <sampler-item :data="item"></sampler-item>
+                </div>
               </div>
-            </div>
-          </v-sheet>
-        </v-carousel-item>
-      </v-carousel>
-    </v-col>
-  </v-row>
+            </v-sheet>
+          </v-carousel-item>
+        </v-carousel>
+      </v-col>
+    </v-row>
+  </div>
 </template>
   
 <script>
@@ -30,7 +32,7 @@ export default {
     return {
       items: [
         {
-          tokens: ["Droht", "also", "demnächst", "eine", "unangenehme", "Aussprache", "mit", "dem", "Chef", "oder", "ein", "leidiger", "Besuch", "bei", "Verwandten", ",", "wissen", "wir", "es", "besser", ":", "Statt", "den", "Kopf", "in", "den", "Sand", "zu", "stecken", ",", "sollten", "wir", "das", "Ganze", "lieber", "schnell", "hinter", "uns", "bringen", ".", "Denn", "unsere", "&bdquo;","Großhirnrinde", "&ldquo;", "weiß", "schon", "lange", ":", "besser", "ein", "Ende", "mit", "Schrecken", "als", "ein", "Schrecken", "ohne", "Ende", "."],
+          tokens: ["Droht", "also", "demnächst", "eine", "unangenehme", "Aussprache", "mit", "dem", "Chef", "oder", "ein", "leidiger", "Besuch", "bei", "Verwandten", ",", "wissen", "wir", "es", "besser", ":", "Statt", "den", "Kopf", "in", "den", "Sand", "zu", "stecken", ",", "sollten", "wir", "das", "Ganze", "lieber", "schnell", "hinter", "uns", "bringen", ".", "Denn", "unsere", "&bdquo;", "Großhirnrinde", "&ldquo;", "weiß", "schon", "lange", ":", "besser", "ein", "Ende", "mit", "Schrecken", "als", "ein", "Schrecken", "ohne", "Ende", "."],
           annotations: [
             {
               from: 3,
@@ -183,4 +185,8 @@ export default {
 }
 </script>
   
-  
+<style scoped>
+.v-window {
+  max-height: 400px;
+}
+</style>

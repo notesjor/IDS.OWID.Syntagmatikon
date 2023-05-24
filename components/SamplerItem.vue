@@ -122,35 +122,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .text {
   font-size: 1.2rem;
   line-height: 1.5;
   font-weight: 300;
-}
-
-span[source="Sprichwörterbuch"] {
-  color: #0d65c2;
-  background-color: rgba(13, 101, 194, 0.1);
-  border-radius: 3px;
-  border: 2px solid rgb(13, 101, 194);
-  padding: 0 3px;
-}
-
-span[source="XXX"] {
-  color: #008702;
-  background-color: rgba(0, 135, 2, 0.1);
-  border-radius: 3px;
-  border: 2px solid rgb(0, 135, 2);
-  padding: 0 3px;
-}
-
-span[source="Wörterbuch ABC"] {
-  color: #c5049b;
-  background-color: rgba(197, 4, 155, 0.1);
-  border-radius: 3px;
-  border: 2px solid rgb(197, 4, 155);
-  padding: 0 3px;
 }
 
 div.v-window__controls>button.v-btn {
