@@ -18,24 +18,38 @@
       </div>
     </div>
 
-    <v-navigation-drawer expand-on-hover permanent style="z-index:0;" v-if="desktopView">
-      <div class="text-xl" :style="secondLogoStyle"><v-icon>mdi-arrow-decision-outline</v-icon> {{ appName }}
+    <v-navigation-drawer expand-on-hover :permanent="desktopView" :rail="mobileView" style="z-index:1; transform: none;">
+      <!-- LOGO START -->
+      <div class="text-xl" style="margin: 7px 0px 15px 15px; opacity: 1" v-show="desktopView">
+        <v-icon>mdi-arrow-decision-outline</v-icon> 
+        {{ appName }}
       </div>
-      <v-list density="compact" nav>
-        <v-list-subheader>Übersicht</v-list-subheader>
+      <!-- LOGO END -->
+
+      <!-- HOME START -->
+      <v-list density="compact" nav :style="menuStyleMobileFix">
+        <v-list-subheader v-show="desktopView">Übersicht</v-list-subheader>
         <router-link to="/"><v-list-item prepend-icon="mdi-home" title="Projekt-Startseite"></v-list-item></router-link>
       </v-list>
+      <!-- HOME END -->
+
       <v-divider></v-divider>
+
+      <!-- ADDITIONAL INFORMATION START -->
       <v-list density="compact" nav>
-        <v-list-subheader>Vertiefende Informationen</v-list-subheader>
+        <v-list-subheader v-show="desktopView">Vertiefende Informationen</v-list-subheader>
         <router-link to="/project-description"><v-list-item prepend-icon="mdi-information"
             title="Was ist ein Syntagmatikon?"></v-list-item></router-link>
         <router-link to="/methods-description"><v-list-item prepend-icon="mdi-file-cabinet"
             title="Korpusmethoden erklärt"></v-list-item></router-link>
       </v-list>
+      <!-- ADDITIONAL INFORMATION END -->
+
       <v-divider></v-divider>
+
+      <!-- RESOURCES START -->
       <v-list density="compact" nav>
-        <v-list-subheader>Ressourcen</v-list-subheader>
+        <v-list-subheader v-show="desktopView">Ressourcen</v-list-subheader>
         <router-link to="/search"><v-list-item prepend-icon="mdi-magnify" title="Suche"></v-list-item></router-link>
         <router-link to="/list"><v-list-item prepend-icon="mdi-format-list-bulleted-type"
             title="Liste"></v-list-item></router-link>
@@ -43,32 +57,7 @@
             title="Vergleich"></v-list-item></router-link>
         <router-link to="/network"><v-list-item prepend-icon="mdi-graph" title="Vernetzungen"></v-list-item></router-link>
       </v-list>
-    </v-navigation-drawer>
-    <v-navigation-drawer expand-on-hover rail style="z-index:1; transform: none; padding-top:75px" v-else>
-      <v-list-item :title="appName" style="background-color: black; color: white; position:absolute; top:0px; width:100%; font-size:18px;">
-        <template v-slot:prepend>
-          <v-icon color="white" style="opacity: 1;">mdi-arrow-decision-outline</v-icon>
-        </template>
-      </v-list-item>
-      <v-list density="compact" nav>
-        <router-link to="/"><v-list-item prepend-icon="mdi-home" title="Projekt-Startseite"></v-list-item></router-link>
-      </v-list>
-      <v-divider></v-divider>
-      <v-list density="compact" nav>
-        <router-link to="/project-description"><v-list-item prepend-icon="mdi-information"
-            title="Was ist ein Syntagmatikon?"></v-list-item></router-link>
-        <router-link to="/methods-description"><v-list-item prepend-icon="mdi-file-cabinet"
-            title="Korpusmethoden erklärt"></v-list-item></router-link>
-      </v-list>
-      <v-divider></v-divider>
-      <v-list density="compact" nav>
-        <router-link to="/search"><v-list-item prepend-icon="mdi-magnify" title="Suche"></v-list-item></router-link>
-        <router-link to="/list"><v-list-item prepend-icon="mdi-format-list-bulleted-type"
-            title="Liste"></v-list-item></router-link>
-        <router-link to="/splitview"><v-list-item prepend-icon="mdi-compare"
-            title="Vergleich"></v-list-item></router-link>
-        <router-link to="/network"><v-list-item prepend-icon="mdi-graph" title="Vernetzungen"></v-list-item></router-link>
-      </v-list>
+      <!-- RESOURCES END -->
     </v-navigation-drawer>
 
     <div style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
@@ -79,7 +68,7 @@
 
         <slot />
       </div>
-      <div style="margin:10px 20px 0px 85px" v-else>
+      <div style="margin:10px 10px 0px 85px;" v-else>
         <v-alert v-if="alert" type="info" title="Hinweis - Prototyp v0.1"
           text="Alle Inhalte dieser Version sind experimentell. Texte, Farben, Grafiken werden im späteren Projektverlauf angepasst."
           variant="tonal"></v-alert>
@@ -159,10 +148,6 @@ export default {
   theme: { dark: false },
   data() {
     return {
-      secondLogoStyle: {
-        margin: "7px 0px 15px 15px",
-        opacity: 0
-      },
 
       //
 
@@ -181,7 +166,6 @@ export default {
   },
 
   mounted() {
-    window.addEventListener('scroll', this.handleScroll);
     //
     setTimeout(() => {
       this.alert = false
@@ -202,19 +186,19 @@ export default {
     window.removeEventListener('scroll', this.handleScroll);
   },
 
-  methods: {
-    handleScroll() {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      this.$data.secondLogoStyle.opacity = scrollTop / 130;
-    }
-  },
-
   computed: {
     desktopView() {
-      return this.$vuetify.display.mdAndUp;
+      return this.$vuetify.display.width >= 960;
     },
     mobileView(){
-      return this.$vuetify.display.smAndDown;
+      return this.$vuetify.display.width < 960;
+    },
+    menuStyleMobileFix(){
+      if(this.mobileView){
+        return "margin-top: 75px;"
+      }else{
+        return ""
+      }
     }
   }
 }

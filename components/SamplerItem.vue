@@ -51,7 +51,7 @@ export default {
     var text = this.$data.text;
     
     const processDivs = async () => {
-      for (const t of text) {
+      for (const t of text) {        
         if(t.color == "black")
           continue;
         await new Promise(resolve => setTimeout(resolve, 5000));
