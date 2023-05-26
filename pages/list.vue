@@ -65,7 +65,7 @@
           <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
           <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
           <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
+          <td><!--<v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon>--></td>
           <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
         </tr>
         <tr style="background-color: rgba(0,0,0,0.2);">
@@ -82,7 +82,7 @@
           <td style="text-align: right;">Wörterbuch Redeeinleiter</td>
           <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
           <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
+          <td><!--<v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon>--></td>
           <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
           <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
           <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
@@ -114,7 +114,7 @@
           <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
           <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
           <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-          <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
+          <td><!--<v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon>--></td>
           <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
           <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
         </tr>

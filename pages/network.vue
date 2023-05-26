@@ -27,7 +27,8 @@
       <br />
       <div class="rounded-md" style="border: 1px solid #000">
         <h1 style="margin:5px 5px 5px 15px">OWID-Suche:</h1>
-        <div class="rounded-md" style="border: 1px solid #000; margin: 10px">
+        <div class="rounded-md" style="border: 1px solid #000; margin: 10px" @mouseover="zoomin('n2.1')"
+          @mouseleave="zoomout()">
           <h1 style="margin:5px 5px 5px 15px">
             <div
               style="display:grid; grid-template-columns: auto 100%; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas:'icon value'; ">
@@ -36,7 +37,8 @@
             </div>
           </h1>
         </div>
-        <div class="rounded-md" style="border: 1px solid #000; margin: 10px">
+        <div class="rounded-md" style="border: 1px solid #000; margin: 10px" @mouseover="zoomin('n2.2')"
+          @mouseleave="zoomout()">
           <h1 style="margin:5px 15px 5px 15px">
             <div
               style="display:grid; grid-template-columns: auto 100%; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas:'icon value'; ">
@@ -45,7 +47,8 @@
             </div>
           </h1>
         </div>
-        <div class="rounded-md" style="border: 1px solid #000; margin: 10px">
+        <div class="rounded-md" style="border: 1px solid #000; margin: 10px" @mouseover="zoomin('n2.3')"
+          @mouseleave="zoomout()">
           <h1 style="margin:5px 15px 5px 15px;">
             <div
               style="display:grid; grid-template-columns: auto 100%; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas:'icon value'; ">
@@ -55,7 +58,8 @@
             </div>
           </h1>
         </div>
-        <div class="rounded-md" style="border: 1px solid #000; margin: 10px">
+        <div class="rounded-md" style="border: 1px solid #000; margin: 10px" @mouseover="zoomin('n2.4')"
+          @mouseleave="zoomout()">
           <h1 style="margin:5px 15px 5px 15px">
             <div
               style="display:grid; grid-template-columns: auto 100%; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas:'icon value'; ">
@@ -65,7 +69,8 @@
           </h1>
         </div>
       </div>
-      <div class="rounded-md" style="border: 1px solid #000; margin: 10px">
+      <div class="rounded-md" style="border: 1px solid #000; margin: 10px" @mouseover="zoomin('n6')"
+        @mouseleave="zoomout()">
         <h1 style="margin:5px 15px 5px 15px">
           <div
             style="display:grid; grid-template-columns: auto 100%; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas:'icon value'; ">
@@ -74,16 +79,19 @@
           </div>
         </h1>
       </div>
-      <div class="rounded-md" style="border: 1px solid #000; margin: 10px">
+      <div class="rounded-md" style="border: 1px solid #000; margin: 10px" @mouseover="zoomin('n5')"
+        @mouseleave="zoomout()">
         <h1 style="margin:5px 15px 5px 15px">
           <div
             style="display:grid; grid-template-columns: auto 100%; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas:'icon value'; ">
             <div style="grid-area: icon;"><v-icon>mdi-book-arrow-right-outline</v-icon></div>
-            <div style="grid-area: value; margin-left:5px">Deutsch-trürkische Wortverbindungen: 2 Einträge mit Bezug zu 'Ende'</div>
+            <div style="grid-area: value; margin-left:5px">Deutsch-trürkische Wortverbindungen: 2 Einträge mit Bezug zu
+              'Ende'</div>
           </div>
         </h1>
       </div>
-      <div class="rounded-md" style="border: 1px solid #000; margin: 10px">
+      <div class="rounded-md" style="border: 1px solid #000; margin: 10px" @mouseover="zoomin('n4')"
+        @mouseleave="zoomout()">
         <h1 style="margin:5px 15px 5px 15px">
           <div
             style="display:grid; grid-template-columns: auto 100%; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas:'icon value'; ">
@@ -92,18 +100,21 @@
           </div>
         </h1>
       </div>
-      <div class="rounded-md" style="border: 1px solid #000; margin: 10px">
+      <div class="rounded-md" style="border: 1px solid #000; margin: 10px" @mouseover="zoomin('n3')"
+        @mouseleave="zoomout()">
         <h1 style="margin:5px 15px 5px 15px">
           <div
             style="display:grid; grid-template-columns: auto 100%; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas:'icon value'; ">
             <div style="grid-area: icon;"><v-icon>mdi-book-arrow-right-outline</v-icon></div>
-            <div style="grid-area: value; margin-left:5px">PREPCON <sup>(explorativ)</sup>: Tabelle mit 15 Einträgen zu 'Ende'</div>
+            <div style="grid-area: value; margin-left:5px">PREPCON <sup>(explorativ)</sup>: Tabelle mit 15 Einträgen zu
+              'Ende'</div>
           </div>
         </h1>
       </div>
-      <v-alert type="warning">Hinweis: Alle Ressourcen müssten für diese Funktion folgende API-Abfragen unterstützten?: /search (contains/detail) und /get/{id} (link)</v-alert>
+      <v-alert type="warning">Hinweis: Alle Ressourcen müssten für diese Funktion folgende API-Abfragen unterstützten?:
+        /search (contains/detail) und /get/{id} (link)</v-alert>
     </v-col>
-  </v-row>  
+  </v-row>
   <div style="scripts"></div>
 </template>
 
@@ -121,6 +132,8 @@ export default {
   ],
   data() {
     return {
+      cy: null,
+      cyNode: "",
       nodes: [
         { data: { id: 'root', label: 'ENDE' }, classes: 'token' },
         { data: { id: 'n2', label: 'https://www.owid.de/suche/wort?wort=Ende' }, classes: 'www' },
@@ -215,6 +228,8 @@ export default {
       maxZoom: 4
     });
 
+    this.$data.cy = cy;
+
     cy.nodeHtmlLabel([{
       query: '.www',
       tpl: function (data) {
@@ -268,6 +283,32 @@ export default {
   },
 
   methods: {
+    zoomin(id) {
+      if (this.$data.cyNode === id)
+        return;
+
+      var cy = this.$data.cy;
+      var selectedNode = cy.$("node[id=\"" + id + "\"]");
+      if (selectedNode === undefined)
+        return;
+      var target = selectedNode[0];
+      if (target === undefined)
+        return;
+
+      cy.animate({
+        center: { eles: selectedNode },
+        zoom: 0.3,
+        duration: 2000
+      });
+      this.$data.cyNode = id;
+    },
+    zoomout() {
+      if (this.$data.cyNode === "")
+        return;
+      var cy = this.$data.cy;
+      cy.fit();
+      this.$data.cyNode = "";
+    }
   }
 }
 </script>

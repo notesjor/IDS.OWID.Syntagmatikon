@@ -24,7 +24,7 @@
             <v-list-subheader v-if="x.type === 'subheader'">
               {{ x.title }}
             </v-list-subheader>
-            <v-list-item v-else :value="x.value" style="margin:5px 0px 5px 20px">
+            <v-list-item v-else :value="x.value" style="margin:5px 0px 5px 0px" prepend-icon="mdi-arrow-right">
               <v-list-item-content>
                 <v-list-item-title>
                   {{ x.title }}
