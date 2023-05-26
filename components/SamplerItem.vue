@@ -13,7 +13,8 @@
           <v-card-title :style="infoStyle">{{ info.source }}</v-card-title>
           <v-card-subtitle>{{ info.type }}</v-card-subtitle>
           <v-card-text>
-            <v-btn prepend-icon="mdi-arrow-right" style="text-transform: none;" :href="info.href">{{ info.article }}</v-btn>
+            <v-btn prepend-icon="mdi-arrow-right" style="text-transform: none;" :href="info.href">{{ info.article
+            }}</v-btn>
           </v-card-text>
         </v-card>
       </div>
@@ -40,11 +41,25 @@ export default {
 
       info: null,
       infoStyle: "",
+
+      stop: false,
     };
   },
 
-  mounted() {
+  async mounted() {
     this.$data.text = this.getText();
+    var text = this.$data.text;
+    
+    const processDivs = async () => {
+      for (const t of text) {
+        if(t.color == "black")
+          continue;
+        await new Promise(resolve => setTimeout(resolve, 5000));
+        t.publish();
+      }
+    };
+
+    await processDivs();
   },
 
   methods: {
@@ -112,7 +127,7 @@ export default {
       return texts;
     },
     publish(data) {
-      if(data == null || data.color == "black") {
+      if (data == null) {
         return;
       }
       this.$data.info = data;
