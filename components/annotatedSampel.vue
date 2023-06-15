@@ -1,10 +1,15 @@
 <template>
   <div>
     <v-row>
-      <v-col>
+      <v-col>        
         <v-card elevation="5">
           <v-card-text>
-            <div ref="content" v-html="$props.html" class="text"></div>
+            <div ref="content" class="text">
+              <span v-for="(item, i) in json" :key="i">
+                <a v-if="item.article" :article="item.article" :rtype="item.rtype" :source="item.source" :href="item.href" @mouseenter="mouseenter" @mouseleave="mouseleave">{{ item.text }}</a>
+                <span v-else>{{ item.text }}</span>
+              </span>
+            </div>
           </v-card-text>
         </v-card>
       </v-col>
@@ -29,10 +34,9 @@
 export default {
   name: "SlideBox",
   props: {
-    html: {
+    json: {
       type: String,
       required: true,
-      default: 'Droht also demnächst eine unangenehme <a href="http://owid.de" article="Eintrag XYZ" rtype="Sprachgebrauchsmuster" source="Wörterbuch ABC">Aussprache mit</a> dem Chef oder ein leidiger <a href="" article="" rtype="" source="XXX">Besuch bei</a> Verwandten, wissen wir es besser: Statt den <a href="https://www.owid.de/artikel/401610" article="Den Kopf in den Sand stecken" rtype="Sprichwort" source="Sprichwörterbuch">Kopf in den Sand</a> zu stecken, sollten wir das Ganze lieber schnell hinter uns bringen. Denn unsere Großhirnrinde weiß schon lange: besser <a href="https://www.owid.de/artikel/401610" article="Kopf in den Sand stecken" rtype="Sprichwort" source="Sprichwörterbuch">ein Ende mit Schrecken als ein Schrecken ohne Ende</a>',
     }
   },
 
@@ -47,6 +51,7 @@ export default {
     }
   },
   mounted() {
+    console.log("hello from mounted")
     this.$refs.content.querySelectorAll('a').forEach((link) => {
       link.addEventListener('mouseenter', this.mouseenter);
       //link.addEventListener('mouseleave', this.mouseleave);

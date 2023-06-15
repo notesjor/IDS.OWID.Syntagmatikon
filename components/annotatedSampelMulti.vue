@@ -13,7 +13,7 @@
           <v-sheet height="100%">
             <div>
               <div style="padding:5px 75px 5px 75px">
-                <AnnotatedSampel :html="item" />
+                <AnnotatedSampel :json="item" />
               </div>
             </div>
           </v-sheet>
@@ -29,9 +29,91 @@ export default {
   data() {
     return {
       items: [
-        'Droht also demnächst eine unangenehme <a href="http://owid.de" article="Eintrag XYZ" rtype="Sprachgebrauchsmuster" source="Wörterbuch ABC">Aussprache mit</a> dem Chef oder ein leidiger <a href="" article="" rtype="" source="XXX">Besuch bei</a> Verwandten, wissen wir es besser: Statt den <a href="https://www.owid.de/artikel/401610" article="Den Kopf in den Sand stecken" rtype="Sprichwort" source="Sprichwörterbuch">Kopf in den Sand</a> zu stecken, sollten wir das Ganze lieber schnell hinter uns bringen. Denn unsere Großhirnrinde weiß schon lange: besser <a href="https://www.owid.de/artikel/401610" article="Kopf in den Sand stecken" rtype="Sprichwort" source="Sprichwörterbuch">ein Ende mit Schrecken als ein Schrecken ohne Ende</a>',
-        "<a href=\"http://owid.de\" article=\"Eintrag XYZ\" rtype=\"Sprachgebrauchsmuster\" source=\"Wörterbuch ABC\">Für Jahrelang</a> haben welche von die ältere Leute versucht, ein Museum und Archives zu bauen hier, aber die konnten nie das Material zusammenfind'n . Excuse me . Dann kam ein Immigrant, Mr. Jonas Vanagers , der kam hier, und der war sehr interesstessiert in der Sache, und er is ' <a href=\"http://owid.de\" article=\"Von Haus zu Haus\" rtype=\"Sprachgebrauchsmuster\" source=\"Wörterbuch ABC\">von Haus zu Haus</a> gegangen, und hat alles Sachen zusammengesucht, und the Historie von Lobethal <a href=\"http://owid.de\" article=\"Eintrag XYZ\" rtype=\"Sprachgebrauchsmuster\" source=\"XXX\">ganz auf den Grund gegangen</a>.",
-        'Deutsche Fans sind laut und viel <a href=\"http://owid.de\" article=\"Eintrag XYZ\" rtype=\"Sprachgebrauchsmuster\" source=\"Wörterbuch ABC\">am Feiern</a>. Aber nicht immer textsicher. <a href=\"http://owid.de\" article=\"Eintrag XYZ\" rtype=\"Sprachgebrauchsmuster\" source=\"XXX\">Nach dem Viertelfinalsieg</a> gegen Argentinien versuchte ein weiblicher Teenager in der Straßenbahn die Nationalhymne anstimmen. Nach <a href=\"http://owid.de\" article=\"Eintrag XYZ\" rtype=\"Sprachgebrauchsmuster\" source=\"Sprichwörterbuch\">„Einigkeit und Recht”</a> musste sie sich erkundigen : „Wie geht der Text nochmal?”'
+        [
+          { "text": "Droht also demnächst eine unangenehme" },
+          { 
+            "article": "Eintrag XYZ",
+            "rtype": "Sprachgebrauchsmuster",
+            "source": "Wörterbuch ABC",
+            "href": "http://owid.de",
+            "text": "Aussprache mit"
+          },
+          { "text": "dem Chef oder ein leidiger Besuch bei Verwandten, wissen wir es besser: Statt den" },
+          { 
+            "article": "Den Kopf in den Sand stecken",
+            "rtype": "Sprichwort",
+            "source": "Sprichwörterbuch",
+            "href": "https://www.owid.de/artikel/401610",
+            "text": "Kopf in den Sand"
+          },
+          { "text": "zu stecken, sollten wir das Ganze lieber schnell hinter uns bringen. Denn unsere Großhirnrinde weiß schon lange: besser" },
+          { 
+            "article": "ein Ende mit Schrecken als ein Schrecken ohne Ende",
+            "rtype": "Sprichwort",
+            "source": "Sprichwörterbuch",
+            "href": "https://www.owid.de/artikel/401610",
+            "text": "ein Ende mit Schrecken als ein Schrecken ohne Ende"
+          }
+        ],
+        [
+          {
+            "article": "Eintrag XYZ",
+            "rtype": "Sprachgebrauchsmuster",
+            "source": "Wörterbuch ABC",
+            "href": "http://owid.de",
+            "text": "Für Jahrelang"
+          },
+          {
+            "text": "haben welche von die ältere Leute versucht, ein Museum und Archives zu bauen hier, aber die konnten nie das Material zusammenfind'n . Excuse me . Dann kam ein Immigrant, Mr. Jonas Vanagers , der kam hier, und der war sehr interesstessiert in der Sache, und er is '"
+          },
+          {
+            "article": "Von Haus zu Haus",
+            "rtype": "Sprachgebrauchsmuster",
+            "source": "Wörterbuch ABC",
+            "href": "http://owid.de",
+            "text": "von Haus zu Haus"
+          },
+          {
+            "text": "gegangen, und hat alles Sachen zusammengesucht, und the Historie von Lobethal"
+          },
+          {
+            "article": "Eintrag XYZ",
+            "rtype": "Sprachgebrauchsmuster",
+            "source": "XXX",
+            "href": "http://owid.de",
+            "text": "ganz auf den Grund gegangen"
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          { "text": "Deutsche Fans sind laut und viel" },
+          {
+            "article": "Eintrag XYZ",
+            "rtype": "Sprachgebrauchsmuster",
+            "source": "Wörterbuch ABC",
+            "href": "http://owid.de",
+            "text": "am Feiern"
+          },
+          { "text": ". Aber nicht immer textsicher. " },
+          {
+            "article": "Eintrag XYZ",
+            "rtype": "Sprachgebrauchsmuster",
+            "source": "XXX",
+            "href": "http://owid.de",
+            "text": "Nach dem Viertelfinalsieg"
+          },
+          { "text": "gegen Argentinien versuchte ein weiblicher Teenager in der Straßenbahn die Nationalhymne anstimmen. Nach " },
+          {
+            "article": "Einigkeit und Recht",
+            "rtype": "Sprachgebrauchsmuster",
+            "source": "Sprichwörterbuch",
+            "href": "https://www.owid.de/artikel/401610",
+            "text": "„Einigkeit und Recht”"
+          },
+          { "text": " musste sie sich erkundigen : „Wie geht der Text nochmal?”" }
+        ]
       ],
       tooltip: {
         article: 'Den Tag nicht vor dem Abend loben',
