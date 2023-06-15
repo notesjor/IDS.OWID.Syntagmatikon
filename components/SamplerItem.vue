@@ -31,6 +31,8 @@ export default {
     },
   },
 
+  emits: ["next"],
+
   data() {
     return {
       text: [],
@@ -49,17 +51,29 @@ export default {
   async mounted() {
     this.$data.text = this.getText();
     var text = this.$data.text;
-    
-    const processDivs = async () => {
-      for (const t of text) {        
-        if(t.color == "black")
-          continue;
-        await new Promise(resolve => setTimeout(resolve, 5000));
-        t.publish();
-      }
-    };
 
-    await processDivs();
+    var last = null;
+    var count = 0;
+
+    for (const t of text) {
+      if (t.color == "black")
+        continue;
+      
+      setTimeout((obj)=>{
+        if (obj.last != null)
+          obj.last.unpublish();
+        obj.t.publish();
+      }, count * 5000, {last: last, t: t});
+
+      last = t;
+      count++;
+    }
+
+    setTimeout((obj)=>{
+      if (obj.last != null)
+        obj.last.unpublish();
+      this.$emit("next");
+    }, count * 5000, {last: last});
   },
 
   methods: {

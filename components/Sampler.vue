@@ -14,7 +14,7 @@
             <v-sheet height="100%">
               <div>
                 <div style="padding:5px 75px 5px 75px">
-                  <sampler-item :data="item"></sampler-item>
+                  <sampler-item :data="item" @next="next"></sampler-item>
                 </div>
               </div>
             </v-sheet>
@@ -175,7 +175,10 @@ export default {
           return;
         data.tab = (data.tab + 1) % data.items.length;
       }, data.items[data.tab].annotations.length * 5000);
-    }
+    },
+    next() {
+      this.$data.tab = (this.$data.tab + 1) % this.$data.items.length;
+    },
   },
   mounted() {
     this.$refs.carousel.$el.addEventListener('mouseenter', this.stopCarousel);

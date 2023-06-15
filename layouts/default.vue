@@ -62,17 +62,9 @@
 
     <div style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
       <div style="margin:10px 10px 0px 275px" v-if="desktopView">
-        <v-alert v-if="alert" type="info" title="Hinweis - Prototyp v0.1"
-          text="Alle Inhalte dieser Version sind experimentell. Texte, Farben, Grafiken werden im späteren Projektverlauf angepasst."
-          variant="tonal"></v-alert>
-
         <slot />
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
-        <v-alert v-if="alert" type="info" title="Hinweis - Prototyp v0.1"
-          text="Alle Inhalte dieser Version sind experimentell. Texte, Farben, Grafiken werden im späteren Projektverlauf angepasst."
-          variant="tonal"></v-alert>
-
         <slot />
       </div>
     </div>
@@ -148,11 +140,6 @@ export default {
   theme: { dark: false },
   data() {
     return {
-
-      //
-
-      alert: true,
-
       appName: null,
       appDescription: null,
 
@@ -166,11 +153,6 @@ export default {
   },
 
   mounted() {
-    //
-    setTimeout(() => {
-      this.alert = false
-    }, 5000);
-    //
     this.appName = this.$config.public.appName;
     this.appDescription = this.$config.public.appDescription;
 

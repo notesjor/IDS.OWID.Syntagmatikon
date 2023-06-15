@@ -94,9 +94,7 @@
 </template>
 
 <script>
-import annotatedSampel from '~~/components/annotatedSampel.vue';
 export default {
-  components: { annotatedSampel },
   name: "Index",
   theme: { dark: false },
   data() {

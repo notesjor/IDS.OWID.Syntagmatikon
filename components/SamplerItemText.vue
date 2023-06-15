@@ -1,5 +1,5 @@
 <template>
-  <span :style="style" v-html="text.text.trim()" @mouseover="publish()" @mouseleave="unpublish()"></span>
+  <span :style="style" v-html="text.text.trim()" @mouseover="hover()" @mouseleave="unpublish()"></span>
 </template>
 
 <script>
@@ -24,6 +24,9 @@ export default {
 
   mounted() {
     var t = this.text;
+    t.publish = this.publish;
+    t.unpublish = this.unpublish;
+    
     if (t.color == "black")
       this.$data.style = `line-height: 32px; :${t.color}; margin-left:${this.num > 0 ? 5 : 0}px;`;
     else
@@ -31,6 +34,14 @@ export default {
   },
 
   methods: {
+    hover(){
+      // delete all Timeouts
+      var id = window.setTimeout(function() {}, 0);
+      while (id--) {
+        window.clearTimeout(id);
+      }
+      this.publish();
+    },
     publish() {
       let t = this.text;
       if (t.color == "black")
