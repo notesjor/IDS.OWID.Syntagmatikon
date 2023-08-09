@@ -57,23 +57,7 @@
             Durchsuche mehr als 50.000 Komposita
           </h2>
         </v-card-sub-title>
-        <v-card-text>
-          <div>
-            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
-                icon="mdi-tag-outline"></v-icon> Datenbank </v-chip>
-            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
-                icon="mdi-tag-outline"></v-icon> Explorativ </v-chip>
-            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
-                icon="mdi-tag-outline"></v-icon> Komposita </v-chip>
-            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
-                icon="mdi-tag-outline"></v-icon> Häufigkeit </v-chip>
-            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
-                icon="mdi-tag-outline"></v-icon> Visualisierung </v-chip>
-            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
-                icon="mdi-tag-outline"></v-icon> Daten </v-chip>
-            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
-                icon="mdi-tag-outline"></v-icon> Sonstiges </v-chip>
-          </div>
+        <v-card-text>          
           <p style="font-size: 16px; line-height: 23px;">
             <img src="https://www.owid.de/plus/data/img/owidpluslive.png" alt="KoMuX Logo"
               style="width:50%; margin-right: 10px; float: left;">
@@ -100,6 +84,22 @@
             Anschlussfähigkeit an Grammatiktheorien wie die Konstruktionsgrammatik (KxG).
           </p>
           <br />
+          <div>
+            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
+                icon="mdi-tag-outline"></v-icon> Datenbank </v-chip>
+            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
+                icon="mdi-tag-outline"></v-icon> Explorativ </v-chip>
+            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
+                icon="mdi-tag-outline"></v-icon> Komposita </v-chip>
+            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
+                icon="mdi-tag-outline"></v-icon> Häufigkeit </v-chip>
+            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
+                icon="mdi-tag-outline"></v-icon> Visualisierung </v-chip>
+            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
+                icon="mdi-tag-outline"></v-icon> Daten </v-chip>
+            <v-chip class="ma-2" label text-color="white" variant="outlined" density> <v-icon start
+                icon="mdi-tag-outline"></v-icon> Sonstiges </v-chip>
+          </div>
         </v-card-text>
       </v-card>
     </v-col>

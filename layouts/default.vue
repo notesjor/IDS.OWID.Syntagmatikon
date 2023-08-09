@@ -50,7 +50,8 @@
       <!-- RESOURCES START -->
       <v-list density="compact" nav>
         <v-list-subheader v-show="desktopView">Ressourcen</v-list-subheader>
-        <router-link to="/search"><v-list-item prepend-icon="mdi-magnify" title="Suche"></v-list-item></router-link>
+        <router-link to="/search2"><v-list-item prepend-icon="mdi-magnify" title="Suche (Einträge)"></v-list-item></router-link>
+        <router-link to="/search"><v-list-item prepend-icon="mdi-shape-outline" title="Suche (Ressourcen)"></v-list-item></router-link>
         <router-link to="/list"><v-list-item prepend-icon="mdi-format-list-bulleted-type"
             title="Liste"></v-list-item></router-link>
         <router-link to="/splitview"><v-list-item prepend-icon="mdi-compare"
