@@ -3,9 +3,9 @@
     <div class="d-print-none"
       style="z-index:100; max-height: 65px; min-height:65px; background-color: black; padding:7px 10px 5px 10px; display: grid; grid-template-columns: 1fr auto 250px; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right'; ">
       <div class="inline" style="color:white; grid-area: left; margin-left:5px">
-        <div style="min-height: 10px;" v-if="mobileView"></div>
+        <div style="min-height: 10px;" v-if="useMobileView"></div>
         <div class="text-xl"><v-icon>mdi-arrow-decision-outline</v-icon> {{ appName }}</div>
-        <div class="text-xs" style="text-align: left;">{{ mobileView ? " " : appDescription }}</div>
+        <div class="text-xs" style="text-align: left;">{{ useMobileView ? " " : appDescription }}</div>
       </div>
 
       <div style="grid-area: middle;"></div>
@@ -18,9 +18,9 @@
       </div>
     </div>
 
-    <v-navigation-drawer expand-on-hover :permanent="desktopView" :rail="mobileView" style="z-index:1; transform: none;">
+    <v-navigation-drawer expand-on-hover :permanent="!useMobileView" :rail="useMobileView" style="z-index:1; transform: none;">
       <!-- LOGO START -->
-      <div class="text-xl" style="margin: 7px 0px 15px 15px; opacity: 1" v-show="desktopView">
+      <div class="text-xl" style="margin: 7px 0px 15px 15px; opacity: 1" v-show="!useMobileView">
         <v-icon>mdi-arrow-decision-outline</v-icon> 
         {{ appName }}
       </div>
@@ -28,7 +28,7 @@
 
       <!-- HOME START -->
       <v-list density="compact" nav :style="menuStyleMobileFix">
-        <v-list-subheader v-show="desktopView">Übersicht</v-list-subheader>
+        <v-list-subheader v-show="!useMobileView">Übersicht</v-list-subheader>
         <router-link to="/"><v-list-item prepend-icon="mdi-home" title="Projekt-Startseite"></v-list-item></router-link>
       </v-list>
       <!-- HOME END -->
@@ -37,7 +37,7 @@
 
       <!-- ADDITIONAL INFORMATION START -->
       <v-list density="compact" nav>
-        <v-list-subheader v-show="desktopView">Vertiefende Informationen</v-list-subheader>
+        <v-list-subheader v-show="!useMobileView">Vertiefende Informationen</v-list-subheader>
         <router-link to="/project-description"><v-list-item prepend-icon="mdi-information"
             title="Was ist ein Syntagmatikon?"></v-list-item></router-link>
         <router-link to="/methods-description"><v-list-item prepend-icon="mdi-file-cabinet"
@@ -49,7 +49,7 @@
 
       <!-- RESOURCES START -->
       <v-list density="compact" nav>
-        <v-list-subheader v-show="desktopView">Ressourcen</v-list-subheader>        
+        <v-list-subheader v-show="!useMobileView">Ressourcen</v-list-subheader>        
         <router-link to="/search"><v-list-item prepend-icon="mdi-shape-outline" title="Suche (Ressourcen)"></v-list-item></router-link>
         <router-link to="/list"><v-list-item prepend-icon="mdi-format-list-bulleted-type"
             title="Liste"></v-list-item></router-link>
@@ -63,7 +63,7 @@
     </v-navigation-drawer>
 
     <div style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
-      <div style="margin:10px 10px 0px 275px" v-if="desktopView">
+      <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
         <slot />
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
@@ -73,7 +73,7 @@
 
     <div
       style="z-index: 100; position: absolute; bottom: 0; width: 100%; max-height:64px; background-color: black; padding-left:25px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right';">
-      <div style="color:white; grid-area: left; margin-top: 20px; font-size: 12px;" v-if="desktopView">
+      <div style="color:white; grid-area: left; margin-top: 20px; font-size: 12px;" v-if="!useMobileView">
         <div style="display:inline-block">
           {{ new Date().getFullYear() }} — <strong>{{ appName }}</strong>
         </div>
@@ -142,6 +142,8 @@ export default {
   theme: { dark: false },
   data() {
     return {
+      useMobileView: false,
+
       appName: null,
       appDescription: null,
 
@@ -155,6 +157,8 @@ export default {
   },
 
   mounted() {
+    this.useMobileView  = this.$vuetify.display.width < 960;
+
     this.appName = this.$config.public.appName;
     this.appDescription = this.$config.public.appDescription;
 
@@ -164,21 +168,23 @@ export default {
     this.footerContact = this.$config.public.footerContact;
     this.footerImpressum = this.$config.public.footerImpressum;
     this.footerDsgvo = this.$config.public.footerDsgvo;
+
+    window.addEventListener('resize', this.windowResize);
   },
 
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll);
   },
 
+  methods:{
+    windowResize(){
+      this.useMobileView  = this.$vuetify.display.width < 960;
+    }
+  },
+
   computed: {
-    desktopView() {
-      return this.$vuetify.display.width >= 960;
-    },
-    mobileView(){
-      return this.$vuetify.display.width < 960;
-    },
     menuStyleMobileFix(){
-      if(this.mobileView){
+      if(this.useMobileView){
         return "margin-top: 75px;"
       }else{
         return ""

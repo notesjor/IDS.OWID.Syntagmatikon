@@ -1,5 +1,5 @@
 <template>
-    <div style="margin-left:-25%; margin-right: -25%;">
+    <div style="margin-left:-18%; margin-right: -18%;">
         <v-row>
             <v-col>
                 <div

@@ -35,5 +35,8 @@ export default defineNuxtConfig({
       footerImpressum: "https://www.owid.de/wb/owid/impressum.html",
       footerDsgvo: "https://www.owid.de/wb/owid/privacy.html"
     }
+  },
+  app: {
+    baseURL: "/syntagmatikon_2023-08"
   }
 })
