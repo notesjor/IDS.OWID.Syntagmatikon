@@ -12,7 +12,7 @@
 
       <div class="inline" style="grid-area: right;">
         <a :href="leftIconHref" target="_blank">
-          <img alt="Logo" src="../assets/logo_left.svg"
+          <img alt="Logo" src="/logo_left.svg"
             style="margin-left: auto; max-height:40px; margin-right:20px; margin-top:5px" />
         </a>
       </div>
@@ -104,7 +104,7 @@
 
       <div style="text-align: right; grid-area: right">
         <a :href="rightIconHref" target="_blank">
-          <img alt="Logo" src="../assets/logo_right.svg" style="max-height:65px; min-height: 45px; min-width: 200px; margin-left: auto; " />
+          <img alt="Logo" src="/logo_right.svg" style="max-height:65px; min-height: 45px; min-width: 200px; margin-left: auto; " />
         </a>
       </div>
     </div>
