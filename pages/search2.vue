@@ -164,7 +164,7 @@ export default {
       var self = this;
       // returns json like this: [[{"ID":36,"Dictionary":"Deutsch-türkische Wortverbindungen Wirtschaft","Entry":" ","Position":0},{"ID":5,"Dictionary":"PREPCONonline temporal - Inventar","Entry":"ab\tAugust","Position":0},{"ID":17,"Dictionary":"PREPCONonline temporal - Inventar","Entry":"ab\tDonnerstagnacht","Position":0}]]
 
-      fetch("http://localhost:41833/search?q=" + encodeURIComponent(val.toLowerCase()))
+      fetch("http://lexik02.ids-mannheim.de/spillT/search?q=" + encodeURIComponent(val.toLowerCase()))
         .then(response => response.json())
         .then(data => {
           var tmp = data[0];
