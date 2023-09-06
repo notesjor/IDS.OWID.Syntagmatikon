@@ -12,11 +12,18 @@
     <v-row>
       <v-col>
         <div>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus deserunt illum ipsa reprehenderit voluptate molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum necessitatibus temporibus facere.
+        </div>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <div>
           <p style="min-width: 860px;">Einleitung:</p>
           <ol>
             <li>Suchen im Korpus (Suchabfragen)<br />
               <v-expansion-panels>
-                <v-expansion-panel title="Erklärung allgemein">
+                <v-expansion-panel title="Erklärung allgemein" elevation="0">
                   <v-expansion-panel-text>
                     Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
                     (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
@@ -29,7 +36,7 @@
                     Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
                   </v-expansion-panel-text>
                 </v-expansion-panel>
-                <v-expansion-panel title="nach Ressourcen spezifiziert">
+                <v-expansion-panel title="nach Ressourcen spezifiziert" elevation="0">
                   <v-expansion-panel-text>
                     Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
                     (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
@@ -46,7 +53,7 @@
             </li>
             <li>Frequenzen<br />
               <v-expansion-panels>
-                <v-expansion-panel title="Erklärung allgemein">
+                <v-expansion-panel title="Erklärung allgemein" elevation="0">
                   <v-expansion-panel-text>
                     Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
                     (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
@@ -59,7 +66,7 @@
                     Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
                   </v-expansion-panel-text>
                 </v-expansion-panel>
-                <v-expansion-panel title="nach Ressourcen spezifiziert">
+                <v-expansion-panel title="nach Ressourcen spezifiziert" elevation="0">
                   <v-expansion-panel-text>
                     Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
                     (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
@@ -75,7 +82,7 @@
               </v-expansion-panels></li>
             <li>KWIC und Volltext<br />
               <v-expansion-panels>
-                <v-expansion-panel title="Erklärung allgemein">
+                <v-expansion-panel title="Erklärung allgemein" elevation="0">
                   <v-expansion-panel-text>
                     Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
                     (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
@@ -88,7 +95,7 @@
                     Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
                   </v-expansion-panel-text>
                 </v-expansion-panel>
-                <v-expansion-panel title="nach Ressourcen spezifiziert">
+                <v-expansion-panel title="nach Ressourcen spezifiziert" elevation="0">
                   <v-expansion-panel-text>
                     Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
                     (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
@@ -104,7 +111,7 @@
               </v-expansion-panels></li>
             <li>Typische Partnerwörter (Kookkurrenzanalyse)<br />
               <v-expansion-panels>
-                <v-expansion-panel title="Erklärung allgemein">
+                <v-expansion-panel title="Erklärung allgemein" elevation="0">
                   <v-expansion-panel-text>
                     Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
                     (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
@@ -117,7 +124,7 @@
                     Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
                   </v-expansion-panel-text>
                 </v-expansion-panel>
-                <v-expansion-panel title="nach Ressourcen spezifiziert">
+                <v-expansion-panel title="nach Ressourcen spezifiziert" elevation="0">
                   <v-expansion-panel-text>
                     Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
                     (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
@@ -133,7 +140,7 @@
               </v-expansion-panels></li>
             <li>Mustersuche (Slot-Filler-Analyse)<br />
               <v-expansion-panels>
-                <v-expansion-panel title="Erklärung allgemein">
+                <v-expansion-panel title="Erklärung allgemein" elevation="0">
                   <v-expansion-panel-text>
                     Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
                     (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
@@ -146,7 +153,7 @@
                     Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
                   </v-expansion-panel-text>
                 </v-expansion-panel>
-                <v-expansion-panel title="nach Ressourcen spezifiziert">
+                <v-expansion-panel title="nach Ressourcen spezifiziert" elevation="0">
                   <v-expansion-panel-text>
                     Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
                     (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
@@ -162,7 +169,7 @@
               </v-expansion-panels></li>
             <li>Belegauswahl<br />
               <v-expansion-panels>
-                <v-expansion-panel title="Erklärung allgemein">
+                <v-expansion-panel title="Erklärung allgemein" elevation="0">
                   <v-expansion-panel-text>
                     Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
                     (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
@@ -175,7 +182,7 @@
                     Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
                   </v-expansion-panel-text>
                 </v-expansion-panel>
-                <v-expansion-panel title="nach Ressourcen spezifiziert">
+                <v-expansion-panel title="nach Ressourcen spezifiziert" elevation="0">
                   <v-expansion-panel-text>
                     Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
                     (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte

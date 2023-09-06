@@ -79,24 +79,24 @@
       <thead>
         <tr>
           <th rowspan="2"></th>
-          <th colspan="2" class="text-xl" style="text-align:center; background-color: rgba(0,0,0,0.05);">Datenbank</th>
-          <th colspan="3" class="text-xl" style="text-align:center; background-color: rgba(0,0,0,0.10);">Nachschlagen</th>
-          <th colspan="2" class="text-xl" style="text-align:center; background-color: rgba(0,0,0,0.15);">Analysen</th>
+          <th colspan="2" class="text-xl font-extralight" style="text-align:center; background-color: rgba(0,0,0,0.05);">Datenbank</th>
+          <th colspan="3" class="text-xl font-extralight" style="text-align:center; background-color: rgba(0,0,0,0.10);">Nachschlagen</th>
+          <th colspan="2" class="text-xl font-extralight" style="text-align:center; background-color: rgba(0,0,0,0.15);">Analysen</th>
         </tr>
         <tr>
-          <th class="text-lg" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.05);">
+          <th class="text-lg font-light" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.05);">
             <span>Explorativ</span></th>
-          <th class="text-lg" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.05);">
+          <th class="text-lg font-light" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.05);">
             <span>Deskriptiv</span></th>
-          <th class="text-lg" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.10);">
+          <th class="text-lg font-light" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.10);">
             <span>Inventar</span></th>
-          <th class="text-lg" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.10);">
+          <th class="text-lg font-light" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.10);">
             <span>Sammlung</span></th>
-          <th class="text-lg" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.10);">
+          <th class="text-lg font-light" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.10);">
             <span>Wörterbuch</span></th>
-          <th class="text-lg" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.15);">
+          <th class="text-lg font-light" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.15);">
             <span>Korpusanalyse</span></th>
-          <th class="text-lg" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.15);">
+          <th class="text-lg font-light" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.15);">
             <span>Pilot-/Einzelstudie</span></th>
         </tr>
       </thead>
@@ -317,6 +317,9 @@ export default {
 <style scoped>
 a {
   text-decoration: underline;
+}
+td {
+  text-align: center;
 }
 </style>
 <style scoped>

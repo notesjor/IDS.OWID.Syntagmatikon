@@ -50,7 +50,7 @@
           <v-list-item prepend-icon="mdi-book-open-variant" title="Korpusmethoden erklärt"></v-list-item>
         </router-link>
         <router-link to="/guide/resources">
-          <v-list-item prepend-icon="mdi-book-open-variant" title="Ressourcen"></v-list-item>
+          <v-list-item prepend-icon="mdi-book-open-variant" title="Ressourcen erklärt"></v-list-item>
         </router-link>
       </v-list>
       <!-- ADDITIONAL INFORMATION END -->
@@ -60,11 +60,11 @@
       <!-- ADDITIONAL INFORMATION START -->
       <v-list density="compact" nav>
         <v-list-subheader v-show="!useMobileView">Suche</v-list-subheader>
-        <router-link to="/project-description">
-          <v-list-item prepend-icon="mdi-information" title="nach und in Ressourcen"></v-list-item>
-        </router-link>
         <router-link to="/search2">
-          <v-list-item prepend-icon="mdi-information" title="nach Einträgen"></v-list-item>
+          <v-list-item prepend-icon="mdi-search-web" title="nach und in Ressourcen"></v-list-item>
+        </router-link>
+        <router-link to="/search3">
+          <v-list-item prepend-icon="mdi-magnify" title="nach Einträgen"></v-list-item>
         </router-link>
       </v-list>
       <!-- ADDITIONAL INFORMATION END -->
@@ -73,10 +73,10 @@
       <v-list density="compact" nav>
         <v-list-subheader v-show="!useMobileView">Funktion</v-list-subheader>
         <router-link to="/network">
-          <v-list-item prepend-icon="mdi-information" title="Vernetzung"></v-list-item>
+          <v-list-item prepend-icon="mdi-graph-outline" title="Vernetzung"></v-list-item>
         </router-link>
         <router-link to="/timeline">
-          <v-list-item prepend-icon="mdi-information" title="Forschungsgeschichte"></v-list-item>
+          <v-list-item prepend-icon="mdi-timeline-outline" title="Forschungsgeschichte"></v-list-item>
         </router-link>
       </v-list>
       <!-- ADDITIONAL INFORMATION END -->

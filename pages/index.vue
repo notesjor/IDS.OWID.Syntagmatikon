@@ -4,7 +4,7 @@
       <v-col>
         <div>
           <h1 class="text-3xl font-bold">
-            {{ appName }}
+            Projekt-Startseite
           </h1>
         </div>
       </v-col>

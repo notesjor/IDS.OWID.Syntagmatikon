@@ -48,23 +48,35 @@ export default {
       years: [
         {
           color: 'cyan',
-          year: '1960',
+          year: '1998-2000',
         },
         {
           color: 'green',
-          year: '1970',
+          year: '2000-2004',
         },
         {
           color: 'pink',
-          year: '1980',
+          year: '2004-2007',
         },
         {
           color: 'amber',
-          year: '1990',
+          year: '2008-2010',
         },
         {
           color: 'orange',
-          year: '2000',
+          year: '2012 – 2015',
+        },
+        {
+          color: 'cyan',
+          year: '2015-2020',
+        },
+        {
+          color: 'green',
+          year: '2020-2022',
+        },
+        {
+          color: 'pink',
+          year: '2023-...',
         },
       ],
     }

@@ -7,7 +7,7 @@
           Suche nach Ressourcen
         </h1>
         <p>
-          Die Folgende Suche erlaubt eine facettierte Suche über alle Ressourcen im Syntagmatikon.
+          Die Folgende Suche erlaubt einen Type-Ahead-Suche über alle Ressourcen im Syntagmatikon.
           Die Ressourcen sind nach Kategorien sortiert und können nach verschiedenen Kriterien gefiltert werden.
         </p>
         <br />
