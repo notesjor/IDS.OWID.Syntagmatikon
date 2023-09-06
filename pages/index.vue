@@ -12,18 +12,10 @@
     <v-row>
       <v-col>
         <div>
-          Herzlich willkommen im Syntagmatikon, einer lexikalischen Plattform, die sich ganz der syntagmatischen
-          Beziehung der Sprache widmet! Hier finden Sie eine umfassende Sammlung von Wörtern und Ausdrücken aus
-          verschiedenen lexikographischen Ressourcen, die sich durch ihre lineare Abfolge beim Schreiben, Lesen oder
-          Sprechen definieren. Die einzelnen Ressourcen sind miteinander verknüpft und es entstehen im Zusammenspiel
-          neue Bedeutungskontexte, die sich überblicksartig aber auch im Detail explorativ erkunden lassen.
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <div>
-          <!--<annotatedSampel></annotatedSampel>-->
+          Das Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre
+          wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind: Phraseologismen,
+          Sprichwörter und Sprüche; Kollokationen; Komposita und andere Wortbildungseinheiten;
+          Präpositionen-Substantiv-Kombinationen; Verb-Präpositionen-Kombinationen; wortgruppenartige Redeeinleiter.
         </div>
       </v-col>
     </v-row>
@@ -38,55 +30,20 @@
     <v-row>
       <v-col>
         <div>
-          Herzlich willkommen im Syntagmatikon, einer lexikalischen Plattform, die sich ganz der syntagmatischen
-          Beziehung der Sprache widmet! Hier finden Sie eine umfassende Sammlung von Wörtern und Ausdrücken aus
-          verschiedenen lexikographischen Ressourcen, die sich durch ihre lineare Abfolge beim Schreiben, Lesen oder
-          Sprechen definieren. Die einzelnen Ressourcen sind miteinander verknüpft und es entstehen im Zusammenspiel
-          neue Bedeutungskontexte, die sich überblicksartig aber auch im Detail explorativ erkunden lassen.
+          Diese Einheiten wurden in unterschiedlichen IDS-Projekten auf der Basis sehr großer Korpora erforscht und in
+          Online-Wörterbüchern, Datenbanken oder Sammlungen aufbereitet. Das Syntagmatikon verknüpft und visualisiert
+          diese Ressourcen auf vielfältige Weise und macht so interessante Zusammenhänge und Vernetzungen im Wortschatz
+          sichtbar.
         </div>
       </v-col>
     </v-row>
     <v-row>
       <v-col>
         <div>
-          Herzlich willkommen im Syntagmatikon, einer lexikalischen Plattform, die sich ganz der syntagmatischen
-          Beziehung der Sprache widmet! Hier finden Sie eine umfassende Sammlung von Wörtern und Ausdrücken aus
-          verschiedenen lexikographischen Ressourcen, die sich durch ihre lineare Abfolge beim Schreiben, Lesen oder
-          Sprechen definieren. Die einzelnen Ressourcen sind miteinander verknüpft und es entstehen im Zusammenspiel
-          neue Bedeutungskontexte, die sich überblicksartig aber auch im Detail explorativ erkunden lassen.
-        </div>
-      </v-col>
-      <v-col>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, eveniet quod error fuga totam nulla sit eos,
-          eligendi quibusdam corporis repellendus sed fugiat laudantium aliquam, hic rem veniam vero ex.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, eveniet quod error fuga totam nulla sit eos,
-          eligendi quibusdam corporis repellendus sed fugiat laudantium aliquam, hic rem veniam vero ex.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, eveniet quod error fuga totam nulla sit eos,
-          eligendi quibusdam corporis repellendus sed fugiat laudantium aliquam, hic rem veniam vero ex.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, eveniet quod error fuga totam nulla sit eos,
-          eligendi quibusdam corporis repellendus sed fugiat laudantium aliquam, hic rem veniam vero ex.
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <div>
-          Herzlich willkommen im Syntagmatikon, einer lexikalischen Plattform, die sich ganz der syntagmatischen
-          Beziehung der Sprache widmet! Hier finden Sie eine umfassende Sammlung von Wörtern und Ausdrücken aus
-          verschiedenen lexikographischen Ressourcen, die sich durch ihre lineare Abfolge beim Schreiben, Lesen oder
-          Sprechen definieren. Die einzelnen Ressourcen sind miteinander verknüpft und es entstehen im Zusammenspiel
-          neue Bedeutungskontexte, die sich überblicksartig aber auch im Detail explorativ erkunden lassen.
-          Herzlich willkommen im Syntagmatikon, einer lexikalischen Plattform, die sich ganz der syntagmatischen
-          Beziehung der Sprache widmet! Hier finden Sie eine umfassende Sammlung von Wörtern und Ausdrücken aus
-          verschiedenen lexikographischen Ressourcen, die sich durch ihre lineare Abfolge beim Schreiben, Lesen oder
-          Sprechen definieren. Die einzelnen Ressourcen sind miteinander verknüpft und es entstehen im Zusammenspiel
-          neue Bedeutungskontexte, die sich überblicksartig aber auch im Detail explorativ erkunden lassen.
-          Herzlich willkommen im Syntagmatikon, einer lexikalischen Plattform, die sich ganz der syntagmatischen
-          Beziehung der Sprache widmet! Hier finden Sie eine umfassende Sammlung von Wörtern und Ausdrücken aus
-          verschiedenen lexikographischen Ressourcen, die sich durch ihre lineare Abfolge beim Schreiben, Lesen oder
-          Sprechen definieren. Die einzelnen Ressourcen sind miteinander verknüpft und es entstehen im Zusammenspiel
-          neue Bedeutungskontexte, die sich überblicksartig aber auch im Detail explorativ erkunden lassen.
+          Eine Besonderheit stellen erklärende Texte mit unterschiedlichen Informationstiefen dar, die als Leitfaden eine
+          Kompassfunktion für das gesamte Portal erfüllen. Ergebnisse und Datenformate unserer Grundlagenforschung werden
+          so transparent dargestellt, dass sich andere „andocken“ und die Angebote für ihre Zwecke nutzen und
+          weiterverarbeiten können, z. B. im Bereich Deutsch als Fremdsprache.
         </div>
       </v-col>
     </v-row>

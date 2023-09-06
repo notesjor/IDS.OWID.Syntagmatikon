@@ -190,6 +190,6 @@ export default {
   
 <style scoped>
 .v-window {
-  max-height: 400px;
+  max-height: 430px;
 }
 </style>

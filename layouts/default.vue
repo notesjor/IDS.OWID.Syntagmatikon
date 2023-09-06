@@ -29,7 +29,12 @@
       <!-- HOME START -->
       <v-list density="compact" nav :style="menuStyleMobileFix">
         <v-list-subheader v-show="!useMobileView">Übersicht</v-list-subheader>
-        <router-link to="/"><v-list-item prepend-icon="mdi-home" title="Projekt-Startseite"></v-list-item></router-link>
+        <router-link to="/">
+          <v-list-item prepend-icon="mdi-home" title="Startseite"></v-list-item>
+        </router-link>
+        <router-link to="/project-description">
+          <v-list-item prepend-icon="mdi-information" title="Projektbeschreibung"></v-list-item>
+        </router-link>
       </v-list>
       <!-- HOME END -->
 
@@ -37,29 +42,51 @@
 
       <!-- ADDITIONAL INFORMATION START -->
       <v-list density="compact" nav>
-        <v-list-subheader v-show="!useMobileView">Vertiefende Informationen</v-list-subheader>
-        <router-link to="/project-description"><v-list-item prepend-icon="mdi-information"
-            title="Was ist ein Syntagmatikon?"></v-list-item></router-link>
-        <router-link to="/methods-description"><v-list-item prepend-icon="mdi-file-cabinet"
-            title="Korpusmethoden erklärt"></v-list-item></router-link>
+        <v-list-subheader v-show="!useMobileView">Leitfaden</v-list-subheader>
+        <router-link to="/guide/patterns">
+          <v-list-item prepend-icon="mdi-book-open-variant" title="Muster in Sprache"></v-list-item>
+        </router-link>
+        <router-link to="/guide/methods">
+          <v-list-item prepend-icon="mdi-book-open-variant" title="Korpusmethoden erklärt"></v-list-item>
+        </router-link>
+        <router-link to="/guide/resources">
+          <v-list-item prepend-icon="mdi-book-open-variant" title="Ressourcen"></v-list-item>
+        </router-link>
       </v-list>
       <!-- ADDITIONAL INFORMATION END -->
 
       <v-divider></v-divider>
 
-      <!-- RESOURCES START -->
+      <!-- ADDITIONAL INFORMATION START -->
       <v-list density="compact" nav>
-        <v-list-subheader v-show="!useMobileView">Ressourcen</v-list-subheader>        
-        <router-link to="/search"><v-list-item prepend-icon="mdi-shape-outline" title="Suche (Ressourcen)"></v-list-item></router-link>
-        <router-link to="/list"><v-list-item prepend-icon="mdi-format-list-bulleted-type"
-            title="Liste"></v-list-item></router-link>
-        <router-link to="/splitview"><v-list-item prepend-icon="mdi-compare"
-            title="Vergleich"></v-list-item></router-link>
-        <router-link to="/network"><v-list-item prepend-icon="mdi-graph" title="Vernetzungen"></v-list-item></router-link>        
-        <router-link to="/timeline"><v-list-item prepend-icon="mdi-timeline-text-outline" title="Forschungsgeschichte"></v-list-item></router-link>
-        <router-link to="/search2"><v-list-item prepend-icon="mdi-magnify" title="Suche (Einträge)"></v-list-item></router-link>
+        <v-list-subheader v-show="!useMobileView">Suche</v-list-subheader>
+        <router-link to="/project-description">
+          <v-list-item prepend-icon="mdi-information" title="nach und in Ressourcen"></v-list-item>
+        </router-link>
+        <router-link to="/search2">
+          <v-list-item prepend-icon="mdi-information" title="nach Einträgen"></v-list-item>
+        </router-link>
       </v-list>
-      <!-- RESOURCES END -->
+      <!-- ADDITIONAL INFORMATION END -->
+
+      <!-- ADDITIONAL INFORMATION START -->
+      <v-list density="compact" nav>
+        <v-list-subheader v-show="!useMobileView">Funktion</v-list-subheader>
+        <router-link to="/network">
+          <v-list-item prepend-icon="mdi-information" title="Vernetzung"></v-list-item>
+        </router-link>
+        <router-link to="/timeline">
+          <v-list-item prepend-icon="mdi-information" title="Forschungsgeschichte"></v-list-item>
+        </router-link>
+      </v-list>
+      <!-- ADDITIONAL INFORMATION END -->
+
+      <!-- DEV START -->
+      <v-list density="compact" nav>
+        <v-list-subheader v-show="!useMobileView">(später nicht sichtbar)</v-list-subheader>        
+        <router-link to="/develop"><v-list-item prepend-icon="mdi-developer-board" title="Visualisierungen"></v-list-item></router-link>
+      </v-list>
+      <!-- DEV END -->
     </v-navigation-drawer>
 
     <div style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
@@ -193,3 +220,12 @@ export default {
   }
 }
 </script>
+
+<style >
+.v-list-item{
+}
+.v-list-item__content{
+}
+.v-list-item-title{
+}
+</style>

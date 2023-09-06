@@ -11,7 +11,7 @@
           Die Ressourcen sind nach Kategorien sortiert und können nach verschiedenen Kriterien gefiltert werden.
         </p>
         <br />
-        <v-text-field label="Bitte Suchausruck eingeben..." append-inner-icon="mdi-magnify" variant="solo"
+        <v-text-field label="Bitte Suchausdruck eingeben..." append-inner-icon="mdi-magnify" variant="solo"
           v-model="query"></v-text-field>
       </div>
     </v-col>
@@ -99,18 +99,24 @@
       </v-card>
     </v-col>
     <v-col cols="6">
-      <v-virtual-scroll :items="items" :height="900">
-        <template v-slot:default="{ item }">
-          <v-card style="margin-bottom:10px; padding-bottom: 10px;">
-            <v-card-title>
-              {{ item.Entry }}
-            </v-card-title>
-            <v-card-sub-title>
-              <p class="text-sm" style="margin-left:15px">{{ item.Dictionary }}</p>
-            </v-card-sub-title>
-          </v-card>
-        </template>
-      </v-virtual-scroll>
+      <div v-for="r in ressources" :key="r">
+        <v-card class="mx-auto" style="margin-top: 10px">
+          <v-card-title>
+            <div class="text-xl font-bold">
+              <v-icon style="transform: rotate(30deg);">mdi-square-outline</v-icon>
+              {{ r.title }}
+            </div>
+            <div class="text-sm">
+              {{ r.subtitle }}
+            </div>
+          </v-card-title>
+          <v-card-text>
+            <div class="text-sm">
+              {{ r.tags }}
+            </div>
+          </v-card-text>
+        </v-card>    
+      </div>
     </v-col>
   </v-row>
 </template>
@@ -127,31 +133,31 @@ export default {
       slider2: 50,
 
       ressources: [
-        { "title": "Explorative Datenbanken", type: "subheader", value: 1000 },
-        { "title": "KoMuX", value: 1100, tags: ["Datenbank", "Explorativ", "Komposita", "Häufigkeit"], subtitle: "Durchsuche mehr als 50.000 Komposita" },
+        //{ "title": "Explorative Datenbanken", type: "subheader", value: 1000 },
+        { "title": "KoMuX", value: 1100, subtitle: "Durchsuche mehr als 50.000 Komposita" },
         { "title": "PREPCON (explorativ)", value: 1200, subtitle: "Präpositionale Wortverbindungen in unterschiedlichen Beschreibungstiefen" },
 
-        { "title": "Deskriptive Datenbanken", type: "subheader", value: 2000 },
+        //{ "title": "Deskriptive Datenbanken", type: "subheader", value: 2000 },
         { "title": "MAP", value: 2100, subtitle: "Musterbank Argumentmarkierender Präpositionen" },
         { "title": "Wörterbuch Redeeinleiter", value: 2200, subtitle: "Musterbank Argumentmarkierender Präpositionen" },
 
-        { "title": "Inventare und Sammlungen", type: "subheader", value: 3000 },
+        //{ "title": "Inventare und Sammlungen", type: "subheader", value: 3000 },
         { "title": "PhK-Liste", value: 3100, subtitle: "Musterbank unterschiedlichen Präpositionen" },
         { "title": "SpruchList", value: 3200, subtitle: "Wortverbindungen Durchsuche Präpositionen" },
         { "title": "PREPCON (teporal)", value: 3300, subtitle: "Musterbank Argumentmarkierender Präpositionen" },
         { "title": "DTWW", value: 3400, subtitle: "Musterbank Beschreibungstiefen Präpositionen" },
 
-        { "title": "Online Wörterbücher", type: "subheader", value: 4000 },
+        //{ "title": "Online Wörterbücher", type: "subheader", value: 4000 },
         { "title": "OWID Sprichwörterbuch", value: 4100, subtitle: "Musterbank unterschiedlichen Komposita" },
         { "title": "OWID Kleines Wörterbuch der Verlaufsformen im Deutschen", value: 4200, subtitle: "Wortverbindungen unterschiedlichen Präpositionen" },
         { "title": "OWID Feste Wortverbindungen", value: 4300, subtitle: "Musterbank Beschreibungstiefen Präpositionen" },
 
-        { "title": "Korpuszentrierte Präsentationsformate", type: "subheader", value: 5000 },
+        //{ "title": "Korpuszentrierte Präsentationsformate", type: "subheader", value: 5000 },
         { "title": "OWID Sprichwörterbuch", value: 5100 },
         { "title": "PREPCON (teporal)", value: 5200 },
         { "title": "PREPCON (explorativ)", value: 5300 },
 
-        { "title": "Pilot- und Einzelstudien", type: "subheader", value: 6000 },
+        //{ "title": "Pilot- und Einzelstudien", type: "subheader", value: 6000 },
         { "title": "DRI online", value: 6100 },
         { "title": "Verietäten Kontakt", value: 6200 },
         { "title": "Probandenbefragungen Redewendungen", value: 6300 }

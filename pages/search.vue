@@ -11,7 +11,7 @@
           Die Ressourcen sind nach Kategorien sortiert und können nach verschiedenen Kriterien gefiltert werden.
         </p>
         <br />
-        <v-text-field label="Bitte Suchausruck eingeben..." append-inner-icon="mdi-magnify" variant="solo"></v-text-field>
+        <v-text-field label="Bitte Suchausdruck eingeben..." append-inner-icon="mdi-magnify" variant="solo"></v-text-field>
       </div>
     </v-col>
     <v-col cols="2"></v-col>
