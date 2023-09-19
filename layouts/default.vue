@@ -81,12 +81,6 @@
       </v-list>
       <!-- ADDITIONAL INFORMATION END -->
 
-      <!-- DEV START -->
-      <v-list density="compact" nav>
-        <v-list-subheader v-show="!useMobileView">(später nicht sichtbar)</v-list-subheader>        
-        <router-link to="/develop"><v-list-item prepend-icon="mdi-developer-board" title="Visualisierungen"></v-list-item></router-link>
-      </v-list>
-      <!-- DEV END -->
     </v-navigation-drawer>
 
     <div style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
