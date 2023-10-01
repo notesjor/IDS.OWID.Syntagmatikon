@@ -4,7 +4,10 @@
       style="z-index:100; max-height: 65px; min-height:65px; background-color: black; padding:7px 10px 5px 10px; display: grid; grid-template-columns: 1fr auto 250px; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right'; ">
       <div class="inline" style="color:white; grid-area: left; margin-left:5px">
         <div style="min-height: 10px;" v-if="useMobileView"></div>
-        <div class="text-xl"><v-icon>mdi-arrow-decision-outline</v-icon> {{ appName }}</div>
+        <div class="text-xl">
+          <img alt="Logo" src="/logo_syntagmatikon.svg"
+            style="max-height:40px; margin-right:10px; margin-top:5px; float: left;" /> 
+          {{ appName }}</div>
         <div class="text-xs" style="text-align: left;">{{ useMobileView ? " " : appDescription }}</div>
       </div>
 
@@ -21,8 +24,11 @@
     <v-navigation-drawer expand-on-hover :permanent="!useMobileView" :rail="useMobileView" style="z-index:1; transform: none;">
       <!-- LOGO START -->
       <div class="text-xl" style="margin: 7px 0px 15px 15px; opacity: 1" v-show="!useMobileView">
-        <v-icon>mdi-arrow-decision-outline</v-icon> 
-        {{ appName }}
+        <img alt="Logo" src="/logo_syntagmatikon.svg"
+            style="max-height:40px; margin-right:auto; margin-top:5px; float: left;" />
+        <div style="margin-left: 50px; margin-bottom: 50px;">
+          {{ appName }}
+        </div>
       </div>
       <!-- LOGO END -->
 
