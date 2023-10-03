@@ -64,7 +64,7 @@ export default {
               article: 'nach Belieben',
               type: 'Sprachgebrauchsmuster',
               href: 'http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html',
-              color: '#0d65c2'
+              color: '#008702'
             }
           ]
         },
@@ -87,7 +87,7 @@ export default {
               article: 'Kopfkissen',
               type: 'Kompositum',
               href: 'http://owid.de',
-              color: '#0d65c2'
+              color: '#008702'
             }
           ]
         },
