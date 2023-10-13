@@ -200,6 +200,13 @@
         </div>
       </v-col>
     </v-row>
+    <v-row>
+      <v-col>
+        <NuxtLink to="/guide/methods2">
+          <v-btn>Vorschlag Jan</v-btn>
+        </NuxtLink>
+      </v-col>
+    </v-row>
   </div>
 </template>
 

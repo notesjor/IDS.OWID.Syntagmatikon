@@ -18,10 +18,10 @@ export default {
     text-transform: none;
     padding: 0px;
 }
-::v-deep .v-btn__prepend {
+:deep(.v-btn__prepend) {
     margin-right: 0px
 }
-::v-deep .v-btn__content {
+:deep(.v-btn__content) {
     margin-top: -3px
 }
 </style>
