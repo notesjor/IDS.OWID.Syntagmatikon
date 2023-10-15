@@ -49,6 +49,7 @@ export default {
   },
 
   async mounted() {
+    console.log(this.$props.data)
     this.$data.text = this.getText();
     var text = this.$data.text;
 
