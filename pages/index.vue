@@ -23,7 +23,7 @@
       <v-col>
         <div>
           <!--<annotatedSampelMulti></annotatedSampelMulti>-->
-          <Sampler></Sampler>
+          <Sampler2></Sampler2>
         </div>
       </v-col>
     </v-row>
