@@ -10,12 +10,12 @@
     <v-row>
       <v-col>
         <div @mouseenter="carouselStop" @mouseleave="carouselStart">
-          <v-carousel hide-delimiter-background hide-delimiters continuous ref="carousel" v-model="tab" :cycle="cycle">
+          <v-carousel hide-delimiter-background hide-delimiters continuous ref="carousel" v-model="tab" :cycle="cycle" transition="scale-transition">
             <v-carousel-item v-for="(item, i) in generatePages()" :key="i" eager>
               <v-sheet height="100%">
                 <div style="padding:5px 75px 5px 75px;">
                   <v-row>
-                    <div v-html="item.html"></div>
+                    <div v-html="item.html" style="margin:10px; font-size: 1.2rem; line-height: 1.5; font-weight: 300;"></div>
                   </v-row>
                   <v-row>&nbsp;</v-row>
                   <div style="position: absolute; bottom: 150px;">
@@ -225,7 +225,7 @@ export default {
             var t = item.annotations[j].to - 1;
 
             if (i == j) {
-              tokens[f] = `<anno_${j} class="anno" style="background-color:${item.annotations[j].color}">${tokens[f]}`;
+              tokens[f] = `<anno_${j} class="anno" style="${this.makeStyle(item.annotations[j].color)}">${tokens[f]}`;
               tokens[t] = `${tokens[t]}</anno_${j}>`;
 
               data.source = item.annotations[j].source;
@@ -234,7 +234,7 @@ export default {
               data.href = item.annotations[j].href;
               data.color = item.annotations[j].color;
             } else {
-              tokens[f] = `<anno_${j} class="anno" id="${baseIndex + j}" style="background-color:#ddd">${tokens[f]}`;
+              tokens[f] = `<anno_${j} class="anno" id="${baseIndex + j}" style="${this.makeStyle("#666")}">${tokens[f]}`;
               tokens[t] = `${tokens[t]}</anno_${j}>`;
             }
           }
@@ -247,8 +247,9 @@ export default {
       }
       return res;
     },
-    log(i) {
-      console.log(i);
+    makeStyle(color) {
+      //return `background-color:${color}`;
+      return `color:${color}; background-color:${color}0A; border-radius: 3px; border: 2px dotted ${color}; padding: 0 3px`;      
     },
     carouselStop() {
       this.cycle = false;
