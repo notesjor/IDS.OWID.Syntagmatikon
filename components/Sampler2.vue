@@ -9,14 +9,31 @@
     </v-row>
     <v-row>
       <v-col>
-        <v-carousel hide-delimiter-background hide-delimiters continuous ref="carousel" v-model="tab" :cycle="true">
-          <v-carousel-item v-for="(item, i) in generatePages()" :key="i" eager>
-            <v-sheet height="100%">
-              <div style="padding:5px 75px 5px 75px" v-html="item">
-              </div>
-            </v-sheet>
-          </v-carousel-item>
-        </v-carousel>
+        <div @mouseenter="carouselStop" @mouseleave="carouselStart">
+          <v-carousel hide-delimiter-background hide-delimiters continuous ref="carousel" v-model="tab" :cycle="cycle">
+            <v-carousel-item v-for="(item, i) in generatePages()" :key="i" eager>
+              <v-sheet height="100%">
+                <div style="padding:5px 75px 5px 75px;">
+                  <v-row>
+                    <div v-html="item.html"></div>
+                  </v-row>
+                  <v-row>&nbsp;</v-row>
+                  <div style="position: absolute; bottom: 150px;">
+                    <v-row>
+                      <div style="font-weight: 200;" v-html="item.source"></div>
+                    </v-row>
+                    <v-row>
+                      <div :style="`color:${item.color}`">{{ item.article }}</div>
+                    </v-row>
+                    <v-row style="font-weight: 200; font-style: italic;">
+                      <div>{{ item.type }}</div>
+                    </v-row>
+                  </div>
+                </div>
+              </v-sheet>
+            </v-carousel-item>
+          </v-carousel>
+        </div>
       </v-col>
     </v-row>
   </div>
@@ -48,7 +65,7 @@ export default {
             {
               from: 23,
               to: 26,
-              source: 'PREPCON kontrastiv',
+              source: 'PREPCON <sup>kontrastiv</sup>',
               article: 'für Stunden',
               type: 'Sprachgebrauchsmuster',
               href: 'http://uwv.ids-mannheim.de/prepcon/modul2/artikel/fuer_Stunden/index.html',
@@ -57,7 +74,7 @@ export default {
             {
               from: 48,
               to: 50,
-              source: 'PREPCON kontrastiv',
+              source: 'PREPCON <sup>kontrastiv</sup>',
               article: 'nach Belieben',
               type: 'Sprachgebrauchsmuster',
               href: 'http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html',
@@ -183,248 +200,74 @@ export default {
               href: 'https://www.owid.de/artikel/309167',
               color: '#0d65c2'
             },
-            {
-              from: 6,
-              to: 8,
-              source: 'Feste Wortverbindungen in OWID',
-              article: 'im eigenen Saft schmoren',
-              type: 'Feste Wortverbindung',
-              href: 'https://www.owid.de/artikel/309167',
-              color: '#0d65c2'
-            },
-            {
-              from: 6,
-              to: 8,
-              source: 'Feste Wortverbindungen in OWID',
-              article: 'im eigenen Saft schmoren',
-              type: 'Feste Wortverbindung',
-              href: 'https://www.owid.de/artikel/309167',
-              color: '#0d65c2'
-            },
-            {
-              from: 6,
-              to: 8,
-              source: 'Feste Wortverbindungen in OWID',
-              article: 'im eigenen Saft schmoren',
-              type: 'Feste Wortverbindung',
-              href: 'https://www.owid.de/artikel/309167',
-              color: '#0d65c2'
-            },
-            {
-              from: 6,
-              to: 8,
-              source: 'Feste Wortverbindungen in OWID',
-              article: 'im eigenen Saft schmoren',
-              type: 'Feste Wortverbindung',
-              href: 'https://www.owid.de/artikel/309167',
-              color: '#0d65c2'
-            },
-            {
-              from: 6,
-              to: 8,
-              source: 'Feste Wortverbindungen in OWID',
-              article: 'im eigenen Saft schmoren',
-              type: 'Feste Wortverbindung',
-              href: 'https://www.owid.de/artikel/309167',
-              color: '#0d65c2'
-            },
-            {
-              from: 6,
-              to: 8,
-              source: 'Feste Wortverbindungen in OWID',
-              article: 'im eigenen Saft schmoren',
-              type: 'Feste Wortverbindung',
-              href: 'https://www.owid.de/artikel/309167',
-              color: '#0d65c2'
-            }
-
-          ]
-        },
-        {
-          tokens: ["Wo", "die", "Wirtschaft", "in", "der", "Krise", "steckt,", "da", "steigt", "die", "Angst", "der", "Geschäftsleute,", "den", "Boden", "unter", "den", "Füßen", "zu", "verlieren."],
-          annotations: [
-            {
-              from: 13,
-              to: 20,
-              source: 'Deutsch-Russische Idiome online',
-              article: 'den Boden unter den Füßen verlieren // по)терять почву под ногами',
-              type: 'Idiom',
-              href: 'http://wvonline.ids-mannheim.de/idiome_russ/BODEN_den_Boden_unter_den_Fuessen_verlieren.htm',
-              color: '#0d65c2'
-            }
-          ]
-        },
-        {
-          tokens: ["Die", "Dachgesellschaft", "der", "Eglo-Unternehmensgruppe", "-", "die", "Obwieser", "Holding", "GmbH", "mit", "Sitz", "in", "Pill", "-vereint", "auf", "internationaler", "Ebene", "12", "eigenständige", "Gesellschaften.", "Nach", "dem", "Gründungsjahr", "1969", "folgte", "die", "erste", "Auslandsniederlassung", "im", "Hauptmarkt", "Deutschland", "im", "Jahre", "1986."],
-          annotations: [
-            {
-              from: 1,
-              to: 2,
-              source: 'Deutsch-türkische Wortverbindungen Wirtschaft',
-              article: 'Dachgesellschaft // şemsiye şirket (Schirmfirma)',
-              type: 'Deutsch-türkische Wortverbindungen',
-              href: 'http://wvonline.ids-mannheim.de/dtww/dtww_d.htm',
-              color: '#0d65c2'
-            }
-          ]
-        },
-      ]
-      /*
-      [
-        {
-          tokens: ["Droht", "also", "demnächst", "eine", "unangenehme", "Aussprache", "mit", "dem", "Chef", "oder", "ein", "leidiger", "Besuch", "bei", "Verwandten", ",", "wissen", "wir", "es", "besser", ":", "Statt", "den", "Kopf", "in", "den", "Sand", "zu", "stecken", ",", "sollten", "wir", "das", "Ganze", "lieber", "schnell", "hinter", "uns", "bringen", ".", "Denn", "unsere", "&bdquo;", "Großhirnrinde", "&ldquo;", "weiß", "schon", "lange", ":", "besser", "ein", "Ende", "mit", "Schrecken", "als", "ein", "Schrecken", "ohne", "Ende", "."],
-          annotations: [
-            {
-              from: 3,
-              to: 6,
-              source: 'Sprichwörterbuch',
-              article: 'Eine unangenehme Aussprache haben',
-              type: 'Sprichwort',
-              href: 'https://www.owid.de/artikel/401610',
-              color: '#0d65c2'
-            },
-            {
-              from: 23,
-              to: 29,
-              source: 'Wörterbuch ABC',
-              article: 'Kopf in den Sand stecken',
-              type: 'Redewendung',
-              href: 'https://www.owid.de/artikel/401611',
-              color: '#008702'
-            },
-            {
-              from: 35,
-              to: 39,
-              source: 'Sprichwörterbuch',
-              article: 'Etwas schnell hinter sich brinden',
-              type: 'Sprachgebrauchsmuster',
-              href: 'https://www.owid.de/artikel/401612',
-              color: '#0d65c2'
-            },
-            {
-              from: 49,
-              to: 59,
-              source: 'XXX',
-              article: 'Ein Ende mit Schrecken',
-              type: 'XXX',
-              href: 'https://www.owid.de/artikel/401613',
-              color: '#c5049b'
-            },
-          ]
-        },
-        {
-          tokens: ["Für", "Jahrelang", "haben", "welche", "von", "die", "ältere", "Leute", "versucht", ",", "ein", "Museum", "und", "Archives", "zu", "bauen", "hier", ",", "aber", "die", "konnten", "nie", "das", "Material", "zusammenfind'n", ".", "Dann", "kam", "ein", "Immigrant", ",", "Jonas", "Vanagers", ",", "der", "kam", "hier", ",", "und", "der", "war", "sehr", "interesstessiert", "in", "der", "Sache", ",", "und", "er", "is'", "von", "Haus", "zu", "Haus", "gegangen", ",", "und", "hat", "alles", "Sachen", "zusammengesucht", ",", "und", "the", "Historie", "von", "Lobethal", "ganz", "auf", "den", "Grund", "gegangen", "."],
-          annotations: [
-            {
-              from: 3,
-              to: 6,
-              source: 'Sprichwörterbuch',
-              article: 'Eine unangenehme Aussprache haben',
-              type: 'Sprichwort',
-              href: 'https://www.owid.de/artikel/401610',
-              color: '#0d65c2'
-            },
-            {
-              from: 23,
-              to: 29,
-              source: 'Wörterbuch ABC',
-              article: 'Kopf in den Sand stecken',
-              type: 'Redewendung',
-              href: 'https://www.owid.de/artikel/401611',
-              color: '#008702'
-            },
-            {
-              from: 35,
-              to: 39,
-              source: 'Sprichwörterbuch',
-              article: 'Etwas schnell hinter sich brinden',
-              type: 'Sprachgebrauchsmuster',
-              href: 'https://www.owid.de/artikel/401612',
-              color: '#0d65c2'
-            },
-            {
-              from: 49,
-              to: 59,
-              source: 'XXX',
-              article: 'Ein Ende mit Schrecken',
-              type: 'XXX',
-              href: 'https://www.owid.de/artikel/401613',
-              color: '#c5049b'
-            },
-          ]
-        },
-        {
-          tokens: ["Deutsche", "Fans", "sind", "laut", "und", "viel", "am", "Feiern", ".", "Aber", "nicht", "immer", "textsicher", ".", "Nach", "dem", "Viertelfinalsieg", "gegen", "Argentinien", "versuchte", "ein", "weiblicher", "Teenager", "in", "der", "Straßenbahn", "die", "Nationalhymne", "anstimmen", ".", "Nach", "„", "Einigkeit", "und", "Recht", "”", "musste", "sie", "sich", "erkundigen", ":", "„", "Wie", "geht", "der", "Text", "nochmal", "?", "”"],
-          annotations: [
-            {
-              from: 3,
-              to: 6,
-              source: 'Sprichwörterbuch',
-              article: 'Eine unangenehme Aussprache haben',
-              type: 'Sprichwort',
-              href: 'https://www.owid.de/artikel/401610',
-              color: '#0d65c2'
-            },
-            {
-              from: 23,
-              to: 29,
-              source: 'Wörterbuch ABC',
-              article: 'Kopf in den Sand stecken',
-              type: 'Redewendung',
-              href: 'https://www.owid.de/artikel/401611',
-              color: '#008702'
-            },
-            {
-              from: 35,
-              to: 39,
-              source: 'Sprichwörterbuch',
-              article: 'Etwas schnell hinter sich brinden',
-              type: 'Sprachgebrauchsmuster',
-              href: 'https://www.owid.de/artikel/401612',
-              color: '#0d65c2'
-            },
-            {
-              from: 49,
-              to: 59,
-              source: 'XXX',
-              article: 'Ein Ende mit Schrecken',
-              type: 'XXX',
-              href: 'https://www.owid.de/artikel/401613',
-              color: '#c5049b'
-            },
           ]
         }
-      ] */
-      ,
+      ],
+      cycle: true,
       tab: 0,
     }
   },
   methods: {
     generatePages() {
-      // return ['Hello <b>world</b> - <button id="123">Hello</button>', 'Hello <b>world</b> - <button id="333">Hallo</button>']
+      var baseIndex = 0;
       var res = [];
-      for (item in this.$data.items){
-        for((current, i) in item.annotations){
-          var notCurrent = JSON.parse(JSON.stringify(item.annotations));
-          notCurrent = notCurrent.splice(i, 1);
+      for (var x in this.$data.items) {
+        var item = this.$data.items[x];
+        var max = item.annotations.length;
 
-          
+        for (var i = 0; i < max; i++) {
+
+          var tokens = [...item.tokens];
+          var data = {};
+
+          for (var j = 0; j < max; j++) {
+            var f = item.annotations[j].from;
+            var t = item.annotations[j].to - 1;
+
+            if (i == j) {
+              tokens[f] = `<anno_${j} class="anno" style="background-color:${item.annotations[j].color}">${tokens[f]}`;
+              tokens[t] = `${tokens[t]}</anno_${j}>`;
+
+              data.source = item.annotations[j].source;
+              data.article = item.annotations[j].article;
+              data.type = item.annotations[j].type;
+              data.href = item.annotations[j].href;
+              data.color = item.annotations[j].color;
+            } else {
+              tokens[f] = `<anno_${j} class="anno" id="${baseIndex + j}" style="background-color:#ddd">${tokens[f]}`;
+              tokens[t] = `${tokens[t]}</anno_${j}>`;
+            }
+          }
+
+          data.html = tokens.join(' ');
+          res.push(data);
         }
+
+        baseIndex += max;
       }
+      return res;
     },
-    log(i){
+    log(i) {
       console.log(i);
+    },
+    carouselStop() {
+      this.cycle = false;
+    },
+    carouselStart() {
+      this.cycle = true;
     },
   },
   mounted() {
+    var self = this;
     this.$nextTick(function () {
-      let buttons = document.querySelectorAll('button');
-      buttons.forEach((button) => {
+      let buttons = document.getElementsByClassName('anno');
+      // interrate over buttons
+      for (let i = 0; i < buttons.length; i++) {
+        let button = buttons[i];
         button.addEventListener('click', (event) => {
-          let num = button.getAttribute('id');
-          this.log(num);
+          self.tab = parseInt(button.getAttribute('id'));
         });
-      });
+      }
     })
   },
 }
