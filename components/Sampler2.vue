@@ -10,7 +10,7 @@
     <v-row>
       <v-col>
         <div @mouseenter="carouselStop" @mouseleave="carouselStart">
-          <v-carousel hide-delimiter-background hide-delimiters continuous ref="carousel" v-model="tab" :cycle="cycle" transition="scale-transition">
+          <v-carousel hide-delimiter-background hide-delimiters continuous ref="carousel" v-model="tab" :cycle="cycle">
             <v-carousel-item v-for="(item, i) in generatePages()" :key="i" eager>
               <v-sheet height="100%">
                 <div style="padding:5px 75px 5px 75px;">
