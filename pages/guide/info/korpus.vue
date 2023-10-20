@@ -3,11 +3,15 @@
     <v-row>
       <v-col cols="3"></v-col>
       <v-col>
-        <div>
-          <h1 class="text-3xl font-bold">
-            Was ist ein Korpus?
-          </h1>
-          <h2>Definition und Verwendung (Suchabfragen)</h2>
+        <div style="position: relative;">
+          <img src="/guide/methods/korpus.jpg" alt="" />
+          <div
+            style="position: absolute; bottom: 0; left: 10px; background-color: rgba(255, 255, 255, 0.5); width: 100%;">
+            <h1 class="text-3xl font-bold">
+              Was ist ein Korpus?
+            </h1>
+            <h2>Definition und Verwendung (Suchabfragen)</h2>
+          </div>
         </div>
       </v-col>
     </v-row>
@@ -85,39 +89,49 @@
             href="https://diskursmonitor.de/barometer/korpora/live-korpus/">LIVE-Analyse</a> ermöglicht. Die
           <em>Korpora</em> stehen intern für Lehrstuhlprojekte aber auch externen Forschenden zur Verfügung.
           Besucher*innen der Webseite können auf aggregierte Korpusdaten einfache Analysen durchführen (<a
-            href="https://diskursmonitor.de/barometer/analysen/">zu den Analysen</a>).</div>
-            <div>
-              <img src="https://diskursmonitor.de/wp-content/uploads/2023/06/Bild5-300x250.png" style="margin:20px; margin-left: 25%;" alt="">
-            </div>
+            href="https://diskursmonitor.de/barometer/analysen/">zu den Analysen</a>).
+        </div>
+        <div>
+          <img src="https://diskursmonitor.de/wp-content/uploads/2023/06/Bild5-300x250.png"
+            style="margin:20px; margin-left: 25%;" alt="">
+        </div>
         <h3 style="margin-top: 20px;">
           Literatur
         </h3>
         <ul>
-<li>
-<p>Bubenhofer, Noah (2009): Sprachgebrauchsmuster. Korpuslinguistik als Methode der Diskurs- und Kulturanalyse. Zugl.: Zürich, Univ., Diss., 2008. Berlin: de Gruyter.<br>Calzolari, Nicoletta et al. (Hrsg.) (2018): Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018). Miyazaki, Japan: European Language Resources Association (ELRA).</p>
-</li>
-<li>
-<p>Francis, W. Nelson; Kučera, Henry (1964): Manual of Information to Accompany‚ A Standard Sample of Present-Day Edited American English, for Use with Digital Computers*. Brown University, Providence. Department of Linguistics.</p>
-</li>
-<li>
-<p>Kupietz, Marc et al. (2018): The German Reference Corpus DeReKo: New Developments – New Opportunities. In: Calzolari, Nicoletta et al. (Hrsg.): Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018). Miyazaki, Japan: European Language Resources Association (ELRA).</p>
-</li>
-<li>
-<p>Lemnitzer, Lothar; Zinsmeister, Heike (2010): Korpuslinguistik. Eine Einführung. Tübingen: Narr Verlag.</p>
-</li>
-<li>
-<p>Mukherjee, Joybrato (2009): Anglistische Korpuslinguistik. Eine Einführung. Berlin: Schmidt.</p>
-</li>
-<li>
-<p>Perkuhn, Rainer; Keibel, Holger; Kupietz, Marc (2012): Korpuslinguistik. Paderborn: Fink.</p>
-</li>
-<li>
-<p>Scherer, Carmen (2014): Korpuslinguistik. Heidelberg: Winter.</p>
-</li>
-<li>
-<p>Stede, Manfred (2007): Korpusgestützte Textanalyse. Grundzüge der Ebenen-orientierten Textlinguistik. Tübingen: Narr.</p>
-</li>
-</ul>
+          <li>
+            <p>Bubenhofer, Noah (2009): Sprachgebrauchsmuster. Korpuslinguistik als Methode der Diskurs- und
+              Kulturanalyse. Zugl.: Zürich, Univ., Diss., 2008. Berlin: de Gruyter.<br>Calzolari, Nicoletta et al. (Hrsg.)
+              (2018): Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC
+              2018). Miyazaki, Japan: European Language Resources Association (ELRA).</p>
+          </li>
+          <li>
+            <p>Francis, W. Nelson; Kučera, Henry (1964): Manual of Information to Accompany‚ A Standard Sample of
+              Present-Day Edited American English, for Use with Digital Computers*. Brown University, Providence.
+              Department of Linguistics.</p>
+          </li>
+          <li>
+            <p>Kupietz, Marc et al. (2018): The German Reference Corpus DeReKo: New Developments – New Opportunities. In:
+              Calzolari, Nicoletta et al. (Hrsg.): Proceedings of the Eleventh International Conference on Language
+              Resources and Evaluation (LREC 2018). Miyazaki, Japan: European Language Resources Association (ELRA).</p>
+          </li>
+          <li>
+            <p>Lemnitzer, Lothar; Zinsmeister, Heike (2010): Korpuslinguistik. Eine Einführung. Tübingen: Narr Verlag.</p>
+          </li>
+          <li>
+            <p>Mukherjee, Joybrato (2009): Anglistische Korpuslinguistik. Eine Einführung. Berlin: Schmidt.</p>
+          </li>
+          <li>
+            <p>Perkuhn, Rainer; Keibel, Holger; Kupietz, Marc (2012): Korpuslinguistik. Paderborn: Fink.</p>
+          </li>
+          <li>
+            <p>Scherer, Carmen (2014): Korpuslinguistik. Heidelberg: Winter.</p>
+          </li>
+          <li>
+            <p>Stede, Manfred (2007): Korpusgestützte Textanalyse. Grundzüge der Ebenen-orientierten Textlinguistik.
+              Tübingen: Narr.</p>
+          </li>
+        </ul>
       </v-col>
       <v-col cols="3"></v-col>
     </v-row>
@@ -134,7 +148,8 @@ export default {
 }
 </script>
 
-<style scoped>.container {
+<style scoped>
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
@@ -148,10 +163,12 @@ h2 {
 h3 {
   font-size: large;
 }
+
 a {
   color: #1976d2;
 }
-li{
+
+li {
   list-style-type: disc;
   margin-left: 30px;
 }

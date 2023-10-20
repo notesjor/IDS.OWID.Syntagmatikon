@@ -3,8 +3,9 @@
     <v-row>
       <v-col>
         <h1 class="text-xl">Interaktive-Beispiele</h1>
-        <h2 class="text-l">Bewegen Sie die Maus über hervorgehobenen Stellen, um passende Ressourcen im Syntagmatikon zu
-          finden.</h2>
+        <h2 class="text-l">Klicken Sie auf eine Stelle im Beispiel, um eine Liste zugehöriger Ressourcen im Syntagmatikon anzuzeigen. 
+          Mit einem erneuten Klick auf eine der Ressourcen rufen Sie diese auf.
+        </h2>
       </v-col>
     </v-row>
     <v-row>
@@ -16,20 +17,25 @@
               <v-sheet height="100%">
                 <div style="padding:7px 75px 5px 75px;">
                   <v-row>
-                    <div v-html="item.html" style="margin:10px; font-size: 1.2rem; line-height: 1.5; font-weight: 300;">
+                    <div v-html="item.html" style="margin:10px; font-size: 1.1rem; line-height: 1.5; font-weight: 300;">
                     </div>
                   </v-row>
                   <v-row>&nbsp;</v-row>
-                  <div style="position: absolute; bottom: 150px;">
-                    <v-row>
-                      <div style="font-weight: 200;" v-html="item.source"></div>
-                    </v-row>
-                    <v-row>
-                      <div :style="`color:${item.color}`">{{ item.article }}</div>
-                    </v-row>
-                    <v-row style="font-weight: 200; font-style: italic;">
-                      <div>{{ item.type }}</div>
-                    </v-row>
+                  <div style="position: absolute; bottom: 150px; width: 100%; margin: 0px 20px 20px 20px;">
+                    <a v-for="r in item.references" :key="r">
+                      <v-row>&nbsp;</v-row>
+                      <v-row><hr style="width: 75%;"/></v-row>
+                      <v-row>
+                        <div style="font-weight: 200;" v-html="r.source"></div>
+                      </v-row>
+                      <v-row>
+                        <v-icon :style="`color:${r.color}; margin-right: 5px;`">mdi-open-in-new</v-icon>
+                          <div :style="`color:${r.color}`">{{ r.article }}</div>
+                      </v-row>
+                      <v-row style="font-weight: 200; font-style: italic;">
+                        <div>{{ r.type }}</div>
+                      </v-row>                      
+                    </a>
                   </div>
                 </div>
               </v-sheet>
@@ -314,7 +320,7 @@ export default {
               ranges: [
                 {
                   from: 21,
-                  to: 23
+                  to: 24
                 }
               ],
               references: [
@@ -470,11 +476,7 @@ export default {
             }
 
             if (i == j) {
-              data.source = item.annotations[j].source;
-              data.article = item.annotations[j].article;
-              data.type = item.annotations[j].type;
-              data.href = item.annotations[j].href;
-              data.color = item.annotations[j].color;
+              data.references = item.annotations[j].references;
             }
           }
 
@@ -487,10 +489,10 @@ export default {
       return res;
     },
     makeStyle(color) {
-      if(color == unselectedColor)
-      return `color:${unselectedColor}; background-color:${unselectedColor}0A; border-radius: 3px; border: 2px dotted ${unselectedColor}; padding: 0 3px`;
-    else
-      return `color:${color}; background-color:${color}0A; border-radius: 3px; border: 2px dotted ${color}; padding: 3px 5px;`;
+      if (color == unselectedColor)
+        return `color:${unselectedColor}; background-color:${unselectedColor}0A; border-radius: 3px; border: 2px dotted ${unselectedColor}; padding: 0 3px`;
+      else
+        return `color:${color}; background-color:${color}0A; border-radius: 3px; border: 2px dotted ${color}; padding: 3px 5px;`;
     },
     carouselStop() {
       this.cycle = false;
