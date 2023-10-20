@@ -1,81 +1,29 @@
 <template>
-  <div style="max-width: 120ch;">
-    <v-row>
-      <v-col>
-        <div>
-          <h1 class="text-3xl font-bold">
-            Ressourcen erklärt
-          </h1>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <div>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus deserunt illum ipsa reprehenderit voluptate
-          molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum
-          necessitatibus temporibus facere?
+  <v-row>
+    <v-col cols="2"></v-col>
+    <v-col>
+      <div>
+        <h1 class="text-3xl font-bold">
+          Ressourcen erklärt
+        </h1>
+      </div>
+    </v-col>
+  </v-row>
+  <v-row>
+    <v-col cols="2"></v-col>
+    <v-col>
+      <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus deserunt illum ipsa reprehenderit voluptate
+        molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum
+        necessitatibus temporibus facere?
 
-          <br />&nbsp;<br />
+        <br />&nbsp;<br />
 
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="6">
-        <v-card class="mx-auto">
-          <v-list style="margin-top:-20px">
-            <v-list-subheader>
-              <!-- Muss bleiben - sonst BUG -->
-            </v-list-subheader>
-            <v-list-item v-for="(x, i) in ressources" :key="x.value" style="margin:-20px 0px 0px 0px">
-              <v-list-subheader v-if="x.type === 'subheader'">
-                {{ x.title }}
-              </v-list-subheader>
-              <v-list-item v-else :value="x.value" style="margin:5px 0px 5px 0px" prepend-icon="mdi-arrow-right"
-                @click="load(i)">
-                <v-list-item-content>
-                  <v-list-item-title>
-                    {{ x.title }}
-                  </v-list-item-title>
-                  <v-list-item-subtitle>
-                    {{ x.subtitle }}
-                  </v-list-item-subtitle>
-                </v-list-item-content>
-                <!--
-              <div style="margin:3px -7px 0px -7px">
-                <v-chip class="ma-2" label text-color="white" variant="outlined" v-for="tag in x.tags" :key="tag">
-                  <v-icon start icon="mdi-tag-outline"></v-icon> {{ tag }}
-                </v-chip>
-              </div>
-            -->
-              </v-list-item>
-            </v-list-item>
-          </v-list>
-        </v-card>
-      </v-col>
-      <v-col cols="6">
-        <v-card>
-          <v-card-title>
-            <h2 class="text-2xl">
-              {{ currentItem.title }}
-            </h2>
-          </v-card-title>
-          <v-card-sub-title>
-            <h2 class="text-lg" style="margin-left:15px">
-              {{ currentItem.subtitle }}
-            </h2>
-          </v-card-sub-title>
-          <v-card-text>
-            <p style="font-size: 16px; line-height: 23px;" v-html="currentItem.html">
-            </p>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn text color="primary" :href="currentItem.link">Zur Ressource</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-    </v-row>
+      </div>
+    </v-col>
+    <v-col cols="2"></v-col>
+  </v-row>
+  <!--
     <v-row>
       <v-col>
         <table id="kreuztabelle" style=" margin-left: auto; margin-right: auto;">
@@ -115,7 +63,6 @@
           </thead>
           <tbody>
             <tr style="background-color: rgba(0,0,0,0.2);">
-              <!--<td rowspan="2" class="text-lg">Zeile 1</td>-->
               <td style="text-align: right;">KoMuX</td>
               <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
               <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
@@ -132,7 +79,7 @@
               <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
               <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
               <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><!--<v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon>--></td>
+              <td></td>
               <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
             </tr>
             <tr style="background-color: rgba(0,0,0,0.2);">
@@ -149,7 +96,7 @@
               <td style="text-align: right;">Wörterbuch Redeeinleiter</td>
               <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
               <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><!--<v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon>--></td>
+              <td></td>
               <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
               <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
               <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
@@ -181,7 +128,7 @@
               <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
               <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
               <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><!--<v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon>--></td>
+              <td></td>
               <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
               <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
             </tr>
@@ -249,14 +196,212 @@
         </table>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col>
-        <NuxtLink to="/guide/resources2">
-          <v-btn>Vorschlag Jan</v-btn>
-        </NuxtLink>
-      </v-col>
-    </v-row>
-  </div>
+  -->
+  <v-row>
+    <v-col cols="12">
+      <div class="container">
+        <v-card style="max-width: 300px; margin:10px">
+          <v-card-title>
+            <div style="position: relative; display: flex; justify-content: center;">
+              <img src="/dummy_300x160/dummy_01.png" alt="" style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;"/>
+              <div
+                style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%;">
+                <h1 class="text-xl font-bold">
+                  Explorative Datenbank
+                </h1>
+                <h3>Datenbanken zum Entdecken</h3>
+              </div>
+            </div>
+          </v-card-title>
+          <v-card-text>
+            <div>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus deserunt illum ipsa reprehenderit
+              voluptate
+              molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum
+              necessitatibus temporibus facere?
+            </div>
+            <ul>
+              <li>
+                <b>KoMuX</b><br />Durchsuche mehr als 50.000 Komposita
+              </li>
+              <li>
+                <b>Prepcon</b><sup>(explorativ)</sup><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora
+              </li>
+            </ul>
+          </v-card-text>
+        </v-card>
+
+        <v-card style="max-width: 350px; margin:10px">
+          <v-card-title>
+            <div style="position: relative; justify-content: center;">
+              <img src="/dummy_300x160/dummy_02.png" alt="" style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;"/>
+              <div
+                style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
+                <h1 class="text-xl font-bold">
+                  Deskriptiv Datenbank
+                </h1>
+                <h3>Datenbanken mit Beschreibungen</h3>
+              </div>
+            </div>
+          </v-card-title>
+          <v-card-text>
+            <div>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus deserunt illum ipsa reprehenderit
+              voluptate
+              molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum
+              necessitatibus temporibus facere?
+            </div>
+            <ul>
+              <li>
+                <b>MAP</b><br />Musterbank Argumentmarkierender Präpositionen
+              </li>
+              <li>
+                <b>Wörterbuch Redeeinleiter</b><br />Redeeinleiter finden und vergleichen
+              </li>
+            </ul>
+          </v-card-text>
+        </v-card>
+
+        <v-card style="max-width: 350px; margin:10px">
+          <v-card-title>
+            <div style="position: relative; justify-content: center;">
+              <img src="/dummy_300x160/dummy_03.png" alt="" style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;"/>
+              <div
+                style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
+                <h1 class="text-xl font-bold">
+                  Inventare und Sammlungen
+                </h1>
+                <h3>Verzeichnisse für die Forschung</h3>
+              </div>
+            </div>
+          </v-card-title>
+          <v-card-text>
+            <div>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus deserunt illum ipsa reprehenderit
+              voluptate
+              molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum
+              necessitatibus temporibus facere?
+            </div>
+            <ul>
+              <li>
+                <b>PhK-Liste</b><br />Durchsuche mehr als 50.000 Komposita
+              </li>
+              <li>
+                <b>SpruchList</b><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora
+              </li>
+              <li>
+                <b>Prepcon</b><sup>(temporal)</sup><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora
+              </li>
+              <li>
+                <b>DTWW</b><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora
+              </li>
+            </ul>
+          </v-card-text>
+        </v-card>
+        <v-card style="max-width: 350px; margin:10px">
+          <v-card-title>
+            <div style="position: relative; justify-content: center;">
+              <img src="/dummy_300x160/dummy_04.png" alt="" style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;"/>
+              <div
+                style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
+                <h1 class="text-xl font-bold">
+                  Onlie-Wörterbücher
+                </h1>
+                <h3>Verzeichnisse für die Forschung</h3>
+              </div>
+            </div>
+          </v-card-title>
+          <v-card-text>
+            <div>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus deserunt illum ipsa reprehenderit
+              voluptate
+              molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum
+              necessitatibus temporibus facere?
+            </div>
+            <ul>
+              <li>
+                <b>OWID Sprichwörterbuch</b><br />Durchsuche mehr als 50.000 Komposita
+              </li>
+              <li>
+                <b>OWID Kleines Wörterbuch der Verlaufsformen im Deutschen</b><br />Präpositionale Wortverbindungen in
+                unterschiedlichen Korpora
+              </li>
+              <li>
+                <b>OWID Feste Wortverbindungen</b><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora
+              </li>
+            </ul>
+          </v-card-text>
+        </v-card>
+        <v-card style="max-width: 350px; margin:10px">
+          <v-card-title>
+            <div style="position: relative; justify-content: center;">
+              <img src="/dummy_300x160/dummy_05.png" alt="" style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;"/>
+              <div
+                style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
+                <h1 class="text-xl font-bold">
+                  Präsentationsformate
+                </h1>
+                <h3>Korpuszentrierte und praxisnah</h3>
+              </div>
+            </div>
+          </v-card-title>
+          <v-card-text>
+            <div>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus deserunt illum ipsa reprehenderit
+              voluptate
+              molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum
+              necessitatibus temporibus facere?
+            </div>
+            <ul>
+              <li>
+                <b>OWID Sprichwörterbuch</b><br />Durchsuche mehr als 50.000 Komposita
+              </li>
+              <li>
+                <b>PREPCON (teporal)</b><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora
+              </li>
+              <li>
+                <b>PREPCON (explorativ)</b><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora
+              </li>
+            </ul>
+          </v-card-text>
+        </v-card>
+        <v-card style="max-width: 350px; margin:10px">
+          <v-card-title>
+            <div style="position: relative; justify-content: center;">
+              <img src="/dummy_300x160/dummy_06.png" alt="" style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;"/>
+              <div
+                style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
+                <h1 class="text-xl font-bold">
+                  Pilot- und Einzelstudien
+                </h1>
+                <h3>Verzeichnisse für die Forschung</h3>
+              </div>
+            </div>
+          </v-card-title>
+          <v-card-text>
+            <div>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus deserunt illum ipsa reprehenderit
+              voluptate
+              molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum
+              necessitatibus temporibus facere?
+            </div>
+            <ul>
+              <li>
+                <b>DRI online</b><br />Durchsuche mehr als 50.000 Komposita
+              </li>
+              <li>
+                <b>Verietäten Kontakt</b><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora
+              </li>
+              <li>
+                <b style="white-space: nowrap;">Probandenbefragungen Redewendungen</b><br />Präpositionale
+                Wortverbindungen in unterschiedlichen Korpora
+              </li>
+            </ul>
+          </v-card-text>
+        </v-card>
+      </div>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -264,58 +409,7 @@ export default {
   theme: { dark: false },
   data() {
     return {
-      ressources: [
-        { "title": "Explorative Datenbanken", type: "subheader", value: 1000 },
-        { "title": "KoMuX", value: 1100, tags: ["Datenbank", "Explorativ", "Komposita", "Häufigkeit"], subtitle: "Durchsuche mehr als 50.000 Komposita" },
-        { "title": "PREPCON (explorativ)", value: 1200, subtitle: "Präpositionale Wortverbindungen in unterschiedlichen Beschreibungstiefen" },
 
-        { "title": "Deskriptive Datenbanken", type: "subheader", value: 2000 },
-        { "title": "MAP", value: 2100, subtitle: "Musterbank Argumentmarkierender Präpositionen" },
-        { "title": "Wörterbuch Redeeinleiter", value: 2200, subtitle: "Musterbank Argumentmarkierender Präpositionen" },
-
-        { "title": "Inventare und Sammlungen", type: "subheader", value: 3000 },
-        { "title": "PhK-Liste", value: 3100, subtitle: "Musterbank unterschiedlichen Präpositionen" },
-        { "title": "SpruchList", value: 3200, subtitle: "Wortverbindungen Durchsuche Präpositionen" },
-        { "title": "PREPCON (teporal)", value: 3300, subtitle: "Musterbank Argumentmarkierender Präpositionen" },
-        { "title": "DTWW", value: 3400, subtitle: "Musterbank Beschreibungstiefen Präpositionen" },
-
-        { "title": "Online Wörterbücher", type: "subheader", value: 4000 },
-        { "title": "OWID Sprichwörterbuch", value: 4100, subtitle: "Musterbank unterschiedlichen Komposita" },
-        { "title": "OWID Kleines Wörterbuch der Verlaufsformen im Deutschen", value: 4200, subtitle: "Wortverbindungen unterschiedlichen Präpositionen" },
-        { "title": "OWID Feste Wortverbindungen", value: 4300, subtitle: "Musterbank Beschreibungstiefen Präpositionen" },
-
-        { "title": "Korpuszentrierte Präsentationsformate", type: "subheader", value: 5000 },
-        { "title": "OWID Sprichwörterbuch", value: 5100 },
-        { "title": "PREPCON (teporal)", value: 5200 },
-        { "title": "PREPCON (explorativ)", value: 5300 },
-
-        { "title": "Pilot- und Einzelstudien", type: "subheader", value: 6000 },
-        { "title": "DRI online", value: 6100 },
-        { "title": "Verietäten Kontakt", value: 6200 },
-        { "title": "Probandenbefragungen Redewendungen", value: 6300 }
-      ],
-
-      items: {
-        0: {
-          title: "KoMuX",
-          subtitle: "Durchsuche mehr als 50.000 Komposita",
-          html: "<img src=\"https://www.owid.de/plus/data/img/cowidplus.png\" alt=\"KoMuX Logo\" style=\"width:50%; margin-left: 10px; float: right;\"> Mit dieser vom Arbeitsbereich Wortbildungsmuster entwickelten Webanwendung kann man ein Inventar von über 50.000 nominalen Komposita gezielt nach abstrakten oder lexikalisch-teilspezifizierten Mustern durchsuchen. Kompositagruppen werden durch grammatische (Wortbildungstyp oder Wortart) oder lexikalische Eigenschaften (konkretes Lemma) der Erst- und Zweitglieder definiert. Visualisierungen unterstützen dabei, die Ergebnismenge näher zu analysieren.",
-          link: "https://www.owid.de/plus/komux/"
-        },
-        1: {
-          title: "PREPCON (explorativ)",
-          subtitle: "Präpositionale Wortverbindungen in unterschiedlichen Beschreibungstiefen",
-          html: "<strong>Inhalt:</strong> ca. 80.000 PNs des Deutschen (68 Präposition-Tabellen; 30.000 Nomen-Tabellen)<br/><strong>Nutzerfunktionalität:</strong> Abrufen von systematisierten Korpusdaten (<a>KWICs</a>, <a>Volltextstellen</a>, <a>KOOK-Profile</a>, <a>lexpan-Mustertabellen</a>) und narrativen Kommentaren; Navigieren durch Verlinkungen",
-          link: "http://uwv.ids-mannheim.de/prepcon/modul1/index.html"
-        }
-      },
-
-      currentItem: {
-        title: "KoMuX",
-        subtitle: "Durchsuche mehr als 50.000 Komposita",
-        html: "<img src=\"https://www.owid.de/plus/data/img/cowidplus.png\" alt=\"KoMuX Logo\" style=\"width:50%; margin-left: 10px; float: right;\"> Mit dieser vom Arbeitsbereich Wortbildungsmuster entwickelten Webanwendung kann man ein Inventar von über 50.000 nominalen Komposita gezielt nach abstrakten oder lexikalisch-teilspezifizierten Mustern durchsuchen. Kompositagruppen werden durch grammatische (Wortbildungstyp oder Wortart) oder lexikalische Eigenschaften (konkretes Lemma) der Erst- und Zweitglieder definiert. Visualisierungen unterstützen dabei, die Ergebnismenge näher zu analysieren.",
-        link: "https://www.owid.de/plus/komux/"
-      },
     }
   },
 
@@ -334,11 +428,26 @@ export default {
 
 }
 </script>
-<style scoped>a {
+<style scoped>
+a {
   text-decoration: underline;
 }
 
 td {
   text-align: center;
+}
+</style>
+<style scoped>
+.v-list-subheader {}
+</style>
+<style scoped>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  list-style: square;
+  margin: 10px 20px 10px 20px;
 }</style>
-<style scoped>.v-list-subheader {}</style>

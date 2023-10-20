@@ -1,6 +1,7 @@
 <template>
-  <div style="max-width: 80ch;">
+  <div>
     <v-row>
+      <v-col cols="1"></v-col>
       <v-col>
         <div>
           <h1 class="text-3xl font-bold">
@@ -10,245 +11,98 @@
       </v-col>
     </v-row>
     <v-row>
+      <v-col cols="1"></v-col>
       <v-col>
         <div>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus deserunt illum ipsa reprehenderit voluptate molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum necessitatibus temporibus facere.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus deserunt illum ipsa reprehenderit voluptate
+          molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum
+          necessitatibus temporibus facere.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus deserunt illum ipsa reprehenderit voluptate
+          molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum
+          necessitatibus temporibus facere.
         </div>
       </v-col>
+      <v-col cols="1"></v-col>
     </v-row>
     <v-row>
-      <v-col>
-        <div>
-          <p style="min-width: 860px;">Einleitung:</p>
-          <ol>
-            <li>Suchen im Korpus (Suchabfragen)<br />
-              <v-expansion-panels>
-                <v-expansion-panel title="Erklärung allgemein" elevation="0">
-                  <v-expansion-panel-text>
-                    Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
-                    (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
-                    sprachliche Einheiten überproportional häufig in der Umgebung des Suchobjekts vorkommen. Dieser „Wort-Magnetismus“
-                    spiegelt sich in Partnerwort-Profilen, deren Auswertung mittlerweile zu den wichtigsten Werkzeugen in
-                    der Wörterbucharbeit gehören.<br/>&nbsp;<br/>
-                    DENN: Die Partnerwort-Cluster lenken den Blick u.a. auf typische Bedeutungen oder Bewertungen, die
-                    Sprecher mit einem Wort oder einer Wortgruppe in bestimmten wiederkehrenden Situationen, Diskursen,
-                    Domänen usw. verbinden. Solche Profile enthalten auch stark verfestigte Verbindungen, wie
-                    Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
-                  </v-expansion-panel-text>
-                </v-expansion-panel>
-                <v-expansion-panel title="nach Ressourcen spezifiziert" elevation="0">
-                  <v-expansion-panel-text>
-                    Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
-                    (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
-                    sprachliche Einheiten überproportional häufig in der Umgebung des Suchobjekts vorkommen. Dieser „Wort-Magnetismus“
-                    spiegelt sich in Partnerwort-Profilen, deren Auswertung mittlerweile zu den wichtigsten Werkzeugen in
-                    der Wörterbucharbeit gehören.<br/>&nbsp;<br/>
-                    DENN: Die Partnerwort-Cluster lenken den Blick u.a. auf typische Bedeutungen oder Bewertungen, die
-                    Sprecher mit einem Wort oder einer Wortgruppe in bestimmten wiederkehrenden Situationen, Diskursen,
-                    Domänen usw. verbinden. Solche Profile enthalten auch stark verfestigte Verbindungen, wie
-                    Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
-                  </v-expansion-panel-text>
-                </v-expansion-panel>
-              </v-expansion-panels>
-            </li>
-            <li>Frequenzen<br />
-              <v-expansion-panels>
-                <v-expansion-panel title="Erklärung allgemein" elevation="0">
-                  <v-expansion-panel-text>
-                    Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
-                    (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
-                    sprachliche Einheiten überproportional häufig in der Umgebung des Suchobjekts vorkommen. Dieser „Wort-Magnetismus“
-                    spiegelt sich in Partnerwort-Profilen, deren Auswertung mittlerweile zu den wichtigsten Werkzeugen in
-                    der Wörterbucharbeit gehören.<br/>&nbsp;<br/>
-                    DENN: Die Partnerwort-Cluster lenken den Blick u.a. auf typische Bedeutungen oder Bewertungen, die
-                    Sprecher mit einem Wort oder einer Wortgruppe in bestimmten wiederkehrenden Situationen, Diskursen,
-                    Domänen usw. verbinden. Solche Profile enthalten auch stark verfestigte Verbindungen, wie
-                    Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
-                  </v-expansion-panel-text>
-                </v-expansion-panel>
-                <v-expansion-panel title="nach Ressourcen spezifiziert" elevation="0">
-                  <v-expansion-panel-text>
-                    Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
-                    (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
-                    sprachliche Einheiten überproportional häufig in der Umgebung des Suchobjekts vorkommen. Dieser „Wort-Magnetismus“
-                    spiegelt sich in Partnerwort-Profilen, deren Auswertung mittlerweile zu den wichtigsten Werkzeugen in
-                    der Wörterbucharbeit gehören.<br/>&nbsp;<br/>
-                    DENN: Die Partnerwort-Cluster lenken den Blick u.a. auf typische Bedeutungen oder Bewertungen, die
-                    Sprecher mit einem Wort oder einer Wortgruppe in bestimmten wiederkehrenden Situationen, Diskursen,
-                    Domänen usw. verbinden. Solche Profile enthalten auch stark verfestigte Verbindungen, wie
-                    Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
-                  </v-expansion-panel-text>
-                </v-expansion-panel>
-              </v-expansion-panels></li>
-            <li>KWIC und Volltext<br />
-              <v-expansion-panels>
-                <v-expansion-panel title="Erklärung allgemein" elevation="0">
-                  <v-expansion-panel-text>
-                    Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
-                    (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
-                    sprachliche Einheiten überproportional häufig in der Umgebung des Suchobjekts vorkommen. Dieser „Wort-Magnetismus“
-                    spiegelt sich in Partnerwort-Profilen, deren Auswertung mittlerweile zu den wichtigsten Werkzeugen in
-                    der Wörterbucharbeit gehören.<br/>&nbsp;<br/>
-                    DENN: Die Partnerwort-Cluster lenken den Blick u.a. auf typische Bedeutungen oder Bewertungen, die
-                    Sprecher mit einem Wort oder einer Wortgruppe in bestimmten wiederkehrenden Situationen, Diskursen,
-                    Domänen usw. verbinden. Solche Profile enthalten auch stark verfestigte Verbindungen, wie
-                    Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
-                  </v-expansion-panel-text>
-                </v-expansion-panel>
-                <v-expansion-panel title="nach Ressourcen spezifiziert" elevation="0">
-                  <v-expansion-panel-text>
-                    Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
-                    (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
-                    sprachliche Einheiten überproportional häufig in der Umgebung des Suchobjekts vorkommen. Dieser „Wort-Magnetismus“
-                    spiegelt sich in Partnerwort-Profilen, deren Auswertung mittlerweile zu den wichtigsten Werkzeugen in
-                    der Wörterbucharbeit gehören.<br/>&nbsp;<br/>
-                    DENN: Die Partnerwort-Cluster lenken den Blick u.a. auf typische Bedeutungen oder Bewertungen, die
-                    Sprecher mit einem Wort oder einer Wortgruppe in bestimmten wiederkehrenden Situationen, Diskursen,
-                    Domänen usw. verbinden. Solche Profile enthalten auch stark verfestigte Verbindungen, wie
-                    Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
-                  </v-expansion-panel-text>
-                </v-expansion-panel>
-              </v-expansion-panels></li>
-            <li>Typische Partnerwörter (Kookkurrenzanalyse)<br />
-              <v-expansion-panels>
-                <v-expansion-panel title="Erklärung allgemein" elevation="0">
-                  <v-expansion-panel-text>
-                    Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
-                    (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
-                    sprachliche Einheiten überproportional häufig in der Umgebung des Suchobjekts vorkommen. Dieser „Wort-Magnetismus“
-                    spiegelt sich in Partnerwort-Profilen, deren Auswertung mittlerweile zu den wichtigsten Werkzeugen in
-                    der Wörterbucharbeit gehören.<br/>&nbsp;<br/>
-                    DENN: Die Partnerwort-Cluster lenken den Blick u.a. auf typische Bedeutungen oder Bewertungen, die
-                    Sprecher mit einem Wort oder einer Wortgruppe in bestimmten wiederkehrenden Situationen, Diskursen,
-                    Domänen usw. verbinden. Solche Profile enthalten auch stark verfestigte Verbindungen, wie
-                    Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
-                  </v-expansion-panel-text>
-                </v-expansion-panel>
-                <v-expansion-panel title="nach Ressourcen spezifiziert" elevation="0">
-                  <v-expansion-panel-text>
-                    Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
-                    (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
-                    sprachliche Einheiten überproportional häufig in der Umgebung des Suchobjekts vorkommen. Dieser „Wort-Magnetismus“
-                    spiegelt sich in Partnerwort-Profilen, deren Auswertung mittlerweile zu den wichtigsten Werkzeugen in
-                    der Wörterbucharbeit gehören.<br/>&nbsp;<br/>
-                    DENN: Die Partnerwort-Cluster lenken den Blick u.a. auf typische Bedeutungen oder Bewertungen, die
-                    Sprecher mit einem Wort oder einer Wortgruppe in bestimmten wiederkehrenden Situationen, Diskursen,
-                    Domänen usw. verbinden. Solche Profile enthalten auch stark verfestigte Verbindungen, wie
-                    Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
-                  </v-expansion-panel-text>
-                </v-expansion-panel>
-              </v-expansion-panels></li>
-            <li>Mustersuche (Slot-Filler-Analyse)<br />
-              <v-expansion-panels>
-                <v-expansion-panel title="Erklärung allgemein" elevation="0">
-                  <v-expansion-panel-text>
-                    Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
-                    (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
-                    sprachliche Einheiten überproportional häufig in der Umgebung des Suchobjekts vorkommen. Dieser „Wort-Magnetismus“
-                    spiegelt sich in Partnerwort-Profilen, deren Auswertung mittlerweile zu den wichtigsten Werkzeugen in
-                    der Wörterbucharbeit gehören.<br/>&nbsp;<br/>
-                    DENN: Die Partnerwort-Cluster lenken den Blick u.a. auf typische Bedeutungen oder Bewertungen, die
-                    Sprecher mit einem Wort oder einer Wortgruppe in bestimmten wiederkehrenden Situationen, Diskursen,
-                    Domänen usw. verbinden. Solche Profile enthalten auch stark verfestigte Verbindungen, wie
-                    Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
-                  </v-expansion-panel-text>
-                </v-expansion-panel>
-                <v-expansion-panel title="nach Ressourcen spezifiziert" elevation="0">
-                  <v-expansion-panel-text>
-                    Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
-                    (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
-                    sprachliche Einheiten überproportional häufig in der Umgebung des Suchobjekts vorkommen. Dieser „Wort-Magnetismus“
-                    spiegelt sich in Partnerwort-Profilen, deren Auswertung mittlerweile zu den wichtigsten Werkzeugen in
-                    der Wörterbucharbeit gehören.<br/>&nbsp;<br/>
-                    DENN: Die Partnerwort-Cluster lenken den Blick u.a. auf typische Bedeutungen oder Bewertungen, die
-                    Sprecher mit einem Wort oder einer Wortgruppe in bestimmten wiederkehrenden Situationen, Diskursen,
-                    Domänen usw. verbinden. Solche Profile enthalten auch stark verfestigte Verbindungen, wie
-                    Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
-                  </v-expansion-panel-text>
-                </v-expansion-panel>
-              </v-expansion-panels></li>
-            <li>Belegauswahl<br />
-              <v-expansion-panels>
-                <v-expansion-panel title="Erklärung allgemein" elevation="0">
-                  <v-expansion-panel-text>
-                    Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
-                    (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
-                    sprachliche Einheiten überproportional häufig in der Umgebung des Suchobjekts vorkommen. Dieser „Wort-Magnetismus“
-                    spiegelt sich in Partnerwort-Profilen, deren Auswertung mittlerweile zu den wichtigsten Werkzeugen in
-                    der Wörterbucharbeit gehören.<br/>&nbsp;<br/>
-                    DENN: Die Partnerwort-Cluster lenken den Blick u.a. auf typische Bedeutungen oder Bewertungen, die
-                    Sprecher mit einem Wort oder einer Wortgruppe in bestimmten wiederkehrenden Situationen, Diskursen,
-                    Domänen usw. verbinden. Solche Profile enthalten auch stark verfestigte Verbindungen, wie
-                    Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
-                  </v-expansion-panel-text>
-                </v-expansion-panel>
-                <v-expansion-panel title="nach Ressourcen spezifiziert" elevation="0">
-                  <v-expansion-panel-text>
-                    Mithilfe statistischer Berechnungen (sog. <Reference text="Kookkurrenzanalyse"/>) lassen sich besondere Anziehungskräfte
-                    (Cluster) zwischen Wörtern und Wortgruppen im Korpus ermitteln. Das bedeutet, dass bestimmte
-                    sprachliche Einheiten überproportional häufig in der Umgebung des Suchobjekts vorkommen. Dieser „Wort-Magnetismus“
-                    spiegelt sich in Partnerwort-Profilen, deren Auswertung mittlerweile zu den wichtigsten Werkzeugen in
-                    der Wörterbucharbeit gehören.<br/>&nbsp;<br/>
-                    DENN: Die Partnerwort-Cluster lenken den Blick u.a. auf typische Bedeutungen oder Bewertungen, die
-                    Sprecher mit einem Wort oder einer Wortgruppe in bestimmten wiederkehrenden Situationen, Diskursen,
-                    Domänen usw. verbinden. Solche Profile enthalten auch stark verfestigte Verbindungen, wie
-                    Kollokationen oder Redewendungen, die zentrale sprachliche Bausteine (z.B. beim Fremdsprachenerwerb) darstellen.
-                  </v-expansion-panel-text>
-                </v-expansion-panel>
-              </v-expansion-panels></li>
-          </ol>
+      <v-col cols="1"></v-col>
+      <v-col cols="10">
+        <div class="container">
+          <NuxtLink v-for="item in items" :key="item" :to="'/guide/info/' + item.page" style="margin-right: 20px;">
+            <v-card class="mx-auto" max-width="250" style="margin-bottom: 20px; padding-bottom: 10px;">
+              <div style="max-height: 1px;">
+                <img :src="'/guide/methods/' + item.image" :alt="item.title"
+                  style="object-fit: cover; object-position: center center;">
+              </div>
+
+              <v-card-title style="margin-top: 75px;">
+                {{ item.title }}
+              </v-card-title>
+
+              <v-card-subtitle>
+                {{ item.subtitle }}
+              </v-card-subtitle>
+
+            </v-card>
+          </NuxtLink>
         </div>
       </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <NuxtLink to="/guide/methods2">
-          <v-btn>Vorschlag Jan</v-btn>
-        </NuxtLink>
-      </v-col>
+      <v-col cols="1"></v-col>
     </v-row>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      items: [
+        {
+          image: "korpus.jpg",
+          title: "Was ist ein Korpus?",
+          subtitle: "Definition und Verwendung (Suchabfragen)",
+          page: "korpus"
+        },
+        {
+          image: "frequenz.jpg",
+          title: "Frequenzen",
+          subtitle: "Analysieren, auswerten und vergleichen von Frequenzen",
+          page: "korpus"
+        },
+        {
+          image: "kwic.jpg",
+          title: "KWIC und Volltext",
+          subtitle: "Wie man mit Belegen im Korpus umgeht",
+          page: "korpus"
+        },
+        {
+          image: "kookkurrenz.jpg",
+          title: "Kookkurrenzen",
+          subtitle: "Typische Partnerwörter und ihre Verwendung",
+          page: "korpus"
+        },
+        {
+          image: "muster.jpg",
+          title: "Mustersuche",
+          subtitle: "Slot-Filler-Analysen praxisnah erklärt",
+          page: "korpus"
+        },
+        {
+          image: "belege.jpg",
+          title: "Belege",
+          subtitle: "Wonach wählt man Belege aus?",
+          page: "korpus"
+        },
+      ]
+    }
+  },
 }
 </script>
 
 <style scoped>
-a {
-  text-decoration: underline;
-}
-</style>
-
-<style scoped>
-ul {
-  list-style-type: disc;
-  list-style-position: inside;
-  margin-left: 25px;
-}
-
-ol {
-  list-style-type: decimal;
-  list-style-position: inside;
-  margin-left: 25px;
-}
-
-ul ul,
-ol ul {
-  list-style-type: circle;
-  list-style-position: inside;
-  margin-left: 15px;
-}
-
-ol ol,
-ul ol {
-  list-style-type: lower-latin;
-  list-style-position: inside;
-  margin-left: 15px;
-}
-
-li {
-  margin: 10px 0;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
 }
 </style>

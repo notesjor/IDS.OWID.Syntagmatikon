@@ -115,8 +115,15 @@
               {{ r.tags }}
             </div>
           </v-card-text>
-        </v-card>    
+        </v-card>
       </div>
+    </v-col>
+  </v-row>
+  <v-row>
+    <v-col>
+      <NuxtLink to="/search2.2">
+        <v-btn>Vorschlag Jan</v-btn>
+      </NuxtLink>
     </v-col>
   </v-row>
 </template>
