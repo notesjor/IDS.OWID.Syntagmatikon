@@ -222,10 +222,10 @@
             </div>
             <ul>
               <li>
-                <b>KoMuX</b><br />Durchsuche mehr als 50.000 Komposita
+                <a href="https://www.owid.de/plus/komux/"><b>KoMuX</b><br />Durchsuche mehr als 50.000 Komposita</a>
               </li>
               <li>
-                <b>Prepcon</b><sup>(explorativ)</sup><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora
+                <a href="http://uwv.ids-mannheim.de/prepcon/modul1/index.html"><b>Prepcon</b><sup>(explorativ)</sup><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora</a>
               </li>
             </ul>
           </v-card-text>
@@ -430,7 +430,7 @@ export default {
 </script>
 <style scoped>
 a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 td {

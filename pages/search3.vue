@@ -18,8 +18,111 @@
     <v-col cols="2"></v-col>
   </v-row>
   <v-row>
-    <v-col>
-      <div v-for="x in items" :key="x.id" style="max-width: 450px; margin-left: auto; margin-right: auto;">
+    <v-col cols="1"></v-col>
+    <v-col cols="4">
+      <v-card class="mx-auto">
+        <v-list style="margin-top:-20px">
+          <v-list-item style="margin:-20px 0px 0px 0px;">
+            <v-list-subheader>
+              Ressourcen
+            </v-list-subheader>
+            <v-expansion-panels style="padding: 5px;" multiple v-model="panels_resources">
+              <v-expansion-panel title="Ressourcen-Typus">
+                <v-expansion-panel-text>
+                  <v-checkbox density="compact" hide-details="true" label="Datenbank"></v-checkbox>
+                  <v-checkbox density="compact" hide-details="true" label="Inventar"></v-checkbox>
+                  <v-checkbox density="compact" hide-details="true" label="Sammlung"></v-checkbox>
+                  <v-checkbox density="compact" hide-details="true" label="Wörterbuch"></v-checkbox>
+                  <v-checkbox density="compact" hide-details="true" label="Präsentationsformat"></v-checkbox>
+                  <v-checkbox density="compact" hide-details="true" label="Pilot-/Einzelstudie"></v-checkbox>
+                </v-expansion-panel-text>
+              </v-expansion-panel>
+              <v-expansion-panel title="Ressourcen-Subtypus">
+                <v-expansion-panel-text>
+                  <v-checkbox density="compact" hide-details="true" label="Deskriptiv"></v-checkbox>
+                  <v-checkbox density="compact" hide-details="true" label="Explorativ"></v-checkbox>
+                </v-expansion-panel-text>
+              </v-expansion-panel>
+            </v-expansion-panels>
+          </v-list-item>
+          <v-list-item style="margin:-20px 0px 0px 0px;">
+            <v-list-subheader>
+              Artikel/Datenpunkt
+            </v-list-subheader>
+            <v-expansion-panels style="padding: 5px;" multiple>
+              <v-expansion-panel title="Klassifikation">
+                <v-expansion-panel-text>
+                  <v-checkbox density="compact" hide-details="true" label="Datenpunkt"></v-checkbox>
+                  <v-checkbox density="compact" hide-details="true" label="Wörterbuchartikel"></v-checkbox>
+                  <v-checkbox density="compact" hide-details="true" label="Kurzbeschreibung"></v-checkbox>
+                  <v-checkbox density="compact" hide-details="true" label="Analyse"></v-checkbox>
+                  <v-checkbox density="compact" hide-details="true" label="Umfrage"></v-checkbox>
+                  <v-checkbox density="compact" hide-details="true" label="Übersetzung"></v-checkbox>
+                </v-expansion-panel-text>
+              </v-expansion-panel>
+              <v-expansion-panel title="Anzahl an Token">
+                <v-expansion-panel-text>
+                  <v-slider v-model="slider2"></v-slider>
+                </v-expansion-panel-text>
+              </v-expansion-panel>
+              <v-expansion-panel title="Umfang">
+                <v-expansion-panel-text>
+                  <v-range-slider v-model="slider1" strict></v-range-slider>
+                </v-expansion-panel-text>
+              </v-expansion-panel>
+            </v-expansion-panels>
+          </v-list-item>
+          <v-list-item style="margin:-20px 0px 0px 0px;">
+            <v-list-subheader>
+              Lorem Ipsum
+            </v-list-subheader>
+            <v-expansion-panels style="padding: 5px;" multiple>
+              <v-expansion-panel title="Dolore sit amet">
+                <v-expansion-panel-text>
+                  <v-checkbox density="compact" hide-details="true" label="Datenbank"></v-checkbox>
+                  <v-checkbox density="compact" hide-details="true" label="Inventar"></v-checkbox>
+                  <v-checkbox density="compact" hide-details="true" label="Sammlung"></v-checkbox>
+                  <v-checkbox density="compact" hide-details="true" label="Wörterbuch"></v-checkbox>
+                  <v-checkbox density="compact" hide-details="true" label="Präsentationsformat"></v-checkbox>
+                  <v-checkbox density="compact" hide-details="true" label="Pilot-/Einzelstudie"></v-checkbox>
+                </v-expansion-panel-text>
+              </v-expansion-panel>
+              <v-expansion-panel title="Typik">
+                <v-expansion-panel-text>
+                  <v-checkbox density="compact" hide-details="true" label="Deskriptiv"></v-checkbox>
+                  <v-checkbox density="compact" hide-details="true" label="Explorativ"></v-checkbox>
+                </v-expansion-panel-text>
+              </v-expansion-panel>
+            </v-expansion-panels>
+          </v-list-item>
+        </v-list>
+      </v-card>
+    </v-col>
+    <v-col cols="6">
+      <!--
+      <div v-for="r in ressources" :key="r">
+        <v-card class="mx-auto" style="margin-top: 10px">
+          <v-card-title>
+            <div class="text-xl font-bold">
+              <v-icon style="transform: rotate(30deg);">mdi-square-outline</v-icon>
+              {{ r.title }}
+            </div>
+            <div class="text-sm">
+              {{ r.subtitle }}
+            </div>
+          </v-card-title>
+          <v-card-text>
+            <div class="text-sm">
+              {{ r.tags }}
+            </div>
+          </v-card-text>
+        </v-card>
+      </div>
+    -->
+      <div v-if="items == null">
+        <v-alert text="Suchen Sie zuerst nach einem Eintrag..." type="info" variant="outlined"></v-alert>
+      </div>
+      <div v-else v-for="x in items" :key="x.id" style="max-width: 450px; margin-left: auto; margin-right: auto;">
         <a :href="x.url" target="_blank">
           <v-card style="margin-bottom: 10px;">
             <v-card-title>
@@ -44,23 +147,54 @@ export default {
   theme: { dark: false },
   data() {
     return {
-      query: '',
-      items: [],
+      query: "",
+      items: null,
 
-      names: {
-        "komux": "KoMuX",
-        "sprwb": "Sprichwörterbuch",
-        "verla": "Verlaufsformen",
-        "prexp": "Prepcon explorativ",
-        "preko": "Prepcon kontrastiv",
-        "preti": "Prepcon temporal (Inventar)",
-        "pretk": "Prepcon temporal (Kurzartikel)",
-      }
+      panels_resources: [0],
+
+      slider1: [20, 40],
+      slider2: 50,
+
+      ressources: [
+        //{ "title": "Explorative Datenbanken", type: "subheader", value: 1000 },
+        { "title": "KoMuX", code: "komux", value: 1100, subtitle: "Durchsuche mehr als 50.000 Komposita" },
+        { "title": "PREPCON (explorativ)", code: "prexp", value: 1200, subtitle: "Präpositionale Wortverbindungen in unterschiedlichen Beschreibungstiefen" },
+
+        //{ "title": "Deskriptive Datenbanken", type: "subheader", value: 2000 },
+        { "title": "MAP", code: "map", value: 2100, subtitle: "Musterbank Argumentmarkierender Präpositionen" },
+        { "title": "Wörterbuch Redeeinleiter", value: 2200, subtitle: "Musterbank Argumentmarkierender Präpositionen" },
+
+        //{ "title": "Inventare und Sammlungen", type: "subheader", value: 3000 },
+        { "title": "PhK-Liste", value: 3100, subtitle: "Musterbank unterschiedlichen Präpositionen" },
+        { "title": "SpruchList", value: 3200, subtitle: "Wortverbindungen Durchsuche Präpositionen" },
+        { "title": "PREPCON (teporal)", code: "pretk", value: 3300, subtitle: "Musterbank Argumentmarkierender Präpositionen" },
+        { "title": "DTWW", value: 3400, subtitle: "Musterbank Beschreibungstiefen Präpositionen" },
+
+        //{ "title": "Online Wörterbücher", type: "subheader", value: 4000 },
+        { "title": "OWID Sprichwörterbuch", code: "sprwb", value: 4100, subtitle: "Musterbank unterschiedlichen Komposita" },
+        { "title": "OWID Kleines Wörterbuch der Verlaufsformen im Deutschen", code: "verla", value: 4200, subtitle: "Wortverbindungen unterschiedlichen Präpositionen" },
+        { "title": "OWID Feste Wortverbindungen", value: 4300, subtitle: "Musterbank Beschreibungstiefen Präpositionen" },
+
+        //{ "title": "Korpuszentrierte Präsentationsformate", type: "subheader", value: 5000 },
+        { "title": "OWID Sprichwörterbuch", value: 5100 },
+        { "title": "PREPCON (teporal)", code: "preti", value: 5200 },
+        { "title": "PREPCON (explorativ)", value: 5300 },
+
+        //{ "title": "Pilot- und Einzelstudien", type: "subheader", value: 6000 },
+        { "title": "DRI online", value: 6100 },
+        { "title": "Verietäten Kontakt", value: 6200 },
+        { "title": "Probandenbefragungen Redewendungen", value: 6300 }
+      ]
     }
   },
-  methods:{
-    getName: function(dic){
-      return dic in this.names ? this.names[dic] : dic;
+  methods: {
+    getName: function (dic) {
+      var self = this;
+      var res = self.ressources.find(x => x.code == dic);
+      if (res) {
+        return res.title;
+      }
+      return dic;
     }
   },
   watch: {
@@ -84,8 +218,12 @@ export default {
       };
 
       fetch("http://lexik08.ids-mannheim.de:7700/indexes/syntagmatikon/search", requestOptions)
-        .then(response => response.json())
-        .then(result => self.items = result.hits)
+        .then(response => {
+          return response.json();
+        })
+        .then(result => {
+          self.items = result.hits;
+        })
         .catch(error => console.log('error', error));
     }
   }
