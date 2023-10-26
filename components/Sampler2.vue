@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div  style="border:1px black solid; border-radius: 10px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
     <v-row>
       <v-col>
         <h1 class="text-xl">Interaktive-Beispiele</h1>
@@ -10,14 +10,14 @@
     </v-row>
     <v-row>
       <v-col>
-        <div @mouseenter="carouselStop" @mouseleave="carouselStart">
+        <div @mouseenter="carouselStop" @mouseleave="carouselStart" style="border: 1px white solid; border-radius: 10px; padding: 5px; background-color: white;">
           <v-carousel hide-delimiter-background hide-delimiters continuous ref="carousel" v-model="tab" :cycle="cycle"
             class="notransition">
             <v-carousel-item v-for="(item, i) in generatePages()" :key="i" eager>
               <v-sheet height="100%">
                 <div style="padding:7px 75px 5px 75px;">
                   <v-row>
-                    <div v-html="item.html" style="margin:10px; font-size: 1.1rem; line-height: 1.5; font-weight: 300;">
+                    <div v-html="item.html" style="margin:10px -50px 0px -50px; font-size: 1.1rem; line-height: 1.5; font-weight: 300;">
                     </div>
                   </v-row>
                   <v-row>&nbsp;</v-row>
@@ -291,7 +291,7 @@ export default {
                   article: 'sagen',
                   type: 'Redeeinleiter',
                   href: 'https://www.owid.de/',
-                  color: '#0d65c2'
+                  color: '#c5049b'
                 }
               ]
             },
@@ -329,7 +329,7 @@ export default {
                   article: 'aus persönlichen Gründen',
                   type: 'Wortfeld',
                   href: 'https://www.owid.de/artikel/309167',
-                  color: '#0d65c2'
+                  color: '#c5049b'
                 }
               ]
             },
@@ -363,14 +363,14 @@ export default {
                   article: 'am Montagabend',
                   type: 'Sprachgebrauchsmuster',
                   href: 'https://www.owid.de/artikel/309167',
-                  color: '#0d65c2'
+                  color: '#c5049b'
                 },
                 {
                   source: 'PREPCON <sup>explorativ</sup>',
                   article: 'am Montagabend',
                   type: 'Sprachgebrauchsmuster',
                   href: 'https://www.owid.de/artikel/309167',
-                  color: '#0d65c2'
+                  color: '#c5049b'
                 }
               ]
             },
@@ -467,7 +467,7 @@ export default {
               var t = range.to - 1;
 
               if (i == j) {
-                tokens[f] = `<anno_${j} class="anno" style="${this.makeStyle(references[0].color)}">${tokens[f]}`;
+                tokens[f] = `<anno_${j} class="anno" id="${baseIndex + j}" style="${this.makeStyle(references[0].color)}">${tokens[f]}`;
                 tokens[t] = `${tokens[t]}</anno_${j}>`;
               } else {
                 tokens[f] = `<anno_${j} class="anno" id="${baseIndex + j}" style="${this.makeStyle(unselectedColor)}">${tokens[f]}`;
