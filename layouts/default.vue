@@ -15,8 +15,8 @@
 
       <div class="inline" style="grid-area: right;">
         <a :href="leftIconHref" target="_blank">
-          <img alt="Logo" src="/logo_left.svg"
-            style="margin-left: auto; max-height:40px; margin-right:20px; margin-top:5px" />
+          <img alt="Logo" src="/ids-logo.svg"
+            style="margin-left: auto; max-height:45px; margin-right:10px; margin-top:5px" />
         </a>
       </div>
     </div>
@@ -101,6 +101,7 @@
     <div
       style="z-index: 100; position: absolute; bottom: 0; width: 100%; max-height:64px; background-color: black; padding-left:25px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right';">
       <div style="color:white; grid-area: left; margin-top: 20px; font-size: 12px;" v-if="!useMobileView">
+        <img alt="Logo" src="/logo_left.svg" style="max-height:35px; margin-top: -15px;" float="left" />
         <div style="display:inline-block">
           {{ new Date().getFullYear() }} — <strong>{{ appName }}</strong>
         </div>

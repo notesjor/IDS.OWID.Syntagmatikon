@@ -4,7 +4,7 @@
       <v-col>
         <div>
           <h1 class="text-3xl font-bold">
-            Projekt-Startseite
+            Syntagmatikon
           </h1>
         </div>
       </v-col>
