@@ -554,5 +554,10 @@ export default {
   animation: pulsate 2s infinite;
 }
 
+.v-window__controls > button {
+  position: relative;
+  top: -55px;
+}
+
 </style>
 
