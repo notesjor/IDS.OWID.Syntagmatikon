@@ -1,5 +1,5 @@
 <template>
-  <div style="border:1px black solid; border-radius: 10px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
+  <div style="border:1px black solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
     <v-row>
       <v-col>
         <h1 class="text-xl">Interaktive-Beispiele</h1>
@@ -12,7 +12,7 @@
     <v-row>
       <v-col>
         <div @mouseenter="carouselStop" @mouseleave="carouselStart"
-          style="border: 1px white solid; border-radius: 10px; padding: 5px; background-color: white;">
+          style="border: 1px white solid; border-radius: 5px; padding: 5px; background-color: white;">
           <v-carousel hide-delimiter-background hide-delimiters continuous ref="carousel" v-model="tab" :cycle="cycle"
             class="notransition">
             <v-carousel-item v-for="(item, i) in generatePages()" :key="i" eager>

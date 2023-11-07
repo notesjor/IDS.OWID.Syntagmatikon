@@ -23,191 +23,17 @@
     </v-col>
     <v-col cols="2"></v-col>
   </v-row>
-  <!--
-    <v-row>
-      <v-col>
-        <table id="kreuztabelle" style=" margin-left: auto; margin-right: auto;">
-          <thead>
-            <tr>
-              <th rowspan="2"></th>
-              <th colspan="2" class="text-xl font-extralight"
-                style="text-align:center; background-color: rgba(0,0,0,0.05);">Datenbank</th>
-              <th colspan="3" class="text-xl font-extralight"
-                style="text-align:center; background-color: rgba(0,0,0,0.10);">Nachschlagen</th>
-              <th colspan="2" class="text-xl font-extralight"
-                style="text-align:center; background-color: rgba(0,0,0,0.15);">Analysen</th>
-            </tr>
-            <tr>
-              <th class="text-lg font-light" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.05);">
-                <span>Explorativ</span>
-              </th>
-              <th class="text-lg font-light" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.05);">
-                <span>Deskriptiv</span>
-              </th>
-              <th class="text-lg font-light" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.10);">
-                <span>Inventar</span>
-              </th>
-              <th class="text-lg font-light" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.10);">
-                <span>Sammlung</span>
-              </th>
-              <th class="text-lg font-light" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.10);">
-                <span>Wörterbuch</span>
-              </th>
-              <th class="text-lg font-light" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.15);">
-                <span>Korpusanalyse</span>
-              </th>
-              <th class="text-lg font-light" style="padding:0px 10px 0px 10px; background-color: rgba(0,0,0,0.15);">
-                <span>Pilot-/Einzelstudie</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="background-color: rgba(0,0,0,0.2);">
-              <td style="text-align: right;">KoMuX</td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-            </tr>
-            <tr>
-              <td style="text-align: right;">Prepcon <sup>(explorativ)</sup></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-            </tr>
-            <tr style="background-color: rgba(0,0,0,0.2);">
-              <td style="text-align: right;">MAP</td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-            </tr>
-            <tr>
-              <td style="text-align: right;">Wörterbuch Redeeinleiter</td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-            </tr>
-            <tr style="background-color: rgba(0,0,0,0.2);">
-              <td style="text-align: right;">PhK-Liste</td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-            </tr>
-            <tr>
-              <td style="text-align: right;">Prepcon <sup>(explorativ)</sup></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-            </tr>
-            <tr style="background-color: rgba(0,0,0,0.2);">
-              <td style="text-align: right;">MAP</td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-            </tr>
-            <tr>
-              <td style="text-align: right;">Wörterbuch Redeeinleiter</td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-            </tr>
-            <tr style="background-color: rgba(0,0,0,0.2);">
-              <td style="text-align: right;">PhK-Liste</td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-            </tr>
-            <tr>
-              <td style="text-align: right;">Prepcon <sup>(explorativ)</sup></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-            </tr>
-            <tr style="background-color: rgba(0,0,0,0.2);">
-              <td style="text-align: right;">MAP</td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-            </tr>
-            <tr>
-              <td style="text-align: right;">Wörterbuch Redeeinleiter</td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-            </tr>
-            <tr style="background-color: rgba(0,0,0,0.2);">
-              <td style="text-align: right;">PhK-Liste</td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(13, 101, 194);">mdi-circle-double</v-icon></td>
-              <td><v-icon style="color:rgb(197, 4, 155);">mdi-close-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-              <td><v-icon style="color:rgb(0, 135, 2);">mdi-check-circle-outline</v-icon></td>
-            </tr>
-          </tbody>
-        </table>
-      </v-col>
-    </v-row>
-  -->
   <v-row>
     <v-col cols="12">
       <div class="container">
-        <v-card style="max-width: 300px; margin:10px">
+        <v-card :style="highlightItem('Explorative Datenbanken')">
           <v-card-title>
             <div style="position: relative; display: flex; justify-content: center;">
               <img src="/dummy_300x160/dummy_01.png" alt="" style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;"/>
               <div
                 style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%;">
                 <h1 class="text-xl font-bold">
-                  Explorative Datenbank
+                  Explorative Datenbanken
                 </h1>
                 <h3>Datenbanken zum Entdecken</h3>
               </div>
@@ -220,25 +46,22 @@
               molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum
               necessitatibus temporibus facere?
             </div>
-            <ul>
-              <li>
-                <a href="https://www.owid.de/plus/komux/"><b>KoMuX</b><br />Durchsuche mehr als 50.000 Komposita</a>
-              </li>
-              <li>
-                <a href="http://uwv.ids-mannheim.de/prepcon/modul1/index.html"><b>Prepcon</b><sup>(explorativ)</sup><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora</a>
-              </li>
-            </ul>
+            <br/>            
+            <div class="containerItem" v-for="item in getItems('Explorative Datenbanken')" :key="item.title">
+              <div class="left"><v-icon>mdi-open-in-new</v-icon></div>
+              <div class="middle"><b>{{ item.title }}</b><br />{{ item.subtitle }}</div>
+            </div>
           </v-card-text>
         </v-card>
 
-        <v-card style="max-width: 350px; margin:10px">
+        <v-card :style="highlightItem('Deskriptive Datenbank')">
           <v-card-title>
             <div style="position: relative; justify-content: center;">
               <img src="/dummy_300x160/dummy_02.png" alt="" style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;"/>
               <div
                 style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
                 <h1 class="text-xl font-bold">
-                  Deskriptiv Datenbank
+                  Deskriptive Datenbank
                 </h1>
                 <h3>Datenbanken mit Beschreibungen</h3>
               </div>
@@ -251,18 +74,15 @@
               molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum
               necessitatibus temporibus facere?
             </div>
-            <ul>
-              <li>
-                <b>MAP</b><br />Musterbank Argumentmarkierender Präpositionen
-              </li>
-              <li>
-                <b>Wörterbuch Redeeinleiter</b><br />Redeeinleiter finden und vergleichen
-              </li>
-            </ul>
+            <br/>   
+            <div class="containerItem" v-for="item in getItems('Deskriptive Datenbanken')" :key="item.title">
+              <div class="left"><v-icon>mdi-open-in-new</v-icon></div>
+              <div class="middle"><b>{{ item.title }}</b><br />{{ item.subtitle }}</div>
+            </div>
           </v-card-text>
         </v-card>
 
-        <v-card style="max-width: 350px; margin:10px">
+        <v-card :style="highlightItem('Inventare und Sammlungen')">
           <v-card-title>
             <div style="position: relative; justify-content: center;">
               <img src="/dummy_300x160/dummy_03.png" alt="" style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;"/>
@@ -282,30 +102,21 @@
               molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum
               necessitatibus temporibus facere?
             </div>
-            <ul>
-              <li>
-                <b>PhK-Liste</b><br />Durchsuche mehr als 50.000 Komposita
-              </li>
-              <li>
-                <b>SpruchList</b><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora
-              </li>
-              <li>
-                <b>Prepcon</b><sup>(temporal)</sup><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora
-              </li>
-              <li>
-                <b>DTWW</b><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora
-              </li>
-            </ul>
+            <br/>   
+            <div class="containerItem" v-for="item in getItems('Inventare und Sammlungen')" :key="item.title">
+              <div class="left"><v-icon>mdi-open-in-new</v-icon></div>
+              <div class="middle"><b>{{ item.title }}</b><br />{{ item.subtitle }}</div>
+            </div>
           </v-card-text>
         </v-card>
-        <v-card style="max-width: 350px; margin:10px">
+        <v-card :style="highlightItem('Online-Wörterbücher')">
           <v-card-title>
             <div style="position: relative; justify-content: center;">
               <img src="/dummy_300x160/dummy_04.png" alt="" style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;"/>
               <div
                 style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
                 <h1 class="text-xl font-bold">
-                  Onlie-Wörterbücher
+                  Online-Wörterbücher
                 </h1>
                 <h3>Verzeichnisse für die Forschung</h3>
               </div>
@@ -318,21 +129,14 @@
               molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum
               necessitatibus temporibus facere?
             </div>
-            <ul>
-              <li>
-                <b>OWID Sprichwörterbuch</b><br />Durchsuche mehr als 50.000 Komposita
-              </li>
-              <li>
-                <b>OWID Kleines Wörterbuch der Verlaufsformen im Deutschen</b><br />Präpositionale Wortverbindungen in
-                unterschiedlichen Korpora
-              </li>
-              <li>
-                <b>OWID Feste Wortverbindungen</b><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora
-              </li>
-            </ul>
+            <br/>
+            <div class="containerItem" v-for="item in getItems('Online-Wörterbücher')" :key="item.title">
+              <div class="left"><v-icon>mdi-open-in-new</v-icon></div>
+              <div class="middle"><b>{{ item.title }}</b><br />{{ item.subtitle }}</div>
+            </div>
           </v-card-text>
         </v-card>
-        <v-card style="max-width: 350px; margin:10px">
+        <v-card :style="highlightItem('Präsentationsformate')">
           <v-card-title>
             <div style="position: relative; justify-content: center;">
               <img src="/dummy_300x160/dummy_05.png" alt="" style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;"/>
@@ -352,20 +156,13 @@
               molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum
               necessitatibus temporibus facere?
             </div>
-            <ul>
-              <li>
-                <b>OWID Sprichwörterbuch</b><br />Durchsuche mehr als 50.000 Komposita
-              </li>
-              <li>
-                <b>PREPCON (teporal)</b><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora
-              </li>
-              <li>
-                <b>PREPCON (explorativ)</b><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora
-              </li>
-            </ul>
+            <div class="containerItem" v-for="item in getItems('Präsentationsformate')" :key="item.title">
+              <div class="left"><v-icon>mdi-open-in-new</v-icon></div>
+              <div class="middle"><b>{{ item.title }}</b><br />{{ item.subtitle }}</div>
+            </div>
           </v-card-text>
         </v-card>
-        <v-card style="max-width: 350px; margin:10px">
+        <v-card :style="highlightItem('Pilot- und Einzelstudien')">
           <v-card-title>
             <div style="position: relative; justify-content: center;">
               <img src="/dummy_300x160/dummy_06.png" alt="" style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;"/>
@@ -385,18 +182,10 @@
               molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum
               necessitatibus temporibus facere?
             </div>
-            <ul>
-              <li>
-                <b>DRI online</b><br />Durchsuche mehr als 50.000 Komposita
-              </li>
-              <li>
-                <b>Verietäten Kontakt</b><br />Präpositionale Wortverbindungen in unterschiedlichen Korpora
-              </li>
-              <li>
-                <b style="white-space: nowrap;">Probandenbefragungen Redewendungen</b><br />Präpositionale
-                Wortverbindungen in unterschiedlichen Korpora
-              </li>
-            </ul>
+            <div class="containerItem" v-for="item in getItems('Pilot- und Einzelstudien')" :key="item.title">
+              <div class="left"><v-icon>mdi-open-in-new</v-icon></div>
+              <div class="middle"><b>{{ item.title }}</b><br />{{ item.subtitle }}</div>
+            </div>
           </v-card-text>
         </v-card>
       </div>
@@ -409,23 +198,51 @@ export default {
   theme: { dark: false },
   data() {
     return {
+      highlight: null,
 
+      ressources: [
+        { "title": "KoMuX", code: "komux", value: 1100, subtitle: "Durchsuche mehr als 50.000 Komposita", group: "Explorative Datenbanken" },
+        { "title": "PREPCON (explorativ)", code: "prexp", value: 1200, subtitle: "Präpositionale Wortverbindungen in unterschiedlichen Beschreibungstiefen", group: "Explorative Datenbanken" },
+
+        { "title": "MAP", code: "map", value: 2100, subtitle: "Musterbank Argumentmarkierender Präpositionen", group: "Deskriptive Datenbanken" },
+        { "title": "Wörterbuch Redeeinleiter", value: 2200, subtitle: "Musterbank Argumentmarkierender Präpositionen", group: "Deskriptive Datenbanken" },
+
+        { "title": "PhK-Liste", value: 3100, subtitle: "Musterbank unterschiedlichen Präpositionen", group: "Inventare und Sammlungen" },
+        { "title": "SpruchList", value: 3200, subtitle: "Wortverbindungen Durchsuche Präpositionen", group: "Inventare und Sammlungen" },
+        { "title": "PREPCON (teporal)", code: "pretk", value: 3300, subtitle: "Musterbank Argumentmarkierender Präpositionen", group: "Inventare und Sammlungen" },
+        { "title": "DTWW", value: 3400, subtitle: "Musterbank Beschreibungstiefen Präpositionen", group: "Inventare und Sammlungen" },
+
+        { "title": "OWID Sprichwörterbuch", code: "sprwb", value: 4100, subtitle: "Musterbank unterschiedlichen Komposita", group: "Online-Wörterbücher" },
+        { "title": "OWID Kleines Wörterbuch der Verlaufsformen im Deutschen", code: "verla", value: 4200, subtitle: "Wortverbindungen unterschiedlichen Präpositionen", group: "Online-Wörterbücher" },
+        { "title": "OWID Feste Wortverbindungen", value: 4300, subtitle: "Musterbank Beschreibungstiefen Präpositionen", group: "Online-Wörterbücher" },
+
+        { "title": "OWID Sprichwörterbuch", value: 5100, subtitle: "Musterbank unterschiedlichen Komposita", group: "Präsentationsformate" },
+        { "title": "PREPCON (teporal)", code: "preti", value: 5200, subtitle: "Musterbank Argumentmarkierender Präpositionen", group: "Präsentationsformate" },
+        { "title": "PREPCON (explorativ)", value: 5300, subtitle: "Musterbank Beschreibungstiefen Präpositionen", group: "Präsentationsformate" },
+
+        { "title": "DRI online", value: 6100, subtitle: "Musterbank unterschiedlichen Komposita", group: "Pilot- und Einzelstudien" },
+        { "title": "Verietäten Kontakt", value: 6200, subtitle: "Musterbank Argumentmarkierender Präpositionen", group: "Pilot- und Einzelstudien" },
+        { "title": "Probandenbefragungen Redewendungen", value: 6300, subtitle: "Musterbank Beschreibungstiefen Präpositionen", group: "Pilot- und Einzelstudien" }
+      ]
     }
   },
 
   mounted() {
-    this.load(0);
+    if (this.$route.query.highlight) {
+      this.highlight = this.$route.query.highlight
+    }
   },
 
   methods: {
-    load(id) {
-      id--;
-      if (id >= this.items.length)
-        id = 0;
-      this.currentItem = this.items[id];
+    highlightItem(item) {
+      return this.highlight == item ?
+        "max-width: 350px; margin:10px; border: 3px solid black" :
+        "max-width: 350px; margin:10px";
+    },
+    getItems(group) {
+      return this.ressources.filter(item => item.group == group)
     }
-  }
-
+  },
 }
 </script>
 <style scoped>
@@ -441,6 +258,23 @@ td {
 .v-list-subheader {}
 </style>
 <style scoped>
+.containerItem {
+  display: grid; 
+  grid-template-columns: auto 1fr; 
+  grid-template-rows: 100%; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "left middle"; 
+  margin: 10px 5px 10px 5px;
+  padding: 5px;
+  border-top: 1px solid #ddd;
+}
+.containerItem:hover {
+  background-color: #ddd;
+}
+.left { grid-area: left; }
+.middle { grid-area: middle; text-align: left; }
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -448,6 +282,13 @@ td {
 }
 
 li {
-  list-style: square;
+  list-style: none;
   margin: 10px 20px 10px 20px;
-}</style>
+  border-top: 1px solid #d6d6d6;
+  padding-top: 10px;
+}
+
+li:hover {
+  background-color: #d6d6d6;
+}
+</style>
