@@ -144,6 +144,25 @@ export default {
         .then(response => response.json())
         .then(result => self.items = result.hits)
         .catch(error => console.log('error', error));
+    },
+    selected_tags: function(newVal, oldVal){
+      var set = new Set(newVal);
+
+      for (let i = 0; i < this.ressources.length; i++) {
+        const entry = this.ressources[i];
+        if(entry.tags == undefined || entry.tags == null)
+          continue;
+
+        var rank = 0;
+        for (let j = 0; j < entry.tags.length; j++) {
+          if(set.has(entry.tags[j]))
+            rank++;
+        }
+
+        this.ressources[i].rank = rank;
+      }
+
+      this.ressources.sort((a, b) => b.rank - a.rank);
     }
   }
 }
