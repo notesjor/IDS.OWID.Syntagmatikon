@@ -4,7 +4,7 @@
       <v-col>
         <div>
           <h1 class="text-3xl font-bold">
-            Was ist ein Syntagmatikon?
+            Was ist das Syntagmatikon?
           </h1>
         </div>
       </v-col>

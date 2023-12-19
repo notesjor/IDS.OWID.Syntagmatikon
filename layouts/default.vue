@@ -39,7 +39,7 @@
           <v-list-item prepend-icon="mdi-home" title="Startseite"></v-list-item>
         </router-link>
         <router-link to="/project-description">
-          <v-list-item prepend-icon="mdi-information" title="Projektbeschreibung"></v-list-item>
+          <v-list-item prepend-icon="mdi-information" title="Was ist das Syntagmatikon?"></v-list-item>
         </router-link>
       </v-list>
       <!-- HOME END -->
@@ -48,9 +48,12 @@
 
       <!-- ADDITIONAL INFORMATION START -->
       <v-list density="compact" nav>
-        <v-list-subheader v-show="!useMobileView">Leitfaden</v-list-subheader>
-        <router-link to="/guide/patterns">
-          <v-list-item prepend-icon="mdi-book-open-variant" title="Muster in Sprache"></v-list-item>
+        <v-list-subheader v-show="!useMobileView">Ressourcenkompass</v-list-subheader>
+        <router-link to="/guide/resources">
+          <v-list-item prepend-icon="mdi-book-open-variant" title="Musterzugänge"></v-list-item>
+        </router-link>
+        <router-link to="/guide/resources">
+          <v-list-item prepend-icon="mdi-book-open-variant" title="Ressourcentypen"></v-list-item>
         </router-link>
         <router-link to="/guide/methods">
           <v-list-item prepend-icon="mdi-book-open-variant" title="Korpusmethoden erklärt"></v-list-item>
