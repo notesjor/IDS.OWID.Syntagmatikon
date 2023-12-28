@@ -78,7 +78,7 @@
       </v-list>
       <!-- ADDITIONAL INFORMATION END -->
 
-      <!-- ADDITIONAL INFORMATION START -->
+      <!-- ADDITIONAL INFORMATION START 
       <v-list density="compact" nav>
         <v-list-subheader v-show="!useMobileView">Funktion</v-list-subheader>
         <router-link to="/network">
@@ -88,7 +88,7 @@
           <v-list-item prepend-icon="mdi-timeline-outline" title="Forschungsgeschichte"></v-list-item>
         </router-link>
       </v-list>
-      <!-- ADDITIONAL INFORMATION END -->
+       ADDITIONAL INFORMATION END -->
 
     </v-navigation-drawer>
 
