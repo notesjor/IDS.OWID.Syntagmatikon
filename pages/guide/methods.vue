@@ -29,19 +29,19 @@
       <v-col cols="10">
         <div class="container">
           <NuxtLink v-for="item in items" :key="item" :to="'/guide/info/' + item.page" style="margin-right: 20px;">
-            <v-card class="mx-auto" max-width="250" style="margin-bottom: 20px; padding-bottom: 10px;">
+            <v-card class="mx-auto" max-width="355" style="margin-bottom: 20px; padding-bottom: 10px;">
               <div style="max-height: 1px;">
                 <img :src="'/guide/methods/' + item.image" :alt="item.title"
                   style="object-fit: cover; object-position: center center;">
               </div>
 
-              <v-card-title style="margin-top: 75px;">
-                {{ item.title }}
+              <v-card-title style="margin: 75px 0px 5px -20px">
+                <div style="position:relative; display: inline; background-color: rgba(255, 255, 255, 0.75); padding: 5px 5px 5px 20px;">{{ item.title }}</div>
               </v-card-title>
 
-              <v-card-subtitle>
+              <v-card-text>
                 {{ item.subtitle }}
-              </v-card-subtitle>
+              </v-card-text>
 
             </v-card>
           </NuxtLink>

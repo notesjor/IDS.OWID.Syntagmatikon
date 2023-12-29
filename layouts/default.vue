@@ -6,8 +6,9 @@
         <div style="min-height: 10px;" v-if="useMobileView"></div>
         <div class="text-xl">
           <img alt="Logo" src="/logo_syntagmatikon.svg"
-            style="max-height:40px; margin-right:10px; margin-top:5px; float: left;" /> 
-          {{ appName }}</div>
+            style="max-height:40px; margin-right:10px; margin-top:5px; float: left;" />
+          {{ appName }}
+        </div>
         <div class="text-xs" style="text-align: left;">{{ useMobileView ? " " : appDescription }}</div>
       </div>
 
@@ -21,11 +22,12 @@
       </div>
     </div>
 
-    <v-navigation-drawer expand-on-hover :permanent="!useMobileView" :rail="useMobileView" style="z-index:1; transform: none;">
+    <v-navigation-drawer :permanent="!useMobileView" :rail="useMobileView"
+      style="z-index:1; transform: none;" expand-on-hover>
       <!-- LOGO START -->
       <div class="text-xl" style="margin: 7px 0px 15px 15px; opacity: 1" v-show="!useMobileView">
         <img alt="Logo" src="/logo_syntagmatikon.svg"
-            style="max-height:40px; margin-right:auto; margin-top:5px; float: left;" />
+          style="max-height:40px; margin-right:auto; margin-top:5px; float: left;" />
         <div style="margin-left: 50px; margin-bottom: 50px;">
           {{ appName }}
         </div>
@@ -34,7 +36,7 @@
 
       <!-- HOME START -->
       <v-list density="compact" nav :style="menuStyleMobileFix">
-        <v-list-subheader v-show="!useMobileView">Übersicht</v-list-subheader>
+        <v-list-subheader>Übersicht</v-list-subheader>
         <router-link to="/">
           <v-list-item prepend-icon="mdi-home" title="Startseite"></v-list-item>
         </router-link>
@@ -48,7 +50,7 @@
 
       <!-- ADDITIONAL INFORMATION START -->
       <v-list density="compact" nav>
-        <v-list-subheader v-show="!useMobileView">Ressourcenkompass</v-list-subheader>
+        <v-list-subheader>Ressourcenkompass</v-list-subheader>
         <router-link to="/guide/resources">
           <v-list-item prepend-icon="mdi-book-open-variant" title="Musterzugänge"></v-list-item>
         </router-link>
@@ -68,30 +70,17 @@
 
       <!-- ADDITIONAL INFORMATION START -->
       <v-list density="compact" nav>
-        <v-list-subheader v-show="!useMobileView">Suche</v-list-subheader>
-        <router-link to="/search2">
+        <v-list-subheader>Suche</v-list-subheader>
+        <router-link to="/search-resource">
           <v-list-item prepend-icon="mdi-search-web" title="nach und in Ressourcen"></v-list-item>
         </router-link>
-        <router-link to="/search3">
+        <router-link to="/search-entry">
           <v-list-item prepend-icon="mdi-magnify" title="nach Einträgen"></v-list-item>
         </router-link>
       </v-list>
-      <!-- ADDITIONAL INFORMATION END -->
-
-      <!-- ADDITIONAL INFORMATION START 
-      <v-list density="compact" nav>
-        <v-list-subheader v-show="!useMobileView">Funktion</v-list-subheader>
-        <router-link to="/network">
-          <v-list-item prepend-icon="mdi-graph-outline" title="Vernetzung"></v-list-item>
-        </router-link>
-        <router-link to="/timeline">
-          <v-list-item prepend-icon="mdi-timeline-outline" title="Forschungsgeschichte"></v-list-item>
-        </router-link>
-      </v-list>
-       ADDITIONAL INFORMATION END -->
 
     </v-navigation-drawer>
-
+    
     <div style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
       <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
         <slot />
@@ -135,13 +124,21 @@
 
       <div style="text-align: right; grid-area: right">
         <a :href="rightIconHref" target="_blank">
-          <img alt="Logo" src="/logo_right.svg" style="max-height:65px; min-height: 45px; min-width: 200px; margin-left: auto; " />
+          <img alt="Logo" src="/logo_right.svg"
+            style="max-height:65px; min-height: 45px; min-width: 200px; margin-left: auto; " />
         </a>
       </div>
     </div>
 
   </v-app>
 </template>
+
+<style scoped>
+.v-list-subheader{
+  margin-left: 55px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+</style>
 
 <style>
 body {
@@ -183,13 +180,11 @@ export default {
 
       footerContact: null,
       footerImpressum: null,
-      footerDsgvo: null,
+      footerDsgvo: null
     }
   },
 
   mounted() {
-    this.useMobileView  = this.$vuetify.display.width < 960;
-
     this.appName = this.$config.public.appName;
     this.appDescription = this.$config.public.appDescription;
 
@@ -200,6 +195,7 @@ export default {
     this.footerImpressum = this.$config.public.footerImpressum;
     this.footerDsgvo = this.$config.public.footerDsgvo;
 
+    this.windowResize();
     window.addEventListener('resize', this.windowResize);
   },
 
@@ -207,29 +203,20 @@ export default {
     window.removeEventListener('scroll', this.handleScroll);
   },
 
-  methods:{
-    windowResize(){
-      this.useMobileView  = this.$vuetify.display.width < 960;
+  methods: {
+    windowResize() {
+      this.useMobileView = this.$vuetify.display.width < 960;
     }
   },
 
   computed: {
-    menuStyleMobileFix(){
-      if(this.useMobileView){
+    menuStyleMobileFix() {
+      if (this.useMobileView) {
         return "margin-top: 75px;"
-      }else{
+      } else {
         return ""
       }
     }
-  }
+  },
 }
 </script>
-
-<style >
-.v-list-item{
-}
-.v-list-item__content{
-}
-.v-list-item-title{
-}
-</style>
