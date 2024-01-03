@@ -1,11 +1,7 @@
 ---
 title: "Syntagmatikon" # Überschrift und gleichzeitig Alias (s. u.)
-#subtitle: "" - main-Pages haben keinen Subtitle
-#info: "" - main-Pages haben keine Info
-author: "Kathrin Steyer" # bitte hier Ansprechpartner*in vermerken.
-#category: "" - main-Pages haben keine Category
-alias: []
 autolink: false # Deaktiviert die automatische Verlinkung dieser Seite (auch von title)
+template: page
 ---
 
 Das Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, 

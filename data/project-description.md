@@ -1,10 +1,7 @@
 ---
 title: "Was ist das Syntagmatikon?" # Überschrift und gleichzeitig Alias (s. u.)
-#subtitle: "" - main-Pages haben keinen Subtitle
-#info: "" - main-Pages haben keine Info
-author: "Kathrin Steyer" # bitte hier Ansprechpartner*in vermerken.
-#category: "" - main-Pages haben keine Category
 alias: ["Syntagmatikon", "Datikon"] # Zusätzliche Alias - Erste Übereinstimmung in anderen Texten führt zu internem Link auf diese Seite
+template: page
 ---
 
 Ein Syntagmatikon stellt ein korpuszentriertes
