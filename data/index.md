@@ -9,7 +9,7 @@ die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortsc
 geworden sind: Phraseologismen, Sprichwörter und Sprüche; Kollokationen; Komposita und 
 andere Wortbildungseinheiten; Präpositionen-Substantiv-Kombinationen; 
 Verb-Präpositionen-Kombinationen; wortgruppenartige Redeeinleiter.\
-#SAMPLE#
+##SAMPLE##
 Diese Einheiten wurden in unterschiedlichen IDS-Projekten auf der Basis sehr großer Korpora 
 erforscht und in Online-Wörterbüchern, Datenbanken oder Sammlungen aufbereitet. Das 
 Syntagmatikon verknüpft und visualisiert diese Ressourcen auf vielfältige Weise und macht so
