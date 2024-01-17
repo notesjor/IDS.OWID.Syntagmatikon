@@ -19,9 +19,13 @@
         </div>
         <div>
           <hi>Ressourcen</hi>:
-          <ul>
-            <li></li>
-          </ul>
+          <div>
+            <ResourcesList :filter="list_public"></ResourcesList>
+          </div>
+          <hi>In Arbeit</hi>:
+          <div>
+            <ResourcesList :filter="list_todo"></ResourcesList>
+          </div>
         </div>
       </v-col>
     </v-row>
@@ -351,7 +355,9 @@ export default {
         }
         ],
       },
-      ]
+      ],
+      list_public: ["ZUWV", "DRIO", "WVBF", "PAROWB", "KWViD", "SPRW", "DTWW", "SpruchList", "WÖRE", "PREPCON", "KoMuX"],
+      list_todo: ["MAP", "PHKO"],
     }
   }
 }
