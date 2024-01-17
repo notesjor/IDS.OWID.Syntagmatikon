@@ -3,7 +3,7 @@
     <v-row>
       <v-col>
         <div>
-          <h1 class="text-3xl font-bold">
+          <h1>
             Was ist das Syntagmatikon?
           </h1>
         </div>
