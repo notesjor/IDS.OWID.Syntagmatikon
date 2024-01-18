@@ -52,17 +52,17 @@
       <v-list density="compact" nav>
         <v-list-subheader>Ressourcenkompass</v-list-subheader>
         <router-link to="/guide/resources">
-          <v-list-item prepend-icon="mdi-book-open-variant" title="Musterzugänge"></v-list-item>
-        </router-link>
-        <router-link to="/guide/resources">
           <v-list-item prepend-icon="mdi-book-open-variant" title="Ressourcentypen"></v-list-item>
-        </router-link>
+        </router-link>            
         <router-link to="/guide/methods">
-          <v-list-item prepend-icon="mdi-book-open-variant" title="Korpusmethoden erklärt"></v-list-item>
+          <v-list-item prepend-icon="mdi-book-open-variant" title="Daten- und Informationstypen"></v-list-item>
         </router-link>
         <router-link to="/guide/resources">
-          <v-list-item prepend-icon="mdi-book-open-variant" title="Ressourcen erklärt"></v-list-item>
+          <v-list-item prepend-icon="mdi-book-open-variant" title="Wortschatzausschnitten"></v-list-item>
         </router-link>
+        <router-link to="/guide/resources">
+          <v-list-item prepend-icon="mdi-book-open-variant" title="Musterzugänge"></v-list-item>
+        </router-link>    
       </v-list>
       <!-- ADDITIONAL INFORMATION END -->
 
@@ -135,12 +135,16 @@
 
 <style scoped>
 .v-list-subheader{
-  margin-left: 55px;
+  margin-left: 45px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
+
 </style>
 
 <style>
+.v-list-item__prepend {
+  max-width: 35px!important;
+}
 body {
   hyphens: auto;
   hyphenate-character: auto 5;

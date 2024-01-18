@@ -10,12 +10,12 @@
     <v-row>
       <v-col>
         <div>
-          Das korpusbasierte Portal <hi>Syntagmatikon</hi> bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, 
-          die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden 
-          sind: Phraseologismen, Sprichwörter und Sprüche; Kollokationen; Komposita und andere Wortbildungseinheiten; 
-          Präpositionen + Substantiv-Kombinationen; Verb + Präpositionen-Kombinationen; wortgruppenartige Redeeinleiter. 
-          Des Weiteren werden diesen Einheiten zugrunde liegenden Schablonen und Schemata (Muster) und die vielfachen 
-          Vernetzungen im deutschen Wortschatz auf unterschiedliche Weise beschrieben und visualisiert.<br/>&nbsp;<br/>
+          Das korpusbasierte Portal <hi>Syntagmatikon</hi> bietet Informationen zum Gebrauch von sprachlichen Ausdrücken,
+          die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden
+          sind: Phraseologismen, Sprichwörter und Sprüche; Kollokationen; Komposita und andere Wortbildungseinheiten;
+          Präpositionen + Substantiv-Kombinationen; Verb + Präpositionen-Kombinationen; wortgruppenartige Redeeinleiter.
+          Des Weiteren werden diesen Einheiten zugrunde liegenden Schablonen und Schemata (Muster) und die vielfachen
+          Vernetzungen im deutschen Wortschatz auf unterschiedliche Weise beschrieben und visualisiert.<br />&nbsp;<br />
         </div>
         <div>
           <hi>Ressourcen</hi>:
@@ -38,7 +38,8 @@ export default {
   theme: { dark: false },
   data() {
     return {
-      sample: [{
+      sample: [
+        {
         tokens: ["Andere", "Länder,", "andere", "Sitten:", "Wenn", "deutsche", "Kinder", "am", "6.", "Dezember", "auf", "den", "Nikolaus", "in", "rotem", "Mantel", "und", "weißem", "Rauschebart", "warten,", "ist", "dieser", "Tag", "für", "spanische", "Mädchen", "und", "Jungen", "gar", "kein", "ereignisreiches", "Datum.", "Sie", "hoffen", "nämlich,", "daß", "die", "Heiligen", "Drei", "Könige", "-", "Caspar,", "Melchior", "und", "Balthasar", "sie", "am", "6.", "Januar", "reichlich", "beschenken,", "meist", "mit", "zuckersüßen", "Bonbons", "und", "Schokolade."],
         annotations: [{
           ranges: [{
@@ -74,12 +75,12 @@ export default {
           }
           ],
           references: [{
-            source: 'PREPCON <sup>kontrastiv</sup>',
+            source: 'PREPCON <sup>temporal</sup>',
             article: 'für Stunden',
-            type: 'Sprachgebrauchsmuster',
+            type: 'Präposition-Nomen-Verbindung',
             href: 'http://uwv.ids-mannheim.de/prepcon/modul2/artikel/fuer_Stunden/index.html',
             color: '#0d65c2'
-          }
+          },
           ]
         }, {
           ranges: [{
@@ -90,7 +91,7 @@ export default {
           references: [{
             source: 'PREPCON <sup>kontrastiv</sup>',
             article: 'nach Belieben',
-            type: 'Sprachgebrauchsmuster',
+            type: 'Präposition-Nomen-Verbindung',
             href: 'http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html',
             color: '#008702'
           }

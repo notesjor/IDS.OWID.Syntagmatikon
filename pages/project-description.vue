@@ -9,63 +9,72 @@
         </div>
       </v-col>
     </v-row>
+    <v-row style="margin-top:-50px">
+      <v-col>
+        <v-carousel>
+          <v-carousel-item src="/img/pd_01.png"></v-carousel-item>
+          <v-carousel-item src="/img/pd_02.png"></v-carousel-item>
+          <v-carousel-item src="/img/pd_03.png"></v-carousel-item>
+          <v-carousel-item src="/img/pd_04.png"></v-carousel-item>
+        </v-carousel>
+      </v-col>
+    </v-row>
     <v-row>
       <v-col>
         <div>
-          Ein Syntagmatikon stellt ein korpuszentriertes Online-Präsentationsformat dar, dass Struktur und Gebrauch linear
-          verfestigter lexikalische Ausdrücke und Ausdrucksgruppen auf neuartige Weise darstellt und visualisiert
-          (
-          <Reference text="Syntagmatik" />). Dieses Format kann man auch als ‚Datikon‘ bezeichnen.
-
-          <br />&nbsp;<br />
-
-          Das Wort Datikon setzt sich zusammen aus (Sprach-)Daten und Lexikon, und genau darum geht es: eine Kombination
-          zwischen Sprachmassendaten auf der Basis riesiger Textdatenbanken
-          (
-          <Reference text="Korpora" />) und linguistisch-lexikografischen
-          Informationen, wie man sie in Wörterbüchern oder Lexika findet. Dass Besondere ist, dass neben
-          linguistisch-beschreibenden Texten authentische Sprachdaten ins Zentrum rücken, diese also nicht nur als
-          empirische Basis dienen, sondern selbst zu Informationseinheiten werden.
-
-          <br />&nbsp;<br />
-
-          Ein Datikon enthält sowohl Informationen, die durch verschieden Analysetypen gewonnen werden:
-          <ul>
-            <li>rein automatisch
-              (
-              <Reference text="automatische Daten" />)
-            </li>
-            <li>semi-automatisch (Sortierung und Systematisierung von automatischen Daten „von Hand“
-              <Reference text="semi-automatische Daten" />)
-            </li>
-            <li>qualitativ
-              (
-              <Reference text="narrative Kommentare" />;
-              <Reference text="kategoriale Angaben" />)
-            </li>
-          </ul>
-
-          Je nach Zielsetzung und Vorgehen unterscheidet sich der Anteil der Informationstypen in der jeweiligen
-          Datikon-Ressource.
-          Dem Konzept dieses modularen Onlineformats liegt die Erkenntnis zugrunde, dass die lexikografische Erfassung
-          verfestigter Wortgruppen und von lexikalisch geprägten Mustern nicht nach einem fest gefügten
-          Beschreibungsraster erfolgen kann, sondern dass nur eine datennahe und dynamisch-flexible Erfassung in
-          unterschiedlichen Beschreibungstiefen der Komplexität dieser sprachlichen Phänomene gerecht wird. Anhand von
-          linguistisch systematisierten und kommentierten, aber authentischen Sprachdaten wird die Möglichkeit geschaffen,
-          Informationen zum usuellen Gebrauch abzuleiten.
-
-          Das Syntagmatikon vereint folgende Ressourcen: 
-          <ul>
-            <li>explorative Datenbanken</li>
-            <li>deskriptive Datenbanken</li>
-            <li>semiautomatische Inventare / Sammlungen </li>
-            <li>Online-Wörterbücher</li>
-            <li>korpuszentrierte Präsentationsformate</li>
-            <li>Pilot- und Einzelstudien</li>
-          </ul>
-          Eine ausführliche Beschreibung finden Sie hier
-          <Reference text="Ressourcen" />.
-
+          <p>Die Abbildungen illustrieren Zusammenhänge zwischen Ausdrücken, die
+            linear verfestigt und als syntagmatische lexikalische Einheiten zu
+            verstehen sind – Wortgruppen und -folgen also, die als „eingefrorene“
+            Bausteine im Sprachgebrauch eingesetzt werden. <a
+              href="https://de.wikipedia.org/wiki/Lexikalische_Funktion">(Lexikalische
+              Funktion</a>)</p>
+          <p>Die Wortschatzeinheiten und -ausschnitte im <span class="smallcaps">Syntagmatikon</span> wurden und werden in
+            unterschiedlichen IDS-Projekten (<a
+              href="https://www.ids-mannheim.de/lexik/syntagmatik-im-lexikon/">Syntagmatik
+              im Lexikon</a>; <a href="http://www.redewiedergabe.de/">Redewiedergabe</a>) auf der Basis
+            sehr großer Korpora (<a href="https://www.ids-mannheim.de/digspra/kl/projekte/korpora/">DeReKo</a>)
+            erforscht, in Online-Wörterbüchern, Datenbanken, Inventaren und
+            Pilotstudien aufbereitet und miteinander verknüpft. Das Portal enthält
+            vollautomatisch erstellte Daten; semiautomatische aufbereitete Daten und
+            Angaben sowie qualitative Beschreibungen.</p>
+          <p>Je nach Zielsetzung und Vorgehen unterscheiden sich Daten- und
+            Angabetypen in den Ressourcen. Es handelt sich um ein modulares
+            Onlineformat, bei dem verfestigte Wortgruppen und lexikalisch geprägte
+            Mustern nicht nach einem einheitlichen Raster dargestellt werden,
+            sondern dynamisch-flexibel in unterschiedlichen Beschreibungstiefen.</p>
+          <p>Die Heterogenität der Formate spiegelt ebenso die
+            wissenschaftshistorische Entwicklung des korpuslinguistischen Paradigmas
+            (<a href="https://www.ids-mannheim.de/digspra/kl/projekte/methoden/">Korpusanalyse
+              und- erschließung</a>) und seiner onlinelexikografischen Umsetzungen am
+            IDS wider: von den Anfängen zur Jahrtausendwende (<a
+              href="https://www.ids-mannheim.de/lexik/elexiko">elexiko</a>) über
+            Pilotstudien (<a href="http://wvonline.ids-mannheim.de/home.htm">WV
+              online</a>) und Aufbereitung in großen Online-Wörterbüchern in den
+            Nuller- und Zehnerjahren <a href="https://www.owid.de/">OWID</a>(<a
+              href="https://www.owid.de/wb/progdb/start.html">Verlaufsformen</a>; <a
+              href="https://www.owid.de/wb/sprw/start.html">Sprichwörterbuch</a>) bis
+            hin zu Datenbanken (<a href="https://www.owid.de/plus/komux/">KoMuX</a>;
+            MAP; <a href="https://www.owid.de/plus/redeeinleiter/">Redeeinleiter</a>);
+            neuartigen Präsentationsformaten (<a
+              href="http://uwv.ids-mannheim.de/prepcon/prepcon_online.html">PREPCON<sup>online</sup></a>)
+            und Inventaren (PhK; <a href="http://uwv.ids-mannheim.de/spruchlist/">SpruchList</a>) in der
+            Gegenwart.</p>
+          <p>Eine Besonderheit des <span class="smallcaps">Syntagmatikons</span>
+            stellen erklärende Texte mit unterschiedlichen Informationstiefen dar,
+            die als Leitfaden eine Navigationsfunktion für das gesamte Portal
+            erfüllen ( Ressourcenkompass). Ergebnisse und Datenformate unserer
+            Grundlagenforschung werden so transparent dargestellt, dass sich andere
+            „andocken“ und die Angebote für ihre Zwecke nutzen und weiterverarbeiten
+            können, z. B. im Bereich Deutsch als Fremdsprache. Es geht dabei
+            erklärtermaßen nicht um Didaktisierung im strengen Sinne, sondern um
+            allgemeinverständliche Erklärungen von:</p>
+          <blockquote>
+            <p><v-icon style="color:#7a7a7a; margin: 3px 7px 5px 0px">mdi-book-open-variant</v-icon>Ressourcentypen</p>
+            <p><v-icon style="color:#7a7a7a; margin: 3px 7px 5px 0px">mdi-book-open-variant</v-icon>Daten- und Informationstypen</p>
+            <p><v-icon style="color:#7a7a7a; margin: 3px 7px 5px 0px">mdi-book-open-variant</v-icon>Wortschatzausschnitten</p>
+            <p><v-icon style="color:#7a7a7a; margin: 3px 7px 5px 0px">mdi-book-open-variant</v-icon>Musterzugängen</p>            
+          </blockquote>
+          <p><a href="https://www.ids-mannheim.de/pb2/syntagmatikon/">Zur Projektwebseite</a></p>
         </div>
       </v-col>
     </v-row>
@@ -117,4 +126,5 @@ ul ol {
   list-style-type: lower-latin;
   list-style-position: inside;
   margin-left: 15px;
-}</style>
+}
+</style>
