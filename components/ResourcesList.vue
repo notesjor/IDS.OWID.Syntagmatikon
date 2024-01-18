@@ -1,53 +1,73 @@
 <template>
-    <div class="containerItem" v-for="item in resources" :key="item.key">
-        <div class="left"><v-icon>mdi-open-in-new</v-icon></div>
-        <div class="middle"><b v-html="item.nameShort"/><br />{{ item.nameLong }}</div>
-    </div>
+  <a class="containerItem" v-for="item in resources" :key="item.key" :href="item.url">
+      <div class="middle"><b v-html="item.nameShort" /><br />
+        <div v-if="showDesc">
+          <br />
+          <div v-html="item.description"></div>
+        </div>
+        <div v-else>
+          {{ item.nameLong }}
+        </div>
+      </div>
+  </a>
 </template>
 
 <script>
 import { useRessourcesStore } from '~/stores/ressources';
 
 export default {
-    name: "ResourcesList",
-    props: {
-        filter: {
-            type: Array,
-        },
+  name: "ResourcesList",
+  props: {
+    filter: {
+      type: Array,
     },
-    data() {
-        return {
-            resourcesStore: null,
-            resources: [],
-        }
+    showDesc: {
+      type: Boolean,
+      default: false,
     },
-    mounted() {
-        console.log(this.filter);
-        this.resourcesStore = useRessourcesStore();
-        console.log(this.resourcesStore);
-        this.resources = this.resourcesStore.getResources(this.filter);
-        console.log(this.resources);
-    },
+  },
+  data() {
+    return {
+      resourcesStore: null,
+      resources: [],
+    }
+  },
+  mounted() {
+    console.log(this.filter);
+    this.resourcesStore = useRessourcesStore();
+    console.log(this.resourcesStore);
+    this.resources = this.resourcesStore.getResources(this.filter);
+    console.log(this.resources);
+  },
 }
 </script>
 
 <style scoped>
 .containerItem {
-  display: grid; 
-  grid-template-columns: auto 1fr; 
-  grid-template-rows: 100%; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "left middle"; 
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 100%;
+  gap: 0px 0px;
+  grid-template-areas:
+    "left middle";
   margin: 10px 5px 10px 5px;
   padding: 5px;
   border-top: 1px solid #ddd;
 }
+
 .containerItem:hover {
   background-color: #ddd;
 }
-.left { grid-area: left; }
-.middle { grid-area: middle; text-align: left; margin-left: 10px; }
+
+.left {
+  grid-area: left;
+}
+
+.middle {
+  grid-area: middle;
+  text-align: left;
+  margin-left: 10px;
+}
 
 .container {
   display: flex;

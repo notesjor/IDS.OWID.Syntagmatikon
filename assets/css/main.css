@@ -7,11 +7,11 @@ h1 {
   @apply text-4xl;
 }
 
-div.main > div > div > div > div > div > p > a {
+div.main a {
   font-weight: 500;
 }
 
-div.main > div > div > div > div > div > p > a::before {
+div.main a::before {
   content: "\F03CC  ";
   font: normal normal normal 18px/1 "Material Design Icons"
 }
