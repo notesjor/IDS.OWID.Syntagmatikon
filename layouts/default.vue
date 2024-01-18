@@ -43,6 +43,9 @@
         <router-link to="/project-description">
           <v-list-item prepend-icon="mdi-information" title="Was ist das Syntagmatikon?"></v-list-item>
         </router-link>
+        <router-link to="/faq">
+          <v-list-item prepend-icon="mdi-frequently-asked-questions" title="Öffentliche Interaktion"></v-list-item>
+        </router-link>
       </v-list>
       <!-- HOME END -->
 
