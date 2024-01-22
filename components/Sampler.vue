@@ -1,5 +1,6 @@
 <template>
-  <div style="border:1px black solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
+  <div class="nolink"
+  style="border:1px black solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
     <v-row>
       <v-col>
         <div @mouseenter="carouselStop" @mouseleave="carouselStart"
