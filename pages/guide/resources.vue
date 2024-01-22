@@ -103,7 +103,7 @@
           <v-card :style="highlightItem('Inventare und Sammlungen')">
             <v-card-title>
               <div style="position: relative; justify-content: center;">
-                <img src="/dummy_300x160/dummy_03.png" alt=""
+                <img src="/resources/03.png" alt=""
                   style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
                 <div
                   style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
@@ -147,7 +147,7 @@
           <v-card :style="highlightItem('Online-Wörterbücher')">
             <v-card-title>
               <div style="position: relative; justify-content: center;">
-                <img src="/dummy_300x160/dummy_04.png" alt=""
+                <img src="/resources/04.png" alt=""
                   style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
                 <div
                   style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
@@ -178,7 +178,7 @@
           <v-card :style="highlightItem('Präsentationsformate')">
             <v-card-title>
               <div style="position: relative; justify-content: center;">
-                <img src="/dummy_300x160/dummy_05.png" alt=""
+                <img src="/resources/05.png" alt=""
                   style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
                 <div
                   style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
@@ -207,7 +207,7 @@
           <v-card :style="highlightItem('Pilot- und Einzelstudien')">
             <v-card-title>
               <div style="position: relative; justify-content: center;">
-                <img src="/dummy_300x160/dummy_06.png" alt=""
+                <img src="/resources/06.png" alt=""
                   style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
                 <div
                   style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
@@ -231,7 +231,7 @@
           <v-card :style="highlightItem('Datikon')">
             <v-card-title>
               <div style="position: relative; justify-content: center;">
-                <img src="/dummy_300x160/dummy_03.png" alt=""
+                <img src="/resources/07.png" alt=""
                   style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
                 <div
                   style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
