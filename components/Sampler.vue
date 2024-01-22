@@ -48,11 +48,11 @@
     </v-row>
     <v-row style="margin-top:-20px">
       <v-col>
-        <h1 class="text-xl">Interaktive-Beispiele</h1>
-        <h2 class="text-l">Klicken Sie auf eine Stelle im Beispiel, um eine Liste zugehöriger Ressourcen im Syntagmatikon
+        <p class="text-xl">Interaktive-Beispiele</p>
+        <p class="text-l">Klicken Sie auf eine Stelle im Beispiel, um eine Liste zugehöriger Ressourcen im Syntagmatikon
           anzuzeigen.
           Mit einem erneuten Klick auf eine der Ressourcen rufen Sie diese auf.
-        </h2>        
+        </p>        
       </v-col>
     </v-row>
   </div>
