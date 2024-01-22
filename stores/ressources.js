@@ -8,7 +8,7 @@ export const useRessourcesStore = defineStore('ressourcesStore', {
         "key": "KoMuX",
         "nameShort": "KoMuX",
         "nameLong": "Kompositamuster-Explorer",
-        "description": 'Im <strong>Kompositamuster-Explorer</strong> kann man sich Listen mit <u>Frequenzen</u> und nach unterschiedlichen linguistischen Kriterien zusammengestellte Gruppen von mehr als 50.000 Komposita anzeigen lassen, die vorher automatisch annotiert, d.h. mit Merkmalen (<a href="https://www.bubenhofer.com/korpuslinguistik/kurs/index.php?id=linginformationen.html">Annotation</a>) versehen wurden (<a href="https://www.owid.de/plus/komux/">KoMuX</a>)',
+        "description": 'Im <strong>Kompositamuster-Explorer</strong> kann man sich Listen mit <u>Frequenzen</u> und nach unterschiedlichen linguistischen Kriterien zusammengestellte Gruppen von mehr als 50.000 Komposita anzeigen lassen, die vorher automatisch annotiert, d.h. mit Merkmalen<br/>(<a href="https://www.bubenhofer.com/korpuslinguistik/kurs/index.php?id=linginformationen.html">Annotation</a>) versehen wurden.',
         "url": "https://www.owid.de/plus/komux/",
         "tags": ["Vollautomatisch", "Frequenz", "Kategorie", "EMuster"],
         "categories": ["Datenbank", "Explorative Datenbank"]
@@ -26,7 +26,7 @@ export const useRessourcesStore = defineStore('ressourcesStore', {
         "key": "PREPCONex",
         "nameShort": "PREPCON<sup>explorativ</sup>",
         "nameLong": "Präposition-Nomen-Verbindungen im Kontext",
-        "description": '<strong>Präposition-Nomen-Verbindungen explorativ</strong> bietet Tabellen mit <a href="../../2.2_DatenInformationstypen/2.2.1_Frequenz/2.2.1_Frequenz.docx">Frequenzen</a>, prozentuale Gewichtungen und automatisch ausgewählte <a href="../../2.2_DatenInformationstypen/2.2.2_KWIC/2.2.2_KWIC.docx">KWICs</a> zu knapp 80.000 Präposition-Nomen-Verbindungen an. (<a href="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html">PREPCON <sup>explorativ</sup></a>)',
+        "description": '<strong>Präposition-Nomen-Verbindungen explorativ</strong> bietet Tabellen mit <a href="../../2.2_DatenInformationstypen/2.2.1_Frequenz/2.2.1_Frequenz.docx">Frequenzen</a>, prozentuale Gewichtungen und automatisch ausgewählte <a href="../../2.2_DatenInformationstypen/2.2.2_KWIC/2.2.2_KWIC.docx">KWICs</a> zu knapp 80.000 Präposition-Nomen-Verbindungen an.',
         "url": "http://uwv.ids-mannheim.de/prepcon/prepcon_online.html",
         "tags": ["Vollautomatisch", "Frequenz", "KWIC", "EMuster"],
         "categories": ["Datenbank", "Explorative Datenbank", "Inventar", "Sammlung", "Korpuszentriert", "Visualisierung", "Korpuszentrierte Präsentationsformat"]

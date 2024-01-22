@@ -16,6 +16,10 @@ div.main a::before {
   font: normal normal normal 18px/1 "Material Design Icons"
 }
 
+div.nolink a::before {
+  content: none!important;
+}
+
 hi {
   font-variant: small-caps;
 }

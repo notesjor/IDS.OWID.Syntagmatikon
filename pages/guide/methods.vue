@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="nolink">
     <v-row>
       <v-col cols="1"></v-col>
       <v-col>

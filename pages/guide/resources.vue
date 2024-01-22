@@ -16,8 +16,8 @@
             im Folgenden kurz charakterisiert werden. Als Kriterien dienten der Grad
             der Exhaustivität sowie das Verhältnis von automatischer
             Datenaufbereitung; händischer Bearbeitung und
-            linguistisch-lexikografischer Beschreibung,</p>
-          <p>Die aufgeführten Beispielressourcen sind jeweils die prototypischen
+            linguistisch-lexikografischer Beschreibung, Die aufgeführten Beispielressourcen 
+            sind jeweils die prototypischen
             Vertreter. Das heißt, dass diese hauptsächlich durch den zuvor
             beschriebenen Typ charakterisiert sind. Gleichzeitig gibt es zahlreiche
             Überschneidungen zwischen den Ressourcen: Eine Datenbank kann z.B.
@@ -134,10 +134,10 @@
                   von gesicherter Usualität.</p>
                 <p>Bezüglich der Kandidatenauswahl sind zwei Wege zu unterscheiden:</p>
                 <br/>&nbsp<br/>
-                <strong>Listeneinträge wurde aus dem Korpus extrahiert:</strong>
+                <strong style="text-overflow: ellipsis;">Listeneinträge wurde aus dem Korpus ex&shy;tra&shy;hiert:</strong>
                 <ResourcesList :filter="['PHKO']" :showDesc="false"></ResourcesList>
                 <br/>&nbsp<br/>
-                <strong>Listeneinträge wurde aus dem Korpus extrahiert:</strong>
+                <strong>Existierende Listen wurden im Korpus über&shy;prüft:</strong>
                 <ResourcesList :filter="['SpruchList', 'PREPCONtemp', 'DTWW']" :showDesc="false"></ResourcesList>
               </div>
               <br />
