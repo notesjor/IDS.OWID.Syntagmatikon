@@ -33,11 +33,8 @@ export default {
     }
   },
   mounted() {
-    console.log(this.filter);
     this.resourcesStore = useRessourcesStore();
-    console.log(this.resourcesStore);
     this.resources = this.resourcesStore.getResources(this.filter);
-    console.log(this.resources);
   },
 }
 </script>
