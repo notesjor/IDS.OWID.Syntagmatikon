@@ -28,6 +28,10 @@ div.nolink a::before {
   content: none!important;
 }
 
+div.relink a::before {
+  content: "\F03CC  "!important;
+}
+
 hi {
   font-variant: small-caps;
 }
