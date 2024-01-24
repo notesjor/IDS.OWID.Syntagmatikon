@@ -29,10 +29,10 @@ export default {
     name: "Tile",
     theme: { dark: false },
     props: {
-        title: { type: String, default: null },
-        subtitle: { type: String, default: null },
-        img: { type: String, default: null },
-        link: { type: String, default: null },
+        title: { type: String, default: null }, // Titel
+        subtitle: { type: String, default: null }, // Untertitel (optional)
+        img: { type: String, default: null }, // Bild
+        link: { type: String, default: null }, // Link - Verlinkt werden Titel, Unteritel, Grafik und Text
     },
     data() {
         return {

@@ -1,3 +1,4 @@
+<!-- HINWEIS: Dies ist eine Sub-Kompoente und gehört zu Sampler.vue -->
 <template>
   <div>
     <v-row style="padding:20px 5px 5px 5px">

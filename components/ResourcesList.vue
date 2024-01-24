@@ -18,10 +18,10 @@ import { useResourcesStore } from '~/stores/resources';
 export default {
   name: "ResourcesList",
   props: {
-    filter: {
-      type: Array,
+    filter: { // wenn filter nicht gesetzt, werden alle Ressourcen angezeigt.
+      type: Array, 
     },
-    showDesc: {
+    showDesc: { // wenn showDesc gesetzt, wird die Beschreibung anstelle des nameLong (Standard) angezeigt.
       type: Boolean,
       default: false,
     },

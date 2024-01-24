@@ -26,6 +26,7 @@
                 </h2>
               </a>
             </v-card-title>
+          <!--
             <v-card-subtitle>
               <a :href="x.url" target="_blank">
                 <h3 class="text-lg" style="margin-top: -7px; text-wrap:wrap;">
@@ -33,16 +34,14 @@
                 </h3>
               </a>
             </v-card-subtitle>
+          -->
             <v-card-text>
               <a :href="x.url" target="_blank">
                 <img v-if="x.img != undefined" :src="'/sources/' + x.img"
                   style="width: 100%; height: auto; margin-bottom: 10px;" />
                 <img v-else src="/sources/prepcon_temporal.jpg" style="width: 100%; height: auto; margin-bottom: 10px;" />
-
-                <div>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam non officia vitae, est cumque ea
-                  tenetur quasi quidem id hic facilis necessitatibus architecto totam neque, animi consectetur rem eos?
-                  Unde.
+                
+                <div v-html="x.description">                  
                 </div>
               </a>
               <div>

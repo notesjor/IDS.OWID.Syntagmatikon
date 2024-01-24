@@ -1,3 +1,4 @@
+<!-- HINWEIS: Dies ist eine Sub-Kompoente und gehört zu SamplerItem.vue -->
 <template>
   <span :style="style" v-html="text.text.trim()" @mouseover="hover()" @mouseleave="unpublish()"></span>
 </template>
