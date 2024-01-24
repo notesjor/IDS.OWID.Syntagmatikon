@@ -20,7 +20,7 @@
     <v-col cols="6">
       <v-card class="mx-auto">
         <v-list style="margin-top:-20px">
-          <v-list-item v-for="x in ressources" :key="x.value" style="margin:-20px 0px 0px 0px">
+          <v-list-item v-for="x in resources" :key="x.value" style="margin:-20px 0px 0px 0px">
             <v-list-subheader v-if="x.type === 'subheader'">
               {{ x.title }}
             </v-list-subheader>
@@ -111,7 +111,7 @@ export default {
   theme: { dark: false },
   data() {
     return {
-      ressources: [
+      resources: [
         { "title": "Explorative Datenbanken", type: "subheader", value: 1000 },
         { "title": "KoMuX", value: 1100, tags: ["Datenbank", "Explorativ", "Komposita", "Häufigkeit"], subtitle: "Durchsuche mehr als 50.000 Komposita" },
         { "title": "PREPCON (explorativ)", value: 1200, subtitle: "Präpositionale Wortverbindungen in unterschiedlichen Beschreibungstiefen" },

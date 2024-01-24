@@ -100,7 +100,7 @@
     </v-col>
     <v-col cols="6">
       <!--
-      <div v-for="r in ressources" :key="r">
+      <div v-for="r in resources" :key="r">
         <v-card class="mx-auto" style="margin-top: 10px">
           <v-card-title>
             <div class="text-xl font-bold">
@@ -155,7 +155,7 @@ export default {
       slider1: [20, 40],
       slider2: 50,
 
-      ressources: [
+      resources: [
         //{ "title": "Explorative Datenbanken", type: "subheader", value: 1000 },
         { "title": "KoMuX", code: "komux", value: 1100, subtitle: "Durchsuche mehr als 50.000 Komposita" },
         { "title": "PREPCON (explorativ)", code: "prexp", value: 1200, subtitle: "Präpositionale Wortverbindungen in unterschiedlichen Beschreibungstiefen" },
@@ -190,7 +190,7 @@ export default {
   methods: {
     getName: function (dic) {
       var self = this;
-      var res = self.ressources.find(x => x.code == dic);
+      var res = self.resources.find(x => x.code == dic);
       if (res) {
         return res.title;
       }

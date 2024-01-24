@@ -1,7 +1,7 @@
 // stores/counter.js
 import { defineStore } from 'pinia'
 
-export const useRessourcesStore = defineStore('ressourcesStore', {
+export const useResourcesStore = defineStore('resourcesStore', {
   state: () => {
     return { info: [
       {

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { useRessourcesStore } from '~/stores/ressources';
+import { useResourcesStore } from '~/stores/resources';
 
 export default {
   name: "ResourcesList",
@@ -33,7 +33,7 @@ export default {
     }
   },
   mounted() {
-    this.resourcesStore = useRessourcesStore();
+    this.resourcesStore = useResourcesStore();
     this.resources = this.resourcesStore.getResources(this.filter);
   },
 }

@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import { useRessourcesStore } from '~/stores/ressources';
+import { useResourcesStore } from '~/stores/resources';
 
 export default {
   theme: { dark: false },
@@ -72,7 +72,7 @@ export default {
     }
   },
   mounted() {
-    this.resourcesStore = useRessourcesStore();
+    this.resourcesStore = useResourcesStore();
     this.resources = this.resourcesStore.getResources(null);
   },
   methods: {
@@ -92,8 +92,8 @@ export default {
       // sort
       var set = new Set(this.selected_tags);
 
-      for (let i = 0; i < this.ressources.length; i++) {
-        const entry = this.ressources[i];
+      for (let i = 0; i < this.resources.length; i++) {
+        const entry = this.resources[i];
         if (entry.tags == undefined || entry.tags == null)
           continue;
 
@@ -103,10 +103,10 @@ export default {
             rank++;
         }
 
-        this.ressources[i].rank = rank;
+        this.resources[i].rank = rank;
       }
 
-      this.ressources.sort((a, b) => b.rank - a.rank);
+      this.resources.sort((a, b) => b.rank - a.rank);
     }
   },
   watch: {
