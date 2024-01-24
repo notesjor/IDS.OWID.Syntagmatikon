@@ -41,6 +41,15 @@ export const useRessourcesStore = defineStore('ressourcesStore', {
         "tags": ["Vollautomatisch", "Frequenz", "KWIC", "EMuster"],
       },
       {
+        "key": "PREPCONkon",
+        "nameShort": "PREPCON<sup>kontrastiv</sup>",
+        "nameLong": "PREPCON kontrastiv",
+        "description": 'Frequenzen, automatisch erstellte KWICSund manuell zusammengestellte KWICs und Volltextbelege; Kookkurrenzprofile; Mustertabellen',
+        "img": "",
+        "url": "http://uwv.ids-mannheim.de/prepcon/modul3/index.html",
+        "tags": ["Vollautomatisch", "Frequenz", "KWIC", "EMuster"],
+      },
+      {
         "key": "MAP",
         "nameShort": "MAP",
         "nameLong": "Musterbank Argumentmarkierender Präpositionen",

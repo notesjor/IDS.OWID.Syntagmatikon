@@ -3,8 +3,8 @@
     <v-row>
       <v-col>
         <div>
-          <h1 class="text-3xl font-bold">
-            Ressourcen erklärt
+          <h1>
+            Wort- und Ausdrucksarten
           </h1>
         </div>
       </v-col>
@@ -12,19 +12,9 @@
     <v-row>
       <v-col>
         <div>
-          <p>Das Syntagmatikon vereint sehr unterschiedliche Ressourcentypen, die
-            im Folgenden kurz charakterisiert werden. Als Kriterien dienten der Grad
-            der Exhaustivität sowie das Verhältnis von automatischer
-            Datenaufbereitung; händischer Bearbeitung und
-            linguistisch-lexikografischer Beschreibung, Die aufgeführten Beispielressourcen
-            sind jeweils die prototypischen
-            Vertreter. Das heißt, dass diese hauptsächlich durch den zuvor
-            beschriebenen Typ charakterisiert sind. Gleichzeitig gibt es zahlreiche
-            Überschneidungen zwischen den Ressourcen: Eine Datenbank kann z.B.
-            gleichzeitig als Inventar verstanden werden wie
-            PREPCON<sup>explorativ</sup> oder KoMuX. Um diese Mehrfachzuordnung
-            sichtbar zu machen, wurden Suchattribute hinzugefügt, die eine
-            automatische Bündelung nach spezifischen Kriterien ermöglichen.</p>
+          <p>Die Beschreibungskandidaten bzw. Stichwörter im Syntagmatikon sowie deren Komponenten basieren auf
+            unterschiedlichen Wort- und Ausdrucksarten. Phraseme und feste Sätze werden als geronnene Ausdrucksarten
+            angesehen und daher ebenso als autonome Einheit betrachtet wie klassischen Wortarten:</p>
           <br />&nbsp;<br />
         </div>
       </v-col>
@@ -35,121 +25,73 @@
     <v-row>
       <v-col cols="12">
         <div class="container">
-          <tile title="Explorative Datenbanken" img="/resources/01.png">
-            Die explorativen Datenbanken im Syntagmatikon bieten Informationen zu umfassenden Sprachausschnitten auf
-            der Basis von Korpusdaten (aktuell: Komposita und Präposition-Nomen-Verbindungen). Solche Datenbanken
-            zeichnen sich dadurch aus, dass sie primär automatisch erstellt wurden und keine qualitativen Angaben
-            enthalten (z.B. Bedeutungsbeschreibungen). Sie bieten einen strukturierten Zugang zu sprachlichen
-            Massendaten: Mithilfe von Suchen kann man sich Zusammenhänge innerhalb eines Wortschatzausschnitts
-            erschließen, die sonst aufgrund der schieren Masse nicht sichtbar wären. Wie die Ergebnisse zu
-            interpretieren sind, hängt dann vom Erkenntnisinteresse ab. Man muss aber immer damit rechnen, dass es
-            Befunde gibt, die nicht in das eigene Erwartungsraster passen, denn der Computer „rechnet“ nur.
-            <resources-list :filter="['PREPCONex', 'KoMuX']" :showDesc="true"></resources-list>
+          <tile title="Nomina" img="/dummy_300x160/dummy_03.png">
+            Als Nomina werden alle Wörter bezeichnet, die als Subjekte, Objekte, Prädikative oder Adverbiale in einem Satz
+            auftreten können. Sie werden in der Regel durch Artikel begleitet und können in der Regel durch Pronomen
+            ersetzt werden. Nomina können in der Regel durch Adjektive näher bestimmt werden. Sie können in der Regel
+            durch Verben näher bestimmt werden. Sie können in der Regel durch Adverbien näher bestimmt werden. Sie können
+            in der Regel durch Präpositionen näher bestimmt werden. Sie können in der Regel durch Nomina näher bestimmt
+            werden. Sie können in der Regel durch Genitive näher bestimmt werden. Sie können in der Regel durch
+            Partizipien näher bestimmt werden. Sie können in der Regel durch Infinitive näher bestimmt werden. Sie können
+            in der Regel durch Nebensätze näher bestimmt werden. Sie können in der Regel durch Präpositionalphrasen näher
+            bestimmt werden. Sie können in der Regel durch Adverbialphrasen näher bestimmt werden.
+            <resources-list :filter="['PREPCON', 'KoMuX', 'WVBF', 'PHKO']"></resources-list>
           </tile>
 
-          <tile title="Deskriptive Datenbank" img="/resources/02.png">
-            <p>Die deskriptiven Datenbanken im Syntagmatikon stellen eine Kombination aus automatisch erstellten
-              Datenmengen und qualitativ erarbeiteten Informationen dar. Die Basis bilden Korpuserhebungen, bei denen
-              <a href="../../2.2_DatenInformationstypen/2.2.1_Frequenz/2.2.1_Frequenz.docx">Frequenzen</a> ermittelt
-              und <a href="../../2.2_DatenInformationstypen/2.2.6_Belege/2.2.6_ManuellBelegAuswahl.docx">Korpusbelege</a>
-              extrahiert wurden. Diese empirische Basis wurde im weiteren Arbeitsverlauf nach spezifischen
-              linguistischen Modellen manuell ausgewertet und <u>annotiert</u>.
-            </p>
-            <p>Solche Datenbanken bieten automatische Suchfunktionen an, mit denen die sprachlichen Ausdrucksgruppen
-              und -muster (<u>Muster</u>) nach unterschiedlichen linguistischen Kriterien zusammengestellt werden
-              können.</p>
-            <resources-list :filter="['MAP', 'WÖRE']" :showDesc="true"></resources-list>
+          <tile title="Verben" img="/dummy_300x160/dummy_04.png">
+            Als Verben werden alle Wörter bezeichnet, die als Prädikate in einem Satz auftreten können. Sie werden in der
+            Regel durch Nomina begleitet und können in der Regel durch Pronomen ersetzt werden. Verben können in der Regel
+            durch Adverbien näher bestimmt werden. Sie können in der Regel durch Präpositionen näher bestimmt werden. Sie
+            können in der Regel durch Nomina näher bestimmt werden. Sie können in der Regel durch Genitive näher bestimmt
+            werden. Sie können in der Regel durch Partizipien näher bestimmt werden. Sie können in der Regel durch
+            Infinitive näher bestimmt werden. Sie können in der Regel durch Nebensätze näher bestimmt werden. Sie können
+            in der Regel durch Präpositionalphrasen näher bestimmt werden. Sie können in der Regel durch Adverbialphrasen
+            näher bestimmt werden.
+            <resources-list :filter="['MAP', 'KWViD']"></resources-list>
           </tile>
 
-          <tile title="Inventare und Sammlungen" img="/resources/03.png">
-            <div>
-              <p>Inventare im Syntagmatikon sind aus dem Korpus extrahierte oder im
-                Korpus überprüfte Sammlungen sprachlicher Ausdrücke ähnlichen Typs. Der
-                Wert dieser Ressourcen liegt darin, dass solche Listen die
-                Gebräuchlichkeit dieser Einheiten mittels Korpusanalysen dokumentieren.
-                In der Zeit vor den Korpora basierten Sammlungen zumeist auf früheren
-                Sammlungen und Listen. Es gab ein historisch gewachsenes
-                Beispielgedächtnis. Dies führte u.a. zu oft beklagten veralteten
-                Beispiele in Wörterbüchern und Lehrwerken.</p>
-              <p>Korpusbasierte Inventare können als gesicherte empirische Basis für
-                die Forschung als auch Referenzquellen für Wörterbücher und
-                Lehrmaterialien von Nutzen sein.</p>
-              <p>Ein Inventar kann jedoch nie alle Ausdrücke eines
-                Wortschatzausschnittes erfassen, da auch die zugrunde liegende
-                Korpusbasis immer nur eine Stichprobe der Sprache darstellt. Aber
-                diejenigen Kandidaten, die z.B. eine große Häufigkeit aufweisen, sind
-                von gesicherter Usualität.</p>
-              <p>Bezüglich der Kandidatenauswahl sind zwei Wege zu unterscheiden:</p>
-              <br />&nbsp<br />
-              <strong style="text-overflow: ellipsis;">Listeneinträge wurde aus dem Korpus
-                ex&shy;tra&shy;hiert:</strong>
-              <resources-list :filter="['PHKO']" :showDesc="false"></resources-list>
-              <br />&nbsp<br />
-              <strong>Existierende Listen wurden im Korpus über&shy;prüft:</strong>
-              <resources-list :filter="['SpruchList', 'PREPCONtemp', 'DTWW']" :showDesc="false"></resources-list>
-            </div>
+          <tile title="Präpositionen" img="/dummy_300x160/dummy_05.png">
+            Als Präpositionen werden alle Wörter bezeichnet, die als Präpositionen in einem Satz auftreten können. Sie
+            werden in der Regel durch Nomina begleitet und können in der Regel durch Pronomen ersetzt werden.
+            Präpositionen können in der Regel durch Nomina näher bestimmt werden. Sie können in der Regel durch Genitive
+            näher bestimmt werden. Sie können in der Regel durch Partizipien näher bestimmt werden. Sie können in der
+            Regel durch Infinitive näher bestimmt werden. Sie können in der Regel durch Nebensätze näher bestimmt werden.
+            Sie können in der Regel durch Präpositionalphrasen näher bestimmt werden. Sie können in der Regel durch
+            Adverbialphrasen näher bestimmt werden.
+            <resources-list :filter="['PREPCON', 'MAP', 'WVBF']"></resources-list>
           </tile>
 
-          <tile title="Online-Wörterbücher" img="/resources/04.png">
-            <div>
-              <p>Online-Wörterbücher im Syntagmatikon beinhalten korpusbasierte Wörterbuchartikel im Hypertextformat.
-                Unter diese Kategorie fallen sowohl Ressourcen mit einer sehr komprimierten Artikelstruktur (Belege;
-                Kategorien <a href="https://www.owid.de/wb/progdb/start.html">Verlaufsformen</a>; <a
-                  href="https://www.owid.de/plus/redeeinleiter/">Redeeinleiter</a>)als auch solche mit lexikografisch
-                verfassten Texte zu Aspekten wie Bedeutungen, typischen Gebrauchsmerkmalen, Kontexten, Varianten und
-                Abwandlungen angereichert mit Korpusdaten (<a
-                  href="https://www.owid.de/wb/sprw/start.html">Sprichwörterbuch</a>; Feste <a
-                  href="https://www.owid.de/artikel/309077">Wortverbindungen</a>; <a
-                  href="http://wvonline.ids-mannheim.de/idiome_russ/hintergrund.htm">Deutsche Russische Idiome
-                  online</a>)</p>
-            </div>
-            <br />
-            <resources-list :filter="['SPRW', 'KWViD', 'WVBF']" :showDesc="false"></resources-list>
+          <tile title="Adjektive" img="/dummy_300x160/dummy_06.png">
+            Als Adjektive werden alle Wörter bezeichnet, die als Attribute in einem Satz auftreten können. Sie werden in
+            der Regel durch Nomina begleitet und können in der Regel durch Pronomen ersetzt werden. Adjektive können in
+            der Regel durch Adverbien näher bestimmt werden. Sie können in der Regel durch Präpositionen näher bestimmt
+            werden. Sie können in der Regel durch Nomina näher bestimmt werden. Sie können in der Regel durch Genitive
+            näher bestimmt werden. Sie können in der Regel durch Partizipien näher bestimmt werden. Sie können in der
+            Regel durch Infinitive näher bestimmt werden. Sie können in der Regel durch Nebensätze näher bestimmt werden.
+            Sie können in der Regel durch Präpositionalphrasen näher bestimmt werden. Sie können in der Regel durch
+            Adverbialphrasen näher bestimmt werden.
+            <resources-list :filter="['WVBF', 'KoMuX', 'PREPCONkon', 'PHKO']"></resources-list>
           </tile>
 
-          <tile title="Präsentationsformate" img="/resources/05.png">
-            <div>
-              <p>dynamisch-flexible Präsentations- und Visualisierungsformen, bei denen automatisch ermittelte
-                Korpusausschnitte wie KWICs, Kookkurrenzprofile und Slot-Filler-Tabellen ins Zentrum der Ressource
-                rücken. Informationen zu usuellem Gebrauch sind primär anhand von linguistisch systematisierten, aber
-                authentischen Sprachausschnitten ableitbar sind. (<a
-                  href="http://uwv.ids-mannheim.de/prepcon/infotexte/info.html#sprachaneignung">Sprachaneignung durch
-                  wiederkehrende Muster</a>) Die ordnende Hand bleibt jedoch unverzichtbar. Der Unterschied zu
-                herkömmlichen Beschreibungen ist nur,
-                dass die analytische Arbeit – wenn man so will – eher im Hintergrund abläuft, damit in großen Teilen
-                implizit bleibt, und nicht (oder nur knapp) in Form von metasprachlichen Texten sichtbar wird.</p>
-            </div>
-            <resources-list :filter="['WVBF', 'PREPCON']" :showDesc="false"></resources-list>
+          <tile title="Phraseme" img="/dummy_300x160/dummy_07.png">
+            Als Phrasem werden alle Wörter bezeichnet, die als Prädikate in einem Satz auftreten können. Sie werden in der
+            Regel durch Nomina begleitet und können in der Regel durch Pronomen ersetzt werden. Verben können in der Regel
+            durch Adverbien näher bestimmt werden. Sie können in der Regel durch Präpositionen näher bestimmt werden. Sie
+            können in der Regel durch Nomina näher bestimmt werden. Sie können in der Regel durch Genitive näher bestimmt
+            werden. Sie können in der Regel durch Partizipien näher bestimmt werden. Sie können in der Regel durch
+            Infinitive näher bestimmt werden. Sie können in der Regel durch Nebensätze näher bestimmt werden. Sie können
+            in der Regel durch Präpositionalphrasen näher bestimmt werden. Sie können in der Regel durch Adverbialphrasen
+            näher bestimmt werden.
+            <resources-list :filter="['PHKO', 'PREPCON', 'MAP', 'WÖRE', 'DTWW', 'DRI']"></resources-list>
           </tile>
 
-          <tile title="Pilot- und Einzelstudien" img="/resources/06.png">
-            <div>
-              Korpuszentrierte Präsentationsformate betonen die Analyse manuell systematisierter Korpusdaten. Hierbei
-              werden Gebrauchsmerkmale direkt aus authentischen Sprachdaten erschlossen, um die Sprache realitätsnah zu
-              erforschen. Optionale narrative Kommentare bieten zusätzlichen Kontext, ohne den Fokus von den primären
-              Korpusdaten abzulenken.
-            </div>
-            <resources-list :filter="['ZUWV', 'PREPCONtemp', 'WVBF']"></resources-list>
-          </tile>
-
-          <tile title="Datikon" img="/resources/07.png">
-            <div>
-              <p>Das Datikon enthält dynamisch-flexible Präsentations- und
-                Visualisierungsformen, bei denen automatisch ermittelte
-                Korpusausschnitte wie KWICs, Kookkurrenzprofile und Slot-Filler-Tabellen
-                ins Zentrum der Ressource rücken. Informationen zu usuellem Gebrauch
-                sind primär anhand von linguistisch systematisierten, aber authentischen
-                Sprachausschnitten ableitbar sind. (<a
-                  href="http://uwv.ids-mannheim.de/prepcon/infotexte/info.html#sprachaneignung">Sprachaneignung
-                  durch wiederkehrende Muster</a>)
-                Die ordnende Hand bleibt jedoch unverzichtbar. Der Unterschied zu
-                herkömmlichen Beschreibungen ist nur, dass die analytische Arbeit – wenn
-                man so will – eher im Hintergrund abläuft, damit in großen Teilen
-                implizit bleibt, und nicht (oder nur knapp) in Form von metasprachlichen
-                Texten sichtbar wird.</p>
-
-            </div>
-            <resources-list :filter="['WVBF', 'PREPCON']"></resources-list>
+          <tile title="Fest Sätze" img="/dummy_300x160/dummy_08.png">
+            Als 'Feste Sätze' werden alle Abfolgen von Wörtern bezeichnet. In der Regel handelt es sich um Sätze, die in
+            der Regel in der gleichen Form auftreten und in der Regel eine feste Bedeutung haben. Sie werden in der Regel
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis eius aspernatur, corrupti ex dignissimos
+            reprehenderit incidunt nemo nesciunt, tempora earum excepturi nobis! Dolore blanditiis illo dolorem nobis eum,
+            fugit optio!
+            <resources-list :filter="['SpruchList', 'PHKO', 'SPRW']"></resources-list>
           </tile>
 
         </div>
