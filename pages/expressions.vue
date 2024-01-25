@@ -1,3 +1,9 @@
+<script setup>
+definePageMeta({
+  layout: "full",
+})
+</script>
+
 <template>
   <div style="max-width: 80ch; margin:auto">
     <v-row>

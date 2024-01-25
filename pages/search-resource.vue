@@ -1,3 +1,9 @@
+<script setup>
+definePageMeta({
+  layout: "full",
+})
+</script>
+
 <template>
   <div class="nolink">
     <v-row>

@@ -1,3 +1,9 @@
+<script setup>
+definePageMeta({
+  layout: "full",
+})
+</script>
+
 <template>
   <v-row>
     <v-col cols="2"></v-col>

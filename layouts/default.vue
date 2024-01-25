@@ -86,10 +86,14 @@
 
     <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
       <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
-        <slot />
+        <div style="max-width: 80ch;">
+          <slot />
+        </div>
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
-        <slot />
+        <div style="max-width: 80ch;">
+          <slot />
+        </div>
       </div>
     </div>
 
@@ -204,7 +208,7 @@ export default {
     this.footerDsgvo = this.$config.public.footerDsgvo;
 
     this.windowResize();
-    window.addEventListener('resize', this.windowResize);    
+    window.addEventListener('resize', this.windowResize);
   },
 
   beforeDestroy() {

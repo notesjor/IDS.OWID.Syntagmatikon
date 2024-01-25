@@ -1,10 +1,14 @@
 # IDS.OWID.Syntagmatikon
 
 ## Was liegt wo? - Für Autor*innen
-- layouts > default.vue
+- layouts - hier liegen Layouts, die folgendes festlegen
     - Layout / Template
     - Kopfzeile / Fußzeile
     - Menü
+    - Verfügbare Layouts:
+        - base = Bitte nicht verändern. Dies ist das Basis-Layout, von dem alle anderen abgeleitet werden.
+        - default = Dies ist das automatisch Standard-Layout
+        - full = Layout für Seiten mit voller Breite.
 - stores > resources
     - Informationen zu verfügbaren Ressourcen
     - Kurz-/Langnamen für Ressourcen z. B. KoMuX / Kompositamuster-Explorer
