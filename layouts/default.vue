@@ -22,8 +22,8 @@
       </div>
     </div>
 
-    <v-navigation-drawer :permanent="!useMobileView" :rail="useMobileView"
-      style="z-index:1; transform: none;" expand-on-hover>
+    <v-navigation-drawer :permanent="!useMobileView" :rail="useMobileView" style="z-index:1; transform: none;"
+      expand-on-hover>
       <!-- LOGO START -->
       <div class="text-xl" style="margin: 7px 0px 15px 15px; opacity: 1" v-show="!useMobileView">
         <img alt="Logo" src="/logo_syntagmatikon.svg"
@@ -56,7 +56,7 @@
         <v-list-subheader>Ressourcenkompass</v-list-subheader>
         <router-link to="/resources">
           <v-list-item prepend-icon="mdi-book-open-variant" title="Ressourcentypen"></v-list-item>
-        </router-link>            
+        </router-link>
         <router-link to="/datatypes">
           <v-list-item prepend-icon="mdi-book-open-variant" title="Daten- und Informationstypen"></v-list-item>
         </router-link>
@@ -65,7 +65,7 @@
         </router-link>
         <router-link to="/patterns">
           <v-list-item prepend-icon="mdi-book-open-variant" title="Musterzugänge"></v-list-item>
-        </router-link>    
+        </router-link>
       </v-list>
       <!-- ADDITIONAL INFORMATION END -->
 
@@ -83,7 +83,7 @@
       </v-list>
 
     </v-navigation-drawer>
-    
+
     <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
       <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
         <slot />
@@ -137,17 +137,17 @@
 </template>
 
 <style scoped>
-.v-list-subheader{
+.v-list-subheader {
   margin-left: 45px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
-
 </style>
 
 <style>
 .v-list-item__prepend {
-  max-width: 35px!important;
+  max-width: 35px !important;
 }
+
 body {
   hyphens: auto;
   hyphenate-character: auto 5;
@@ -169,6 +169,7 @@ useHead({
     lang: 'de',
   }
 })
+
 </script>
 
 <script>
@@ -203,7 +204,7 @@ export default {
     this.footerDsgvo = this.$config.public.footerDsgvo;
 
     this.windowResize();
-    window.addEventListener('resize', this.windowResize);
+    window.addEventListener('resize', this.windowResize);    
   },
 
   beforeDestroy() {

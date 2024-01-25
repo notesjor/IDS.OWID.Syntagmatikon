@@ -1,2 +1,0 @@
-<p>Dies ist ein <strong>Beispiel</strong> mit <em>verschiedenen</em>
-<em><strong><u>Annotationen</u></strong></em>.</p>

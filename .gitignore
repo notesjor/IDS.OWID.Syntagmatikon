@@ -8,3 +8,5 @@ node_modules
 dist
 .DS_Store
 TEMP
+/tools/convert/page.txt
+/tools/convert/document.docx

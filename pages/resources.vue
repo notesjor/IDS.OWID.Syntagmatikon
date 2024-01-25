@@ -35,7 +35,7 @@
     <v-row>
       <v-col cols="12">
         <div class="container">
-          <tile title="Explorative Datenbanken" img="/resources/01.png">
+          <tile title="Explorative Datenbanken" img="/img/resources/01.png">
             Die explorativen Datenbanken im Syntagmatikon bieten Informationen zu umfassenden Sprachausschnitten auf
             der Basis von Korpusdaten (aktuell: Komposita und Präposition-Nomen-Verbindungen). Solche Datenbanken
             zeichnen sich dadurch aus, dass sie primär automatisch erstellt wurden und keine qualitativen Angaben
@@ -47,7 +47,7 @@
             <resources-list :filter="['PREPCONex', 'KoMuX']" :showDesc="true"></resources-list>
           </tile>
 
-          <tile title="Deskriptive Datenbank" img="/resources/02.png">
+          <tile title="Deskriptive Datenbank" img="/img/resources/02.png">
             <p>Die deskriptiven Datenbanken im Syntagmatikon stellen eine Kombination aus automatisch erstellten
               Datenmengen und qualitativ erarbeiteten Informationen dar. Die Basis bilden Korpuserhebungen, bei denen
               <a href="../../2.2_DatenInformationstypen/2.2.1_Frequenz/2.2.1_Frequenz.docx">Frequenzen</a> ermittelt
@@ -61,7 +61,7 @@
             <resources-list :filter="['MAP', 'WÖRE']" :showDesc="true"></resources-list>
           </tile>
 
-          <tile title="Inventare und Sammlungen" img="/resources/03.png">
+          <tile title="Inventare und Sammlungen" img="/img/resources/03.png">
             <div>
               <p>Inventare im Syntagmatikon sind aus dem Korpus extrahierte oder im
                 Korpus überprüfte Sammlungen sprachlicher Ausdrücke ähnlichen Typs. Der
@@ -90,7 +90,7 @@
             </div>
           </tile>
 
-          <tile title="Online-Wörterbücher" img="/resources/04.png">
+          <tile title="Online-Wörterbücher" img="/img/resources/04.png">
             <div>
               <p>Online-Wörterbücher im Syntagmatikon beinhalten korpusbasierte Wörterbuchartikel im Hypertextformat.
                 Unter diese Kategorie fallen sowohl Ressourcen mit einer sehr komprimierten Artikelstruktur (Belege;
@@ -107,7 +107,7 @@
             <resources-list :filter="['SPRW', 'KWViD', 'WVBF']" :showDesc="false"></resources-list>
           </tile>
 
-          <tile title="Präsentationsformate" img="/resources/05.png">
+          <tile title="Präsentationsformate" img="/img/resources/05.png">
             <div>
               <p>dynamisch-flexible Präsentations- und Visualisierungsformen, bei denen automatisch ermittelte
                 Korpusausschnitte wie KWICs, Kookkurrenzprofile und Slot-Filler-Tabellen ins Zentrum der Ressource
@@ -122,7 +122,7 @@
             <resources-list :filter="['WVBF', 'PREPCON']" :showDesc="false"></resources-list>
           </tile>
 
-          <tile title="Pilot- und Einzelstudien" img="/resources/06.png">
+          <tile title="Pilot- und Einzelstudien" img="/img/resources/06.png">
             <div>
               Korpuszentrierte Präsentationsformate betonen die Analyse manuell systematisierter Korpusdaten. Hierbei
               werden Gebrauchsmerkmale direkt aus authentischen Sprachdaten erschlossen, um die Sprache realitätsnah zu
@@ -132,7 +132,7 @@
             <resources-list :filter="['ZUWV', 'PREPCONtemp', 'WVBF']"></resources-list>
           </tile>
 
-          <tile title="Datikon" img="/resources/07.png">
+          <tile title="Datikon" img="/img/resources/07.png">
             <div>
               <p>Das Datikon enthält dynamisch-flexible Präsentations- und
                 Visualisierungsformen, bei denen automatisch ermittelte

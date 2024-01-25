@@ -12,10 +12,10 @@
     <v-row style="margin-top:-50px">
       <v-col>
         <v-carousel>
-          <v-carousel-item src="/img/pd_01.png"></v-carousel-item>
-          <v-carousel-item src="/img/pd_02.png"></v-carousel-item>
-          <v-carousel-item src="/img/pd_03.png"></v-carousel-item>
-          <v-carousel-item src="/img/pd_04.png"></v-carousel-item>
+          <v-carousel-item src="/img/project-description/pd_01.png"></v-carousel-item>
+          <v-carousel-item src="/img/project-description/pd_02.png"></v-carousel-item>
+          <v-carousel-item src="/img/project-description/pd_03.png"></v-carousel-item>
+          <v-carousel-item src="/img/project-description/pd_04.png"></v-carousel-item>
         </v-carousel>
       </v-col>
     </v-row>

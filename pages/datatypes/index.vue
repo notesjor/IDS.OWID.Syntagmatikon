@@ -32,273 +32,63 @@
         <h2 style="margin:-20px 0px 10px 10px; border-bottom: 3px lightgray solid;">Automatische Informationstypen</h2>
 
         <div class="container">
-          <v-card :style="highlightItem('Frequenzen')">
-            <v-card-title>
-              <div style="position: relative; justify-content: center;">
-                <img src="/guide/methods/frequenz.jpg" alt=""
-                  style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
-                <div
-                  style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
-                  <h1 class="text-xl font-bold">
-                    Frequenzen
-                  </h1>
-                </div>
-              </div>
-            </v-card-title>
-            <v-card-text>
-              <div>
-                <p>Was sagen Frequenzen aus? Welche Aussagen lassen sich damit treffen? Was bedeutet ein Trend?</p>
-              </div>
-            </v-card-text>
-          </v-card>
+          <tile title="Frequenzen" img="/img/datatypes/frequenz.jpg" link="/datatypes/frequency">
+            Was sagen Frequenzen aus? Welche Aussagen lassen sich damit treffen? Was bedeutet ein Trend?
+          </tile>
 
-          <v-card :style="highlightItem('KWIC')">
-            <v-card-title>
-              <div style="position: relative; display: flex; justify-content: center;">
-                <img src="/guide/methods/kwic.jpg" alt=""
-                  style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
-                <div
-                  style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%;">
-                  <h1 class="text-xl font-bold">
-                    KWIC (KeyWord In Context)
-                  </h1>
-                </div>
-              </div>
-            </v-card-title>
-            <v-card-text>
-              <div>
-                Was sagt ein KWIC-Beleg aus? Welche Aussagen lassen sich damit treffen? Wie lassen sich größere Bedeutungseinheiten damit erschließen?
-              </div>
-            </v-card-text>
-          </v-card>          
+          <tile title="KWIC (KeyWord In Context)" img="/img/datatypes/kwic.jpg" link="/datatypes/kwic">
+            Was sagt ein KWIC-Beleg aus? Welche Aussagen lassen sich damit treffen? Wie lassen sich größere Bedeutungseinheiten damit erschließen?
+          </tile>
 
-          <v-card :style="highlightItem('Volltextstellen')">
-            <v-card-title>
-              <div style="position: relative; justify-content: center;">
-                <img src="/guide/methods/belege.jpg" alt=""
-                  style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
-                <div
-                  style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
-                  <h1 class="text-xl font-bold">
-                    Volltextstellen 
-                  </h1>
-                </div>
-              </div>
-            </v-card-title>
-            <v-card-text>
-              <div>
-                <p>Welche Fragen lassen sich mit größeren Volltextstellen betrachten/beantworten? Welche Vorteile ergeben sich gegenüber KWIC?</p>
-              </div>
-            </v-card-text>
-          </v-card>
+          <tile title="Volltextstellen" img="/img/datatypes/belege.jpg" link="/datatypes/full-text">
+            Welche Fragen lassen sich mit größeren Volltextstellen betrachten/beantworten? Welche Vorteile ergeben sich gegenüber KWIC?
+          </tile>
 
-          <v-card :style="highlightItem('KA-Profile')">
-            <v-card-title>
-              <div style="position: relative; justify-content: center;">
-                <img src="/guide/methods/kookkurrenz.jpg" alt=""
-                  style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
-                <div
-                  style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
-                  <h1 class="text-xl font-bold">
-                    Kookkurrenzprofile
-                  </h1>
-                </div>
-              </div>
-            </v-card-title>
-            <v-card-text>
-              <div>
-                <p>Was sind Kookkurrenzprofile? Wie lassen sich diese Wortpartner statistisch berechnen?</p>
-              </div>
-            </v-card-text>
-          </v-card>
+          <tile title="Kookkurrenzprofile" img="/img/datatypes/kookkurrenz.jpg" link="/datatypes/cooccurrence">
+            Was sind Kookkurrenzprofile? Wie lassen sich diese Wortpartner statistisch berechnen?
+          </tile>
 
-          <v-card :style="highlightItem('KWIC')">
-            <v-card-title>
-              <div style="position: relative; display: flex; justify-content: center;">
-                <img src="/guide/methods/muster.jpg" alt=""
-                  style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
-                <div
-                  style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%;">
-                  <h1 class="text-xl font-bold">
-                    Muster-/Lückenfüllertabellen
-                  </h1>
-                </div>
-              </div>
-            </v-card-title>
-            <v-card-text>
-              <div>
-                Wie können Muster-/Lückenfüllertabellen zur Analyse von Wortverbindungen genutzt werden? Welche Aussagen lassen sich damit treffen?
-              </div>
-            </v-card-text>
-          </v-card>          
+          <tile title="Muster-/Lückenfüllertabellen" img="/img/datatypes/muster.jpg" link="/datatypes/patterntable">
+            Wie können Muster-/Lückenfüllertabellen zur Analyse von Wortverbindungen genutzt werden? Welche Aussagen lassen sich damit treffen?
+          </tile>
 
-          <v-card :style="highlightItem('Volltextstellen')">
-            <v-card-title>
-              <div style="position: relative; justify-content: center;">
-                <img src="/guide/methods/annotate.jpg" alt=""
-                  style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
-                <div
-                  style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
-                  <h1 class="text-xl font-bold">
-                    Annotierte Daten 
-                  </h1>
-                </div>
-              </div>
-            </v-card-title>
-            <v-card-text>
-              <div>
-                <p>Wie werden Daten annotiert und warum? Welche Aussagen lassen sich damit treffen? Was sind übliche Annotationen?</p>
-              </div>
-            </v-card-text>
-          </v-card>
+          <tile title="Annotierte Daten" img="/img/datatypes/annotate.jpg" link="/datatypes/annotation">
+            Wie werden Daten annotiert und warum? Welche Aussagen lassen sich damit treffen? Was sind übliche Annotationen?
+          </tile>      
         </div>
 
         <h2 style="margin:40px 0px 10px 10px; border-bottom: 3px lightgray solid;">Bearbeitete Informationstypen</h2>
 
         <div class="container">
-          <v-card :style="highlightItem('Kategorial')">
-            <v-card-title>
-              <div style="position: relative; justify-content: center;">
-                <img src="/guide/methods/category.jpg" alt=""
-                  style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
-                <div
-                  style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
-                  <h1 class="text-xl font-bold">
-                    Kategoriale-Label
-                  </h1>
-                </div>
-              </div>
-            </v-card-title>
-            <v-card-text>
-              <div>
-                <p>Welche Aussage treffen Kategorien? Worin unterscheiden sich bestimtme Kategorien?</p>
-              </div>
-            </v-card-text>
-          </v-card>
 
-          <v-card :style="highlightItem('Belege')">
-            <v-card-title>
-              <div style="position: relative; display: flex; justify-content: center;">
-                <img src="/guide/methods/belege2.jpg" alt=""
-                  style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
-                <div
-                  style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%;">
-                  <h1 class="text-xl font-bold">
-                    Belege
-                  </h1>
-                </div>
-              </div>
-            </v-card-title>
-            <v-card-text>
-              <div>
-                Warum werden Belege manuell ausgewählt? Wie unterscheiden sich Belege von KWIC? Welche Aussagen lassen sich damit treffen?
-              </div>
-            </v-card-text>
-          </v-card>          
 
-          <v-card :style="highlightItem('NarrativeBeschreibung')">
-            <v-card-title>
-              <div style="position: relative; justify-content: center;">
-                <img src="/guide/methods/narrativ.jpg" alt=""
-                  style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
-                <div
-                  style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
-                  <h1 class="text-xl font-bold">
-                    Narrative Beschreibung 
-                  </h1>
-                </div>
-              </div>
-            </v-card-title>
-            <v-card-text>
-              <div>
-                <p>Warum werden narrative Beschreibungen erstellt? Welche Konzepte sind damit verbunden?</p>
-              </div>
-            </v-card-text>
-          </v-card>
+          <tile title="Kategoriale-Label" img="/img/datatypes/category.jpg" link="/datatypes/category">
+            Welche Aussage treffen Kategorien? Worin unterscheiden sich bestimtme Kategorien?
+          </tile>
 
-          <v-card :style="highlightItem('Basiselemente')">
-            <v-card-title>
-              <div style="position: relative; justify-content: center;">
-                <img src="/guide/methods/elemente.jpg" alt=""
-                  style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
-                <div
-                  style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
-                  <h1 class="text-xl font-bold">
-                    Basiselemente
-                  </h1>
-                </div>
-              </div>
-            </v-card-title>
-            <v-card-text>
-              <div>
-                <p>Was sind Basiselemente? Wie lassen sich diese grundlegenden Elemente kombinieren?</p>
-              </div>
-            </v-card-text>
-          </v-card>
+          <tile title="Belege" img="/img/datatypes/belege2.jpg" link="/datatypes/matches">
+            Warum werden Belege manuell ausgewählt? Wie unterscheiden sich Belege von KWIC? Welche Aussagen lassen sich damit treffen?
+          </tile>
 
-          <v-card :style="highlightItem('Kontextzeilen')">
-            <v-card-title>
-              <div style="position: relative; display: flex; justify-content: center;">
-                <img src="/guide/methods/bezuege.jpg" alt=""
-                  style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
-                <div
-                  style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%;">
-                  <h1 class="text-xl font-bold">
-                    Kontextzeilen
-                  </h1>
-                </div>
-              </div>
-            </v-card-title>
-            <v-card-text>
-              <div>
-                Wie lassen sich Kontextzeilen nutzen? Welche Aussagen lassen sich damit treffen?
-              </div>
-            </v-card-text>
-          </v-card>          
+          <tile title="Narrative Beschreibung " img="/img/datatypes/narrativ.jpg" link="/datatypes/narration">
+            Welche Fragen lassen sich mit größeren Volltextstellen betrachten/beantworten? Welche Vorteile ergeben sich gegenüber KWIC?
+          </tile>
 
-          <v-card :style="highlightItem('Satellitenfelder')">
-            <v-card-title>
-              <div style="position: relative; justify-content: center;">
-                <img src="/guide/methods/kreis.jpg" alt=""
-                  style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
-                <div
-                  style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
-                  <h1 class="text-xl font-bold">
-                    Satellitenfelder
-                  </h1>
-                </div>
-              </div>
-            </v-card-title>
-            <v-card-text>
-              <div>
-                <p>
-                  Wie lassen sich Satellitenfelder nutzen? Welche Aussagen lassen sich damit treffen? Welche Satellitenfelder sind üblich?
-                </p>
-              </div>
-            </v-card-text>
-          </v-card>
+          <tile title="Basiselemente" img="/img/datatypes/elemente.jpg" link="/datatypes/elements">
+            Was sind Basiselemente? Wie lassen sich diese grundlegenden Elemente kombinieren?
+          </tile>
 
-          <v-card :style="highlightItem('Musterangaben')">
-            <v-card-title>
-              <div style="position: relative; justify-content: center;">
-                <img src="/guide/methods/pattern.jpg" alt=""
-                  style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
-                <div
-                  style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
-                  <h1 class="text-xl font-bold">
-                    Musterangaben
-                  </h1>
-                </div>
-              </div>
-            </v-card-title>
-            <v-card-text>
-              <div>
-                <p>
-                  Wie lassen sich Musterangaben nutzen? Welche Aussagen lassen sich damit treffen? Welche Musterangaben sind üblich?
-                </p>
-              </div>
-            </v-card-text>
-          </v-card>
+          <tile title="Kontextzeilen" img="/img/datatypes/bezuege.jpg" link="/datatypes/context">
+            Wie lassen sich Kontextzeilen nutzen? Welche Aussagen lassen sich damit treffen?
+          </tile>
+
+          <tile title="Satellitenfelder" img="/img/datatypes/kreis.jpg" link="/datatypes/fields">
+            Wie lassen sich Satellitenfelder nutzen? Welche Aussagen lassen sich damit treffen? Welche Satellitenfelder sind üblich?
+          </tile>  
+
+          <tile title="Musterangaben" img="/img/datatypes/pattern.jpg" link="/datatypes/expression">
+            Wie lassen sich Musterangaben nutzen? Welche Aussagen lassen sich damit treffen? Welche Musterangaben sind üblich?
+          </tile>  
         </div>
       </v-col>
     </v-row>
