@@ -39,10 +39,11 @@
     - Hier liegen Komponenten. Komponenten lassen sich als XML-Tag einbinden.
     - Namenskonvention: ResourcesList.vue - wird zu <resources-list></resources-list> aufgelöst.
     - Attribute für XML-Tags z. B. title <tile title="Ein Titel"></tile> sind als props realisiert (siehe Komponente).
-- korapJsClient
-    - Dies ist eine Implementierung für die KorAP-API. Die Dateien bitte nicht modifizieren - hierfür gibt es ein separates GIT-Repository.
-    - Folgende Komponenten sind enthalten:
+- api - Dieser Ordner enthält verschiedene API-Clients:
+    - korapJsClient - Dies ist eine Implementierung für die KorAP-API. Die Dateien bitte nicht modifizieren - hierfür gibt es ein separates GIT-Repository. Folgende Komponenten sind enthalten:
         - auth.js - zur Authentifizierung
         - kwic.js - zur Suche und Anzeige von KWIC-Daten (erforder vorherige Authentifizierung)
         - userInfo.js - zur Abfrage von Infos über angemeldete Nutzer*in (erforder vorherige Authentifizierung)
         - virtualCorpus.js - zum Anlegen und Verwalten virtueller Korpora (erforder vorherige Authentifizierung)
+    - owidPlusLive - Dies ist eine einfache Implementierung der OWIDplusLIVE-API. Die Datei bitte nicht modifizieren - hierfür gibt es ein separates GIT-Repository. Folgende Komponenten sind enthalten:
+        - Abfrage zur Darstellung einfacher Charts

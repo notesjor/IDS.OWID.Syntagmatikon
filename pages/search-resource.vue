@@ -34,9 +34,9 @@ definePageMeta({
             </v-card-title>
             <v-card-text>
               <a :href="x.url" target="_blank">
-                <img v-if="x.img != undefined" :src="'/sources/' + x.img"
+                <img v-if="x.img != undefined" :src="x.img"
                   style="width: 100%; height: auto; margin-bottom: 10px;" />
-                <img v-else src="/sources/prepcon_temporal.jpg" style="width: 100%; height: auto; margin-bottom: 10px;" />
+                <img v-else src="/img/sources/prepcon_temporal.jpg" style="width: 100%; height: auto; margin-bottom: 10px;" />
                 
                 <div v-html="x.description">                  
                 </div>
