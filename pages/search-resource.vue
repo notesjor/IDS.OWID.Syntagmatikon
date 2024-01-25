@@ -26,15 +26,6 @@
                 </h2>
               </a>
             </v-card-title>
-          <!--
-            <v-card-subtitle>
-              <a :href="x.url" target="_blank">
-                <h3 class="text-lg" style="margin-top: -7px; text-wrap:wrap;">
-                  {{ x.nameLong }}
-                </h3>
-              </a>
-            </v-card-subtitle>
-          -->
             <v-card-text>
               <a :href="x.url" target="_blank">
                 <img v-if="x.img != undefined" :src="'/sources/' + x.img"

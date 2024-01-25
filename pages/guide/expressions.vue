@@ -25,7 +25,7 @@
     <v-row>
       <v-col cols="12">
         <div class="container">
-          <tile title="Nomina" img="/dummy_300x160/dummy_03.png">
+          <tile title="Nomina" img="/dummy/dummy_03.png">
             Als Nomina werden alle Wörter bezeichnet, die als Subjekte, Objekte, Prädikative oder Adverbiale in einem Satz
             auftreten können. Sie werden in der Regel durch Artikel begleitet und können in der Regel durch Pronomen
             ersetzt werden. Nomina können in der Regel durch Adjektive näher bestimmt werden. Sie können in der Regel
@@ -38,7 +38,7 @@
             <resources-list :filter="['PREPCON', 'KoMuX', 'WVBF', 'PHKO']"></resources-list>
           </tile>
 
-          <tile title="Verben" img="/dummy_300x160/dummy_04.png">
+          <tile title="Verben" img="/dummy/dummy_04.png">
             Als Verben werden alle Wörter bezeichnet, die als Prädikate in einem Satz auftreten können. Sie werden in der
             Regel durch Nomina begleitet und können in der Regel durch Pronomen ersetzt werden. Verben können in der Regel
             durch Adverbien näher bestimmt werden. Sie können in der Regel durch Präpositionen näher bestimmt werden. Sie
@@ -50,7 +50,7 @@
             <resources-list :filter="['MAP', 'KWViD']"></resources-list>
           </tile>
 
-          <tile title="Präpositionen" img="/dummy_300x160/dummy_05.png">
+          <tile title="Präpositionen" img="/dummy/dummy_05.png">
             Als Präpositionen werden alle Wörter bezeichnet, die als Präpositionen in einem Satz auftreten können. Sie
             werden in der Regel durch Nomina begleitet und können in der Regel durch Pronomen ersetzt werden.
             Präpositionen können in der Regel durch Nomina näher bestimmt werden. Sie können in der Regel durch Genitive
@@ -61,7 +61,7 @@
             <resources-list :filter="['PREPCON', 'MAP', 'WVBF']"></resources-list>
           </tile>
 
-          <tile title="Adjektive" img="/dummy_300x160/dummy_06.png">
+          <tile title="Adjektive" img="/dummy/dummy_06.png">
             Als Adjektive werden alle Wörter bezeichnet, die als Attribute in einem Satz auftreten können. Sie werden in
             der Regel durch Nomina begleitet und können in der Regel durch Pronomen ersetzt werden. Adjektive können in
             der Regel durch Adverbien näher bestimmt werden. Sie können in der Regel durch Präpositionen näher bestimmt
@@ -73,7 +73,7 @@
             <resources-list :filter="['WVBF', 'KoMuX', 'PREPCONkon', 'PHKO']"></resources-list>
           </tile>
 
-          <tile title="Phraseme" img="/dummy_300x160/dummy_07.png">
+          <tile title="Phraseme" img="/dummy/dummy_07.png">
             Als Phrasem werden alle Wörter bezeichnet, die als Prädikate in einem Satz auftreten können. Sie werden in der
             Regel durch Nomina begleitet und können in der Regel durch Pronomen ersetzt werden. Verben können in der Regel
             durch Adverbien näher bestimmt werden. Sie können in der Regel durch Präpositionen näher bestimmt werden. Sie
@@ -85,7 +85,7 @@
             <resources-list :filter="['PHKO', 'PREPCON', 'MAP', 'WÖRE', 'DTWW', 'DRI']"></resources-list>
           </tile>
 
-          <tile title="Fest Sätze" img="/dummy_300x160/dummy_08.png">
+          <tile title="Fest Sätze" img="/dummy/dummy_08.png">
             Als 'Feste Sätze' werden alle Abfolgen von Wörtern bezeichnet. In der Regel handelt es sich um Sätze, die in
             der Regel in der gleichen Form auftreten und in der Regel eine feste Bedeutung haben. Sie werden in der Regel
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis eius aspernatur, corrupti ex dignissimos
