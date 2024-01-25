@@ -17,6 +17,14 @@
 - pages
     - Hier liegen alle Seiten.
     - Der Ordner pages dient als Wurzelverzeichnis. Wenn als eine Seite im Ordner /pages/guide/mypage.vue liegt, dann kann diese Seite mit /guide/mypage referenziert werden. <NuxtLink to="/guide/mypage">Klick mich</NuxtLink>
+    - Wenn es sich um eine Einzelseite im Hauptmenü handelt, dann wird diese als einzelne VUE-Page angelegt: z. B.: search-resources.vue
+    - Wenn die Seite mehrere Unterseiten hat, dann:
+        - wird ein Ordner angelegt mit dem Titel der Seite z. B. datatypes
+        - Dieser Ordner muss eine Datei enthalten, die den Namen index.vue trägt. Diese Datei enthält den Inhalt der Seite. Sie ist dann z. B. wie folgt adressierbar: /datatypes - der Zusatz wie /datatypes/index entfällt.
+        - Alle anderen Unterseiten liegen im selben Ordner. Sie können beliebige Namen enthalten z. B. myPage.vue. Diese Seiten sind dann z. B. wie folgt adressierbar: /datatypes/myPage
+- tools
+    - In diesem Verzeichnis liegen verschiedene Tools. z. B.:
+        - convert (konvertiert DOCX-Word zu HTML): (1) Text in das Dokument "document.docx" kopieren und speichern. (2) convert.bat mit Doppelklick starten. (3) Inhalt der Datei page.txt kopieren. 
 
 ## Was liegt wo? - Für Entwickler*innen (ZUSATZ)
 - assets
