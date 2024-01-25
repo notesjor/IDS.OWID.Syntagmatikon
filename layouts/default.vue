@@ -54,16 +54,16 @@
       <!-- ADDITIONAL INFORMATION START -->
       <v-list density="compact" nav>
         <v-list-subheader>Ressourcenkompass</v-list-subheader>
-        <router-link to="/guide/resources">
+        <router-link to="/resources">
           <v-list-item prepend-icon="mdi-book-open-variant" title="Ressourcentypen"></v-list-item>
         </router-link>            
-        <router-link to="/guide/datatypes">
+        <router-link to="/datatypes">
           <v-list-item prepend-icon="mdi-book-open-variant" title="Daten- und Informationstypen"></v-list-item>
         </router-link>
-        <router-link to="/guide/expressions">
+        <router-link to="/expressions">
           <v-list-item prepend-icon="mdi-book-open-variant" title="Wortschatzausschnitten"></v-list-item>
         </router-link>
-        <router-link to="/guide/patterns">
+        <router-link to="/patterns">
           <v-list-item prepend-icon="mdi-book-open-variant" title="Musterzugänge"></v-list-item>
         </router-link>    
       </v-list>
