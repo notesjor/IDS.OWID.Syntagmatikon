@@ -7,6 +7,8 @@ definePageMeta({
     layout: 'page'
 })
 
-import { defineAsyncComponent } from 'vue'
-let Component = defineAsyncComponent(() => import(`../subpages/${this.$route.params.id}.vue`))
+const route = useRoute()
+
+import { defineAsyncComponent  } from 'vue'
+let Component = defineAsyncComponent(() => import(`./subpages/${route.params.id}.vue`))
 </script>
