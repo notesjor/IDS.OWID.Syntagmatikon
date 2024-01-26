@@ -1,39 +1,31 @@
 <template>
   <div class="nolink">
     <!-- BUTTON START -->
-    <v-sheet @click="search" :disabled="query === ''" style="text-transform: none;">
-      <v-btn color="#f9b211" variant="tonal" icon="mdi-magnify">     
+    <v-sheet @click="dialog_search = true" :disabled="query === ''" style="text-transform: none;">
+      <v-btn color="#f9b211" variant="tonal" icon="mdi-magnify">
       </v-btn>
       <span style="margin-left: 5px; font-weight: 600;">OWIDplusLIVE: </span>
-      <slot/>
+      <slot />
     </v-sheet>
     <!-- BUTTON ENDE -->
-    <!-- ANMELDUNG ERFOLGREICH - SUCHE - START -->
+    <!-- DIALOG - START -->
     <v-dialog v-model="dialog_search" width="90%">
       <v-card>
         <v-card-title>
           <div style="display: flex;">
             <div style="display: inline;">
-            KorAP-Belege für: <span style="font-weight:lighter; margin-left:10px; margin-right:5px">{{ query }}</span>
-          <a :href="getKorapLink()" target="_blank" style="text-decoration:none"><v-icon>mdi-open-in-new</v-icon></a>
-          </div>
-          <div style="flex-grow: 1;"/>
-          <div style="display: inline;">
-            <v-icon @click="dialog_search = false">mdi-close</v-icon>
-          </div>
+              OWIDplusLIVE-Zeitreihe für: <span style="font-weight:lighter; margin-left:10px; margin-right:5px">{{ query
+              }}</span>
+              <!-- TODO <a :href="getKorapLink()" target="_blank" style="text-decoration:none"><v-icon>mdi-open-in-new</v-icon></a>-->
+            </div>
+            <div style="flex-grow: 1;" />
+            <div style="display: inline;">
+              <v-icon @click="dialog_search = false">mdi-close</v-icon>
+            </div>
           </div>
         </v-card-title>
         <v-card-text>
-          <div v-if="pageCurrent === null">
-            <h2 style="text-align:center;">Bitte warten...</h2>
-            <h4 style="text-align:center;">Die OWIDplusLIVE-Abfrage nimmt wenige Sekunden in Anspruch.</h4>
-          </div>
-          <div v-else-if="pageCurrent === -1">
-            <h2 style="text-align:center;">Keine Ergebnisse</h2>
-            <h4 style="text-align:center;">Die OWIDplusLIVE-Abfrage lieferte keine passenden Ergebnisse. Bitte probieren Sie eine
-              andere Abfrage aus.</h4>
-          </div>
-          <div v-else>
+          <div>
             <v-alert color="#f9b211" dense outlined text type="warning">
               <strong>Hinweis:</strong> Diese Funktion fragt eine bestimmte Zeitreihe in OWIDplusLIVE ab.
             </v-alert>
@@ -47,16 +39,13 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
-    <!-- ANMELDUNG ERFOLGREICH - SUCHE - ENDE -->
-    <!-- FEHLER START -->
-    <v-alert color="red" dense outlined text type="error" v-if="dialog_signin_error">
-      Die Anmeldung war nicht erfolgreich. Bitte melden Sie sich erneut an.
-    </v-alert>
-    <!-- FEHLER ENDE -->
+    <!-- DIALOG - ENDE -->
   </div>
 </template>
 
 <script>
+import { Store } from "../api/owidPlusLive/owidPlusLiveLight.js";
+
 export default {
   name: 'BtnOwidPlusLiveSearch',
 
@@ -69,104 +58,109 @@ export default {
 
   data() {
     return {
+      store: null,
       chartData: null,
-      chartOptions: null
+      chartOptions: null,
+      dialog_search: false
     };
   },
 
   mounted() {
-    this.$data.authentication = authentication;
-    this.$data.isSignedIn = authentication.isSignedIn;
-
-    this.$data.kwic = kwicSearch;
+    var self = this;
+    this.$data.store = new Store(() => self.calc());
+    console.log("OWIDPlusLiveSearch mounted");
   },
 
   methods: {
-    signinSearch() {
-      if (this.$data.isSignedIn)
-        this.kwicSearch();
-      else {
-        this.signIn();
-        if (this.$data.isSignedIn)
-          this.kwicSearch();
-      }
-    },
-    signIn() {
-      var self = this;
-      self.$data.authentication.signIn(auth => {
-        self.$data.isSignedIn = auth;
-        if (auth)
-          self.kwicSearch();
-        else
-          self.$data.dialog_signin_error = true;
-      });
-    },
-    kwicSearch: function () {
-      var self = this;
-
-      self.$data.pageMax = 0;
-      self.$data.page = 1;
-      self.$data.dialog_search = true;
-
-      self.$data.kwic.search(self.$data.authentication.bearerToken, self.$props.corpusQuery, self.$props.query, self.$props.language, self.$data.page, (result) => {
-        if (result == null) {
-          return;
-        }
-
-        self.pageMax = self.kwic.searchResult_GetMaxPage(result);
-        self.pageCurrent = self.kwic.searchResult_GetMatchesQuick(result);
-      });
-    },
-    fullText(target) {
-      target.srcElement.style.whiteSpace = 'normal';
-    },
-    getKorapLink() {
-      return "https://korap.ids-mannheim.de/?q=" + encodeURIComponent(this.query) + "&ql=poliqarp&cutoff=1"
-    },
-    signOut() {
-      authentication.signOut();
-    }
-  },
-
-  watch: {
-    page: function () {
-      var self = this;
-      if (self.$data.pageMax == 0)
+    calc() {
+      if (this.$props.query == null)
         return;
 
-      self.pageCurrent = null;
-
-      self.kwic.search(self.authentication.bearerToken, self.$props.corpusQuery, self.$props.query, self.$props.language, self.page, (result) => {
-        self.pageCurrent = self.kwic.searchResult_GetMatchesQuick(result);
+      let self = this;
+      this.$data.store.search(this.query, () => {
+        self.chartData = self.$data.store.vizData;
+        self.updateChart(self);
       });
+    },
+    updateChart(self) {
+      if (self.$data.store.vizData === null) return null;
+
+      var availableDates = self.$data.store.owid.Dates;
+
+      var series = [];
+
+      for (const key in self.$data.store.vizData) {
+        if (key === "ALLE") continue;
+        const data = self.$data.store.vizData[key];
+
+        var values = [];
+        availableDates.forEach((c) => {
+          if (c in data.data) values.push(data.data[c]);
+        });
+
+        series.push({
+          name: data.name,
+          type: "line",
+          data: values,
+          symbolSize: 1,
+          line: { marker: { enable: false } },
+        });
+      }
+
+      var unit = self.$data.store.vizOptionRelative ? "(pro Mio. Token)" : "(Token)";
+
+      this.$data.chartOptions = {
+        toolbox: {
+          show: true,
+          top: "3%",
+          right: "10%",
+          feature: {
+            saveAsImage: {
+              title: "Speichern \xa0 \xa0 \xa0 \xa0 \xa0",
+              name: "OWIDplusLIVE",
+            },
+          },
+        },
+        animation: false,
+        legend: {
+          show: true,
+        },
+        xAxis: {
+          type: "category",
+          data: availableDates,
+        },
+        yAxis: {
+          type: "value",
+          scale: true,
+        },
+        series: series,
+        dataZoom: [
+          { type: "slider", show: true },
+          { type: "inside", show: true },
+        ],
+        tooltip: {
+          axisPointer: {
+            snap: true,
+            type: "cross",
+          },
+          formatter: function (params) {
+            return (
+              "<strong>" +
+              params.seriesName +
+              "</strong><br/>" +
+              params.name +
+              ": " +
+              params.value
+                .toString()
+                .replace(",", "'")
+                .replace(".", ",") +
+              " " +
+              unit
+            );
+          },
+        },
+      };
     }
   }
 }
 </script>
-
-<style>
-.table {
-  display: table;
-  font-size: 10px;
-  width: 100%;
-  line-height: 18px;
-}
-
-.row {
-  display: table-row;
-}
-
-.cell {
-  display: table-cell;
-  padding: 5px 5px 10px 5px;
-}
-
-.truncate {
-  position: relative;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  cursor: pointer;
-  max-width: 500px;
-}
-</style>

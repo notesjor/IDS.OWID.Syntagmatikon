@@ -12,6 +12,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "img": "/img/sources/komux.jpg",
         "url": "https://www.owid.de/plus/komux/",
         "tags": ["Suche", "Explorativ", "Datenbank", "Frequenz", "Annotation", "Kategorie"],
+        "quest": "https://www.owid.de/plus/komux/?lem={q}",
       },
       {
         "key": "PREPCON",
@@ -29,7 +30,8 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "description": '<strong>Präposition-Nomen-Verbindungen explorativ</strong> bietet Tabellen mit <a href="../../2.2_DatenInformationstypen/2.2.1_Frequenz/2.2.1_Frequenz.docx">Frequenzen</a>, prozentuale Gewichtungen und automatisch ausgewählte <a href="../../2.2_DatenInformationstypen/2.2.2_KWIC/2.2.2_KWIC.docx">KWICs</a> zu knapp 80.000 Präposition-Nomen-Verbindungen an.',
         "img": "/img/sources/prepcon_explorativ.jpg",
         "url": "http://uwv.ids-mannheim.de/prepcon/prepcon_online.html",
-        "tags": ["Suche", "Explorativ", "Datenbank", "Frequenz", "KWIC", "Präposition", "Nomen", "EMuster"]
+        "tags": ["Suche", "Explorativ", "Datenbank", "Frequenz", "KWIC", "Präposition", "Nomen", "EMuster"],
+        "quest": "http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?{q}"
       },
       {
         "key": "PREPCONtemp",
@@ -39,6 +41,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "img": "/img/sources/prepcon_temporal.jpg",
         "url": "http://uwv.ids-mannheim.de/prepcon/prepcon_online.html",
         "tags": ["Vollautomatisch", "Frequenz", "KWIC", "EMuster"],
+        "quest": "http://uwv.ids-mannheim.de/prepcon/modul2/inventar/{q}",
       },
       {
         "key": "PREPCONkon",
@@ -48,6 +51,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "img": "/img/sources/prepcon_kontrastiv.jpg",
         "url": "http://uwv.ids-mannheim.de/prepcon/modul3/index.html",
         "tags": ["Vollautomatisch", "Frequenz", "KWIC", "EMuster"],
+        "quest": "http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/{q}.html",
       },
       {
         "key": "MAP",
@@ -93,6 +97,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "img": "/img/sources/sprichwoerterbuch.jpg",
         "url": "https://www.owid.de/wb/sprw/start.html",
         "tags": ["Liste", "Mehrworteinheiten", "Sprichwörter"],
+        "quest": "https://www.owid.de/artikel/{q}"
       },
       {
         "key": "KWViD",
@@ -102,6 +107,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "img": "/img/sources/verlaufsformen.jpg",
         "url": "https://www.owid.de/service/stichwortlisten/progdb",
         "tags": ["Wörterbuch", "Mehrworteinheiten", "Verlaufsformen"],
+        "quest": "https://www.owid.de/artikel/{q}"
       },
       {
 

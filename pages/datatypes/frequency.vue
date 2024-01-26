@@ -9,14 +9,11 @@
         bzw. -proportionen).</p>
     <br />
     <h3>Beispiele</h3><br />
-    <btn-owid-plus-live-search query="unter /+w1:1 Zeitdruck" language="Cosmas II">unter /+w1:1 Zeitdruck<br />Suche die Präposition
+    <btn-owid-plus-live-search query="unter Zeitdruck" language="Cosmas II">unter Zeitdruck<br />Suche die Präposition
         <em>unter</em> in Groß-
         und Kleinschreibung unmittelbar gefolgt vom Nomen <em>Zeitdruck</em>
         (ohne Leerstelle)</btn-owid-plus-live-search><br />
-    <btn-owid-plus-live-search query="Unter /+w1:1 Zeitdruck" language="Cosmas II">Unter /+w1:1 Zeitdruck<br />Suche die Präposition
-        <em>unter</em> in
-        Großschreibung unmittelbar gefolgt vom Nomen <em>Zeitdruck</em> (ohne
-        Leerstelle)</btn-owid-plus-live-search><br />
-    <btn-owid-plus-live-search query='ich /+w1:1 liebe /+w1:1 es' language="Cosmas II">ich /+w1:1 liebe /+w1:1
-        es<br /> Suche die Wortfolge ich liebe es (in Groß- und Kleinschreibung) ohne
-        interne Leerstelle mit Satzendezeichen</btn-owid-plus-live-search><br /></template>
+    <btn-owid-plus-live-search query='ich liebe es' language="Cosmas II">ich liebe es<br />
+        Suche die Wortfolge ich liebe es (in Groß- und Kleinschreibung) ohne
+        interne Leerstelle mit Satzendezeichen</btn-owid-plus-live-search><br />        
+</template>

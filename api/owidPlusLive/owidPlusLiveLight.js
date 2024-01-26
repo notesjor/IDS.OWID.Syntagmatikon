@@ -382,7 +382,7 @@ export class OwidLiveStorage {
   /**
    * @param  {number} n set the current N(-gram)
    */
-  set N(n) {
+  setN(n) {
     this.#N = n
   }
 
@@ -785,7 +785,7 @@ export class OwidLiveStorageTimeItem {
 }
 
 export class Store {
-  baseUrl = 'http://lexik02.ids-mannheim.de/owid-plus-live'
+  baseUrl = 'https://www.owid.de/plus/live-2021/api'
   sessionKey = null
 
   owid = null
@@ -850,7 +850,7 @@ export class Store {
   }
 
   updateN(N) {
-    this.owid.N = N
+    this.owid.setN(N);
   }
 
   /*

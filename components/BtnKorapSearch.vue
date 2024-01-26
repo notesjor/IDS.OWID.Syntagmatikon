@@ -187,7 +187,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .table {
   display: table;
   font-size: 10px;
