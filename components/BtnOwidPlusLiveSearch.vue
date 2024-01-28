@@ -9,7 +9,7 @@
     </v-sheet>
     <!-- BUTTON ENDE -->
     <!-- DIALOG - START -->
-    <v-dialog v-model="dialog_search" width="90%">
+    <v-dialog v-model="dialog_search" width="90%" height="80%">
       <v-card>
         <v-card-title>
           <div style="display: flex;">
@@ -26,9 +26,6 @@
         </v-card-title>
         <v-card-text>
           <div>
-            <v-alert color="#f9b211" dense outlined text type="warning">
-              <strong>Hinweis:</strong> Diese Funktion fragt eine bestimmte Zeitreihe in OWIDplusLIVE ab.
-            </v-alert>
             <div style="display: flex; justify-content: center; align-items: center; margin-top:20px">
               <echart-line :options="chartOptions" />
             </div>

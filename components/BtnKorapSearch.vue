@@ -9,7 +9,7 @@
     </v-sheet>
     <!-- BUTTON ENDE -->
     <!-- ANMELDUNG ERFOLGREICH - SUCHE - START -->
-    <v-dialog v-model="dialog_search" width="90%">
+    <v-dialog v-model="dialog_search" width="90%" height="80%">
       <v-card>
         <v-card-title>
           <div style="display: flex;">

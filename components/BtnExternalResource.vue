@@ -9,7 +9,7 @@
     </v-sheet>
     <!-- BUTTON ENDE -->
     <!-- DIALOG - START -->
-    <v-dialog v-model="dialog_search" width="90%">
+    <v-dialog v-model="dialog_search" width="90%" height="100%">
       <v-card>
         <v-card-title>
           <div style="display: flex;">
@@ -34,7 +34,7 @@
             </v-alert>
           -->
             <div style="display: flex; justify-content: center; align-items: center; margin-top:20px">
-              <iframe :src="src" width="100%" height="600px" frameborder="0"></iframe>
+              <iframe :src="src" width="100%" :height="height" frameborder="0"></iframe>
             </div>
           </div>
         </v-card-text>
@@ -90,6 +90,9 @@ export default {
     },
     src() {
       return this.url != "" ? this.url : this.calcSrc();
+    },
+    height() {
+      return window.innerHeight * 0.73 + "px";
     }
   },
 

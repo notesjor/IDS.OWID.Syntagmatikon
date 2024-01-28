@@ -33,12 +33,12 @@
         </v-window-item>
 
         <v-window-item value="2">
-            <btn-owid-plus-live-search query="unter Zeitdruck" language="Cosmas II">unter Zeitdruck<br />Suche die
+            <btn-owid-plus-live-search query="unter Zeitdruck">unter Zeitdruck<br />Suche die
                 Präposition <em>unter</em> in Groß-
                 und Kleinschreibung unmittelbar gefolgt vom Nomen <em>Zeitdruck</em>
                 (ohne Leerstelle)</btn-owid-plus-live-search><br />
-            <btn-owid-plus-live-search query='ich liebe es' language="Cosmas II">ich liebe es<br />
-                Suche die Wortfolge ich liebe es (in Groß- und Kleinschreibung) ohne
+            <btn-owid-plus-live-search query='ich liebe es'>ich liebe es<br />
+                Suche die Wortfolge <em>ich liebe es</em> (in Groß- und Kleinschreibung) ohne
                 interne Leerstelle mit Satzendezeichen</btn-owid-plus-live-search><br />
         </v-window-item>
     </v-window>
