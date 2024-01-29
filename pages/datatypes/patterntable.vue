@@ -27,6 +27,9 @@
         language="Poliqarp">
         Poliqarp-Abfrage: <em>[orth=die/i] [orth=unglaubliche/i & pos=ADJA] [pos=NN]</em>
     </btn-korap-search>
+    <btn-external-resource label="Kookkurrenzen" url="https://barometer.diskurslinguistik.net/ui_cooccurrence.html">
+        Beispiel für eine externe Ressource
+    </btn-external-resource>
     <btn-owid-plus-live-search query='ich liebe es'>ich liebe es<br />
         Suche die Wortfolge <em>ich liebe es</em> (in Groß- und Kleinschreibung) ohne
         interne Leerstelle mit Satzendezeichen

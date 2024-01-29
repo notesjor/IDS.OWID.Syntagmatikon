@@ -17,7 +17,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_type":"Datenbank",
         "search_subtype":"Explorativ",
         "search_functions": ["Suchanfrage", "KWIC", "Frequenz", "Muster"],
-        "search_pattern": ["E-Muster", "Z-Muster", "D-Muster"],
+        "search_patterns": ["E-Muster", "Z-Muster", "D-Muster"],
         "search_parts": ["Verb", "Nomen", "Adjektiv"],
       },
       {
@@ -32,7 +32,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_type":"Datenbank",
         "search_subtype":"Explorativ",
         "search_functions": ["Suchanfrage", "KWIC", "Frequenz", "Muster", "Beleg"],
-        "search_pattern": ["E-Muster", "Z-Muster", "D-Muster"],
+        "search_patterns": ["E-Muster", "Z-Muster", "D-Muster"],
         "search_parts": ["Verb", "Nomen", "Präposition", "Adjektiv", "Adverb", "Phrasem", "Satz"],
       },
       {
@@ -48,7 +48,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_type":"Datenbank",
         "search_subtype":"Explorativ",
         "search_functions": ["Suchanfrage", "KWIC", "Frequenz", "Muster", "Basiselement"],
-        "search_pattern": ["Z-Muster", "D-Muster"],
+        "search_patterns": ["Z-Muster", "D-Muster"],
         "search_parts": ["Verb", "Nomen", "Präposition", "Phrasem"],
       },
       {
@@ -60,11 +60,11 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "url": "http://uwv.ids-mannheim.de/prepcon/prepcon_online.html",
         "tags": ["Vollautomatisch", "Frequenz", "KWIC", "EMuster"],
         "quest": "http://uwv.ids-mannheim.de/prepcon/modul2/inventar/{q}",
-        "search_display": "Stichwort",
+        "search_display": "Stichwortliste",
         "search_type":"Inventar",
         "search_subtype":"Deskriptiv",
         "search_functions": ["Suchanfrage", "KWIC", "Frequenz", "Muster", "Narrativer Text", "Satellitenfeld"],
-        "search_pattern": ["E-Muster", "D-Muster"],
+        "search_patterns": ["E-Muster", "D-Muster"],
         "search_parts": ["Verb", "Nomen", "Präposition", "Adjektiv", "Adverb"],
       },
       {
@@ -80,7 +80,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_type":"Korpuszentriertes Format",
         "search_subtype":"Kontrastiv",        
         "search_functions": ["Suchanfrage", "KWIC", "Frequenz", "Muster", "Annotation"],
-        "search_pattern": ["E-Muster", "Z-Muster"],
+        "search_patterns": ["E-Muster", "Z-Muster"],
         "search_parts": ["Verb", "Nomen", "Präposition", "Adjektiv", "Adverb", "Phrasem", "Satz"],
       },
       {
@@ -95,7 +95,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_type": "Online-Wörterbuch",
         "search_subtype": "Semi-Automatisch",
         "search_functions": ["Suchanfrage", "KWIC", "Frequenz", "Muster", "Annotation"],
-        "search_pattern": ["E-Muster"],
+        "search_patterns": ["E-Muster"],
         "search_parts": ["Verb", "Präposition", "Adverb", "Phrasem", "Satz"],
       },
       {
@@ -110,7 +110,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_type": "Online-Wörterbuch",
         "search_subtype": "Händisch / Qualitativ",
         "search_functions": ["Lückenfüller", "Satellitenfeld"],
-        "search_pattern": ["D-Muster"],
+        "search_patterns": ["D-Muster"],
         "search_parts": ["Verb", "Präposition", "Phrasem", "Satz"],
       },
       {
@@ -125,7 +125,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_type": "Studie",
         "search_subtype": "Deskriptiv",
         "search_functions": ["Suchanfrage", "Muster"],
-        "search_pattern": ["Z-Muster"],
+        "search_patterns": ["Z-Muster"],
         "search_parts": ["Phrasem", "Satz"],
       },
       {
@@ -139,7 +139,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_display": "Stichwortliste",
         "search_type": "Korpuszentriertes Format",
         "search_functions": ["Suchanfrage", "KWIC", "Muster"],
-        "search_pattern": ["E-Muster", "Z-Muster", "D-Muster"],
+        "search_patterns": ["E-Muster", "Z-Muster", "D-Muster"],
         "search_parts": ["Verb", "Nomen", "Präposition", "Adjektiv", "Adverb", "Phrasem", "Satz"],
       },
       {
@@ -155,7 +155,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_type": "Online-Wörterbuch",
         "search_subtype": "Deskriptiv",
         "search_functions": ["Suchanfrage", "KWIC", "Beleg", "Muster"],
-        "search_pattern": ["E-Muster", "Z-Muster", "D-Muster"],
+        "search_patterns": ["E-Muster", "Z-Muster", "D-Muster"],
         "search_parts": ["Verb", "Nomen", "Präposition", "Adjektiv", "Adverb", "Phrasem", "Satz"],
       },
       {
@@ -171,7 +171,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_type": "Online-Wörterbuch",
         "search_subtype": "Kontrastiv",
         "search_functions": ["Suchanfrage", "KWIC", "Annotation", "Muster"],
-        "search_pattern": ["E-Muster", "Z-Muster", "D-Muster"],
+        "search_patterns": ["E-Muster", "Z-Muster", "D-Muster"],
         "search_parts": ["Verb", "Nomen", "Präposition", "Adjektiv", "Adverb", "Phrasem", "Satz"],
       },
       {
@@ -187,7 +187,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_type": "Online-Wörterbuch",
         "search_subtype": "Deskriptiv",
         "search_functions": ["Suchanfrage", "KWIC", "Frequenz", "Muster"],
-        "search_pattern": ["E-Muster", "Z-Muster", "D-Muster"],
+        "search_patterns": ["E-Muster", "Z-Muster", "D-Muster"],
         "search_parts": ["Verb", "Nomen", "Präposition", "Adjektiv", "Adverb", "Phrasem", "Satz"],
       },
       {
@@ -202,7 +202,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_type": "Studie",
         "search_subtype": "Semi-Automatisch",
         "search_functions": ["Suchanfrage", "KWIC", "Frequenz", "Muster"],
-        "search_pattern": ["E-Muster", "Z-Muster", "D-Muster"],
+        "search_patterns": ["E-Muster", "Z-Muster", "D-Muster"],
         "search_parts": ["Verb", "Nomen", "Präposition", "Adjektiv", "Adverb", "Phrasem", "Satz"],
       },
       {
@@ -218,7 +218,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_type": "Studie",
         "search_subtype": "Händisch / Qualitativ",
         "search_functions": ["Suchanfrage", "KWIC", "Frequenz", "Muster"],
-        "search_pattern": ["E-Muster", "Z-Muster", "D-Muster"],
+        "search_patterns": ["E-Muster", "Z-Muster", "D-Muster"],
         "search_parts": ["Verb", "Nomen", "Präposition", "Adjektiv", "Adverb", "Phrasem", "Satz"],
       },
       {
@@ -230,11 +230,11 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "img": "/img/sources/wvumfrage.jpg",
         "url": "http://wvonline.ids-mannheim.de/umfrage2014.htm",
         "tags": ["Umfrage", "Statistik", "Benutzungsstudie"],
-        "search_display": "Umfrage",
+        "search_display": "Suche",
         "search_type": "Studie",
         "search_subtype": "Interaktion / Öffentlichkeit",
         "search_functions": ["Suchanfrage", "KWIC", "Frequenz", "Muster"],
-        "search_pattern": ["E-Muster", "Z-Muster", "D-Muster"],
+        "search_patterns": ["E-Muster", "Z-Muster", "D-Muster"],
         "search_parts": ["Verb", "Nomen", "Präposition", "Adjektiv", "Adverb", "Phrasem", "Satz"],
       },
       {
@@ -250,7 +250,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_type": "Studie",
         "search_subtype": "Semi-Automatisch",
         "search_functions": ["Suchanfrage", "KWIC", "Frequenz", "Muster"],
-        "search_pattern": ["E-Muster", "Z-Muster", "D-Muster"],
+        "search_patterns": ["E-Muster", "Z-Muster", "D-Muster"],
         "search_parts": ["Verb", "Nomen", "Präposition", "Adjektiv", "Adverb", "Phrasem", "Satz"],
       },
     ] }

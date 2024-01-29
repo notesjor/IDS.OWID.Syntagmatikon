@@ -61,18 +61,34 @@ definePageMeta({
                   </v-expansion-panel-text>
                 </v-expansion-panel-text>
               </v-expansion-panel>
+              <v-expansion-panel title="Wort- und Ausdrucksarten">
+                <v-expansion-panel-text>
+                  <v-expansion-panel-text>
+                    <v-checkbox v-for="x in search_parts" :key="x" density="compact" hide-details="true"
+                      :label="x"></v-checkbox>
+                  </v-expansion-panel-text>
+                </v-expansion-panel-text>
+              </v-expansion-panel>
+              <v-expansion-panel title="Muster">
+                <v-expansion-panel-text>
+                  <v-expansion-panel-text>
+                    <v-checkbox v-for="x in search_patterns" :key="x" density="compact" hide-details="true"
+                      :label="x"></v-checkbox>
+                  </v-expansion-panel-text>
+                </v-expansion-panel-text>
+              </v-expansion-panel>
             </v-expansion-panels>
           </v-list-item>
         </v-list>
       </v-card>
     </v-col>
-    <v-col cols="6">
+    <v-col cols="6" class="nolink">
       <div v-if="items == null">
         <v-alert text="Suchen Sie zuerst nach einem Eintrag..." type="info" variant="outlined"></v-alert>
       </div>
       <div v-else v-for="x in items" :key="x.id" style="max-width: 450px; margin-left: auto; margin-right: auto;">
         <a :href="x.url" target="_blank">
-          <v-card style="margin-bottom: 10px;">
+          <div style="margin-bottom: 10px;">
             <v-card-title>
               <h2 class="text-xl">
                 {{ x.key }}
@@ -83,7 +99,7 @@ definePageMeta({
                 {{ getName(x.dic) }}
               </h3>
             </v-card-subtitle>
-          </v-card>
+          </div>
         </a>
       </div>
     </v-col>
@@ -119,29 +135,32 @@ export default {
     this.search_displays = this.getSet("search_display");
     this.search_types = this.getSet("search_type");
     this.search_subtypes = this.getSet("search_subtype");
-    this.search_functions = this.getSet("search_function");
-    this.search_patterns = this.getSet("search_pattern");
-    this.search_parts = this.getSet("search_part");
+    this.search_functions = this.getSet("search_functions");
+    this.search_patterns = this.getSet("search_patterns");
+    this.search_parts = this.getSet("search_parts");
   },
   methods: {
     getSet(name) {
       var self = this;
+      var res = new Set();
 
-      if (self.resources[0][name] instanceof Array) {
-        var res = self.resources.map(x => x[name]).flat();
-        res = res.filter(x => x != null && x != "");
-        return new Set(res);
+      if (self.resources[0][name] instanceof Array) {        
+        self.resources.forEach(x => {
+          if (x[name] != null && x[name] != "") {
+            x[name].forEach(y => {
+              res.add(y);
+            });
+          }
+        });
       }
       else {
-        var res = new Set();
         self.resources.forEach(x => {
           if (x[name] != null && x[name] != "") {
             res.add(x[name]);
           }
         });
-        return res;
       }
-      return null;
+      return res;
     },
     getName: function (dic) {
       var self = this;
