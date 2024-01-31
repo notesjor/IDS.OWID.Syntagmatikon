@@ -27,7 +27,8 @@
         <v-card-text>
           <div>
             <div style="display: flex; justify-content: center; align-items: center; margin-top:20px">
-              <echart-line :options="chartOptions" />
+              <!--<echart-line :options="chartOptions" />-->
+              <img src="/dummy/dummy_chart.png" />
             </div>
           </div>
         </v-card-text>
@@ -41,7 +42,7 @@
 </template>
 
 <script>
-import { Store } from "../api/owidPlusLive/owidPlusLiveLight.js";
+//import { Store } from "../api/owidPlusLive/owidPlusLiveLight.js";
 
 export default {
   name: 'BtnOwidPlusLiveSearch',
@@ -55,21 +56,23 @@ export default {
 
   data() {
     return {
+      /*
       store: null,
       chartData: null,
       chartOptions: null,
+      */
       dialog_search: false
     };
   },
 
   mounted() {
     var self = this;
-    this.$data.store = new Store(() => self.calc());
-    console.log("OWIDPlusLiveSearch mounted");
+    //this.$data.store = new Store(() => self.calc());    
   },
 
   methods: {
     calc() {
+      /*
       if (this.$props.query == null)
         return;
 
@@ -78,8 +81,10 @@ export default {
         self.chartData = self.$data.store.vizData;
         self.updateChart(self);
       });
+      */
     },
     updateChart(self) {
+      /*
       if (self.$data.store.vizData === null) return null;
 
       var availableDates = self.$data.store.owid.Dates;
@@ -157,6 +162,7 @@ export default {
           },
         },
       };
+      */
     }
   }
 }

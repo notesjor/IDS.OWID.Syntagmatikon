@@ -12,7 +12,7 @@
         url="http://uwv.ids-mannheim.de/prepcon/modul2/inventar/inventar_feier.html#ab_Heiligabend">
         Ab Heiligabend
     </btn-external-resource>
-    <btn-external-resource label="KoMuX" url="https://www.owid.de/plus/komux/?lem=Bürgermeister">
+    <btn-external-resource label="KoMuX" resource="KoMuX" query="Bürgermeister">
         Komposita 'Bürgermeister'
     </btn-external-resource>
     <br />
