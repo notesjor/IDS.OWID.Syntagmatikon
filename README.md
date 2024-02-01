@@ -1,14 +1,6 @@
 # IDS.OWID.Syntagmatikon
 
 ## Was liegt wo? - Für Autor*innen
-- layouts - hier liegen Layouts, die folgendes festlegen
-    - Layout / Template
-    - Kopfzeile / Fußzeile
-    - Menü
-    - Verfügbare Layouts:
-        - base = Bitte nicht verändern. Dies ist das Basis-Layout, von dem alle anderen abgeleitet werden.
-        - default = Dies ist das automatisch Standard-Layout
-        - full = Layout für Seiten mit voller Breite.
 - stores > resources
     - Informationen zu verfügbaren Ressourcen
     - Kurz-/Langnamen für Ressourcen z. B. KoMuX / Kompositamuster-Explorer
@@ -29,10 +21,19 @@
 - tools
     - In diesem Verzeichnis liegen verschiedene Tools. z. B.:
         - convert (konvertiert DOCX-Word zu HTML): (1) Text in das Dokument "document.docx" kopieren und speichern. (2) convert.bat mit Doppelklick starten. (3) Inhalt der Datei page.txt kopieren. 
+        HINWEIS: Damit das Skript funktioniert, muss Pandoc installiert sein - Download: https://pandoc.org/installing.html
 
 ## Was liegt wo? - Für Entwickler*innen (ZUSATZ)
 - assets
     - Hier liegen Assets, die kompiliert werden (im Gegensatz zu 'public' - siehe oben).
+- layouts - hier liegen Layouts, die folgendes festlegen
+    - Layout / Template
+    - Kopfzeile / Fußzeile
+    - Menü
+    - Verfügbare Layouts:
+        - base = Bitte nicht verändern. Dies ist das Basis-Layout, von dem alle anderen abgeleitet werden.
+        - default = Dies ist das automatisch Standard-Layout
+        - full = Layout für Seiten mit voller Breite.
 - artwort
     - Hier liegen Assets, die zum Erstellen von Assets verwendet werden. z. B. Vorlagen für Grafiken.
 - components
