@@ -11,7 +11,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "description": 'Im <strong>Kompositamuster-Explorer</strong> kann man sich Listen mit <u>Frequenzen</u> und nach unterschiedlichen linguistischen Kriterien zusammengestellte Gruppen von mehr als 50.000 Komposita anzeigen lassen, die vorher automatisch annotiert, d.h. mit Merkmalen<br/>(<a href="https://www.bubenhofer.com/korpuslinguistik/kurs/index.php?id=linginformationen.html">Annotation</a>) versehen wurden.',
         "img": "/img/sources/komux.jpg",
         "url": "https://www.owid.de/plus/komux/",
-        "tags": ["Suche", "Explorativ", "Datenbank", "Frequenz", "Annotation", "Kategorie"],
+        "tags": ["Annotation", "Suche", "Explorativ", "Datenbank", "Frequenz",  "Kategorie"],
         "quest": "https://www.owid.de/plus/komux/?lem={q}",
         "search_display": "Netz",
         "search_type":"Datenbank",
