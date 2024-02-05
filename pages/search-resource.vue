@@ -25,7 +25,7 @@ definePageMeta({
       <v-col style="text-align: center;">
         <div v-for="x in resources" :key="x"
           style="width: 350px; display: inline-block; margin: 10px; text-align: left; vertical-align: top;">
-          <v-card style="margin-bottom: 10px;">
+          <v-card style="margin-bottom: 10px;" :elevation="x.rank">
             <v-card-title>
               <a :href="x.url" target="_blank">
                 <h2 class="text-xl" v-html="x.nameShort">
@@ -99,10 +99,10 @@ export default {
             rank++;
         }
 
-        this.resources[i].rank = rank;
+        this.resources[i].rank = rank == 0 ? 1 : ~~(rank / entry.tags.length * 20.0);
       }
 
-      this.resources.sort((a, b) => b.rank - a.rank);
+      //this.resources.sort((a, b) => b.rank - a.rank);
     }
   },
   watch: {

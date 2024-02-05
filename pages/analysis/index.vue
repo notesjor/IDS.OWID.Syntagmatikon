@@ -4,7 +4,7 @@
       <v-col>
         <div>
           <h1>
-            Öffentliche Interaktion
+            Forschungseinblicke
           </h1>
         </div>
       </v-col>
@@ -20,7 +20,7 @@
             v-model="search"></v-text-field>
           <v-data-table :items="items" :search="search" :headers="headers" style="margin-top: -50px;">
             <template v-slot:item.question="{ item }">
-              <NuxtLink :to="'/faq/'+item.doc">{{ item.question }}</NuxtLink>
+              <NuxtLink :to="'/analysis/'+item.doc">{{ item.question }}</NuxtLink>
             </template>
           </v-data-table>
         </div>
