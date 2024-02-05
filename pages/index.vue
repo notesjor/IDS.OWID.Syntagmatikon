@@ -1,11 +1,7 @@
 <template>
   <div style="max-width: 80ch;">
     <v-row>
-      <v-col>
-        <div>
-          <Sampler :items="sample"></Sampler>
-        </div>
-      </v-col>
+      <h1 style="margin: 10px 0px 10px 15px;">Syntagmatikon</h1>
     </v-row>
     <v-row>
       <v-col>
@@ -15,8 +11,19 @@
           sind: Phraseologismen, Sprichwörter und Sprüche; Kollokationen; Komposita und andere Wortbildungseinheiten;
           Präpositionen + Substantiv-Kombinationen; Verb + Präpositionen-Kombinationen; wortgruppenartige Redeeinleiter.
           Des Weiteren werden diesen Einheiten zugrunde liegenden Schablonen und Schemata (Muster) und die vielfachen
-          Vernetzungen im deutschen Wortschatz auf unterschiedliche Weise beschrieben und visualisiert.<br />&nbsp;<br />
+          Vernetzungen im deutschen Wortschatz auf unterschiedliche Weise beschrieben und visualisiert.
         </div>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <div>
+          <Sampler :items="sample"></Sampler>
+        </div>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <div>
           <hi>Ressourcen</hi>:
           <div>
