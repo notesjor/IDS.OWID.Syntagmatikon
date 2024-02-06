@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     '~/assets/css/main.css'
   ],
   build: {
-    transpile: ['vuetify'],
+    transpile: ['vuetify'],        
   },
   vite: {
     define: {
@@ -37,6 +37,6 @@ export default defineNuxtConfig({
     }
   },
   app: {
-    baseURL: "/syntagmatikon_2024-02" //baseURL: "/syntagmatikon_2024-01"
-  }
+    baseURL: "/syntagmatikon_2024-02/" //baseURL: "/syntagmatikon_2024-02/"    
+  },
 })
