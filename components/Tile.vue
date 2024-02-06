@@ -7,7 +7,7 @@
                         <img :src="img" alt="" style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
                         <div
                             style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
-                            <h3>
+                            <h3 style="text-wrap:wrap; text-align: left;">
                                 {{ title }}
                             </h3>
                             <h4 v-if="subtitle != null">{{ subtitle }}</h4>

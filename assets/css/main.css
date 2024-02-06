@@ -211,18 +211,18 @@ html {
 }
 
 h1 {
-  @apply text-4xl;
-  margin: 20px 0 20px 0;
+  @apply text-3xl;
+  margin: 10px 0 10px 0;
 }
 
 h2 {
-  @apply text-3xl;
-  margin: 20px 0 20px 0;
+  @apply text-2xl;
+  margin: 10px 0 10px 0;
 }
 
 h3 {
-  @apply text-2xl;
-  margin: 20px 0 20px 0;
+  @apply text-xl;
+  margin: 10px 0 10px 0;
 }
 
 div.main {

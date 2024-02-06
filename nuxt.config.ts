@@ -37,6 +37,6 @@ export default defineNuxtConfig({
     }
   },
   app: {
-    baseURL: "/" //baseURL: "/syntagmatikon_2024-01"
+    baseURL: "/syntagmatikon_2024-02" //baseURL: "/syntagmatikon_2024-01"
   }
 })

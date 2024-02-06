@@ -39,6 +39,14 @@
             <div><strong>16</strong> Lexikalische Ressourcen</div>
           </div>
         </div>
+        <div style="border:1px black solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
+          <div style="text-align: center;">
+            <v-icon style="font-size: 60px;">
+              mdi-magnify
+            </v-icon>
+            <div><strong>3</strong> Verschiedene Suchen</div>
+          </div>
+        </div>
       </v-col>
       <v-col cols="4">
         <div style="border:1px black solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
@@ -49,6 +57,14 @@
             <div><strong>15681</strong> Sprachmuster, Phrasen und Redewendungen</div>
           </div>
         </div>
+        <div style="border:1px black solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
+          <div style="text-align: center;">
+            <v-icon style="font-size: 60px;">
+              mdi-text-box-outline
+            </v-icon>
+            <div><strong>77</strong> Lorem Ipsum</div>
+          </div>
+        </div>
       </v-col>
       <v-col cols="4">
         <div style="border:1px black solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
@@ -57,6 +73,14 @@
               mdi-touch-text-outline
             </v-icon>
             <div><strong>35</strong> Interaktive Texte und Analysen</div>
+          </div>
+        </div>
+        <div style="border:1px black solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
+          <div style="text-align: center;">
+            <v-icon style="font-size: 60px;">
+              mdi-database-search-outline
+            </v-icon>
+            <div><strong>22</strong> Datenbanken Lorem</div>
           </div>
         </div>
       </v-col>

@@ -88,7 +88,7 @@
       <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
         <slot />
       </div>
-      <div style="margin:10px 10px 0px 85px;" v-else>
+      <div style="margin:10px 10px 0px 85px;" v-else>        
         <slot />
       </div>
     </div>
