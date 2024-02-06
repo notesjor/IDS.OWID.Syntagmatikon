@@ -36,13 +36,13 @@ definePageMeta({
               <a :href="x.url" target="_blank">
                 <img v-if="x.img != undefined" :src="x.img"
                   style="width: 100%; height: auto; margin-bottom: 10px;" />
-                <img v-else src="/img/sources/prepcon_temporal.jpg" style="width: 100%; height: auto; margin-bottom: 10px;" />
-                
+                <img v-else src="/img/sources/prepcon_temporal.jpg" style="width: 100%; height: auto; margin-bottom: 10px;" />                
                 <div v-html="x.description">                  
                 </div>
               </a>
+              <br />
               <div>
-                <v-chip v-for="t in x.tags" color="darkgrey" style="margin: 5px;" :variant="getChipVariant(t)"
+                <v-chip v-for="t in x.tags" color="darkgrey" style="margin: 5px;" :variant="getChipVariant(t)" size="small"
                   @click="switchChip(t)">{{ t }}</v-chip>
               </div>
             </v-card-text>

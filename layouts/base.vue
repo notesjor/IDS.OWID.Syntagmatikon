@@ -58,7 +58,7 @@
           <v-list-item prepend-icon="mdi-book-open-variant" title="Ressourcentypen"></v-list-item>
         </router-link>
         <router-link to="/datatypes">
-          <v-list-item prepend-icon="mdi-book-open-variant" title="Daten- und Informationstypen"></v-list-item>
+          <v-list-item prepend-icon="mdi-book-open-variant" title="Informationstypen"></v-list-item>
         </router-link>
         <router-link to="/expressions">
           <v-list-item prepend-icon="mdi-book-open-variant" title="Wortschatzausschnitte"></v-list-item>

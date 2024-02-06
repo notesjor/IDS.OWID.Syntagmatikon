@@ -9,7 +9,7 @@ definePageMeta({
     <v-row>
       <v-col>
         <div>
-          <h1 class="text-3xl font-bold">
+          <h1>
             Ressourcen erklärt
           </h1>
         </div>

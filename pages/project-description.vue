@@ -68,13 +68,6 @@
             können, z. B. im Bereich Deutsch als Fremdsprache. Es geht dabei
             erklärtermaßen nicht um Didaktisierung im strengen Sinne, sondern um
             allgemeinverständliche Erklärungen von:</p>
-          <blockquote>
-            <p><v-icon style="color:#7a7a7a; margin: 3px 7px 5px 0px">mdi-book-open-variant</v-icon>Ressourcentypen</p>
-            <p><v-icon style="color:#7a7a7a; margin: 3px 7px 5px 0px">mdi-book-open-variant</v-icon>Daten- und Informationstypen</p>
-            <p><v-icon style="color:#7a7a7a; margin: 3px 7px 5px 0px">mdi-book-open-variant</v-icon>Wortschatzausschnitten</p>
-            <p><v-icon style="color:#7a7a7a; margin: 3px 7px 5px 0px">mdi-book-open-variant</v-icon>Musterzugängen</p>            
-          </blockquote>
-          <p><a href="https://www.ids-mannheim.de/pb2/syntagmatikon/">Zur Projektwebseite</a></p>
         </div>
       </v-col>
     </v-row>
