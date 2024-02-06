@@ -48,7 +48,7 @@ export default {
       items: [
         {
           question: 'Lorem Ipsum dolore?',
-          doc: 'fy'
+          doc: 'dummy'
         },
         {
           question: 'Anfrage Frankfurter Rundschau zu „stolz wie Oskar“',
@@ -56,15 +56,15 @@ export default {
         },
         {
           question: 'Sit ament et quia dolorum?',
-          doc: 'fy'
+          doc: 'dummy'
         },
         {
           question: 'Lorem Ipsum dolore?',
-          doc: 'fy'
+          doc: 'dummy'
         },
         {
           question: 'Sit ament et quia dolorum?',
-          doc: 'fy'
+          doc: 'dummy'
         },
       ]
     }
