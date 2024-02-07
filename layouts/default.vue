@@ -34,17 +34,14 @@
       </div>
       <!-- LOGO END -->
 
-      <!-- HOME START -->
-      <v-list density="compact" nav :style="menuStyleMobileFix">
+     <!-- HOME START -->
+     <v-list density="compact" nav :style="menuStyleMobileFix">
         <v-list-subheader>Übersicht</v-list-subheader>
         <router-link to="/">
           <v-list-item prepend-icon="mdi-home" title="Startseite"></v-list-item>
         </router-link>
         <router-link to="/project-description">
           <v-list-item prepend-icon="mdi-information" title="Was ist das Syntagmatikon?"></v-list-item>
-        </router-link>
-        <router-link to="/analysis">
-          <v-list-item prepend-icon="mdi-telescope" title="Forschungseinblick"></v-list-item>
         </router-link>
       </v-list>
       <!-- HOME END -->
@@ -61,7 +58,7 @@
           <v-list-item prepend-icon="mdi-book-open-variant" title="Informationstypen"></v-list-item>
         </router-link>
         <router-link to="/expressions">
-          <v-list-item prepend-icon="mdi-book-open-variant" title="Wortschatzausschnitte"></v-list-item>
+          <v-list-item prepend-icon="mdi-book-open-variant" title="Wort- und Ausdrucksarten"></v-list-item>
         </router-link>
         <router-link to="/patterns">
           <v-list-item prepend-icon="mdi-book-open-variant" title="Musterzugänge"></v-list-item>
@@ -81,6 +78,21 @@
           <v-list-item prepend-icon="mdi-magnify" title="nach Einträgen"></v-list-item>
         </router-link>
       </v-list>
+      <!-- ADDITIONAL INFORMATION END -->
+
+      <v-divider></v-divider>
+
+    <!-- ADDITIONAL INFORMATION START -->
+    <v-list density="compact" nav>
+      <v-list-subheader>Weitere Informationen</v-list-subheader>
+      <router-link to="/analysis">
+          <v-list-item prepend-icon="mdi-telescope" title="Kaleidoskop"></v-list-item>
+      </router-link>
+      <router-link to="/timeline">
+          <v-list-item prepend-icon="mdi-history" title="Forschungsgeschichte"></v-list-item>
+      </router-link>
+    </v-list>
+    <!-- ADDITIONAL INFORMATION END -->
 
     </v-navigation-drawer>
 

@@ -44,17 +44,17 @@ definePageMeta({
         <h2 style="margin:-20px 0px 10px 10px; border-bottom: 3px lightgray solid;">Muster im Syntagmatikon</h2>
 
         <div class="container">
-          <tile title="Direkter Zugang über Muster" img="/img/patterns/dummy01.png" link="/patterns/direct">
+          <tile title="Direkter Zugang" img="/img/patterns/dummy01.png" link="/patterns/direct">
             In diesen Ressourcen bilden Muster den primären Zugriff auf die aufbereiteten Daten und die lexikografischen Beschreibungen. Das heißt, alle Informationen sind über das Netzwerk semiabstrakter Schablonen herleitbar.
             <resources-list :filter="['MAP', 'WVBF']"/>
           </tile>
 
-          <tile title="Musterangaben als Komponente lexikografischer Beschreibungen" img="/img/patterns/dummy02.png" link="/patterns/component">
+          <tile title="Lexikografische Angabe" img="/img/patterns/dummy02.png" link="/patterns/component">
             In einigen Ressourcen werden von Hand aufbereitete Musterangaben und -visualisierungen als eine Komponente von Wörterbuchartikeln angeboten, und zwar in „PREPCONkontrastiv und „Feste Wortverbindungen“.
-            <resources-list :filter="['PREPCONkon', 'KWViD']"/>
+            <resources-list :filter="['PREPCON_kon', 'SPRW']"/>
           </tile>
 
-          <tile title="Dynamische Erschließung von Mustern" img="/img/patterns/dummy03.png" link="/patterns/dynamic">
+          <tile title="Dynamische Erschließung" img="/img/patterns/dummy03.png" link="/patterns/dynamic">
             Welche Fragen lassen sich mit größeren Volltextstellen betrachten/beantworten? Welche Vorteile ergeben sich
             gegenüber KWIC?
             <resources-list :filter="['KoMuX', 'PREPCONex', 'PREPCONtemp', 'WÖRE', 'KWViD']"/>

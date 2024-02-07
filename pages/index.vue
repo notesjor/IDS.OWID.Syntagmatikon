@@ -13,6 +13,7 @@
           Des Weiteren werden diesen Einheiten zugrunde liegenden Schablonen und Schemata (Muster) und die vielfachen
           Vernetzungen im deutschen Wortschatz auf unterschiedliche Weise beschrieben und visualisiert.
         </div>
+        <div>Das Syntagmatikon befindet sich aktuell im Aufbau.</div>
       </v-col>
     </v-row>
     <v-row>
@@ -24,11 +25,7 @@
     </v-row>
     <v-row>
       <v-col cols="12">
-        <div>
-          Das Syntagmatikon befindet sich aktuell im Aufbau. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
-          ratione laborum placeat reprehenderit consequuntur ipsam eligendi aut architecto omnis nulla, rem, quisquam ipsa
-          explicabo, animi eveniet? Earum consequatur pariatur tempora. Die folgenden Ressourcen sind bereits verfügbar:
-        </div>
+        
       </v-col>
       <v-col cols="4">
         <div style="border:1px black solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">

@@ -4,7 +4,7 @@
       <v-col>
         <div>
           <h1>
-            Forschungseinblicke
+            Kaleidoskop
           </h1>
         </div>
       </v-col>
@@ -12,17 +12,34 @@
     <v-row>
       <v-col>
         <div>
-          <p>Das Syntagmatikon versteht sich auch als interaktive Plattform, auf der Sprachinteressierte befragt werden
-            und selbst Fragen stellen können. In diesem Bereich gab und gibt es bereits viele Aktivitäten der Projekte. So
-            wecken insbesondere usuelle Wortverbindungen wie Redewendungen und Sprichwörter das Interesse von
-            Sprachnutzerinnen und -nutzern.</p>&nbsp;<br />
+        <div>Befragungen zu Redewendungen</div>
+        <div>&nbsp;</div>
+        <div>Wendungen mit...</div>
+        <div style="margin-left:20px">Schnee</div>
+        <div style="margin-left:20px">Körperteilen</div>
+        <div style="margin-left:20px">Farben</div>
+        <div>&nbsp;</div>
+        <div>Was bedeutet...</div>
+        <div style="margin-left:20px">
+          <NuxtLink :to="'/analysis/stolz-wie-oskar'">"frech wie Oskar"</NuxtLink>
+          </div>
+        <div style="margin-left:20px">"in der Klemme sein"</div>
+        <div>&nbsp;</div>
+       <div>Amerikanische Lehnsprichwörter</div>
+       <div>&nbsp;</div>
+       <div>
+        <NuxtLink :to="'http://wvonline.ids-mannheim.de/kurzstudie/index.htm'">WDR-Kurzstudie zu 'mathematischen' Wörtern</NuxtLink>
+        </div>
+            <!-- -
           <v-text-field label="Fragen/Antworten filtern..." variant="outlined" prepend-icon="mdi-magnify"
-            v-model="search"></v-text-field>
+            v-model="search"></v-text-field> -->
+            <!--
           <v-data-table :items="items" :search="search" :headers="headers" style="margin-top: -50px;">
             <template v-slot:item.question="{ item }">
               <NuxtLink :to="'/analysis/'+item.doc">{{ item.question }}</NuxtLink>
             </template>
           </v-data-table>
+        -->
         </div>
       </v-col>
     </v-row>
