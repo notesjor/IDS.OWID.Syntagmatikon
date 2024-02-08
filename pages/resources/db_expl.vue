@@ -9,5 +9,5 @@
     erschließen, die sonst aufgrund der schieren Masse nicht sichtbar wären. Wie die Ergebnisse zu
     interpretieren sind, hängt dann vom Erkenntnisinteresse ab. Man muss aber immer damit rechnen, dass es
     Befunde gibt, die nicht in das eigene Erwartungsraster passen, denn der Computer „rechnet“ nur.
-    <resources-list :filter="['PREPCONex', 'KoMuX']" :showDesc="true"></resources-list>
+    <resources-list :filter="['KoMuX', 'PREPCON_ex']" :showDesc="false"></resources-list>
 </template>

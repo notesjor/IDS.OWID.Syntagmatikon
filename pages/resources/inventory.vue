@@ -23,5 +23,5 @@
     <resources-list :filter="['PHKO']" :showDesc="false"></resources-list>
     <br />&nbsp<br />
     <strong>Existierende Listen wurden im Korpus über&shy;prüft:</strong>
-    <resources-list :filter="['SpruchList', 'PREPCONtemp', 'DTWW']" :showDesc="false"></resources-list>
+    <resources-list :filter="['SpruchList', 'PhrasKomp', 'PREPCON_temp', 'DTWW']" :showDesc="false"></resources-list>
 </template>

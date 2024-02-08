@@ -6,7 +6,7 @@
           <div v-html="item.description"></div>
         </div>
         <div v-else>
-          {{ item.nameLong }}
+          <!--{{ item.nameLong }}-->
         </div>
       </div>
   </a>

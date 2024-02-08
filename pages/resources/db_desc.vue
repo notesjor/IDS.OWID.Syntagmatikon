@@ -11,5 +11,5 @@
     <p>Solche Datenbanken bieten automatische Suchfunktionen an, mit denen die sprachlichen Ausdrucksgruppen
         und -muster (<u>Muster</u>) nach unterschiedlichen linguistischen Kriterien zusammengestellt werden
         können.</p>
-    <resources-list :filter="['MAP', 'WÖRE']" :showDesc="true"></resources-list>
+        <resources-list :filter="['MAP', 'Verlaufsformen', 'Redeeinleiter']" :showDesc="false"></resources-list>
 </template>

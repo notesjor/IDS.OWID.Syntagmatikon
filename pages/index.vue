@@ -197,7 +197,7 @@ export default {
             references: [{
               source: 'Kleines Wörterbuch der Verlaufsformen im Deutschen',
               article: '(am) feiern',
-              type: 'Phrasenkompositum',
+              type: 'Verlaufsform',
               href: 'https://www.owid.de/artikel/402891',
               color: '#0d65c2'
             }
@@ -236,7 +236,7 @@ export default {
             references: [{
               source: 'Feste Wortverbindungen in OWID',
               article: 'blinder Aktionismus',
-              type: 'Feste Wortverbindung',
+              type: 'Adjektiv-Substantiv-Kollokation',
               href: 'https://www.owid.de/artikel/309050',
               color: '#0d65c2'
             }
@@ -254,7 +254,7 @@ export default {
             references: [{
               source: 'Feste Wortverbindungen in OWID',
               article: 'im eigenen Saft schmoren',
-              type: 'Feste Wortverbindung',
+              type: 'Verbales Phrasem',
               href: 'https://www.owid.de/artikel/309167',
               color: '#0d65c2'
             }
@@ -303,7 +303,7 @@ export default {
             references: [{
               source: 'MAP',
               article: 'sagen vor',
-              type: 'Sprachgebrauchsmuster',
+              type: 'Argumentmarkierende Präposition',
               href: 'https://www.owid.de/artikel/309167',
               color: '#0d65c2'
             }
@@ -317,7 +317,7 @@ export default {
             references: [{
               source: 'WV-Feld',
               article: 'aus persönlichen Gründen',
-              type: 'Wortfeld',
+              type: 'Präposition-Nomen-Verbindung',
               href: 'https://www.owid.de/artikel/309167',
               color: '#c5049b'
             }
@@ -345,13 +345,13 @@ export default {
             references: [{
               source: 'PREPCON <sup>temporal</sup>',
               article: 'am Montagabend',
-              type: 'Sprachgebrauchsmuster',
+              type: 'Kompositum',
               href: 'https://www.owid.de/artikel/309167',
               color: '#c5049b'
             }, {
               source: 'PREPCON <sup>explorativ</sup>',
               article: 'am Montagabend',
-              type: 'Sprachgebrauchsmuster',
+              type: 'Kompositum',
               href: 'https://www.owid.de/artikel/309167',
               color: '#c5049b'
             }
@@ -365,7 +365,7 @@ export default {
             references: [{
               source: 'Komposita-Explorer',
               article: 'Montagabend',
-              type: 'Komposita',
+              type: 'Präposition-Nomen-Verbindung',
               href: 'https://www.owid.de/artikel/309167',
               color: '#0d65c2'
             },
@@ -383,7 +383,7 @@ export default {
             references: [{
               source: 'Deutsch-Russische Idiome online',
               article: 'den Boden unter den Füßen verlieren',
-              type: 'Redewendung',
+              type: 'Verbales Phrasem',
               href: 'https://www.owid.de/artikel/309167',
               color: '#0d65c2'
             }
@@ -401,7 +401,7 @@ export default {
             references: [{
               source: 'Deutsch-türkische Wortverbindungen Wirtschaft',
               article: 'den Boden unter den Füßen verlieren',
-              type: 'Dachgesellschaft ',
+              type: 'Kompositum',
               href: 'https://www.owid.de/artikel/309167',
               color: '#0d65c2'
             }

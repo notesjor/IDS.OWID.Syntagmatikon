@@ -6,5 +6,5 @@
         erforschen. Optionale narrative Kommentare bieten zusätzlichen Kontext, ohne den Fokus von den primären
         Korpusdaten abzulenken.
     </div>
-    <resources-list :filter="['ZUWV', 'PREPCONtemp', 'WVBF']"></resources-list>
+    <resources-list :filter="['PREPCON_temp', 'PREPCON_kon']"></resources-list>
 </template>
