@@ -42,26 +42,29 @@ definePageMeta({
       <v-col cols="12">
         <div class="container">
           <tile title="Explorative Datenbanken" img="/img/resources/01.png" link="/resources/db_expl">
-            Explorativen Datenbanken bieten Informationen zu umfassenden Sprachausschnitten auf
+            Explorative Datenbanken bieten Informationen zu umfassenden Sprachausschnitten auf
             der Basis von Korpusdaten.
+            <resources-list :filter="['KoMuX', 'PREPCON_ex']" :showDesc="false"></resources-list>
           </tile>
 
           <tile title="Deskriptive Datenbank" img="/img/resources/02.png" link="/resources/db_desc">
-            Die deskriptiven Datenbanken stellen eine Kombination aus automatisch erstellten
+            Deskriptive Datenbanken stellen eine Kombination aus automatisch erstellten
             Datenmengen und qualitativ erarbeiteten Informationen dar.
+            <resources-list :filter="['MAP', 'Verlaufsformen', 'Redeeinleiter']" :showDesc="false"></resources-list>
           </tile>
 
           <tile title="Inventare und Sammlungen" img="/img/resources/03.png" link="/resources/inventory">
             Inventare sind aus dem Korpus extrahierte oder im
             Korpus überprüfte Sammlungen sprachlicher Ausdrücke ähnlichen Typs.
+            <resources-list :filter="['SpruchList', 'PhrasKomp', 'PREPCON_temp', 'DTWW']" :showDesc="false"></resources-list>
           </tile>
 
           <tile title="Online-Wörterbücher" img="/img/resources/04.png" link="/resources/dictionaries">
             Online-Wörterbücher beinhalten korpusbasierte Wörterbuchartikel im Hypertextformat.<br />
-            <resources-list :filter="['SPRW', 'KWViD', 'WVBF']" :showDesc="false"></resources-list>
+            <resources-list :filter="['SPRW', 'DRI']" :showDesc="false"></resources-list>
           </tile>
 
-          <tile title="Präsentationsformate" img="/img/resources/05.png" link="/resources/visualisations">
+          <tile title="Datikon" img="/img/resources/05.png" link="/resources/visualisations">
             Dynamisch-flexible Präsentations- und Visualisierungsformen, bei denen automatisch ermittelte
             Korpusausschnitte wie KWICs, Kookkurrenzprofile und Slot-Filler-Tabellen ins Zentrum der Ressource
             rücken.<br />
@@ -70,17 +73,7 @@ definePageMeta({
 
           <tile title="Pilot- und Einzelstudien" img="/img/resources/06.png">
             Korpuszentrierte Präsentationsformate betonen die Analyse manuell systematisierter Korpusdaten.<br />
-            <resources-list :filter="['ZUWV', 'PREPCONtemp', 'WVBF']"></resources-list>
-          </tile>
-
-          <tile title="Datikon" img="/img/resources/07.png">
-            <div>
-              <p>Das Datikon enthält dynamisch-flexible Präsentations- und
-                Visualisierungsformen, bei denen automatisch ermittelte
-                Korpusausschnitte wie KWICs, Kookkurrenzprofile und Slot-Filler-Tabellen
-                ins Zentrum der Ressource rücken.</p>
-            </div>
-            <resources-list :filter="['WVBF', 'PREPCON']"></resources-list>
+            <resources-list :filter="['PREPCON_temp', 'PREPCON_kon']"></resources-list>
           </tile>
 
         </div>
