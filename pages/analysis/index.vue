@@ -12,7 +12,8 @@
     <v-row>
       <v-col>
         <div>
-        <div>Befragungen zu Redewendungen</div>
+        <div> 
+          <NuxtLink :to="'http://wvonline.ids-mannheim.de/umfrage2014.htm'">Befragungen zu Redewendungen</NuxtLink></div>
         <div>&nbsp;</div>
         <div>Wendungen mit...</div>
         <div style="margin-left:20px">Schnee</div>

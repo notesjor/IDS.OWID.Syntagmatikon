@@ -111,7 +111,7 @@ export default {
               source: 'SpruchList',
               article: 'Andere Länder, andere Sitten',
               type: 'Sprichwort',
-              href: 'https://www.owid.de/artikel/404233',
+              href: 'http://uwv.ids-mannheim.de/spruchlist/?search=Andere%20L%C3%A4nder,%20andere%20Sitten',
             }
             ]
           }

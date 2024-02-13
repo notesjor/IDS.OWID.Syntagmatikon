@@ -51,13 +51,13 @@ definePageMeta({
 
           <tile title="Lexikografische Angabe" img="/img/patterns/dummy02.png" link="/patterns/component">
             In einigen Ressourcen werden von Hand aufbereitete Musterangaben und -visualisierungen als eine Komponente von Wörterbuchartikeln angeboten, und zwar in „PREPCONkontrastiv und „Feste Wortverbindungen“.
-            <resources-list :filter="['PREPCON_kon', 'SPRW']"/>
+            <resources-list :filter="['PREPCON_kon', 'SPRW', 'FesteWV']"/>
           </tile>
 
           <tile title="Dynamische Erschließung" img="/img/patterns/dummy03.png" link="/patterns/dynamic">
             Welche Fragen lassen sich mit größeren Volltextstellen betrachten/beantworten? Welche Vorteile ergeben sich
             gegenüber KWIC?
-            <resources-list :filter="['KoMuX', 'PREPCONex', 'PREPCONtemp', 'WÖRE', 'KWViD']"/>
+            <resources-list :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp', 'Redeeinleiter', 'Verlaufsformen']"/>
           </tile>
         </div>
       </v-col>
