@@ -1,12 +1,12 @@
 <template>
   <a class="containerItem" v-for="item in resources" :key="item.key" :href="item.url">
-      <div class="middle"><b v-html="item.nameShort" /><br />
+      <div class="middle"><b v-html="item.nameLong" /><br />
         <div v-if="showDesc">
           <br />
           <div v-html="item.description"></div>
         </div>
         <div v-else>
-          <!--{{ item.nameLong }}-->
+          <!--{{ item.nameLong }} -->
         </div>
       </div>
   </a>

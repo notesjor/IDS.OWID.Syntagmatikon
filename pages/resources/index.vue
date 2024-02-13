@@ -42,38 +42,37 @@ definePageMeta({
       <v-col cols="12">
         <div class="container">
           <tile title="Explorative Datenbanken" img="/img/resources/01.png" link="/resources/db_expl">
-            Explorative Datenbanken bieten Informationen zu umfassenden Sprachausschnitten auf
-            der Basis von Korpusdaten.
+            Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von Korpusdaten 
             <resources-list :filter="['KoMuX', 'PREPCON_ex']" :showDesc="false"></resources-list>
           </tile>
 
-          <tile title="Deskriptive Datenbank" img="/img/resources/02.png" link="/resources/db_desc">
-            Deskriptive Datenbanken stellen eine Kombination aus automatisch erstellten
-            Datenmengen und qualitativ erarbeiteten Informationen dar.
+          <tile title="Deskriptive Datenbanken" img="/img/resources/02.png" link="/resources/db_desc">
+            Eine Kombination aus automatisch erstellten
+            Datenmengen und qualitativ erarbeiteten Informationen
             <resources-list :filter="['MAP', 'Verlaufsformen', 'Redeeinleiter']" :showDesc="false"></resources-list>
           </tile>
 
           <tile title="Inventare und Sammlungen" img="/img/resources/03.png" link="/resources/inventory">
-            Inventare sind aus dem Korpus extrahierte oder im
-            Korpus überprüfte Sammlungen sprachlicher Ausdrücke ähnlichen Typs.
+            Aus dem Korpus extrahierte oder im
+            Korpus überprüfte Sammlungen sprachlicher Ausdrücke ähnlichen Typs
             <resources-list :filter="['SpruchList', 'PhrasKomp', 'PREPCON_temp', 'DTWW']" :showDesc="false"></resources-list>
           </tile>
 
           <tile title="Online-Wörterbücher" img="/img/resources/04.png" link="/resources/dictionaries">
-            Online-Wörterbücher beinhalten korpusbasierte Wörterbuchartikel im Hypertextformat.<br />
-            <resources-list :filter="['SPRW', 'DRI']" :showDesc="false"></resources-list>
+            Korpusbasierte Wörterbuchartikel im Hypertextformat<br />
+            <resources-list :filter="['SPRW', 'FesteWV','DRI']" :showDesc="false"></resources-list>
           </tile>
 
           <tile title="Datikon" img="/img/resources/05.png" link="/resources/visualisations">
             Dynamisch-flexible Präsentations- und Visualisierungsformen, bei denen automatisch ermittelte
             Korpusausschnitte wie KWICs, Kookkurrenzprofile und Slot-Filler-Tabellen ins Zentrum der Ressource
-            rücken.<br />
+            rücken<br />
             <resources-list :filter="['WVBF', 'PREPCON']" :showDesc="false"></resources-list>
           </tile>
 
           <tile title="Pilot- und Einzelstudien" img="/img/resources/06.png">
-            Korpuszentrierte Präsentationsformate betonen die Analyse manuell systematisierter Korpusdaten.<br />
-            <resources-list :filter="['PREPCON_temp', 'PREPCON_kon']"></resources-list>
+            Linguistische Studien bzw. lexikografische Beschreibungen zu ausgewählten Phänomen<br />
+            <resources-list :filter="['PREPCON_temp', 'PREPCON_kon', 'Varietäten']"></resources-list>
           </tile>
 
         </div>

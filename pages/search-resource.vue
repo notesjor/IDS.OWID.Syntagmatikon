@@ -11,12 +11,8 @@ definePageMeta({
       <v-col cols="8">
         <div>
           <h1 class="text-3xl font-bold">
-            Suche nach Ressourcen
+            Ressourcenüberblick
           </h1>
-          <p>
-            Die einzelnen Ressourcen im Syntagmatikon sind mit verschiedenen Kategorien und Eigenschaften verschlagwortet.
-            Klicken Sie auf die entsprechenden Schlagworte, um ähnliche Ressourcen anzuzeigen.
-          </p>
         </div>
       </v-col>
       <v-col cols="2"></v-col>
@@ -36,7 +32,7 @@ definePageMeta({
               <a :href="x.url" target="_blank">
                 <img v-if="x.img != undefined" :src="x.img"
                   style="width: 100%; height: auto; margin-bottom: 10px;" />
-                <img v-else src="/img/sources/prepcon_temporal.jpg" style="width: 100%; height: auto; margin-bottom: 10px;" />                
+                <img v-else src="/img/sources/dummy.png" style="width: 100%; height: auto; margin-bottom: 10px;" />                
                 <div v-html="x.description">                  
                 </div>
               </a>
