@@ -63,11 +63,11 @@ definePageMeta({
             <resources-list :filter="['SPRW', 'FesteWV','DRI']" :showDesc="false"></resources-list>
           </tile>
 
-          <tile title="Datikon" img="/img/resources/05.png" link="/resources/visualisations">
+          <tile title="Datikon" img="/img/resources/05.png" link="/resources/datikon">
             Dynamisch-flexible Präsentations- und Visualisierungsformen, bei denen automatisch ermittelte
             Korpusausschnitte wie KWICs, Kookkurrenzprofile und Slot-Filler-Tabellen ins Zentrum der Ressource
             rücken<br />
-            <resources-list :filter="['WVBF', 'PREPCON']" :showDesc="false"></resources-list>
+            <resources-list :filter="['WVBF', 'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']" :showDesc="false"></resources-list>
           </tile>
 
           <tile title="Pilot- und Einzelstudien" img="/img/resources/06.png">

@@ -20,6 +20,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_patterns": ["Erschließungsmuster", "Musterzugang", "Musterangabe"],
         "search_parts": ["Verb", "Nomen", "Adjektiv"],
       },
+      /*
       {
         "key": "PREPCON",
         "nameShort": "PREPCON<sup>online</sup>",
@@ -35,6 +36,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_patterns": ["Erschließungsmuster", "Musterzugang", "Musterangabe"],
         "search_parts": ["Verb", "Nomen", "Präposition", "Adjektiv", "Adverb", "Phrasem", "Satz"],
       },
+      */
       {
         "key": "PREPCON_ex",
         "nameShort": "PREPCON<sup>explorativ</sup>",
@@ -163,7 +165,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "nameShort": "Feste Wortverbindungen",
         "nameLong": "Feste Wortverbindungen des Deutschen",
         "description": 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum sapiente itaque officia reiciendis enim et voluptate sunt, veritatis provident assumenda pariatur autem quia! Pariatur.',
-        "img": "/img/sources/dummy.png",
+        "img": "/dummy/resource.png",
         "url": "https://www.owid.de/wb/sprw/start.html",
         "tags": [],
         "quest": "https://www.owid.de",
@@ -192,7 +194,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
       },
       {
         "key": "WVBF",
-        "nameShort": "Wortverbindungsfeld",
+        "nameShort": "Wortverbindungsfeld Grund",
         "nameLong": "Wortverbindungsfeld zu Präposition+Grund",
         "description": 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum sapiente itaque officia reiciendis enim et voluptate sunt, veritatis provident assumenda pariatur autem quia! Pariatur.',
         "img": "/img/sources/wortverbindungsfelder.jpg",
@@ -227,7 +229,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "nameShort": "Phrasenkomposita des Deutschen",
         "nameLong": "Inventar von Phrasenkomposita des Deutschen",
         "description": 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum sapiente itaque officia reiciendis enim et voluptate sunt, veritatis provident assumenda pariatur autem quia! Pariatur.',
-        "img": "/img/sources/dummy.png",
+        "img": "/dummy/resource.png",
         "url": "",
         "tags": [],
         "search_display": "Netz",
@@ -245,7 +247,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "nameShort": "Varietäten",
         "nameLong": "Studie 'Lexikalische Dynamik deutschsprachiger Varietäten im Kontakt'",
         "description": 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum sapiente itaque officia reiciendis enim et voluptate sunt, veritatis provident assumenda pariatur autem quia! Pariatur.',
-        "img": "/img/sources/dummy.png",
+        "img": "/dummy/resource.png",
         "url": "",
         "tags": [],
         "search_display": "Netz",
