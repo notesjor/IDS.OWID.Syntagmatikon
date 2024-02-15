@@ -320,7 +320,7 @@ export default {
             references: [{
               source: 'WV-Feld',
               article: 'aus persönlichen Gründen',
-              type: 'Präposition-Nomen-Verbindung',
+              type: 'aus-ADJEKTIV-Gründen-Muster',
               href: 'http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/aus_ADJ_Gruenden_ID1364235183677.html',
               color: '#c5049b'
             }
@@ -334,7 +334,7 @@ export default {
             references: [{
               source: 'PREPCON <sup>explorativ</sup>',
               article: 'in München',
-              type: 'Sprachgebrauchsmuster',
+              type: 'Präposition-Nomen-Verbindung',
               href: 'http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=M%C3%BCnchen',
               color: '#0d65c2'
             }

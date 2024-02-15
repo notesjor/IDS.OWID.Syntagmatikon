@@ -1,8 +1,8 @@
 <template>
     <div style="max-width: 80ch;">
         <v-btn><v-icon>mdi-arrow-left</v-icon> Zurück zum Kaleidoskop</v-btn><br/>&nbsp;<br/> 
-        <h1>Anfrage Frankfurter Rundschau zu<br/>frech wie
-                Oskar“</h1><br/>&nbsp;<br/>
+        <h1>Anfrage Frankfurter Rundschau zu<br/>"frech wie
+                Oskar"</h1><br/>&nbsp;<br/>
         <p>Der Kommentar auf der GfdS-Seite zu <em>frech wie Oskar</em> und die
             Erwähnung der diffusen Quellenlage macht das Problem einer seriösen
             Herkunftsbestimmung mehr als deutlich.</p>
