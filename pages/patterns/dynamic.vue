@@ -1,7 +1,6 @@
 <template>
     <h1>Dynamische Erschließung von Mustern</h1>
-    <p>In vielen Ressourcen kann sich der Nutzer selbst Muster erschließen, zum einen durch automatische Suchen und
-        Sortierungen; zum anderen durch eigene analytische Gruppierungen.</p>
+    <p>In vielen Ressourcen kann man sich selbst Muster erschließen, zum einen durch automatische Suchen und Sortierungen auf der Basis von vorgegebenen Kategorien; zum anderen durch eigene analytische Gruppierungen.</p>
     <resources-list :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp', 'Redeeinleiter', 'Verlaufsformen']"/>
     <h2>Beispiele</h2>
     <v-carousel>        

@@ -20,7 +20,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_patterns": ["Erschließungsmuster", "Musterzugang", "Musterangabe"],
         "search_parts": ["Verb", "Nomen", "Adjektiv"],
       },
-      /*
+     /*
       {
         "key": "PREPCON",
         "nameShort": "PREPCON<sup>online</sup>",
@@ -36,14 +36,14 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_patterns": ["Erschließungsmuster", "Musterzugang", "Musterangabe"],
         "search_parts": ["Verb", "Nomen", "Präposition", "Adjektiv", "Adverb", "Phrasem", "Satz"],
       },
-      */
+     */
       {
         "key": "PREPCON_ex",
         "nameShort": "PREPCON<sup>explorativ</sup>",
         "nameLong": "PREPCON<sup>explorativ</sup> - Explorative Datenbank zu Präposition-Nomen-Verbindungen im Kontext",
         "description": 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum sapiente itaque officia reiciendis enim et voluptate sunt, veritatis provident assumenda pariatur autem quia! Pariatur.',
         "img": "/img/sources/prepcon_explorativ.jpg",
-        "url": "http://uwv.ids-mannheim.de/prepcon/prepcon_online.html",
+        "url": "http://uwv.ids-mannheim.de/prepcon/modul1/",
         "tags": ["Suche", "Explorativ", "Datenbank", "Frequenz", "KWIC", "Präposition", "Nomen", "Erschließungsmuster"],
         "quest": "http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?{q}",
         "search_display": "Suche",
@@ -59,7 +59,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "nameLong": "PREPCON<sup>temporal</sup> - Kurzartikel zu temporalen Präposition-Nomen-Verbindungen im Kontext",
         "description": 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum sapiente itaque officia reiciendis enim et voluptate sunt, veritatis provident assumenda pariatur autem quia! Pariatur.',
         "img": "/img/sources/prepcon_temporal.jpg",
-        "url": "http://uwv.ids-mannheim.de/prepcon/prepcon_online.html",
+        "url": "http://uwv.ids-mannheim.de/prepcon/modul2/",
         "tags": ["Vollautomatisch", "Frequenz", "KWIC", "Erschließungsmuster"],
         "quest": "http://uwv.ids-mannheim.de/prepcon/modul2/inventar/{q}",
         "search_display": "Stichwortliste",
@@ -75,7 +75,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "nameLong": "PREPCON<sup>kontrastiv</sup> - Kontrastive Darstellung von Präposition-Nomen-Verbindungen im Kontext",
         "description": 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum sapiente itaque officia reiciendis enim et voluptate sunt, veritatis provident assumenda pariatur autem quia! Pariatur.',
         "img": "/img/sources/prepcon_kontrastiv.jpg",
-        "url": "http://uwv.ids-mannheim.de/prepcon/modul3/index.html",
+        "url": "http://uwv.ids-mannheim.de/prepcon/modul3/",
         "tags": ["Vollautomatisch", "Frequenz", "KWIC", "Musterangabe"],
         "quest": "http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/{q}.html",
         "search_display": "Suche",

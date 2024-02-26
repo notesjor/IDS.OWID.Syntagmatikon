@@ -21,6 +21,7 @@ definePageMeta({
       <v-col style="text-align: center;">
         <div v-for="x in resources" :key="x"
           style="width: 350px; display: inline-block; margin: 10px; text-align: left; vertical-align: top;">
+         
           <v-card style="margin-bottom: 10px;" :elevation="x.rank">
             <v-card-title>
               <a :href="x.url" target="_blank">
@@ -43,6 +44,7 @@ definePageMeta({
               </div>
             </v-card-text>
           </v-card>
+        
         </div>
       </v-col>
     </v-row>
@@ -66,6 +68,7 @@ export default {
   mounted() {
     this.resourcesStore = useResourcesStore();
     this.resources = this.resourcesStore.getResources(null);
+
   },
   methods: {
     getName: function (dic) {
@@ -101,6 +104,13 @@ export default {
       //this.resources.sort((a, b) => b.rank - a.rank);
     }
   },
+  /*
+  computed: {
+    resources_filtered() {
+      let resources_filtered = this.resources.filter(x => x.key in ['PREPCON_komp']);
+      return resources_filtered;
+    }
+  },*/
   watch: {
     query: function (val) {
       /*
