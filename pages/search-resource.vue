@@ -63,12 +63,15 @@ export default {
       selected_tags: [],
       resourcesStore: null,
       resources: [],
+      filter: ["KoMuX", 'PREPCON', 'MAP', 'Redeeinleiter', 'SpruchList', 
+      'DTWW', 'SPRW', 'FesteWV', 'Verlaufsformen', 'WVBF', 
+      'DRI', 'PhrasKomp', 'Varietäten']
     }
   },
   mounted() {
     this.resourcesStore = useResourcesStore();
-    this.resources = this.resourcesStore.getResources(null);
-
+    //this.resources = this.resourcesStore.getResources(null);
+    this.resources = this.resourcesStore.getResources(this.filter);
   },
   methods: {
     getName: function (dic) {
