@@ -226,10 +226,10 @@ export const useResourcesStore = defineStore('resourcesStore', {
       {
 
         "key": "PhrasKomp",
-        "nameShort": "Phrasenkomposita des Deutschen",
+        "nameShort": "Phrasenkomposita",
         "nameLong": "Inventar von Phrasenkomposita des Deutschen",
         "description": 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum sapiente itaque officia reiciendis enim et voluptate sunt, veritatis provident assumenda pariatur autem quia! Pariatur.',
-        "img": "/dummy/resource.png",
+        "img": "/img/sources/phraskomp.PNG",
         "url": "",
         "tags": [],
         "search_display": "Netz",
