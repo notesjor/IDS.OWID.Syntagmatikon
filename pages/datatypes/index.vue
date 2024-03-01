@@ -38,27 +38,28 @@ definePageMeta({
         <h2 style="margin:-20px 0px 10px 10px; border-bottom: 3px lightgray solid;">Automatische Informationstypen</h2>
 
         <div class="container">
-          <tile title="Frequenzen" img="/img/datatypes/frequenz.jpg" link="/datatypes/frequency">
+          <tile title="Frequenzen" img="/img/datatypes/frequenzen.PNG" link="/datatypes/frequency">
             Was sagen Frequenzen aus? Welche Aussagen lassen sich damit treffen? Was bedeutet ein Trend?
           </tile>
 
-          <tile title="KWIC (KeyWord In Context)" img="/img/datatypes/kwic.jpg" link="/datatypes/kwic">
+          <tile title="KWIC (KeyWord In Context)" img="/img/datatypes/kwics.PNG" link="/datatypes/kwic">
             Was sagt ein KWIC-Beleg aus? Welche Aussagen lassen sich damit treffen? Wie lassen sich größere Bedeutungseinheiten damit erschließen?
           </tile>
-
+<!--
           <tile title="Volltextstellen" img="/img/datatypes/belege.jpg" link="/datatypes/full-text">
             Welche Fragen lassen sich mit größeren Volltextstellen betrachten/beantworten? Welche Vorteile ergeben sich gegenüber KWIC?
           </tile>
+        -->
 
-          <tile title="Kookkurrenzprofile" img="/img/datatypes/kookkurrenz.jpg" link="/datatypes/cooccurrence">
+          <tile title="Kookkurrenzprofile" img="/img/datatypes/kook.PNG" link="/datatypes/cooccurrence">
             Was sind Kookkurrenzprofile? Wie lassen sich diese Wortpartner statistisch berechnen?
           </tile>
 
-          <tile title="Muster-/Lückenfüllertabellen" img="/img/datatypes/muster.jpg" link="/datatypes/patterntable">
+          <tile title="Muster-/Lückenfüllertabellen" img="/img/datatypes/muster.PNG" link="/datatypes/patterntable">
             Wie können Muster-/Lückenfüllertabellen zur Analyse von Wortverbindungen genutzt werden? Welche Aussagen lassen sich damit treffen?
           </tile>
 
-          <tile title="Annotierte Daten" img="/img/datatypes/annotate.jpg" link="/datatypes/annotation">
+          <tile title="Annotierte Daten" img="/img/datatypes/auto_anno.PNG" link="/datatypes/annotation">
             Wie werden Daten annotiert und warum? Welche Aussagen lassen sich damit treffen? Was sind übliche Annotationen?
           </tile>      
         </div>
@@ -68,11 +69,11 @@ definePageMeta({
         <div class="container">
 
 
-          <tile title="Kategoriale-Label" img="/img/datatypes/category.jpg" link="/datatypes/category">
+          <tile title="Kategoriale-Label" img="/img/datatypes/kategorial.PNG" link="/datatypes/category">
             Welche Aussage treffen Kategorien? Worin unterscheiden sich bestimtme Kategorien?
           </tile>
 
-          <tile title="Belege" img="/img/datatypes/belege2.jpg" link="/datatypes/matches">
+          <tile title="Belege" img="/img/datatypes/belege.PNG" link="/datatypes/matches">
             Warum werden Belege manuell ausgewählt? Wie unterscheiden sich Belege von KWIC? Welche Aussagen lassen sich damit treffen?
           </tile>
 

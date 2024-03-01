@@ -67,12 +67,12 @@ definePageMeta({
             Dynamisch-flexible Präsentations- und Visualisierungsformen, bei denen automatisch ermittelte
             Korpusausschnitte wie KWICs, Kookkurrenzprofile und Slot-Filler-Tabellen ins Zentrum der Ressource
             rücken<br />
-            <resources-list :filter="['WVBF', 'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']" :showDesc="false"></resources-list>
+            <resources-list :filter="['WVBF', 'PREPCON']" :showDesc="false"></resources-list>
           </tile>
 
-          <tile title="Pilot- und Einzelstudien" img="/img/resources/06.png">
+          <tile title="Pilotstudien" img="/img/resources/06.png">
             Linguistische Studien bzw. lexikografische Beschreibungen zu ausgewählten Phänomen<br />
-            <resources-list :filter="['PREPCON_temp', 'PREPCON_kon', 'Varietäten']"></resources-list>
+            <resources-list :filter="['PREPCON_kon', 'Varietäten']"></resources-list>
           </tile>
 
         </div>
