@@ -69,7 +69,7 @@ definePageMeta({
         <div class="container">
 
 
-          <tile title="Kategoriale-Label" img="/img/datatypes/kategorial.PNG" link="/datatypes/category">
+          <tile title="Kategoriale Label" img="/img/datatypes/kategorial.PNG" link="/datatypes/category">
             Welche Aussage treffen Kategorien? Worin unterscheiden sich bestimtme Kategorien?
           </tile>
 
@@ -77,23 +77,23 @@ definePageMeta({
             Warum werden Belege manuell ausgewählt? Wie unterscheiden sich Belege von KWIC? Welche Aussagen lassen sich damit treffen?
           </tile>
 
-          <tile title="Narrative Beschreibung " img="/img/datatypes/narrativ.jpg" link="/datatypes/narration">
+          <tile title="Narrative Beschreibung " img="/img/datatypes/narrativeBeschreibungen.PNG" link="/datatypes/narration">
             Welche Fragen lassen sich mit größeren Volltextstellen betrachten/beantworten? Welche Vorteile ergeben sich gegenüber KWIC?
           </tile>
 
-          <tile title="Basiselemente" img="/img/datatypes/elemente.jpg" link="/datatypes/elements">
+          <tile title="Basiselemente" img="/img/datatypes/basiselemente.PNG" link="/datatypes/elements">
             Was sind Basiselemente? Wie lassen sich diese grundlegenden Elemente kombinieren?
           </tile>
 
-          <tile title="Kontextzeilen" img="/img/datatypes/bezuege.jpg" link="/datatypes/context">
+          <tile title="Kontextzeilen" img="/img/datatypes/kontextzeilen.PNG" link="/datatypes/context">
             Wie lassen sich Kontextzeilen nutzen? Welche Aussagen lassen sich damit treffen?
           </tile>
 
-          <tile title="Satellitenfelder" img="/img/datatypes/kreis.jpg" link="/datatypes/fields">
+          <tile title="Felder" img="/img/datatypes/felder.PNG" link="/datatypes/fields">
             Wie lassen sich Satellitenfelder nutzen? Welche Aussagen lassen sich damit treffen? Welche Satellitenfelder sind üblich?
           </tile>  
 
-          <tile title="Musterangaben" img="/img/datatypes/pattern.jpg" link="/datatypes/expression">
+          <tile title="Fremdsprachige Äquivalenz" img="/img/datatypes/aequivalenz.PNG" link="/datatypes/expression">
             Wie lassen sich Musterangaben nutzen? Welche Aussagen lassen sich damit treffen? Welche Musterangaben sind üblich?
           </tile>  
         </div>

@@ -31,12 +31,12 @@ export default defineNuxtConfig({
       leftIconHref: "https://www.owid.de/plus/index.html",
       rightIconHref: "https://www.ids-mannheim.de/",
 
-      footerContact: "mailto:ruediger@ids-mannheim.de",
+      footerContact: "mailto:brunner@ids-mannheim.de",
       footerImpressum: "https://www.owid.de/wb/owid/impressum.html",
       footerDsgvo: "https://www.owid.de/wb/owid/privacy.html"
     }
   },
   app: {
-    baseURL: "/syntagmatikon_2024-02/" //baseURL: "/syntagmatikon_2024-02/"    
+    baseURL: "/syntagmatikon_2024-03/" //baseURL: "/syntagmatikon_2024-03/"    
   },
 })
