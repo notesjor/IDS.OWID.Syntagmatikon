@@ -6,20 +6,23 @@
     <v-row>
       <v-col>
         <div>
-          Das korpusbasierte Portal <hi>Syntagmatikon</hi> bietet Informationen zum Gebrauch von sprachlichen Ausdrücken,
-          die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden
-          sind: Phraseologismen, Sprichwörter und Sprüche; Kollokationen; Komposita und andere Wortbildungseinheiten;
-          Präpositionen + Substantiv-Kombinationen; Verb + Präpositionen-Kombinationen; wortgruppenartige Redeeinleiter.
-          Des Weiteren werden diesen Einheiten zugrunde liegenden Schablonen und Schemata (Muster) und die vielfachen
-          Vernetzungen im deutschen Wortschatz auf unterschiedliche Weise beschrieben und visualisiert.
-        </div>
-        <div>Das Syntagmatikon befindet sich aktuell im Aufbau.</div>
+          Das korpusbasierte Portal <hi>Syntagmatikon</hi> bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.</div>
+          <!--
+          <div>Die folgenden <hi>interaktiven Beispiele</hi> illustrieren die Vielfalt solcher Ausdrücke und ihre Verwendung im Text. 
+        </div> -->
       </v-col>
     </v-row>
     <v-row>
       <v-col>
         <div>
           <Sampler :items="sample"></Sampler>
+        </div>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <div>
+          Aktuell werden Phraseologismen, Sprichwörter und Sprüche; Kollokationen; Komposita und andere Wortbildungseinheiten; Präpositionen + Substantiv-Kombinationen; Verb + Präpositionen-Kombinationen; wortgruppenartige Redeeinleiter dokumentiert und beschrieben. Des Weiteren widmet sich das Portal der Analyse und Darstellung zugrunde liegender Schablonen und Schemata (Muster) und deren vielfachen Vernetzungen im deutschen Wortschatz.
         </div>
       </v-col>
     </v-row>
@@ -163,7 +166,7 @@ export default {
               source: 'Phrasenkomposita-Inventar',
               article: 'Im-fremden-Bett-schlaf-ich-immer-schlecht-Sensibelchen',
               type: 'Phrasenkompositum',
-              href: 'http://owid.de',
+              href: '',
               color: '#0d65c2'
             }
             ]
@@ -177,7 +180,7 @@ export default {
               source: 'Kompositamuster-Explorer',
               article: 'Kopfkissen',
               type: 'Kompositum',
-              href: 'http://owid.de',
+              href: 'https://www.owid.de/plus/komux/?lem=kopfkissen',
               color: '#008702'
             }
             ]
@@ -219,7 +222,7 @@ export default {
               source: 'Kleines Wörterbuch der Redeeinleiter',
               article: 'in den Sinn kommen',
               type: 'Redeeinleiter',
-              href: 'https://owid.de',
+              href: 'https://www.owid.de/plus/redeeinleiter',
               color: '#0d65c2'
             }
             ]
@@ -270,10 +273,10 @@ export default {
             }
             ],
             references: [{
-              source: 'Komposita-Explorer',
+              source: 'Kompositamuster-Explorer',
               article: 'Vorstandschef',
               type: 'Kompositum',
-              href: 'https://www.owid.de/',
+              href: 'https://www.owid.de/plus/komux/?lem=Vorstandschef',
               color: '#0d65c2'
             }
             ]
@@ -287,7 +290,7 @@ export default {
               source: 'Kleines Wörterbuch der Redeeinleiter',
               article: 'sagen',
               type: 'Redeeinleiter',
-              href: 'https://www.owid.de/',
+              href: 'https://www.owid.de/plus/redeeinleiter/',
               color: '#c5049b'
             }
             ]
@@ -304,7 +307,7 @@ export default {
               source: 'MAP',
               article: 'sagen vor',
               type: 'Argumentmarkierende Präposition',
-              href: 'https://www.owid.de/artikel/309167',
+              href: '',
               color: '#0d65c2'
             }
             ]
@@ -317,8 +320,8 @@ export default {
             references: [{
               source: 'WV-Feld',
               article: 'aus persönlichen Gründen',
-              type: 'Präposition-Nomen-Verbindung',
-              href: 'https://www.owid.de/artikel/309167',
+              type: 'aus-ADJEKTIV-Gründen-Muster',
+              href: 'http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/aus_ADJ_Gruenden_ID1364235183677.html',
               color: '#c5049b'
             }
             ]
@@ -331,8 +334,8 @@ export default {
             references: [{
               source: 'PREPCON <sup>explorativ</sup>',
               article: 'in München',
-              type: 'Sprachgebrauchsmuster',
-              href: 'https://www.owid.de/artikel/309167',
+              type: 'Präposition-Nomen-Verbindung',
+              href: 'http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=M%C3%BCnchen',
               color: '#0d65c2'
             }
             ]
@@ -345,14 +348,14 @@ export default {
             references: [{
               source: 'PREPCON <sup>temporal</sup>',
               article: 'am Montagabend',
-              type: 'Kompositum',
-              href: 'https://www.owid.de/artikel/309167',
+              type: 'Präposition-Nomen-Verbindung',
+              href: 'http://uwv.ids-mannheim.de/prepcon/modul2/inventar/inventar_tagz_end.html#am_Montagabend',
               color: '#c5049b'
             }, {
               source: 'PREPCON <sup>explorativ</sup>',
               article: 'am Montagabend',
-              type: 'Kompositum',
-              href: 'https://www.owid.de/artikel/309167',
+              type: 'Präposition-Nomen-Verbindung',
+              href: 'http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=Montagabend',
               color: '#c5049b'
             }
             ]
@@ -363,10 +366,10 @@ export default {
             }
             ],
             references: [{
-              source: 'Komposita-Explorer',
+              source: 'Kompositamuster-Explorer',
               article: 'Montagabend',
-              type: 'Präposition-Nomen-Verbindung',
-              href: 'https://www.owid.de/artikel/309167',
+              type: 'Kompositum',
+              href: 'https://www.owid.de/plus/komux/?lem=Montagabend',
               color: '#0d65c2'
             },
             ]
@@ -384,7 +387,7 @@ export default {
               source: 'Deutsch-Russische Idiome online',
               article: 'den Boden unter den Füßen verlieren',
               type: 'Verbales Phrasem',
-              href: 'https://www.owid.de/artikel/309167',
+              href: 'http://wvonline.ids-mannheim.de/idiome_russ/BODEN_den_Boden_unter_den_Fuessen_verlieren.htm',
               color: '#0d65c2'
             }
             ]
@@ -400,9 +403,9 @@ export default {
             ],
             references: [{
               source: 'Deutsch-türkische Wortverbindungen Wirtschaft',
-              article: 'den Boden unter den Füßen verlieren',
+              article: 'Dachgesellschaft',
               type: 'Kompositum',
-              href: 'https://www.owid.de/artikel/309167',
+              href: 'http://wvonline.ids-mannheim.de/dtww/dtww_d.htm',
               color: '#0d65c2'
             }
             ]
@@ -410,8 +413,8 @@ export default {
           ],
         },
       ],
-      list_public: ["ZUWV", "DRIO", "WVBF", "PAROWB", "KWViD", "SPRW", "DTWW", "SpruchList", "WÖRE", "PREPCON", "KoMuX"],
-      list_todo: ["MAP", "PHKO"],
+      list_public: ["ZUWV", "DRIO", "WVBF", "PAROWB", "KWViD", "SPRW", "DTWW", "SpruchList", "Redeeinleiter", "PREPCON", "KoMuX"],
+      list_todo: ["MAP", "PhrasKomp"],
     }
   }
 }

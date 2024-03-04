@@ -4,19 +4,18 @@
   style="border:1px black solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
   <v-row style="margin-top:-20px">
       <v-col>
-        <p class="text-xl">Interaktive-Beispiele</p>
-        <p class="text-l">Klicken Sie auf eine Stelle im Beispiel, um eine Liste zugehöriger Ressourcen im Syntagmatikon
-          anzuzeigen.
-          Mit einem erneuten Klick auf eine der Ressourcen rufen Sie diese auf.
-        </p>        
+        <p class="text-xl">Interaktive Beispiele</p> 
+       <!-- <p class="text-l">Durch Klicken auf die Beispiele im Beleg werden darunter die zugehörigen Ressourcen im Syntagmatikon mit entsprechender Verlinkung zum dortigen Eintrag angezeigt. 
+        </p>  -->     
       </v-col>
-    </v-row>
+    </v-row> 
+
     <v-row>
       <v-col>
         <div @mouseenter="carouselStop" @mouseleave="carouselStart"
           style="border: 1px white solid; border-radius: 5px; padding: 5px; background-color: white;">
           <v-carousel hide-delimiter-background hide-delimiters continuous ref="carousel" v-model="tab" :cycle="cycle"
-            class="notransition">
+            class="notransition" interval="10000">
             <v-carousel-item v-for="(item, i) in generatePages()" :key="i" eager>
               <v-sheet height="100%">
                 <div style="padding:7px 75px 5px 75px;">
@@ -55,6 +54,14 @@
             </template>
           </v-carousel>
         </div>
+      </v-col>
+    </v-row>
+    
+    <v-row style="margin-top:-20px">
+    <v-col>
+        <!-- <p class="text-xl">Interaktive Beispiele</p> -->
+        <p class="text-l">Durch Klicken auf die Beispiele im Beleg werden darunter die zugehörigen Ressourcen im Syntagmatikon mit entsprechender Verlinkung zum dortigen Eintrag angezeigt. 
+        </p>        
       </v-col>
     </v-row>
   </div>
@@ -175,7 +182,7 @@ export default {
 }
 
 .animated {
-  animation: pulsate 2s infinite;
+  animation: pulsate 10s infinite;
 }
 
 .v-window__controls > button {

@@ -33,7 +33,7 @@ definePageMeta({
         <div class="container">
           <tile title="Nomina" img="/dummy/dummy_03.png">
            
-            <resources-list :filter="['PREPCON', 'KoMuX', 'WVBF', 'PhrasKomp']"></resources-list>
+            <resources-list :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'WVBF', 'PhrasKomp']"></resources-list>
           </tile>
 
           <tile title="Verben" img="/dummy/dummy_04.png">
@@ -42,7 +42,7 @@ definePageMeta({
           </tile>
 
           <tile title="Präpositionen" img="/dummy/dummy_05.png">
-            <resources-list :filter="['PREPCON', 'MAP', 'Verlaufsformen']"></resources-list>
+            <resources-list :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon',, 'MAP', 'Verlaufsformen', 'WVBF']"></resources-list>
           </tile>
 
           <tile title="Adjektive" img="/dummy/dummy_06.png">
@@ -50,7 +50,7 @@ definePageMeta({
           </tile>
 
           <tile title="Phraseme" img="/dummy/dummy_07.png">
-              <resources-list :filter="['PhrasKomp', 'PREPCON', 'MAP', 'Redeeinleiter', 'DTWW', 'DRI']"></resources-list>
+              <resources-list :filter="['PhrasKomp', 'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'MAP', 'Redeeinleiter', 'DTWW', 'DRI']"></resources-list>
           </tile>
 
           <tile title="Feste Sätze" img="/dummy/dummy_08.png">

@@ -16,5 +16,5 @@
             Texten sichtbar wird.</p>
 
     </div>
-    <resources-list :filter="['WVBF', 'PREPCON']"></resources-list>
+    <resources-list :filter="['WVBF', 'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']"></resources-list>
 </template>
