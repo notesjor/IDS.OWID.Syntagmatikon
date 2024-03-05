@@ -1,7 +1,9 @@
 <template>
-  <div style="max-width: 80ch;">
+  <div>
     <v-row>
-      <h1 style="margin: 10px 0px 10px 15px;">Syntagmatikon</h1>
+      <v-col>
+        <h1>Syntagmatikon</h1>
+      </v-col>
     </v-row>
     <v-row>
       <v-col>

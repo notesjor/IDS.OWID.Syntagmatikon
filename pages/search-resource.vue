@@ -7,22 +7,18 @@ definePageMeta({
 <template>
   <div class="nolink">
     <v-row>
-      <v-col cols="2"></v-col>
-      <v-col cols="8">
-        <div>
-          <h1 class="text-3xl font-bold">
-            Ressourcenüberblick
-          </h1>
-        </div>
+      <v-col>
+        <h1 style="width:100%; text-align: center;">
+          Ressourcenüberblick
+        </h1>
       </v-col>
-      <v-col cols="2"></v-col>
     </v-row>
     <v-row>
       <v-col style="text-align: center;">
         <div v-for="x in resources" :key="x"
           style="width: 350px; display: inline-block; margin: 10px; text-align: left; vertical-align: top;">
-         
-          <v-card style="margin-bottom: 10px;" :elevation="x.rank">
+
+          <v-card style="margin-bottom: 10px;" elevation="0">
             <v-card-title>
               <a :href="x.url" target="_blank">
                 <h2 class="text-xl" v-html="x.nameShort">
@@ -31,20 +27,20 @@ definePageMeta({
             </v-card-title>
             <v-card-text>
               <a :href="x.url" target="_blank">
-                <img v-if="x.img != undefined" :src="x.img"
-                  style="width: 100%; height: auto; margin-bottom: 10px;" />
-                <img v-else src="/dummy/resource.png" style="width: 100%; height: auto; margin-bottom: 10px;" />                
-                <div v-html="x.description">                  
+                <img v-if="x.img != undefined" :src="x.img" style="width: 100%; height: auto; margin-bottom: 10px;" />
+                <img v-else src="/dummy/resource.png" style="width: 100%; height: auto; margin-bottom: 10px;" />
+                <div style="text-align: justify;">
+                  <div v-html="x.description" />
                 </div>
               </a>
               <br />
               <div>
-                <v-chip v-for="t in x.tags" color="darkgrey" style="margin: 5px;" :variant="getChipVariant(t)" size="small"
-                  @click="switchChip(t)">{{ t }}</v-chip>
+                <v-chip v-for="t in x.tags" color="darkgrey" style="margin: 5px;" :variant="getChipVariant(t)"
+                  size="small" @click="switchChip(t)">{{ t }}</v-chip>
               </div>
             </v-card-text>
           </v-card>
-        
+
         </div>
       </v-col>
     </v-row>
@@ -63,9 +59,9 @@ export default {
       selected_tags: [],
       resourcesStore: null,
       resources: [],
-      filter: ["KoMuX", 'PREPCON', 'MAP', 'Redeeinleiter', 'SpruchList', 
-      'DTWW', 'SPRW', 'FesteWV', 'Verlaufsformen', 'WVBF', 
-      'DRI', 'PhrasKomp', 'Varietäten']
+      filter: ["KoMuX", 'PREPCON', 'MAP', 'Redeeinleiter', 'SpruchList',
+        'DTWW', 'SPRW', 'FesteWV', 'Verlaufsformen', 'WVBF',
+        'DRI', 'PhrasKomp', 'Varietäten']
     }
   },
   mounted() {

@@ -38,30 +38,30 @@ definePageMeta({
         <h2 style="margin:-20px 0px 10px 10px; border-bottom: 3px lightgray solid;">Automatische Informationstypen</h2>
 
         <div class="container">
-          <tile title="Frequenzen" img="/img/datatypes/frequenzen.PNG" link="/datatypes/frequency">
+          <div class="question" title="Frequenzen" img="/img/datatypes/frequenzen.PNG" link="/datatypes/frequency">
             Was sagen Frequenzen aus? Welche Aussagen lassen sich damit treffen? Was bedeutet ein Trend?
-          </tile>
+          </div>
 
-          <tile title="KWIC (KeyWord In Context)" img="/img/datatypes/kwics.PNG" link="/datatypes/kwic">
+          <div class="question" title="KWIC (KeyWord In Context)" img="/img/datatypes/kwics.PNG" link="/datatypes/kwic">
             Was sagt ein KWIC-Beleg aus? Welche Aussagen lassen sich damit treffen? Wie lassen sich größere Bedeutungseinheiten damit erschließen?
-          </tile>
+          </div>
 <!--
-          <tile title="Volltextstellen" img="/img/datatypes/belege.jpg" link="/datatypes/full-text">
+          <div class="question" title="Volltextstellen" img="/img/datatypes/belege.jpg" link="/datatypes/full-text">
             Welche Fragen lassen sich mit größeren Volltextstellen betrachten/beantworten? Welche Vorteile ergeben sich gegenüber KWIC?
-          </tile>
+          </div>
         -->
 
-          <tile title="Kookkurrenzprofile" img="/img/datatypes/kook.PNG" link="/datatypes/cooccurrence">
+          <div class="question" title="Kookkurrenzprofile" img="/img/datatypes/kook.PNG" link="/datatypes/cooccurrence">
             Was sind Kookkurrenzprofile? Wie lassen sich diese Wortpartner statistisch berechnen?
-          </tile>
+          </div>
 
-          <tile title="Muster-/Lückenfüllertabellen" img="/img/datatypes/muster.PNG" link="/datatypes/patterntable">
+          <div class="question" title="Muster-/Lückenfüllertabellen" img="/img/datatypes/muster.PNG" link="/datatypes/patterntable">
             Wie können Muster-/Lückenfüllertabellen zur Analyse von Wortverbindungen genutzt werden? Welche Aussagen lassen sich damit treffen?
-          </tile>
+          </div>
 
-          <tile title="Annotierte Daten" img="/img/datatypes/auto_anno.PNG" link="/datatypes/annotation">
+          <div class="question" title="Annotierte Daten" img="/img/datatypes/auto_anno.PNG" link="/datatypes/annotation">
             Wie werden Daten annotiert und warum? Welche Aussagen lassen sich damit treffen? Was sind übliche Annotationen?
-          </tile>      
+          </div>      
         </div>
 
         <h2 style="margin:40px 0px 10px 10px; border-bottom: 3px lightgray solid;">Bearbeitete Informationstypen</h2>
@@ -69,38 +69,69 @@ definePageMeta({
         <div class="container">
 
 
-          <tile title="Kategoriale Label" img="/img/datatypes/kategorial.PNG" link="/datatypes/category">
+          <div class="question" title="Kategoriale Label" img="/img/datatypes/kategorial.PNG" link="/datatypes/category">
             Welche Aussage treffen Kategorien? Worin unterscheiden sich bestimtme Kategorien?
-          </tile>
+          </div>
 
-          <tile title="Belege" img="/img/datatypes/belege.PNG" link="/datatypes/matches">
+          <div class="question" title="Belege" img="/img/datatypes/belege.PNG" link="/datatypes/matches">
             Warum werden Belege manuell ausgewählt? Wie unterscheiden sich Belege von KWIC? Welche Aussagen lassen sich damit treffen?
-          </tile>
+          </div>
 
-          <tile title="Narrative Beschreibung " img="/img/datatypes/narrativeBeschreibungen.PNG" link="/datatypes/narration">
+          <div class="question" title="Narrative Beschreibung " img="/img/datatypes/narrativeBeschreibungen.PNG" link="/datatypes/narration">
             Welche Fragen lassen sich mit größeren Volltextstellen betrachten/beantworten? Welche Vorteile ergeben sich gegenüber KWIC?
-          </tile>
+          </div>
 
-          <tile title="Basiselemente" img="/img/datatypes/basiselemente.PNG" link="/datatypes/elements">
+          <div class="question" title="Basiselemente" img="/img/datatypes/basiselemente.PNG" link="/datatypes/elements">
             Was sind Basiselemente? Wie lassen sich diese grundlegenden Elemente kombinieren?
-          </tile>
+          </div>
 
-          <tile title="Kontextzeilen" img="/img/datatypes/kontextzeilen.PNG" link="/datatypes/context">
+          <div class="question" title="Kontextzeilen" img="/img/datatypes/kontextzeilen.PNG" link="/datatypes/context">
             Wie lassen sich Kontextzeilen nutzen? Welche Aussagen lassen sich damit treffen?
-          </tile>
+          </div>
 
-          <tile title="Felder" img="/img/datatypes/felder.PNG" link="/datatypes/fields">
+          <div class="question" title="Felder" img="/img/datatypes/felder.PNG" link="/datatypes/fields">
             Wie lassen sich Satellitenfelder nutzen? Welche Aussagen lassen sich damit treffen? Welche Satellitenfelder sind üblich?
-          </tile>  
+          </div>  
 
-          <tile title="Fremdsprachige Äquivalenz" img="/img/datatypes/aequivalenz.PNG" link="/datatypes/expression">
+          <div class="question" title="Fremdsprachige Äquivalenz" img="/img/datatypes/aequivalenz.PNG" link="/datatypes/expression">
             Wie lassen sich Musterangaben nutzen? Welche Aussagen lassen sich damit treffen? Welche Musterangaben sind üblich?
-          </tile>  
+          </div>  
         </div>
       </v-col>
     </v-row>
   </div>
 </template>
+
+<style>
+div.question {
+  max-width: 350px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #d6d6d6;
+  border-radius: 25px; /* Abgerundete Form */
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s;
+  position: relative; /* Hinzugefügt für das Pseudoelement */
+}
+
+div.question:after { /* Pfeil am unteren Rand */
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #d6d6d6;
+  border-bottom: 0;
+  margin-left: -10px;
+}
+</style>
 
 <script>
 export default {

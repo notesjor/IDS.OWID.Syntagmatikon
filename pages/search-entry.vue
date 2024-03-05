@@ -9,7 +9,7 @@ definePageMeta({
     <v-col cols="2"></v-col>
     <v-col cols="8">
       <div>
-        <h1 class="text-3xl font-bold">
+        <h1>
           Suche nach Einträgen
         </h1>
         <p>
