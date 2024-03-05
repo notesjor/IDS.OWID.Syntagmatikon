@@ -21,11 +21,13 @@ definePageMeta({
           <v-card style="margin-bottom: 10px;" elevation="0">
             <v-card-title>
               <a :href="x.url" target="_blank">
-                <h2 class="text-xl" v-html="x.nameShort">
-                </h2>
+                <h2 class="text-xl" v-html="x.nameShort"/>
+                <div class="reslink">
+                  <v-icon>mdi-open-in-new</v-icon> Zur Ressource
+                </div>
               </a>
             </v-card-title>
-            <v-card-text>
+            <v-card-text style="margin-top: 20px;">
               <a :href="x.url" target="_blank">
                 <img v-if="x.img != undefined" :src="x.img" style="width: 100%; height: auto; margin-bottom: 10px;" />
                 <img v-else src="/dummy/resource.png" style="width: 100%; height: auto; margin-bottom: 10px;" />
@@ -46,6 +48,30 @@ definePageMeta({
     </v-row>
   </div>
 </template>
+
+<style>
+div.reslink {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 10px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.78);
+  color: white;
+  display: inline-block;
+  line-height: 11px;
+  position: absolute;
+  margin-top:-10px;
+}
+
+div.reslink:before { /* Pseudoelement für den überstehenden Rand */
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -50%;
+  width: 150%;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.78);
+}
+</style>
 
 <script>
 import { useResourcesStore } from '~/stores/resources';
