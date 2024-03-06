@@ -1,7 +1,7 @@
 <template>
     <div class="nolink">
         <NuxtLink :to="link">
-            <v-card :style="highlightItem('Deskriptive Datenbank')">
+            <v-card :style="highlightItem('Deskriptive Datenbank')" elevation="0">
                 <v-card-title>
                     <div style="position: relative; justify-content: center;">
                         <img :src="img" alt="" style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />

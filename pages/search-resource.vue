@@ -27,7 +27,7 @@ definePageMeta({
                 </div>
               </a>
             </v-card-title>
-            <v-card-text style="margin-top: 20px;">
+            <v-card-text style="margin-top: -22px;">
               <a :href="x.url" target="_blank">
                 <img v-if="x.img != undefined" :src="x.img" style="width: 100%; height: auto; margin-bottom: 10px;" />
                 <img v-else src="/dummy/resource.png" style="width: 100%; height: auto; margin-bottom: 10px;" />

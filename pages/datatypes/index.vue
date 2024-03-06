@@ -102,36 +102,6 @@ definePageMeta({
   </div>
 </template>
 
-<style>
-div.question {
-  max-width: 350px;
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #d6d6d6;
-  border-radius: 25px; /* Abgerundete Form */
-  background-color: #f9f9f9;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  transition: all 0.3s;
-  position: relative; /* Hinzugefügt für das Pseudoelement */
-}
-
-div.question:after { /* Pfeil am unteren Rand */
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
-  border-top-color: #d6d6d6;
-  border-bottom: 0;
-  margin-left: -10px;
-}
-</style>
 
 <script>
 export default {
