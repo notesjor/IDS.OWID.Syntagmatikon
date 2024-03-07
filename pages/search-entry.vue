@@ -33,7 +33,7 @@ definePageMeta({
               Ressourcen
             </v-list-subheader>
             <v-expansion-panels style="padding: 5px;" multiple v-model="panels_resources">
-              <search-box title="Zugänge" :items="search_displays"></search-box>
+              <search-box title="Zugänge" :items="search_displays" expanded="true"></search-box>
               <search-box title="Merkmale" :items="search_subtypes"></search-box>
               <search-box title="Ressourcentypen" :items="search_types"></search-box>
               <search-box title="Daten- und Informationstypen" :items="search_functions"></search-box>
