@@ -38,12 +38,19 @@ definePageMeta({
         <h2 style="margin:-20px 0px 10px 10px; border-bottom: 3px lightgray solid;">Automatische Informationstypen</h2>
 
         <div class="container">
-          <tile title="Frequenzen" img="/img/datatypes/frequenzen.PNG" link="/datatypes/frequency">
-            Was sagen Frequenzen aus? Welche Aussagen lassen sich damit treffen? Was bedeutet ein Trend?
+          <tile title="Frequenzen" img="/dummy/blau_schmal.png" link="/datatypes/frequency"
+          >
+          <b>Häufigkeit des Vorkommens eines sprachlichen Ausdrucks im Korpus, ermittelt mithilfe von Zählungen und/oder Suchanfragen (queries)</b>
+          <br>
+          <br>
+          Was kann man anhand Frequenzangaben im Syntagmatikon ablesen?
           </tile>
 
-          <tile title="KWIC (KeyWord In Context)" img="/img/datatypes/kwics.PNG" link="/datatypes/kwic">
-            Was sagt ein KWIC-Beleg aus? Welche Aussagen lassen sich damit treffen? Wie lassen sich größere Bedeutungseinheiten damit erschließen?
+          <tile title="KWIC (KeyWord In Context)" img="/dummy/blau_schmal.png" link="/datatypes/kwic">
+            <b>Zeilen (Konkordanzen), in denen das Suchobjekt vorkommt (Textschnipsel)</b>
+          <br>
+          <br>
+            Was sagen KWIC-Angaben im Syntagmatikon über den Gebrauch einer sprachlichen Einheit aus?
           </tile>
 <!--
           <tile title="Volltextstellen" img="/img/datatypes/belege.jpg" link="/datatypes/full-text">
@@ -51,16 +58,25 @@ definePageMeta({
           </tile>
         -->
 
-          <tile title="Kookkurrenzprofile" img="/img/datatypes/kook.PNG" link="/datatypes/cooccurrence">
-            Was sind Kookkurrenzprofile? Wie lassen sich diese Wortpartner statistisch berechnen?
+          <tile title="Kookkurrenzprofile" img="/dummy/blau_schmal.png" link="/datatypes/cooccurrence">
+           <b>Durch statistische Berechnungen (sog. Kookkurrenzanalysen)  ermittelte Partnerwort-Profile  (überproportional häufiges Miteinandervorkommen von Wörtern und Wortgruppen)</b> 
+           <br>
+          <br>
+          Welche Hinweise liefern Kookkurrenzangaben im Syntagmatikon auf Bedeutung, Gebrauch und Festigkeit?
           </tile>
 
-          <tile title="Muster-/Lückenfüllertabellen" img="/img/datatypes/muster.PNG" link="/datatypes/patterntable">
-            Wie können Muster-/Lückenfüllertabellen zur Analyse von Wortverbindungen genutzt werden? Welche Aussagen lassen sich damit treffen?
+          <tile title="Muster-/Lückenfüllertabellen" img="/dummy/blau_schmal.png" link="/datatypes/patterntable">
+            <b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum sapiente itaque officia reiciendis enim</b> 
+           <br>
+          <br>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum sapiente itaque officia reiciendis enim?
           </tile>
 
-          <tile title="Annotierte Daten" img="/img/datatypes/auto_anno.PNG" link="/datatypes/annotation">
-            Wie werden Daten annotiert und warum? Welche Aussagen lassen sich damit treffen? Was sind übliche Annotationen?
+          <tile title="Annotierte Daten" img="/dummy/blau_schmal.png" link="/datatypes/annotation">
+            <b>Durch automatische Annotationsprogramme kategorisierte Korpusdaten (z.B. nach Wortarten, Satztypen, semantischen Kategorien). </b> 
+           <br>
+          <br>
+          Wie führen solche getaggten Daten im Syntagmatikon zur linguistischen Klassifikation von sprachlichen Phänomenen?
           </tile>      
         </div>
 
@@ -69,32 +85,47 @@ definePageMeta({
         <div class="container">
 
 
-          <tile title="Kategoriale Label" img="/img/datatypes/kategorial.PNG" link="/datatypes/category">
-            Welche Aussage treffen Kategorien? Worin unterscheiden sich bestimtme Kategorien?
+          <tile title="Kategoriale Label" img="/dummy/gelb_schmal.png" link="/datatypes/category">
+            <b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum sapiente itaque officia reiciendis enim</b> 
+           <br>
+          <br>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum sapiente itaque officia reiciendis enim?
           </tile>
 
-          <tile title="Belege" img="/img/datatypes/belege.PNG" link="/datatypes/matches">
-            Warum werden Belege manuell ausgewählt? Wie unterscheiden sich Belege von KWIC? Welche Aussagen lassen sich damit treffen?
+          <tile title="Belege" img="/dummy/gelb_schmal.png" link="/datatypes/matches">
+            <b>Manuell ausgewählte KWICs und größere Volltextstellen</b> 
+           <br>
+          <br>
+          Nach welchen Kriterien werden illustrative Belegangaben im Syntagmatikon ausgewählt und wozu tragen sie bei?
           </tile>
 
-          <tile title="Narrative Beschreibung " img="/img/datatypes/narrativeBeschreibungen.PNG" link="/datatypes/narration">
-            Welche Fragen lassen sich mit größeren Volltextstellen betrachten/beantworten? Welche Vorteile ergeben sich gegenüber KWIC?
+          <tile title="Narrative Beschreibung " img="/dummy/gelb_schmal.png" link="/datatypes/narration">
+            <b>Beschreibende Autorentexte, die ein Phänomen erklären</b> 
+           <br>
+          <br>
+          Welche unterschiedlichen Typen narrativer Texte prägen das Syntagmatikon?
           </tile>
 
-          <tile title="Basiselemente" img="/img/datatypes/basiselemente.PNG" link="/datatypes/elements">
-            Was sind Basiselemente? Wie lassen sich diese grundlegenden Elemente kombinieren?
+          <tile title="Basiselemente" img="/dummy/gelb_schmal.png" link="/datatypes/elements">
+            <b>Auszeichnung der einzelnen Komponenten einer Wortverbindung und Verlinkung mit anderen Einträgen. </b> 
+           <br>
+          <br>
+          Wie werden mithilfe der Basiselementangaben im Syntagmatikon Beziehungen zu Einwortlexemen hergestellt und unterschiedliche Gruppen gebildet? 
           </tile>
 
-          <tile title="Kontextzeilen" img="/img/datatypes/kontextzeilen.PNG" link="/datatypes/context">
-            Wie lassen sich Kontextzeilen nutzen? Welche Aussagen lassen sich damit treffen?
-          </tile>
 
-          <tile title="Felder" img="/img/datatypes/felder.PNG" link="/datatypes/fields">
-            Wie lassen sich Satellitenfelder nutzen? Welche Aussagen lassen sich damit treffen? Welche Satellitenfelder sind üblich?
+          <tile title="Felder" img="/dummy/gelb_schmal.png" link="/datatypes/fields">
+            <b>Nach inhaltlichen Kriterien manuell zusammengestellte Gruppen von sprachlichen Einheiten mit verwandten Gebrauchsmerkmalen</b> 
+           <br>
+          <br>
+          Wie vielfältig sind Feldangaben im Syntagmatikon?
           </tile>  
 
-          <tile title="Fremdsprachige Äquivalenz" img="/img/datatypes/aequivalenz.PNG" link="/datatypes/expression">
-            Wie lassen sich Musterangaben nutzen? Welche Aussagen lassen sich damit treffen? Welche Musterangaben sind üblich?
+          <tile title="Fremdsprachige Äquivalenz" img="/dummy/gelb_schmal.png" link="/datatypes/expression">
+            <b>Angabe von Entsprechungen in anderen Sprachen</b> 
+           <br>
+          <br>
+          Wie kann man mittels Äquivalenzangaben– und beschreibungen im Syntagmatikon den Gebrauch von Ausdrücken im Sprachvergleich verstehen?
           </tile>  
         </div>
       </v-col>

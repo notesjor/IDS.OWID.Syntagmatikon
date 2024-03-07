@@ -55,8 +55,7 @@ definePageMeta({
           </tile>
 
           <tile title="Dynamische Erschließung" img="/img/patterns/dummy03.png" link="/patterns/dynamic">
-            Welche Fragen lassen sich mit größeren Volltextstellen betrachten/beantworten? Welche Vorteile ergeben sich
-            gegenüber KWIC?
+            In vielen Ressourcen kann man sich selbst Muster erschließen, zum einen durch automatische Suchen und Sortierungen auf der Basis von vorgegebenen Kategorien; zum anderen durch eigene analytische Gruppierungen.
             <resources-list :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp', 'Redeeinleiter', 'Verlaufsformen']"/>
           </tile>
         </div>

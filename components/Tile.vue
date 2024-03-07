@@ -10,7 +10,7 @@
                             <h3 style="text-wrap:wrap; text-align: left;">
                                 {{ title }}
                             </h3>
-                            <h4 v-if="subtitle != null">{{ subtitle }}</h4>
+                            <h4 style="text-wrap:wrap; text-align: left;" v-if="subtitle != null">{{ subtitle }}</h4>
                         </div>
                     </div>
                 </v-card-title>
@@ -53,3 +53,9 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+h4 {
+font-size: 12pt;
+}
+</style>
