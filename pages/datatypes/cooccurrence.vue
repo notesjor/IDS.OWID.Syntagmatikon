@@ -1,6 +1,7 @@
 <template>
     <h1>Typische Partnerwörter</h1>
     <h2>(Kookkurrenzprofile)</h2>
+    
     <p>Mithilfe statistischer Berechnungen (sog. <a
             href="https://www1.ids-mannheim.de/kl/projekte/methoden/ka.html">Kookkurrenzanalysen</a>)
         lassen sich besondere Anziehungskräfte (Cluster) zwischen Wörtern und
@@ -21,6 +22,15 @@
     <h3>Beispiel</h3>
     <v-window v-model="tab">
         <v-window-item value="1">
+            <v-row style="margin-top:-50px">
+      <v-col>
+        <v-carousel>
+          <v-carousel-item src="/img/datatypes/kook/amEnde_kookzeilen.PNG"></v-carousel-item>
+          <v-carousel-item src="/img/datatypes/kook/Clusters_amEnde_1_1_KA_oFW_3.png"></v-carousel-item>
+        </v-carousel>
+      </v-col>
+    </v-row>
+
             <p>Das <u><em>am Ende</em>-Profil</u> zeigt u.a. folgendes: Bestimmte
                 Partnerwörter deuten auf feste Wendungen hin wie <em>Licht</em>
                 (<em>Licht a</em>. <em>E</em>. <em>des Tunnels</em>, <em>leeren
@@ -58,11 +68,13 @@
             <iframe src="https://barometer.diskurslinguistik.net/ui_cooccurrence.html" width="100%" height="450px"></iframe>
         </v-window-item>
     </v-window>
+    <!--
     <br />
     <v-tabs v-model="tab">
         <v-tab value="1">Original</v-tab>
         <v-tab value="2">JOR</v-tab>
     </v-tabs>
+    -->
 </template>
 
 <script>

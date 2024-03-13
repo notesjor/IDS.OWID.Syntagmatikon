@@ -13,6 +13,7 @@ definePageMeta({
           <h1 class="text-3xl font-bold">
             Ressourcenüberblick
           </h1>
+          <p>Das Syntagmatikon enthält aktuell 13 Resourcen, die hier kurz vorgestellt werden. Ein Klick auf die Kachel führt direkt zur Resource.</p>
         </div>
       </v-col>
       <v-col cols="2"></v-col>
