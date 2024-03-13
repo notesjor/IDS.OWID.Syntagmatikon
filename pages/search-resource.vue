@@ -10,7 +10,7 @@ definePageMeta({
       <v-col cols="2"></v-col>
       <v-col cols="8">
         <div>
-          <h1 class="text-3xl font-bold">
+          <h1>
             Ressourcenüberblick
           </h1>
           <p>Das Syntagmatikon enthält aktuell 13 Resourcen, die hier kurz vorgestellt werden. Ein Klick auf die Kachel führt direkt zur Resource.</p>
@@ -23,10 +23,12 @@ definePageMeta({
         <div v-for="x in resources" :key="x"
           style="width: 350px; display: inline-block; margin: 10px; text-align: left; vertical-align: top;">
          
-          <v-card style="margin-bottom: 10px;" :elevation="x.rank">
+          <v-card style="margin-bottom: 10px;" elevation="0">
             <v-card-title>
               <a :href="x.url" target="_blank">
-                <h2 class="text-xl" v-html="x.nameShort">
+                <h2>
+                  <v-icon style="display:inline-block; font-size: 0.8em; margin-top:-5px">mdi-open-in-new</v-icon>
+                  <div style="display: inline-block; margin-left: 10px;" v-html="x.nameShort"></div>
                 </h2>
               </a>
             </v-card-title>

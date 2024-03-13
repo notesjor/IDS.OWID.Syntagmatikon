@@ -4,7 +4,7 @@
             <v-card :style="highlightItem('Deskriptive Datenbank')" elevation="0">
                 <v-card-title>
                     <div style="position: relative;">
-                        <gradient style="margin: 0px; flex-shrink: 0; min-width: 350px;" :color1="color1" :color2="color2" :color3="color3"/>
+                        <gradient style="margin: 0px; flex-shrink: 0; min-width: 350px; min-height: 50px;" :color1="color1" :color2="color2" :color3="color3"/>
                         <div
                             style="background-color: rgba(255, 255, 255, 0.85);">
                             <h3 style="text-wrap:wrap; text-align: left; margin: -50px -20px 0px 10px; padding: 10px 0px">
