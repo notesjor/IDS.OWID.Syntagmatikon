@@ -6,48 +6,56 @@ definePageMeta({
 
 <template>
   <div class="nolink">
-    <v-row>
-      <v-col cols="2"></v-col>
-      <v-col cols="8">
-        <div>
-          <h1>
-            Ressourcenüberblick
-          </h1>
-          <p>Das Syntagmatikon enthält aktuell 13 Resourcen, die hier kurz vorgestellt werden. Ein Klick auf die Kachel führt direkt zur Resource.</p>
-        </div>
-      </v-col>
-      <v-col cols="2"></v-col>
-    </v-row>
+    <div style="max-width: 80ch; margin:auto">
+      <v-row>
+        <v-col>
+          <div>
+            <h1>
+              Ressourcenüberblick
+            </h1>
+          </div>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <div>
+            <p>Das Syntagmatikon enthält aktuell 13 Resourcen, die hier kurz vorgestellt werden. Klicken Sie auf eine
+              der Ressourcen, um diese direkt aufzurufen.</p>
+            <br />&nbsp;<br />
+          </div>
+        </v-col>
+
+      </v-row>
+    </div>
     <v-row>
       <v-col style="text-align: center;">
         <div v-for="x in resources" :key="x"
           style="width: 350px; display: inline-block; margin: 10px; text-align: left; vertical-align: top;">
-         
+
           <v-card style="margin-bottom: 10px;" elevation="0">
             <v-card-title>
               <a :href="x.url" target="_blank">
                 <h2>
-                  <v-icon style="display:inline-block; font-size: 0.8em; margin-top:-5px">mdi-open-in-new</v-icon>
-                  <div style="display: inline-block; margin-left: 10px;" v-html="x.nameShort"></div>
+                  <v-btn variant="tonal" icon="mdi-open-in-new" style="display:inline-block; margin-top:-5px"></v-btn>
+                  <div style="display: inline-block; margin-left: 5px;" v-html="x.nameShort"></div>
                 </h2>
               </a>
             </v-card-title>
             <v-card-text>
               <a :href="x.url" target="_blank">
-                <img v-if="x.img != undefined" :src="x.img"
-                  style="width: 100%; height: auto; margin-bottom: 10px;" />
-                <img v-else src="/dummy/resource.png" style="width: 100%; height: auto; margin-bottom: 10px;" />                
-                <div v-html="x.description">                  
+                <img v-if="x.img != undefined" :src="x.img" style="width: 100%; height: auto; margin-bottom: 10px;" />
+                <img v-else src="/dummy/resource.png" style="width: 100%; height: auto; margin-bottom: 10px;" />
+                <div v-html="x.description">
                 </div>
               </a>
               <br />
               <div>
-                <v-chip v-for="t in x.tags" color="darkgrey" style="margin: 5px;" :variant="getChipVariant(t)" size="small"
-                  @click="switchChip(t)">{{ t }}</v-chip>
+                <v-chip v-for="t in x.tags" color="darkgrey" style="margin: 5px;" :variant="getChipVariant(t)"
+                  size="small" @click="switchChip(t)">{{ t }}</v-chip>
               </div>
             </v-card-text>
           </v-card>
-        
+
         </div>
       </v-col>
     </v-row>
@@ -66,9 +74,9 @@ export default {
       selected_tags: [],
       resourcesStore: null,
       resources: [],
-      filter: ["KoMuX", 'PREPCON', 'MAP', 'Redeeinleiter', 'SpruchList', 
-      'DTWW', 'SPRW', 'FesteWV', 'Verlaufsformen', 'WVBF', 
-      'DRI', 'PhrasKomp', 'Varietäten']
+      filter: ["KoMuX", 'PREPCON', 'MAP', 'Redeeinleiter', 'SpruchList',
+        'DTWW', 'SPRW', 'FesteWV', 'Verlaufsformen', 'WVBF',
+        'DRI', 'PhrasKomp', 'Varietäten']
     }
   },
   mounted() {
