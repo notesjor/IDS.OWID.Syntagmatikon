@@ -4,13 +4,26 @@
             <v-card :style="highlightItem('Deskriptive Datenbank')" elevation="0">
                 <v-card-title>
                     <div style="position: relative; justify-content: center;">
-                        <img :src="img" alt="" style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
-                        <div
-                            style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px;">
-                            <h3 style="text-wrap:wrap; text-align: left;">
-                                {{ title }}
-                            </h3>
-                            <h4 v-if="subtitle != null">{{ subtitle }}</h4>
+                        <div v-if="img == null">
+                            <gradient style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;"/>
+                            <div
+                                style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%;">
+                                <h3 style="text-wrap:wrap; text-align: left;">
+                                    <div style="margin-top: 15px;">{{ title }}</div>
+                                </h3>
+                                <h4 v-if="subtitle != null">{{ subtitle }}</h4>
+                            </div>
+                        </div>
+                        <div v-else>
+                            <img :src="img" alt=""
+                                style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
+                            <div
+                                style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px">
+                                <h3 style="text-wrap:wrap; text-align: left;">
+                                    {{ title }}
+                                </h3>
+                                <h4 v-if="subtitle != null">{{ subtitle }}</h4>
+                            </div>
                         </div>
                     </div>
                 </v-card-title>
