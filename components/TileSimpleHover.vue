@@ -2,7 +2,10 @@
     <v-card style="margin-bottom: 10px;" elevation="0" @mouseenter="changeOverlay(true)" @mouseleave="changeOverlay(false)">
         <v-card-title>
             <a :href="url" target="_blank">
-                <h2 class="text-xl" v-html="nameShort" />
+                <h3>
+                    <v-icon style="display:inline-block; margin-top: -10px;">mdi-open-in-new</v-icon>
+                    <div style="display:inline-block; margin-left:10px;" v-html="nameShort"></div>
+                </h3>
             </a>
         </v-card-title>
         <v-card-text style="margin-top:-10px">
