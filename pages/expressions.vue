@@ -29,7 +29,7 @@ definePageMeta({
     <v-row>
       <v-col cols="12">
         <div class="container">
-          <tile-gradient title="Nomina" color1="#ff7447" color2="#b24132">           
+          <tile-gradient title="Nomina" color1="#33dcfe" color2="#cb992b">           
             <resources-list :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'WVBF', 'PhrasKomp']"></resources-list>
           </tile-gradient>
 
@@ -37,19 +37,19 @@ definePageMeta({
             <resources-list :filter="['MAP', 'Verlaufsformen']"></resources-list>
           </tile-gradient>
 
-          <tile-gradient title="Präpositionen" color1="#86becb" color2="#54777f">
+          <tile-gradient title="Präpositionen" color1="#33dcfe" color2="#cb992b">
             <resources-list :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon',, 'MAP', 'Verlaufsformen', 'WVBF']"></resources-list>
           </tile-gradient>
 
-          <tile-gradient title="Adjektive" color1="#97d6e5" color2="#658f99">
+          <tile-gradient title="Adjektive" color1="#33dcfe" color2="#cb992b">
                <resources-list :filter="['WVBF', 'KoMuX', 'PREPCON_kon', 'PhrasKomp']"></resources-list>
           </tile-gradient>
 
-          <tile-gradient title="Phraseme" color1="#ff3661" color2="#ff3661">
+          <tile-gradient title="Phraseme" color1="#33dcfe" color2="#cb992b">
               <resources-list :filter="['PhrasKomp', 'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'MAP', 'Redeeinleiter', 'DTWW', 'DRI']"></resources-list>
           </tile-gradient>
 
-          <tile-gradient title="Feste Sätze" color1="#ffc036" color2="#cb992b">
+          <tile-gradient title="Feste Sätze" color1="#33dcfe" color2="#cb992b">
                <resources-list :filter="['SpruchList', 'PhrasKomp', 'SPRW']"></resources-list>
           </tile-gradient>
 

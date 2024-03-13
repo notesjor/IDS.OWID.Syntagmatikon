@@ -8,6 +8,7 @@
                         <div
                             style="background-color: rgba(255, 255, 255, 0.85);">
                             <h3 style="text-wrap:wrap; text-align: left; margin: -50px -20px 0px 10px; padding: 10px 0px">
+                                <v-icon v-if="link!=null" style="display:inline-block; margin-top: -9px; font-size: 0.8em;">mdi-open-in-new</v-icon>
                                 {{ title }}
                             </h3>
                         </div>
