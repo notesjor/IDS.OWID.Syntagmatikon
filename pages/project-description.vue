@@ -1,12 +1,10 @@
 <template>
-  <div style="max-width: 80ch;">
+  <div>
     <v-row>
       <v-col>
-        <div>
-          <h1>
-            Was ist das Syntagmatikon?
-          </h1>
-        </div>
+        <h1>
+          Was ist das Syntagmatikon?
+        </h1>
       </v-col>
     </v-row>
     <v-row style="margin-top:-50px">
@@ -28,7 +26,8 @@
             Bausteine im Sprachgebrauch eingesetzt werden. <a
               href="https://de.wikipedia.org/wiki/Lexikalische_Funktion">(Lexikalische
               Funktion</a>)</p>
-          <p>Die Wortschatzeinheiten und -ausschnitte im <span class="smallcaps">Syntagmatikon</span> wurden und werden in
+          <p>Die Wortschatzeinheiten und -ausschnitte im <span class="smallcaps">Syntagmatikon</span> wurden und werden
+            in
             unterschiedlichen IDS-Projekten (<a
               href="https://www.ids-mannheim.de/lexik/syntagmatik-im-lexikon/">Syntagmatik
               im Lexikon</a>; <a href="http://www.redewiedergabe.de/">Redewiedergabe</a>) auf der Basis

@@ -3,15 +3,14 @@
         <NuxtLink :to="link">
             <v-card :style="highlightItem('Deskriptive Datenbank')" elevation="0">
                 <v-card-title>
-                    <div style="position: relative; justify-content: center;">
-                        <img :src="img" alt=""
-                            style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
+                    <div style="position: relative;">
+                        <gradient style="margin: 0px; flex-shrink: 0; min-width: 350px;" :color1="color1" :color2="color2" :color3="color3"/>
                         <div
-                            style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px">
-                            <h3 style="text-wrap:wrap; text-align: left;">
+                            style="background-color: rgba(255, 255, 255, 0.85);">
+                            <h3 style="text-wrap:wrap; text-align: left; margin: -50px -20px 0px 10px; padding: 10px 0px">
+                                <v-icon v-if="link!=null" style="display:inline-block; margin-top: -9px; font-size: 0.8em;">mdi-open-in-new</v-icon>
                                 {{ title }}
                             </h3>
-                            <h4 style="text-wrap:wrap; text-align: left;" v-if="subtitle != null">{{ subtitle }}</h4>
                         </div>
                     </div>
                 </v-card-title>
@@ -31,7 +30,10 @@ export default {
     theme: { dark: false },
     props: {
         title: { type: String, default: null }, // Titel
-        subtitle: { type: String, default: null }, // Untertitel (optional)
+        //subtitle: { type: String, default: null }, // Untertitel (optional)
+        color1: { type: String, default: '#000000' }, // Farbe 1
+        color2: { type: String, default: '#ffff00' }, // Farbe 2
+        color3: { type: String, default: '' }, // Farbe 3
         img: { type: String, default: null }, // Bild
         link: { type: String, default: null }, // Link - Verlinkt werden Titel, Unteritel, Grafik und Text
     },
@@ -54,9 +56,3 @@ export default {
     },
 }
 </script>
-
-<style scoped>
-h4 {
-font-size: 12pt;
-}
-</style>
