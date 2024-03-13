@@ -38,30 +38,30 @@ definePageMeta({
         <h2 style="margin:-20px 0px 10px 10px; border-bottom: 3px lightgray solid;">Automatische Informationstypen</h2>
 
         <div class="container">
-          <div class="question" title="Frequenzen" img="/img/datatypes/frequenzen.PNG" link="/datatypes/frequency">
+          <tile-gradient color1="#87bfcc" color2="#87bfcc" title="Frequenzen" img="/img/datatypes/frequenzen.PNG" link="/datatypes/frequency">
             Was sagen Frequenzen aus? Welche Aussagen lassen sich damit treffen? Was bedeutet ein Trend?
-          </div>
+          </tile-gradient>
 
-          <div class="question" title="KWIC (KeyWord In Context)" img="/img/datatypes/kwics.PNG" link="/datatypes/kwic">
+          <tile-gradient color1="#34ddff" color2="#34ddff" title="KWIC (KeyWord In Context)" img="/img/datatypes/kwics.PNG" link="/datatypes/kwic">
             Was sagt ein KWIC-Beleg aus? Welche Aussagen lassen sich damit treffen? Wie lassen sich größere Bedeutungseinheiten damit erschließen?
-          </div>
+          </tile-gradient>
 <!--
-          <div class="question" title="Volltextstellen" img="/img/datatypes/belege.jpg" link="/datatypes/full-text">
+          <div color1="#" color2="#" title="Volltextstellen" img="/img/datatypes/belege.jpg" link="/datatypes/full-text">
             Welche Fragen lassen sich mit größeren Volltextstellen betrachten/beantworten? Welche Vorteile ergeben sich gegenüber KWIC?
           </div>
         -->
 
-          <div class="question" title="Kookkurrenzprofile" img="/img/datatypes/kook.PNG" link="/datatypes/cooccurrence">
+          <tile-gradient color1="#ff5d48" color2="#ff5d48" title="Kookkurrenzprofile" img="/img/datatypes/kook.PNG" link="/datatypes/cooccurrence">
             Was sind Kookkurrenzprofile? Wie lassen sich diese Wortpartner statistisch berechnen?
-          </div>
+          </tile-gradient>
 
-          <div class="question" title="Muster-/Lückenfüllertabellen" img="/img/datatypes/muster.PNG" link="/datatypes/patterntable">
+          <tile-gradient color1="#fec037" color2="#fec037" title="Muster-/Lückenfüllertabellen" img="/img/datatypes/muster.PNG" link="/datatypes/patterntable">
             Wie können Muster-/Lückenfüllertabellen zur Analyse von Wortverbindungen genutzt werden? Welche Aussagen lassen sich damit treffen?
-          </div>
+          </tile-gradient>
 
-          <div class="question" title="Annotierte Daten" img="/img/datatypes/auto_anno.PNG" link="/datatypes/annotation">
+          <tile-gradient color1="#658f99" color2="#658f99" title="Annotierte Daten" img="/img/datatypes/auto_anno.PNG" link="/datatypes/annotation">
             Wie werden Daten annotiert und warum? Welche Aussagen lassen sich damit treffen? Was sind übliche Annotationen?
-          </div>      
+          </tile-gradient>      
         </div>
 
         <h2 style="margin:40px 0px 10px 10px; border-bottom: 3px lightgray solid;">Bearbeitete Informationstypen</h2>
@@ -69,33 +69,33 @@ definePageMeta({
         <div class="container">
 
 
-          <div class="question" title="Kategoriale Label" img="/img/datatypes/kategorial.PNG" link="/datatypes/category">
+          <tile-gradient color1="#fec037" color2="#fec037" title="Kategoriale Label" img="/img/datatypes/kategorial.PNG" link="/datatypes/category">
             Welche Aussage treffen Kategorien? Worin unterscheiden sich bestimtme Kategorien?
-          </div>
+          </tile-gradient>
 
-          <div class="question" title="Belege" img="/img/datatypes/belege.PNG" link="/datatypes/matches">
+          <tile-gradient color1="#87bfcc" color2="#87bfcc" title="Belege" img="/img/datatypes/belege.PNG" link="/datatypes/matches">
             Warum werden Belege manuell ausgewählt? Wie unterscheiden sich Belege von KWIC? Welche Aussagen lassen sich damit treffen?
-          </div>
+          </tile-gradient>
 
-          <div class="question" title="Narrative Beschreibung " img="/img/datatypes/narrativeBeschreibungen.PNG" link="/datatypes/narration">
+          <tile-gradient color1="#cb992b" color2="#cb992b" title="Narrative Beschreibung " img="/img/datatypes/narrativeBeschreibungen.PNG" link="/datatypes/narration">
             Welche Fragen lassen sich mit größeren Volltextstellen betrachten/beantworten? Welche Vorteile ergeben sich gegenüber KWIC?
-          </div>
+          </tile-gradient>
 
-          <div class="question" title="Basiselemente" img="/img/datatypes/basiselemente.PNG" link="/datatypes/elements">
+          <tile-gradient color1="#658f99" color2="#658f99" title="Basiselemente" img="/img/datatypes/basiselemente.PNG" link="/datatypes/elements">
             Was sind Basiselemente? Wie lassen sich diese grundlegenden Elemente kombinieren?
-          </div>
+          </tile-gradient>
 
-          <div class="question" title="Kontextzeilen" img="/img/datatypes/kontextzeilen.PNG" link="/datatypes/context">
+          <tile-gradient color1="#ff5d48" color2="#ff5d48" title="Kontextzeilen" img="/img/datatypes/kontextzeilen.PNG" link="/datatypes/context">
             Wie lassen sich Kontextzeilen nutzen? Welche Aussagen lassen sich damit treffen?
-          </div>
+          </tile-gradient>
 
-          <div class="question" title="Felder" img="/img/datatypes/felder.PNG" link="/datatypes/fields">
+          <tile-gradient color1="#34ddff" color2="#34ddff" title="Felder" img="/img/datatypes/felder.PNG" link="/datatypes/fields">
             Wie lassen sich Satellitenfelder nutzen? Welche Aussagen lassen sich damit treffen? Welche Satellitenfelder sind üblich?
-          </div>  
+          </tile-gradient>  
 
-          <div class="question" title="Fremdsprachige Äquivalenz" img="/img/datatypes/aequivalenz.PNG" link="/datatypes/expression">
+          <tile-gradient color1="#cb992b" color2="#cb992b" title="Fremdsprachige Äquivalenz" img="/img/datatypes/aequivalenz.PNG" link="/datatypes/expression">
             Wie lassen sich Musterangaben nutzen? Welche Aussagen lassen sich damit treffen? Welche Musterangaben sind üblich?
-          </div>  
+          </tile-gradient>  
         </div>
       </v-col>
     </v-row>

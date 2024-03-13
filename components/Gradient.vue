@@ -36,9 +36,9 @@ export default {
   computed: {
     gradientStyle() {
       if (this.color3 == '')
-        return `width:${this.width}; height:${this.height}; background-image: linear-gradient(90deg, ${this.color1} 0%, ${this.color2} 100%)`;
+        return `width:${this.width}; height:${this.height}; background-image: linear-gradient(75deg, ${this.color1} 0%, ${this.color2} 100%)`;
       else
-        return `width:${this.width}; height:${this.height}; background-image: linear-gradient(90deg, ${this.color1} 0%, ${this.color2} 50%, ${this.color3} 100%)`;
+        return `width:${this.width}; height:${this.height}; background-image: linear-gradient(75deg, ${this.color1} 0%, ${this.color2} 50%, ${this.color3} 100%)`;
     }
   }
 };

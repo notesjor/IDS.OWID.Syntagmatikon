@@ -21,17 +21,20 @@ definePageMeta({
           <p>
             Eine der folgenreichsten Resultate korpusempirischer Forschungen ist die Einsicht, dass linear verfestigte
             Wortfolgen systematisch auf schematischen Vorprägungen, auf Schablonen fußen, die wir Muster nennen. Muster
-            werden als semiabstrakte Konstruktionen aufgefasst, bei denen die Slots nicht beliebig, sondern basierend auf
+            werden als semiabstrakte Konstruktionen aufgefasst, bei denen die Slots nicht beliebig, sondern basierend
+            auf
             Merkmalen ähnlicher Art gefüllt werden.
             <br />&nbsp;<br />
             Beispiele für Muster sind:
-          </p>          
+          </p>
           <ul>
-            <li><strong>vor-sich-hin-Muster</strong>: <br /> {das Boot dümpelt; das Brot gammelt; sie paddelt so} vor sich hin</li>
-            <li><strong>w-x-ist-ist-auch-y-Muster</strong>: <br /> {Licht – Schatten; Rauch – Feuer; Arbeit – Brot} </li>
+            <li><strong>vor-sich-hin-Muster</strong>: <br /> {das Boot dümpelt; das Brot gammelt; sie paddelt so} vor
+              sich hin</li>
+            <li><strong>w-x-ist-ist-auch-y-Muster</strong>: <br /> {Licht – Schatten; Rauch – Feuer; Arbeit – Brot}
+            </li>
           </ul>
           <br />
-          Im Syntagmatikon kommt die Musterperspektive auf dreifache Weise ins Spiel: 
+          Im Syntagmatikon kommt die Musterperspektive auf dreifache Weise ins Spiel:
           <br />&nbsp;<br />&nbsp;<br />
         </div>
       </v-col>
@@ -44,21 +47,23 @@ definePageMeta({
         <h2 style="margin:-20px 0px 10px 10px; border-bottom: 3px lightgray solid;">Muster im Syntagmatikon</h2>
 
         <div class="container">
-          <tile title="Direkter Zugang" link="/patterns/direct">
-            In diesen Ressourcen bilden Muster den primären Zugriff auf die aufbereiteten Daten und die lexikografischen Beschreibungen. Das heißt, alle Informationen sind über das Netzwerk semiabstrakter Schablonen herleitbar.
-            <resources-list :filter="['MAP', 'WVBF']"/>
-          </tile>
+          <tile-gradient title="Direkter Zugang" link="/patterns/direct" color1="#34ddff" color2="#87bfcc">
+            In diesen Ressourcen bilden Muster den primären Zugriff auf die aufbereiteten Daten und die lexikografischen
+            Beschreibungen. Das heißt, alle Informationen sind über das Netzwerk semiabstrakter Schablonen herleitbar.
+            <resources-list :filter="['MAP', 'WVBF']" />
+          </tile-gradient>
 
-          <tile title="Lexikografische Angabe" link="/patterns/component">
-            In einigen Ressourcen werden von Hand aufbereitete Musterangaben und -visualisierungen als eine Komponente von Wörterbuchartikeln angeboten, und zwar in „PREPCONkontrastiv und „Feste Wortverbindungen“.
-            <resources-list :filter="['PREPCON_kon', 'SPRW', 'FesteWV']"/>
-          </tile>
+          <tile-gradient title="Lexikografische Angabe" link="/patterns/component" color1="#87bfcc" color2="#ff5d48">
+            In einigen Ressourcen werden von Hand aufbereitete Musterangaben und -visualisierungen als eine Komponente
+            von Wörterbuchartikeln angeboten, und zwar in „PREPCONkontrastiv und „Feste Wortverbindungen“.
+            <resources-list :filter="['PREPCON_kon', 'SPRW', 'FesteWV']" />
+          </tile-gradient>
 
-          <tile title="Dynamische Erschließung" link="/patterns/dynamic">
+          <tile-gradient title="Dynamische Erschließung" link="/patterns/dynamic" color1="#ff5d48" color2="#fec037">
             Welche Fragen lassen sich mit größeren Volltextstellen betrachten/beantworten? Welche Vorteile ergeben sich
             gegenüber KWIC?
-            <resources-list :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp', 'Redeeinleiter', 'Verlaufsformen']"/>
-          </tile>
+            <resources-list :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp', 'Redeeinleiter', 'Verlaufsformen']" />
+          </tile-gradient>
         </div>
       </v-col>
     </v-row>
@@ -98,8 +103,6 @@ td {
 </style>
 <style scoped>
 .v-list-subheader {}
-</style>
-<style scoped>
 .containerItem {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -140,4 +143,5 @@ li {
 
 li:hover {
   background-color: #d6d6d6;
-}</style>
+}
+</style>
