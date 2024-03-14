@@ -83,7 +83,10 @@ export default {
 
         itemState: {
             handler(newVal) {
-                this.$emit('selected-items-changed', newVal.filter(x => x.checked).map(x => x.item));
+                if(newVal.filter(x => x.checked).length == 0)
+                    this.$emit('selected-items-changed', null);
+                else
+                    this.$emit('selected-items-changed', newVal.filter(x => !x.checked).map(x => x.item));
             },
             deep: true
         }

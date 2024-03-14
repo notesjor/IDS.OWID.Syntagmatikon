@@ -18,9 +18,9 @@ definePageMeta({
     <v-row>
       <v-col>
         <div style="margin-bottom: 20px;">
-          <p>Diese Suche erlaubt eine Volltextsuche über alle Einträge im Syntagmatikon. 
-          Wie im Ressourcenkompass beschrieben, haben die Ressourcen verschiedene Facetten,
-          die hier genutzt werden können, um die Stichworte zu filtern.</p>
+          <p>Diese Suche erlaubt eine Volltextsuche über alle Einträge im Syntagmatikon.
+            Wie im Ressourcenkompass beschrieben, haben die Ressourcen verschiedene Facetten,
+            die hier genutzt werden können, um die Stichworte zu filtern.</p>
         </div>
       </v-col>
     </v-row>
@@ -50,13 +50,18 @@ definePageMeta({
         <v-list>
           <v-list-item style="margin:-20px 0px 0px 0px;">
             <v-expansion-panels style="padding: 5px;" multiple v-model="panels_resources">
-              <search-box title="Zugänge" :items="search_displays" expanded="true"
-                @selected-items-changed="x => console.log(x)"></search-box>
-              <search-box title="Ressourcentypen (Zugang)" :items="search_subtypes"></search-box>
-              <search-box title="Ressourcentypen (Typus)" :items="search_types"></search-box>
-              <search-box title="Informationstypen" :items="search_functions"></search-box>
-              <search-box title="Wort- und Ausdrucksarten" :items="search_parts"></search-box>
-              <search-box title="Musterzugang" :items="search_patterns"></search-box>
+              <search-box title="Zugänge" expanded="true" :items="search_displays"
+                @selected-items-changed="x => select_displays = x"></search-box>
+              <search-box title="Ressourcentypen (Zugang)" :items="search_subtypes"
+                @selected-items-changed="x => select_subtypes = x"></search-box>
+              <search-box title="Ressourcentypen (Typus)" :items="search_types"
+                @selected-items-changed="x => select_types = x"></search-box>
+              <search-box title="Informationstypen" :items="search_functions"
+                @selected-items-changed="x => select_functions = x"></search-box>
+              <search-box title="Wort- und Ausdrucksarten" :items="search_parts"
+                @selected-items-changed="x => select_parts = x"></search-box>
+              <search-box title="Musterzugang" :items="search_patterns"
+                @selected-items-changed="x => select_patterns = x"></search-box>
             </v-expansion-panels>
           </v-list-item>
         </v-list>
@@ -66,21 +71,39 @@ definePageMeta({
       <div v-if="items == null">
         <v-alert text="Suchen Sie zuerst nach einem Eintrag..." type="info" variant="outlined"></v-alert>
       </div>
-      <div v-else v-for="x in items" :key="x.id" style="max-width: 450px; margin-left: auto; margin-right: auto;">
-        <a :href="x.url" target="_blank">
-          <div style="margin-bottom: 10px;">
-            <v-card-title>
-              <h2 class="text-xl">
-                {{ x.key }}
-              </h2>
-            </v-card-title>
-            <v-card-subtitle>
-              <h3 class="text-lg" style="margin-top: -7px;">
-                {{ getName(x.dic) }}
-              </h3>
-            </v-card-subtitle>
-          </div>
-        </a>
+      <div v-else>
+        <v-card style="padding:10px">
+          <v-tabs v-model="tab">
+            <v-tab value="t1" style="text-transform: none;">
+              <v-icon>mdi-database-outline</v-icon> Nach Ressourcen
+            </v-tab>
+            <v-tab value="t2" style="text-transform: none;">
+              <v-icon>mdi-lock-pattern</v-icon> Nach Muster
+            </v-tab>
+            <v-tab value="t3" style="text-transform: none;">
+              <v-icon>mdi-text-search</v-icon> Nur Einträge
+            </v-tab>
+          </v-tabs>
+          <v-window v-model="tab">
+            <v-window-item value="t1">
+              {{ filteredResources }}
+            </v-window-item>
+
+            <v-window-item value="t2">
+              Two
+            </v-window-item>
+
+            <v-window-item value="t3">
+              <a :href="x.url" target="_blank" v-for="x in items" :key="x.id">
+                <div>
+                  <v-card-title>
+                    <v-icon>mdi-open-in-new</v-icon> {{ x.key }} <span style="color:#999">({{ getName(x.dic) }})</span>
+                  </v-card-title>
+                </div>
+              </a>
+            </v-window-item>
+          </v-window>
+        </v-card>
       </div>
     </v-col>
   </v-row>
@@ -92,6 +115,8 @@ export default {
   theme: { dark: false },
   data() {
     return {
+      tab: "t1",
+
       resourcesStore: null,
       resources: [],
 
@@ -102,10 +127,18 @@ export default {
       search_patterns: null,
       search_parts: null,
 
+      select_displays: null,
+      select_types: null,
+      select_subtypes: null,
+      select_functions: null,
+      select_patterns: null,
+      select_parts: null,
+
       query: "",
       items: null,
 
       panels_resources: [0],
+      limit: 10
     }
   },
   mounted() {
@@ -149,11 +182,8 @@ export default {
         return res.title;
       }
       return dic;
-    }
-  },
-  watch: {
-    query: function (val) {
-
+    },
+    searchNew(query) {
       var self = this;
 
       var myHeaders = new Headers();
@@ -161,8 +191,14 @@ export default {
       myHeaders.append("Authorization", "Bearer 8jRAqq_GbtjdjveIOCxIlnztXjwFbcaMYp-e50HtbrQ");
 
       var raw = JSON.stringify({
-        "q": val
+        "q": query,
+        "filter": [
+          `dic = ${this.filteredResources.join(" OR ")}`
+        ],
+        "limit": 10
       });
+
+      console.log(raw);
 
       var requestOptions = {
         method: 'POST',
@@ -171,7 +207,7 @@ export default {
         redirect: 'follow'
       };
 
-      fetch("http://lexik08.ids-mannheim.de:7700/indexes/syntagmatikon/search", requestOptions)
+      fetch("http://lexik08.ids-mannheim.de/meilisearch/indexes/syntagmatikon/search", requestOptions)
         .then(response => {
           return response.json();
         })
@@ -179,6 +215,38 @@ export default {
           self.items = result.hits;
         })
         .catch(error => console.log('error', error));
+    },
+    filterResources(selected, res, prop){
+      if(selected != null){
+        selected.forEach(x => {
+          this.resources.filter(y => y[prop].includes(x)).forEach(z => {
+            res.delete(z.key);
+          });
+        });
+      }
+      return res;
+    }
+  },
+  computed:{
+    filteredResources(){
+      var res = [];
+      this.resources.forEach(x => {
+        res.push(x.key);
+      });
+
+      res = this.filterResources(this.select_displays, res, "search_display");
+      res = this.filterResources(this.select_types, res, "search_type");
+      res = this.filterResources(this.select_subtypes, res, "search_subtype");
+      res = this.filterResources(this.select_functions, res, "search_functions");
+      res = this.filterResources(this.select_patterns, res, "search_patterns");
+      res = this.filterResources(this.select_parts, res, "search_parts");
+
+      return res;
+    }
+  },
+  watch: {
+    query: function (val) {
+      this.searchNew(val);
     }
   }
 }
