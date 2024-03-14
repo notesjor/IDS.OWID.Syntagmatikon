@@ -28,7 +28,8 @@
                 </v-row>
                 <v-row style="margin:-15px 0px 0px -10px">
                     <v-col>
-                        <v-checkbox v-for="x in items" :key="x" density="compact" hide-details="true" :label="x" />
+                        <v-checkbox v-for="x in itemState" :key="x.item" density="compact" hide-details="true"
+                            :label="x.item" v-model="x.checked"/>
                     </v-col>
                 </v-row>
             </div>
@@ -44,7 +45,7 @@ export default {
             required: true
         },
         items: {
-            type: Array,
+            type: Set,
             required: true
         },
         expanded: {
@@ -52,16 +53,40 @@ export default {
             default: false
         }
     },
+
+    data() {
+        return {
+            itemState: null
+        }
+    },
+
     methods: {
         selectAll() {
-            this.$emit('select-all');
+            // set all items in itemState to true
+            this.itemState = this.itemState.map(x => { return { item: x.item, checked: true } });
         },
         selectNone() {
-            this.$emit('select-none');
+            this.itemState = this.itemState.map(x => { return { item: x.item, checked: false } });
         },
         selectInvert() {
-            this.$emit('select-invert');
+            this.itemState = this.itemState.map(x => { return { item: x.item, checked: !x.checked } });
         }
-    }
+    },
+    watch: {
+        items: {
+            immediate: true,
+            handler(newVal) {
+                if(newVal != null)
+                    this.itemState = Array.from(newVal).map(x => { return { item: x, checked: false } });
+            }
+        },
+
+        itemState: {
+            handler(newVal) {
+                this.$emit('selected-items-changed', newVal.filter(x => x.checked).map(x => x.item));
+            },
+            deep: true
+        }
+    },
 }
 </script>
