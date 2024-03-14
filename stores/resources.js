@@ -90,7 +90,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "nameLong": "MAP - Musterbank argumentmarkierender Präpositionen",
         "description": 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum sapiente itaque officia reiciendis enim et voluptate sunt, veritatis provident assumenda pariatur autem quia! Pariatur.',
         "img": "/img/sources/map.PNG",
-        "url": "",
+        "url": "http://lexik02.ids-mannheim.de/vas-v7/",
         "tags": [],
         "search_display": "Netz",
         "search_type": "Online-Wörterbuch",
