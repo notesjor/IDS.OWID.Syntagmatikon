@@ -1,7 +1,7 @@
 <template>
     <v-expansion-panel v-if="searchStore != null">
         <v-expansion-panel-title>
-            <v-switch density="compact" style="max-width: 50px; max-height: 20px; margin-top: -20px;" color="primary"
+            <v-switch density="compact" style="max-width: 50px; max-height: 20px; margin: -20px 10px 0px 0px;" color="primary"
                 v-model="searchStore.data[name].group" @update:model-value="changeGroup"></v-switch>
             {{ title }}
         </v-expansion-panel-title>

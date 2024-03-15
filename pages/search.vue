@@ -97,7 +97,6 @@ export default {
       resources: [],
 
       query: "",
-      items: null,
 
       limit: 10,
       syncLock: false
@@ -109,6 +108,7 @@ export default {
 
     this.searchStore = useSearchStore();
     this.searchStore.init(this.resources);        
+    console.log(this.searchStore);
   },
   watch: {
     query: function (val) {
