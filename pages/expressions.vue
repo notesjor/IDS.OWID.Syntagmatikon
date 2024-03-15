@@ -21,41 +21,37 @@ definePageMeta({
           <p>Die Beschreibungskandidaten bzw. Stichwörter im Syntagmatikon sowie deren Komponenten basieren auf
             unterschiedlichen Wort- und Ausdrucksarten. Phraseme und feste Sätze werden als geronnene Ausdrucksarten
             angesehen und daher ebenso als autonome Einheit betrachtet wie klassischen Wortarten:</p>
-          <br />&nbsp;<br />
         </div>
       </v-col>
-
     </v-row>
   </div>
   <div>
     <v-row>
       <v-col cols="12">
         <div class="container">
-          <tile title="Nomina" img="/dummy/dummy_03.png">
-           
+          <tile-gradient title="Nomina" color1="#33dcfe" color2="#cb992b">           
             <resources-list :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'WVBF', 'PhrasKomp']"></resources-list>
-          </tile>
+          </tile-gradient>
 
-          <tile title="Verben" img="/dummy/dummy_04.png">
-           
+          <tile-gradient title="Verben" color1="#33dcfe" color2="#cb992b">
             <resources-list :filter="['MAP', 'Verlaufsformen']"></resources-list>
-          </tile>
+          </tile-gradient>
 
-          <tile title="Präpositionen" img="/dummy/dummy_05.png">
+          <tile-gradient title="Präpositionen" color1="#33dcfe" color2="#cb992b">
             <resources-list :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon',, 'MAP', 'Verlaufsformen', 'WVBF']"></resources-list>
-          </tile>
+          </tile-gradient>
 
-          <tile title="Adjektive" img="/dummy/dummy_06.png">
+          <tile-gradient title="Adjektive" color1="#33dcfe" color2="#cb992b">
                <resources-list :filter="['WVBF', 'KoMuX', 'PREPCON_kon', 'PhrasKomp']"></resources-list>
-          </tile>
+          </tile-gradient>
 
-          <tile title="Phraseme" img="/dummy/dummy_07.png">
+          <tile-gradient title="Phraseme" color1="#33dcfe" color2="#cb992b">
               <resources-list :filter="['PhrasKomp', 'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'MAP', 'Redeeinleiter', 'DTWW', 'DRI']"></resources-list>
-          </tile>
+          </tile-gradient>
 
-          <tile title="Feste Sätze" img="/dummy/dummy_08.png">
+          <tile-gradient title="Feste Sätze" color1="#33dcfe" color2="#cb992b">
                <resources-list :filter="['SpruchList', 'PhrasKomp', 'SPRW']"></resources-list>
-          </tile>
+          </tile-gradient>
 
         </div>
       </v-col>

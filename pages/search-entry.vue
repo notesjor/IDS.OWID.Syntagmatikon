@@ -9,7 +9,7 @@ definePageMeta({
     <v-col cols="2"></v-col>
     <v-col cols="8">
       <div>
-        <h1 class="text-3xl font-bold">
+        <h1>
           Suche nach Einträgen
         </h1>
         <p>
@@ -33,50 +33,12 @@ definePageMeta({
               Ressourcen
             </v-list-subheader>
             <v-expansion-panels style="padding: 5px;" multiple v-model="panels_resources">
-              <v-expansion-panel title="Zugänge">
-                <v-expansion-panel-text>
-                  <v-checkbox v-for="x in search_displays" :key="x" density="compact" hide-details="true"
-                    :label="x"></v-checkbox>
-                </v-expansion-panel-text>
-              </v-expansion-panel>
-              <v-expansion-panel title="Merkmale">
-                <v-expansion-panel-text>
-                  <v-checkbox v-for="x in search_subtypes" :key="x" density="compact" hide-details="true"
-                    :label="x"></v-checkbox>
-                </v-expansion-panel-text>
-              </v-expansion-panel>
-              <v-expansion-panel title="Ressourcentypen">
-                <v-expansion-panel-text>
-                  <v-expansion-panel-text>
-                    <v-checkbox v-for="x in search_types" :key="x" density="compact" hide-details="true"
-                      :label="x"></v-checkbox>
-                  </v-expansion-panel-text>
-                </v-expansion-panel-text>
-              </v-expansion-panel>
-              <v-expansion-panel title="Daten- und Informationstypen">
-                <v-expansion-panel-text>
-                  <v-expansion-panel-text>
-                    <v-checkbox v-for="x in search_functions" :key="x" density="compact" hide-details="true"
-                      :label="x"></v-checkbox>
-                  </v-expansion-panel-text>
-                </v-expansion-panel-text>
-              </v-expansion-panel>
-              <v-expansion-panel title="Wort- und Ausdrucksarten">
-                <v-expansion-panel-text>
-                  <v-expansion-panel-text>
-                    <v-checkbox v-for="x in search_parts" :key="x" density="compact" hide-details="true"
-                      :label="x"></v-checkbox>
-                  </v-expansion-panel-text>
-                </v-expansion-panel-text>
-              </v-expansion-panel>
-              <v-expansion-panel title="Muster">
-                <v-expansion-panel-text>
-                  <v-expansion-panel-text>
-                    <v-checkbox v-for="x in search_patterns" :key="x" density="compact" hide-details="true"
-                      :label="x"></v-checkbox>
-                  </v-expansion-panel-text>
-                </v-expansion-panel-text>
-              </v-expansion-panel>
+              <search-box title="Zugänge" :items="search_displays" expanded="true"></search-box>
+              <search-box title="Merkmale" :items="search_subtypes"></search-box>
+              <search-box title="Ressourcentypen" :items="search_types"></search-box>
+              <search-box title="Daten- und Informationstypen" :items="search_functions"></search-box>
+              <search-box title="Wort- und Ausdrucksarten" :items="search_parts"></search-box>
+              <search-box title="Muster" :items="search_patterns"></search-box>
             </v-expansion-panels>
           </v-list-item>
         </v-list>
