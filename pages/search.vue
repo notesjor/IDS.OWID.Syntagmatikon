@@ -33,38 +33,44 @@ definePageMeta({
           Stichwort
         </v-card-title>
         <v-card-text>
-          <v-list>
-            <v-list-item>
-              <v-list-item-content>
-                <v-text-field label="Stichwort" v-model="query" append-inner-icon="mdi-magnify"></v-text-field>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
+          <div class="nolink" style="text-align: center; margin-bottom: 10px;">
+            <v-btn v-for="letter in letters" :key="letter" variant="text" density="comfortable"
+              style="padding: 0px !important; min-width: 15px;" @click="query = letter">
+              {{ letter }}
+            </v-btn>
+          </div>
+          <div>
+            <v-text-field label="Stichwort" v-model="query" append-inner-icon="mdi-magnify"></v-text-field>
+          </div>
         </v-card-text>
       </v-card>
       &nbsp;
       <v-card class="mx-auto">
         <v-card-title>
-          Ressourcen
+          Facetten
         </v-card-title>
-        <v-list>
-          <v-list-item style="margin:-20px 0px 0px 0px;">
-            <v-expansion-panels style="padding: 5px;" multiple v-model="panels_resources">
-              <search-box title="Zugänge" expanded="true" :items="search_displays"
-                @selected-items-changed="x => select_displays = x"></search-box>
-              <search-box title="Ressourcentypen (Zugang)" :items="search_subtypes"
-                @selected-items-changed="x => select_subtypes = x"></search-box>
-              <search-box title="Ressourcentypen (Typus)" :items="search_types"
-                @selected-items-changed="x => select_types = x"></search-box>
-              <search-box title="Informationstypen" :items="search_functions"
-                @selected-items-changed="x => select_functions = x"></search-box>
-              <search-box title="Wort- und Ausdrucksarten" :items="search_parts"
-                @selected-items-changed="x => select_parts = x"></search-box>
-              <search-box title="Musterzugang" :items="search_patterns"
-                @selected-items-changed="x => select_patterns = x"></search-box>
-            </v-expansion-panels>
-          </v-list-item>
-        </v-list>
+        <v-card-text>
+          <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
+            Facetten schränken die Stichwortsuche auf bestimmte Kategorien und Eigenschaften ein.
+            Zudem können Sie ein Facette auswählen, nach der die Ergebnisse gruppiert werden.
+          </p>
+          <v-expansion-panels style="padding: 5px;" multiple v-model="panels_resources">
+            <search-box title="Ressourcen" :items="search_resources"
+              @selected-items-changed="x => select_resources = x"></search-box>
+            <search-box title="Zugänge" :items="search_displays"
+              @selected-items-changed="x => select_displays = x"></search-box>
+            <search-box title="Ressourcentypen (Zugang)" :items="search_subtypes"
+              @selected-items-changed="x => select_subtypes = x"></search-box>
+            <search-box title="Ressourcentypen (Typus)" :items="search_types"
+              @selected-items-changed="x => select_types = x"></search-box>
+            <search-box title="Informationstypen" :items="search_functions"
+              @selected-items-changed="x => select_functions = x"></search-box>
+            <search-box title="Wort- und Ausdrucksarten" :items="search_parts"
+              @selected-items-changed="x => select_parts = x"></search-box>
+            <search-box title="Musterzugang" :items="search_patterns"
+              @selected-items-changed="x => select_patterns = x"></search-box>
+          </v-expansion-panels>
+        </v-card-text>
       </v-card>
     </v-col>
     <v-col cols="6" class="nolink">
@@ -116,10 +122,12 @@ export default {
   data() {
     return {
       tab: "t1",
+      letters: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
 
       resourcesStore: null,
       resources: [],
 
+      search_resources: null,
       search_displays: null,
       search_types: null,
       search_subtypes: null,
@@ -137,7 +145,7 @@ export default {
       query: "",
       items: null,
 
-      panels_resources: [0],
+      panels_resources: [1],
       limit: 10
     }
   },
@@ -145,6 +153,7 @@ export default {
     this.resourcesStore = useResourcesStore();
     this.resources = this.resourcesStore.getResources(null);
 
+    this.search_resources = this.getSet("key");
     this.search_displays = this.getSet("search_display");
     this.search_types = this.getSet("search_type");
     this.search_subtypes = this.getSet("search_subtype");
@@ -192,9 +201,9 @@ export default {
 
       var raw = JSON.stringify({
         "q": query,
-        "filter": [
-          `dic = ${this.filteredResources.join(" OR ")}`
-        ],
+        //        "filter": [
+        //          `dic = ${this.filteredResources.join(" OR ")}`
+        //        ],
         "limit": 10
       });
 
@@ -216,8 +225,8 @@ export default {
         })
         .catch(error => console.log('error', error));
     },
-    filterResources(selected, res, prop){
-      if(selected != null){
+    filterResources(selected, res, prop) {
+      if (selected != null) {
         selected.forEach(x => {
           this.resources.filter(y => y[prop].includes(x)).forEach(z => {
             res.delete(z.key);
@@ -227,8 +236,8 @@ export default {
       return res;
     }
   },
-  computed:{
-    filteredResources(){
+  computed: {
+    filteredResources() {
       var res = [];
       this.resources.forEach(x => {
         res.push(x.key);
