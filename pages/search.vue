@@ -28,7 +28,7 @@ definePageMeta({
   <v-row>
     <v-col cols="1"></v-col>
     <v-col cols="4">
-      <v-card>
+      <v-card elevation="0">
         <v-card-title>
           Stichwort
         </v-card-title>
@@ -45,7 +45,7 @@ definePageMeta({
         </v-card-text>
       </v-card>
       &nbsp;
-      <v-card class="mx-auto">
+      <v-card class="mx-auto" elevation="0">
         <v-card-title>
           Facetten
         </v-card-title>

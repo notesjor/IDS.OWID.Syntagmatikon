@@ -1,12 +1,14 @@
 <template>
-    <v-card style="margin-bottom: 10px;" elevation="0">
+    <v-card v-if="items.length > 0" style="margin-bottom: 10px;" elevation="0">
         <v-card-title v-html="title" />
-        <v-card-text>
-            <ul>
-                <li v-for="item in items" :key="item">
-                    <a :href="item.url">{{ item.key }}</a>
-                </li>
-            </ul>
+        <v-card-text style="line-height: 2.3em;">
+            <a :href="item.url" v-for="item in pagedItems" :key="item.id" style="margin-right: 15px; display: block;">
+                <v-btn variant="text" style="text-transform: none;">
+                    <v-icon style="margin: -3px 5px 0px 0px; font-size: 1em;">mdi-open-in-new</v-icon>
+                    <span style="font-size: 1.2em;">{{ item.key }}</span>
+                </v-btn>
+            </a>
+            <v-pagination v-model="index" :length="pages" rounded="circle"></v-pagination>
         </v-card-text>
     </v-card>
 </template>
@@ -28,17 +30,29 @@ export default {
     data() {
         return {
             searchStore: null,
-            items: []
+            items: [],
+            pages: 0,
+            index: 0,
+            size: 5
         }
     },
 
-    watch:{
-        searchStore:{
-            handler: function(val){
-                if(this.searchStore != null)
-                
-                var groups = new Set(this.searchStore.getFilter(this.title).map(x=>x.key));
-                this.items = this.searchStore.items.filter(x=>groups.has(x.dic));
+    computed: {
+        pagedItems() {
+            return this.items.slice(this.index * this.size, (this.index + 1) * this.size);
+        }
+    },
+
+    watch: {
+        searchStore: {
+            handler: function (val) {
+                if (this.searchStore == null)
+                    return;
+
+                var groups = new Set(this.searchStore.getFilter(this.title).map(x => x.key));
+                this.items = this.searchStore.items.filter(x => groups.has(x.dic));
+                this.pages = this.items.length / this.size;
+                this.index = 0;
             },
             deep: true
         }

@@ -104,8 +104,18 @@ export const useSearchStore = defineStore('searchStore', {
       return res;
     },
     getFilter(name){
+      console.log(name);
       var group = Object.keys(this.data).filter((x) => this.data[x].group);
-      var res = this.resources.filter((x) => x[group] == name);
+      console.log(group);
+      var res = this.resources.filter((x) => {
+        if(x[group] instanceof Array){
+          return x[group].some((y) => y == name);
+        }
+        else{
+          return x[group] == name;
+        }
+      });
+      console.log(res);
 
       var keys = Object.keys(this.data);
       res = res.filter((x) => {
