@@ -54,21 +54,21 @@ definePageMeta({
             Facetten schränken die Stichwortsuche auf bestimmte Kategorien und Eigenschaften ein.
             Zudem können Sie ein Facette auswählen, nach der die Ergebnisse gruppiert werden.
           </p>
-          <v-expansion-panels style="padding: 5px;" multiple v-model="panels_resources">
-            <search-box title="Ressourcen" :items="search_resources"
-              @selected-items-changed="x => select_resources = x"></search-box>
-            <search-box title="Zugänge" :items="search_displays"
-              @selected-items-changed="x => select_displays = x"></search-box>
-            <search-box title="Ressourcentypen (Zugang)" :items="search_subtypes"
-              @selected-items-changed="x => select_subtypes = x"></search-box>
-            <search-box title="Ressourcentypen (Typus)" :items="search_types"
-              @selected-items-changed="x => select_types = x"></search-box>
-            <search-box title="Informationstypen" :items="search_functions"
-              @selected-items-changed="x => select_functions = x"></search-box>
-            <search-box title="Wort- und Ausdrucksarten" :items="search_parts"
-              @selected-items-changed="x => select_parts = x"></search-box>
-            <search-box title="Musterzugang" :items="search_patterns"
-              @selected-items-changed="x => select_patterns = x"></search-box>
+          <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels">
+            <search-box title="Ressourcen" :items="search_resources" :enable="group_resources"
+              @update="x => reciveUpdate('select_resources', x)"></search-box>
+            <search-box title="Zugänge" :items="search_displays" :enable="group_displays"
+              @update="x => reciveUpdate('select_displays', x)"></search-box>
+            <search-box title="Ressourcentypen (Zugang)" :items="search_subtypes" :enable="group_subtypes"
+              @update="x => reciveUpdate('select_subtypes', x)"></search-box>
+            <search-box title="Ressourcentypen (Typus)" :items="search_types" :enable="group_types"
+              @update="x => reciveUpdate('select_types', x)"></search-box>
+            <search-box title="Informationstypen" :items="search_functions" :enable="group_functions"
+              @update="x => reciveUpdate('select_functions', x)"></search-box>
+            <search-box title="Wort- und Ausdrucksarten" :items="search_parts" :enable="group_parts"
+              @update="x => reciveUpdate('select_parts', x)"></search-box>
+            <search-box title="Musterzugang" :items="search_patterns" :enable="group_patterns"
+              @update="x => reciveUpdate('select_patterns', x)"></search-box>
           </v-expansion-panels>
         </v-card-text>
       </v-card>
@@ -79,6 +79,7 @@ definePageMeta({
       </div>
       <div v-else>
         <v-card style="padding:10px">
+          <!--
           <v-tabs v-model="tab">
             <v-tab value="t1" style="text-transform: none;">
               <v-icon>mdi-database-outline</v-icon> Nach Ressourcen
@@ -109,6 +110,8 @@ definePageMeta({
               </a>
             </v-window-item>
           </v-window>
+        -->
+          <search-group v-for="x in groups" :key="x" :title="x" :query="query" :resources="filteredResources"></search-group>
         </v-card>
       </div>
     </v-col>
@@ -117,6 +120,8 @@ definePageMeta({
 
 <script>
 import { useResourcesStore } from '~/stores/resources';
+import { useSearchStore } from '~/stores/search';
+
 export default {
   theme: { dark: false },
   data() {
@@ -124,8 +129,13 @@ export default {
       tab: "t1",
       letters: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
 
+      openPanels: [1],
+
       resourcesStore: null,
+      searchStore: null,      
       resources: [],
+
+      // TODO: Refactoring
 
       search_resources: null,
       search_displays: null,
@@ -135,6 +145,15 @@ export default {
       search_patterns: null,
       search_parts: null,
 
+      group_resources: true,
+      group_displays: false,
+      group_types: false,
+      group_subtypes: false,
+      group_functions: false,
+      group_patterns: false,
+      group_parts: false,
+
+      select_resources: null,
       select_displays: null,
       select_types: null,
       select_subtypes: null,
@@ -145,15 +164,19 @@ export default {
       query: "",
       items: null,
 
-      panels_resources: [1],
-      limit: 10
+      limit: 10,
+      syncLock: false
     }
   },
   mounted() {
     this.resourcesStore = useResourcesStore();
     this.resources = this.resourcesStore.getResources(null);
 
-    this.search_resources = this.getSet("key");
+    this.searchStore = useSearchStore();
+    this.searchStore.init(this.resources);    
+    console.log(this.searchStore);
+
+    this.search_resources = this.getSet("nameShort");
     this.search_displays = this.getSet("search_display");
     this.search_types = this.getSet("search_type");
     this.search_subtypes = this.getSet("search_subtype");
@@ -234,6 +257,25 @@ export default {
         });
       }
       return res;
+    },
+    reciveUpdate(prop, data) {
+      if(this.syncLock)
+        return;
+
+      this[prop] = data.items;
+      
+      if(data.enable){
+        this.syncLock = true;
+        var keys = Object.keys(this.$data);
+        var not = prop.replace("select_", "group_");
+        keys.forEach(x => {
+          if(x.startsWith("group_") && x != not){
+            this[x] = false;
+          }
+        });
+        this.syncLock = false;
+      }      
+      
     }
   },
   computed: {

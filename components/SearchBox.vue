@@ -1,7 +1,8 @@
 <template>
     <v-expansion-panel>
         <v-expansion-panel-title>
-            <v-switch density="compact" style="max-width: 50px; max-height: 20px; margin-top: -20px;" color="primary"></v-switch>
+            <v-switch density="compact" style="max-width: 50px; max-height: 20px; margin-top: -20px;" color="primary"
+                v-model="enableState"></v-switch>
             {{ title }}
         </v-expansion-panel-title>
         <v-expansion-panel-text>
@@ -31,14 +32,24 @@
                     </v-col>
                 </v-row>
                 <v-row style="margin:-15px 0px 0px -10px">
-                    <v-col>
-                        <v-checkbox v-for="x in itemState" :key="x.item" hide-details="true" :label="x.item" v-model="x.checked"/>
-                    </v-col>
+                    <v-checkbox v-for="x in itemState" :key="x.item" hide-details="true" v-model="x.checked"
+                        style="width: 100%;">
+                        <template v-slot:label>
+                            <span v-html="x.item"></span>
+                        </template>
+                    </v-checkbox>
                 </v-row>
             </div>
         </v-expansion-panel-text>
     </v-expansion-panel>
 </template>
+
+<!-- TODO -->
+<style scoped>
+label {
+    opacity: 1 !important; 
+}
+</style>
 
 <script>
 export default {
@@ -50,12 +61,17 @@ export default {
         items: {
             type: Set,
             required: true
+        },
+        enable: {
+            type: Boolean,
+            default: false
         }
     },
 
     data() {
         return {
-            itemState: null
+            itemState: null,
+            enableState: true,
         }
     },
 
@@ -68,22 +84,37 @@ export default {
         },
         selectInvert() {
             this.itemState = this.itemState.map(x => { return { item: x.item, checked: !x.checked } });
+        },
+        submitUpdate(){
+            this.$emit('update', { items: this.itemState, enable: this.enableState});
         }
     },
     watch: {
         items: {
             immediate: true,
             handler(newVal) {
-                if(newVal != null)
+                if (newVal != null)
                     this.itemState = Array.from(newVal).map(x => { return { item: x, checked: true } });
+            }
+        },
+        enable: {
+            immediate: true,
+            handler(newVal) {
+                this.enableState = newVal;
             }
         },
 
         itemState: {
             handler(newVal) {
-                this.$emit('selected-items-changed', newVal);
+                this.submitUpdate();
             },
             deep: true
+        },
+        enableState: {
+            handler(newVal) {
+                if(newVal)
+                    this.submitUpdate();
+            }
         }
     },
 }
