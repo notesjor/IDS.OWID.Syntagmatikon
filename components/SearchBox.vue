@@ -1,8 +1,8 @@
 <template>
-    <v-expansion-panel>
+    <v-expansion-panel v-if="searchStore != null">
         <v-expansion-panel-title>
             <v-switch density="compact" style="max-width: 50px; max-height: 20px; margin-top: -20px;" color="primary"
-                v-model="enableState"></v-switch>
+                v-model="searchStore.data[name].group" @update:model-value="changeGroup"></v-switch>
             {{ title }}
         </v-expansion-panel-title>
         <v-expansion-panel-text>
@@ -31,11 +31,11 @@
                         </a>
                     </v-col>
                 </v-row>
-                <v-row style="margin:-15px 0px 0px -10px">
-                    <v-checkbox v-for="x in itemState" :key="x.item" hide-details="true" v-model="x.checked"
-                        style="width: 100%;">
+                <v-row style="margin:0px 0px 0px 0px">
+                    <v-checkbox v-for="x in items" :key="x.item" hide-details="true" v-model="x.checked"
+                        style="width: 100%;" density="compact">
                         <template v-slot:label>
-                            <span v-html="x.item"></span>
+                            <span v-html="x.item" style="margin-left: 5px;"></span>
                         </template>
                     </v-checkbox>
                 </v-row>
@@ -47,75 +47,71 @@
 <!-- TODO -->
 <style scoped>
 label {
-    opacity: 1 !important; 
+    opacity: 1 !important;
 }
 </style>
 
 <script>
+import { useSearchStore } from '~/stores/search';
+
 export default {
     props: {
         title: {
             type: String,
             required: true
         },
-        items: {
-            type: Set,
+        name: {
+            type: String,
             required: true
         },
-        enable: {
-            type: Boolean,
-            default: false
-        }
+    },
+
+    mounted() {
+        this.searchStore = useSearchStore();
     },
 
     data() {
         return {
-            itemState: null,
-            enableState: true,
+            searchStore: null,
+            items: [],
         }
     },
 
     methods: {
         selectAll() {
-            this.itemState = this.itemState.map(x => { return { item: x.item, checked: true } });
+            this.items.forEach(x => x.checked = true);
         },
         selectNone() {
-            this.itemState = this.itemState.map(x => { return { item: x.item, checked: false } });
+            this.items.forEach(x => x.checked = false);
         },
         selectInvert() {
-            this.itemState = this.itemState.map(x => { return { item: x.item, checked: !x.checked } });
+            this.items.forEach(x => x.checked = !x.checked);
         },
-        submitUpdate(){
-            this.$emit('update', { items: this.itemState, enable: this.enableState});
+        changeGroup() {
+            this.searchStore.updateGroup(this.name);
         }
     },
-    watch: {
-        items: {
-            immediate: true,
-            handler(newVal) {
-                if (newVal != null)
-                    this.itemState = Array.from(newVal).map(x => { return { item: x, checked: true } });
-            }
-        },
-        enable: {
-            immediate: true,
-            handler(newVal) {
-                this.enableState = newVal;
-            }
-        },
 
-        itemState: {
-            handler(newVal) {
-                this.submitUpdate();
+    // watch if searchStore getter initialized is set to true
+    watch: {
+        searchStore: function (val) {
+            if (val == null | val.initialized == false)
+                return;
+
+            var items = this.searchStore.getUniqueItems(this.name);
+            this.items = Array.from(items).map(x => {
+                return {
+                    item: x,
+                    checked: true
+                }
+            }); 
+        },
+        items: {
+            handler: function (val) {
+                this.searchStore.updateItems(this.name, val);
             },
             deep: true
-        },
-        enableState: {
-            handler(newVal) {
-                if(newVal)
-                    this.submitUpdate();
-            }
         }
-    },
+    }
 }
 </script>
