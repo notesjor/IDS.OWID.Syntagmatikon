@@ -68,10 +68,8 @@ export const useSearchStore = defineStore("searchStore", {
         //        "filter": [
         //          `dic = ${this.filteredResources.join(" OR ")}`
         //        ],
-        limit: 10,
+        limit: 100,
       });
-
-      console.log(raw);
 
       var requestOptions = {
         method: "POST",
@@ -92,8 +90,6 @@ export const useSearchStore = defineStore("searchStore", {
           self.items = result.hits;
         })
         .catch((error) => console.log("error", error));
-
-      console.log(this);
     },
     getGroups() {
       var res = new Set();
@@ -111,9 +107,19 @@ export const useSearchStore = defineStore("searchStore", {
       var group = Object.keys(this.data).filter((x) => this.data[x].group);
       var res = this.resources.filter((x) => x[group] == name);
 
-      console.log(group);
-      console.log(res);
-      console.log(this.resources);
+      var keys = Object.keys(this.data);
+      res = res.filter((x) => {
+        return keys.every((key)=>{
+          if(x[key] instanceof Array){
+            return x[key].some((y) => this.data[key].items.some((z) => z.item == y && z.checked));
+          }
+          else{
+            return this.data[key].items.some((y) => y.item == x[key] && y.checked);
+          }
+        });
+      });
+
+      return res;
     },
     updateGroup(group) {
       if (group != undefined && group != null && group != "") {
@@ -137,8 +143,6 @@ export const useSearchStore = defineStore("searchStore", {
     },
     getUniqueItems(name) {
       var res = new Set();
-      console.log(name);
-      console.log(this.data);
       this.data[name].items.forEach((x) => {
         res.add(x.item);
       });

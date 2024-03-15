@@ -2,7 +2,11 @@
     <v-card style="margin-bottom: 10px;" elevation="0">
         <v-card-title v-html="title" />
         <v-card-text>
-
+            <ul>
+                <li v-for="item in items" :key="item">
+                    <a :href="item.url">{{ item.key }}</a>
+                </li>
+            </ul>
         </v-card-text>
     </v-card>
 </template>
@@ -23,7 +27,8 @@ export default {
 
     data() {
         return {
-            searchStore: null
+            searchStore: null,
+            items: []
         }
     },
 
@@ -31,8 +36,9 @@ export default {
         searchStore:{
             handler: function(val){
                 if(this.searchStore != null)
-                console.log(this.title);
-                console.log(this.searchStore.getFilter(this.title));
+                
+                var groups = new Set(this.searchStore.getFilter(this.title).map(x=>x.key));
+                this.items = this.searchStore.items.filter(x=>groups.has(x.dic));
             },
             deep: true
         }
