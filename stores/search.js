@@ -63,18 +63,18 @@ export const useSearchStore = defineStore('searchStore', {
         "Bearer 8jRAqq_GbtjdjveIOCxIlnztXjwFbcaMYp-e50HtbrQ"
       );
 
-      var raw = JSON.stringify({
+      var request = {
         q: query,
-        //        "filter": [
-        //          `dic = ${this.filteredResources.join(" OR ")}`
-        //        ],
+        // "filter": [
+        //   dic = this.filteredResources
+        // ],
         limit: 100,
-      });
+      };
 
       var requestOptions = {
         method: "POST",
         headers: myHeaders,
-        body: raw,
+        body: JSON.stringify(request),
         redirect: "follow",
       };
 
@@ -88,6 +88,21 @@ export const useSearchStore = defineStore('searchStore', {
         })
         .then((result) => {
           self.items = result.hits;
+
+          // full request
+          request.limit = 100000;
+          requestOptions.body = JSON.stringify(request);
+          fetch(
+            "http://lexik08.ids-mannheim.de/meilisearch/indexes/syntagmatikon/search",
+            requestOptions
+          )
+            .then((response) => {
+              return response.json();
+            })
+            .then((result) => {
+              self.items = result.hits;
+            })
+            .catch((error) => console.log("error", error));
         })
         .catch((error) => console.log("error", error));
     },
