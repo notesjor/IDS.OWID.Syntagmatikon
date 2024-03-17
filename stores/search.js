@@ -66,9 +66,19 @@ export const useSearchStore = defineStore("searchStore", {
       });
 
       this.results = {};
-      this.counter++;
+
+      var self = this;
+      var promises = this.keys.items.map(async (x) => {
+        self.results[x.item] = {};
+        self.results[x.item][1] = await this.sendSearchRequest(x.item, 1);
+      });
+
+      Promise.all(promises).then(() => {
+        self.counter++;
+        console.log(self.counter);
+      });
     },
-    sendSearchRequest(key, page) {
+    async sendSearchRequest(key, page) {
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append(
@@ -90,30 +100,29 @@ export const useSearchStore = defineStore("searchStore", {
         redirect: "follow",
       };
 
-      var self = this;
-      fetch(
+      var response = await fetch(
         "http://lexik08.ids-mannheim.de/meilisearch/indexes/syntagmatikon/search",
         requestOptions
-      )
-        .then((response) => {
-          return response.json();
-        })
-        .then((result) => {
-          self.results[key][page] = result.hits;
-          if (self.max[key] == -1) 
-            self.max[key] = result.estimatedTotalHits;
-        })
-        .catch((error) => console.log("error", error));
+      );
+      var result = await response.json();
+      this.results[key] = {};
+      this.results[key][page] = result.hits;
+      if (this.max[key] == -1) 
+        this.max[key] = result.estimatedTotalHits;
+      console.log(result);
     },
-    getItems(filterSet, page) {
-      filterSet.forEach((x) => {
+    async getItems(filterSet, page) {
+      console.log(filterSet);
+      for (let x of filterSet) {
         if (this.results[x] == undefined) {
           this.results[x] = {};
         }
         if (this.results[x][page] == undefined) {
-          this.sendSearchRequest(x, page);
+          await this.sendSearchRequest(x, page);
         }
-      });
+      }
+
+      console.log(this.results);
 
       var res = [];
       filterSet.forEach((x) => {

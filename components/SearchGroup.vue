@@ -41,6 +41,16 @@ export default {
         }
     },
 
+    methods: {
+        update() {
+            var self = this;
+            this.searchStore.getItems(this.groups, this.index).then(items => {
+                self.pages = self.searchStore.getPageSize(self.groups);
+                self.items = items;
+            });
+        }
+    },
+
     watch: {
         searchStore: {
             handler: function (val) {
@@ -49,11 +59,9 @@ export default {
                 if (this.searchStore.counter == this.searchStoreCounter)
                     return;
 
-                this.searchStore.getItems(this.groups, this.index);          
                 this.searchStoreCounter = this.searchStore.counter;
-                setTimeout(() => {
-                    this.index = 1;
-                }, 500);
+                this.index = 1;
+                this.update();
             },
             deep: true
         },
@@ -61,10 +69,8 @@ export default {
             handler: function (val) {
                 if (this.searchStore == null)
                     return;
-                                
-                this.pages = this.searchStore.getPageSize(this.groups);                
-                this.items = this.searchStore.getItems(this.groups, val);
-                console.log(this.items);                
+
+                this.update();
             }
         }
     }
