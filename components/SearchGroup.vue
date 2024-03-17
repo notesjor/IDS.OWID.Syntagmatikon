@@ -7,7 +7,8 @@
                     <v-icon style="margin: 0px 5px 0px 0px; font-size: 1em;">mdi-open-in-new</v-icon>
                     <span style="font-size: 1.2em;">
                         <div style="display: inline-block;">{{ item.key }}</div>
-                        <div v-if="!this.searchStore.isDefault" style="display: inline-block; color: #999; font-size: 0.7em; margin: -50px 0px 0px 5px;">
+                        <div v-if="!this.searchStore.isDefault"
+                            style="display: inline-block; color: #999; font-size: 0.7em; margin: -50px 0px 0px 5px;">
                             (<span v-html="this.resourcesStore.getName(item.dic)"></span>)
                         </div>
                     </span>
@@ -67,8 +68,8 @@ export default {
                 if (this.searchStore.counter == this.searchStoreCounter)
                     return;
 
-                this.groups = new Set(this.searchStore.getFilter(this.title).map(x => x.key));
                 this.searchStoreCounter = this.searchStore.counter;
+                this.groups = new Set(this.searchStore.getFilter(this.title).map(x => x.key));
                 this.index = 1;
 
                 this.update();

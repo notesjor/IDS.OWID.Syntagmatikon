@@ -110,6 +110,24 @@ export const useSearchStore = defineStore("searchStore", {
       if (this.max[key] == -1) this.max[key] = result.estimatedTotalHits;
     },
     async getItems(filterSet, page) {
+      
+      var validSet = new Set();
+      var keys = Object.keys(this.data);
+      filterSet.forEach((x) => {
+        var r = this.resources.filter((y) => y.key == x);
+        var valid = true;
+        keys.forEach((key) => {
+          if (r[0][key] instanceof Array) {
+            valid = valid && r[0][key].some((y) => this.data[key].items.some((z) => z.item == y && z.checked));
+          } else {
+            valid = valid && this.data[key].items.some((y) => y.item == r[0][key] && y.checked);
+          }
+        });
+        if (valid) 
+          validSet.add(x);
+      });
+      filterSet = validSet;
+
       for (let x of filterSet) {
         if (this.results[x] == undefined) {
           this.results[x] = {};
@@ -178,8 +196,7 @@ export const useSearchStore = defineStore("searchStore", {
       return res;
     },
     updateGroup(group) {
-      if (group == undefined || group == null || group == "") 
-        return;
+      if (group == undefined || group == null || group == "") return;
 
       this.currentGroup = group;
       this.results = {};
@@ -202,6 +219,7 @@ export const useSearchStore = defineStore("searchStore", {
       this.data[name].items.forEach((x) => {
         x.checked = valid.has(x.item);
       });
+      this.counter++;
     },
     getUniqueItems(name) {
       var res = new Set();
