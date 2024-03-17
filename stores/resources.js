@@ -271,7 +271,10 @@ export const useResourcesStore = defineStore('resourcesStore', {
     getResources: function (filter) {
       if(filter == undefined || filter == null || filter.length === 0) return this.info;
       return this.info.filter(resource => filter.includes(resource.key))
-    }
+    },
+    getName: function (key) {
+      return this.info.find(resource => resource.key === key).nameShort
+    },
   },
 
   getters: {

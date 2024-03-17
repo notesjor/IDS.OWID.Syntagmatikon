@@ -8,6 +8,7 @@ export const useSearchStore = defineStore("searchStore", {
       keys: [],
 
       data: {},
+      currentGroup: "nameShort",
 
       initialized: false,
 
@@ -106,8 +107,7 @@ export const useSearchStore = defineStore("searchStore", {
       var result = await response.json();
       this.results[key] = {};
       this.results[key][page] = result.hits;
-      if (this.max[key] == -1) 
-        this.max[key] = result.estimatedTotalHits;
+      if (this.max[key] == -1) this.max[key] = result.estimatedTotalHits;
     },
     async getItems(filterSet, page) {
       for (let x of filterSet) {
@@ -134,7 +134,7 @@ export const useSearchStore = defineStore("searchStore", {
     getPageSize(filterSet) {
       var max = 0;
       filterSet.forEach((x) => {
-        max += this.max[x];
+        if (this.max[x] > max) max = this.max[x];
       });
       return Math.round(max / this.pageSize);
     },
@@ -178,13 +178,18 @@ export const useSearchStore = defineStore("searchStore", {
       return res;
     },
     updateGroup(group) {
-      if (group != undefined && group != null && group != "") {
-        this.results = {};
-        var keys = Object.keys(this.data);
-        keys.forEach((x) => {
-          this.data[x].group = x == group;
-        });
-      }
+      if (group == undefined || group == null || group == "") 
+        return;
+
+      this.currentGroup = group;
+      this.results = {};
+
+      var keys = Object.keys(this.data);
+      keys.forEach((x) => {
+        this.data[x].group = x == group;
+      });
+
+      this.counter++;
     },
     updateItems(name, validItems) {
       var valid = new Set();
@@ -208,6 +213,9 @@ export const useSearchStore = defineStore("searchStore", {
   },
 
   getters: {
+    isDefault() {
+      return this.currentGroup == "nameShort";
+    },
     isReady() {
       return this.initialized;
     },

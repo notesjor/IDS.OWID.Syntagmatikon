@@ -5,7 +5,12 @@
             <a :href="item.url" v-for="item in items" :key="item.id" style="margin-right: 15px; display: block;">
                 <v-btn variant="text" style="text-transform: none;">
                     <v-icon style="margin: 0px 5px 0px 0px; font-size: 1em;">mdi-open-in-new</v-icon>
-                    <span style="font-size: 1.2em;">{{ item.key }}</span>
+                    <span style="font-size: 1.2em;">
+                        <div style="display: inline-block;">{{ item.key }}</div>
+                        <div v-if="!this.searchStore.isDefault" style="display: inline-block; color: #999; font-size: 0.7em; margin: -50px 0px 0px 5px;">
+                            (<span v-html="this.resourcesStore.getName(item.dic)"></span>)
+                        </div>
+                    </span>
                 </v-btn>
             </a>
             <v-pagination v-model="index" :length="pages" rounded="circle"></v-pagination>
@@ -15,6 +20,7 @@
 
 <script>
 import { useSearchStore } from '~/stores/search';
+import { useResourcesStore } from '~/stores/resources';
 export default {
     props: {
         title: {
@@ -25,6 +31,7 @@ export default {
 
     mounted() {
         this.searchStore = useSearchStore();
+        this.resourcesStore = useResourcesStore();
         this.groups = new Set(this.searchStore.getFilter(this.title).map(x => x.key));
     },
 
@@ -32,6 +39,7 @@ export default {
         return {
             searchStore: null,
             searchStoreCounter: -1,
+            resourcesStore: null,
 
             groups: new Set(),
 
@@ -59,8 +67,10 @@ export default {
                 if (this.searchStore.counter == this.searchStoreCounter)
                     return;
 
+                this.groups = new Set(this.searchStore.getFilter(this.title).map(x => x.key));
                 this.searchStoreCounter = this.searchStore.counter;
                 this.index = 1;
+
                 this.update();
             },
             deep: true
