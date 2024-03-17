@@ -272,9 +272,12 @@ export const useResourcesStore = defineStore('resourcesStore', {
       if(filter == undefined || filter == null || filter.length === 0) return this.info;
       return this.info.filter(resource => filter.includes(resource.key))
     },
-    getName: function (key) {
-      return this.info.find(resource => resource.key === key).nameShort
+    getItemByNameShort: function (nameShort) {
+      return this.info.find(resource => resource.nameShort === nameShort)
     },
+    getItemByKey: function (key) {
+      return this.info.find(resource => resource.key === key)
+    }    
   },
 
   getters: {
