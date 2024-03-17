@@ -72,6 +72,13 @@ export default {
 
                 this.update();
             }
+        },
+        title: {
+            handler: function (val) {
+                this.index = 1;
+                this.groups = new Set(this.searchStore.getFilter(this.title).map(x => x.key));
+                this.update();
+            }
         }
     }
 }

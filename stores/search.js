@@ -75,7 +75,6 @@ export const useSearchStore = defineStore("searchStore", {
 
       Promise.all(promises).then(() => {
         self.counter++;
-        console.log(self.counter);
       });
     },
     async sendSearchRequest(key, page) {
@@ -109,10 +108,8 @@ export const useSearchStore = defineStore("searchStore", {
       this.results[key][page] = result.hits;
       if (this.max[key] == -1) 
         this.max[key] = result.estimatedTotalHits;
-      console.log(result);
     },
     async getItems(filterSet, page) {
-      console.log(filterSet);
       for (let x of filterSet) {
         if (this.results[x] == undefined) {
           this.results[x] = {};
@@ -121,8 +118,6 @@ export const useSearchStore = defineStore("searchStore", {
           await this.sendSearchRequest(x, page);
         }
       }
-
-      console.log(this.results);
 
       var res = [];
       filterSet.forEach((x) => {
@@ -184,6 +179,7 @@ export const useSearchStore = defineStore("searchStore", {
     },
     updateGroup(group) {
       if (group != undefined && group != null && group != "") {
+        this.results = {};
         var keys = Object.keys(this.data);
         keys.forEach((x) => {
           this.data[x].group = x == group;
