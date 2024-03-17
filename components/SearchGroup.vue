@@ -2,9 +2,9 @@
     <v-card v-if="items.length > 0" style="margin-bottom: 10px;" elevation="0">
         <v-card-title v-html="title" />
         <v-card-text style="line-height: 2.3em;">
-            <a :href="item.url" v-for="item in pagedItems" :key="item.id" style="margin-right: 15px; display: block;">
+            <a :href="item.url" v-for="item in items" :key="item.id" style="margin-right: 15px; display: block;">
                 <v-btn variant="text" style="text-transform: none;">
-                    <v-icon style="margin: -3px 5px 0px 0px; font-size: 1em;">mdi-open-in-new</v-icon>
+                    <v-icon style="margin: 0px 5px 0px 0px; font-size: 1em;">mdi-open-in-new</v-icon>
                     <span style="font-size: 1.2em;">{{ item.key }}</span>
                 </v-btn>
             </a>
@@ -25,21 +25,19 @@ export default {
 
     mounted() {
         this.searchStore = useSearchStore();
+        this.groups = new Set(this.searchStore.getFilter(this.title).map(x => x.key));
     },
 
     data() {
         return {
             searchStore: null,
+            searchStoreCounter: -1,
+
+            groups: new Set(),
+
             items: [],
             pages: 0,
-            index: 0,
-            size: 5
-        }
-    },
-
-    computed: {
-        pagedItems() {
-            return this.items.slice(this.index * this.size, (this.index + 1) * this.size);
+            index: 1,
         }
     },
 
@@ -48,13 +46,26 @@ export default {
             handler: function (val) {
                 if (this.searchStore == null)
                     return;
+                if (this.searchStore.counter == this.searchStoreCounter)
+                    return;
 
-                var groups = new Set(this.searchStore.getFilter(this.title).map(x => x.key));
-                this.items = this.searchStore.items.filter(x => groups.has(x.dic));
-                this.pages = this.items.length / this.size;
-                this.index = 0;
+                this.searchStore.getItems(this.groups, this.index);          
+                this.searchStoreCounter = this.searchStore.counter;
+                setTimeout(() => {
+                    this.index = 1;
+                }, 500);
             },
             deep: true
+        },
+        index: {
+            handler: function (val) {
+                if (this.searchStore == null)
+                    return;
+                                
+                this.pages = this.searchStore.getPageSize(this.groups);                
+                this.items = this.searchStore.getItems(this.groups, val);
+                console.log(this.items);                
+            }
         }
     }
 }

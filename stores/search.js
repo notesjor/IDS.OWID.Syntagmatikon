@@ -1,19 +1,22 @@
 // stores/counter.js
 import { defineStore } from "pinia";
 
-export const useSearchStore = defineStore('searchStore', {
+export const useSearchStore = defineStore("searchStore", {
   state: () => {
     return {
       resources: [],
+      keys: [],
 
-      data: {
-      },
+      data: {},
 
       initialized: false,
 
-      query: "",
+      query: "*",
+      counter: 0,
 
-      items: [],
+      max: {},
+      results: {},
+      pageSize: 5,
     };
   },
   // could also be defined as
@@ -56,6 +59,16 @@ export const useSearchStore = defineStore('searchStore', {
       return { group: false, items: res };
     },
     changeQuery(query) {
+      this.query = query;
+      this.max = {};
+      this.keys.items.forEach((x) => {
+        this.max[x.item] = -1;
+      });
+
+      this.results = {};
+      this.counter++;
+    },
+    sendSearchRequest(key, page) {
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append(
@@ -64,11 +77,10 @@ export const useSearchStore = defineStore('searchStore', {
       );
 
       var request = {
-        q: query,
-        // "filter": [
-        //   dic = this.filteredResources
-        // ],
-        limit: 100,
+        q: this.query,
+        filter: [`dic = ${key}`],
+        limit: this.pageSize,
+        offset: (page - 1) * this.pageSize,
       };
 
       var requestOptions = {
@@ -87,24 +99,40 @@ export const useSearchStore = defineStore('searchStore', {
           return response.json();
         })
         .then((result) => {
-          self.items = result.hits;
-
-          // full request
-          request.limit = 100000;
-          requestOptions.body = JSON.stringify(request);
-          fetch(
-            "http://lexik08.ids-mannheim.de/meilisearch/indexes/syntagmatikon/search",
-            requestOptions
-          )
-            .then((response) => {
-              return response.json();
-            })
-            .then((result) => {
-              self.items = result.hits;
-            })
-            .catch((error) => console.log("error", error));
+          self.results[key][page] = result.hits;
+          if (self.max[key] == -1) 
+            self.max[key] = result.estimatedTotalHits;
         })
         .catch((error) => console.log("error", error));
+    },
+    getItems(filterSet, page) {
+      filterSet.forEach((x) => {
+        if (this.results[x] == undefined) {
+          this.results[x] = {};
+        }
+        if (this.results[x][page] == undefined) {
+          this.sendSearchRequest(x, page);
+        }
+      });
+
+      var res = [];
+      filterSet.forEach((x) => {
+        if (
+          this.results[x] != undefined &&
+          this.results[x][page] != undefined
+        ) {
+          res = res.concat(this.results[x][page]);
+        }
+      });
+
+      return res;
+    },
+    getPageSize(filterSet) {
+      var max = 0;
+      filterSet.forEach((x) => {
+        max += this.max[x];
+      });
+      return Math.round(max / this.pageSize);
     },
     getGroups() {
       var res = new Set();
@@ -118,28 +146,27 @@ export const useSearchStore = defineStore('searchStore', {
       });
       return res;
     },
-    getFilter(name){
-      console.log(name);
+    getFilter(name) {
       var group = Object.keys(this.data).filter((x) => this.data[x].group);
-      console.log(group);
       var res = this.resources.filter((x) => {
-        if(x[group] instanceof Array){
+        if (x[group] instanceof Array) {
           return x[group].some((y) => y == name);
-        }
-        else{
+        } else {
           return x[group] == name;
         }
       });
-      console.log(res);
 
       var keys = Object.keys(this.data);
       res = res.filter((x) => {
-        return keys.every((key)=>{
-          if(x[key] instanceof Array){
-            return x[key].some((y) => this.data[key].items.some((z) => z.item == y && z.checked));
-          }
-          else{
-            return this.data[key].items.some((y) => y.item == x[key] && y.checked);
+        return keys.every((key) => {
+          if (x[key] instanceof Array) {
+            return x[key].some((y) =>
+              this.data[key].items.some((z) => z.item == y && z.checked)
+            );
+          } else {
+            return this.data[key].items.some(
+              (y) => y.item == x[key] && y.checked
+            );
           }
         });
       });

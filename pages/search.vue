@@ -108,7 +108,6 @@ export default {
 
     this.searchStore = useSearchStore();
     this.searchStore.init(this.resources);        
-    console.log(this.searchStore);
   },
   watch: {
     query: function (val) {
