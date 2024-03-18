@@ -37,7 +37,7 @@ definePageMeta({
 
     </v-row>
   </div>
-  <div>
+  <div style="max-width: 100ch;">
     <v-row>
       <v-col cols="12">
         <div class="container">

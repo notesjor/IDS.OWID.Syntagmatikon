@@ -90,7 +90,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "nameLong": "MAP - Musterbank argumentmarkierender Präpositionen",
         "description": 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum sapiente itaque officia reiciendis enim et voluptate sunt, veritatis provident assumenda pariatur autem quia! Pariatur.',
         "img": "/img/sources/map.PNG",
-        "url": "",
+        "url": "http://lexik02.ids-mannheim.de/vas-v7/",
         "tags": [],
         "search_display": "Netz",
         "search_type": "Online-Wörterbuch",
@@ -271,7 +271,13 @@ export const useResourcesStore = defineStore('resourcesStore', {
     getResources: function (filter) {
       if(filter == undefined || filter == null || filter.length === 0) return this.info;
       return this.info.filter(resource => filter.includes(resource.key))
-    }
+    },
+    getItemByNameShort: function (nameShort) {
+      return this.info.find(resource => resource.nameShort === nameShort)
+    },
+    getItemByKey: function (key) {
+      return this.info.find(resource => resource.key === key)
+    }    
   },
 
   getters: {

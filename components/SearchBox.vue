@@ -1,5 +1,10 @@
 <template>
-    <v-expansion-panel :title="title" :v-model="expanded">
+    <v-expansion-panel v-if="searchStore != null">
+        <v-expansion-panel-title>
+            <v-switch density="compact" style="max-width: 50px; max-height: 20px; margin: -20px 10px 0px 0px;" color="primary"
+                v-model="searchStore.data[name].group" @update:model-value="changeGroup"></v-switch>
+            {{ title }}
+        </v-expansion-panel-title>
         <v-expansion-panel-text>
             <div class="nolink">
                 <v-row style="margin:0px 0px 0px -35px;">
@@ -26,41 +31,86 @@
                         </a>
                     </v-col>
                 </v-row>
-                <v-row style="margin:-15px 0px 0px -10px">
-                    <v-col>
-                        <v-checkbox v-for="x in items" :key="x" density="compact" hide-details="true" :label="x" />
-                    </v-col>
+                <v-row style="margin:0px 0px 0px 0px">
+                    <v-checkbox v-for="x in items" :key="x.item" hide-details="true" v-model="x.checked"
+                        style="width: 100%;" density="compact">
+                        <template v-slot:label>
+                            <span v-html="x.item" style="margin-left: 5px;"></span>
+                        </template>
+                    </v-checkbox>
                 </v-row>
             </div>
         </v-expansion-panel-text>
     </v-expansion-panel>
 </template>
 
+<!-- TODO -->
+<style scoped>
+label {
+    opacity: 1 !important;
+}
+</style>
+
 <script>
+import { useSearchStore } from '~/stores/search';
+
 export default {
     props: {
         title: {
             type: String,
             required: true
         },
-        items: {
-            type: Array,
+        name: {
+            type: String,
             required: true
         },
-        expanded: {
-            type: Boolean,
-            default: false
+    },
+
+    mounted() {
+        this.searchStore = useSearchStore();
+    },
+
+    data() {
+        return {
+            searchStore: null,
+            items: [],
         }
     },
+
     methods: {
         selectAll() {
-            this.$emit('select-all');
+            this.items.forEach(x => x.checked = true);
         },
         selectNone() {
-            this.$emit('select-none');
+            this.items.forEach(x => x.checked = false);
         },
         selectInvert() {
-            this.$emit('select-invert');
+            this.items.forEach(x => x.checked = !x.checked);
+        },
+        changeGroup() {
+            this.searchStore.updateGroup(this.name);
+        }
+    },
+
+    // watch if searchStore getter initialized is set to true
+    watch: {
+        searchStore: function (val) {
+            if (val == null | val.initialized == false)
+                return;
+
+            var items = this.searchStore.getUniqueItems(this.name);
+            this.items = Array.from(items).map(x => {
+                return {
+                    item: x,
+                    checked: true
+                }
+            }); 
+        },
+        items: {
+            handler: function (val) {
+                this.searchStore.updateItems(this.name, val);
+            },
+            deep: true
         }
     }
 }

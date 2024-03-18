@@ -49,7 +49,7 @@ export default {
     "left middle";
   margin: 10px 5px 10px 5px;
   padding: 5px;
-  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .containerItem:hover {

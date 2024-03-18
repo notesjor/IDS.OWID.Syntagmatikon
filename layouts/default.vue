@@ -43,7 +43,7 @@
         <router-link to="/project-description">
           <v-list-item prepend-icon="mdi-information" title="Was ist das Syntagmatikon?"></v-list-item>
         </router-link>
-        <router-link to="/search-resource">
+        <router-link to="/discovery">
           <v-list-item prepend-icon="mdi-web" title="Ressourcenüberblick"></v-list-item>
         </router-link>
       </v-list>
@@ -74,7 +74,7 @@
       <!-- ADDITIONAL INFORMATION START -->
       <v-list density="compact" nav>
         <v-list-subheader>Suche</v-list-subheader>
-        <router-link to="/search-entry">
+        <router-link to="/search">
           <v-list-item prepend-icon="mdi-magnify" title="nach Einträgen"></v-list-item>
         </router-link>
       </v-list>

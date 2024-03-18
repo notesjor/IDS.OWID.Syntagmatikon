@@ -1,7 +1,7 @@
 <!-- HINWEIS: Dies ist eine Kompoente, mit mehreren Sub-Komponenten: SamplerItem +> SamplerItemText -->
 <template>
   <div class="nolink"
-  style="border:1px black solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
+  style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
   <v-row style="margin-top:-20px">
       <v-col>
         <p class="text-xl">Interaktive Beispiele</p> 
@@ -34,7 +34,7 @@
                         <div style="font-weight: 200;" v-html="r.source"></div>
                       </v-row>
                       <v-row>
-                        <v-icon :style="`color:${r.color}; margin-right: 5px;`" class="animated">mdi-open-in-new</v-icon>
+                        <v-icon :style="`color:${r.color}; margin-right: 5px;`" class="animated">mdi-arrow-right-circle-outline</v-icon>
                         <div :style="`color:${r.color}`">{{ r.article }}</div>
                       </v-row>
                       <v-row style="font-weight: 200; font-style: italic;">
