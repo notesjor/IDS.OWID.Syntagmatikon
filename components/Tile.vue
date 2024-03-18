@@ -9,7 +9,7 @@
                         <div
                             style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px">
                             <h3 style="text-wrap:wrap; text-align: left;">
-                                <v-btn v-if="link != null" variant="tonal" icon="mdi-open-in-new"
+                                <v-btn v-if="link != null" variant="tonal" icon="mdi-arrow-right-circle-outline"
                                     style="display:inline-block; margin:-5px 0px 0px 0px; font-size: 0.6em;" width="30"
                                     height="30"></v-btn>
                                 {{ title }}

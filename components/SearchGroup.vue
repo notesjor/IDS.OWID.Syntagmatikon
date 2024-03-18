@@ -3,7 +3,7 @@
         <v-card-title>
             <div v-if="this.searchStore.isDefault">
                 <a :href="resource.url">
-                    <v-icon style="font-size: 0.9em; margin-top:-3px; margin-right: 5px;">mdi-open-in-new</v-icon>
+                    <v-icon style="font-size: 0.9em; margin-top:-3px; margin-right: 5px;">mdi-arrow-right-circle-outline</v-icon>
                     <span v-html="title"></span>
                 </a>
             </div>
@@ -19,7 +19,7 @@
             </div>
             <a :href="item.url" v-for="item in items" :key="item.id" style="margin-right: 15px; display: block;">
                 <v-btn variant="text" style="text-transform: none;">
-                    <v-icon style="margin: 0px 5px 0px 0px; font-size: 1em;">mdi-open-in-new</v-icon>
+                    <v-icon style="margin: 0px 5px 0px 0px; font-size: 1em;">mdi-arrow-right-circle-outline</v-icon>
                     <span style="font-size: 1.2em;">
                         <div style="display: inline-block;">{{ item.key }}</div>
                         <div v-if="!this.searchStore.isDefault"

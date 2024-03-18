@@ -35,7 +35,7 @@ definePageMeta({
 
     </v-row>
   </div>
-  <div>
+  <div style="max-width: 100ch;">
     <v-row style="max-width: 1140px;">
       <v-col cols="12">
         <h2 style="margin:-20px 0px 10px 10px; border-bottom: 3px lightgray solid;">Automatische Informationstypen</h2>

@@ -33,7 +33,7 @@
         
       </v-col>
       <v-col cols="4">
-        <div style="border:1px black solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
+        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
           <div style="text-align: center;">
             <v-icon style="font-size: 60px;">
               mdi-cube-outline
@@ -41,7 +41,7 @@
             <div><strong>16</strong> Lexikalische Ressourcen</div>
           </div>
         </div>
-        <div style="border:1px black solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
+        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
           <div style="text-align: center;">
             <v-icon style="font-size: 60px;">
               mdi-magnify
@@ -51,7 +51,7 @@
         </div>
       </v-col>
       <v-col cols="4">
-        <div style="border:1px black solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
+        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
           <div style="text-align: center;">
             <v-icon style="font-size: 60px;">
               mdi-puzzle-outline
@@ -59,7 +59,7 @@
             <div><strong>15681</strong> Sprachmuster, Phrasen und Redewendungen</div>
           </div>
         </div>
-        <div style="border:1px black solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
+        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
           <div style="text-align: center;">
             <v-icon style="font-size: 60px;">
               mdi-text-box-outline
@@ -69,7 +69,7 @@
         </div>
       </v-col>
       <v-col cols="4">
-        <div style="border:1px black solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
+        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
           <div style="text-align: center;">
             <v-icon style="font-size: 60px;">
               mdi-touch-text-outline
@@ -77,7 +77,7 @@
             <div><strong>35</strong> Interaktive Texte und Analysen</div>
           </div>
         </div>
-        <div style="border:1px black solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
+        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
           <div style="text-align: center;">
             <v-icon style="font-size: 60px;">
               mdi-database-search-outline

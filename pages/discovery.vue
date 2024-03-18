@@ -36,7 +36,7 @@ definePageMeta({
             <v-card-title>
               <a :href="x.url" target="_blank">
                 <h2>
-                  <v-btn variant="tonal" icon="mdi-open-in-new" style="display:inline-block; margin-top:-5px"></v-btn>
+                  <v-btn variant="tonal" icon="mdi-arrow-right-circle-outline" style="display:inline-block; margin-top:-5px"></v-btn>
                   <div style="display: inline-block; margin-left: 5px;" v-html="x.nameShort"></div>
                 </h2>
               </a>

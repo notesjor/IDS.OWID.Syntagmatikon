@@ -8,7 +8,7 @@
                             :color2="color2" :color3="color3" />
                         <h3
                             style="position: absolute; top:-6px; left:5px; background-color: rgba(255, 255, 255, 0.65); padding: 8px 5px 3px 10px; width: 100%; min-width: 322px; border-radius:25px">
-                            <v-btn v-if="link != null" variant="tonal" icon="mdi-open-in-new"
+                            <v-btn v-if="link != null" variant="tonal" icon="mdi-arrow-right-circle-outline"
                                 style="display:inline-block; margin:-5px 0px 0px -5px; font-size: 0.6em;" width="30"
                                 height="30"></v-btn>
                             {{ title }}

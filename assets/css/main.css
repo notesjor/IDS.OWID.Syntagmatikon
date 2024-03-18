@@ -234,7 +234,7 @@ div.main a {
 }
 
 div.main a::before {
-  content: "\F03CC  ";
+  content: "\F0CE0  ";
   font: normal normal normal 18px/1 "Material Design Icons"
 }
 
@@ -243,7 +243,7 @@ div.nolink a::before {
 }
 
 div.relink a::before {
-  content: "\F03CC  "!important;
+  content: "\F0CE0  "!important;
 }
 
 hi {

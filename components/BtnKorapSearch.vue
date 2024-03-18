@@ -15,7 +15,7 @@
           <div style="display: flex;">
             <div style="display: inline;">
             KorAP-Belege für: <span style="font-weight:lighter; margin-left:10px; margin-right:5px">{{ query }}</span>
-          <a :href="getKorapLink()" target="_blank" style="text-decoration:none"><v-icon>mdi-open-in-new</v-icon></a>
+          <a :href="getKorapLink()" target="_blank" style="text-decoration:none"><v-icon>mdi-arrow-right-circle-outline</v-icon></a>
           </div>
           <div style="flex-grow: 1;"/>
           <div style="display: inline;">
