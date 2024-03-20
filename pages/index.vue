@@ -296,52 +296,8 @@ export default {
               color: '#c5049b'
             }
             ]
-          }, {
-            ranges: [{
-              from: 9,
-              to: 10
-            }, {
-              from: 12,
-              to: 13
-            }
-            ],
-            references: [{
-              source: 'MAP',
-              article: 'sagen vor',
-              type: 'Argumentmarkierende Präposition',
-              href: '',
-              color: '#0d65c2'
-            }
-            ]
-          }, {
-            ranges: [{
-              from: 21,
-              to: 24
-            }
-            ],
-            references: [{
-              source: 'WV-Feld',
-              article: 'aus persönlichen Gründen',
-              type: 'aus-ADJEKTIV-Gründen-Muster',
-              href: 'http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/aus_ADJ_Gruenden_ID1364235183677.html',
-              color: '#c5049b'
-            }
-            ]
-          }, {
-            ranges: [{
-              from: 15,
-              to: 17
-            }
-            ],
-            references: [{
-              source: 'PREPCON <sup>explorativ</sup>',
-              article: 'in München',
-              type: 'Präposition-Nomen-Verbindung',
-              href: 'http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=M%C3%BCnchen',
-              color: '#0d65c2'
-            }
-            ]
-          }, {
+          }
+          ,   {
             ranges: [{
               from: 10,
               to: 12
@@ -376,6 +332,36 @@ export default {
             },
             ]
           },
+          {
+            ranges: [{
+              from: 15,
+              to: 17
+            }
+            ],
+            references: [{
+              source: 'PREPCON <sup>explorativ</sup>',
+              article: 'in München',
+              type: 'Präposition-Nomen-Verbindung',
+              href: 'http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=M%C3%BCnchen',
+              color: '#0d65c2'
+            }
+            ]
+          },
+          {
+            ranges: [{
+              from: 21,
+              to: 24
+            }
+            ],
+            references: [{
+              source: 'WV-Feld',
+              article: 'aus persönlichen Gründen',
+              type: 'aus-ADJEKTIV-Gründen-Muster',
+              href: 'http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/aus_ADJ_Gruenden_ID1364235183677.html',
+              color: '#c5049b'
+            }
+            ]
+          },
           ],
         }, {
           tokens: ["Wo", "die", "Wirtschaft", "in", "der", "Krise", "steckt,", "da", "steigt", "die", "Angst", "der", "Geschäftsleute,", "den", "Boden", "unter", "den", "Füßen", "zu", "verlieren."],
@@ -408,6 +394,29 @@ export default {
               article: 'Dachgesellschaft',
               type: 'Kompositum',
               href: 'http://wvonline.ids-mannheim.de/dtww/dtww_d.htm',
+              color: '#0d65c2'
+            }
+            ]
+          }
+          ],
+        },
+        {
+          tokens: ["Aber", "der", "Sohn", "kam", "nicht", "nach", "dem", "Vater,", "sondern", "nach", "der", "exzentrischen,",  "fantasievollen,", "unangepassten", "Mutter."],
+          annotations: [{
+            ranges: [{
+              from: 3,
+              to: 4
+            },
+            {   
+            from: 5,
+              to: 6
+            }
+            ],
+            references: [{
+              source: 'MAP',
+              article: 'kommen nach',
+              type: 'Argumentmarkierende Präposition',
+              href: 'http://lexik02.ids-mannheim.de/vas-v7/article/nach/entsprechung/aehnlichkeit',
               color: '#0d65c2'
             }
             ]

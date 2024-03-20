@@ -10,7 +10,7 @@ definePageMeta({
       <v-col>
         <div>
           <h1>
-            Ressourcen erklärt
+            Ressourcentypen
           </h1>
         </div>
       </v-col>
@@ -22,9 +22,10 @@ definePageMeta({
             im Folgenden kurz charakterisiert werden. Als Kriterien dienten der Grad
             der Exhaustivität sowie das Verhältnis von automatischer
             Datenaufbereitung; händischer Bearbeitung und
-            linguistisch-lexikografischer Beschreibung, Die aufgeführten Beispielressourcen
-            sind jeweils die prototypischen
-            Vertreter. Das heißt, dass diese hauptsächlich durch den zuvor
+            linguistisch-lexikografischer Beschreibung.</p>
+            <p> 
+            Die aufgeführten Beispielressourcen sind jeweils die prototypischen Vertreter. 
+            Das heißt, dass diese hauptsächlich durch den zuvor
             beschriebenen Typ charakterisiert sind. Gleichzeitig gibt es zahlreiche
             Überschneidungen zwischen den Ressourcen: Eine Datenbank kann z.B.
             gleichzeitig als Inventar verstanden werden wie

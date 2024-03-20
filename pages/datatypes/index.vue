@@ -10,7 +10,7 @@ definePageMeta({
       <v-col>
         <div>
           <h1>
-            Daten- und Informationstypen
+            Informationstypen
           </h1>
         </div>
       </v-col>
@@ -19,14 +19,9 @@ definePageMeta({
       <v-col>
         <div>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus deserunt illum ipsa reprehenderit
-            voluptate
-            molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis enim voluptas cumque quos illum
-            necessitatibus temporibus facere. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus
-            deserunt
-            illum ipsa reprehenderit voluptate molestiae, quos dignissimos voluptatem expedita sunt. Ullam, veritatis
-            enim
-            voluptas cumque quos illum necessitatibus temporibus facere.</p>
+            Die Rubrik bündelt die Ressourcen unter dem Gesichtspunkt der Charakteristik ihrer Angaben (Informationstypen). Es wird zwischen rein automatischen und manuell bearbeiteten Daten unterschieden.</p>
+            <p> Die Hintergrundtexte zeigen anhand anschaulicher Beispiele aus den Ressourcen, welche Fragen sich mit den jeweiligen Informationstypen bezüglich sprachlicher Struktur, Bedeutung, Gebrauch, Festigkeit, Varianz sowie Musterhaftigkeit beantworten lassen. Es handelt sich explizit nicht um ein Tutorial etwa zur Korpuslinguistik, sondern um einen Leitfaden zur Interpretation der im Syntagmatikon dargestellten Ergebnisse. 
+</p>
 
           <br />&nbsp;<br />
 
@@ -42,18 +37,18 @@ definePageMeta({
 
         <div class="container">
           <tile-gradient color1="#cb992b" color2="#33dcfe" title="Frequenzen" link="/datatypes/frequency">
-            <b>Häufigkeit des Vorkommens eines sprachlichen Ausdrucks im Korpus, ermittelt mithilfe von Zählungen
-              und/oder Suchanfragen (queries)</b>
+            Häufigkeit des Vorkommens eines sprachlichen Ausdrucks im Korpus, ermittelt mithilfe von Zählungen
+              und/oder Suchanfragen (queries)
             <br>
             <br>
-            Was kann man anhand Frequenzangaben im Syntagmatikon ablesen?
+            <b>Was kann man anhand Frequenzangaben im Syntagmatikon ablesen?</b>
           </tile-gradient>
 
           <tile-gradient color1="#cb992b" color2="#33dcfe" title="KWIC (KeyWord In Context)" link="/datatypes/kwic">
-            <b>Zeilen (Konkordanzen), in denen das Suchobjekt vorkommt (Textschnipsel)</b>
+            Zeilen (Konkordanzen), in denen das Suchobjekt vorkommt (Textschnipsel)
             <br>
             <br>
-            Was sagen KWIC-Angaben im Syntagmatikon über den Gebrauch einer sprachlichen Einheit aus?
+            <b>Was sagen KWIC-Angaben im Syntagmatikon über den Gebrauch einer sprachlichen Einheit aus?</b>
           </tile-gradient>
           <!--
           <tile title="Volltextstellen" img="/img/datatypes/belege.jpg" link="/datatypes/full-text">
@@ -62,29 +57,26 @@ definePageMeta({
         -->
 
           <tile-gradient color1="#cb992b" color2="#33dcfe" title="Kookkurrenzprofile" link="/datatypes/cooccurrence">
-            <b>Durch statistische Berechnungen (sog. Kookkurrenzanalysen) ermittelte Partnerwort-Profile
-              (überproportional häufiges Miteinandervorkommen von Wörtern und Wortgruppen)</b>
+            Durch statistische Berechnungen (sog. Kookkurrenzanalysen) ermittelte Partnerwort-Profile
+              (überproportional häufiges Miteinandervorkommen von Wörtern und Wortgruppen)
             <br>
             <br>
-            Welche Hinweise liefern Kookkurrenzangaben im Syntagmatikon auf Bedeutung, Gebrauch und Festigkeit?
+            <b>Welche Hinweise liefern Kookkurrenzangaben im Syntagmatikon auf Bedeutung, Gebrauch und Festigkeit?</b>
           </tile-gradient>
 
-          <tile-gradient color1="#cb992b" color2="#33dcfe" title="Muster-/Lückenfüllertabellen" link="/datatypes/patterntable">
-            <b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum
-              sapiente itaque officia reiciendis enim</b>
+          <tile-gradient color1="#cb992b" color2="#33dcfe" title="Lückenfüllertabellen" link="/datatypes/patterntable">
+            Durch automatische Auswertung ermittelte Füllerhäufigkeiten innerhalb eines Musterslots
             <br>
             <br>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum
-            sapiente itaque officia reiciendis enim?
+            <b>Welche Schlüsse lassen sich anhand der Füllertabellen im Syntagmatikon in Bezug auf die Festigkeit und Varianz syntagmatischer Einheiten ziehen?</b>
           </tile-gradient>
 
           <tile-gradient color1="#cb992b" color2="#33dcfe" title="Annotierte Daten" link="/datatypes/annotation">
-            <b>Durch automatische Annotationsprogramme kategorisierte Korpusdaten (z.B. nach Wortarten, Satztypen,
-              semantischen Kategorien). </b>
+            Durch automatische Annotationsprogramme kategorisierte Korpusdaten (z.B. nach Wortarten, Satztypen, semantischen Kategorien).
             <br>
             <br>
-            Wie führen solche getaggten Daten im Syntagmatikon zur linguistischen Klassifikation von sprachlichen
-            Phänomenen?
+            <b>Wie führen solche getaggten Daten im Syntagmatikon zur linguistischen Klassifikation von sprachlichen
+            Phänomenen?</b>
           </tile-gradient>
         </div>
 
@@ -94,51 +86,49 @@ definePageMeta({
 
 
           <tile-gradient color1="#33dcfe" color2="#ff3661" title="Kategoriale Label" link="/datatypes/category">
-            <b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum
-              sapiente itaque officia reiciendis enim</b>
+            Linguistische Etikettierung von Merkmalen sprachlicher Einheiten
             <br>
             <br>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias eaque recusandae dolorem quae eum ipsum
-            sapiente itaque officia reiciendis enim?
+            <b>Welche Aussagekraft haben kategoriale Zuschreibungen im Syntagmatikon bezüglich verwandter sprachlicher Muster?</b>
           </tile-gradient>
 
           <tile-gradient color1="#33dcfe" color2="#ff3661" title="Belege" link="/datatypes/matches">
-            <b>Manuell ausgewählte KWICs und größere Volltextstellen</b>
+            Manuell ausgewählte KWICs und größere Volltextstellen
             <br>
             <br>
-            Nach welchen Kriterien werden illustrative Belegangaben im Syntagmatikon ausgewählt und wozu tragen sie bei?
+            <b>Nach welchen Kriterien werden illustrative Belegangaben im Syntagmatikon ausgewählt und wozu tragen sie bei?</b>
           </tile-gradient>
 
           <tile-gradient color1="#33dcfe" color2="#ff3661" title="Narrative Beschreibung " link="/datatypes/narration">
-            <b>Beschreibende Autorentexte, die ein Phänomen erklären</b>
+            Beschreibende Autorentexte, die ein Phänomen erklären
             <br>
             <br>
-            Welche unterschiedlichen Typen narrativer Texte prägen das Syntagmatikon?
+            <b>Welche unterschiedlichen Typen narrativer Texte prägen das Syntagmatikon?</b>
           </tile-gradient>
 
           <tile-gradient color1="#33dcfe" color2="#ff3661" title="Basiselemente" link="/datatypes/elements">
-            <b>Auszeichnung der einzelnen Komponenten einer Wortverbindung und Verlinkung mit anderen Einträgen. </b>
+            Auszeichnung der einzelnen Komponenten einer Wortverbindung und Verlinkung mit anderen Einträgen.
             <br>
             <br>
-            Wie werden mithilfe der Basiselementangaben im Syntagmatikon Beziehungen zu Einwortlexemen hergestellt und
-            unterschiedliche Gruppen gebildet?
+            <b>Wie werden mithilfe der Basiselementangaben im Syntagmatikon Beziehungen zu Einwortlexemen hergestellt und
+            unterschiedliche Gruppen gebildet?</b>
           </tile-gradient>
 
 
           <tile-gradient color1="#33dcfe" color2="#ff3661" title="Felder" link="/datatypes/fields">
-            <b>Nach inhaltlichen Kriterien manuell zusammengestellte Gruppen von sprachlichen Einheiten mit verwandten
-              Gebrauchsmerkmalen</b>
+            Nach inhaltlichen Kriterien manuell zusammengestellte Gruppen von sprachlichen Einheiten mit verwandten
+              Gebrauchsmerkmalen
             <br>
             <br>
-            Wie vielfältig sind Feldangaben im Syntagmatikon?
+            <b>Wie vielfältig sind Feldangaben im Syntagmatikon?</b>
           </tile-gradient>
 
           <tile-gradient color1="#33dcfe" color2="#ff3661" title="Fremdsprachige Äquivalenz" link="/datatypes/expression">
-            <b>Angabe von Entsprechungen in anderen Sprachen</b>
+            Angabe von Entsprechungen in anderen Sprachen
             <br>
             <br>
-            Wie kann man mittels Äquivalenzangaben– und beschreibungen im Syntagmatikon den Gebrauch von Ausdrücken im
-            Sprachvergleich verstehen?
+            <b>Wie kann man mittels Äquivalenzangaben und -beschreibungen im Syntagmatikon den Gebrauch von Ausdrücken im
+            Sprachvergleich verstehen?</b>
           </tile-gradient>
         </div>
       </v-col>
