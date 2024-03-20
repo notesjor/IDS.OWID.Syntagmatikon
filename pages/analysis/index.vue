@@ -1,5 +1,5 @@
 <template>
-  <div style="max-width: 80ch;">
+  <div style="max-width: 86ch;">
     <v-row>
       <v-col>
         <div>

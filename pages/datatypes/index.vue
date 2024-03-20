@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div style="max-width: 80ch; margin:auto">
+  <div style="max-width: 86ch; margin:auto">
     <v-row>
       <v-col>
         <div>
@@ -40,7 +40,7 @@ definePageMeta({
       <v-col cols="12">
         <h2 style="margin:-20px 0px 10px 10px; border-bottom: 3px lightgray solid;">Automatische Informationstypen</h2>
 
-        <div class="container">
+        <div class="container" style="margin-left: -20px;">
           <tile-gradient color1="#cb992b" color2="#33dcfe" title="Frequenzen" link="/datatypes/frequency">
             <b>Häufigkeit des Vorkommens eines sprachlichen Ausdrucks im Korpus, ermittelt mithilfe von Zählungen
               und/oder Suchanfragen (queries)</b>
@@ -90,7 +90,7 @@ definePageMeta({
 
         <h2 style="margin:40px 0px 10px 10px; border-bottom: 3px lightgray solid;">Bearbeitete Informationstypen</h2>
 
-        <div class="container">
+        <div class="container" style="margin-left: -20px;">
 
 
           <tile-gradient color1="#33dcfe" color2="#ff3661" title="Kategoriale Label" link="/datatypes/category">

@@ -6,7 +6,7 @@ definePageMeta({
 
 <template>
   <div class="nolink">
-    <div style="max-width: 80ch; margin:auto">
+    <div style="max-width: 86ch; margin:auto">
       <v-row>
         <v-col>
           <div>

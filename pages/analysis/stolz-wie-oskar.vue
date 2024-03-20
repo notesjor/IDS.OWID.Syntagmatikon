@@ -1,5 +1,5 @@
 <template>
-    <div style="max-width: 80ch;">
+    <div style="max-width: 86ch;">
         <v-btn><v-icon>mdi-arrow-left</v-icon> Zurück zum Kaleidoskop</v-btn><br/>&nbsp;<br/> 
         <h1>Anfrage Frankfurter Rundschau zu<br/>"frech wie
                 Oskar"</h1><br/>&nbsp;<br/>
