@@ -14,8 +14,9 @@
         <v-card-text style="line-height: 2.3em;">
             <div v-if="this.searchStore.isDefault">
                 <!-- image floated left around text -->
-                <img :src="resource.img" style="height: 100px; float: left; margin-right: 15px;"></img>
-                <div style="font-size: 1.1em; line-height: 1.7em; margin-bottom: 10px;" v-html="resource.description"></div>
+                <!-- <img :src="resource.img" style="height: 100px; float: left; margin-right: 15px;"></img> -->
+                <img :src="resource.img" style="height: 100px; margin-right: 15px;"></img>
+                <!-- <div style="font-size: 1.1em; line-height: 1.7em; margin-bottom: 10px;" v-html="resource.description"></div> -->
             </div>
             <a :href="item.url" v-for="item in items" :key="item.id" style="margin-right: 15px; display: block;">
                 <v-btn variant="text" style="text-transform: none;">

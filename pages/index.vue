@@ -168,7 +168,7 @@ export default {
               source: 'Phrasenkomposita-Inventar',
               article: 'Im-fremden-Bett-schlaf-ich-immer-schlecht-Sensibelchen',
               type: 'Phrasenkompositum',
-              href: '',
+              href: 'http://uwv.ids-mannheim.de/plus/phraskomp/?search=Im-fremden-Bett-schlaf-ich-immer-schlecht-Sensibelchen',
               color: '#0d65c2'
             }
             ]
@@ -224,7 +224,7 @@ export default {
               source: 'Kleines Wörterbuch der Redeeinleiter',
               article: 'in den Sinn kommen',
               type: 'Redeeinleiter',
-              href: 'https://www.owid.de/plus/redeeinleiter',
+              href: 'https://www.owid.de/plus/redeeinleiter/?search=kommen',
               color: '#0d65c2'
             }
             ]
@@ -292,7 +292,7 @@ export default {
               source: 'Kleines Wörterbuch der Redeeinleiter',
               article: 'sagen',
               type: 'Redeeinleiter',
-              href: 'https://www.owid.de/plus/redeeinleiter/',
+              href: 'https://www.owid.de/plus/redeeinleiter?search=sagen',
               color: '#c5049b'
             }
             ]

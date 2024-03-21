@@ -242,7 +242,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
       {
 
         "key": "Varietäten",
-        "nameShort": "Varietäten",
+        "nameShort": "Varietäten (geplant)",
         "nameLong": "Studie 'Lexikalische Dynamik deutschsprachiger Varietäten im Kontakt'",
         "description": 'Es wird eine technische Plattform entwickelt, die es erlaubt, korpusbasierte Daten von Diaspora-Varietäten einheitlich zu annotieren, sie lexikografisch und datenanalytisch aufzubereiten und online zu präsentieren. Dabei werden Schnittstellenphänomene im lexikalisch-syntagmatischen Bereich einbezogen; betrachtet werden unterschiedliche lexikalische Kategorien (z. B. Diskurspartikeln, Komplementierer) ebenso wie Argumentstrukturen und andere syntagmatische Phänomene.',
         "img": "/img/sources/varietaeten.PNG",
