@@ -10,7 +10,7 @@ definePageMeta({
       <v-col>
         <div>
           <h1>
-            Muster
+            Musterzugänge
           </h1>
         </div>
       </v-col>

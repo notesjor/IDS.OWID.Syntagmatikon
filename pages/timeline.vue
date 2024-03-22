@@ -3,7 +3,7 @@
     <v-row>
       <v-col>
         <div>
-          <h1 class="text-3xl font-bold">
+          <h1 >
             Forschungsgeschichte
           </h1>
         </div>

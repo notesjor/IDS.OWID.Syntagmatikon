@@ -86,7 +86,7 @@
     <v-list density="compact" nav>
       <v-list-subheader>Weitere Informationen</v-list-subheader>
       <router-link to="/analysis">
-          <v-list-item prepend-icon="mdi-telescope" title="Kaleidoskop"></v-list-item>
+          <v-list-item prepend-icon="mdi-telescope" title="Sprachöffentlichkeit"></v-list-item>
       </router-link>
       <router-link to="/timeline">
           <v-list-item prepend-icon="mdi-history" title="Forschungsgeschichte"></v-list-item>

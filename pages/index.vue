@@ -29,16 +29,18 @@
       </v-col>
     </v-row>
     <v-row>
+      <!--
       <v-col cols="12">
         
       </v-col>
+      -->
       <v-col cols="4">
         <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
           <div style="text-align: center;">
             <v-icon style="font-size: 60px;">
               mdi-cube-outline
             </v-icon>
-            <div><strong>16</strong> Lexikalische Ressourcen</div>
+            <div><strong>XX</strong> Lexikalische Ressourcen</div>
           </div>
         </div>
         <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
@@ -46,7 +48,7 @@
             <v-icon style="font-size: 60px;">
               mdi-magnify
             </v-icon>
-            <div><strong>3</strong> Verschiedene Suchen</div>
+            <div><strong>X</strong> Verschiedene Suchen</div>
           </div>
         </div>
       </v-col>
@@ -56,15 +58,16 @@
             <v-icon style="font-size: 60px;">
               mdi-puzzle-outline
             </v-icon>
-            <div><strong>15681</strong> Sprachmuster, Phrasen und Redewendungen</div>
+            <div><strong>XXXXX</strong> Sprachmuster, Phrasen und Redewendungen</div>
           </div>
         </div>
+        
         <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
           <div style="text-align: center;">
             <v-icon style="font-size: 60px;">
               mdi-text-box-outline
             </v-icon>
-            <div><strong>77</strong> Lorem Ipsum</div>
+            <div><strong>XX</strong> Lorem Ipsum</div>
           </div>
         </div>
       </v-col>
@@ -74,7 +77,7 @@
             <v-icon style="font-size: 60px;">
               mdi-touch-text-outline
             </v-icon>
-            <div><strong>35</strong> Interaktive Texte und Analysen</div>
+            <div><strong>XX</strong> Interaktive Texte und Analysen</div>
           </div>
         </div>
         <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
@@ -82,9 +85,11 @@
             <v-icon style="font-size: 60px;">
               mdi-database-search-outline
             </v-icon>
-            <div><strong>22</strong> Datenbanken Lorem</div>
+            <div><strong>XX</strong> Lore Ipsum</div>
           </div>
-        </div>
+           </div>
+       
+       
       </v-col>
     </v-row>
   </div>
