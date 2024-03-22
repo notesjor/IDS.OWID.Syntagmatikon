@@ -239,6 +239,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_patterns": ["Erschließungsmuster", "Musterzugang", "Musterangabe"],
         "search_parts": ["Verb", "Nomen", "Präposition", "Adjektiv", "Adverb", "Phrasem", "Satz"],
       },
+     /*  
       {
 
         "key": "Varietäten",
@@ -254,7 +255,7 @@ export const useResourcesStore = defineStore('resourcesStore', {
         "search_functions": [],
         "search_patterns": [],
         "search_parts": [],
-      },
+      },  */
     
     ] }
   },

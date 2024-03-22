@@ -19,7 +19,7 @@ definePageMeta({
       <v-row>
         <v-col>
           <div>
-            <p>Das Syntagmatikon enthält aktuell 13 Resourcen, die hier kurz vorgestellt werden. Klicken Sie auf eine
+            <p>Das Syntagmatikon enthält aktuell 12 Resourcen, die hier kurz vorgestellt werden. Klicken Sie auf eine
               der Ressourcen, um diese direkt aufzurufen.</p>
             <br />&nbsp;<br />
           </div>
