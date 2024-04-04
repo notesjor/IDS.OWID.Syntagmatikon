@@ -29,16 +29,18 @@
       </v-col>
     </v-row>
     <v-row>
+      <!--
       <v-col cols="12">
         
       </v-col>
+      -->
       <v-col cols="4">
         <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
           <div style="text-align: center;">
             <v-icon style="font-size: 60px;">
               mdi-cube-outline
             </v-icon>
-            <div><strong>16</strong> Lexikalische Ressourcen</div>
+            <div><strong>XX</strong> Lexikalische Ressourcen</div>
           </div>
         </div>
         <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
@@ -46,7 +48,7 @@
             <v-icon style="font-size: 60px;">
               mdi-magnify
             </v-icon>
-            <div><strong>3</strong> Verschiedene Suchen</div>
+            <div><strong>X</strong> Verschiedene Suchen</div>
           </div>
         </div>
       </v-col>
@@ -56,15 +58,16 @@
             <v-icon style="font-size: 60px;">
               mdi-puzzle-outline
             </v-icon>
-            <div><strong>15681</strong> Sprachmuster, Phrasen und Redewendungen</div>
+            <div><strong>XXXXX</strong> Sprachmuster, Phrasen und Redewendungen</div>
           </div>
         </div>
+        
         <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
           <div style="text-align: center;">
             <v-icon style="font-size: 60px;">
               mdi-text-box-outline
             </v-icon>
-            <div><strong>77</strong> Lorem Ipsum</div>
+            <div><strong>XX</strong> Lorem Ipsum</div>
           </div>
         </div>
       </v-col>
@@ -74,7 +77,7 @@
             <v-icon style="font-size: 60px;">
               mdi-touch-text-outline
             </v-icon>
-            <div><strong>35</strong> Interaktive Texte und Analysen</div>
+            <div><strong>XX</strong> Interaktive Texte und Analysen</div>
           </div>
         </div>
         <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
@@ -82,9 +85,11 @@
             <v-icon style="font-size: 60px;">
               mdi-database-search-outline
             </v-icon>
-            <div><strong>22</strong> Datenbanken Lorem</div>
+            <div><strong>XX</strong> Lore Ipsum</div>
           </div>
-        </div>
+           </div>
+       
+       
       </v-col>
     </v-row>
   </div>
@@ -168,7 +173,7 @@ export default {
               source: 'Phrasenkomposita-Inventar',
               article: 'Im-fremden-Bett-schlaf-ich-immer-schlecht-Sensibelchen',
               type: 'Phrasenkompositum',
-              href: '',
+              href: 'http://uwv.ids-mannheim.de/plus/phraskomp/?search=Im-fremden-Bett-schlaf-ich-immer-schlecht-Sensibelchen',
               color: '#0d65c2'
             }
             ]
@@ -224,7 +229,7 @@ export default {
               source: 'Kleines Wörterbuch der Redeeinleiter',
               article: 'in den Sinn kommen',
               type: 'Redeeinleiter',
-              href: 'https://www.owid.de/plus/redeeinleiter',
+              href: 'https://www.owid.de/plus/redeeinleiter/?search=kommen',
               color: '#0d65c2'
             }
             ]
@@ -292,56 +297,12 @@ export default {
               source: 'Kleines Wörterbuch der Redeeinleiter',
               article: 'sagen',
               type: 'Redeeinleiter',
-              href: 'https://www.owid.de/plus/redeeinleiter/',
+              href: 'https://www.owid.de/plus/redeeinleiter?search=sagen',
               color: '#c5049b'
             }
             ]
-          }, {
-            ranges: [{
-              from: 9,
-              to: 10
-            }, {
-              from: 12,
-              to: 13
-            }
-            ],
-            references: [{
-              source: 'MAP',
-              article: 'sagen vor',
-              type: 'Argumentmarkierende Präposition',
-              href: '',
-              color: '#0d65c2'
-            }
-            ]
-          }, {
-            ranges: [{
-              from: 21,
-              to: 24
-            }
-            ],
-            references: [{
-              source: 'WV-Feld',
-              article: 'aus persönlichen Gründen',
-              type: 'aus-ADJEKTIV-Gründen-Muster',
-              href: 'http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/aus_ADJ_Gruenden_ID1364235183677.html',
-              color: '#c5049b'
-            }
-            ]
-          }, {
-            ranges: [{
-              from: 15,
-              to: 17
-            }
-            ],
-            references: [{
-              source: 'PREPCON <sup>explorativ</sup>',
-              article: 'in München',
-              type: 'Präposition-Nomen-Verbindung',
-              href: 'http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=M%C3%BCnchen',
-              color: '#0d65c2'
-            }
-            ]
-          }, {
+          }
+          ,   {
             ranges: [{
               from: 10,
               to: 12
@@ -376,6 +337,36 @@ export default {
             },
             ]
           },
+          {
+            ranges: [{
+              from: 15,
+              to: 17
+            }
+            ],
+            references: [{
+              source: 'PREPCON <sup>explorativ</sup>',
+              article: 'in München',
+              type: 'Präposition-Nomen-Verbindung',
+              href: 'http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=M%C3%BCnchen',
+              color: '#0d65c2'
+            }
+            ]
+          },
+          {
+            ranges: [{
+              from: 21,
+              to: 24
+            }
+            ],
+            references: [{
+              source: 'WV-Feld',
+              article: 'aus persönlichen Gründen',
+              type: 'aus-ADJEKTIV-Gründen-Muster',
+              href: 'http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/aus_ADJ_Gruenden_ID1364235183677.html',
+              color: '#c5049b'
+            }
+            ]
+          },
           ],
         }, {
           tokens: ["Wo", "die", "Wirtschaft", "in", "der", "Krise", "steckt,", "da", "steigt", "die", "Angst", "der", "Geschäftsleute,", "den", "Boden", "unter", "den", "Füßen", "zu", "verlieren."],
@@ -408,6 +399,29 @@ export default {
               article: 'Dachgesellschaft',
               type: 'Kompositum',
               href: 'http://wvonline.ids-mannheim.de/dtww/dtww_d.htm',
+              color: '#0d65c2'
+            }
+            ]
+          }
+          ],
+        },
+        {
+          tokens: ["Aber", "der", "Sohn", "kam", "nicht", "nach", "dem", "Vater,", "sondern", "nach", "der", "exzentrischen,",  "fantasievollen,", "unangepassten", "Mutter."],
+          annotations: [{
+            ranges: [{
+              from: 3,
+              to: 4
+            },
+            {   
+            from: 5,
+              to: 6
+            }
+            ],
+            references: [{
+              source: 'MAP',
+              article: 'kommen nach',
+              type: 'Argumentmarkierende Präposition',
+              href: 'http://lexik02.ids-mannheim.de/vas-v7/article/nach/entsprechung/aehnlichkeit',
               color: '#0d65c2'
             }
             ]

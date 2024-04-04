@@ -4,7 +4,7 @@
       <v-col>
         <div>
           <h1>
-            Kaleidoskop
+            Sprachöffentlichkeit
           </h1>
         </div>
       </v-col>

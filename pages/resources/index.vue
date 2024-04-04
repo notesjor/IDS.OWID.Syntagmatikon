@@ -10,7 +10,7 @@ definePageMeta({
       <v-col>
         <div>
           <h1>
-            Ressourcen erklärt
+            Ressourcentypen
           </h1>
         </div>
       </v-col>
@@ -22,9 +22,10 @@ definePageMeta({
             im Folgenden kurz charakterisiert werden. Als Kriterien dienten der Grad
             der Exhaustivität sowie das Verhältnis von automatischer
             Datenaufbereitung; händischer Bearbeitung und
-            linguistisch-lexikografischer Beschreibung, Die aufgeführten Beispielressourcen
-            sind jeweils die prototypischen
-            Vertreter. Das heißt, dass diese hauptsächlich durch den zuvor
+            linguistisch-lexikografischer Beschreibung.</p>
+            <p> 
+            Die aufgeführten Beispielressourcen sind jeweils die prototypischen Vertreter. 
+            Das heißt, dass diese hauptsächlich durch den zuvor
             beschriebenen Typ charakterisiert sind. Gleichzeitig gibt es zahlreiche
             Überschneidungen zwischen den Ressourcen: Eine Datenbank kann z.B.
             gleichzeitig als Inventar verstanden werden wie
@@ -62,18 +63,10 @@ definePageMeta({
             Korpusbasierte Wörterbuchartikel im Hypertextformat<br />
             <resources-list :filter="['SPRW', 'FesteWV','DRI']" :showDesc="false"></resources-list>
           </tile>
-          <!--
-          <tile title="Datikon" img="/img/resources/05.png" link="/resources/datikon">
-            Dynamisch-flexible Präsentations- und Visualisierungsformen, bei denen automatisch ermittelte
-            Korpusausschnitte wie KWICs, Kookkurrenzprofile und Slot-Filler-Tabellen ins Zentrum der Ressource
-            rücken<br />
-            <resources-list :filter="['WVBF', 'PREPCON']" :showDesc="false"></resources-list>
-          </tile>
-          -->
-
+         
           <tile title="Pilotstudien" img="/img/resources/06.png">
             Linguistische Studien bzw. lexikografische Beschreibungen zu ausgewählten Phänomen<br />
-            <resources-list :filter="['PREPCON_kon', 'Varietäten', 'WVBF']"></resources-list>
+            <resources-list :filter="['PREPCON_kon', 'WVBF']"></resources-list>
           </tile>
 
         </div>
