@@ -6,8 +6,8 @@
             href="https://www.owid.de/plus/redeeinleiter/">Redeeinleiter</a>) als auch solche mit lexikografisch
         verfassten Texten zu Aspekten wie Bedeutungen, typischen Gebrauchsmerkmalen, Kontexten, Varianten und
         Abwandlungen angereichert mit Korpusdaten (<a
-            href="https://www.owid.de/wb/sprw/start.html">Sprichwörterbuch</a>;
-        Feste <a href="https://www.owid.de/artikel/309077">Wortverbindungen</a>; <a
+            href="https://www.owid.de/wb/sprw/start.html">Sprichwörterbuch</a>; 
+        <a href="https://www.owid.de/artikel/309077">Feste Wortverbindungen</a>; <a
             href="http://wvonline.ids-mannheim.de/idiome_russ/hintergrund.htm">Deutsche Russische Idiome
             online</a>)</p>
     <br />
