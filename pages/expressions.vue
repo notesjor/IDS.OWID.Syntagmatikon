@@ -20,7 +20,7 @@ definePageMeta({
         <div>
           <p>Die Beschreibungskandidaten bzw. Stichwörter im Syntagmatikon sowie deren Komponenten basieren auf
             unterschiedlichen Wort- und Ausdrucksarten. Phraseme und feste Sätze werden als geronnene Ausdrucksarten
-            angesehen und daher ebenso als autonome Einheit betrachtet wie klassischen Wortarten:</p>
+            angesehen und daher ebenso als autonome Einheit betrachtet wie die klassischen Wortarten:</p>
         </div>
       </v-col>
     </v-row>

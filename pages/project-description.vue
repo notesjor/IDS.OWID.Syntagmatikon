@@ -22,7 +22,7 @@
         <div>
           <p>Die Abbildungen illustrieren Zusammenhänge zwischen Ausdrücken, die
             linear verfestigt und als syntagmatische lexikalische Einheiten zu
-            verstehen sind – Wortgruppen und -folgen also, die als „eingefrorene“
+            verstehen sind – Wortgruppen und &#8209;folgen also, die als „eingefrorene“
             Bausteine im Sprachgebrauch eingesetzt werden. <a
               href="https://de.wikipedia.org/wiki/Lexikalische_Funktion">(Lexikalische
               Funktion</a>)</p>
@@ -61,12 +61,12 @@
           <p>Eine Besonderheit des <span class="smallcaps">Syntagmatikons</span>
             stellen erklärende Texte mit unterschiedlichen Informationstiefen dar,
             die als Leitfaden eine Navigationsfunktion für das gesamte Portal
-            erfüllen ( Ressourcenkompass). Ergebnisse und Datenformate unserer
+            erfüllen (Ressourcenkompass). Ergebnisse und Datenformate unserer
             Grundlagenforschung werden so transparent dargestellt, dass sich andere
             „andocken“ und die Angebote für ihre Zwecke nutzen und weiterverarbeiten
             können, z. B. im Bereich Deutsch als Fremdsprache. Es geht dabei
             erklärtermaßen nicht um Didaktisierung im strengen Sinne, sondern um
-            allgemeinverständliche Erklärungen von:</p>
+            allgemeinverständliche Erklärungen.</p>
         </div>
       </v-col>
     </v-row>
