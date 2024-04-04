@@ -25,58 +25,59 @@ definePageMeta({
       </v-col>
     </v-row>
   </div>
-  <v-row>
-    <v-col cols="1"></v-col>
-    <v-col cols="4">
-      <v-card elevation="0">
-        <v-card-title>
-          Stichwort
-        </v-card-title>
-        <v-card-text>
-          <div class="nolink" style="text-align: center; margin-bottom: 10px;">
-            <v-btn v-for="letter in letters" :key="letter" variant="text" density="comfortable"
-              style="padding: 0px !important; min-width: 15px;" @click="query = letter">
-              {{ letter }}
-            </v-btn>
-          </div>
-          <div>
-            <v-text-field label="Stichwort" v-model="query" append-inner-icon="mdi-magnify"></v-text-field>
-          </div>
-        </v-card-text>
-      </v-card>
-      &nbsp;
-      <v-card class="mx-auto" elevation="0">
-        <v-card-title>
-          Facetten
-        </v-card-title>
-        <v-card-text>
-          <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-            Facetten schränken die Stichwortsuche auf bestimmte Kategorien und Eigenschaften ein.
-            Zudem können Sie ein Facette auswählen, nach der die Ergebnisse gruppiert werden.
-          </p>
-          <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels">
-            <search-box title="Ressourcen" name="nameShort"></search-box>
-            <search-box title="Zugänge" name="search_display"></search-box>
-            <search-box title="Ressourcentypen (Zugang)" name="search_subtype"></search-box>
-            <search-box title="Ressourcentypen (Typus)" name="search_type"></search-box>
-            <search-box title="Informationstypen" name="search_functions"></search-box>
-            <search-box title="Wort- und Ausdrucksarten" name="search_parts"></search-box>
-            <search-box title="Musterzugang" name="search_patterns"></search-box>
-          </v-expansion-panels>
-        </v-card-text>
-      </v-card>
-    </v-col>
-    <v-col cols="6" class="nolink">
-    <!--
+  <div style="max-width: 100%; margin:auto">
+    <v-row>
+      <v-col cols="4">
+        <v-card elevation="0">
+          <v-card-title>
+            Stichwort
+          </v-card-title>
+          <v-card-text>
+            <div class="nolink" style="text-align: center; margin-bottom: 10px;">
+              <v-btn v-for="letter in letters" :key="letter" variant="text" density="comfortable"
+                style="padding: 0px !important; min-width: 15px;" @click="query = letter">
+                {{ letter }}
+              </v-btn>
+            </div>
+            <div>
+              <v-text-field label="Stichwort" v-model="query" append-inner-icon="mdi-magnify"></v-text-field>
+            </div>
+          </v-card-text>
+        </v-card>
+        &nbsp;
+        <v-card class="mx-auto" elevation="0">
+          <v-card-title>
+            Facetten
+          </v-card-title>
+          <v-card-text>
+            <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
+              Facetten schränken die Stichwortsuche auf bestimmte Kategorien und Eigenschaften ein.
+              Zudem können Sie ein Facette auswählen, nach der die Ergebnisse gruppiert werden.
+            </p>
+            <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels">
+              <search-box title="Ressourcen" name="nameShort"></search-box>
+              <search-box title="Zugänge" name="search_display"></search-box>
+              <search-box title="Ressourcentypen (Zugang)" name="search_subtype"></search-box>
+              <search-box title="Ressourcentypen (Typus)" name="search_type"></search-box>
+              <search-box title="Informationstypen" name="search_functions"></search-box>
+              <search-box title="Wort- und Ausdrucksarten" name="search_parts"></search-box>
+              <search-box title="Musterzugang" name="search_patterns"></search-box>
+            </v-expansion-panels>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="8" class="nolink">
+        <!--
       <div v-if="items == null">
         <v-alert text="Suchen Sie zuerst nach einem Eintrag..." type="info" variant="outlined"></v-alert>
       </div>
     -->
-      <div>
-        <search-group v-for="x in items" :title="x"></search-group>
-      </div>
-    </v-col>
-  </v-row>
+        <div>
+          <search-group v-for="x in items" :title="x"></search-group>
+        </div>
+      </v-col>
+    </v-row>
+  </div>
 </template>
 
 <script>
@@ -93,7 +94,7 @@ export default {
       openPanels: [1],
 
       resourcesStore: null,
-      searchStore: null,      
+      searchStore: null,
       resources: [],
 
       query: "",
@@ -107,7 +108,7 @@ export default {
     this.resources = this.resourcesStore.getResources(null);
 
     this.searchStore = useSearchStore();
-    this.searchStore.init(this.resources);        
+    this.searchStore.init(this.resources);
   },
   watch: {
     query: function (val) {
@@ -115,8 +116,8 @@ export default {
     }
   },
   computed: {
-    items: function (){
-      if(this.searchStore == null)
+    items: function () {
+      if (this.searchStore == null)
         return [];
       return this.searchStore.getGroups();
     }
