@@ -21,7 +21,7 @@
                 <div style="padding:7px 75px 5px 75px;">
                   <v-row>
                     <div v-html="item.html"
-                      style="margin:10px -50px 0px -50px; font-size: 1.1rem; line-height: 1.5; font-weight: 300;">
+                      style="margin:10px -50px 0px 0px; font-size: 1.1rem; line-height: 1.5; font-weight: 300;">
                     </div>
                   </v-row>                  
                   <div style="width: 100%; margin: 0px 20px 20px 20px;">
@@ -57,7 +57,7 @@
       </v-col>
     </v-row>
     
-    <v-row style="margin-top:-20px">
+    <v-row style="margin-top:0px">
     <v-col>
         <!-- <p class="text-xl">Interaktive Beispiele</p> -->
         <p class="text-l">Durch Klicken auf die Beispiele im Beleg werden darunter die zugehörigen Ressourcen im Syntagmatikon mit entsprechender Verlinkung zum dortigen Eintrag angezeigt. 
@@ -161,7 +161,7 @@ export default {
   
 <style scoped>
 .v-window {
-  max-height: 320px;
+  max-height: 375px;
 }
 
 .notransition div {
