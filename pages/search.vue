@@ -75,7 +75,15 @@ definePageMeta({
         </v-row>
       </v-col>
       <v-col cols="4">
+        <div style="margin-top: 0px;">
+          <h2>Gefundene Einträge:</h2>
+        </div>
+
+        <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
+          Die hier gelisteten Einträge werden aus den verschiedenen Ressourcen gemixt.
+        </p>
         <search-group v-for="x in items" :title="x"></search-group>
+        <v-pagination v-model="page" :length="maxPages" density="compact"></v-pagination>
       </v-col>
     </v-row>
 
@@ -102,6 +110,8 @@ export default {
       resourcesSelected: [],
 
       query: "",
+      maxPages: 10,
+      page: 1,
 
       limit: 10,
       syncLock: false
@@ -117,8 +127,6 @@ export default {
   },
   methods: {
     getIcon(key) {
-      // if key is in resourcesSelected than return mdi-check
-      console.log(this.resourcesSelected.includes(key));
       return this.resourcesSelected.includes(key) ? "mdi-check" : "mdi-check-bold";
     }
   },
@@ -131,7 +139,9 @@ export default {
     items: function () {
       if (this.searchStore == null)
         return [];
-      return this.searchStore.getGroups();
+      var res = this.searchStore.getGroups();
+      console.log(res);
+      return res;
     }
   }
 }

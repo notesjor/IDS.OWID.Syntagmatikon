@@ -17,7 +17,7 @@ export const useSearchStore = defineStore("searchStore", {
 
       max: {},
       results: {},
-      pageSize: 5,
+      pageSize: 3,
     };
   },
   // could also be defined as
@@ -146,6 +146,8 @@ export const useSearchStore = defineStore("searchStore", {
           res = res.concat(this.results[x][page]);
         }
       });
+
+      console.log(res);
 
       return res;
     },
