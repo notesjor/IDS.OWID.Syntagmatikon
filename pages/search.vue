@@ -82,7 +82,7 @@ definePageMeta({
         <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
           Die hier gelisteten Einträge werden aus den verschiedenen Ressourcen gemixt.
         </p>
-        <search-group v-for="x in items" :title="x"></search-group>
+        <search-group3 v-for="x in items" :title="x"></search-group3>
         <v-pagination v-model="page" :length="maxPages" density="compact"></v-pagination>
       </v-col>
     </v-row>

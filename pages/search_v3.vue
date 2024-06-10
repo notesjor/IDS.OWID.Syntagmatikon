@@ -61,7 +61,7 @@ definePageMeta({
       </div>
     -->
         <div>
-          <search-group v-for="x in items" :title="x"></search-group>
+          <search-group2 v-for="x in items" :title="x"></search-group2>
         </div>
       </v-col>
     </v-row>

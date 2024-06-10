@@ -59,8 +59,8 @@ definePageMeta({
         <v-alert text="Suchen Sie zuerst nach einem Eintrag..." type="info" variant="outlined"></v-alert>
       </div>
     -->
-        <div>
-          <search-group v-for="x in items" :title="x"></search-group>
+        <div style="margin-top:-380px;">
+          <search-group2 v-for="x in items" :title="x"></search-group2>
         </div>
       </v-col>
     </v-row>

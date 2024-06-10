@@ -1,29 +1,9 @@
 <template>
-    <v-card v-if="items.length > 0" style="margin-bottom: 10px;" elevation="0">
-        <v-card-title>
-            <div v-if="this.searchStore.isDefault">
-                <a :href="resource.url">
-                    <v-icon
-                        style="font-size: 0.9em; margin-top:-3px; margin-right: 5px;">mdi-arrow-right-circle-outline</v-icon>
-                    <span v-html="title"></span>
-                </a>
-            </div>
-            <div v-else>
-                <span v-html="title"></span>
-            </div>
-        </v-card-title>
+    <v-card v-if="items.length > 0" elevation="0">
         <v-card-text style="line-height: 2.3em;">
             <v-row>
-                <v-col cols="3" v-if="this.searchStore.isDefault">
-                    <div>
-                        <!-- image floated left around text -->
-                        <!-- <img :src="resource.img" style="height: 100px; float: left; margin-right: 15px;"></img> -->
-                        <img :src="resource.img" style="height: 100px; margin-right: 15px;"></img>
-                        <!-- <div style="font-size: 1.1em; line-height: 1.7em; margin-bottom: 10px;" v-html="resource.description"></div> -->
-                    </div>
-                </v-col>
                 <v-col>
-                    <div style="margin-top: -10px;">
+                    <div style="margin-top: -30px;">
                         <a :href="item.url" v-for="item in items" :key="item.id"
                             style="margin-right: 15px; display: block;">
                             <v-btn variant="text" style="text-transform: none;">
@@ -32,7 +12,7 @@
                                 <span style="font-size: 1.2em; word-wrap:break-word">
                                     <div style="display: inline-block;">{{ item.key }}</div>
                                     <div v-if="!this.searchStore.isDefault"
-                                        style="display: inline-block; color: #999; font-size: 0.7em; margin: -50px 0px 0px 5px;">
+                                        style="display: inline-block; color: #999; font-size: 0.7em;">
                                         (<span v-html="this.resourcesStore.getItemByKey(item.dic).nameShort"></span>)
                                     </div>
                                 </span>
@@ -41,8 +21,6 @@
                     </div>
                 </v-col>
             </v-row>
-
-            <v-pagination v-model="index" :length="pages" rounded="circle" density="compact"></v-pagination>
         </v-card-text>
     </v-card>
 </template>
