@@ -31,14 +31,19 @@ export default {
       type: String,
       required: false,
       default: '50px'
+    },
+    degree: {
+      type: Number,
+      required: false,
+      default: 0
     }
   },
   computed: {
     gradientStyle() {
       if (this.color3 == '')
-        return `width:${this.width}; height:${this.height}; background-image: linear-gradient(75deg, ${this.color1} 0%, ${this.color2} 100%)`;
+        return `width:${this.width}; height:${this.height}; background-image: linear-gradient(${this.degree}deg, ${this.color1} 0%, ${this.color2} 100%)`;
       else
-        return `width:${this.width}; height:${this.height}; background-image: linear-gradient(75deg, ${this.color1} 0%, ${this.color2} 50%, ${this.color3} 100%)`;
+        return `width:${this.width}; height:${this.height}; background-image: linear-gradient(${this.degree}deg, ${this.color1} 0%, ${this.color2} 50%, ${this.color3} 100%)`;
     }
   }
 };

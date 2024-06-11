@@ -60,16 +60,16 @@ definePageMeta({
         <v-row>
           <v-col>
             <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels1">
-              <search-box2 title="Zugänge" name="search_display"></search-box2>
-              <search-box2 title="Ressourcentypen (Zugang)" name="search_subtype"></search-box2>
-              <search-box2 title="Ressourcentypen (Typus)" name="search_type"></search-box2>
+              <search-box3 title="Zugänge" name="search_display" color1="#c79b31" color2="#a0ac67"></search-box3>
+              <search-box3 title="Ressourcentypen (Zugang)" name="search_subtype" color1="#a0ac67" color2="#6fc2ab"></search-box3>
+              <search-box3 title="Ressourcentypen (Typus)" name="search_type" color1="#6fc2ab" color2="#38daf7"></search-box3>
             </v-expansion-panels>
           </v-col>
           <v-col>
             <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels2">
-              <search-box2 title="Informationstypen" name="search_functions"></search-box2>
-              <search-box2 title="Wort- und Ausdrucksarten" name="search_parts"></search-box2>
-              <search-box2 title="Musterzugang" name="search_patterns"></search-box2>
+              <search-box3 title="Informationstypen" name="search_functions" color1="#42dbfb" color2="#7ba1c6"></search-box3>
+              <search-box3 title="Wort- und Ausdrucksarten" name="search_parts" color1="#7ba1c6" color2="#5c93a0"></search-box3>
+              <search-box3 title="Musterzugang" name="search_patterns" color1="#5c93a0" color2="#fa3a65"></search-box3>
             </v-expansion-panels>
           </v-col>
         </v-row>
