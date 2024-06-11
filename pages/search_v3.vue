@@ -5,17 +5,30 @@ definePageMeta({
 </script>
 
 <template>
-  <div style="max-width: 86ch; margin:auto">
-    <v-row style="margin-top:-30px">
-      <v-col>
+  <div style="max-width: 100%; margin:auto">
+    <v-row>
+      <v-col cols="4">
+        <v-card class="mx-auto" elevation="0">
+          <v-card-title>
+            Facetten
+          </v-card-title>
+          <v-card-text>
+            <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels">
+              <search-box title="Zugänge" name="search_display"></search-box>
+              <search-box title="Ressourcentypen (Zugang)" name="search_subtype"></search-box>
+              <search-box title="Ressourcentypen (Typus)" name="search_type"></search-box>
+              <search-box title="Informationstypen" name="search_functions"></search-box>
+              <search-box title="Wort- und Ausdrucksarten" name="search_parts"></search-box>
+              <search-box title="Musterzugang" name="search_patterns"></search-box>
+            </v-expansion-panels>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="7">
         <div>
           <h3>Ressourcen:</h3>
         </div>
         <v-chip v-for="r in resources" :key="r.key" variant="outlined" style="margin: 0px 5px 5px 0px" :prepend-icon="getIcon(r.key)"><div v-html="r.nameShort"/></v-chip>
-      </v-col>
-    </v-row>
-    <v-row style="margin-top:-10px">
-      <v-col>
         <div>
           <h3>Stichwort:</h3>
         </div>
@@ -35,24 +48,10 @@ definePageMeta({
       </v-col>
     </v-row>
   </div>
-  <div style="max-width: 100%; margin:auto">
+  <div>
     <v-row>
       <v-col cols="4">        
-        <v-card class="mx-auto" elevation="0">
-          <v-card-title>
-            Facetten
-          </v-card-title>
-          <v-card-text>
-            <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels">
-              <search-box title="Zugänge" name="search_display"></search-box>
-              <search-box title="Ressourcentypen (Zugang)" name="search_subtype"></search-box>
-              <search-box title="Ressourcentypen (Typus)" name="search_type"></search-box>
-              <search-box title="Informationstypen" name="search_functions"></search-box>
-              <search-box title="Wort- und Ausdrucksarten" name="search_parts"></search-box>
-              <search-box title="Musterzugang" name="search_patterns"></search-box>
-            </v-expansion-panels>
-          </v-card-text>
-        </v-card>
+        
       </v-col>
       <v-col cols="8" class="nolink">
         <!--
@@ -60,7 +59,7 @@ definePageMeta({
         <v-alert text="Suchen Sie zuerst nach einem Eintrag..." type="info" variant="outlined"></v-alert>
       </div>
     -->
-        <div>
+        <div style="margin-top:-380px;">
           <search-group2 v-for="x in items" :title="x"></search-group2>
         </div>
       </v-col>

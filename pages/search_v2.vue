@@ -66,12 +66,12 @@ definePageMeta({
               Zudem können Sie ein Facette auswählen, nach der die Ergebnisse gruppiert werden.
             </p>
             <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels">
-              <search-box title="Zugänge" name="search_display"></search-box>
-              <search-box title="Ressourcentypen (Zugang)" name="search_subtype"></search-box>
-              <search-box title="Ressourcentypen (Typus)" name="search_type"></search-box>
-              <search-box title="Informationstypen" name="search_functions"></search-box>
-              <search-box title="Wort- und Ausdrucksarten" name="search_parts"></search-box>
-              <search-box title="Musterzugang" name="search_patterns"></search-box>
+              <search-box2 title="Zugänge" name="search_display"></search-box2>
+              <search-box2 title="Ressourcentypen (Zugang)" name="search_subtype"></search-box2>
+              <search-box2 title="Ressourcentypen (Typus)" name="search_type"></search-box2>
+              <search-box2 title="Informationstypen" name="search_functions"></search-box2>
+              <search-box2 title="Wort- und Ausdrucksarten" name="search_parts"></search-box2>
+              <search-box2 title="Musterzugang" name="search_patterns"></search-box2>
             </v-expansion-panels>
           </v-card-text>
         </v-card>

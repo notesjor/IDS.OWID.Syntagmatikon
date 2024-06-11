@@ -41,8 +41,8 @@ definePageMeta({
         </div>
         <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
           Angewählte Ressourcen werden in die Suche einbezogen. Klicke Sie auf eine Ressource um sie zu aktivieren
-          (<v-icon>mdi-check</v-icon>) oder deaktivieren (<v-icon>mdi-check</v-icon>). Ressourcen, die durch eine
-          Facette ausgeschlossen sind, werden ebenfalls nicht angezeigt (<v-icon>mdi-cancel</v-icon>).
+          (<v-icon>mdi-check-circle</v-icon>) oder deaktivieren (<v-icon>mdi-circle-outline</v-icon>). Ressourcen, die durch eine
+          Facette ausgeschlossen sind, werden ebenfalls nicht angezeigt (<v-icon>mdi-circle-off-outline</v-icon>).
         </p>
         <v-chip v-for="r in resources" :key="r.key" variant="outlined" style="margin: 0px 5px 5px 0px"
           :prepend-icon="getIcon(r.key)">
@@ -59,17 +59,17 @@ definePageMeta({
         </p>
         <v-row>
           <v-col>
-            <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels">
-              <search-box title="Zugänge" name="search_display"></search-box>
-              <search-box title="Ressourcentypen (Zugang)" name="search_subtype"></search-box>
-              <search-box title="Ressourcentypen (Typus)" name="search_type"></search-box>
+            <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels1">
+              <search-box2 title="Zugänge" name="search_display"></search-box2>
+              <search-box2 title="Ressourcentypen (Zugang)" name="search_subtype"></search-box2>
+              <search-box2 title="Ressourcentypen (Typus)" name="search_type"></search-box2>
             </v-expansion-panels>
           </v-col>
           <v-col>
-            <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels">
-              <search-box title="Informationstypen" name="search_functions"></search-box>
-              <search-box title="Wort- und Ausdrucksarten" name="search_parts"></search-box>
-              <search-box title="Musterzugang" name="search_patterns"></search-box>
+            <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels2">
+              <search-box2 title="Informationstypen" name="search_functions"></search-box2>
+              <search-box2 title="Wort- und Ausdrucksarten" name="search_parts"></search-box2>
+              <search-box2 title="Musterzugang" name="search_patterns"></search-box2>
             </v-expansion-panels>
           </v-col>
         </v-row>
@@ -101,7 +101,8 @@ export default {
       tab: "t1",
       letters: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
 
-      openPanels: [],
+      openPanels1: [],
+      openPanels2: [],
 
       resourcesStore: null,
       searchStore: null,
@@ -127,7 +128,7 @@ export default {
   },
   methods: {
     getIcon(key) {
-      return this.resourcesSelected.includes(key) ? "mdi-check" : "mdi-check-bold";
+      return this.resourcesSelected.includes(key) ? "mdi-check-circle" : "mdi-circle-outline";
     }
   },
   watch: {
