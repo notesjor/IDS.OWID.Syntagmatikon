@@ -136,9 +136,10 @@
       </div>
 
       <div style="grid-area: middle;"></div>
-
+      
       <div style="text-align: right; grid-area: right">
-        <a :href="rightIconHref" target="_blank">
+        <div style="display: inline-block; margin-top:5px; margin-left: -200px"><v-switch label="Mobile" v-model="useMobileView" style="color: white; max-height: 30px;"></v-switch></div>
+        <a :href="rightIconHref" target="_blank" style="display: inline-block; margin-top: -75px">
           <img alt="Logo" src="/logo_right.svg"
             style="max-height:65px; min-height: 45px; min-width: 200px; margin-left: auto; " />
         </a>
