@@ -46,10 +46,10 @@
               </v-sheet>
             </v-carousel-item>
 
-            <template v-slot:prev="{ props }">
+            <template #prev="{ props }">
               <v-btn density="dense" variant="text" @click="props.onClick" icon="mdi-arrow-left-bold-box-outline" class="myBtnPrev"></v-btn>
             </template>
-            <template v-slot:next="{ props }">
+            <template #next="{ props }">
               <v-btn density="dense" variant="text" @click="props.onClick" icon="mdi-arrow-right-bold-box-outline" class="myBtnNext"></v-btn>
             </template>
           </v-carousel>
