@@ -1,7 +1,7 @@
 <template>
     <v-expansion-panel v-if="searchStore != null">
         <v-expansion-panel-title>
-            <gradient :style="styleGradient" :color1="color1" :color2="color2" degree="180">                
+            <gradient :style="styleGradient" :color1="color1" :color2="color2" degree="90">                
             </gradient>
             <v-icon :style="styleIcon" v-if="!allSameValue" @click="selectAll">mdi-filter-remove</v-icon>
             {{ title }}

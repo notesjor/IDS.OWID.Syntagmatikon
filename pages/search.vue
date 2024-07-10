@@ -13,37 +13,13 @@ definePageMeta({
             Suche nach Einträgen
           </h1>
         </div>
-        <div style="margin-bottom: 20px;">
-          <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-            Diese Suche erlaubt eine Volltextsuche über alle Einträge im Syntagmatikon.
-            Wie im Ressourcenkompass beschrieben, haben die Ressourcen verschiedene Facetten,
-            die hier genutzt werden können, um die Stichworte zu filtern.</p>
+        <div>
+          <v-text-field label="Stichwort hier eingeben..." v-model="query"
+            append-inner-icon="mdi-magnify"></v-text-field>
         </div>
-        <div style="margin-top:-10px;">
-          <h3>Stichwort:</h3>
-        </div>
-        <v-card elevation="0">
-          <v-card-text style="margin: -20px -20px -20px -20px;">
-            <div class="nolink" style="text-align: left; margin-bottom: 10px;">
-              <v-btn v-for="letter in letters" :key="letter" variant="text" density="comfortable"
-                style="padding: 3.5px !important; min-width: 15px;" @click="query = letter">
-                {{ letter }}
-              </v-btn>
-            </div>
-            <div>
-              <v-text-field label="Stichwort hier eingeben..." v-model="query"
-                append-inner-icon="mdi-magnify"></v-text-field>
-            </div>
-          </v-card-text>
-        </v-card>
-        <div style="margin-top: -10px;">
+        <div style="margin-top: -20px;">
           <h3>Ressourcen:</h3>
-        </div>
-        <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-          Angewählte Ressourcen werden in die Suche einbezogen. Klicke Sie auf eine Ressource um sie zu aktivieren
-          (<v-icon>mdi-check-circle</v-icon>) oder deaktivieren (<v-icon>mdi-circle-outline</v-icon>). Ressourcen, die durch eine
-          Facette ausgeschlossen sind, werden ebenfalls nicht angezeigt (<v-icon>mdi-circle-off-outline</v-icon>).
-        </p>
+        </div>        
         <v-chip v-for="r in resources" :key="r.key" variant="outlined" style="margin: 0px 5px 5px 0px"
           :prepend-icon="getIcon(r.key)">
           <div v-html="r.nameShort" />
@@ -53,22 +29,22 @@ definePageMeta({
           <h3>Facetten:</h3>
         </div>
 
-        <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-          Facetten schränken die Stichwortsuche auf bestimmte Kategorien und Eigenschaften ein.
-          Zudem können Sie ein Facette auswählen, nach der die Ergebnisse gruppiert werden.
-        </p>
         <v-row>
           <v-col>
             <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels1">
               <search-box3 title="Zugänge" name="search_display" color1="#c79b31" color2="#a0ac67"></search-box3>
-              <search-box3 title="Ressourcentypen (Zugang)" name="search_subtype" color1="#a0ac67" color2="#6fc2ab"></search-box3>
-              <search-box3 title="Ressourcentypen (Typus)" name="search_type" color1="#6fc2ab" color2="#38daf7"></search-box3>
+              <search-box3 title="Ressourcentypen (Zugang)" name="search_subtype" color1="#a0ac67"
+                color2="#6fc2ab"></search-box3>
+              <search-box3 title="Ressourcentypen (Typus)" name="search_type" color1="#6fc2ab"
+                color2="#38daf7"></search-box3>
             </v-expansion-panels>
           </v-col>
           <v-col>
             <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels2">
-              <search-box3 title="Informationstypen" name="search_functions" color1="#42dbfb" color2="#7ba1c6"></search-box3>
-              <search-box3 title="Wort- und Ausdrucksarten" name="search_parts" color1="#7ba1c6" color2="#5c93a0"></search-box3>
+              <search-box3 title="Informationstypen" name="search_functions" color1="#42dbfb"
+                color2="#7ba1c6"></search-box3>
+              <search-box3 title="Wort- und Ausdrucksarten" name="search_parts" color1="#7ba1c6"
+                color2="#5c93a0"></search-box3>
               <search-box3 title="Musterzugang" name="search_patterns" color1="#5c93a0" color2="#fa3a65"></search-box3>
             </v-expansion-panels>
           </v-col>
