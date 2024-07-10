@@ -11,18 +11,15 @@
       </v-col>
     </v-row>
 
-    <v-row>
+    <v-row style="margin: -10px 0px 0px 0px;">
       <v-col>
-        <div @mouseenter="carouselStop" @mouseleave="carouselStart"
-          style="border: 1px white solid; border-radius: 5px; padding: 5px; background-color: white;">
-          <v-tabs-window v-model="currentTab">
-            <slot name="tabs"></slot>
-          </v-tabs-window>
-        </div>
+        <v-tabs-window v-model="currentTab" style="border: 1px white solid; border-radius: 5px; padding: 10px; background-color: white; margin:0px -10px 0px -10px">
+          <slot name="tabs"></slot>
+        </v-tabs-window>
       </v-col>
     </v-row>
 
-    <v-row style="margin-top:0px">
+    <v-row>
       <v-col>
         <p class="text-l">
         </p>
@@ -36,26 +33,15 @@ export default {
   name: "Compare",
   data() {
     return {
-      cycle: true,
       currentTab: 0
     }
   },
   methods: {
-    carouselStop() {
-      this.cycle = false;
-    },
-    carouselStart() {
-      this.cycle = true;
-    },
   },
 }
 </script>
 
 <style scoped>
-.v-window {
-  max-height: 375px;
-}
-
 .notransition div {
   transition: none !important;
   transition-timing-function: none !important;
