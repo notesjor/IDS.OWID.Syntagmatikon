@@ -192,10 +192,12 @@ export default {
 
 .myBtnPrev {
   margin-left:-15px;
+  color: darkgrey;
 }
 
 .myBtnNext {
   margin-right:-15px;
+  color: darkgrey;
 }
 
 </style>

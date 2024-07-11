@@ -20,10 +20,10 @@
                     <v-row>
                         <v-col cols="4" style="padding:20px">
                             <v-row><div class="relink"><a href="http://uwv.ids-mannheim.de/prepcon/modul2/"><h3 style="display: inline-block;">PREPCON<sup>abc</sup></h3></a></div></v-row>
-                            <v-row><p style="color:darkgray; font-size: 0.8em; font-style: italic;">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p></v-row>
+                            <v-row><p style="color:darkgray; font-size: 0.8em; font-style: italic;">Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br/>&nbsp;</p></v-row>
                             <v-row><img src="/img/sources/prepcon_kon.PNG" alt=""></v-row>
                         </v-col>
-                        <v-col cols="8">
+                        <v-col cols="8" style="border-left: #DDD 3px solid; padding-left: 10px;">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem velit reprehenderit aspernatur nulla reiciendis est
                             consectetur eligendi ipsa consequatur!
                             <img src="/img/datatypes/kook/amEnde_kookzeilen.PNG" />
@@ -38,10 +38,10 @@
                     <v-row>
                         <v-col cols="4" style="padding:20px">
                             <v-row><div class="relink"><a href="http://uwv.ids-mannheim.de/prepcon/modul2/"><h3 style="display: inline-block;">PREPCON<sup>temporal</sup></h3></a></div></v-row>
-                            <v-row><p style="color:darkgray; font-size: 0.8em; font-style: italic;">Kurzartikel zu temporalen Präposition-Nomen-Verbindungen im Kontext</p></v-row>
+                            <v-row><p style="color:darkgray; font-size: 0.8em; font-style: italic;">Kurzartikel zu temporalen Präposition-Nomen-Verbindungen im Kontext<br/>&nbsp;</p></v-row>
                             <v-row><img src="/img/sources/prepcon_temp.PNG" alt=""></v-row>
                         </v-col>
-                        <v-col cols="8">
+                        <v-col cols="8" style="border-left: #DDD 3px solid; padding-left: 10px;">
                             <img src="/img/datatypes/kook/Clusters_amEnde_1_1_KA_oFW_3.png" />
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta itaque sed unde soluta veniam
                             amet cum excepturi quis. Illo dolorem velit reprehenderit aspernatur nulla reiciendis est
@@ -54,10 +54,10 @@
                     <v-row>
                         <v-col cols="4" style="padding:20px">
                             <v-row><div class="relink"><a href="http://uwv.ids-mannheim.de/prepcon/modul2/"><h3 style="display: inline-block;">PREPCON<sup>temporal</sup></h3></a></div></v-row>
-                            <v-row><p style="color:darkgray; font-size: 0.8em; font-style: italic;">Kurzartikel zu temporalen Präposition-Nomen-Verbindungen im Kontext</p></v-row>
+                            <v-row><p style="color:darkgray; font-size: 0.8em; font-style: italic;">Kurzartikel zu temporalen Präposition-Nomen-Verbindungen im Kontext<br/>&nbsp;</p></v-row>
                             <v-row><img src="/img/sources/prepcon_temp.PNG" alt=""></v-row>
                         </v-col>
-                        <v-col cols="8">                            
+                        <v-col cols="8" style="border-left: #DDD 3px solid; padding-left: 10px;">                            
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta itaque sed unde soluta veniam
                             amet cum excepturi quis. Illo dolorem velit reprehenderit aspernatur nulla reiciendis est
                             consectetur eligendi ipsa consequatur!
