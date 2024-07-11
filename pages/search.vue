@@ -117,7 +117,6 @@ export default {
       if (this.searchStore == null)
         return [];
       var res = this.searchStore.getGroups();
-      console.log(res);
       return res;
     }
   }
