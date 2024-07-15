@@ -7,6 +7,49 @@ definePageMeta({
 <template>
   <div style="max-width: 100%; margin:auto">
     <v-row>
+      <v-col cols="7">
+        <div>
+          <h1>
+            Suche nach Einträgen
+          </h1>
+        </div>
+        <div>
+          <v-text-field label="Stichwort hier eingeben..." v-model="query"
+            append-inner-icon="mdi-magnify"></v-text-field>
+        </div>
+        <div style="margin-top: -20px;">
+          <h3>Ressourcen:</h3>
+        </div>
+        <v-chip v-for="r in resources" :key="r.key" variant="outlined" style="margin: 0px 5px 5px 0px"
+          :prepend-icon="getIcon(r.key)">
+          <div v-html="r.nameShort" />
+        </v-chip>
+
+        <div style="margin-top: 0px;">
+          <h3>Facetten:</h3>
+        </div>
+
+        <v-row>
+          <v-col>
+            <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels1">
+              <search-box3 title="Zugänge" name="search_display" color1="#c79b31" color2="#a0ac67"></search-box3>
+              <search-box3 title="Ressourcentypen (Zugang)" name="search_subtype" color1="#a0ac67"
+                color2="#6fc2ab"></search-box3>
+              <search-box3 title="Ressourcentypen (Typus)" name="search_type" color1="#6fc2ab"
+                color2="#38daf7"></search-box3>
+            </v-expansion-panels>
+          </v-col>
+          <v-col>
+            <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels2">
+              <search-box3 title="Informationstypen" name="search_functions" color1="#42dbfb"
+                color2="#7ba1c6"></search-box3>
+              <search-box3 title="Wort- und Ausdrucksarten" name="search_parts" color1="#7ba1c6"
+                color2="#5c93a0"></search-box3>
+              <search-box3 title="Musterzugang" name="search_patterns" color1="#5c93a0" color2="#fa3a65"></search-box3>
+            </v-expansion-panels>
+          </v-col>
+        </v-row>
+      </v-col>
       <v-col cols="4">
         <v-tabs-window v-model="currentTab">
           <v-tabs-window-item value="help">
@@ -18,7 +61,7 @@ definePageMeta({
                 Facetten,
                 die hier genutzt werden können, um die Stichworte zu filtern.</p>
               <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <i>Stichwortsuche:</i> Geben Sie ein beliebiges Stichwort in das Suchfeld ein, um danach zu suchen.
+                <i>Stichwortsuche:</i> Geben Sie ein beliebiges Stichwort ein, um danach zu suchen.
               </p>
               <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
                 <i>Angewählte Ressourcen:</i>
@@ -37,7 +80,7 @@ definePageMeta({
             <div style="margin-top: 0px;">
               <h2>Gefundene Einträge:</h2>
             </div>
-            <search-group4 v-for="x in items" :title="x"></search-group4>
+            <search-group3 v-for="x in items" :title="x"></search-group3>
             <v-pagination v-model="page" :length="maxPages" density="compact"></v-pagination>
           </v-tabs-window-item>
         </v-tabs-window>
@@ -47,47 +90,8 @@ definePageMeta({
           <v-tab value="results">Ergebnisse</v-tab>
         </v-tabs>
       </v-col>
-      <v-col cols="7">
-        <div>
-          <h1>
-            Suche nach Einträgen
-          </h1>
-        </div>
-        <div>
-          <v-text-field label="Stichwort hier eingeben..." v-model="query"
-            append-inner-icon="mdi-magnify"></v-text-field>
-        </div>
-        <v-row>
-          <v-col>
-            <div style="margin-top: -20px;">
-              <h3>Facetten:</h3>
-            </div>
-            <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels1">
-              <search-box3 title="Zugänge" name="search_display" color1="#c79b31" color2="#a0ac67"></search-box3>
-              <search-box3 title="Ressourcentypen (Zugang)" name="search_subtype" color1="#a0ac67"
-                color2="#6fc2ab"></search-box3>
-              <search-box3 title="Ressourcentypen (Typus)" name="search_type" color1="#6fc2ab"
-                color2="#38daf7"></search-box3>
-              <search-box3 title="Informationstypen" name="search_functions" color1="#42dbfb"
-                color2="#7ba1c6"></search-box3>
-              <search-box3 title="Wort- und Ausdrucksarten" name="search_parts" color1="#7ba1c6"
-                color2="#5c93a0"></search-box3>
-              <search-box3 title="Musterzugang" name="search_patterns" color1="#5c93a0" color2="#fa3a65"></search-box3>
-            </v-expansion-panels>
-          </v-col>
-          <v-col>
-            <div style="margin-top: -20px;">
-              <h3>Ressourcen:</h3>
-            </div>
-            <v-chip v-for="r in resourcesList" :key="r.key" variant="outlined" style="margin: 0px 5px 5px 0px"
-              :prepend-icon="r.icon" @click="toggleResource(r.key)">
-              <div v-html="r.nameShort" />
-            </v-chip>
-          </v-col>
-        </v-row>
-      </v-col>
     </v-row>
-    
+
   </div>
 </template>
 
@@ -130,18 +134,14 @@ export default {
     this.searchStore.init(this.resources);
   },
   methods: {
-    toggleResource(key) {
-      if (this.resourcesSelected.includes(key)) {
-        this.resourcesSelected = this.resourcesSelected.filter(x => x != key);
-      } else {
-        this.resourcesSelected.push(key);
-      }
+    getIcon(key) {
+      return this.resourcesSelected.includes(key) ? "mdi-check-circle" : "mdi-circle-outline";
     }
   },
   watch: {
     query: function (val) {
       this.searchStore.changeQuery(val);
-    },
+    }
   },
   computed: {
     items: function () {
@@ -149,16 +149,6 @@ export default {
         return [];
       var res = this.searchStore.getGroups();
       return res;
-    },
-
-    resourcesList: function () {
-      return this.resources.map(x=>{
-        return {
-          key: x.key,
-          nameShort: x.nameShort,
-          icon: this.resourcesSelected.includes(x.key) ? "mdi-check-circle" : "mdi-circle-outline"
-        }
-      });
     }
   }
 }
