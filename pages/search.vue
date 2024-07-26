@@ -4,6 +4,14 @@ definePageMeta({
 })
 </script>
 
+    <!--
+    TODO
+    TODO: Alphabetische Liste
+    TODO: Liste gruppiert nach Ressourcen (Ressourcen als Gruppe)
+    TODO: Auswahl wieviele Artikel pro Ressource angezeigt werden
+    TODO: Hilfetext soll nach dem Anzeigen der Liste unterhalb der Facetten erscheinen
+    -->
+
 <template>
   <div style="max-width: 100%; margin:auto">
     <v-row>

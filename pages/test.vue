@@ -8,14 +8,38 @@
         müssen, die die jeweiligen Gebrauchsaspekte treffsicher und anschaulich
         illustrieren. Diese Arbeit kann ein Computer nicht leisten.</p>
     <br />
+
+    <!--
+    TODO
+    TODO: VueFlow einbinden
+    TODO: Graph für alle über VueFlow realisieren
+    TODO: Tabs - Liste nach oben. 
+    -->
+
     <div>
         <compare>
             <template #headers>
+                <v-tab value="4">ALLE</v-tab>
                 <v-tab value="one">KoMuX</v-tab>
+                <v-tab value="two">Sprichwörterbuch</v-tab>
+                <v-tab value="three">Item Three</v-tab>                
                 <v-tab value="two">Sprichwörterbuch</v-tab>
                 <v-tab value="three">Item Three</v-tab>
             </template>
             <template #tabs>
+                <v-tabs-window-item value="4">
+                    <v-row>
+                        <v-col cols="12" style="border-left: #DDD 3px solid; padding-left: 10px;">                            
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta itaque sed unde soluta veniam
+                            amet cum excepturi quis. Illo dolorem velit reprehenderit aspernatur nulla reiciendis est
+                            consectetur eligendi ipsa consequatur!
+                            <div style="text-align: center; width:100%">
+                                <img src="/dummy/graph.jpg" style="text-align: center;" />
+                            </div>
+                        </v-col>
+                    </v-row>
+                </v-tabs-window-item>
+
                 <v-tabs-window-item value="one">
                     <v-row>
                         <v-col cols="4" style="padding:20px">
@@ -24,9 +48,7 @@
                             <v-row><img src="/img/sources/prepcon_kon.PNG" alt=""></v-row>
                         </v-col>
                         <v-col cols="8" style="border-left: #DDD 3px solid; padding-left: 10px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem velit reprehenderit aspernatur nulla reiciendis est
-                            consectetur eligendi ipsa consequatur!
-                            <img src="/img/datatypes/kook/amEnde_kookzeilen.PNG" />
+                            <img src="/img/datatypes/kook/amEnde_kookzeilen.PNG" style="width:80%" />
                             Dicta itaque sed unde soluta veniam
                             amet cum excepturi quis. Illo dolorem velit reprehenderit aspernatur nulla reiciendis est
                             consectetur eligendi ipsa consequatur!
@@ -35,19 +57,25 @@
                 </v-tabs-window-item>
 
                 <v-tabs-window-item value="two" style="padding:0px 0px 0px 0px">
-                    <v-row>
-                        <v-col cols="4" style="padding:20px">
-                            <v-row><div class="relink"><a href="http://uwv.ids-mannheim.de/prepcon/modul2/"><h3 style="display: inline-block;">PREPCON<sup>temporal</sup></h3></a></div></v-row>
+                        <v-row style="margin:10px">
+                        <!--
+                            <v-col cols="2">
+                                <v-row><img src="/img/sources/prepcon_temp.PNG" alt="" style="padding:10px"></v-row>
+                            </v-col>
+                        -->
+                            <v-col>
+                                <v-row><div class="relink"><a href="http://uwv.ids-mannheim.de/prepcon/modul2/"><h3 style="display: inline-block;">PREPCON<sup>temporal</sup></h3></a></div></v-row>
                             <v-row><p style="color:darkgray; font-size: 0.8em; font-style: italic;">Kurzartikel zu temporalen Präposition-Nomen-Verbindungen im Kontext<br/>&nbsp;</p></v-row>
-                            <v-row><img src="/img/sources/prepcon_temp.PNG" alt=""></v-row>
-                        </v-col>
-                        <v-col cols="8" style="border-left: #DDD 3px solid; padding-left: 10px;">
-                            <img src="/img/datatypes/kook/Clusters_amEnde_1_1_KA_oFW_3.png" />
+                            </v-col>
+                                                    
+                        </v-row>
+                        <v-row style="border-left: #DDD 3px solid; padding-left: 10px;">
+                            
+                            <img src="/img/datatypes/kook/Clusters_amEnde_1_1_KA_oFW_3.png" style="width: 80%;" />
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta itaque sed unde soluta veniam
                             amet cum excepturi quis. Illo dolorem velit reprehenderit aspernatur nulla reiciendis est
                             consectetur eligendi ipsa consequatur!
-                        </v-col>
-                    </v-row>
+                        </v-row>
                 </v-tabs-window-item>
 
                 <v-tabs-window-item value="three">
