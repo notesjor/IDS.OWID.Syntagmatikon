@@ -4,7 +4,7 @@ definePageMeta({
 })
 </script>
 
-    <!--
+<!--
     TODO
     TODO: Alphabetische Liste
     TODO: Liste gruppiert nach Ressourcen (Ressourcen als Gruppe)
@@ -16,52 +16,62 @@ definePageMeta({
   <div style="max-width: 100%; margin:auto">
     <v-row>
       <v-col cols="4">
-        <v-tabs-window v-model="currentTab">
+        <v-tabs-window v-model="resultsTab">
           <v-tabs-window-item value="help">
             <div style="margin-top: 0px;">
-              <h2>Wie funktioniert die Suche?</h2>
-              <p style="font-size: 0.9em; margin-bottom: 10px; word-wrap: break-word;">
-                Dieses Suche erlaubt es, alle Ressourcen im Syntagmatikon gleichzeitig abzufragen.
-                Wie im Res&shy;sour&shy;cen&shy;kom&shy;pass be&shy;schrie&shy;ben, haben die Ressourcen verschiedene
-                Facetten,
-                die hier genutzt werden können, um die Stichworte zu filtern.</p>
-              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <i>Stichwortsuche:</i> Geben Sie ein beliebiges Stichwort in das Suchfeld ein, um danach zu suchen.
-              </p>
-              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <i>Angewählte Ressourcen:</i>
-                werden in die Suche einbezogen. Klicke Sie auf eine Ressource um sie zu aktivieren
-                <v-icon>mdi-check-circle</v-icon> oder deaktivieren <v-icon>mdi-circle-outline</v-icon>. Ressourcen, die
-                durch eine
-                Facette ausgeschlossen sind, werden ebenfalls nicht angezeigt <v-icon>mdi-circle-off-outline</v-icon>.
-              </p>
-              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <i>Facetten:</i> schränken die Stichwortsuche auf bestimmte Kategorien und Eigenschaften ein.
-                Zudem können Sie ein Facette auswählen, nach der die Ergebnisse gruppiert werden.
-              </p>
+              <search-help></search-help>
             </div>
           </v-tabs-window-item>
           <v-tabs-window-item value="results">
             <div style="margin-top: 0px;">
               <h2>Gefundene Einträge:</h2>
+              <v-col>
+                <v-btn variant="text" density="compact" class="nocaps"
+                  style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: -10px; padding:0px 5px"
+                  @click="this.search_header_switch = false">
+                  Alphabetisch
+                </v-btn>
+                <div style="display: inline-block; margin: -30px 0px 0px 5px;" density="compact">
+                  <v-switch v-model="search_header_switch"></v-switch>
+                </div>
+                <v-btn variant="text" density="compact" class="nocaps"
+                  style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: 15px; padding:0px 5px"
+                  @click="this.search_header_switch = true">
+                  Gruppiert nach Ressource
+                </v-btn>
+              </v-col>
             </div>
+            <v-pagination v-model="page" :length="maxPages" density="compact"
+              style="margin:-40px 0px 0px -50px"></v-pagination>
             <search-group4 v-for="x in items" :title="x"></search-group4>
-            <v-pagination v-model="page" :length="maxPages" density="compact"></v-pagination>
           </v-tabs-window-item>
         </v-tabs-window>
 
-        <v-tabs v-model="currentTab">
-          <v-tab value="help">Hilfe</v-tab>
-          <v-tab value="results">Ergebnisse</v-tab>
-        </v-tabs>
+        <div v-if="resultsTab != 'help'"></div>
+        <v-btn v-else @click="this.resultsTab = 'results'" class="nocaps">Zeige alle Einträge</v-btn>
       </v-col>
       <v-col cols="7">
         <div>
-          <h1>
-            Suche nach Einträgen
-          </h1>
+          <v-tabs-window v-model="search_header">
+            <v-tabs-window-item value="byAZ">
+              <h1>
+                <div style="display: inline-block; position: relative; top:-42px">Suche nach</div>
+                <v-combobox :items="['10', '25', '50', '100', '250', '500']" variant="outlined"
+                  style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px"></v-combobox>
+                <div style="display: inline-block; position: relative; top:-42px">Einträgen</div>
+              </h1>
+            </v-tabs-window-item>
+            <v-tabs-window-item value="byGroup">
+              <h1>
+                <div style="display: inline-block; position: relative; top:-42px">Suche nach</div>
+                <v-combobox :items="['3', '5', '10', '20', '25', '50', '100']" variant="outlined"
+                  style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px"></v-combobox>
+                <div style="display: inline-block; position: relative; top:-42px">Einträgen pro Ressource</div>
+              </h1>
+            </v-tabs-window-item>
+          </v-tabs-window>
         </div>
-        <div>
+        <div style="margin-top:-30px">
           <v-text-field label="Stichwort hier eingeben..." v-model="query"
             append-inner-icon="mdi-magnify"></v-text-field>
         </div>
@@ -93,9 +103,15 @@ definePageMeta({
             </v-chip>
           </v-col>
         </v-row>
+        <v-row>
+          <div v-if="resultsTab == 'help'"></div>
+          <div v-else>
+            <search-help></search-help>
+          </div>
+        </v-row>
       </v-col>
     </v-row>
-    
+
   </div>
 </template>
 
@@ -126,7 +142,8 @@ export default {
       limit: 10,
       syncLock: false,
 
-      currentTab: 0
+      resultsTab: "help",
+      search_header_switch: false
     }
   },
   mounted() {
@@ -150,8 +167,17 @@ export default {
     query: function (val) {
       this.searchStore.changeQuery(val);
     },
+    resultsTab: function (val) {
+      this.teleportHelp = val == 'help' ? "#helpDefault" : "#helpExtend";
+    }
   },
   computed: {
+    search_header: {
+      get: function () {
+        return this.search_header_switch ? "byGroup" : "byAZ";
+      }
+    },
+
     items: function () {
       if (this.searchStore == null)
         return [];
@@ -160,7 +186,7 @@ export default {
     },
 
     resourcesList: function () {
-      return this.resources.map(x=>{
+      return this.resources.map(x => {
         return {
           key: x.key,
           nameShort: x.nameShort,

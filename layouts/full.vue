@@ -174,6 +174,10 @@ body {
   -ms-hyphenate-limit-lines: 4;
   text-align: justify;
 }
+
+.nocaps {
+  text-transform: none;
+}
 </style>
   
 <script setup>
