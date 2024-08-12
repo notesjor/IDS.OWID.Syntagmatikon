@@ -16,9 +16,13 @@
     <v-tabs-window-item value="1" style="padding:0px 0px 0px 0px">
       <v-row style="margin: 10px 0px;">
         <p style="margin: 10px 0px">
-          Die beschriebene Information ist im Artikel an folgender Position zu finden (rote Markierung):
+          <slot name="webpage-text">
+            Die beschriebene Information ist im Artikel an folgender Position zu finden (rote Markierung):
+          </slot>
         </p>
-        <img :src="webpage" alt="Artikel mit Annotation">
+        <div style="width: 100%;">
+          <img :src="webpage" alt="Artikel mit Annotation" style="margin: auto;">
+        </div>
       </v-row>
     </v-tabs-window-item>
 
