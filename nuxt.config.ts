@@ -43,7 +43,7 @@ export default defineNuxtConfig({
   },
 
   app: {
-    baseURL: "/syntagmatikon_2024-06/", //baseURL: "/syntagmatikon_2024-03/"
+    baseURL: "/syntagmatikon_2024-08/", //baseURL: "/syntagmatikon_2024-03/"
     head: {
       htmlAttrs: {
         lang: 'de',
@@ -52,5 +52,5 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: "2024-07-05",
+  compatibilityDate: "2024-08-12",
 })
