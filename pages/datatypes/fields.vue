@@ -71,13 +71,13 @@
               <p style="margin-top: 10px;">
                 Artikel: „Man soll den Tag nicht vor dem Abend loben“
               </p>
-              <img src="/img/datatypes/fields/swb_part_01.png" alt="">
+              <img src="/img/datatypes/fields/swb_part_01.png" alt=""/>
               <p>Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘</p>
 
               <p style="margin-top: 10px;">
                 Artikel: „Man sollte sich nicht zu früh freuen“
               </p>
-              <img src="/img/datatypes/fields/swb_part_02.png" alt="">
+              <img src="/img/datatypes/fields/swb_part_02.png" alt=""/>
               <p>Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘</p>
             </resource-explain>
           </v-row>
@@ -113,13 +113,13 @@
               <p style="margin-top: 10px;">
                 Artikel: „Man soll den Tag nicht vor dem Abend loben“
               </p>
-              <img src="/img/datatypes/fields/fwv_part_01.png" alt="">
+              <img src="/img/datatypes/fields/fwv_part_01.png" alt=""/>
               <p>Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘</p>
 
               <p style="margin-top: 10px;">
                 Artikel: „Man sollte sich nicht zu früh freuen“
               </p>
-              <img src="/img/datatypes/fields/fwv_part_02.png" alt="">
+              <img src="/img/datatypes/fields/fwv_part_02.png" alt=""/>
               <p>Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘</p>
             </resource-explain>
           </v-row>
@@ -165,7 +165,7 @@
                 <enum v="2" />) können Sie sich die Belege zu den Prädikaten anzeigen lassen.
                 <br />&nbsp;
               </p>
-              <img src="/img/datatypes/fields/map_part_01.png" alt="">
+              <img src="/img/datatypes/fields/map_part_01.png" alt=""/>
             </resource-explain>
           </v-row>
         </v-tabs-window-item>
@@ -219,13 +219,13 @@
                 Schwierigkeiten“ von am Anfang und des spanischen Äquivalents al principio.
                 <br />&nbsp;
               </p>
-              <img src="/img/datatypes/fields/prepk_part_03.png" alt="">
+              <img src="/img/datatypes/fields/prepk_part_03.png" alt=""/>
               <p style="margin-top: 10px;">
                 Ausschnitt aus Kookkurrenzliste adjektivischer Satellitenfelder des Gebrauchsaspekts
                 „Thematisierung von Schwierigkeiten“ von am Anfang.
                 <br />&nbsp;
               </p>
-              <img src="/img/datatypes/fields/prepk_part_04.png" alt="">
+              <img src="/img/datatypes/fields/prepk_part_04.png" alt=""/>
             </resource-explain>
           </v-row>
         </v-tabs-window-item>
@@ -258,16 +258,16 @@
               </p>
             </div>
 
-            <resource-explain webpage="../img/datatypes/fields/map_fullscreen_01_annotated.png">
+            <resource-explain webpage="../img/datatypes/fields/prept_fullscreen_01_annotated.png">
               <p style="margin-top: 10px;">
-                Ausschnitt aus Prädikatsfeldern: JMD fürchtet JMDN/ETW. Für jeden Prädikatstyp sehen Sie am Ende
-                des Artikels eine Liste mit zugeordneten Prädikaten (siehe
-                <enum v="1" />). Mit einem Klick auf
-                "Beispiele" (siehe
-                <enum v="2" />) können Sie sich die Belege zu den Prädikaten anzeigen lassen.
-                <br />&nbsp;
+                Verwandte Wörter mit der Grundbedeutung: ‚pausenlos‘ im Artikel ohne Unterlass
               </p>
-              <img src="/img/datatypes/fields/map_part_01.png" alt="">
+              <img src="/img/datatypes/fields/prept_part_01.png" alt=""/>
+              <p style="margin-top: 10px;">
+                Klicken Sie auf eines der verlinkten Wörter, gelangen Sie zum <i>elexiko</i>-Artikel.
+                Über diesen gelangen Sie dann zum entsprechenden Profil in der CCDB (siehe rote Markierung).
+              </p>
+              <img src="/img/datatypes/fields/prept_fullscreen_02_annotated.png" alt=""/>
             </resource-explain>
           </v-row>
         </v-tabs-window-item>
