@@ -29,12 +29,15 @@
                 <slot name="explain"></slot>
                 <template v-if="$slots.webpagetext" #webpagetext><slot name="webpagetext"></slot></template>
             </resource-explain>
-        </v-row>
+
+            <nuxt-link v-if="buttonUrl != null" :to="buttonUrl"><v-btn prepend-icon="mdi-arrow-right-bold-box-outline" class="nocaps">Weiterführende Erklärung anzeigen</v-btn></nuxt-link>
+        </v-row>        
     </v-tabs-window-item>
 </template>
 
 <script>
 import { useResourcesStore } from '~/stores/resources';
+import { useRoute } from 'vue-router'
 
 export default {
     name: "CompareItem",
@@ -62,13 +65,21 @@ export default {
     },
     data() {
         return {
+            router: {},
             resourcesStore: {},
             resource: null,
+            buttonUrl: null
         }
     },
     mounted() {
+        this.$data.router = useRouter();
         this.$data.resourcesStore = useResourcesStore();
         this.$data.resource = this.$data.resourcesStore.getResource(this.$props.rkey);
+        
+        var current = useRoute().path;
+        var matches = this.$data.router.getRoutes().filter(r => r.path.startsWith(`${current}/${this.$props.rkey}`));
+
+        this.$data.buttonUrl = matches.length > 0 ? matches[0].path : null;
     },
     computed: {
         correctedWebPage() {
