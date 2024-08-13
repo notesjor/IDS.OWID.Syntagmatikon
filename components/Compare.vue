@@ -83,4 +83,9 @@ export default {
 .myBtnNext {
   margin-right: -15px;
 }
+
+div.v-tabs-window-item {
+  margin: 20px!important;
+  background-color: red;
+}
 </style>

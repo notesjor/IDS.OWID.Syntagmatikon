@@ -3,9 +3,7 @@ import { defineStore } from 'pinia'
 
 export const useResourcesStore = defineStore('resourcesStore', {
   state: () => {
-    return { info: [
-    
-    
+    return { info: [        
       {
         "key": "PREPCON",
         "nameShort": "PREPCON<sup>online</sup>",
@@ -264,6 +262,13 @@ export const useResourcesStore = defineStore('resourcesStore', {
   actions: {
     increment() {
       this.count++
+    },
+    getResource: function (key) {
+      try{
+        return this.info.find(resource => resource.key === key)
+      } catch {
+        return this.info[0]
+      }
     },
     getResources: function (filter) {
       if(filter == undefined || filter == null || filter.length === 0) return this.info;
