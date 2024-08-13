@@ -25,19 +25,19 @@
       </template>
       <template #tabs>
         <v-tabs-window-item value="ALL">
-          <v-row>
-            <v-col cols="12" style="border-left: #DDD 3px solid; padding-left: 10px;">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta itaque sed unde soluta veniam
-              amet cum excepturi quis. Illo dolorem velit reprehenderit aspernatur nulla reiciendis est
-              consectetur eligendi ipsa consequatur!
-              <div style="text-align: center; width:100%">
-                <img src="/dummy/graph.jpg" style="text-align: center;" />
-              </div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta itaque sed unde soluta veniam
-              amet cum excepturi quis. Illo dolorem velit reprehenderit aspernatur nulla reiciendis est
-              consectetur eligendi ipsa consequatur!
-            </v-col>
-          </v-row>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta itaque sed unde soluta veniam
+            amet cum excepturi quis. Illo dolorem velit reprehenderit aspernatur nulla reiciendis est
+            consectetur eligendi ipsa consequatur!
+          </p>
+          <div style="text-align: center; width:100%">
+            <img src="/img/datatypes/fields/fields.png" style="text-align: center;" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta itaque sed unde soluta veniam
+            amet cum excepturi quis. Illo dolorem velit reprehenderit aspernatur nulla reiciendis est
+            consectetur eligendi ipsa consequatur!
+          </p>
         </v-tabs-window-item>
 
         <v-tabs-window-item value="1" style="padding:0px 0px 0px 0px">
@@ -71,13 +71,13 @@
               <p style="margin-top: 10px;">
                 Artikel: „Man soll den Tag nicht vor dem Abend loben“
               </p>
-              <img src="/img/datatypes/fields/swb_part_01.png" alt=""/>
+              <img src="/img/datatypes/fields/swb_part_01.png" alt="" />
               <p>Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘</p>
 
               <p style="margin-top: 10px;">
                 Artikel: „Man sollte sich nicht zu früh freuen“
               </p>
-              <img src="/img/datatypes/fields/swb_part_02.png" alt=""/>
+              <img src="/img/datatypes/fields/swb_part_02.png" alt="" />
               <p>Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘</p>
             </resource-explain>
           </v-row>
@@ -113,13 +113,13 @@
               <p style="margin-top: 10px;">
                 Artikel: „Man soll den Tag nicht vor dem Abend loben“
               </p>
-              <img src="/img/datatypes/fields/fwv_part_01.png" alt=""/>
+              <img src="/img/datatypes/fields/fwv_part_01.png" alt="" />
               <p>Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘</p>
 
               <p style="margin-top: 10px;">
                 Artikel: „Man sollte sich nicht zu früh freuen“
               </p>
-              <img src="/img/datatypes/fields/fwv_part_02.png" alt=""/>
+              <img src="/img/datatypes/fields/fwv_part_02.png" alt="" />
               <p>Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘</p>
             </resource-explain>
           </v-row>
@@ -165,7 +165,7 @@
                 <enum v="2" />) können Sie sich die Belege zu den Prädikaten anzeigen lassen.
                 <br />&nbsp;
               </p>
-              <img src="/img/datatypes/fields/map_part_01.png" alt=""/>
+              <img src="/img/datatypes/fields/map_part_01.png" alt="" />
             </resource-explain>
           </v-row>
         </v-tabs-window-item>
@@ -219,13 +219,13 @@
                 Schwierigkeiten“ von am Anfang und des spanischen Äquivalents al principio.
                 <br />&nbsp;
               </p>
-              <img src="/img/datatypes/fields/prepk_part_03.png" alt=""/>
+              <img src="/img/datatypes/fields/prepk_part_03.png" alt="" />
               <p style="margin-top: 10px;">
                 Ausschnitt aus Kookkurrenzliste adjektivischer Satellitenfelder des Gebrauchsaspekts
                 „Thematisierung von Schwierigkeiten“ von am Anfang.
                 <br />&nbsp;
               </p>
-              <img src="/img/datatypes/fields/prepk_part_04.png" alt=""/>
+              <img src="/img/datatypes/fields/prepk_part_04.png" alt="" />
             </resource-explain>
           </v-row>
         </v-tabs-window-item>
@@ -252,8 +252,11 @@
 
             <div class="relink">
               <p>
-                Die Wortfelder in PREPCON<sup>temporal</sup> Kurzartikel beinhalten semantisch verwandte Wörter der PN, die jeweils
-                mit den entsprechenden Einträgen in <i>elexiko</i> verlinkt sind. Im elexiko-Artikel findet man entweder die
+                Die Wortfelder in PREPCON<sup>temporal</sup> Kurzartikel beinhalten semantisch verwandte Wörter der PN,
+                die
+                jeweils
+                mit den entsprechenden Einträgen in <i>elexiko</i> verlinkt sind. Im elexiko-Artikel findet man entweder
+                die
                 lexikografische Beschreibung des (Quasi-)Synonyms oder einen Link zum entsprechenden Profil in der CCDB.
               </p>
             </div>
@@ -262,12 +265,12 @@
               <p style="margin-top: 10px;">
                 Verwandte Wörter mit der Grundbedeutung: ‚pausenlos‘ im Artikel ohne Unterlass
               </p>
-              <img src="/img/datatypes/fields/prept_part_01.png" alt=""/>
+              <img src="/img/datatypes/fields/prept_part_01.png" alt="" />
               <p style="margin-top: 10px;">
                 Klicken Sie auf eines der verlinkten Wörter, gelangen Sie zum <i>elexiko</i>-Artikel.
                 Über diesen gelangen Sie dann zum entsprechenden Profil in der CCDB (siehe rote Markierung).
               </p>
-              <img src="/img/datatypes/fields/prept_fullscreen_02_annotated.png" alt=""/>
+              <img src="/img/datatypes/fields/prept_fullscreen_02_annotated.png" alt="" />
             </resource-explain>
           </v-row>
         </v-tabs-window-item>
