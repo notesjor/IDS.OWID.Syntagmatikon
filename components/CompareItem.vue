@@ -10,13 +10,8 @@
                     </div>
                 </v-row>
                 <v-row>
-                    <p v-if="description == null"
-                        style="color:darkgray; font-size: 0.8em; font-style: italic; margin: -10px 0px 0px 0px;">
-                        {{ resource.nameLong }}
-                    </p>
-                    <p v-else style="color:darkgray; font-size: 0.8em; font-style: italic; margin: -10px 0px 0px 0px;">
-                        {{ description }}
-                    </p>
+                    <p v-if="description == null" style="color:darkgray; font-size: 0.8em; font-style: italic; margin: -10px 0px 0px 0px;" v-html="resource.nameLong" />
+                    <p v-else style="color:darkgray; font-size: 0.8em; font-style: italic; margin: -10px 0px 0px 0px;" v-html="description" />
                 </v-row>
             </v-col>
 
