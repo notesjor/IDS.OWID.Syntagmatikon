@@ -1,15 +1,15 @@
 <template>
-    <div class="nolink">
+    <div class="nolink" @mouseenter="rotateBkgGradient" @mouseleave="rotateBkgGradient">
         <v-card :style="highlightItem('Deskriptive Datenbank')" elevation="0">
             <v-card-title>
                 <NuxtLink :to="link">
                     <div style="position: relative;">
                         <gradient style="min-width: 332px; min-height: 50px; border-radius:25px" :color1="color1"
-                            :color2="color2" :color3="color3" />
+                            :color2="color2" :color3="color3" :degree="90" ref="bkgGradient"/>
                         <h3
                             style="position: absolute; top:-6px; left:5px; background-color: rgba(255, 255, 255, 0.65); padding: 8px 5px 3px 10px; width: 100%; min-width: 322px; border-radius:25px">
                             <v-btn v-if="link != null" variant="tonal" icon="mdi-arrow-right-circle-outline"
-                                style="display:inline-block; margin:-5px 0px 0px -5px; font-size: 0.6em;" width="30"
+                                style="display:inline-block; margin:-9px 0px 0px -5px; font-size: 0.6em;" width="30"
                                 height="30"></v-btn>
                             {{ title }}
                         </h3>
@@ -53,7 +53,10 @@ export default {
             return this.highlight == this.title ?
                 "max-width: 350px; margin:10px; border: 3px solid black" :
                 "max-width: 350px; margin:10px";
-        }
+        },
+        rotateBkgGradient() {
+            this.$refs.bkgGradient.rotateGradient();
+        },
     },
 }
 </script>

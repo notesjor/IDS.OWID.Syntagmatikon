@@ -7,9 +7,9 @@
         In der Zeit vor den Korpora basierten Sammlungen zumeist auf früheren
         Sammlungen und Listen. Es gab ein historisch gewachsenes
         Beispielgedächtnis. Dies führte u.a. zu oft beklagten veralteten
-        Beispiele in Wörterbüchern und Lehrwerken.</p>
-    <p>Korpusbasierte Inventare können als gesicherte empirische Basis für
-        die Forschung als auch Referenzquellen für Wörterbücher und
+        Beispielen in Wörterbüchern und Lehrwerken.</p>
+    <p>Korpusbasierte Inventare können sowohl als gesicherte empirische Basis für
+        die Forschung als auch als Referenzquellen für Wörterbücher und
         Lehrmaterialien von Nutzen sein.</p>
     <p>Ein Inventar kann jedoch nie alle Ausdrücke eines
         Wortschatzausschnittes erfassen, da auch die zugrunde liegende

@@ -17,7 +17,7 @@ export const useSearchStore = defineStore("searchStore", {
 
       max: {},
       results: {},
-      pageSize: 5,
+      pageSize: 3,
     };
   },
   // could also be defined as
@@ -36,7 +36,6 @@ export const useSearchStore = defineStore("searchStore", {
       this.data.search_patterns = this.__getSet(resources, "search_patterns");
       this.data.search_parts = this.__getSet(resources, "search_parts");
 
-      this.changeQuery("*");
       this.initialized = true;
     },
     __getSet(resources, name) {
@@ -78,7 +77,11 @@ export const useSearchStore = defineStore("searchStore", {
         self.counter++;
       });
     },
+
     async sendSearchRequest(key, page) {
+      console.log(this.initialized, this.query);
+      if(this.initialized == false) return;
+
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append(
@@ -109,6 +112,7 @@ export const useSearchStore = defineStore("searchStore", {
       this.results[key][page] = result.hits;
       if (this.max[key] == -1) this.max[key] = result.estimatedTotalHits;
     },
+
     async getItems(filterSet, page) {
       
       var validSet = new Set();

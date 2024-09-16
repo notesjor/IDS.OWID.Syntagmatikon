@@ -98,12 +98,12 @@
 
     <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
       <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
-        <div style="max-width: 80ch;">
+        <div style="max-width: 86ch;">
           <slot />
         </div>
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
-        <div style="max-width: 80ch;">
+        <div style="max-width: 86ch;">
           <slot />
         </div>
       </div>
@@ -142,7 +142,8 @@
       <div style="grid-area: middle;"></div>
 
       <div style="text-align: right; grid-area: right">
-        <a :href="rightIconHref" target="_blank">
+        <div style="display: inline-block; margin-top:5px; margin-left: -200px"><v-switch label="Mobile" v-model="useMobileView" style="color: white; max-height: 30px;"></v-switch></div>
+        <a :href="rightIconHref" target="_blank" style="display: inline-block; margin-top: -75px">
           <img alt="Logo" src="/logo_right.svg"
             style="max-height:65px; min-height: 45px; min-width: 200px; margin-left: auto; " />
         </a>
@@ -176,6 +177,10 @@ body {
   -ms-hyphenate-limit-chars: auto 3;
   -ms-hyphenate-limit-lines: 4;
   text-align: justify;
+}
+
+.nocaps {
+  text-transform: none;
 }
 </style>
 

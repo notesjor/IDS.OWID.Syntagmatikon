@@ -4,10 +4,10 @@
     <resources-list :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp', 'Redeeinleiter', 'Verlaufsformen']"/>
     <h2>Beispiele</h2>
     <v-carousel>        
-        <v-carousel-item src="/img/patterns/dynamic/dynamic01.png"></v-carousel-item>
-        <v-carousel-item src="/img/patterns/dynamic/dynamic02.png"></v-carousel-item>
-        <v-carousel-item src="/img/patterns/dynamic/dynamic03.png"></v-carousel-item>
-        <v-carousel-item src="/img/patterns/dynamic/dynamic04.png"></v-carousel-item>
-        <v-carousel-item src="/img/patterns/dynamic/dynamic05.png"></v-carousel-item>
+        <v-carousel-item><img src="/img/patterns/dynamic/dynamic01.png"></img></v-carousel-item>
+        <v-carousel-item><img src="/img/patterns/dynamic/dynamic02.png"></img></v-carousel-item>
+        <v-carousel-item><img src="/img/patterns/dynamic/dynamic03.png"></img></v-carousel-item>
+        <v-carousel-item><img src="/img/patterns/dynamic/dynamic04.png"></img></v-carousel-item>
+        <v-carousel-item><img src="/img/patterns/dynamic/dynamic05.png"></img></v-carousel-item>
     </v-carousel>
 </template>

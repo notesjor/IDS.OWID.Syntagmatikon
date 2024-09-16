@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div style="max-width: 80ch; margin:auto">
+  <div style="max-width: 86ch; margin:auto">
     <v-row>
       <v-col>
         <div>
@@ -19,7 +19,7 @@ definePageMeta({
       <v-col>
         <div>
           <p>
-            Eine der folgenreichsten Resultate korpusempirischer Forschungen ist die Einsicht, dass linear verfestigte
+            Eines der folgenreichsten Resultate korpusempirischer Forschungen ist die Einsicht, dass linear verfestigte
             Wortfolgen systematisch auf schematischen Vorprägungen, auf Schablonen fußen, die wir Muster nennen. Muster
             werden als semiabstrakte Konstruktionen aufgefasst, bei denen die Slots nicht beliebig, sondern basierend auf
             Merkmalen ähnlicher Art gefüllt werden.
@@ -50,7 +50,7 @@ definePageMeta({
           </tile-gradient>
 
           <tile-gradient title="Lexikografische Angabe" color1="#87bfcc" color2="#ff5d48" link="/patterns/component">
-            In einigen Ressourcen werden von Hand aufbereitete Musterangaben und -visualisierungen als eine Komponente von Wörterbuchartikeln angeboten, und zwar in „PREPCONkontrastiv und „Feste Wortverbindungen“.
+            In einigen Ressourcen werden von Hand aufbereitete Musterangaben und -visualisierungen als eine Komponente von Wörterbuchartikeln angeboten, und zwar in „PREPCONkontrastiv“ und „Feste Wortverbindungen“.
             <resources-list :filter="['PREPCON_kon', 'SPRW', 'FesteWV']"/>
           </tile-gradient>
 

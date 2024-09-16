@@ -6,7 +6,7 @@ definePageMeta({
 
 <template>
   <div class="nolink">
-    <div style="max-width: 80ch; margin:auto">
+    <div style="max-width: 86ch; margin:auto">
       <v-row>
         <v-col>
           <div>
@@ -19,7 +19,7 @@ definePageMeta({
       <v-row>
         <v-col>
           <div>
-            <p>Das Syntagmatikon enthält aktuell 12 Resourcen, die hier kurz vorgestellt werden. Klicken Sie auf eine
+            <p>Das Syntagmatikon enthält aktuell 12 Ressourcen, die hier kurz vorgestellt werden. Klicken Sie auf eine
               der Ressourcen, um diese direkt aufzurufen.</p>
             <br />&nbsp;<br />
           </div>

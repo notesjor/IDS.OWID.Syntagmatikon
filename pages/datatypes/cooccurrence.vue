@@ -1,7 +1,7 @@
 <template>
     <h1>Typische Partnerwörter</h1>
     <h2>(Kookkurrenzprofile)</h2>
-    
+
     <p>Mithilfe statistischer Berechnungen (sog. <a
             href="https://www1.ids-mannheim.de/kl/projekte/methoden/ka.html">Kookkurrenzanalysen</a>)
         lassen sich besondere Anziehungskräfte (Cluster) zwischen Wörtern und
@@ -23,13 +23,13 @@
     <v-window v-model="tab">
         <v-window-item value="1">
             <v-row style="margin-top:-50px">
-      <v-col>
-        <v-carousel>
-          <v-carousel-item src="/img/datatypes/kook/amEnde_kookzeilen.PNG"></v-carousel-item>
-          <v-carousel-item src="/img/datatypes/kook/Clusters_amEnde_1_1_KA_oFW_3.png"></v-carousel-item>
-        </v-carousel>
-      </v-col>
-    </v-row>
+                <v-col>
+                    <v-carousel>
+                        <v-carousel-item><img src="/img/datatypes/kook/amEnde_kookzeilen.PNG" /></v-carousel-item>
+                        <v-carousel-item><img src="/img/datatypes/kook/Clusters_amEnde_1_1_KA_oFW_3.png" /></v-carousel-item>
+                    </v-carousel>
+                </v-col>
+            </v-row>
 
             <p>Das <u><em>am Ende</em>-Profil</u> zeigt u.a. folgendes: Bestimmte
                 Partnerwörter deuten auf feste Wendungen hin wie <em>Licht</em>
@@ -56,16 +56,17 @@
                 statistische Auffälligkeit. Die Beurteilung der Aussagekraft von Daten
                 muss der Mensch treffen. Beispiele für inhaltliche Gruppierungen von
                 Partnerwörtern findet man in PREPCON<sup>online</sup> kontrastiv (s.
-                <u>Satellitenfelder</u>)
-            </p>
-            <p>automatisch (-&gt; <a href="https://www1.ids-mannheim.de/kl/projekte/methoden/ka.html">Kookkurrenzanalyse</a>
+                <u>Satellitenfelder</u>) und automatisch (<a
+                    href="https://www1.ids-mannheim.de/kl/projekte/methoden/ka.html">Kookkurrenzanalyse</a>
                 s. <a href="https://www1.ids-mannheim.de/kl/projekte/methoden/ur.html">Belica
                     1995</a>; <a href="https://www.sketchengine.eu/guide/concordance-a-tool-to-search-a-corpus/">CA
-                    in Sketch Engine</a>)</p>
+                    in Sketch Engine</a>).
+            </p>
         </v-window-item>
 
         <v-window-item value="2">
-            <iframe src="https://barometer.diskurslinguistik.net/ui_cooccurrence.html" width="100%" height="450px"></iframe>
+            <iframe src="https://barometer.diskurslinguistik.net/ui_cooccurrence.html" width="100%"
+                height="450px"></iframe>
         </v-window-item>
     </v-window>
     <!--

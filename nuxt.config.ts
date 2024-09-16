@@ -8,21 +8,26 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+
   css: [
     'vuetify/lib/styles/main.sass',
     '@mdi/font/css/materialdesignicons.min.css',
     '~/assets/css/main.css'
   ],
+
   build: {
     transpile: ['vuetify'],        
   },
+
   vite: {
     define: {
       'process.env.DEBUG': false,
     },
     plugins: [svgLoader()]
   },
+
   modules: ['@pinia/nuxt'],
+
   runtimeConfig: {
     public: {
       appName: "Syntagmatikon",
@@ -36,7 +41,16 @@ export default defineNuxtConfig({
       footerDsgvo: "https://www.owid.de/wb/owid/privacy.html"
     }
   },
+
   app: {
-    baseURL: "/syntagmatikon_2024-04/" //baseURL: "/syntagmatikon_2024-03/"    
+    baseURL: "/syntagmatikon_2024-08/", //baseURL: "/syntagmatikon_2024-03/"
+    head: {
+      htmlAttrs: {
+        lang: 'de',
+        dir: 'ltr'
+      }
+    }
   },
+
+  compatibilityDate: "2024-08-12",
 })

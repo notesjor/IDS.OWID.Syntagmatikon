@@ -48,7 +48,7 @@
             <v-icon style="font-size: 60px;">
               mdi-magnify
             </v-icon>
-            <div><strong>X</strong> Verschiedene Suchen</div>
+            <div><strong>XX</strong> Verschiedene Suchen</div>
           </div>
         </div>
       </v-col>
@@ -58,7 +58,7 @@
             <v-icon style="font-size: 60px;">
               mdi-puzzle-outline
             </v-icon>
-            <div><strong>XXXXX</strong> Sprachmuster, Phrasen und Redewendungen</div>
+            <div><strong>XX</strong> Sprachmuster, Phrasen und Redewendungen</div>
           </div>
         </div>
         
@@ -85,7 +85,7 @@
             <v-icon style="font-size: 60px;">
               mdi-database-search-outline
             </v-icon>
-            <div><strong>XX</strong> Lore Ipsum</div>
+            <div><strong>XX</strong> Lorem Ipsum</div>
           </div>
            </div> 
       </v-col>
