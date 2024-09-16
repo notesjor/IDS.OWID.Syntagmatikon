@@ -87,9 +87,7 @@
             </v-icon>
             <div><strong>XX</strong> Lore Ipsum</div>
           </div>
-           </div>
-       
-       
+           </div> 
       </v-col>
     </v-row>
   </div>
@@ -102,12 +100,37 @@ export default {
   data() {
     return {
       sample: [
+      // {
+      //     tokens: ["Andere", "Länder,", "andere", "Sitten:", "Wenn", "deutsche", "Kinder", "am", "6.", "Dezember", "auf", "den", "Nikolaus", "in", "rotem", "Mantel", "und", "weißem", "Rauschebart", "warten,", "ist", "dieser", "Tag", "für", "spanische", "Mädchen", "und", "Jungen", "gar", "kein", "ereignisreiches", "Datum.", "Sie", "hoffen", "nämlich,", "daß", "die", "Heiligen", "Drei", "Könige", "-", "Caspar,", "Melchior", "und", "Balthasar", "sie", "am", "6.", "Januar", "reichlich", "beschenken,", "meist", "mit", "zuckersüßen", "Bonbons", "und", "Schokolade."],
+      //     annotations: [{
+      //       ranges: [{
+      //         from: 0,
+      //         to: 4
+      //       }
+      //       ],
+      //       references: [{
+      //         color: '#0d65c2',
+      //         source: 'OWID-Sprichwörterbuch',
+      //         article: 'Andere Länder, andere Sitten',
+      //         type: 'Sprichwort',
+      //         href: 'https://www.owid.de/artikel/404233',
+      //       }, {
+      //         color: '#008702',
+      //         source: 'SpruchList',
+      //         article: 'Andere Länder, andere Sitten',
+      //         type: 'Sprichwort',
+      //         href: 'http://uwv.ids-mannheim.de/spruchlist/?search=Andere%20L%C3%A4nder,%20andere%20Sitten',
+      //       }
+      //       ]
+      //     }
+      //     ],
+      //   }, 
         {
-          tokens: ["Andere", "Länder,", "andere", "Sitten:", "Wenn", "deutsche", "Kinder", "am", "6.", "Dezember", "auf", "den", "Nikolaus", "in", "rotem", "Mantel", "und", "weißem", "Rauschebart", "warten,", "ist", "dieser", "Tag", "für", "spanische", "Mädchen", "und", "Jungen", "gar", "kein", "ereignisreiches", "Datum.", "Sie", "hoffen", "nämlich,", "daß", "die", "Heiligen", "Drei", "Könige", "-", "Caspar,", "Melchior", "und", "Balthasar", "sie", "am", "6.", "Januar", "reichlich", "beschenken,", "meist", "mit", "zuckersüßen", "Bonbons", "und", "Schokolade."],
+          tokens: ["Wie", "Tag", "und", "Nacht", "oder:", "Andere", "Länder,", "andere", "Sitten.", "Während", "Jamaica-Fans", "90", "Minuten", "lang", "dem", "Reggae","frönten,", "fleht", "man", "für", "Iran", "zu", "Allah."],
           annotations: [{
             ranges: [{
-              from: 0,
-              to: 4
+              from: 5,
+              to: 9
             }
             ],
             references: [{
