@@ -25,7 +25,7 @@
             <v-row style="margin-top:-50px">
                 <v-col>
                     <v-carousel>
-                        <v-carousel-item><img src="/img/datatypes/kook/amEnde_kookzeilen.PNG" /></v-carousel-item>
+                      <!--  <v-carousel-item><img src="/img/datatypes/kook/amEnde_kookzeilen.PNG" /></v-carousel-item> -->
                         <v-carousel-item><img src="/img/datatypes/kook/Clusters_amEnde_1_1_KA_oFW_3.png" /></v-carousel-item>
                     </v-carousel>
                 </v-col>
