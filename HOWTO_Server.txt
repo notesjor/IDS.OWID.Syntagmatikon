@@ -1,0 +1,16 @@
+HOWTO - Syntagmatikon auf lexik02
+
+- Build-Befehl:
+npm run generate
+--> Ordner "dist" --> packen aller Dateien in dist.zip
+--> dist.zip ins homeverzeichnis von tomcat auf lexik02 kopieren
+--> wechseln in root-Modus
+--> Dateien kopieren nach:
+/opt/http/syntagmatikon-2024_2
+--> dorthin wechseln, "unzip dist.zip" und alles überschreiben
+--> img-Dateien noch manuell verschieben in:
+cp -r img/* ../img/
+
+Pfad zum Syntagmatikon-Ordner kann man ändern in 
+nuxt.config.ts [im Hauptordner]
+dann muss ein entsprechendes neues Verzeichnis in opt/http angelegt werden
