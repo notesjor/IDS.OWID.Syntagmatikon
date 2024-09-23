@@ -9,18 +9,6 @@
     relative in Bezug auf die vorher formulierte Suchanfrage fußend auf der zu einem bestimmten Zeitpunkt ausgewählten
     Korpusbasis. Es geht also eher um Frequenzbereiche und Häufigkeitstrends bzw. -proportionen.</p>
   <br />
-  <p>
-    Im Syntagmatikon dienen Frequenzen nicht nur als empirische Basis, sondern werden selbst als lexikografische
-    Informationseinheiten angeboten:
-  </p>
-  <ul>
-    <li><i>in Form von Frequenzlisten:</i> <br />
-      <resources-list :filter="['KoMuX', 'PhrasKomp', 'PREPCON_ex', 'PREPCON_temp', 'SpruchList']" />
-    </li>
-    <li><i>als Häufigkeitsangaben zu einzelnen Einträgen/Stichwörtern:</i> <br />
-      <resources-list :filter="['PREPCON_temp', 'PREPCON_kon', 'WVBF']" />
-    </li>
-  </ul>
   <br />
 
   <div>
