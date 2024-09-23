@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 
 export const useResourcesStore = defineStore('resourcesStore', {
   state: () => {
-    return { info: [        
+    return { info: [    
       {
         "key": "PREPCON",
         "nameShort": "PREPCON<sup>online</sup>",
