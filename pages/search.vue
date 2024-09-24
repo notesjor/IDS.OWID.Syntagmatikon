@@ -4,16 +4,10 @@ definePageMeta({
 })
 </script>
 
-<!--
-    TODO: Liste gruppiert nach Ressourcen (Ressourcen als Gruppe)
-    TODO: Auswahl wieviele Artikel pro Ressource angezeigt werden
-    TODO: Hilfetext soll nach dem Anzeigen der Liste unterhalb der Facetten erscheinen
-    -->
-
 <template>
   <div style="max-width: 100%; margin:auto">
     <v-row>
-      <v-col cols="4">
+      <v-col cols="5">
         <v-tabs-window v-model="resultsTab">
           <v-tabs-window-item value="help">
             <div style="margin-top: 0px;">
@@ -43,13 +37,16 @@ definePageMeta({
               style="margin:-40px 0px 0px -50px"></v-pagination>
             <!-- SUCH-Ergebnis -->
             <div v-for="x in results">
-              <a :href="x.url">{{ x.lbl }} <span style="font-size: 0.8em; color:#999">(<span v-html="resourcesStore.getResource(x.dic)?.nameShort"></span>)</span></a>
+              <a :href="x.url" target="_blank">{{ x.lbl }} <span style="font-size: 0.8em; color:#999">(<span v-html="resourcesStore.getResource(x.dic)?.nameShort"></span>)</span></a>
             </div>
           </v-tabs-window-item>
         </v-tabs-window>
 
         <div v-if="resultsTab != 'help'"></div>
-        <v-btn v-else @click="this.resultsTab = 'results'" class="nocaps">Zeige alle Einträge</v-btn>
+        <div v-else style="text-align: center;">
+          <v-btn @click="this.resultsTab = 'results'" class="nocaps"
+          style="margin-top: 20px;" elevation="10">Zeige alle Einträge</v-btn>
+        </div>
       </v-col>
       <v-col cols="7">
         <div>
@@ -127,7 +124,7 @@ export default {
   data() {
     return {
       tab: "t1",
-      letters: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
+      //letters: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
 
       openPanels1: [],
       openPanels2: [],
@@ -137,7 +134,7 @@ export default {
 
       resourcesStore: null,
 
-      query: "*",
+      query: "",
       pageSize_ByEntries: 25,
       pageSize_ByResources: 3,
       page: 1,
@@ -156,6 +153,7 @@ export default {
   },
   methods: {
     newSearch(){
+      this.page = 1;
       var self = this;
       self.searchApi.search(self.query, self.resourcesStore.resourceUsedForSearch, self.search_header_switch).then(x => {
         self.results = x;
@@ -184,6 +182,17 @@ export default {
         self.results = x;
       });
     },
+    pageSize_ByEntries: function (val) {
+      this.searchApi.pageSize = val;
+      this.newSearch();
+    },
+    pageSize_ByResources: function (val) {
+      this.searchApi.pageSize = val;
+      this.newSearch();
+    },
+    "resourcesStore.resourceUsedForSearch": function (val) {
+      this.newSearch();
+    }
   },
   computed: {
     resourcesList: function () {
@@ -205,4 +214,7 @@ export default {
 
 <style scoped>
 .v-list-subheader {}
+.v-pagination__list > .v-pagination__item{
+  background-color: red;
+}
 </style>

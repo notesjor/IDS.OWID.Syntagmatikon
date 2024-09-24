@@ -1,5 +1,6 @@
 <template>
-    <h2>Wie funktioniert die Suche?</h2>
+    <div style="width: 90%;">
+      <h2>Wie funktioniert die Suche?</h2>
     <p style="font-size: 0.9em; margin-bottom: 10px; word-wrap: break-word;">
       Dieses Suche erlaubt es, alle Ressourcen im Syntagmatikon gleichzeitig abzufragen.
       Wie im Res&shy;sour&shy;cen&shy;kom&shy;pass be&shy;schrie&shy;ben, haben die Ressourcen verschiedene
@@ -19,4 +20,5 @@
       <i>Facetten:</i> schränken die Stichwortsuche auf bestimmte Kategorien und Eigenschaften ein.
       Zudem können Sie ein Facette auswählen, nach der die Ergebnisse gruppiert werden.
     </p>
+    </div>
 </template>

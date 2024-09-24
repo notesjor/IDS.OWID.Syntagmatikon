@@ -45,7 +45,6 @@
     </v-expansion-panel>    
 </template>
 
-<!-- TODO -->
 <style scoped>
 label {
     opacity: 1 !important;
@@ -96,13 +95,9 @@ export default {
         },
         selectInvert() {
             this.items.forEach(x => x.checked = !x.checked);
-        },
-        changeGroup() {
-            // TODO this.searchStore.updateGroup(this.name);
         }
     },
 
-    // watch if searchStore getter initialized is set to true
     watch: {
         items: {
             handler: function (val) {
