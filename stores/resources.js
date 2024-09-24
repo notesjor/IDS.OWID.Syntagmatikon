@@ -452,7 +452,15 @@ export const useResourcesStore = defineStore("resourcesStore", {
           res.push(...this.info[i][key]);
         }
       }
-      return [...new Set(res)];
+      
+      var set = [...new Set(res)];
+      set.sort();
+
+      var dict = [];      
+      for (var i = 0; i < set.length; i++) {
+        dict.push({ item: set[i], checked: true });
+      }
+      return dict;
     },
 
     switchResource: function (key) {

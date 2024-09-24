@@ -23,9 +23,9 @@ export default class search {
     return await this.callSearch();
   }
 
-  gotoPage(page) {
+  async gotoPage(page) {
     this.offset = (page - 1) * this.pageSize;
-    this.callSearch();
+    return await this.callSearch();
   }
 
   async __sendRequestMix() {
@@ -113,5 +113,9 @@ export default class search {
       this.max = 0;
       return [];
     }
+  }
+
+  get pageMax() {
+    return Math.ceil(this.max / this.pageSize);
   }
 }

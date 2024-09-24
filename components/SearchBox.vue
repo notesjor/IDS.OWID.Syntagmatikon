@@ -1,5 +1,5 @@
 <template>
-    <v-expansion-panel v-if="searchStore != null">
+    <v-expansion-panel v-if="resourceStore != null">
         <v-expansion-panel-title>
             <gradient :style="styleGradient" :color1="color1" :color2="color2" degree="90">                
             </gradient>
@@ -61,7 +61,7 @@ export default {
             type: String,
             required: true
         },
-        name: {
+        rkey: {
             type: String,
             required: true
         },
@@ -77,6 +77,7 @@ export default {
 
     mounted() {
         this.resourceStore = useResourcesStore();
+        this.items = this.resourceStore.valuesAvailable(this.rkey);
     },
 
     data() {
@@ -97,27 +98,15 @@ export default {
             this.items.forEach(x => x.checked = !x.checked);
         },
         changeGroup() {
-            this.searchStore.updateGroup(this.name);
+            // TODO this.searchStore.updateGroup(this.name);
         }
     },
 
     // watch if searchStore getter initialized is set to true
     watch: {
-        searchStore: function (val) {
-            if (val == null | val.initialized == false)
-                return;
-
-            var items = this.searchStore.getUniqueItems(this.name);
-            this.items = Array.from(items).map(x => {
-                return {
-                    item: x,
-                    checked: true
-                }
-            });
-        },
         items: {
             handler: function (val) {
-                this.searchStore.updateItems(this.name, val);
+                // TODO this.searchStore.updateItems(this.name, val);
             },
             deep: true
         }

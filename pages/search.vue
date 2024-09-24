@@ -39,7 +39,7 @@ definePageMeta({
                 </v-btn>
               </v-col>
             </div>
-            <v-pagination v-model="page" :length="maxPages" density="compact"
+            <v-pagination v-model="page" :length="this.searchApi?.pageMax"
               style="margin:-40px 0px 0px -50px"></v-pagination>
             <!-- SUCH-Ergebnis -->
             <div v-for="x in results">
@@ -84,16 +84,16 @@ definePageMeta({
               <h3>Facetten:</h3>
             </div>
             <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels1">
-              <search-box title="Zugänge" name="search_display" color1="#c79b31" color2="#a0ac67"></search-box>
-              <search-box title="Ressourcentypen (Zugang)" name="search_subtype" color1="#a0ac67"
+              <search-box title="Zugänge" rkey="search_display" color1="#c79b31" color2="#a0ac67"></search-box>
+              <search-box title="Ressourcentypen (Zugang)" rkey="search_subtype" color1="#a0ac67"
                 color2="#6fc2ab"></search-box>
-              <search-box title="Ressourcentypen (Typus)" name="search_type" color1="#6fc2ab"
+              <search-box title="Ressourcentypen (Typus)" rkey="search_type" color1="#6fc2ab"
                 color2="#38daf7"></search-box>
-              <search-box title="Informationstypen" name="search_functions" color1="#42dbfb"
+              <search-box title="Informationstypen" rkey="search_functions" color1="#42dbfb"
                 color2="#7ba1c6"></search-box>
-              <search-box title="Wort- und Ausdrucksarten" name="search_parts" color1="#7ba1c6"
+              <search-box title="Wort- und Ausdrucksarten" rkey="search_parts" color1="#7ba1c6"
                 color2="#5c93a0"></search-box>
-              <search-box title="Musterzugang" name="search_patterns" color1="#5c93a0" color2="#fa3a65"></search-box>
+              <search-box title="Musterzugang" rkey="search_patterns" color1="#5c93a0" color2="#fa3a65"></search-box>
             </v-expansion-panels>
           </v-col>
           <v-col>
@@ -178,7 +178,13 @@ export default {
       this.search_header = val ? "byGroup" : "byAZ";
       this.searchApi.pageSize = val ? this.pageSize_ByResources : this.pageSize_ByEntries;
       this.newSearch();
-    }
+    },
+    page: function (val) {
+      var self = this;
+      self.searchApi.gotoPage(val).then(x => {
+        self.results = x;
+      });
+    },
   },
   computed: {
     resourcesList: function () {
