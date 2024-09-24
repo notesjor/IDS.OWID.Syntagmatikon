@@ -41,7 +41,7 @@ definePageMeta({
             </div>
             <v-pagination v-model="page" :length="maxPages" density="compact"
               style="margin:-40px 0px 0px -50px"></v-pagination>
-            <search-group4 v-for="x in items" :title="x"></search-group4>
+            <search-result v-for="x in results" :title="x"></search-result>
           </v-tabs-window-item>
         </v-tabs-window>
 
@@ -79,16 +79,16 @@ definePageMeta({
               <h3>Facetten:</h3>
             </div>
             <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels1">
-              <search-box3 title="Zugänge" name="search_display" color1="#c79b31" color2="#a0ac67"></search-box3>
-              <search-box3 title="Ressourcentypen (Zugang)" name="search_subtype" color1="#a0ac67"
-                color2="#6fc2ab"></search-box3>
-              <search-box3 title="Ressourcentypen (Typus)" name="search_type" color1="#6fc2ab"
-                color2="#38daf7"></search-box3>
-              <search-box3 title="Informationstypen" name="search_functions" color1="#42dbfb"
-                color2="#7ba1c6"></search-box3>
-              <search-box3 title="Wort- und Ausdrucksarten" name="search_parts" color1="#7ba1c6"
-                color2="#5c93a0"></search-box3>
-              <search-box3 title="Musterzugang" name="search_patterns" color1="#5c93a0" color2="#fa3a65"></search-box3>
+              <search-box title="Zugänge" name="search_display" color1="#c79b31" color2="#a0ac67"></search-box>
+              <search-box title="Ressourcentypen (Zugang)" name="search_subtype" color1="#a0ac67"
+                color2="#6fc2ab"></search-box>
+              <search-box title="Ressourcentypen (Typus)" name="search_type" color1="#6fc2ab"
+                color2="#38daf7"></search-box>
+              <search-box title="Informationstypen" name="search_functions" color1="#42dbfb"
+                color2="#7ba1c6"></search-box>
+              <search-box title="Wort- und Ausdrucksarten" name="search_parts" color1="#7ba1c6"
+                color2="#5c93a0"></search-box>
+              <search-box title="Musterzugang" name="search_patterns" color1="#5c93a0" color2="#fa3a65"></search-box>
             </v-expansion-panels>
           </v-col>
           <v-col>
@@ -111,12 +111,12 @@ definePageMeta({
     </v-row>
 
   </div>
+  {{ searchApi }}
 </template>
 
 <script>
 import search from '~/api/search.js';
 import { useResourcesStore } from '~/stores/resources';
-import { useSearchStore } from '~/stores/search';
 
 export default {
   theme: { dark: false },
@@ -129,9 +129,9 @@ export default {
       openPanels2: [],
 
       searchApi: null,
+      results: [],
 
       resourcesStore: null,
-      searchStore: null,
       resources: [],
 
       resourcesSelected: [],
@@ -149,15 +149,13 @@ export default {
   },
   mounted() {
     this.searchApi = new search();
-    this.searchApi.search("stadt", ["KoMuX"], true)
-    console.log(this.searchApi)
+    this.searchApi.search("ei", ["KoMuX", "SpruchList", "FesteWV"], true).then(x => {
+      console.log(x);
+    });
 
     this.resourcesStore = useResourcesStore();
     this.resources = this.resourcesStore.getResources(null);
     this.resourcesSelected = this.resources.map(x => x.key);
-
-    this.searchStore = useSearchStore();
-    this.searchStore.init(this.resources);
   },
   methods: {
     toggleResource(key) {
@@ -166,18 +164,23 @@ export default {
       } else {
         this.resourcesSelected.push(key);
       }
+    }, 
+    newSearch(){
+      var self = this;
+      self.searchApi.search(val, self.resourcesSelected, self.search_header_switch).then(x => {
+        self.results = x;
+      });
     }
   },
   watch: {
     query: function (val) {
-      this.searchStore.changeQuery(val);
+      this.newSearch();
     },
     resultsTab: function (val) {
       this.teleportHelp = val == 'help' ? "#helpDefault" : "#helpExtend";
     },
     search_header_switch: function (val) {
-      this.searchStore.updateGroup(val ? "nameLong" : "nameShort");
-      console.log("search_header_switch", val);
+      this.newSearch();
     }
   },
   computed: {
@@ -185,13 +188,6 @@ export default {
       get: function () {
         return this.search_header_switch ? "byGroup" : "byAZ";
       }
-    },
-
-    items: function () {
-      if (this.searchStore == null)
-        return [];
-      var res = this.searchStore.getGroups();
-      return res;
     },
 
     resourcesList: function () {

@@ -1,8 +1,9 @@
 <template>
     <v-expansion-panel v-if="searchStore != null">
         <v-expansion-panel-title>
-            <v-switch density="compact" style="max-width: 50px; max-height: 20px; margin: -20px 10px 0px 0px;" color="primary"
-                v-model="searchStore.data[name].group" @update:model-value="changeGroup"></v-switch>
+            <gradient :style="styleGradient" :color1="color1" :color2="color2" degree="90">                
+            </gradient>
+            <v-icon :style="styleIcon" v-if="!allSameValue" @click="selectAll">mdi-filter-remove</v-icon>
             {{ title }}
         </v-expansion-panel-title>
         <v-expansion-panel-text>
@@ -64,6 +65,14 @@ export default {
             type: String,
             required: true
         },
+        color1:{
+            type: String,
+            default: "white"
+        },
+        color2:{
+            type: String,
+            default: "white"
+        },
     },
 
     mounted() {
@@ -104,13 +113,25 @@ export default {
                     item: x,
                     checked: true
                 }
-            }); 
+            });
         },
         items: {
             handler: function (val) {
                 this.searchStore.updateItems(this.name, val);
             },
             deep: true
+        }
+    },
+
+    computed: {
+        allSameValue() {
+            return this.items.every(x => x.checked === true) || this.items.every(x => x.checked === false);
+        },
+        styleGradient(){
+            return this.allSameValue ? "margin: -17px 5px -17px -25px; max-width:10px": "margin: -17px 10px -17px -25px; max-width: 50px "
+        },
+        styleIcon() {
+            return `margin: 0px 15px 0px -48px; color: ${this.$props.color != "white" ? "white" : "black"};`;
         }
     }
 }

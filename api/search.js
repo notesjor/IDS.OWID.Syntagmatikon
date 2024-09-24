@@ -6,13 +6,9 @@ export default class search {
   pageSize = 3;
 
   callSearch = null;
-
-  results = {};
   max = 0;
 
-  constructor() {}
-
-  search(query, sources, searchMerge) {
+  async search(query, sources, searchMerge) {
     this.query = query;
     this.offset = 0;
 
@@ -21,10 +17,10 @@ export default class search {
       this.callSearch = this.__sendRequestMerge;
     } else {
       this.sources = sources;
-      this.callSearch = this.__sendRequestSeparate;
+      this.callSearch = this.__sendRequestMix;
     }
 
-    this.callSearch();
+    return await this.callSearch();
   }
 
   gotoPage(page) {
@@ -32,7 +28,10 @@ export default class search {
     this.callSearch();
   }
 
-  async __sendRequestSeparate() {
+  async __sendRequestMix() {
+    var res = [];
+    var nmax = 0;
+
     for (var i = 0; i < this.sources.length; i++) {
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
@@ -44,7 +43,7 @@ export default class search {
       var request = {
         q: this.query,
         limit: this.pageSize,
-        filter: [`dic = ${this.sources[i]}`],
+        filter: `dic = ${this.sources[i]}`,
         offset: this.offset,
       };
 
@@ -54,15 +53,23 @@ export default class search {
         body: JSON.stringify(request),
         redirect: "follow",
       };
+      try {
+        var response = await fetch(
+          "http://lexik08.ids-mannheim.de/meilisearch/indexes/syntagmatikon/search",
+          requestOptions
+        );
+        var result = await response.json();
 
-      var self = this;
-      self.results = [];
+        nmax += result.estimatedTotalHits;
 
-      var response = await fetch(
-        "http://lexik08.ids-mannheim.de/meilisearch/indexes/syntagmatikon/search",
-        requestOptions
-      );
+        res.push(...result.hits);
+      } catch (error) {
+        console.log("error", error);
+      }
     }
+
+    this.max = nmax;
+    return res;
   }
 
   async __sendRequestMerge() {
@@ -96,12 +103,13 @@ export default class search {
       );
       var result = await response.json();
 
-      this.results = result.hits;
       this.max = result.estimatedTotalHits;
+      return result.hits;
     } catch (error) {
       console.log("error", error);
+
       this.max = 0;
-      this.results = [];
+      return [];
     }
   }
 }
