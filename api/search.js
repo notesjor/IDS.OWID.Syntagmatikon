@@ -3,21 +3,21 @@ export default class search {
   sources = [];
 
   offset = 0;
-  pageSize = 3;
+  pageSize = 25;
 
   callSearch = null;
   max = 0;
 
-  async search(query, sources, searchMerge) {
+  async search(query, sources, searchAll) {
     this.query = query;
     this.offset = 0;
 
-    if (searchMerge) {
-      this.sources = [sources.map((x) => `dic = ${x}`)];
-      this.callSearch = this.__sendRequestMerge;
-    } else {
+    if (searchAll) {
       this.sources = sources;
       this.callSearch = this.__sendRequestMix;
+    } else {
+      this.sources = [sources.map((x) => `dic = ${x}`)];
+      this.callSearch = this.__sendRequestMerge;
     }
 
     return await this.callSearch();
@@ -43,6 +43,7 @@ export default class search {
       var request = {
         q: this.query,
         limit: this.pageSize,
+        sort: ["key:asc"],
         filter: `dic = ${this.sources[i]}`,
         offset: this.offset,
       };
@@ -83,6 +84,7 @@ export default class search {
     var request = {
       q: this.query,
       limit: this.pageSize,
+      sort: ["key:asc"],
       offset: this.offset,
     };
     if (this.sources.length > 0) {

@@ -101,7 +101,7 @@ definePageMeta({
               <h3>Ressourcen:</h3>
             </div>
             <v-chip v-for="r in resourcesList" :key="r.key" variant="outlined" style="margin: 0px 5px 5px 0px"
-              :prepend-icon="r.icon" @click="toggleResource(r.key)">
+              :prepend-icon="r.icon" @click="switchReource(r.key)">
               <div v-html="r.nameShort" />
             </v-chip>
           </v-col>
@@ -137,17 +137,11 @@ export default {
       results: [],
 
       resourcesStore: null,
-      resources: [],
-
-      resourcesSelected: [],
 
       query: "*",
-      pageSize_ByEntries: 10,
+      pageSize_ByEntries: 25,
       pageSize_ByResources: 3,
       page: 1,
-
-      limit: 10,
-      syncLock: false,
 
       resultsTab: "help",
       search_header_switch: false,
@@ -158,24 +152,19 @@ export default {
     this.searchApi = new search();
 
     this.resourcesStore = useResourcesStore();
-    this.resources = this.resourcesStore.getResources(null);
-    this.resourcesSelected = this.resources.map(x => x.key);
 
     this.newSearch();
   },
   methods: {
-    toggleResource(key) {
-      if (this.resourcesSelected.includes(key)) {
-        this.resourcesSelected = this.resourcesSelected.filter(x => x != key);
-      } else {
-        this.resourcesSelected.push(key);
-      }
-    }, 
     newSearch(){
       var self = this;
-      self.searchApi.search(self.query, self.resourcesSelected, self.search_header_switch).then(x => {
+      self.searchApi.search(self.query, self.resourcesStore.resourceUsedForSearch(), self.search_header_switch).then(x => {
         self.results = x;
       });
+    },
+    switchReource(key) {
+      this.resourcesStore.switchResource(key);
+      this.newSearch();
     }
   },
   watch: {
@@ -193,11 +182,14 @@ export default {
   },
   computed: {
     resourcesList: function () {
-      return this.resources.map(x => {
+      if(this.resourcesStore == null)
+        return [];
+      var data = this.resourcesStore.resourcesState();
+      return Object.keys(data).map(x => {
         return {
-          key: x.key,
-          nameShort: x.nameShort,
-          icon: this.resourcesSelected.includes(x.key) ? "mdi-check-circle" : "mdi-circle-outline"
+          key: x,
+          nameShort: this.resourcesStore.getResource(x).nameShort,
+          icon: data[x] == 1 ? "mdi-check-circle" : data[x] == 0 ? "mdi-circle-outline" : "mdi-circle-off-outline"
         }
       });
     }
