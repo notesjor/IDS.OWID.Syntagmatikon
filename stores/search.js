@@ -35,6 +35,7 @@ export const useSearchStore = defineStore("searchStore", {
       this.data.search_functions = this.__getSet(resources, "search_functions");
       this.data.search_patterns = this.__getSet(resources, "search_patterns");
       this.data.search_parts = this.__getSet(resources, "search_parts");
+      this.data.nameLong = this.__getSet(resources, "nameLong");
 
       this.initialized = true;
     },
@@ -79,7 +80,7 @@ export const useSearchStore = defineStore("searchStore", {
     },
 
     async sendSearchRequest(key, page) {
-      console.log(this.initialized, this.query);
+      console.log(this.data);
       if(this.initialized == false) return;
 
       var myHeaders = new Headers();
