@@ -41,7 +41,10 @@ definePageMeta({
             </div>
             <v-pagination v-model="page" :length="maxPages" density="compact"
               style="margin:-40px 0px 0px -50px"></v-pagination>
-            <search-result v-for="x in results" :title="x"></search-result>
+            <!-- SUCH-Ergebnis -->
+            <div v-for="x in results">
+              <a :href="x.url">{{ x.lbl }} <span style="font-size: 0.8em; color:#999">(<span v-html="resourcesStore.getResource(x.dic)?.nameShort"></span>)</span></a>
+            </div>
           </v-tabs-window-item>
         </v-tabs-window>
 
@@ -55,7 +58,8 @@ definePageMeta({
               <h1>
                 <div style="display: inline-block; position: relative; top:-42px">Suche nach</div>
                 <v-combobox :items="['10', '25', '50', '100', '250', '500']" variant="outlined"
-                  style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px"></v-combobox>
+                  style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px"
+                  v-model="pageSize_ByEntries"></v-combobox>
                 <div style="display: inline-block; position: relative; top:-42px">Einträgen</div>
               </h1>
             </v-tabs-window-item>
@@ -63,7 +67,8 @@ definePageMeta({
               <h1>
                 <div style="display: inline-block; position: relative; top:-42px">Suche nach</div>
                 <v-combobox :items="['3', '5', '10', '20', '25', '50', '100']" variant="outlined"
-                  style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px"></v-combobox>
+                  style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px"
+                  v-model="pageSize_ByResources"></v-combobox>
                 <div style="display: inline-block; position: relative; top:-42px">Einträgen pro Ressource</div>
               </h1>
             </v-tabs-window-item>
@@ -136,26 +141,27 @@ export default {
 
       resourcesSelected: [],
 
-      query: "",
-      maxPages: 10,
+      query: "*",
+      pageSize_ByEntries: 10,
+      pageSize_ByResources: 3,
       page: 1,
 
       limit: 10,
       syncLock: false,
 
       resultsTab: "help",
-      search_header_switch: false
+      search_header_switch: false,
+      search_header: "byAZ"
     }
   },
   mounted() {
     this.searchApi = new search();
-    this.searchApi.search("ei", ["KoMuX", "SpruchList", "FesteWV"], true).then(x => {
-      console.log(x);
-    });
 
     this.resourcesStore = useResourcesStore();
     this.resources = this.resourcesStore.getResources(null);
     this.resourcesSelected = this.resources.map(x => x.key);
+
+    this.newSearch();
   },
   methods: {
     toggleResource(key) {
@@ -167,7 +173,7 @@ export default {
     }, 
     newSearch(){
       var self = this;
-      self.searchApi.search(val, self.resourcesSelected, self.search_header_switch).then(x => {
+      self.searchApi.search(self.query, self.resourcesSelected, self.search_header_switch).then(x => {
         self.results = x;
       });
     }
@@ -180,16 +186,12 @@ export default {
       this.teleportHelp = val == 'help' ? "#helpDefault" : "#helpExtend";
     },
     search_header_switch: function (val) {
+      this.search_header = val ? "byGroup" : "byAZ";
+      this.searchApi.pageSize = val ? this.pageSize_ByResources : this.pageSize_ByEntries;
       this.newSearch();
     }
   },
   computed: {
-    search_header: {
-      get: function () {
-        return this.search_header_switch ? "byGroup" : "byAZ";
-      }
-    },
-
     resourcesList: function () {
       return this.resources.map(x => {
         return {
