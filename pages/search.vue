@@ -5,8 +5,6 @@ definePageMeta({
 </script>
 
 <!--
-    TODO
-    TODO: Alphabetische Liste
     TODO: Liste gruppiert nach Ressourcen (Ressourcen als Gruppe)
     TODO: Auswahl wieviele Artikel pro Ressource angezeigt werden
     TODO: Hilfetext soll nach dem Anzeigen der Liste unterhalb der Facetten erscheinen
@@ -169,6 +167,10 @@ export default {
     },
     resultsTab: function (val) {
       this.teleportHelp = val == 'help' ? "#helpDefault" : "#helpExtend";
+    },
+    search_header_switch: function (val) {
+      this.searchStore.updateGroup(val ? "nameLong" : "nameShort");
+      console.log("search_header_switch", val);
     }
   },
   computed: {
