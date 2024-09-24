@@ -28,7 +28,14 @@ export default class search {
     return await this.callSearch();
   }
 
+  __ensureSearch(){
+    if (typeof this.pageSize === "string") {
+      this.pageSize = parseInt(this.pageSize);
+    }
+  }
+
   async __sendRequestMix() {
+    this.__ensureSearch();
     var res = [];
     var nmax = 0;
 
@@ -61,7 +68,8 @@ export default class search {
         );
         var result = await response.json();
 
-        nmax += result.estimatedTotalHits;
+        if(result.estimatedTotalHits > nmax)
+          nmax = result.estimatedTotalHits;
 
         res.push(...result.hits);
       } catch (error) {
@@ -74,6 +82,8 @@ export default class search {
   }
 
   async __sendRequestMerge() {
+    this.__ensureSearch();
+
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append(
