@@ -116,7 +116,6 @@ definePageMeta({
     </v-row>
 
   </div>
-  {{ searchApi }}
 </template>
 
 <script>
@@ -158,7 +157,7 @@ export default {
   methods: {
     newSearch(){
       var self = this;
-      self.searchApi.search(self.query, self.resourcesStore.resourceUsedForSearch(), self.search_header_switch).then(x => {
+      self.searchApi.search(self.query, self.resourcesStore.resourceUsedForSearch, self.search_header_switch).then(x => {
         self.results = x;
       });
     },
@@ -190,7 +189,8 @@ export default {
     resourcesList: function () {
       if(this.resourcesStore == null)
         return [];
-      var data = this.resourcesStore.resourcesState();
+      console.log("yes");
+      var data = this.resourcesStore.resourcesState;
       return Object.keys(data).map(x => {
         return {
           key: x,

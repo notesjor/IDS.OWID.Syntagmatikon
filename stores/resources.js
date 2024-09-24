@@ -418,8 +418,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
       ],
     };
   },
-  // could also be defined as
-  // state: () => ({ count: 0 })
   actions: {
     increment() {
       this.count++;
@@ -441,6 +439,10 @@ export const useResourcesStore = defineStore("resourcesStore", {
     },
     getItemByKey: function (key) {
       return this.info.find((resource) => resource.key === key);
+    },
+
+    setValue: function (key, value) {
+      this.valuesSelected[key] = value;
     },
 
     valuesAvailable: function (key) {
@@ -471,49 +473,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
       } else {
         this.resourcesDeselected.push(key);
       }
-    },
-
-    resourcesState: function () {
-      var res = {};
-      for (var i = 0; i < this.info.length; i++) {
-        res[this.info[i].key] = 1;
-
-        if (this.resourcesDeselected.includes(this.info[i].key)) {
-          res[this.info[i].key] = 0;
-          continue;
-        }
-
-        for (var key in this.valuesSelected)
-          if (typeof this.info[i][key] === "string") {
-            if (!this.valuesSelected[key].includes(this.info[i][key])) {
-              res[this.info[i].key] = -1;
-              break;
-            }
-          } else if (Array.isArray(this.info[i][key])) {
-            if (
-              !this.valuesSelected[key].some((x) =>
-                this.info[i][key].includes(x)
-              )
-            ) {
-              res[this.info[i].key] = -1;
-              break;
-            }
-          }
-      }
-
-      return res;
-    },
-
-    resourceUsedForSearch: function () {
-      var res = [];
-      var data = this.resourcesState();
-      for (var key in data) {
-        if (data[key] === 1) {
-          res.push(key);
-        }
-      }
-      return res;
-    }
+    },    
   },
 
   getters: {
@@ -522,5 +482,55 @@ export const useResourcesStore = defineStore("resourcesStore", {
         ...new Set(state.info.map((resource) => resource.categories).flat()),
       ];
     },
+
+    resourcesState: function (state) {
+      var res = {};
+      for (var i = 0; i < state.info.length; i++) {        
+        var done = false;
+        for (var key in state.valuesSelected)
+          if (typeof state.info[i][key] === "string") {
+            if (!state.valuesSelected[key].includes(state.info[i][key])) {
+              res[state.info[i].key] = -1;
+              done = true;
+              break;
+            }
+          } else if (Array.isArray(state.info[i][key])) {
+            if (
+              !state.valuesSelected[key].some((x) =>
+                state.info[i][key].includes(x)
+              )
+            ) {
+              res[state.info[i].key] = -1;
+              done = true;
+              break;
+            }
+          }
+        
+        if(done)
+          continue;
+
+        if (state.resourcesDeselected.includes(state.info[i].key)) {
+          res[state.info[i].key] = 0;
+          continue;
+        }
+
+        res[state.info[i].key] = 1;
+      }
+
+      return res;
+    },
+
+    resourceUsedForSearch: function (state) {
+      var res = [];
+      var data = state.resourcesState;
+      for (var key in data) {
+        if (data[key] === 1) {
+          res.push(key);
+        }
+      }
+      return res;
+    },
+
+
   },
 });
