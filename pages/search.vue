@@ -114,6 +114,7 @@ definePageMeta({
 </template>
 
 <script>
+import search from '~/api/search.js';
 import { useResourcesStore } from '~/stores/resources';
 import { useSearchStore } from '~/stores/search';
 
@@ -126,6 +127,8 @@ export default {
 
       openPanels1: [],
       openPanels2: [],
+
+      searchApi: null,
 
       resourcesStore: null,
       searchStore: null,
@@ -145,6 +148,10 @@ export default {
     }
   },
   mounted() {
+    this.searchApi = new search();
+    this.searchApi.search("stadt", ["KoMuX"], true)
+    console.log(this.searchApi)
+
     this.resourcesStore = useResourcesStore();
     this.resources = this.resourcesStore.getResources(null);
     this.resourcesSelected = this.resources.map(x => x.key);
