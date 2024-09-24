@@ -1,7 +1,7 @@
 <template>
     <v-expansion-panel v-if="resourceStore != null">
         <v-expansion-panel-title>
-            <gradient :style="styleGradient" :color1="color1" :color2="color2" degree="90">                
+            <gradient :style="styleGradient" :color1="color1" :color2="color2" :degree="180">                
             </gradient>
             <v-icon :style="styleIcon" v-if="!allSameValue" @click="selectAll">mdi-filter-remove</v-icon>
             {{ title }}
@@ -42,7 +42,7 @@
                 </v-row>
             </div>
         </v-expansion-panel-text>
-    </v-expansion-panel>
+    </v-expansion-panel>    
 </template>
 
 <!-- TODO -->
@@ -106,7 +106,12 @@ export default {
     watch: {
         items: {
             handler: function (val) {
-                // TODO this.searchStore.updateItems(this.name, val);
+                try{
+                    var values = val.filter(x => x.checked).map(x => x.item);
+                    this.resourceStore.setValue(this.rkey, values);
+                }catch{
+                    // ignore
+                }
             },
             deep: true
         }
