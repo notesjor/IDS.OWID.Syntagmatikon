@@ -98,9 +98,23 @@ definePageMeta({
               <h3>Ressourcen:</h3>
             </div>
             <v-chip v-for="r in resourcesList" :key="r.key" variant="outlined" style="margin: 0px 5px 5px 0px"
-              :prepend-icon="r.icon" @click="switchReource(r.key)">
+              :prepend-icon="r.icon" @click="switchReource(r)">
               <div v-html="r.nameShort" />
             </v-chip>
+
+            <v-dialog v-model="overlay">
+              <v-card style="max-width: 45%; margin-left: auto; margin-right: auto;">
+                <v-card-title>Hinweis</v-card-title>
+                <v-card-text>
+                  Die Ressource wurde durch eine Facette ausgeschlossen.
+                  Daher kann Sie weder an- noch abgewählt werden.
+                  Falls Sie die Ressource dennoch durchsuchen möchten, setzen Sie die Facette zurück.
+                </v-card-text>
+                <v-card-actions>
+                  <v-btn @click="overlay = false">Ok</v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
           </v-col>
         </v-row>
         <v-row>
@@ -124,6 +138,7 @@ export default {
   data() {
     return {
       initialized: false,
+      overlay: false,
       tab: "t1",
       //letters: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
 
@@ -166,8 +181,12 @@ export default {
       if(this.initialized)
         this.resultsTab = "results";
     },
-    switchReource(key) {
-      this.resourcesStore.switchResource(key);
+    switchReource(r) {
+      if(r.icon == "mdi-circle-off-outline"){
+        this.overlay = true;
+        return;
+      }
+      this.resourcesStore.switchResource(r.key);
       this.newSearch();
     }
   },

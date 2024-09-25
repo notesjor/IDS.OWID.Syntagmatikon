@@ -7,18 +7,17 @@
       Facetten,
       die hier genutzt werden können, um die Stichworte zu filtern.</p>
     <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-      <i>Stichwortsuche:</i> Geben Sie ein beliebiges Stichwort in das Suchfeld ein, um danach zu suchen.
+      <i>Stichwortsuche:</i> Geben Sie ein beliebiges Stichwort in das Suchfeld ein, um alle aktiven Ressourcen
+      danach zu durchsuchen.
+    </p>
+    <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
+      <i>Facetten:</i> schränken die Ressourcen anhand bestimmter Kategorien / Eigenschaften ein.
     </p>
     <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
       <i>Angewählte Ressourcen:</i>
       werden in die Suche einbezogen. Klicke Sie auf eine Ressource um sie zu aktivieren
       <v-icon>mdi-check-circle</v-icon> oder deaktivieren <v-icon>mdi-circle-outline</v-icon>. Ressourcen, die
-      durch eine
-      Facette ausgeschlossen sind, werden ebenfalls nicht angezeigt <v-icon>mdi-circle-off-outline</v-icon>.
-    </p>
-    <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-      <i>Facetten:</i> schränken die Stichwortsuche auf bestimmte Kategorien und Eigenschaften ein.
-      Zudem können Sie ein Facette auswählen, nach der die Ergebnisse gruppiert werden.
+      durch eine Facette ausgeschlossen sind, werden ebenfalls nicht angezeigt <v-icon>mdi-circle-off-outline</v-icon>.
     </p>
     </div>
 </template>
