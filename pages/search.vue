@@ -20,7 +20,7 @@ definePageMeta({
               <v-col>
                 <v-btn variant="text" density="compact" class="nocaps"
                   style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: -10px; padding:0px 5px"
-                  @click="this.search_header_switch = false">
+                  @click="search_header_switch = false">
                   Alphabetisch
                 </v-btn>
                 <div style="display: inline-block; margin: -30px 0px 0px 5px;" density="compact">
@@ -28,12 +28,12 @@ definePageMeta({
                 </div>
                 <v-btn variant="text" density="compact" class="nocaps"
                   style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: 15px; padding:0px 5px"
-                  @click="this.search_header_switch = true">
+                  @click="search_header_switch = true">
                   Gruppiert nach Ressource
                 </v-btn>
               </v-col>
             </div>
-            <v-pagination v-model="page" :length="this.searchApi?.pageMax"
+            <v-pagination v-model="page" :length="searchApi?.pageMax"
               style="margin:-40px 0px 0px -50px"></v-pagination>
             <!-- SUCH-Ergebnis -->
             <div v-for="x in results">
@@ -44,7 +44,7 @@ definePageMeta({
 
         <div v-if="resultsTab != 'help'"></div>
         <div v-else style="text-align: center;">
-          <v-btn @click="this.resultsTab = 'results'" class="nocaps"
+          <v-btn @click="resultsTab = 'results'" class="nocaps"
           style="margin-top: 20px;" elevation="10">Zeige alle Einträge</v-btn>
         </div>
       </v-col>
@@ -205,7 +205,7 @@ export default {
     resourcesList: function () {
       if(this.resourcesStore == null)
         return [];
-      console.log("yes");
+      
       var data = this.resourcesStore.resourcesState;
       return Object.keys(data).map(x => {
         return {

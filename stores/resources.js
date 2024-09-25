@@ -495,11 +495,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
               break;
             }
           } else if (Array.isArray(state.info[i][key])) {
-            if (
-              !state.valuesSelected[key].some((x) =>
-                state.info[i][key].includes(x)
-              )
-            ) {
+            if (!state.info[i][key].every((value) => state.valuesSelected[key].includes(value))) {
               res[state.info[i].key] = -1;
               done = true;
               break;
