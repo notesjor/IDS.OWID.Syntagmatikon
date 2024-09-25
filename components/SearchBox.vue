@@ -1,8 +1,9 @@
 <template>
-    <v-expansion-panel v-if="searchStore != null">
+    <v-expansion-panel v-if="resourceStore != null">
         <v-expansion-panel-title>
-            <v-switch density="compact" style="max-width: 50px; max-height: 20px; margin: -20px 10px 0px 0px;" color="primary"
-                v-model="searchStore.data[name].group" @update:model-value="changeGroup"></v-switch>
+            <gradient :style="styleGradient" :color1="color1" :color2="color2" :degree="180">                
+            </gradient>
+            <v-icon :style="styleIcon" v-if="!allSameValue" @click="selectAll">mdi-filter-remove</v-icon>
             {{ title }}
         </v-expansion-panel-title>
         <v-expansion-panel-text>
@@ -41,10 +42,9 @@
                 </v-row>
             </div>
         </v-expansion-panel-text>
-    </v-expansion-panel>
+    </v-expansion-panel>    
 </template>
 
-<!-- TODO -->
 <style scoped>
 label {
     opacity: 1 !important;
@@ -52,7 +52,7 @@ label {
 </style>
 
 <script>
-import { useSearchStore } from '~/stores/search';
+import { useResourcesStore } from '~/stores/resources';
 
 export default {
     props: {
@@ -60,19 +60,28 @@ export default {
             type: String,
             required: true
         },
-        name: {
+        rkey: {
             type: String,
             required: true
+        },
+        color1:{
+            type: String,
+            default: "white"
+        },
+        color2:{
+            type: String,
+            default: "white"
         },
     },
 
     mounted() {
-        this.searchStore = useSearchStore();
+        this.resourceStore = useResourcesStore();
+        this.items = this.resourceStore.valuesAvailable(this.rkey);
     },
 
     data() {
         return {
-            searchStore: null,
+            resourceStore: null,
             items: [],
         }
     },
@@ -86,31 +95,32 @@ export default {
         },
         selectInvert() {
             this.items.forEach(x => x.checked = !x.checked);
-        },
-        changeGroup() {
-            this.searchStore.updateGroup(this.name);
         }
     },
 
-    // watch if searchStore getter initialized is set to true
     watch: {
-        searchStore: function (val) {
-            if (val == null | val.initialized == false)
-                return;
-
-            var items = this.searchStore.getUniqueItems(this.name);
-            this.items = Array.from(items).map(x => {
-                return {
-                    item: x,
-                    checked: true
-                }
-            }); 
-        },
         items: {
             handler: function (val) {
-                this.searchStore.updateItems(this.name, val);
+                try{
+                    var values = val.filter(x => x.checked).map(x => x.item);
+                    this.resourceStore.setValue(this.rkey, values);
+                }catch{
+                    // ignore
+                }
             },
             deep: true
+        }
+    },
+
+    computed: {
+        allSameValue() {
+            return this.items.every(x => x.checked === true) || this.items.every(x => x.checked === false);
+        },
+        styleGradient(){
+            return this.allSameValue ? "margin: -17px 5px -17px -25px; max-width:10px": "margin: -17px 10px -17px -25px; max-width: 50px "
+        },
+        styleIcon() {
+            return `margin: 0px 15px 0px -48px; color: ${this.$props.color != "white" ? "white" : "black"};`;
         }
     }
 }

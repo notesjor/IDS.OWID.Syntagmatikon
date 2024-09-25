@@ -3,36 +3,42 @@ export default class search {
   sources = [];
 
   offset = 0;
-  pageSize = 3;
+  pageSize = 25;
 
   callSearch = null;
-
-  results = {};
   max = 0;
 
-  constructor() {}
-
-  search(query, sources, searchMerge) {
+  async search(query, sources, searchAll) {
     this.query = query;
     this.offset = 0;
 
-    if (searchMerge) {
+    if (searchAll) {
+      this.sources = sources;
+      this.callSearch = this.__sendRequestMix;
+    } else {
       this.sources = [sources.map((x) => `dic = ${x}`)];
       this.callSearch = this.__sendRequestMerge;
-    } else {
-      this.sources = sources;
-      this.callSearch = this.__sendRequestSeparate;
     }
 
-    this.callSearch();
+    return await this.callSearch();
   }
 
-  gotoPage(page) {
+  async gotoPage(page) {
     this.offset = (page - 1) * this.pageSize;
-    this.callSearch();
+    return await this.callSearch();
   }
 
-  async __sendRequestSeparate() {
+  __ensureSearch(){
+    if (typeof this.pageSize === "string") {
+      this.pageSize = parseInt(this.pageSize);
+    }
+  }
+
+  async __sendRequestMix() {
+    this.__ensureSearch();
+    var res = [];
+    var nmax = 0;
+
     for (var i = 0; i < this.sources.length; i++) {
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
@@ -44,7 +50,8 @@ export default class search {
       var request = {
         q: this.query,
         limit: this.pageSize,
-        filter: [`dic = ${this.sources[i]}`],
+        sort: ["key:asc"],
+        filter: `dic = ${this.sources[i]}`,
         offset: this.offset,
       };
 
@@ -54,18 +61,29 @@ export default class search {
         body: JSON.stringify(request),
         redirect: "follow",
       };
+      try {
+        var response = await fetch(
+          "http://lexik08.ids-mannheim.de/meilisearch/indexes/syntagmatikon/search",
+          requestOptions
+        );
+        var result = await response.json();
 
-      var self = this;
-      self.results = [];
+        if(result.estimatedTotalHits > nmax)
+          nmax = result.estimatedTotalHits;
 
-      var response = await fetch(
-        "http://lexik08.ids-mannheim.de/meilisearch/indexes/syntagmatikon/search",
-        requestOptions
-      );
+        res.push(...result.hits);
+      } catch (error) {
+        console.log("error", error);
+      }
     }
+
+    this.max = nmax;
+    return res;
   }
 
   async __sendRequestMerge() {
+    this.__ensureSearch();
+
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append(
@@ -76,6 +94,7 @@ export default class search {
     var request = {
       q: this.query,
       limit: this.pageSize,
+      sort: ["key:asc"],
       offset: this.offset,
     };
     if (this.sources.length > 0) {
@@ -96,12 +115,17 @@ export default class search {
       );
       var result = await response.json();
 
-      this.results = result.hits;
       this.max = result.estimatedTotalHits;
+      return result.hits;
     } catch (error) {
       console.log("error", error);
+
       this.max = 0;
-      this.results = [];
+      return [];
     }
+  }
+
+  get pageMax() {
+    return Math.ceil(this.max / this.pageSize);
   }
 }
