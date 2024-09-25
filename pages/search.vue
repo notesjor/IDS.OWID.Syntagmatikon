@@ -123,6 +123,7 @@ export default {
   theme: { dark: false },
   data() {
     return {
+      initialized: false,
       tab: "t1",
       //letters: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
 
@@ -150,6 +151,10 @@ export default {
     this.resourcesStore = useResourcesStore();
 
     this.newSearch();
+    
+    setTimeout(() => {
+      this.initialized = true;
+    }, 1000);
   },
   methods: {
     newSearch(){
@@ -158,6 +163,8 @@ export default {
       self.searchApi.search(self.query, self.resourcesStore.resourceUsedForSearch, self.search_header_switch).then(x => {
         self.results = x;
       });
+      if(this.initialized)
+        this.resultsTab = "results";
     },
     switchReource(key) {
       this.resourcesStore.switchResource(key);
