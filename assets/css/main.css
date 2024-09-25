@@ -8,6 +8,7 @@
   font-family: 'Libertinus';
   font-style: normal;
   font-weight: 400;
+  font-size: 20px;
   src: local(""), url("/fonts/libertinus/LibertinusSerifRegular.woff2") format("woff2");
 }
 

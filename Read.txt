@@ -1,0 +1,7 @@
+Syntagmatikon ausführen
+
+Testversion:
+bun run dev
+
+Build:
+bun run build
