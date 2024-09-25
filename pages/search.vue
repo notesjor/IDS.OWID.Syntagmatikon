@@ -37,7 +37,7 @@ definePageMeta({
               style="margin:-40px 0px 0px -50px"></v-pagination>
             <!-- SUCH-Ergebnis -->
             <div v-for="x in results">
-              <a :href="x.url" target="_blank">{{ x.lbl }} <span style="font-size: 0.8em; color:#999">(<span v-html="resourcesStore.getResource(x.dic)?.nameShort"></span>)</span></a>
+              <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl"></span> <span style="font-size: 0.8em; color:#999">(<span v-html="resourcesStore.getResource(x.dic)?.nameShort"></span>)</span></a>
             </div>
           </v-tabs-window-item>
         </v-tabs-window>
@@ -53,11 +53,11 @@ definePageMeta({
           <v-tabs-window v-model="search_header">
             <v-tabs-window-item value="byAZ">
               <h1>
-                <div style="display: inline-block; position: relative; top:-42px">Suche nach</div>
+                <div style="display: inline-block; position: relative; top:-42px">Suche nach Einträgen (</div>
                 <v-combobox :items="['10', '25', '50', '100', '250', '500']" variant="outlined"
-                  style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px"
+                  style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px 0px 2px"
                   v-model="pageSize_ByEntries"></v-combobox>
-                <div style="display: inline-block; position: relative; top:-42px">Einträgen</div>
+                <div style="display: inline-block; position: relative; top:-42px">pro Seite)</div>
               </h1>
             </v-tabs-window-item>
             <v-tabs-window-item value="byGroup">
@@ -242,5 +242,12 @@ export default {
 .v-list-subheader {}
 .v-pagination__list > .v-pagination__item{
   background-color: red;
+}
+</style>
+
+<style>
+.highlight {
+  font-style: italic;
+  border-bottom: 1px dotted #000;
 }
 </style>

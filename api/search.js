@@ -53,6 +53,10 @@ export default class search {
         sort: ["key:asc"],
         filter: `dic = ${this.sources[i]}`,
         offset: this.offset,
+        matchingStrategy: "all",
+        attributesToHighlight: ["lbl"],
+        highlightPreTag: "<span class='highlight'>",
+        highlightPostTag: "</span>",
       };
 
       var requestOptions = {
@@ -96,6 +100,10 @@ export default class search {
       limit: this.pageSize,
       sort: ["key:asc"],
       offset: this.offset,
+      matchingStrategy: "all",
+      attributesToHighlight: ["lbl"],            
+      highlightPreTag: "<span class='highlight'>",
+      highlightPostTag: "</span>",
     };
     if (this.sources.length > 0) {
       request.filter = this.sources;
