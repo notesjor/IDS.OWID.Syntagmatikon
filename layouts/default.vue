@@ -1,15 +1,15 @@
 <template>
   <v-app>
     <div class="d-print-none"
-      style="z-index:100; max-height: 65px; min-height:65px; background-color: black; padding:7px 10px 5px 10px; display: grid; grid-template-columns: 1fr auto 250px; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right'; ">
+      style="z-index:100; max-height: 75px; min-height:75px; background-color: black; padding:7px 10px 5px 10px; display: grid; grid-template-columns: 1fr auto 250px; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right'; ">
       <div class="inline" style="color:white; grid-area: left; margin-left:5px">
         <div style="min-height: 10px;" v-if="useMobileView"></div>
-        <div class="text-xl">
-          <img alt="Logo" src="/logo_syntagmatikon.svg"
-            style="max-height:40px; margin-right:10px; margin-top:5px; float: left;" />
+        <div class="text-2xl">
+          <img alt="Logo" src="/logo_syntagmatikon_knoten.jpg"
+            style="max-height:50px; margin-right:10px; margin-top:5px; float: left;" />
           {{ appName }}
         </div>
-        <div class="text-xs" style="text-align: left;">{{ useMobileView ? " " : appDescription }}</div>
+        <div class="" style="text-align: left;">{{ useMobileView ? " " : appDescription }}</div>
       </div>
 
       <div style="grid-area: middle;"></div>
@@ -17,7 +17,7 @@
       <div class="inline" style="grid-area: right;">
         <a :href="leftIconHref" target="_blank">
           <img alt="Logo" src="/ids-logo.svg"
-            style="margin-left: auto; max-height:45px; margin-right:10px; margin-top:5px" />
+            style="margin-left: auto; max-height:50px; margin-right:10px; margin-top:5px" />
         </a>
       </div>
     </div>
@@ -26,7 +26,7 @@
       expand-on-hover>
       <!-- LOGO START -->
       <div class="text-xl" style="margin: 7px 0px 15px 15px; opacity: 1" v-show="!useMobileView">
-        <img alt="Logo" src="/logo_syntagmatikon.svg"
+        <img alt="Logo" src="/logo_syntagmatikon_knoten.jpg"
           style="max-height:40px; margin-right:auto; margin-top:5px; float: left;" />
         <div style="margin-left: 50px; margin-bottom: 50px;">
           {{ appName }}
@@ -52,19 +52,23 @@
       <v-divider></v-divider>
 
       <!-- ADDITIONAL INFORMATION START -->
+       <!-- altes icon: mdi-book-open-variant-->
       <v-list density="compact" nav>
         <v-list-subheader>Ressourcenkompass</v-list-subheader>
         <router-link to="/resources">
-          <v-list-item prepend-icon="mdi-book-open-variant" title="Ressourcentypen"></v-list-item>
+          <v-list-item prepend-icon="mdi-compass" title="Ressourcentypen"></v-list-item>
         </router-link>
         <router-link to="/datatypes">
-          <v-list-item prepend-icon="mdi-book-open-variant" title="Informationstypen"></v-list-item>
+          <v-list-item prepend-icon="mdi-compass" title="Informationstypen"></v-list-item>
         </router-link>
         <router-link to="/expressions">
-          <v-list-item prepend-icon="mdi-book-open-variant" title="Wort- und Ausdrucksarten"></v-list-item>
+          <v-list-item prepend-icon="mdi-compass" title="Wort- und Ausdrucksarten"></v-list-item>
         </router-link>
         <router-link to="/patterns">
-          <v-list-item prepend-icon="mdi-book-open-variant" title="Musterzugänge"></v-list-item>
+          <v-list-item prepend-icon="mdi-compass" title="Musterzugänge"></v-list-item>
+        </router-link>
+        <router-link to="/examples">
+          <v-list-item prepend-icon="mdi-compass" title="Fallbeispiele"></v-list-item>
         </router-link>
       </v-list>
       <!-- ADDITIONAL INFORMATION END -->
@@ -83,7 +87,7 @@
       <v-divider></v-divider>
 
     <!-- ADDITIONAL INFORMATION START -->
-    <v-list density="compact" nav>
+ <!--    <v-list density="compact" nav>
       <v-list-subheader>Weitere Informationen</v-list-subheader>
       <router-link to="/analysis">
           <v-list-item prepend-icon="mdi-telescope" title="Sprachöffentlichkeit"></v-list-item>
@@ -91,8 +95,21 @@
       <router-link to="/timeline">
           <v-list-item prepend-icon="mdi-history" title="Forschungsgeschichte"></v-list-item>
       </router-link>
-    </v-list>
+    </v-list> -->
     <!-- ADDITIONAL INFORMATION END -->
+
+     <!-- GENERAL INFORMATION START -->
+     <v-list density="compact" nav>
+      <v-list-subheader>Hintergrund</v-list-subheader>
+      <router-link to="/team">
+          <v-list-item prepend-icon="mdi-account-group" title="Beteiligte Projekte"></v-list-item>
+      </router-link>
+      <router-link to="/impressum">
+          <v-list-item prepend-icon="mdi-email" title="Impressum & Kontakt"></v-list-item>
+      </router-link>
+    </v-list>
+    <!-- GENERAL INFORMATION END -->
+
 
     </v-navigation-drawer>
 

@@ -42,32 +42,32 @@ definePageMeta({
     <v-row>
       <v-col cols="12">
         <div class="container">
-          <tile title="Explorative Datenbanken" img="./img/resources/01.png" link="/resources/db_expl">
+          <tile-gradient title="Explorative Datenbanken" color1="#33dcfe" color2="#fec037">           
             Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von Korpusdaten 
             <resources-list :filter="['KoMuX', 'PREPCON_ex']" :showDesc="false"></resources-list>
-          </tile>
+          </tile-gradient>
 
-          <tile title="Deskriptive Datenbanken" img="./img/resources/02.png" link="/resources/db_desc">
+          <tile-gradient title="Deskriptive Datenbanken" color1="#33dcfe" color2="#fec037">           
             Eine Kombination aus automatisch erstellten
             Datenmengen und qualitativ erarbeiteten Informationen
             <resources-list :filter="['MAP', 'Verlaufsformen', 'Redeeinleiter']" :showDesc="false"></resources-list>
-          </tile>
+          </tile-gradient>
 
-          <tile title="Inventare und Sammlungen" img="./img/resources/03.png" link="/resources/inventory">
+          <tile-gradient title="Inventare und Sammlungen" color1="#33dcfe" color2="#fec037">           
             Aus dem Korpus extrahierte oder im
             Korpus überprüfte Sammlungen sprachlicher Ausdrücke ähnlichen Typs
             <resources-list :filter="['SpruchList', 'PhrasKomp', 'PREPCON_temp', 'DTWW']" :showDesc="false"></resources-list>
-          </tile>
+          </tile-gradient>
 
-          <tile title="Online-Wörterbücher" img="./img/resources/04.png" link="/resources/dictionaries">
+          <tile-gradient title="Online-Wörterbücher" color1="#33dcfe" color2="#fec037" link="/resources/dictionaries">
             Korpusbasierte Wörterbuchartikel im Hypertextformat<br />
             <resources-list :filter="['SPRW', 'FesteWV','DRI']" :showDesc="false"></resources-list>
-          </tile>
+          </tile-gradient>
          
-          <tile title="Pilotstudien" img="./img/resources/06.png">
+          <tile-gradient title="Pilotstudien" color1="#33dcfe" color2="#fec037">
             Linguistische Studien bzw. lexikografische Beschreibungen zu ausgewählten Phänomen<br />
             <resources-list :filter="['PREPCON_kon', 'WVBF']"></resources-list>
-          </tile>
+          </tile-gradient>
 
         </div>
       </v-col>
