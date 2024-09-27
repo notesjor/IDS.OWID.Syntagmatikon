@@ -1,4 +1,9 @@
 <template>
+      <v-btn>
+        <NuxtLink to="/patterns">
+            Zurück zu "Mustertypen"
+        </NuxtLink>
+    </v-btn>
     <h1>Musterangaben als Komponente lexikografischer Beschreibungen</h1>
     <p>In einigen Ressourcen werden von Hand aufbereitete Musterangaben und -visualisierungen als eine Komponente von Wörterbuchartikeln angeboten, und zwar in „PREPCON<sup>kontrastiv</sup> und „Feste Wortverbindungen“.</p>
     <resources-list :filter="['PREPCON_kon', 'SPRW', 'FesteWV']"/>

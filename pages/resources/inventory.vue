@@ -1,5 +1,11 @@
 <template>
+      <v-btn>
+        <NuxtLink to="/resources">
+            Zurück zu "Resourcentypen"
+        </NuxtLink>
+    </v-btn>
     <h1>Inventare und Sammlungen</h1>
+    <img src="/img/resources/03.png" alt="Inventare und Sammlungen" style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
     <p>Inventare im Syntagmatikon sind aus dem Korpus extrahierte oder im
         Korpus überprüfte Sammlungen sprachlicher Ausdrücke ähnlichen Typs. Der
         Wert dieser Ressourcen liegt darin, dass solche Listen die
@@ -18,10 +24,10 @@
         von gesicherter Usualität.</p>
     <p>Bezüglich der Kandidatenauswahl sind zwei Wege zu unterscheiden:</p>
     <br />&nbsp<br />
-    <strong style="text-overflow: ellipsis;">Listeneinträge wurde aus dem Korpus
-        ex&shy;tra&shy;hiert:</strong>
-    <resources-list :filter="['PHKO']" :showDesc="false"></resources-list>
-    <br />&nbsp<br />
-    <strong>Existierende Listen wurden im Korpus über&shy;prüft:</strong>
-    <resources-list :filter="['SpruchList', 'PhrasKomp', 'PREPCON_temp', 'DTWW']" :showDesc="false"></resources-list>
+    <p>Listeneinträge wurde aus dem Korpus
+        ex&shy;tra&shy;hiert:</p>
+    <resources-list :filter="['PhrasKomp']" :showDesc="false"></resources-list>
+    
+    <p>Existierende Listen wurden im Korpus über&shy;prüft:</p>
+    <resources-list :filter="['SpruchList', 'PREPCON_temp', 'DTWW']" :showDesc="false"></resources-list>
 </template>

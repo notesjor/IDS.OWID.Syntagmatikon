@@ -1,5 +1,11 @@
 <template>
+      <v-btn>
+        <NuxtLink to="/resources">
+            Zurück zu "Resourcentypen"
+        </NuxtLink>
+    </v-btn>
     <h1>Wörterbücher</h1>
+    <img src="/img/resources/04.png" alt="Wörterbücher" style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
     <p>Online-Wörterbücher im Syntagmatikon beinhalten korpusbasierte Wörterbuchartikel im Hypertextformat.
         Unter diese Kategorie fallen sowohl Ressourcen mit einer sehr komprimierten Artikelstruktur (Belege;
         Kategorien; <a href="https://www.owid.de/wb/progdb/start.html">Verlaufsformen</a>; <a

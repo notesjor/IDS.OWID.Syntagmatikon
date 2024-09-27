@@ -46,17 +46,17 @@ definePageMeta({
         <div class="container">
           <tile-gradient title="Direkter Zugang" color1="#34ddff" color2="#87bfcc" link="/patterns/direct">
             In diesen Ressourcen bilden Muster den primären Zugriff auf die aufbereiteten Daten und die lexikografischen Beschreibungen. Das heißt, alle Informationen sind über das Netzwerk semiabstrakter Schablonen herleitbar.
-            <resources-list :filter="['MAP', 'WVBF']"/>
+           <!-- <resources-list :filter="['MAP', 'WVBF']"/> -->
           </tile-gradient>
 
           <tile-gradient title="Lexikografische Angabe" color1="#87bfcc" color2="#ff5d48" link="/patterns/component">
             In einigen Ressourcen werden von Hand aufbereitete Musterangaben und -visualisierungen als eine Komponente von Wörterbuchartikeln angeboten, und zwar in „PREPCONkontrastiv“ und „Feste Wortverbindungen“.
-            <resources-list :filter="['PREPCON_kon', 'SPRW', 'FesteWV']"/>
+           <!-- <resources-list :filter="['PREPCON_kon', 'SPRW', 'FesteWV']"/> -->
           </tile-gradient>
 
           <tile-gradient title="Dynamische Erschließung" color1="#ff5d48" color2="#fec037" link="/patterns/dynamic">
             In vielen Ressourcen kann man sich selbst Muster erschließen, zum einen durch automatische Suchen und Sortierungen auf der Basis von vorgegebenen Kategorien; zum anderen durch eigene analytische Gruppierungen.
-            <resources-list :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp', 'Redeeinleiter', 'Verlaufsformen']"/>
+            <!-- <resources-list :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp', 'Redeeinleiter', 'Verlaufsformen']"/> -->
           </tile-gradient>
         </div>
       </v-col>

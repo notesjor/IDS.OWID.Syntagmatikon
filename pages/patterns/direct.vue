@@ -1,4 +1,9 @@
 <template>
+      <v-btn>
+        <NuxtLink to="/patterns">
+            Zurück zu "Mustertypen"
+        </NuxtLink>
+    </v-btn>
     <h1>Direkter Zugang über Muster</h1>
     <p>In diesen Ressourcen bilden Muster den primären Zugriff auf die aufbereiteten Daten und die lexikografischen
         Beschreibungen. Das heißt, alle Informationen sind über das Netzwerk semiabstrakter Schablonen herleitbar.</p>

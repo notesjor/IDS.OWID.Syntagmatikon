@@ -1,4 +1,9 @@
 <template>
+    <v-btn>
+        <NuxtLink to="/datatypes">
+            Zurück zu "Informationstypen"
+        </NuxtLink>
+    </v-btn>
     <h1>Manuelle Belegauswahl</h1>
 <p>Belege sind vom Lexikografen ausgewählte Textabschnitte auf der Basis
 von automatisch ermittelten <a

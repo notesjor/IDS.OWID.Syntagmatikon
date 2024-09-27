@@ -1,4 +1,9 @@
 <template>
+    <v-btn>
+        <NuxtLink to="/datatypes">
+            Zurück zu "Informationstypen"
+        </NuxtLink>
+    </v-btn>
     <h1>KWICs</h1>
     <h2>Keyword-in-Context: “Schlüsselwort im Kontext”</h2>
     <p>Wenn man eine Zeichenkette (z.B. ein Wort oder eine Wortgruppe) im

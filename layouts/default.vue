@@ -43,6 +43,9 @@
         <router-link to="/project-description">
           <v-list-item prepend-icon="mdi-information" title="Was ist das Syntagmatikon?"></v-list-item>
         </router-link>
+        <router-link to="/corpora">
+          <v-list-item prepend-icon="mdi-book-open" title="Korpora"></v-list-item>
+        </router-link>
         <router-link to="/discovery">
           <v-list-item prepend-icon="mdi-web" title="Ressourcenüberblick"></v-list-item>
         </router-link>
@@ -61,14 +64,14 @@
         <router-link to="/datatypes">
           <v-list-item prepend-icon="mdi-compass" title="Informationstypen"></v-list-item>
         </router-link>
-        <router-link to="/expressions">
+        <router-link to="/pos">
           <v-list-item prepend-icon="mdi-compass" title="Wort- und Ausdrucksarten"></v-list-item>
         </router-link>
         <router-link to="/patterns">
           <v-list-item prepend-icon="mdi-compass" title="Musterzugänge"></v-list-item>
         </router-link>
         <router-link to="/examples">
-          <v-list-item prepend-icon="mdi-compass" title="Fallbeispiele"></v-list-item>
+          <v-list-item prepend-icon="mdi-lightbulb-on" title="Fallbeispiele"></v-list-item>
         </router-link>
       </v-list>
       <!-- ADDITIONAL INFORMATION END -->

@@ -1,6 +1,11 @@
 <template>
-    <h1>Explorative Datenbank</h1>
-    <img src="/img/resources/01.png" alt="Explorative Datenbank" style="float:right; margin: 0 0 1em 1em; width: 40%;" />
+      <v-btn>
+        <NuxtLink to="/resources">
+            Zurück zu "Resourcentypen"
+        </NuxtLink>
+    </v-btn>
+    <h1>Explorative Datenbanken</h1>
+    <img src="/img/resources/01.png" alt="Explorative Datenbanken" style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
     Die explorativen Datenbanken im Syntagmatikon bieten Informationen zu umfassenden Sprachausschnitten auf
     der Basis von Korpusdaten (aktuell: Komposita und Präposition-Nomen-Verbindungen). Solche Datenbanken
     zeichnen sich dadurch aus, dass sie primär automatisch erstellt wurden und keine qualitativen Angaben
