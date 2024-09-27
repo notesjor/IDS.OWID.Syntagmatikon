@@ -160,6 +160,12 @@ export default {
 </script>
   
 <style scoped>
+.imgback {
+  background: url('logo_syntagmatikon_knoten.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+
 .v-window {
   max-height: 375px;
 }

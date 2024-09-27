@@ -58,13 +58,7 @@
 
           <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
 
-          <p>
-            Die Feldangaben fassen verwandte Sprichwörter des OWID-Sprichwörterbuchs zusammen. Diese
-            Gebrauchsverwandtschaft ist selten absolut identisch, sondern bezieht sich in der Regel auf semantische
-            oder pragmatische Teilaspekte. Alle Feldkomponenten sind mit dem entsprechenden Wörterbuchartikel
-            verlinkt.
-          </p>
-
+        
           <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
 
           <template #explain>
@@ -80,6 +74,15 @@
             <img src="/img/datatypes/fields/swbu_part_02.png" alt="" />
             <p>Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘</p>
           </template>
+
+
+          <p>
+            Die Feldangaben fassen verwandte Sprichwörter des OWID-Sprichwörterbuchs zusammen. Diese
+            Gebrauchsverwandtschaft ist selten absolut identisch, sondern bezieht sich in der Regel auf semantische
+            oder pragmatische Teilaspekte. Alle Feldkomponenten sind mit dem entsprechenden Wörterbuchartikel
+            verlinkt.
+          </p>
+
         </compare-item>
 
         <compare-item value="2" rkey="FesteWV"
