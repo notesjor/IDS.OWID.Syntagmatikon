@@ -1,11 +1,11 @@
 <template>
     <h1>Fallbeispiele</h1>
-    <div>
+    <div class="nolink">
 
       
-        <v-list style="font-size: x-large">
-            <v-list-item>      
-                <NuxtLink to="/examples/kook-am-Ende" >
+        <v-list density="comfortable">
+            <v-list-item prepend-icon="mdi-lightbulb-on" >      
+                <NuxtLink to="/examples/kook-am-Ende">
                     Kookkurrenzprofile - Beispiel: <em>am Ende</em>
                 </NuxtLink>
             </v-list-item>

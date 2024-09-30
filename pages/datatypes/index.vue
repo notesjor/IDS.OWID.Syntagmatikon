@@ -39,17 +39,24 @@ definePageMeta({
           <tile-gradient color1="#cb992b" color2="#33dcfe" title="Frequenzen" link="/datatypes/frequency">
             Häufigkeit des Vorkommens eines sprachlichen Ausdrucks im Korpus, ermittelt mithilfe von Zählungen
               und/oder Suchanfragen (queries)
+              <div class="mt-4">
+              <resources-list-compact :filter="['PREPCON_kon', 'PREPCON_temp', 'PREPCON_ex', 'KoMuX', 'Redeeinleiter']"/>
+              </div>
+            <!-- <br>
             <br>
-            <br>
-            <b>Was kann man anhand Frequenzangaben im Syntagmatikon ablesen?</b>
+            <b>Was kann man anhand Frequenzangaben im Syntagmatikon ablesen?</b> -->
           </tile-gradient>
 
           <tile-gradient color1="#cb992b" color2="#33dcfe" title="KWIC (KeyWord In Context)" link="/datatypes/kwic">
             Zeilen (Konkordanzen), in denen das Suchobjekt vorkommt (Textschnipsel)
-            <br>
-            <br>
+            <div class="mt-4">
+              <resources-list-compact :filter="['PREPCON_kon', 'PREPCON_temp', 'PREPCON_ex', 'SpruchList', 'FesteWV']"/>
+              </div>
+            <!--
             <b>Was sagen KWIC-Angaben im Syntagmatikon über den Gebrauch einer sprachlichen Einheit aus?</b>
+            -->  
           </tile-gradient>
+         
           <!--
           <tile title="Volltextstellen" img="/img/datatypes/belege.jpg" link="/datatypes/full-text">
             Welche Fragen lassen sich mit größeren Volltextstellen betrachten/beantworten? Welche Vorteile ergeben sich gegenüber KWIC?
@@ -59,24 +66,38 @@ definePageMeta({
           <tile-gradient color1="#cb992b" color2="#33dcfe" title="Kookkurrenzprofile" link="/datatypes/cooccurrence">
             Durch statistische Berechnungen (sog. Kookkurrenzanalysen) ermittelte Partnerwort-Profile
               (überproportional häufiges Miteinandervorkommen von Wörtern und Wortgruppen)
+              <div class="mt-4">
+              <resources-list-compact :filter="['PREPCON_kon', 'PREPCON_temp']"/>
+              </div>
+              <!--
             <br>
             <br>
             <b>Welche Hinweise liefern Kookkurrenzangaben im Syntagmatikon auf Bedeutung, Gebrauch und Festigkeit?</b>
+            -->
           </tile-gradient>
 
           <tile-gradient color1="#cb992b" color2="#33dcfe" title="Lückenfüllertabellen" link="/datatypes/patterntable">
             Durch automatische Auswertung ermittelte Füllerhäufigkeiten innerhalb eines Musterslots
+            <div class="mt-4">
+              <resources-list-compact :filter="['PREPCON_kon', 'PREPCON_temp', 'PREPCON_ex', 'WVBF']"/>
+              </div>
+              <!--
             <br>
             <br>
             <b>Welche Schlüsse lassen sich anhand der Füllertabellen im Syntagmatikon in Bezug auf die Festigkeit und Varianz syntagmatischer Einheiten ziehen?</b>
+            -->
           </tile-gradient>
 
           <tile-gradient color1="#cb992b" color2="#33dcfe" title="Annotierte Daten" link="/datatypes/annotation">
             Durch automatische Annotationsprogramme kategorisierte Korpusdaten (z.B. nach Wortarten, Satztypen, semantischen Kategorien).
-            <br>
+            <div class="mt-4">
+              <resources-list-compact :filter="['KoMuX']"/>
+              </div>
+           <!-- <br>
             <br>
             <b>Wie führen solche getaggten Daten im Syntagmatikon zur linguistischen Klassifikation von sprachlichen
             Phänomenen?</b>
+            -->
           </tile-gradient>
         </div>
 

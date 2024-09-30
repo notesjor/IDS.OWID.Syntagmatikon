@@ -107,8 +107,8 @@
       <router-link to="/team">
           <v-list-item prepend-icon="mdi-account-group" title="Beteiligte Projekte"></v-list-item>
       </router-link>
-      <router-link to="/impressum">
-          <v-list-item prepend-icon="mdi-email" title="Impressum & Kontakt"></v-list-item>
+      <router-link to="/contact">
+          <v-list-item prepend-icon="mdi-email" title="Kontakt"></v-list-item>
       </router-link>
     </v-list>
     <!-- GENERAL INFORMATION END -->

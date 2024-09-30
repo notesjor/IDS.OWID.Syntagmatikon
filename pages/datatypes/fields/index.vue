@@ -1,4 +1,11 @@
 <template>
+   <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
+        <div class="nolink">
+        <NuxtLink to="/datatypes">
+            Zurück zu "Informationstypen"
+        </NuxtLink>
+        </div> 
+    </v-btn>
   <h1>Felder</h1>
   <p>Die im Syntagmatikon verzeichneten Felder sind manuell zusammengestellte Gruppen von Syntagmen und/oder Monolexemen
     mit verwandten Gebrauchsmerkmalen. Gebrauchsverwandtschaften können sich u.a. beziehen auf: synonyme oder

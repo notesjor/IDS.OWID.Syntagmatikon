@@ -322,7 +322,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           description:
             "<b>Feste Wortverbindungen</b> wurde in der frühen Entwicklungsphase von OWID als neuer, korpusbasierter Zugang zu Bedeutung und Gebrauch in der Mehrwortlexikografie erarbeitet. Diese Rubrik enthält 25 Musterartikel (Phraseologismen, z. B. etw. <em>an die große Glocke hängen</em>) sowie 100 Kurzartikel (Wortverbindungen mit den adjektivischen Komponenten <em>blind; geistig; gesund; normal</em> und <em>sanft</em>). Die Beschreibungen fußen auf typischen Kookkurrenz- und Kontextmustern in Korpora.",
           img: "./img/sources/festeWV.PNG",
-          url: "https://www.owid.de/wb/sprw/start.html",
+          url: "https://www.owid.de/wb/uwv/start.html",
           tags: [],
           quest: "https://www.owid.de",
           search_display: "Stichwortliste",

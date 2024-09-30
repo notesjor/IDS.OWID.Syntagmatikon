@@ -1,8 +1,10 @@
 <template>
-      <v-btn>
+       <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
+        <div class="nolink">
         <NuxtLink to="/patterns">
             Zurück zu "Mustertypen"
         </NuxtLink>
+        </div> 
     </v-btn>
     <h1>Direkter Zugang über Muster</h1>
     <p>In diesen Ressourcen bilden Muster den primären Zugriff auf die aufbereiteten Daten und die lexikografischen

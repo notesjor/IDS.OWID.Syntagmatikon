@@ -1,8 +1,10 @@
 <template>
-      <v-btn>
+       <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
+        <div class="nolink">
         <NuxtLink to="/resources">
-            Zurück zu "Resourcentypen"
+            Zurück zu "Ressourcentypen"
         </NuxtLink>
+        </div> 
     </v-btn>
     <h1>Inventare und Sammlungen</h1>
     <img src="/img/resources/03.png" alt="Inventare und Sammlungen" style="float:right; margin: 1em 1em 0 1em; width: 40%;" />

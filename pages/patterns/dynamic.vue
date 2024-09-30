@@ -1,8 +1,10 @@
 <template>
-      <v-btn>
+     <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
+        <div class="nolink">
         <NuxtLink to="/patterns">
             Zurück zu "Mustertypen"
         </NuxtLink>
+        </div> 
     </v-btn>
     <h1>Dynamische Erschließung von Mustern</h1>
     <p>In vielen Ressourcen kann man sich selbst Muster erschließen, zum einen durch automatische Suchen und Sortierungen auf der Basis von vorgegebenen Kategorien; zum anderen durch eigene analytische Gruppierungen.</p>

@@ -247,6 +247,11 @@ div.relink a::before {
   content: "\F0CE0  "!important;
 }
 
+div.caption {
+  font-size: 0.8em;
+  color: grey
+}
+
 hi {
   font-variant: small-caps;
 }
@@ -255,6 +260,11 @@ ul {
   list-style-type: disc;
   list-style-position: inside;
   margin-left: 25px;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 ol {

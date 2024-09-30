@@ -44,29 +44,39 @@ definePageMeta({
         <div class="container">
           <tile-gradient title="Explorative Datenbanken" color1="#33dcfe" color2="#fec037" link="/resources/db_expl">           
             Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von Korpusdaten 
-           <!-- <resources-list :filter="['KoMuX', 'PREPCON_ex']" :showDesc="false"></resources-list> -->
+            <div class="mt-4">
+         <resources-list-compact :filter="['KoMuX', 'PREPCON_ex']" :showDesc="false"></resources-list-compact>
+         </div>
           </tile-gradient>
 
           <tile-gradient title="Deskriptive Datenbanken" color1="#33dcfe" color2="#fec037" link="/resources/db_desc">           
             Eine Kombination aus automatisch erstellten
             Datenmengen und qualitativ erarbeiteten Informationen
-            <!-- <resources-list :filter="['MAP', 'Verlaufsformen', 'Redeeinleiter']" :showDesc="false"></resources-list> -->
+            <div class="mt-4">
+            <resources-list-compact :filter="['MAP', 'Verlaufsformen', 'Redeeinleiter']" :showDesc="false"></resources-list-compact>
+          </div>
           </tile-gradient>
 
           <tile-gradient title="Inventare und Sammlungen" color1="#33dcfe" color2="#fec037" link="/resources/inventory">           
             Aus dem Korpus extrahierte oder im
             Korpus überprüfte Sammlungen sprachlicher Ausdrücke ähnlichen Typs
-            <!-- <resources-list :filter="['SpruchList', 'PhrasKomp', 'PREPCON_temp', 'DTWW']" :showDesc="false"></resources-list> -->
+            <div class="mt-4">
+            <resources-list-compact :filter="['SpruchList', 'PhrasKomp', 'PREPCON_temp', 'DTWW']" :showDesc="false"></resources-list-compact>
+            </div>
           </tile-gradient>
 
           <tile-gradient title="Online-Wörterbücher" color1="#33dcfe" color2="#fec037" link="/resources/dictionaries">
-            Korpusbasierte Wörterbuchartikel im Hypertextformat<br />
-            <!-- <resources-list :filter="['SPRW', 'FesteWV','DRI']" :showDesc="false"></resources-list> -->
+            Korpusbasierte Wörterbuchartikel im Hypertextformat
+            <div class="mt-4">
+            <resources-list-compact :filter="['SPRW', 'FesteWV','DRI']" :showDesc="false"></resources-list-compact>
+            </div>
           </tile-gradient>
          
           <tile-gradient title="Pilotstudien" color1="#33dcfe" color2="#fec037" link="/resources/prototypes">
-            Linguistische Studien bzw. lexikografische Beschreibungen zu ausgewählten Phänomen<br />
-            <!-- <resources-list :filter="['PREPCON_kon', 'WVBF']"></resources-list> -->
+            Linguistische Studien bzw. lexikografische Beschreibungen zu ausgewählten Phänomen
+            <div class="mt-4">
+            <resources-list-compact :filter="['PREPCON_kon', 'WVBF']"></resources-list-compact>
+            </div>
           </tile-gradient>
 
         </div>

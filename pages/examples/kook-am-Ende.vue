@@ -1,10 +1,13 @@
 <template>
-    <v-btn>
+     <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
+        <div class="nolink">
         <NuxtLink to="/examples">
             Zurück zu "Fallbeispiele"
         </NuxtLink>
+        </div> 
     </v-btn>
     <h1>Kookkurrenzprofile: Beispiel <em>am Ende</em></h1>
+    <div >Beispiel aus  <resources-list-compact :filter="['PREPCON_temp']"></resources-list-compact></div>
     <v-carousel>
                         <v-carousel-item><img src="/img/datatypes/kook/amEnde_kookzeilen.PNG" /></v-carousel-item>
                         <v-carousel-item><img src="/img/datatypes/kook/Clusters_amEnde_1_1_KA_oFW_3.png" /></v-carousel-item>

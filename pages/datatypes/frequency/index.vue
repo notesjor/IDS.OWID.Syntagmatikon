@@ -1,4 +1,11 @@
 <template>
+  <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
+        <div class="nolink">
+        <NuxtLink to="/datatypes">
+            Zurück zu "Informationstypen"
+        </NuxtLink>
+        </div> 
+    </v-btn>
   <h1>Frequenzangaben</h1>
   <p>Frequenzen (die Häufigkeit des Vorkommens eines Suchobjekts) werden auf der Basis von Suchanfragen (queries) zum
     Zwecke der Bestimmung von Gebräuchlichkeit im Korpus berechnet. Man kann davon ausgehen, dass besonders häufige
