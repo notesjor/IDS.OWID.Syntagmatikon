@@ -171,7 +171,7 @@
   
 <style scoped>
 .v-list-subheader {
-  margin-left: 45px;
+  margin: -15px 0px 0px 45px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 </style>
