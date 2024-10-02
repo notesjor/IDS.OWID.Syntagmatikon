@@ -129,7 +129,7 @@
       </div>
     </div>
 
-    <div
+    <v-footer
       style="z-index: 100; position: absolute; bottom: 0; width: 100%; max-height:64px; background-color: black; padding-left:25px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right';">
       <div style="color:white; grid-area: left; margin-top: 20px; font-size: 12px;" v-if="!useMobileView">
         <img alt="Logo" src="/logo_left.svg" style="max-height:35px; margin-top: -15px;" float="left" />
@@ -162,13 +162,12 @@
       <div style="grid-area: middle;"></div>
 
       <div style="text-align: right; grid-area: right">
-        <div style="display: inline-block; margin-top:5px; margin-left: -200px"><v-switch label="Mobile" v-model="useMobileView" style="color: white; max-height: 30px;"></v-switch></div>
-        <a :href="rightIconHref" target="_blank" style="display: inline-block; margin-top: -75px">
+        <a :href="rightIconHref" target="_blank" style="display: inline-block; margin-top: 0px">
           <img alt="Logo" src="/logo_right.svg"
             style="max-height:65px; min-height: 45px; min-width: 200px; margin-left: auto; " />
         </a>
       </div>
-    </div>
+    </v-footer>
 
   </v-app>
 </template>
