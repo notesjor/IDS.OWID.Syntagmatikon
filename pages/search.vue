@@ -17,10 +17,11 @@ definePageMeta({
             append-inner-icon="mdi-magnify"></v-text-field>
         </div>
 
-        <div style="margin-top: -15px;">
-          <h2>Gefundene Einträge:</h2>
+        <div style="margin-top: -25px;">
+          <h3>Gefundene Einträge:</h3>
           <v-col>
-            <v-btn variant="text" density="compact" class="nocaps"
+            <div style="text-align: center; margin-left: -15px;">
+              <v-btn variant="text" density="compact" class="nocaps"
               style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: -10px; padding:0px 5px"
               @click="search_header_switch = false">
               Alphabetisch
@@ -33,36 +34,49 @@ definePageMeta({
               @click="search_header_switch = true">
               durchmischt nach Ressourcen
             </v-btn>
+            </div>
           </v-col>
         </div>
 
         <v-pagination v-model="page" :length="searchApi?.pageMax" style="margin:-40px 0px 0px -50px"></v-pagination>
         <!-- SUCH-Ergebnis -->
-        <div v-for="x in results">
-          <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl"></span> <span
-              style="font-size: 0.8em; color:#999">(<span
-                v-html="resourcesStore.getResource(x.dic)?.nameShort"></span>)</span></a>
-        </div>
+        <v-tabs-window v-model="search_header">
+          <v-tabs-window-item value="byAZ">
+            <div v-for="x in results">
+              <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl"></span> <span
+                  style="font-size: 0.8em; color:#999">(<span
+                    v-html="resourcesStore.getResource(x.dic)?.nameShort"></span>)</span></a>
+            </div>
+          </v-tabs-window-item>
+          <v-tabs-window-item value="byGroup">
+            <div v-for="g in resultGroups">
+              <div style="font-size: 0.8em; color:#999; margin-top:10px" v-html="g"></div>
+              <div v-for="x in resultsByGroup(g)">
+                <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl"/></a>
+              </div>
+            </div>
+          </v-tabs-window-item>
+        </v-tabs-window>
         <v-pagination v-model="page" :length="searchApi?.pageMax" style="margin: 0px 0px 0px -50px"></v-pagination>
-        
+
         <div style="text-align: center;">
           <v-tabs-window v-model="search_header">
             <v-tabs-window-item value="byAZ">
-                <v-combobox :items="['10', '25', '50', '100', '250', '500']" variant="outlined"
-                  style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px 0px 2px"
-                  v-model="pageSize_ByEntries" density="compact"></v-combobox>
-                <div style="display: inline-block; position: relative; top:-38px">Einträge pro Seite</div>
+              <v-combobox :items="['10', '25', '50', '100', '250', '500']" variant="outlined"
+                style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px 0px 2px"
+                v-model="pageSize_ByEntries" density="compact"></v-combobox>
+              <div style="display: inline-block; position: relative; top:-38px">Einträge pro Seite</div>
             </v-tabs-window-item>
             <v-tabs-window-item value="byGroup">
-                <v-combobox :items="['3', '5', '10', '20', '25', '50', '100']" variant="outlined"
-                  style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px"
-                  v-model="pageSize_ByResources" density="compact"></v-combobox>
-                <div style="display: inline-block; position: relative; top:-38px">Einträge pro Ressource</div>
+              <v-combobox :items="['3', '5', '10', '20', '25', '50', '100']" variant="outlined"
+                style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px"
+                v-model="pageSize_ByResources" density="compact"></v-combobox>
+              <div style="display: inline-block; position: relative; top:-38px">Einträge pro Ressource</div>
             </v-tabs-window-item>
           </v-tabs-window>
         </div>
       </v-col>
-      <v-col cols="7">        
+      <v-col cols="7">
         <v-row>
           <v-col>
             <div style="margin-top: -20px;">
@@ -106,8 +120,7 @@ definePageMeta({
           </v-col>
         </v-row>
         <v-row>
-          <div v-if="resultsTab == 'help'"></div>
-          <div v-else>
+          <div>
             <search-help></search-help>
           </div>
         </v-row>
@@ -125,7 +138,6 @@ export default {
   theme: { dark: false },
   data() {
     return {
-      initialized: false,
       overlay: false,
       tab: "t1",
       //letters: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
@@ -143,7 +155,6 @@ export default {
       pageSize_ByResources: 3,
       page: 1,
 
-      resultsTab: "help",
       search_header_switch: false,
       search_header: "byAZ"
     }
@@ -154,10 +165,6 @@ export default {
     this.resourcesStore = useResourcesStore();
 
     this.newSearch();
-
-    setTimeout(() => {
-      this.initialized = true;
-    }, 1000);
   },
   methods: {
     newSearch() {
@@ -166,8 +173,6 @@ export default {
       self.searchApi.search(self.query, self.resourcesStore.resourceUsedForSearch, self.search_header_switch).then(x => {
         self.results = x;
       });
-      if (this.initialized)
-        this.resultsTab = "results";
     },
     switchReource(r) {
       if (r.icon == "mdi-circle-off-outline") {
@@ -176,14 +181,14 @@ export default {
       }
       this.resourcesStore.switchResource(r.key);
       this.newSearch();
+    },
+    resultsByGroup(group){
+      return this.results.filter(x => x.dic == group);
     }
   },
   watch: {
     query: function (val) {
       this.newSearch();
-    },
-    resultsTab: function (val) {
-      this.teleportHelp = val == 'help' ? "#helpDefault" : "#helpExtend";
     },
     search_header_switch: function (val) {
       this.search_header = val ? "byGroup" : "byAZ";
@@ -221,6 +226,13 @@ export default {
           icon: data[x] == 1 ? "mdi-check-circle" : data[x] == 0 ? "mdi-circle-outline" : "mdi-circle-off-outline"
         }
       });
+    },
+    resultGroups: function () {
+      var res = new Set();
+      this.results.forEach(x => {
+        res.add(x.dic);
+      });
+      return res;
     }
   }
 }
