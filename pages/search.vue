@@ -18,7 +18,7 @@ definePageMeta({
         </div>
 
         <div style="margin-top: -25px;">
-          <h3>Gefundene Einträge:</h3>
+          <h3>Anzeige-Optionen:</h3>
           <v-col>
             <div style="text-align: center; margin-left: -15px;">
               <v-btn variant="text" density="compact" class="nocaps"
@@ -78,82 +78,115 @@ definePageMeta({
         </div>
       </v-col>
       <v-col cols="6">
-        <v-row>
-          <v-col>
-            <div style="margin-top: -20px;">
-              <h3>Facetten:</h3>
-            </div>
-            <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels1">
-              <search-box title="Zugänge" rkey="search_display" color1="#c79b31" color2="#a0ac67"></search-box>
-              <search-box title="Ressourcentypen (Zugang)" rkey="search_subtype" color1="#a0ac67"
-                color2="#6fc2ab"></search-box>
-              <search-box title="Ressourcentypen (Typus)" rkey="search_type" color1="#6fc2ab"
-                color2="#38daf7"></search-box>
-              <search-box title="Informationstypen" rkey="search_functions" color1="#42dbfb"
-                color2="#7ba1c6"></search-box>
-              <search-box title="Wort- und Ausdrucksarten" rkey="search_parts" color1="#7ba1c6"
-                color2="#5c93a0"></search-box>
-              <search-box title="Musterzugang" rkey="search_patterns" color1="#5c93a0" color2="#fa3a65"></search-box>
-            </v-expansion-panels>
-          </v-col>
-          <v-col>
-            <div style="margin-top: -20px;">
-              <h3>Ressourcen:</h3>
-              <v-row style="margin:-25px 0px 20px -35px;">
-                <div class="nolink">
-                  <v-col>
-                  <div style="font-size:14px; display:block; float:left; padding-left:25px">
-                    Auswahl:
+        <v-expansion-panels v-model="searchOptions" multiple>
+          <v-expansion-panel elevation="0" value="help">
+            <v-expansion-panel-title style="font-weight: 500; font-size: 1.2em;">
+              Wie funktioniert die Suche?
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <p style="font-size: 0.9em; margin-bottom: 10px; word-wrap: break-word;">
+                Dieses Suche erlaubt es, alle Ressourcen im Syntagmatikon gleichzeitig abzufragen.
+                Wie im Res&shy;sour&shy;cen&shy;kom&shy;pass be&shy;schrie&shy;ben, haben die Ressourcen verschiedene
+                Facetten,
+                die hier genutzt werden können, um die Stichworte zu filtern.</p>
+              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
+                <i>Stichwortsuche:</i> Geben Sie ein beliebiges Stichwort in das Suchfeld ein, um alle aktiven
+                Ressourcen
+                danach zu durchsuchen.
+              </p>
+              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
+                <i>Anzeige-Optionen:</i> Die Einträge werden entweder alphabetisch (mit Ressourcenname) angezeigt
+                oder je Ressource einzeln gezogen.
+              </p>
+              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
+                <i>Angewählte Ressourcen:</i>
+                werden in die Suche einbezogen. Klicke Sie auf eine Ressource um sie zu aktivieren
+                <v-icon>mdi-check-circle</v-icon> oder deaktivieren <v-icon>mdi-circle-outline</v-icon>. Ressourcen, die
+                durch eine Facette ausgeschlossen sind, werden ebenfalls nicht angezeigt
+                <v-icon>mdi-circle-off-outline</v-icon>.
+              </p>
+              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
+                <i>Facetten:</i> schränken die Ressourcen anhand bestimmter Kategorien / Eigenschaften ein.
+              </p>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+          <v-expansion-panel elevation="0" value="resourcesSelection">
+            <v-expansion-panel-title style="font-weight: 500; font-size: 1.2em;">
+              Ressourcen
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <div style="margin-top: -20px;">
+                <v-row style="margin:-20px 0px 20px -35px;">
+                  <div class="nolink">
+                    <v-col>
+                      <div style="font-size:14px; display:block; float:left; padding-left:25px">
+                        Auswahl:
+                      </div>
+                      <a @click="selectAll" style="cursor: pointer; font-weight: 600;">
+                        <h6
+                          style="font-size:14px; display:block; float:left; margin-left:10px; font-variant:small-caps">
+                          Alle
+                        </h6>
+                      </a>
+                      <a @click="selectNone" style="cursor: pointer; font-weight: 600;">
+                        <h6
+                          style="font-size:14px; display:block; float:left; margin:0px 10px 0px 10px; font-variant:small-caps">
+                          Keine
+                        </h6>
+                      </a>
+                      <a @click="selectInvert" style="cursor: pointer; font-weight: 600;">
+                        <h6 style="font-size:14px; display:block; float:left; font-variant:small-caps">
+                          Invertieren
+                        </h6>
+                      </a>
+                    </v-col>
                   </div>
-                  <a @click="selectAll" style="cursor: pointer; font-weight: 600;">
-                    <h6 style="font-size:14px; display:block; float:left; margin-left:10px; font-variant:small-caps">
-                      Alle
-                    </h6>
-                  </a>
-                  <a @click="selectNone" style="cursor: pointer; font-weight: 600;">
-                    <h6
-                      style="font-size:14px; display:block; float:left; margin:0px 10px 0px 10px; font-variant:small-caps">
-                      Keine
-                    </h6>
-                  </a>
-                  <a @click="selectInvert" style="cursor: pointer; font-weight: 600;">
-                    <h6 style="font-size:14px; display:block; float:left; font-variant:small-caps">
-                      Invertieren
-                    </h6>
-                  </a>
-                </v-col>
-                </div>
-              </v-row>
-            </div>
-            <v-chip v-for="r in resourcesList" :key="r.key" variant="outlined" style="margin: 0px 5px 5px 0px"
-              :prepend-icon="r.icon" @click="switchReource(r)">
-              <div v-html="r.nameShort" />
-            </v-chip>
-
-            <v-dialog v-model="overlay">
-              <v-card style="max-width: 45%; margin-left: auto; margin-right: auto;">
-                <v-card-title>Hinweis</v-card-title>
-                <v-card-text>
-                  Die Ressource wurde durch eine Facette ausgeschlossen.
-                  Daher kann Sie weder an- noch abgewählt werden.
-                  Falls Sie die Ressource dennoch durchsuchen möchten, setzen Sie die Facette zurück.
-                </v-card-text>
-                <v-card-actions>
-                  <v-btn @click="overlay = false">Ok</v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-dialog>
-          </v-col>
-        </v-row>
-        <v-row>
-          <div>
-            <search-help></search-help>
-          </div>
-        </v-row>
+                </v-row>
+              </div>
+              <v-chip v-for="r in resourcesList" :key="r.key" variant="outlined" style="margin: 0px 5px 5px 0px"
+                :prepend-icon="r.icon" @click="switchReource(r)">
+                <div v-html="r.nameShort" />
+              </v-chip>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+          <v-expansion-panel elevation="0" value="fineGrain">
+            <v-expansion-panel-title style="font-weight: 500; font-size: 1.2em;">
+              Facetten
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels1">
+                <search-box title="Zugänge" rkey="search_display" color1="#c79b31" color2="#a0ac67"></search-box>
+                <search-box title="Ressourcentypen (Zugang)" rkey="search_subtype" color1="#a0ac67"
+                  color2="#6fc2ab"></search-box>
+                <search-box title="Ressourcentypen (Typus)" rkey="search_type" color1="#6fc2ab"
+                  color2="#38daf7"></search-box>
+                <search-box title="Informationstypen" rkey="search_functions" color1="#42dbfb"
+                  color2="#7ba1c6"></search-box>
+                <search-box title="Wort- und Ausdrucksarten" rkey="search_parts" color1="#7ba1c6"
+                  color2="#5c93a0"></search-box>
+                <search-box title="Musterzugang" rkey="search_patterns" color1="#5c93a0" color2="#fa3a65"></search-box>
+              </v-expansion-panels>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+        </v-expansion-panels>
       </v-col>
     </v-row>
 
   </div>
+
+  <v-dialog v-model="overlay">
+    <v-card style="max-width: 45%; margin-left: auto; margin-right: auto;">
+      <v-card-title>Hinweis</v-card-title>
+      <v-card-text>
+        Die Ressource wurde durch eine Facette ausgeschlossen.
+        Daher kann Sie weder an- noch abgewählt werden.
+        Falls Sie die Ressource dennoch durchsuchen möchten, setzen Sie die Facette zurück.
+      </v-card-text>
+      <v-card-actions>
+        <v-btn @click="overlay = false">Ok</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
 </template>
 
 <script>
@@ -168,6 +201,7 @@ export default {
       tab: "t1",
       //letters: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
 
+      searchOptions: ["help", "resourcesSelection"],
       openPanels1: [],
       openPanels2: [],
 
