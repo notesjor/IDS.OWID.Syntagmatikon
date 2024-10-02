@@ -454,11 +454,11 @@ export const useResourcesStore = defineStore("resourcesStore", {
           res.push(...this.info[i][key]);
         }
       }
-      
+
       var set = [...new Set(res)];
       set.sort();
 
-      var dict = [];      
+      var dict = [];
       for (var i = 0; i < set.length; i++) {
         dict.push({ item: set[i], checked: true });
       }
@@ -473,7 +473,21 @@ export const useResourcesStore = defineStore("resourcesStore", {
       } else {
         this.resourcesDeselected.push(key);
       }
-    },    
+    },
+    selectAll() {
+      this.resourcesDeselected = [];
+    },
+    selectNone() {
+      this.resourcesDeselected = this.info.map((resource) => resource.key);
+    },
+    selectInvert() {
+      var all = new Set(this.info.map((resource) => resource.key));
+
+      for (var x in this.resourcesDeselected)
+        all.delete(this.resourcesDeselected[x]);
+
+      this.resourcesDeselected = [...all];
+    },
   },
 
   getters: {
@@ -485,7 +499,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
 
     resourcesState: function (state) {
       var res = {};
-      for (var i = 0; i < state.info.length; i++) {        
+      for (var i = 0; i < state.info.length; i++) {
         var done = false;
         for (var key in state.valuesSelected)
           if (typeof state.info[i][key] === "string") {
@@ -495,15 +509,18 @@ export const useResourcesStore = defineStore("resourcesStore", {
               break;
             }
           } else if (Array.isArray(state.info[i][key])) {
-            if (!state.info[i][key].every((value) => state.valuesSelected[key].includes(value))) {
+            if (
+              !state.info[i][key].every((value) =>
+                state.valuesSelected[key].includes(value)
+              )
+            ) {
               res[state.info[i].key] = -1;
               done = true;
               break;
             }
           }
-        
-        if(done)
-          continue;
+
+        if (done) continue;
 
         if (state.resourcesDeselected.includes(state.info[i].key)) {
           res[state.info[i].key] = 0;
@@ -526,7 +543,5 @@ export const useResourcesStore = defineStore("resourcesStore", {
       }
       return res;
     },
-
-
   },
 });

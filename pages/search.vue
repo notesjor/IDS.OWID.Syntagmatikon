@@ -7,7 +7,7 @@ definePageMeta({
 <template>
   <div style="max-width: 100%; margin:auto">
     <v-row>
-      <v-col cols="5">
+      <v-col cols="6">
         <h1>
           Stichwortsuche
         </h1>
@@ -22,18 +22,18 @@ definePageMeta({
           <v-col>
             <div style="text-align: center; margin-left: -15px;">
               <v-btn variant="text" density="compact" class="nocaps"
-              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: -10px; padding:0px 5px"
-              @click="search_header_switch = false">
-              Alphabetisch
-            </v-btn>
-            <div style="display: inline-block; margin: -30px 0px 0px 5px;" density="compact">
-              <v-switch v-model="search_header_switch"></v-switch>
-            </div>
-            <v-btn variant="text" density="compact" class="nocaps"
-              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: 15px; padding:0px 5px"
-              @click="search_header_switch = true">
-              durchmischt nach Ressourcen
-            </v-btn>
+                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: -10px; padding:0px 5px"
+                @click="search_header_switch = false">
+                Alphabetisch
+              </v-btn>
+              <div style="display: inline-block; margin: -30px 0px 0px 5px;" density="compact">
+                <v-switch v-model="search_header_switch"></v-switch>
+              </div>
+              <v-btn variant="text" density="compact" class="nocaps"
+                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: 15px; padding:0px 5px"
+                @click="search_header_switch = true">
+                durchmischt nach Ressourcen
+              </v-btn>
             </div>
           </v-col>
         </div>
@@ -50,9 +50,10 @@ definePageMeta({
           </v-tabs-window-item>
           <v-tabs-window-item value="byGroup">
             <div v-for="g in resultGroups">
-              <div style="font-size: 0.8em; color:#999; margin-top:10px" v-html="g"></div>
+              <div style="font-size: 0.8em; color:#999; margin-top:10px"
+                v-html="this.resourcesStore.getResource(g).nameShort"></div>
               <div v-for="x in resultsByGroup(g)">
-                <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl"/></a>
+                <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl" /></a>
               </div>
             </div>
           </v-tabs-window-item>
@@ -76,7 +77,7 @@ definePageMeta({
           </v-tabs-window>
         </div>
       </v-col>
-      <v-col cols="7">
+      <v-col cols="6">
         <v-row>
           <v-col>
             <div style="margin-top: -20px;">
@@ -98,6 +99,31 @@ definePageMeta({
           <v-col>
             <div style="margin-top: -20px;">
               <h3>Ressourcen:</h3>
+              <v-row style="margin:-25px 0px 20px -35px;">
+                <div class="nolink">
+                  <v-col>
+                  <div style="font-size:14px; display:block; float:left; padding-left:25px">
+                    Auswahl:
+                  </div>
+                  <a @click="selectAll" style="cursor: pointer; font-weight: 600;">
+                    <h6 style="font-size:14px; display:block; float:left; margin-left:10px; font-variant:small-caps">
+                      Alle
+                    </h6>
+                  </a>
+                  <a @click="selectNone" style="cursor: pointer; font-weight: 600;">
+                    <h6
+                      style="font-size:14px; display:block; float:left; margin:0px 10px 0px 10px; font-variant:small-caps">
+                      Keine
+                    </h6>
+                  </a>
+                  <a @click="selectInvert" style="cursor: pointer; font-weight: 600;">
+                    <h6 style="font-size:14px; display:block; float:left; font-variant:small-caps">
+                      Invertieren
+                    </h6>
+                  </a>
+                </v-col>
+                </div>
+              </v-row>
             </div>
             <v-chip v-for="r in resourcesList" :key="r.key" variant="outlined" style="margin: 0px 5px 5px 0px"
               :prepend-icon="r.icon" @click="switchReource(r)">
@@ -155,8 +181,8 @@ export default {
       pageSize_ByResources: 3,
       page: 1,
 
-      search_header_switch: false,
-      search_header: "byAZ"
+      search_header_switch: true,
+      search_header: "byGroup"
     }
   },
   mounted() {
@@ -182,7 +208,19 @@ export default {
       this.resourcesStore.switchResource(r.key);
       this.newSearch();
     },
-    resultsByGroup(group){
+    selectAll() {
+      this.resourcesStore.selectAll();
+      this.newSearch();
+    },
+    selectNone() {
+      this.resourcesStore.selectNone();
+      this.newSearch();
+    },
+    selectInvert() {
+      this.resourcesStore.selectInvert();
+      this.newSearch();
+    },
+    resultsByGroup(group) {
       return this.results.filter(x => x.dic == group);
     }
   },

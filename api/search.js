@@ -3,7 +3,7 @@ export default class search {
   sources = [];
 
   offset = 0;
-  pageSize = 25;
+  pageSize = 3;
 
   callSearch = null;
   max = 0;
