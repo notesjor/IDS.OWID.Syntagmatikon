@@ -8,73 +8,61 @@ definePageMeta({
   <div style="max-width: 100%; margin:auto">
     <v-row>
       <v-col cols="5">
-        <v-tabs-window v-model="resultsTab">
-          <v-tabs-window-item value="help">
-            <div style="margin-top: 0px;">
-              <search-help></search-help>
-            </div>
-          </v-tabs-window-item>
-          <v-tabs-window-item value="results">
-            <div style="margin-top: 0px;">
-              <h2>Gefundene Einträge:</h2>
-              <v-col>
-                <v-btn variant="text" density="compact" class="nocaps"
-                  style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: -10px; padding:0px 5px"
-                  @click="search_header_switch = false">
-                  Alphabetisch
-                </v-btn>
-                <div style="display: inline-block; margin: -30px 0px 0px 5px;" density="compact">
-                  <v-switch v-model="search_header_switch"></v-switch>
-                </div>
-                <v-btn variant="text" density="compact" class="nocaps"
-                  style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: 15px; padding:0px 5px"
-                  @click="search_header_switch = true">
-                  Gruppiert nach Ressource
-                </v-btn>
-              </v-col>
-            </div>
-            <v-pagination v-model="page" :length="searchApi?.pageMax"
-              style="margin:-40px 0px 0px -50px"></v-pagination>
-            <!-- SUCH-Ergebnis -->
-            <div v-for="x in results">
-              <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl"></span> <span style="font-size: 0.8em; color:#999">(<span v-html="resourcesStore.getResource(x.dic)?.nameShort"></span>)</span></a>
-            </div>
-          </v-tabs-window-item>
-        </v-tabs-window>
+        <h1>
+          Stichwortsuche
+        </h1>
 
-        <div v-if="resultsTab != 'help'"></div>
-        <div v-else style="text-align: center;">
-          <v-btn @click="resultsTab = 'results'" class="nocaps"
-          style="margin-top: 20px;" elevation="10">Zeige alle Einträge</v-btn>
-        </div>
-      </v-col>
-      <v-col cols="7">
-        <div>
-          <v-tabs-window v-model="search_header">
-            <v-tabs-window-item value="byAZ">
-              <h1>
-                <div style="display: inline-block; position: relative; top:-42px">Suche nach Einträgen (</div>
-                <v-combobox :items="['10', '25', '50', '100', '250', '500']" variant="outlined"
-                  style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px 0px 2px"
-                  v-model="pageSize_ByEntries"></v-combobox>
-                <div style="display: inline-block; position: relative; top:-42px">pro Seite)</div>
-              </h1>
-            </v-tabs-window-item>
-            <v-tabs-window-item value="byGroup">
-              <h1>
-                <div style="display: inline-block; position: relative; top:-42px">Suche nach</div>
-                <v-combobox :items="['3', '5', '10', '20', '25', '50', '100']" variant="outlined"
-                  style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px"
-                  v-model="pageSize_ByResources"></v-combobox>
-                <div style="display: inline-block; position: relative; top:-42px">Einträgen pro Ressource</div>
-              </h1>
-            </v-tabs-window-item>
-          </v-tabs-window>
-        </div>
-        <div style="margin-top:-30px">
+        <div style="margin-top:0px">
           <v-text-field label="Stichwort hier eingeben..." v-model="query"
             append-inner-icon="mdi-magnify"></v-text-field>
         </div>
+
+        <div style="margin-top: -15px;">
+          <h2>Gefundene Einträge:</h2>
+          <v-col>
+            <v-btn variant="text" density="compact" class="nocaps"
+              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: -10px; padding:0px 5px"
+              @click="search_header_switch = false">
+              Alphabetisch
+            </v-btn>
+            <div style="display: inline-block; margin: -30px 0px 0px 5px;" density="compact">
+              <v-switch v-model="search_header_switch"></v-switch>
+            </div>
+            <v-btn variant="text" density="compact" class="nocaps"
+              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: 15px; padding:0px 5px"
+              @click="search_header_switch = true">
+              durchmischt nach Ressourcen
+            </v-btn>
+          </v-col>
+        </div>
+
+        <v-pagination v-model="page" :length="searchApi?.pageMax" style="margin:-40px 0px 0px -50px"></v-pagination>
+        <!-- SUCH-Ergebnis -->
+        <div v-for="x in results">
+          <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl"></span> <span
+              style="font-size: 0.8em; color:#999">(<span
+                v-html="resourcesStore.getResource(x.dic)?.nameShort"></span>)</span></a>
+        </div>
+        <v-pagination v-model="page" :length="searchApi?.pageMax" style="margin: 0px 0px 0px -50px"></v-pagination>
+        
+        <div style="text-align: center;">
+          <v-tabs-window v-model="search_header">
+            <v-tabs-window-item value="byAZ">
+                <v-combobox :items="['10', '25', '50', '100', '250', '500']" variant="outlined"
+                  style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px 0px 2px"
+                  v-model="pageSize_ByEntries" density="compact"></v-combobox>
+                <div style="display: inline-block; position: relative; top:-38px">Einträge pro Seite</div>
+            </v-tabs-window-item>
+            <v-tabs-window-item value="byGroup">
+                <v-combobox :items="['3', '5', '10', '20', '25', '50', '100']" variant="outlined"
+                  style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px"
+                  v-model="pageSize_ByResources" density="compact"></v-combobox>
+                <div style="display: inline-block; position: relative; top:-38px">Einträge pro Ressource</div>
+            </v-tabs-window-item>
+          </v-tabs-window>
+        </div>
+      </v-col>
+      <v-col cols="7">        
         <v-row>
           <v-col>
             <div style="margin-top: -20px;">
@@ -166,23 +154,23 @@ export default {
     this.resourcesStore = useResourcesStore();
 
     this.newSearch();
-    
+
     setTimeout(() => {
       this.initialized = true;
     }, 1000);
   },
   methods: {
-    newSearch(){
+    newSearch() {
       this.page = 1;
       var self = this;
       self.searchApi.search(self.query, self.resourcesStore.resourceUsedForSearch, self.search_header_switch).then(x => {
         self.results = x;
       });
-      if(this.initialized)
+      if (this.initialized)
         this.resultsTab = "results";
     },
     switchReource(r) {
-      if(r.icon == "mdi-circle-off-outline"){
+      if (r.icon == "mdi-circle-off-outline") {
         this.overlay = true;
         return;
       }
@@ -222,9 +210,9 @@ export default {
   },
   computed: {
     resourcesList: function () {
-      if(this.resourcesStore == null)
+      if (this.resourcesStore == null)
         return [];
-      
+
       var data = this.resourcesStore.resourcesState;
       return Object.keys(data).map(x => {
         return {
@@ -240,7 +228,8 @@ export default {
 
 <style scoped>
 .v-list-subheader {}
-.v-pagination__list > .v-pagination__item{
+
+.v-pagination__list>.v-pagination__item {
   background-color: red;
 }
 </style>
