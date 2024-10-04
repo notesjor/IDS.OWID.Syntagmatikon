@@ -7,10 +7,12 @@ export default class search {
 
   callSearch = null;
   max = 0;
+  count = null;
 
   async search(query, sources, searchAll) {
     this.query = query;
     this.offset = 0;
+    this.count = null;
 
     if (searchAll) {
       this.sources = sources;
@@ -28,7 +30,7 @@ export default class search {
     return await this.callSearch();
   }
 
-  __ensureSearch(){
+  __ensureSearch() {
     if (typeof this.pageSize === "string") {
       this.pageSize = parseInt(this.pageSize);
     }
@@ -38,6 +40,7 @@ export default class search {
     this.__ensureSearch();
     var res = [];
     var nmax = 0;
+    if (this.count == null) this.count = {};
 
     for (var i = 0; i < this.sources.length; i++) {
       var myHeaders = new Headers();
@@ -72,8 +75,9 @@ export default class search {
         );
         var result = await response.json();
 
-        if(result.estimatedTotalHits > nmax)
-          nmax = result.estimatedTotalHits;
+        if (this.count != null)
+          this.count[this.sources[i]] = result.estimatedTotalHits;
+        if (result.estimatedTotalHits > nmax) nmax = result.estimatedTotalHits;
 
         res.push(...result.hits);
       } catch (error) {
@@ -101,7 +105,7 @@ export default class search {
       sort: ["key:asc"],
       offset: this.offset,
       matchingStrategy: "all",
-      attributesToHighlight: ["lbl"],            
+      attributesToHighlight: ["lbl"],
       highlightPreTag: "<span class='highlight'>",
       highlightPostTag: "</span>",
     };
@@ -123,6 +127,7 @@ export default class search {
       );
       var result = await response.json();
 
+      if (this.count == null) this.count = result.estimatedTotalHits;
       this.max = result.estimatedTotalHits;
       return result.hits;
     } catch (error) {
@@ -135,5 +140,11 @@ export default class search {
 
   get pageMax() {
     return Math.ceil(this.max / this.pageSize);
+  }
+
+  get countTotal() {
+    return typeof this.count === "number"
+      ? this.count
+      : Object.values(this.count).reduce((a, b) => a + b, 0);
   }
 }

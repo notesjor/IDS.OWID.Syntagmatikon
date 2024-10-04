@@ -7,16 +7,19 @@ definePageMeta({
 <template>
   <div style="max-width: 100%; margin:auto">
     <v-row>
+      <!-- Linke Spalte -->
       <v-col cols="6">
         <h1>
-          Stichwortsuche
+          Stichwortsuche <span style="font-size: 0.8em; color:#999; margin-top:10px">(insgesamt: {{ searchApi?.countTotal }} Einträge)</span>
         </h1>
 
+        <!-- SUCH-Eingabemaske -->
         <div style="margin-top:0px">
           <v-text-field label="Stichwort hier eingeben..." v-model="query"
             append-inner-icon="mdi-magnify"></v-text-field>
         </div>
 
+        <!-- Anzeige-Optionen -->
         <div style="margin-top: -25px;">
           <h3>Anzeige-Optionen:</h3>
           <v-col>
@@ -38,8 +41,8 @@ definePageMeta({
           </v-col>
         </div>
 
-        <v-pagination v-model="page" :length="searchApi?.pageMax" style="margin:-40px 0px 0px -50px"></v-pagination>
         <!-- SUCH-Ergebnis -->
+        <v-pagination v-model="page" :length="searchApi?.pageMax" style="margin:-40px 0px 0px -50px"></v-pagination>        
         <v-tabs-window v-model="search_header">
           <v-tabs-window-item value="byAZ">
             <div v-for="x in results">
@@ -50,9 +53,12 @@ definePageMeta({
           </v-tabs-window-item>
           <v-tabs-window-item value="byGroup">
             <div v-for="g in resultGroups">
-              <div style="font-size: 0.8em; color:#999; margin-top:10px"
-                v-html="this.resourcesStore.getResource(g).nameShort"></div>
+              <div style="font-size: 0.8em; color:#999; margin-top:10px">
+                <span v-html="this.resourcesStore.getResource(g).nameShort"></span>
+                <span> ({{ this.searchApi.count[g] }} Einträge)</span>
+              </div>
               <div v-for="x in resultsByGroup(g)">
+                <span style="font-size: 0.8em; color:#999">{{ String(x.index).padStart(2, "0") }}. </span>
                 <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl" /></a>
               </div>
             </div>
@@ -77,8 +83,10 @@ definePageMeta({
           </v-tabs-window>
         </div>
       </v-col>
+      <!-- Rechte Spalte -->
       <v-col cols="6">
         <v-expansion-panels v-model="searchOptions" multiple>
+          <!-- Anleitung Suche -->
           <v-expansion-panel elevation="0" value="help">
             <v-expansion-panel-title style="font-weight: 500; font-size: 1.2em;">
               Wie funktioniert die Suche?
@@ -110,6 +118,7 @@ definePageMeta({
               </p>
             </v-expansion-panel-text>
           </v-expansion-panel>
+          <!-- Auswahl der Ressourcen -->
           <v-expansion-panel elevation="0" value="resourcesSelection">
             <v-expansion-panel-title style="font-weight: 500; font-size: 1.2em;">
               Ressourcen
@@ -149,6 +158,7 @@ definePageMeta({
               </v-chip>
             </v-expansion-panel-text>
           </v-expansion-panel>
+          <!-- Facetten -->
           <v-expansion-panel elevation="0" value="fineGrain">
             <v-expansion-panel-title style="font-weight: 500; font-size: 1.2em;">
               Facetten
@@ -255,7 +265,11 @@ export default {
       this.newSearch();
     },
     resultsByGroup(group) {
-      return this.results.filter(x => x.dic == group);
+      var res = this.results.filter(x => x.dic == group);
+      for (var i = 0; i < res.length; i++) {
+        res[i].index = (this.page - 1) * this.pageSize_ByResources + i + 1;
+      }
+      return res;
     }
   },
   watch: {
