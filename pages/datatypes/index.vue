@@ -42,9 +42,10 @@ definePageMeta({
             <br>
             <br>
             <b>Was kann man anhand Frequenzangaben im Syntagmatikon ablesen?</b>
+            <resources-list-small :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp']"></resources-list-small>
           </tile-gradient>
 
-          <tile-gradient color1="#cb992b" color2="#33dcfe" title="KWIC (KeyWord In Context)" link="/datatypes/kwic">
+          <tile-gradient color1="#cb992b" color2="#33dcfe" title="KWIC <span style='font-size:0.8em'>(KeyWord In Context)</span>" link="/datatypes/kwic">
             Zeilen (Konkordanzen), in denen das Suchobjekt vorkommt (Textschnipsel)
             <br>
             <br>
