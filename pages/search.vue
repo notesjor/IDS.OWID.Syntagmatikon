@@ -42,8 +42,7 @@ definePageMeta({
         </div>
 
         <!-- SUCH-Ergebnis -->
-        <v-pagination v-model="page" :length="searchApi?.pageMax" style="margin:-40px 0px 0px -50px"></v-pagination>        
-        <v-tabs-window v-model="search_header">
+        <v-tabs-window v-model="search_header" style="margin-top: -40px;">
           <v-tabs-window-item value="byAZ">
             <div v-for="x in results">
               <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl"></span> <span
@@ -66,7 +65,7 @@ definePageMeta({
         </v-tabs-window>
         <v-pagination v-model="page" :length="searchApi?.pageMax" style="margin: 0px 0px 0px -50px"></v-pagination>
 
-        <div style="text-align: center;">
+        <div style="text-align: center">
           <v-tabs-window v-model="search_header">
             <v-tabs-window-item value="byAZ">
               <v-combobox :items="['10', '25', '50', '100', '250', '500']" variant="outlined"
