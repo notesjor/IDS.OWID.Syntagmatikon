@@ -40,44 +40,48 @@ definePageMeta({
             Häufigkeit des Vorkommens eines sprachlichen Ausdrucks im Korpus, ermittelt mithilfe von Zählungen
               und/oder Suchanfragen (queries)
             <br>
-            <br>
-            <b>Was kann man anhand Frequenzangaben im Syntagmatikon ablesen?</b>
-            <resources-list-small :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp']"></resources-list-small>
+            <!-- <br>
+            <b>Was kann man anhand Frequenzangaben im Syntagmatikon ablesen?</b> -->
+            <resources-list-small :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'KoMuX', 'PhrasKomp', 
+            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']"></resources-list-small>
           </tile-gradient>
 
           <tile-gradient color1="#cb992b" color2="#33dcfe" title="KWIC <span style='font-size:0.8em'>(KeyWord In Context)</span>" link="/datatypes/kwic">
             Zeilen (Konkordanzen), in denen das Suchobjekt vorkommt (Textschnipsel)
             <br>
-            <br>
-            <b>Was sagen KWIC-Angaben im Syntagmatikon über den Gebrauch einer sprachlichen Einheit aus?</b>
+            <!-- <br>
+            <b>Was sagen KWIC-Angaben im Syntagmatikon über den Gebrauch einer sprachlichen Einheit aus?</b> -->
+            <resources-list-small :filter="['WVBF', 'SpruchList',
+            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']"></resources-list-small>
           </tile-gradient>
-          <!--
-          <tile title="Volltextstellen" img="/img/datatypes/belege.jpg" link="/datatypes/full-text">
-            Welche Fragen lassen sich mit größeren Volltextstellen betrachten/beantworten? Welche Vorteile ergeben sich gegenüber KWIC?
-          </tile>
-        -->
 
           <tile-gradient color1="#cb992b" color2="#33dcfe" title="Kookkurrenzprofile" link="/datatypes/cooccurrence">
             Durch statistische Berechnungen (sog. Kookkurrenzanalysen) ermittelte Partnerwort-Profile
               (überproportional häufiges Miteinandervorkommen von Wörtern und Wortgruppen)
             <br>
-            <br>
-            <b>Welche Hinweise liefern Kookkurrenzangaben im Syntagmatikon auf Bedeutung, Gebrauch und Festigkeit?</b>
+            <!-- <br>
+            <b>Welche Hinweise liefern Kookkurrenzangaben im Syntagmatikon auf Bedeutung, Gebrauch und Festigkeit?</b> -->
+            <resources-list-small :filter="['WVBF', 
+            'PREPCON_temp', 'PREPCON_kon']"></resources-list-small>
           </tile-gradient>
 
           <tile-gradient color1="#cb992b" color2="#33dcfe" title="Lückenfüllertabellen" link="/datatypes/patterntable">
             Durch automatische Auswertung ermittelte Füllerhäufigkeiten innerhalb eines Musterslots
             <br>
-            <br>
-            <b>Welche Schlüsse lassen sich anhand der Füllertabellen im Syntagmatikon in Bezug auf die Festigkeit und Varianz syntagmatischer Einheiten ziehen?</b>
+            <!-- <br>
+            <b>Welche Schlüsse lassen sich anhand der Füllertabellen im Syntagmatikon in Bezug auf die Festigkeit und Varianz syntagmatischer Einheiten ziehen?</b> -->
+            <resources-list-small :filter="['WVBF', 
+            'PREPCON_temp', 'PREPCON_kon']"></resources-list-small>
           </tile-gradient>
 
           <tile-gradient color1="#cb992b" color2="#33dcfe" title="Annotierte Daten" link="/datatypes/annotation">
             Durch automatische Annotationsprogramme kategorisierte Korpusdaten (z.B. nach Wortarten, Satztypen, semantischen Kategorien).
             <br>
-            <br>
+            <resources-list-small :filter="['Redeeinleiter', 'KoMuX', 'PhrasKomp', 
+            'PREPCON_ex', 'MAP']"></resources-list-small>
+            <!-- <br>
             <b>Wie führen solche getaggten Daten im Syntagmatikon zur linguistischen Klassifikation von sprachlichen
-            Phänomenen?</b>
+            Phänomenen?</b> -->
           </tile-gradient>
         </div>
 
@@ -89,30 +93,36 @@ definePageMeta({
           <tile-gradient color1="#33dcfe" color2="#ff3661" title="Kategoriale Label" link="/datatypes/category">
             Linguistische Etikettierung von Merkmalen sprachlicher Einheiten
             <br>
-            <br>
-            <b>Welche Aussagekraft haben kategoriale Zuschreibungen im Syntagmatikon bezüglich verwandter sprachlicher Muster?</b>
+            <resources-list-small :filter="['KoMuX', 'PhrasKomp', 
+            'PREPCON_ex', 'MAP', 'WVBF', 'Verlaufsformen', 'FesteWV']"></resources-list-small>
+            <!-- <br>
+            <b>Welche Aussagekraft haben kategoriale Zuschreibungen im Syntagmatikon bezüglich verwandter sprachlicher Muster?</b> -->
           </tile-gradient>
 
           <tile-gradient color1="#33dcfe" color2="#ff3661" title="Belege" link="/datatypes/matches">
             Manuell ausgewählte KWICs und größere Volltextstellen
             <br>
-            <br>
-            <b>Nach welchen Kriterien werden illustrative Belegangaben im Syntagmatikon ausgewählt und wozu tragen sie bei?</b>
+            <resources-list-small :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'PhrasKomp', 
+            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'Verlaufsformen', 'FesteWV', 'DRI', 'DTWW', 'SPRW']"></resources-list-small>
+            <!-- <br>
+            <b>Nach welchen Kriterien werden illustrative Belegangaben im Syntagmatikon ausgewählt und wozu tragen sie bei?</b> -->
           </tile-gradient>
 
           <tile-gradient color1="#33dcfe" color2="#ff3661" title="Narrative Beschreibung " link="/datatypes/narration">
             Beschreibende Autorentexte, die ein Phänomen erklären
             <br>
-            <br>
-            <b>Welche unterschiedlichen Typen narrativer Texte prägen das Syntagmatikon?</b>
+            <resources-list-small :filter="['MAP', 'PREPCON_kon', 'SPRW', 'WVBF', 'FesteWV', 'DRI']"></resources-list-small>   
+            <!-- <br>
+            <b>Welche unterschiedlichen Typen narrativer Texte prägen das Syntagmatikon?</b> -->
           </tile-gradient>
 
-          <tile-gradient color1="#33dcfe" color2="#ff3661" title="Basiselemente" link="/datatypes/elements">
+          <tile-gradient color1="#33dcfe" color2="#ff3661" title="Komponenten" link="/datatypes/elements">
             Auszeichnung der einzelnen Komponenten einer Wortverbindung und Verlinkung mit anderen Einträgen.
             <br>
-            <br>
+            <resources-list-small :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW',  'FesteWV']"></resources-list-small>   
+            <!-- <br>
             <b>Wie werden mithilfe der Basiselementangaben im Syntagmatikon Beziehungen zu Einwortlexemen hergestellt und
-            unterschiedliche Gruppen gebildet?</b>
+            unterschiedliche Gruppen gebildet?</b> -->
           </tile-gradient>
 
 
@@ -120,17 +130,30 @@ definePageMeta({
             Nach inhaltlichen Kriterien manuell zusammengestellte Gruppen von sprachlichen Einheiten mit verwandten
               Gebrauchsmerkmalen
             <br>
-            <br>
-            <b>Wie vielfältig sind Feldangaben im Syntagmatikon?</b>
+            <resources-list-small :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW',  'FesteWV', 'MAP']"></resources-list-small>   
+            <!-- <br>
+            <b>Wie vielfältig sind Feldangaben im Syntagmatikon?</b> -->
           </tile-gradient>
+
 
           <tile-gradient color1="#33dcfe" color2="#ff3661" title="Fremdsprachige Äquivalenz" link="/datatypes/expression">
             Angabe von Entsprechungen in anderen Sprachen
             <br>
-            <br>
+            <resources-list-small :filter="['PREPCON_kon', 'DTWW', 'DRI']"></resources-list-small>   
+            <!-- <br>
             <b>Wie kann man mittels Äquivalenzangaben und -beschreibungen im Syntagmatikon den Gebrauch von Ausdrücken im
-            Sprachvergleich verstehen?</b>
+            Sprachvergleich verstehen?</b> -->
           </tile-gradient>
+
+          
+          <tile-gradient color1="#33dcfe" color2="#ff3661" title="Grafische Visualisierungen" link="/datatypes/graphics">
+            
+            <br>
+            <resources-list-small :filter="['SpruchList', 'MAP', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX']"></resources-list-small>   
+          
+          </tile-gradient>
+
+
         </div>
       </v-col>
     </v-row>
