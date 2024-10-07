@@ -18,7 +18,7 @@ definePageMeta({
     <v-row>
       <v-col>
         <div>
-          <p>Das Syntagmatikon vereint sehr unterschiedliche Ressourcentypen, die
+          <p>Das <hi>Syntagmatikon</hi> vereint sehr unterschiedliche Ressourcentypen, die
             im Folgenden kurz charakterisiert werden. Als Kriterien dienten der Grad
             der Exhaustivität sowie das Verhältnis von automatischer
             Datenaufbereitung; händischer Bearbeitung und

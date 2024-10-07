@@ -45,14 +45,14 @@ definePageMeta({
 
         <div class="container">
           <tile-gradient title="Direkter Zugang" color1="#34ddff" color2="#87bfcc" link="/patterns/direct">
-            In diesen Ressourcen bilden Muster den primären Zugriff auf die aufbereiteten Daten und die lexikografischen Beschreibungen. Das heißt, alle Informationen sind über das Netzwerk semiabstrakter Schablonen herleitbar.
+            In einigen Ressourcen bilden Muster den primären Zugriff auf die aufbereiteten Daten und die lexikografischen Beschreibungen. Das heißt, alle Informationen sind über das Netzwerk semiabstrakter Schablonen herleitbar.
             <div class="mt-4">
             <resources-list-compact :filter="['MAP', 'WVBF']"/>
           </div>
           </tile-gradient>
 
           <tile-gradient title="Lexikografische Angabe" color1="#87bfcc" color2="#ff5d48" link="/patterns/component">
-            In einigen Ressourcen werden von Hand aufbereitete Musterangaben und -visualisierungen als eine Komponente von Wörterbuchartikeln angeboten, und zwar in „PREPCONkontrastiv“ und „Feste Wortverbindungen“.
+            In einigen Ressourcen werden von Hand aufbereitete Musterangaben und -visualisierungen als eine Komponente von Wörterbuchartikeln angeboten.
             <div class="mt-4">
             <resources-list-compact :filter="['PREPCON_kon', 'SPRW', 'FesteWV']"/>
             </div>

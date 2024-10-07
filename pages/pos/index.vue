@@ -18,9 +18,22 @@ definePageMeta({
     <v-row>
       <v-col>
         <div>
-          <p>Die Beschreibungskandidaten bzw. Stichwörter im Syntagmatikon sowie deren Komponenten basieren auf
-            unterschiedlichen Wort- und Ausdrucksarten. Phraseme und feste Sätze werden als geronnene Ausdrucksarten
-            angesehen und daher ebenso als autonome Einheit betrachtet wie die klassischen Wortarten:</p>
+          <p>Die Beschreibungskandidaten bzw. Stichwörter im Syntagmatikon sowie
+deren Komponenten basieren auf unterschiedlichen Wort- und
+Ausdrucksarten. Phraseme und feste Sätze werden als geronnene
+Ausdrucksarten angesehen und daher ebenso als autonome Einheit
+betrachtet wie die klassischen Wortarten. Unter Phrasemen werden neben
+Phraseologismen und Idiomen auch Kollokationen, Funktionsverbgefüge
+subsumiert.</p>
+<p>Die Zuordnung der Ressourcen erfolgt nach folgenden Kriterien:</p>
+<ul>
+<li>holistischer Typ (Phraseme, Feste Sätze)</li>
+<li>Hauptkomponenten, die diesen Eintrag zentral
+konstituieren</li>
+</ul>
+<p>Nicht gesondert markiert werden Komponenten von Phrasemen und feste
+Sätzen, da diese potenziell alle Wortarten umfassen können. Hier liegt
+der Fokus auf der gesamten Einheit.</p>
         </div>
       </v-col>
     </v-row>
