@@ -7,135 +7,196 @@ definePageMeta({
 <template>
   <div style="max-width: 100%; margin:auto">
     <v-row>
-     
+      <!-- Linke Spalte -->
       <v-col cols="6">
-        <div>
-          <v-tabs-window v-model="search_header">
-            <v-tabs-window-item value="byAZ">
-              <h1>
-                <div style="display: inline-block; position: relative; top:-42px">Suche nach Einträgen (</div>
-                <v-combobox :items="['10', '25', '50', '100', '250', '500']" variant="outlined"
-                  style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px 0px 2px"
-                  v-model="pageSize_ByEntries"></v-combobox>
-                <div style="display: inline-block; position: relative; top:-42px">pro Seite)</div>
-              </h1>
-            </v-tabs-window-item>
-            <v-tabs-window-item value="byGroup">
-              <h1>
-                <div style="display: inline-block; position: relative; top:-42px">Suche nach</div>
-                <v-combobox :items="['3', '5', '10', '20', '25', '50', '100']" variant="outlined"
-                  style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px"
-                  v-model="pageSize_ByResources"></v-combobox>
-                <div style="display: inline-block; position: relative; top:-42px">Einträgen pro Ressource</div>
-              </h1>
-            </v-tabs-window-item>
-          </v-tabs-window>
-        </div>
-        <div style="margin-top:-30px">
+        <h1>
+          Stichwortsuche <span style="font-size: 0.8em; color:#999; margin-top:10px">(insgesamt: {{
+            searchApi?.countTotal }} Einträge)</span>
+        </h1>
+
+        <!-- SUCH-Eingabemaske -->
+        <div style="margin-top:0px">
           <v-text-field label="Stichwort hier eingeben..." v-model="query"
             append-inner-icon="mdi-magnify"></v-text-field>
         </div>
 
-
-        <div> <v-switch v-model="show_facets" false-value="d-none" true-value="" label="Erweiterte Suche mit Facetten" color="black"/></div>
-        <v-row>
-
-         
-          
-          <v-col :class="show_facets">
-            <div style="margin-top: -20px;">
-              <h3>Facetten:</h3>
-            </div>
-            <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels1">
-             <!-- <search-box title="Zugänge" rkey="search_display" color1="#c79b31" color2="#a0ac67"></search-box>
-              <search-box title="Ressourcentypen (Zugang)" rkey="search_subtype" color1="#a0ac67"
-                color2="#6fc2ab"></search-box> -->
-              <search-box title="Ressourcentypen" rkey="search_type" color1="#6fc2ab"
-                color2="#38daf7"></search-box>
-              <search-box title="Informationstypen" rkey="search_functions" color1="#42dbfb"
-                color2="#7ba1c6"></search-box>
-              <search-box title="Wort- und Ausdrucksarten" rkey="search_parts" color1="#7ba1c6"
-                color2="#5c93a0"></search-box>
-              <search-box title="Musterzugänge" rkey="search_patterns" color1="#5c93a0" color2="#fa3a65"></search-box>
-            </v-expansion-panels>
-          </v-col>
+        <!-- Anzeige-Optionen -->
+        <div style="margin-top: -25px;">
+          <h3>Anzeige-Optionen:</h3>
           <v-col>
-            <div style="margin-top: -20px;">
-              <h3>Ressourcen:</h3>
+            <div style="text-align: center; margin-left: -15px;">
+              <v-btn variant="text" density="compact" class="nocaps"
+                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: -10px; padding:0px 5px"
+                @click="search_header_switch = false">
+                Alphabetisch
+              </v-btn>
+              <div style="display: inline-block; margin: -30px 0px 0px 5px;" density="compact">
+                <v-switch v-model="search_header_switch"></v-switch>
+              </div>
+              <v-btn variant="text" density="compact" class="nocaps"
+                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: 15px; padding:0px 5px"
+                @click="search_header_switch = true">
+                durchmischt nach Ressourcen
+              </v-btn>
             </div>
-            <v-chip v-for="r in resourcesList" :key="r.key" variant="outlined" style="margin: 0px 5px 5px 0px"
-              :prepend-icon="r.icon" @click="switchReource(r)">
-              <div v-html="r.nameShort" />
-            </v-chip>
-
-            <v-dialog v-model="overlay">
-              <v-card style="max-width: 45%; margin-left: auto; margin-right: auto;">
-                <v-card-title>Hinweis</v-card-title>
-                <v-card-text>
-                  Die Ressource wurde durch eine Facette ausgeschlossen.
-                  Daher kann Sie weder an- noch abgewählt werden.
-                  Falls Sie die Ressource dennoch durchsuchen möchten, setzen Sie die Facette zurück.
-                </v-card-text>
-                <v-card-actions>
-                  <v-btn @click="overlay = false">Ok</v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-dialog>
           </v-col>
-        </v-row>
-        <v-row>
-          <div v-if="resultsTab == 'help'"></div>
-          <div v-else>
-            <search-help></search-help>
-          </div>
-        </v-row>
-      </v-col>
+        </div>
 
-
-      <v-col cols="6">
-        <v-tabs-window v-model="resultsTab">
-          <v-tabs-window-item value="help">
-            <div style="margin-top: 0px;">
-              <search-help></search-help>
+        <!-- SUCH-Ergebnis -->
+        <v-tabs-window v-model="search_header" style="margin-top: -40px;">
+          <v-tabs-window-item value="byAZ">
+            <div v-for="x in results">
+              <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl"></span> <span
+                  style="font-size: 0.8em; color:#999">(<span
+                    v-html="getResourcesShortName(x.dic)"></span>)</span></a>
             </div>
           </v-tabs-window-item>
-          <v-tabs-window-item value="results">
-            <div style="margin-top: 0px;">
-              <h2>Gefundene Einträge:</h2>
-              <v-col>
-                <v-btn variant="text" density="compact" class="nocaps"
-                  style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: -10px; padding:0px 5px"
-                  @click="search_header_switch = false">
-                  Alphabetisch
-                </v-btn>
-                <div style="display: inline-block; margin: -30px 0px 0px 5px;" density="compact">
-                  <v-switch v-model="search_header_switch"></v-switch>
-                </div>
-                <v-btn variant="text" density="compact" class="nocaps"
-                  style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: 15px; padding:0px 5px"
-                  @click="search_header_switch = true">
-                  Gruppiert nach Ressource
-                </v-btn>
-              </v-col>
-            </div>
-            <v-pagination v-model="page" :length="searchApi?.pageMax"
-              style="margin:-40px 0px 0px -50px"></v-pagination>
-            <!-- SUCH-Ergebnis -->
-            <div v-for="x in results">
-              <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl"></span> <span style="font-size: 0.8em; color:#999">(<span v-html="resourcesStore.getResource(x.dic)?.nameShort"></span>)</span></a>
+          <v-tabs-window-item value="byGroup">
+            <div v-for="g in resultGroups">
+              <div style="font-size: 0.8em; color:#999; margin-top:10px">
+                <span v-html="getResourcesShortName(g)"></span>
+                <span> ({{ searchApi.count[g] }} Einträge)</span>
+              </div>
+              <div v-for="x in resultsByGroup(g)">
+                <span style="font-size: 0.8em; color:#999">{{ String(x.index).padStart(2, "0") }}. </span>
+                <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl" /></a>
+              </div>
             </div>
           </v-tabs-window-item>
         </v-tabs-window>
+        <v-pagination v-model="page" :length="searchApi?.pageMax" style="margin: 0px 0px 0px -50px"></v-pagination>
 
-        <div v-if="resultsTab != 'help'"></div>
-        <div v-else style="text-align: center;">
-          <v-btn @click="resultsTab = 'results'" class="nocaps"
-          style="margin-top: 20px;" elevation="10">Zeige alle Einträge</v-btn>
+        <div style="text-align: center">
+          <v-tabs-window v-model="search_header">
+            <v-tabs-window-item value="byAZ">
+              <v-combobox :items="['10', '25', '50', '100', '250', '500']" variant="outlined"
+                style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px 0px 2px"
+                v-model="pageSize_ByEntries" density="compact"></v-combobox>
+              <div style="display: inline-block; position: relative; top:-38px">Einträge pro Seite</div>
+            </v-tabs-window-item>
+            <v-tabs-window-item value="byGroup">
+              <v-combobox :items="['3', '5', '10', '20', '25', '50', '100']" variant="outlined"
+                style="display: inline-block; width: 5.1em; max-width: 5.1em; margin: 0px 10px"
+                v-model="pageSize_ByResources" density="compact"></v-combobox>
+              <div style="display: inline-block; position: relative; top:-38px">Einträge pro Ressource</div>
+            </v-tabs-window-item>
+          </v-tabs-window>
         </div>
+      </v-col>
+      <!-- Rechte Spalte -->
+      <v-col cols="6">
+        <v-expansion-panels v-model="searchOptions" multiple>
+          <!-- Anleitung Suche -->
+          <v-expansion-panel elevation="0" value="help">
+            <v-expansion-panel-title style="font-weight: 500; font-size: 1.2em;">
+              Wie funktioniert die Suche?
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <p style="font-size: 0.9em; margin-bottom: 10px; word-wrap: break-word;">
+                Dieses Suche erlaubt es, alle Ressourcen im Syntagmatikon gleichzeitig abzufragen.
+                Wie im Res&shy;sour&shy;cen&shy;kom&shy;pass be&shy;schrie&shy;ben, haben die Ressourcen verschiedene
+                Facetten,
+                die hier genutzt werden können, um die Stichworte zu filtern.</p>
+              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
+                <i>Stichwortsuche:</i> Geben Sie ein beliebiges Stichwort in das Suchfeld ein, um alle aktiven
+                Ressourcen
+                danach zu durchsuchen.
+              </p>
+              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
+                <i>Anzeige-Optionen:</i> Die Einträge werden entweder alphabetisch (mit Ressourcenname) angezeigt
+                oder je Ressource einzeln gezogen.
+              </p>
+              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
+                <i>Angewählte Ressourcen:</i>
+                werden in die Suche einbezogen. Klicke Sie auf eine Ressource um sie zu aktivieren
+                <v-icon>mdi-check-circle</v-icon> oder deaktivieren <v-icon>mdi-circle-outline</v-icon>. Ressourcen, die
+                durch eine Facette ausgeschlossen sind, werden ebenfalls nicht angezeigt
+                <v-icon>mdi-circle-off-outline</v-icon>.
+              </p>
+              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
+                <i>Facetten:</i> schränken die Ressourcen anhand bestimmter Kategorien / Eigenschaften ein.
+              </p>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+          <!-- Auswahl der Ressourcen -->
+          <v-expansion-panel elevation="0" value="resourcesSelection">
+            <v-expansion-panel-title style="font-weight: 500; font-size: 1.2em;">
+              Ressourcen
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <div style="margin-top: -20px;">
+                <v-row style="margin:-20px 0px 20px -35px;">
+                  <div class="nolink">
+                    <v-col>
+                      <div style="font-size:14px; display:block; float:left; padding-left:25px">
+                        Auswahl:
+                      </div>
+                      <a @click="selectAll" style="cursor: pointer; font-weight: 600;">
+                        <h6
+                          style="font-size:14px; display:block; float:left; margin-left:10px; font-variant:small-caps">
+                          Alle
+                        </h6>
+                      </a>
+                      <a @click="selectNone" style="cursor: pointer; font-weight: 600;">
+                        <h6
+                          style="font-size:14px; display:block; float:left; margin:0px 10px 0px 10px; font-variant:small-caps">
+                          Keine
+                        </h6>
+                      </a>
+                      <a @click="selectInvert" style="cursor: pointer; font-weight: 600;">
+                        <h6 style="font-size:14px; display:block; float:left; font-variant:small-caps">
+                          Invertieren
+                        </h6>
+                      </a>
+                    </v-col>
+                  </div>
+                </v-row>
+              </div>
+              <v-chip v-for="r in resourcesList" :key="r.key" variant="outlined" style="margin: 0px 5px 5px 0px"
+                :prepend-icon="r.icon" @click="switchReource(r)">
+                <div v-html="r.nameShort" />
+              </v-chip>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+          <!-- Facetten -->
+          <v-expansion-panel elevation="0" value="fineGrain">
+            <v-expansion-panel-title style="font-weight: 500; font-size: 1.2em;">
+              Facetten
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels1">
+                <search-box title="Zugänge" rkey="search_display" color1="#c79b31" color2="#a0ac67"></search-box>
+                <search-box title="Ressourcentypen (Zugang)" rkey="search_subtype" color1="#a0ac67"
+                  color2="#6fc2ab"></search-box>
+                <search-box title="Ressourcentypen (Typus)" rkey="search_type" color1="#6fc2ab"
+                  color2="#38daf7"></search-box>
+                <search-box title="Informationstypen" rkey="search_functions" color1="#42dbfb"
+                  color2="#7ba1c6"></search-box>
+                <search-box title="Wort- und Ausdrucksarten" rkey="search_parts" color1="#7ba1c6"
+                  color2="#5c93a0"></search-box>
+                <search-box title="Musterzugang" rkey="search_patterns" color1="#5c93a0" color2="#fa3a65"></search-box>
+              </v-expansion-panels>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+        </v-expansion-panels>
       </v-col>
     </v-row>
 
   </div>
+
+  <v-dialog v-model="overlay">
+    <v-card style="max-width: 45%; margin-left: auto; margin-right: auto;">
+      <v-card-title>Hinweis</v-card-title>
+      <v-card-text>
+        Die Ressource wurde durch eine Facette ausgeschlossen.
+        Daher kann Sie weder an- noch abgewählt werden.
+        Falls Sie die Ressource dennoch durchsuchen möchten, setzen Sie die Facette zurück.
+      </v-card-text>
+      <v-card-actions>
+        <v-btn @click="overlay = false">Ok</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
 </template>
 
 <script>
@@ -146,11 +207,11 @@ export default {
   theme: { dark: false },
   data() {
     return {
-      initialized: false,
       overlay: false,
       tab: "t1",
       //letters: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
 
+      searchOptions: ["help", "resourcesSelection"],
       openPanels1: [],
       openPanels2: [],
 
@@ -164,11 +225,8 @@ export default {
       pageSize_ByResources: 3,
       page: 1,
 
-      resultsTab: "help",
-      search_header_switch: false,
-      search_header: "byAZ",
-
-      show_facets: "d-none"
+      search_header_switch: true,
+      search_header: "byGroup"
     }
   },
   mounted() {
@@ -177,36 +235,53 @@ export default {
     this.resourcesStore = useResourcesStore();
 
     this.newSearch();
-    
-    setTimeout(() => {
-      this.initialized = true;
-    }, 1000);
   },
   methods: {
-    newSearch(){
-      this.page = 1;
-      var self = this;
-      self.searchApi.search(self.query, self.resourcesStore.resourceUsedForSearch, self.search_header_switch).then(x => {
-        self.results = x;
-      });
-      if(this.initialized)
-        this.resultsTab = "results";
+    newSearch() {
+      try {
+        this.page = 1;
+        var self = this;
+        self.searchApi.search(self.query, self.resourcesStore.resourceUsedForSearch, self.search_header_switch).then(x => {
+          self.results = x;
+        });
+      } catch {
+        // ignore
+      }
     },
     switchReource(r) {
-      if(r.icon == "mdi-circle-off-outline"){
+      if (r.icon == "mdi-circle-off-outline") {
         this.overlay = true;
         return;
       }
-      this.resourcesStore.switchResource(r.key);
+      this.resourcesStore?.switchResource(r.key);
       this.newSearch();
+    },
+    selectAll() {
+      this.resourcesStore?.selectAll();
+      this.newSearch();
+    },
+    selectNone() {
+      this.resourcesStore?.selectNone();
+      this.newSearch();
+    },
+    selectInvert() {
+      this.resourcesStore?.selectInvert();
+      this.newSearch();
+    },
+    resultsByGroup(group) {
+      var res = this.results.filter(x => x.dic == group);
+      for (var i = 0; i < res.length; i++) {
+        res[i].index = (this.page - 1) * this.pageSize_ByResources + i + 1;
+      }
+      return res;
+    },
+    getResourcesShortName(key) {
+      return this.resourcesStore?.getResource(key)?.nameShort;
     }
   },
   watch: {
     query: function (val) {
       this.newSearch();
-    },
-    resultsTab: function (val) {
-      this.teleportHelp = val == 'help' ? "#helpDefault" : "#helpExtend";
     },
     search_header_switch: function (val) {
       this.search_header = val ? "byGroup" : "byAZ";
@@ -233,17 +308,24 @@ export default {
   },
   computed: {
     resourcesList: function () {
-      if(this.resourcesStore == null)
+      if (this.resourcesStore == null)
         return [];
-      
+
       var data = this.resourcesStore.resourcesState;
       return Object.keys(data).map(x => {
         return {
           key: x,
-          nameShort: this.resourcesStore.getResource(x).nameShort,
+          nameShort: this.getResourcesShortName(x),
           icon: data[x] == 1 ? "mdi-check-circle" : data[x] == 0 ? "mdi-circle-outline" : "mdi-circle-off-outline"
         }
       });
+    },
+    resultGroups: function () {
+      var res = new Set();
+      this.results.forEach(x => {
+        res.add(x.dic);
+      });
+      return res;
     }
   }
 }
@@ -251,7 +333,8 @@ export default {
 
 <style scoped>
 .v-list-subheader {}
-.v-pagination__list > .v-pagination__item{
+
+.v-pagination__list>.v-pagination__item {
   background-color: red;
 }
 </style>

@@ -23,7 +23,7 @@ deren Komponenten basieren auf unterschiedlichen Wort- und
 Ausdrucksarten. Phraseme und feste Sätze werden als geronnene
 Ausdrucksarten angesehen und daher ebenso als autonome Einheit
 betrachtet wie die klassischen Wortarten. Unter Phrasemen werden neben
-Phraseologismen und Idiomen auch Kollokationen, Funktionsverbgefüge
+Phraseologismen und Idiomen auch Kollokationen und Funktionsverbgefüge
 subsumiert.</p>
 <p>Die Zuordnung der Ressourcen erfolgt nach folgenden Kriterien:</p>
 <ul>
