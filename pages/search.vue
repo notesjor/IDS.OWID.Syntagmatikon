@@ -10,7 +10,8 @@ definePageMeta({
       <!-- Linke Spalte -->
       <v-col cols="6">
         <h1>
-          Stichwortsuche <span style="font-size: 0.8em; color:#999; margin-top:10px">(insgesamt: {{ searchApi?.countTotal }} Einträge)</span>
+          Stichwortsuche <span style="font-size: 0.8em; color:#999; margin-top:10px">(insgesamt: {{
+            searchApi?.countTotal }} Einträge)</span>
         </h1>
 
         <!-- SUCH-Eingabemaske -->
@@ -47,14 +48,14 @@ definePageMeta({
             <div v-for="x in results">
               <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl"></span> <span
                   style="font-size: 0.8em; color:#999">(<span
-                    v-html="resourcesStore.getResource(x.dic)?.nameShort"></span>)</span></a>
+                    v-html="getResourcesShortName(x.dic)"></span>)</span></a>
             </div>
           </v-tabs-window-item>
           <v-tabs-window-item value="byGroup">
             <div v-for="g in resultGroups">
               <div style="font-size: 0.8em; color:#999; margin-top:10px">
-                <span v-html="this.resourcesStore.getResource(g).nameShort"></span>
-                <span> ({{ this.searchApi.count[g] }} Einträge)</span>
+                <span v-html="getResourcesShortName(g)"></span>
+                <span> ({{ searchApi.count[g] }} Einträge)</span>
               </div>
               <div v-for="x in resultsByGroup(g)">
                 <span style="font-size: 0.8em; color:#999">{{ String(x.index).padStart(2, "0") }}. </span>
@@ -237,30 +238,34 @@ export default {
   },
   methods: {
     newSearch() {
-      this.page = 1;
-      var self = this;
-      self.searchApi.search(self.query, self.resourcesStore.resourceUsedForSearch, self.search_header_switch).then(x => {
-        self.results = x;
-      });
+      try {
+        this.page = 1;
+        var self = this;
+        self.searchApi.search(self.query, self.resourcesStore.resourceUsedForSearch, self.search_header_switch).then(x => {
+          self.results = x;
+        });
+      } catch {
+        // ignore
+      }
     },
     switchReource(r) {
       if (r.icon == "mdi-circle-off-outline") {
         this.overlay = true;
         return;
       }
-      this.resourcesStore.switchResource(r.key);
+      this.resourcesStore?.switchResource(r.key);
       this.newSearch();
     },
     selectAll() {
-      this.resourcesStore.selectAll();
+      this.resourcesStore?.selectAll();
       this.newSearch();
     },
     selectNone() {
-      this.resourcesStore.selectNone();
+      this.resourcesStore?.selectNone();
       this.newSearch();
     },
     selectInvert() {
-      this.resourcesStore.selectInvert();
+      this.resourcesStore?.selectInvert();
       this.newSearch();
     },
     resultsByGroup(group) {
@@ -269,6 +274,9 @@ export default {
         res[i].index = (this.page - 1) * this.pageSize_ByResources + i + 1;
       }
       return res;
+    },
+    getResourcesShortName(key) {
+      return this.resourcesStore?.getResource(key)?.nameShort;
     }
   },
   watch: {
@@ -307,7 +315,7 @@ export default {
       return Object.keys(data).map(x => {
         return {
           key: x,
-          nameShort: this.resourcesStore.getResource(x).nameShort,
+          nameShort: this.getResourcesShortName(x),
           icon: data[x] == 1 ? "mdi-check-circle" : data[x] == 0 ? "mdi-circle-outline" : "mdi-circle-off-outline"
         }
       });
