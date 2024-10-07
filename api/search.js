@@ -9,6 +9,8 @@ export default class search {
   max = 0;
   count = null;
 
+  exact = true;
+
   async search(query, sources, searchAll) {
     this.query = query;
     this.offset = 0;
@@ -51,7 +53,7 @@ export default class search {
       );
 
       var request = {
-        q: this.query,
+        q: this.preparedQuery,
         limit: this.pageSize,
         sort: ["key:asc"],
         filter: `dic = ${this.sources[i]}`,
@@ -100,7 +102,7 @@ export default class search {
     );
 
     var request = {
-      q: this.query,
+      q: this.preparedQuery,
       limit: this.pageSize,
       sort: ["key:asc"],
       offset: this.offset,
@@ -146,5 +148,9 @@ export default class search {
     return typeof this.count === "number"
       ? this.count
       : Object.values(this.count).reduce((a, b) => a + b, 0);
+  }
+
+  get preparedQuery() {
+    return this.exact ? `"${this.query}"` : this.query;
   }
 }
