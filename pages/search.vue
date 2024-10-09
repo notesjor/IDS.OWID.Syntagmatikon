@@ -21,25 +21,35 @@ definePageMeta({
         </div>
 
         <!-- Anzeige-Optionen -->
-        <div style="margin-top: -25px;">
-          <h3>Anzeige-Optionen:</h3>
-          <v-col>
-            <div style="text-align: center; margin-left: -15px;">
+        <div style="margin: -60px 0px 40px 0px;">
+          <span style="position: relative; top: 0px">Anzeige-Optionen:</span>
+            <span>
               <v-btn variant="text" density="compact" class="nocaps"
-                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: -10px; padding:0px 5px"
-                @click="search_header_switch = false">
+                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px" @click="search_header_switch = false">
                 Alphabetisch
               </v-btn>
-              <div style="display: inline-block; margin: -30px 0px 0px 5px;" density="compact">
-                <v-switch v-model="search_header_switch"></v-switch>
-              </div>
+              <v-switch v-model="search_header_switch" style="display: inline-block; position: relative; top: 35px" density="compact"></v-switch>
               <v-btn variant="text" density="compact" class="nocaps"
-                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top:-22px; left: 15px; padding:0px 5px"
-                @click="search_header_switch = true">
+                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px" @click="search_header_switch = true">
                 durchmischt nach Ressourcen
               </v-btn>
-            </div>
-          </v-col>
+            </span>
+        </div>
+
+        <!-- Genauigkeit der Suche -->
+        <div style="margin: -75px 0px 50px 0px;">
+          <span style="position: relative; top: 0px">Genauigkeit der Suche:</span>
+            <span>
+              <v-btn variant="text" density="compact" class="nocaps"
+                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px" @click="search_exact = false">
+                Unscharf
+              </v-btn>
+              <v-switch v-model="search_exact" style="display: inline-block; position: relative; top: 35px" density="compact"></v-switch>
+              <v-btn variant="text" density="compact" class="nocaps"
+                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px" @click="search_exact = true">
+                exakte Zeichenfolge
+              </v-btn>
+            </span>
         </div>
 
         <!-- SUCH-Ergebnis -->
@@ -47,8 +57,7 @@ definePageMeta({
           <v-tabs-window-item value="byAZ">
             <div v-for="x in results">
               <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl"></span> <span
-                  style="font-size: 0.8em; color:#999">(<span
-                    v-html="getResourcesShortName(x.dic)"></span>)</span></a>
+                  style="font-size: 0.8em; color:#999">(<span v-html="getResourcesShortName(x.dic)"></span>)</span></a>
             </div>
           </v-tabs-window-item>
           <v-tabs-window-item value="byGroup">
@@ -168,8 +177,7 @@ definePageMeta({
                 <!-- <search-box title="Zugänge" rkey="search_display" color1="#c79b31" color2="#a0ac67"></search-box>
                 <search-box title="Ressourcentypen (Zugang)" rkey="search_subtype" color1="#a0ac67"
                   color2="#6fc2ab"></search-box> -->
-                <search-box title="Ressourcentypen" rkey="search_type" color1="#6fc2ab"
-                  color2="#38daf7"></search-box>
+                <search-box title="Ressourcentypen" rkey="search_type" color1="#6fc2ab" color2="#38daf7"></search-box>
                 <search-box title="Informationstypen" rkey="search_functions" color1="#42dbfb"
                   color2="#7ba1c6"></search-box>
                 <search-box title="Wort- und Ausdrucksarten" rkey="search_parts" color1="#7ba1c6"
@@ -209,7 +217,6 @@ export default {
     return {
       overlay: false,
       tab: "t1",
-      //letters: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
 
       searchOptions: ["help", "resourcesSelection"],
       openPanels1: [],
@@ -226,7 +233,9 @@ export default {
       page: 1,
 
       search_header_switch: true,
-      search_header: "byGroup"
+      search_header: "byGroup",
+
+      search_exact: true
     }
   },
   mounted() {
@@ -303,6 +312,10 @@ export default {
       this.newSearch();
     },
     "resourcesStore.resourceUsedForSearch": function (val) {
+      this.newSearch();
+    },
+    search_exact: function (val) {
+      this.searchApi.exact = val;
       this.newSearch();
     }
   },
