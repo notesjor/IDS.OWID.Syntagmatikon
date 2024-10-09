@@ -46,7 +46,7 @@ definePageMeta({
             'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']"></resources-list-small>
           </tile-gradient>
 
-          <tile-gradient color1="#cb992b" color2="#33dcfe" title="KWIC <span style='font-size:0.8em'>(KeyWord In Context)</span>" link="/datatypes/kwic">
+          <tile-gradient color1="#cb992b" color2="#33dcfe" title="KWICs <span style='font-size:0.8em'>(KeyWord In Context)</span>" link="/datatypes/kwic">
             Zeilen (Konkordanzen), in denen das Suchobjekt vorkommt (Textschnipsel)
             <br>
             <!-- <br>
@@ -108,7 +108,7 @@ definePageMeta({
             <b>Nach welchen Kriterien werden illustrative Belegangaben im Syntagmatikon ausgewählt und wozu tragen sie bei?</b> -->
           </tile-gradient>
 
-          <tile-gradient color1="#33dcfe" color2="#ff3661" title="Narrative Beschreibung " link="/datatypes/narration">
+          <tile-gradient color1="#33dcfe" color2="#ff3661" title="Narrative Beschreibungen" link="/datatypes/narration">
             Beschreibende Autorentexte, die ein Phänomen erklären
             <br>
             <resources-list-small :filter="['MAP', 'PREPCON_kon', 'SPRW', 'WVBF', 'FesteWV', 'DRI']"></resources-list-small>   
@@ -136,7 +136,7 @@ definePageMeta({
           </tile-gradient>
 
 
-          <tile-gradient color1="#33dcfe" color2="#ff3661" title="Fremdsprachige Äquivalenz" link="/datatypes/expression">
+          <tile-gradient color1="#33dcfe" color2="#ff3661" title="Fremdsprachige Äquivalenz" link="/datatypes/equivalence">
             Angabe von Entsprechungen in anderen Sprachen
             <br>
             <resources-list-small :filter="['PREPCON_kon', 'DTWW', 'DRI']"></resources-list-small>   

@@ -3,7 +3,7 @@
     <v-tab value="2" class="nocaps">
       <v-tab-title><v-icon v-show="tab == 1"
           style="margin-right: 5px;">mdi-arrow-right-bold-box-outline</v-icon>Beispiele und
-        Interpretation?</v-tab-title>
+        Interpretation</v-tab-title>
     </v-tab>
     <v-tab value="1" class="nocaps">
       <v-tab-title><v-icon v-show="tab == 2" style="margin-right: 5px;">mdi-arrow-right-bold-box-outline</v-icon>Wo

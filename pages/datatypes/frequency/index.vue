@@ -7,14 +7,21 @@
         </div> 
     </v-btn>
   <h1>Frequenzangaben</h1>
-  <p>Frequenzen (die Häufigkeit des Vorkommens eines Suchobjekts) werden auf der Basis von Suchanfragen (queries) zum
-    Zwecke der Bestimmung von Gebräuchlichkeit im Korpus berechnet. Man kann davon ausgehen, dass besonders häufige
-    Phänomene eher einen typischen Aspekt des Sprachgebrauchs in den jeweiligen Korpora abbilden als seltene. Allerdings
-    sind Frequenzen nur Anhaltspunkte, denn es spielen viele Faktoren bei der automatischen Häufigkeitsermittlung eine
-    Rolle. Deshalb sollten auch die Ko- und Kontexte in die Analyse einbezogen werden. Generell gibt es keine Häufigkeit
-    in der Sprache an sich (z.B. die häufigsten Sprichwörter oder Komposita des Deutschen), sondern immer nur eine
-    relative in Bezug auf die vorher formulierte Suchanfrage fußend auf der zu einem bestimmten Zeitpunkt ausgewählten
-    Korpusbasis. Es geht also eher um Frequenzbereiche und Häufigkeitstrends bzw. -proportionen.</p>
+  <p>Frequenzen (die Häufigkeit des Vorkommens eines Suchobjekts) werden auf der Basis von Suchanfragen (queries) zum Zwecke der Bestimmung von Gebräuchlichkeit im Korpus berechnet. Man kann davon ausgehen, dass besonders häufige Phänomene eher einen typischen Aspekt des Sprachgebrauchs in den jeweiligen Korpora abbilden als seltene.  Allerdings sind Frequenzen nur Anhaltspunkte, denn es spielen viele Faktoren bei der automatischen Häufigkeitsermittlung eine Rolle. Deshalb sollten auch die Ko- und Kontexte in die Analyse einbezogen werden. <v-btn density="compact" size="small" variant=tonal icon="mdi-plus" @click="toggleDiv"></v-btn></p>
+  <div class="more" v-show="isVisible">
+    Generell gibt es keine Häufigkeit in der Sprache an sich (z.B. die häufigsten Sprichwörter oder Komposita des Deutschen), sondern immer nur eine relative in Bezug auf die vorher formulierte Suchanfrage fußend auf der zu einem bestimmten Zeitpunkt ausgewählten Korpusbasis. Es geht also eher um Frequenzbereiche und Häufigkeitstrends bzw. -proportionen.
+  </div>
+  <p>Im Syntagmatikon dienen Frequenzen nicht nur als empirische Basis, sondern werden selbst als lexikografische Informationseinheiten angeboten:</p>
+  <ul>
+    <li>in Form von Frequenzlisten: <resources-list-compact :filter="['KoMuX', 'PhrasKomp', 
+            'PREPCON_ex', 'PREPCON_kon', 'SpruchList']"></resources-list-compact> 
+            <v-chip density="compact" variant="tonal" style="margin: 3px;">PREPCON<sup>temporal</sup>&nbsp;[Inventar]</v-chip></li>
+    <li>als Häufigkeitsangaben zu einzelnen Einträgen/Stichwörtern: 
+      <resources-list-compact :filter="['WVBF', 'Redeeinleiter', 
+            'PREPCON_kon']"></resources-list-compact>   
+            <v-chip density="compact" variant="tonal" style="margin: 3px;">PREPCON<sup>temporal</sup>&nbsp;[Kurzartikel]</v-chip></li>
+  </ul>
+
   <br />
   <br />
 
@@ -22,30 +29,22 @@
     <compare title="Frequenzangaben in">
       <template #headers>
         <v-tab value="ALL" class="nocaps">allen Ressourcen</v-tab>
-        <v-tab value="1" class="nocaps">KoMuX</v-tab>
-        <v-tab value="2" class="nocaps">PhrasKomp</v-tab>
-        <v-tab value="3" class="nocaps">PREPCON<sup>kontrastiv</sup></v-tab>
-        <v-tab value="4" class="nocaps">PREPCON<sup>temporal</sup></v-tab>
-        <v-tab value="5" class="nocaps">PREPCON<sup>explorativ</sup></v-tab>
-        <v-tab value="6" class="nocaps">SpruchList</v-tab>
-        <v-tab value="7" class="nocaps">WVF (Grund)</v-tab>
+        <v-tab value="1" class="nocaps"><resources-list-compact :filter="['KoMuX']"></resources-list-compact></v-tab>
+        <v-tab value="2" class="nocaps"><resources-list-compact :filter="['PhrasKomp']"></resources-list-compact></v-tab>
+        <v-tab value="3" class="nocaps"><resources-list-compact :filter="['PREPCON_ex']"></resources-list-compact></v-tab>
+        <v-tab value="4" class="nocaps"><resources-list-compact :filter="['PREPCON_temp']"></resources-list-compact></v-tab>
+        <v-tab value="5" class="nocaps"><resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact></v-tab>
+        <v-tab value="6" class="nocaps"><resources-list-compact :filter="['SpruchList']"></resources-list-compact></v-tab>
+        <v-tab value="7" class="nocaps"><resources-list-compact :filter="['WVBF']"></resources-list-compact></v-tab>
       </template>
       <template #tabs>
         <compare-item value="ALL" :simple="true">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta itaque sed unde soluta veniam
-            amet cum excepturi quis. Illo dolorem velit reprehenderit aspernatur nulla reiciendis est
-            consectetur eligendi ipsa consequatur!
-          </p>
+        
 
           <div style="text-align: center; width:100%">
             <img src="/img/datatypes/frequency/frequency.png" style="text-align: center;" />
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta itaque sed unde soluta veniam
-            amet cum excepturi quis. Illo dolorem velit reprehenderit aspernatur nulla reiciendis est
-            consectetur eligendi ipsa consequatur!
-          </p>
+          
         </compare-item>
 
         <compare-item value="1" rkey="KoMuX" description="Frequenzangaben in KoMuX"
@@ -60,12 +59,16 @@
             <p>
               Ausschnitt aus der Frequenzliste für die Verbindungen "Lemma land und NOMEN":
             </p>
+            <div class="exampleImg">
             <img src="/img/datatypes/frequency/komux_part_01.png" alt="" />
+            </div>
 
             <p style="margin-top: 10px;">
               Ausschnitt aus der Frequenzliste für die Verbindungen "ADJEKTIV und ORT":
             </p>
+            <div class="exampleImg">
             <img src="/img/datatypes/frequency/komux_part_02.png" alt="" />
+            </div>
           </template>
         </compare-item>
 
@@ -80,12 +83,16 @@
             <p>
               Ausschnitt aus der Frequenzliste: Häufigste Phrasenkomposita (ohne Attribuierung):
             </p>
+            <div class="exampleImg">
             <img src="/img/datatypes/frequency/phraskomp_part_01.png" alt="" />
+            </div>
 
             <p style="margin-top: 10px;">
               Ausschnitt aus der Frequenzliste für die Verbindungen "unspezifiziertes Erstglied und Zweitglied Gerede"
             </p>
+            <div class="exampleImg">
             <img src="/img/datatypes/frequency/phraskomp_part_02.png" alt="" />
+            </div>
           </template>
         </compare-item>
 
@@ -96,52 +103,33 @@
           </p>
 
           <template #explain>
+           
             <p>
-              Eintrag: „über“
-              <br />&nbsp;
-            </p>
-            <img src="/img/datatypes/frequency/prepe_part_01.png" alt="" style="margin: 40px 0px 0px -130px;" />
-            <p style="margin-top: 10px;">
               Ausschnitt aus der Frequenzliste für die Verbindungen "Präposition über und nachgestelltes NOMEN"
-              <br />&nbsp;
             </p>
-            <p>
-              Eintrag: „Nacht“
-              <br />&nbsp;
-            </p>
-            <img src="/img/datatypes/frequency/prepe_part_02.png" alt="" style="margin: 40px 0px 0px -130px;" />
+            <div class="exampleImg">
+            <img src="/img/datatypes/frequency/prepe_part_01.png" alt=""/>
+            </div>
+            <div class="caption">
+              Eintrag: „über“
+            </div>
+            
+            
             <p style="margin-top: 10px;">
               Ausschnitt aus der Frequenzliste für die Verbindungen "NOMEN Nacht und vorangestellte Präpositionen"
-              <br />&nbsp;
             </p>
+            <div class="exampleImg">
+            <img src="/img/datatypes/frequency/prepe_part_02.png" alt=""/>
+            </div>
+            <div class="caption">
+              Eintrag: „Nacht“
+            </div>
+           
           </template>
         </compare-item>
 
-        <compare-item value="4" rkey="PREPCON_kon"
-          description="Kontrastive Darstellung von Präposition-Nomen-Verbindungen im Kontext - Rubrik: „Quantitative Angaben“"
-          webpage="/img/datatypes/frequency/prepk_fullscreen_01_annotated.png">
-          <p>
-            In „PREPCON<sup>online</sup> kontrastiv“ lassen sich die Frequenzangaben sowohl für die deutsche PN als auch
-            für die Sprachenpaare deutsch – spanisch und deutsch-slowakisch abrufen. Da die Frequenzerhebungen in den
-            Kontrastsprachen in anderen Korpora (z.B. Webkorpora in Sketch Engine) durchgeführt wurden, sind die
-            Frequenzen nicht aufeinander abbildbar, sondern nur in der jeweiligen Sprache zu interpretieren.
-          </p>
-
-          <template #explain>
-            <p>
-              Eintrag: „am Anfang – al principio“
-              <br />&nbsp;
-            </p>
-            <img src="/img/datatypes/frequency/prepk_part_01.png" alt="" />
-            <img src="/img/datatypes/frequency/prepk_part_02.png" alt="" />
-            <p style="margin-top: 10px;">
-              Darstellung von Frequenzen und Suchanfragen für die PN‘s am Anfang – al principio (Deutsch-Spanisch). Beim
-              Anklicken der Frequenzen erscheint die Suchanfrage.
-            </p>
-          </template>
-        </compare-item>
-
-        <compare-item value="5" rkey="PREPCON_temp"
+        
+        <compare-item value="4" rkey="PREPCON_temp"
           webpage="/img/datatypes/frequency/prept_fullscreen_01_annotated.png">
           <p>
             PREPCON<sup>temporal</sup> bietet zwei Typen von Frequenzangaben an:
@@ -176,6 +164,31 @@
           </template>
         </compare-item>
 
+        <compare-item value="5" rkey="PREPCON_kon"
+          description="Kontrastive Darstellung von Präposition-Nomen-Verbindungen im Kontext - Rubrik: „Quantitative Angaben“"
+          webpage="/img/datatypes/frequency/prepk_fullscreen_01_annotated.png">
+          <p>
+            In „PREPCON<sup>online</sup> kontrastiv“ lassen sich die Frequenzangaben sowohl für die deutsche PN als auch
+            für die Sprachenpaare deutsch – spanisch und deutsch-slowakisch abrufen. Da die Frequenzerhebungen in den
+            Kontrastsprachen in anderen Korpora (z.B. Webkorpora in Sketch Engine) durchgeführt wurden, sind die
+            Frequenzen nicht aufeinander abbildbar, sondern nur in der jeweiligen Sprache zu interpretieren.
+          </p>
+
+          <template #explain>
+            <p>
+              Eintrag: „am Anfang – al principio“
+              <br />&nbsp;
+            </p>
+            <img src="/img/datatypes/frequency/prepk_part_01.png" alt="" />
+            <img src="/img/datatypes/frequency/prepk_part_02.png" alt="" />
+            <p style="margin-top: 10px;">
+              Darstellung von Frequenzen und Suchanfragen für die PN‘s am Anfang – al principio (Deutsch-Spanisch). Beim
+              Anklicken der Frequenzen erscheint die Suchanfrage.
+            </p>
+          </template>
+        </compare-item>
+
+
         <compare-item value="6" rkey="SpruchList" description="Frequenzangaben in SpruchList"
           webpage="/img/datatypes/frequency/spruchlist_fullscreen_01_annotated.png">
 
@@ -195,7 +208,7 @@
           </template>
         </compare-item>
 
-        <compare-item value="7" rkey="WVBF" description="Frequenzangaben in KoMuX"
+        <compare-item value="7" rkey="WVBF" description="Frequenzangaben im Wortverbindungsfeld GRUND"
           webpage="/img/datatypes/frequency/wvg_fullscreen_01_annotated.png">
 
           <p>
@@ -223,3 +236,17 @@
     </compare>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      isVisible: false, // initial state of the div (visible)
+    };
+  },
+  methods: {
+    toggleDiv() {
+      this.isVisible = !this.isVisible; // toggle visibility
+    },
+  },
+};
+</script>

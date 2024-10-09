@@ -243,6 +243,7 @@ div.nolink a::before {
   content: none!important;
 }
 
+
 div.relink a::before {
   content: "\F0CE0  "!important;
 }
@@ -250,6 +251,22 @@ div.relink a::before {
 div.caption {
   font-size: 0.8em;
   color: grey
+}
+
+div.more {
+  font-size: 0.9em;
+  color: black;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  background-color: rgb(238,238,238);
+  padding: 10px;
+}
+
+div.exampleImg {
+  width: 100%;
+  border-width: 2px;
+  padding: 2px;
+  margin: auto;
 }
 
 hi {

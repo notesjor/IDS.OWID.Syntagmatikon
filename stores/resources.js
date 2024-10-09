@@ -174,7 +174,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "KWICs",
             "Belege",
             "Grafische Visualisierungen"],
-          search_patterns: [],
+          search_patterns: ["Dynamische Erschließung"],
           search_parts: ["Feste Sätze"],
         },
         {
@@ -350,6 +350,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Fremdsprachige Äquivalenz"
           ],
           search_patterns: [
+            "Kein Musterzugang"
           ],
           search_parts: [
            "Nomina",
@@ -374,6 +375,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Fremdsprachige Äquivalenz"
           ],
           search_patterns: [
+            "Kein Musterzugang"
           ],
           search_parts: [
             "Phraseme",

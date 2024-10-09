@@ -16,7 +16,7 @@
                 Lückenfüllertabellen - Beispiel: <em>aus ADJ Gründen</em>
             </v-list-item>
             <v-list-item> 
-                Lückenfüllertabellen kontrastiv - Beispiel: <em>mit X Genugtuung</em>
+                Lückenfüllertabellen kontrastiv - Beispiel: <em>mit X Genugtuung / con satisfacción</em>
             </v-list-item>
             <v-list-item> 
                 Partnerwörter kontrastiv - Beispiel: <em>nach Belieben</em>
