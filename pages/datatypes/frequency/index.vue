@@ -26,9 +26,9 @@
   <br />
 
   <div>
-    <compare title="Frequenzangaben in">
+    <compare title="">
       <template #headers>
-        <v-tab value="ALL" class="nocaps">allen Ressourcen</v-tab>
+        <v-tab value="ALL" class="nocaps">alle Ressourcen</v-tab>
         <v-tab value="1" class="nocaps"><resources-list-compact :filter="['KoMuX']"></resources-list-compact></v-tab>
         <v-tab value="2" class="nocaps"><resources-list-compact :filter="['PhrasKomp']"></resources-list-compact></v-tab>
         <v-tab value="3" class="nocaps"><resources-list-compact :filter="['PREPCON_ex']"></resources-list-compact></v-tab>
@@ -36,13 +36,14 @@
         <v-tab value="5" class="nocaps"><resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact></v-tab>
         <v-tab value="6" class="nocaps"><resources-list-compact :filter="['SpruchList']"></resources-list-compact></v-tab>
         <v-tab value="7" class="nocaps"><resources-list-compact :filter="['WVBF']"></resources-list-compact></v-tab>
+        <v-tab value="8" class="nocaps"><resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact></v-tab>
       </template>
       <template #tabs>
         <compare-item value="ALL" :simple="true">
         
 
           <div style="text-align: center; width:100%">
-            <img src="/img/datatypes/frequency/frequency.png" style="text-align: center;" />
+            <img src="/img/datatypes/frequency/frequencies_all_white.png" style="text-align: center;" />
           </div>
           
         </compare-item>
@@ -56,18 +57,22 @@
           </p>
 
           <template #explain>
-            <p>
-              Ausschnitt aus der Frequenzliste für die Verbindungen "Lemma land und NOMEN":
-            </p>
+           
             <div class="exampleImg">
             <img src="/img/datatypes/frequency/komux_part_01.png" alt="" />
             </div>
+            <div class="caption">
+              Ausschnitt aus der Ergebnistabelle für Komposita mit Erstglied <em>land</em> und Zweitglied NOMEN
+            </div>
 
-            <p style="margin-top: 10px;">
-              Ausschnitt aus der Frequenzliste für die Verbindungen "ADJEKTIV und ORT":
-            </p>
+            <p>
+              KoMuX bietet zusätzlich eine grafische Darstellung der Frequenzentwicklung in der Treffermenge.
+            </p>            
             <div class="exampleImg">
-            <img src="/img/datatypes/frequency/komux_part_02.png" alt="" />
+            <img src="/img/datatypes/frequency/komux_part_03.png" alt="" />
+            </div>
+            <div class="caption">
+              Frequenzverlauf für Komposita mit Erstglied <em>land</em> und Zweitglied NOMEN
             </div>
           </template>
         </compare-item>
@@ -80,18 +85,20 @@
           </p>
 
           <template #explain>
-            <p>
-              Ausschnitt aus der Frequenzliste: Häufigste Phrasenkomposita (ohne Attribuierung):
-            </p>
+           
             <div class="exampleImg">
             <img src="/img/datatypes/frequency/phraskomp_part_01.png" alt="" />
             </div>
+            <div class="caption">
+              Ausschnitt aus der Frequenzliste: Häufigste Phrasenkomposita (ohne Attribuierung):
+            </div>
 
-            <p style="margin-top: 10px;">
-              Ausschnitt aus der Frequenzliste für die Verbindungen "unspezifiziertes Erstglied und Zweitglied Gerede"
-            </p>
             <div class="exampleImg">
             <img src="/img/datatypes/frequency/phraskomp_part_02.png" alt="" />
+            </div>
+            
+            <div class="caption">
+              Ausschnitt aus der Frequenzliste für Treffer mit Zweitglied <em>Gerede</em>
             </div>
           </template>
         </compare-item>
@@ -104,25 +111,18 @@
 
           <template #explain>
            
-            <p>
-              Ausschnitt aus der Frequenzliste für die Verbindungen "Präposition über und nachgestelltes NOMEN"
-            </p>
             <div class="exampleImg">
             <img src="/img/datatypes/frequency/prepe_part_01.png" alt=""/>
             </div>
             <div class="caption">
-              Eintrag: „über“
+              Ausschnitt aus der Frequenzliste für Verbindungen mit Präposition <em>über</em> und nachgestellten Nomen
             </div>
-            
-            
-            <p style="margin-top: 10px;">
-              Ausschnitt aus der Frequenzliste für die Verbindungen "NOMEN Nacht und vorangestellte Präpositionen"
-            </p>
+          
             <div class="exampleImg">
             <img src="/img/datatypes/frequency/prepe_part_02.png" alt=""/>
             </div>
             <div class="caption">
-              Eintrag: „Nacht“
+              Ausschnitt aus der Frequenzliste für Verbindungen mit Nomen <em>Nacht</em> und vorangestellten Präpositionen
             </div>
            
           </template>
@@ -144,23 +144,44 @@
 
           <template #explain>
             <p>
-              Artikel „über Nacht“:
-            </p>
-            <img src="/img/datatypes/frequency/prept_part_01.png" alt=""/>
-            <img src="/img/datatypes/frequency/prept_part_02.png" alt="" />
-            <p style="margin-top: 10px;">
               Darstellung von Frequenzen und Suchanfragen für die PN <i>über Nacht</i>.
               Beim Anklicken der Frequenzen erscheint die Suchanfrage.
             </p>
-            <img src="/img/datatypes/frequency/prept_part_03.png" alt="" />
+            <div class="exampleImg">
+              <img src="/img/datatypes/frequency/prept_part_01.png" alt=""/>
+            </div>
+            <div class="caption">
+              Frequenzangaben zu Suchanfragen im Artikel „über Nacht“:
+             </div> 
+            <div class="exampleImg">
+            <img src="/img/datatypes/frequency/prept_part_02.png" alt="" />
+             </div>
+             <div class="caption">
+              Einblendung der dazugehörigen Suchanfrage und Korpusinformation
+             </div> 
+          
+             <div class="caption">
+              Artikel „über Nacht“:
+             </div> 
+          
+
+            
             <p style="margin-top: 10px;">
               Ausschnitt aus den Frequenzangaben der Kategorie FEIERTAGE. Beim Anklicken auf eine PN wird man auf den
               Eintrag in PREPCON<sup>explorativ</sup> verlinkt.
             </p>
+            <div class="exampleImg">
+              <img src="/img/datatypes/frequency/prept_part_03.png" alt="" />
+              </div>
+            <div class="caption">
+              Ausschnitt aus dem Inventar "Feiertage" in PREPCON<sup>temporal</sup>
+            </div>
+              <div class="exampleImg">
             <img src="/img/datatypes/frequency/prept_part_04.png" alt="" />
-            <p style="margin-top: 10px;">
-              Verlinkter Eintrag „Heiligabend“ in PREPCONexplorativ
-            </p>
+            </div>
+            <div class="caption">
+              Verlinkter Eintrag „Heiligabend“ in PREPCON<sup>explorativ</sup>
+            </div>
           </template>
         </compare-item>
 
@@ -176,15 +197,22 @@
 
           <template #explain>
             <p>
-              Eintrag: „am Anfang – al principio“
-              <br />&nbsp;
-            </p>
-            <img src="/img/datatypes/frequency/prepk_part_01.png" alt="" />
-            <img src="/img/datatypes/frequency/prepk_part_02.png" alt="" />
-            <p style="margin-top: 10px;">
               Darstellung von Frequenzen und Suchanfragen für die PN‘s am Anfang – al principio (Deutsch-Spanisch). Beim
               Anklicken der Frequenzen erscheint die Suchanfrage.
             </p>
+            <div class="exampleImg">
+            <img src="/img/datatypes/frequency/prepk_part_01.png" alt="" />
+            </div>
+            <div class="caption">
+              Frequenzangaben zu Suchanfragen im Artikel „am Anfang“ (deutsch - spanisch):
+             </div> 
+            <div class="exampleImg">
+            <img src="/img/datatypes/frequency/prepk_part_02.png" alt="" />
+            </div>
+            <div class="caption">
+              Einblendung der dazugehörigen Suchanfrage und Korpusinformation
+             </div> 
+            
           </template>
         </compare-item>
 
@@ -200,11 +228,12 @@
           </p>
 
           <template #explain>
+            <div class="exampleImg">
             <img src="/img/datatypes/frequency/spruchlist_part_01.png" alt="" />
-
-            <p style="margin-top: 10px;">
-              Ausschnitt aus der SpruchList-Frequenzliste mit Suchanfragen
-            </p>
+            </div>
+            <div class="caption">
+              Ausschnitt aus der Frequenzliste von SpruchList mit eingeblendeten Suchanfragen für den Eintrag <em>Ende gut, alles gut</em>
+            </div>
           </template>
         </compare-item>
 
@@ -219,19 +248,49 @@
           </p>
 
           <template #explain>
-            <p>
-              Knoten „mit Grund“:
-            </p>
-            <img src="/img/datatypes/frequency/wvg_part_01.png" alt="" />
-            <p>Frequenzangaben zum PN-Knoten mit Grund</p>
+           
+            <div class="exampleImg">
+              <img src="/img/datatypes/frequency/wvg_part_01.png" alt=""/>
+            </div>
+            <div class="caption">
+              Frequenzangaben zum PN-Knoten "mit Grund" und zugrunde liegende Suchanfragen
+            </div>
+           
 
             <p style="margin-top: 10px;">
-              Knoten „im Grunde“:
+              
+             
             </p>
+            <div class="exampleImg">
             <img src="/img/datatypes/frequency/wvg_part_02.png" alt="" />
-            <p>Frequenzangaben zum PN-Knoten <i>im Grunde</i> und zugrunde liegende Suchanfragen</p>
+            </div>
+            <div class=caption>Frequenzangaben zum PN-Knoten "im Grunde" und zugrunde liegende Suchanfragen</div>
+            
           </template>
         </compare-item>
+
+        <compare-item value="8" rkey="Redeeinleiter" description="Frequenzangaben im 'Kleinen Wörterbuch der Redeeinleiter'"
+          webpage="/img/datatypes/frequency/rede_fullscreen_annotated.png">
+
+          <p>
+            Im "Kleinen Wörterbuch der Redeeinleiter" gibt es hinter jedem Eintrag eine Frequenzangabe, die aussagt, wie häufig dieser Redeeinleiter insgesamt im zugrunde liegenden Korpus auftritt. Zusätzlich wird in der rechten Spalte angegeben, wie häufig bestimmte Merkmalen in dieser Gruppe auftreten (z.B. Verwendung zur Einleitung direkter vs. indirekter Rede).
+          </p>
+
+          <template #explain>
+           <p>Eintrag zum Redeeinleiter <em>sagen</em> - Gesamtfrequenz (siehe
+            <enum v="1" />) und Frequenzen verschiedener Merkmale innerhalb dieser Gruppe (siehe
+            <enum v="2" />)</p>
+            <div class="exampleImg">
+              <img src="/img/datatypes/frequency/rede_part_01_num.png" alt=""/>
+            </div>
+            <div class="caption">
+              Eintrag zum Redeeinleiter <em>sagen</em>
+            </div>
+        
+            
+          </template>
+        </compare-item>
+
       </template>
     </compare>
   </div>

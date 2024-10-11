@@ -250,7 +250,9 @@ div.relink a::before {
 
 div.caption {
   font-size: 0.8em;
-  color: grey
+  color: grey;
+  margin-bottom: 10px;
+  display: block;
 }
 
 div.more {
@@ -266,7 +268,11 @@ div.exampleImg {
   width: 100%;
   border-width: 2px;
   padding: 2px;
+}
+
+div.exampleImg img{
   margin: auto;
+  display: block;
 }
 
 hi {

@@ -21,8 +21,10 @@
             <v-list-item> 
                 Partnerwörter kontrastiv - Beispiel: <em>nach Belieben</em>
             </v-list-item>
-            <v-list-item> 
+            <v-list-item prepend-icon="mdi-lightbulb-on" >      
+                <NuxtLink to="/datatypes/fields/PREPCON_temp">
                 Verwandte Wörter und Wortgruppen - Beispiel: <em>ohne Unterlass</em>
+                </NuxtLink>
             </v-list-item>
         </v-list>
 

@@ -14,7 +14,7 @@
   <br />
 
   <div>
-    <compare title="Feldangaben in">
+    <compare title="">
 
       <!-- NOTE: Zuerst muss ein <template #headers> erstellt werden -->
       <!-- NOTE: dieses sollte mehrerer Tabs: <v-tab value="ALL" class="nocaps"> enthalten -->
@@ -23,7 +23,7 @@
       <!-- NOTE: Der Tab kann belieibig benannt werden -->
 
       <template #headers>
-        <v-tab value="ALL" class="nocaps">allen Ressourcen</v-tab>
+        <v-tab value="ALL" class="nocaps">alle Ressourcen</v-tab>
         <v-tab value="1" class="nocaps" ><resources-list-compact :filter="['SPRW']"></resources-list-compact> </v-tab>
         <v-tab value="2" class="nocaps"><resources-list-compact :filter="['FesteWV']"></resources-list-compact></v-tab>
         <v-tab value="3" class="nocaps"><resources-list-compact :filter="['MAP']"></resources-list-compact></v-tab>
@@ -192,6 +192,7 @@
             entweder die lexikografische Beschreibung des (Quasi-)Synonyms oder einen Link zum entsprechenden Profil in
             der CCDB.
           </p>
+         
 
           <template #explain>
             <p>
@@ -201,6 +202,9 @@
               <img src="/img/datatypes/fields/prept_part_01.png" alt="" />
               </div>
               <div class="caption">Artikel "ohne Unterlass"</div>
+
+            
+          
               
           </template>
         </compare-item>

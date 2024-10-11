@@ -17,5 +17,14 @@
         <li><resources-list-compact :filter="['PREPCON_kon']"/>  („Quantitative Angaben“) </li>
         <li><resources-list-compact :filter="['WVBF']"/></li>
     </ul>
-<p>Zur Interpretation von Kookkurrenzdaten im Syntagmatikon siehe <NuxtLink to="/examples/kook-am-Ende">Fallbeispiel <em>am Ende</em></NuxtLink></p>
+<p>Zur Interpretation von Kookkurrenzdaten im Syntagmatikon siehe 
+    <div class="nolink">
+    <nuxt-link to="/examples/kook-am-Ende"> 
+        <v-btn prepend-icon="mdi-lightbulb-on" class="nocaps">
+       Fallbeispiel <em>am Ende</em>
+    </v-btn>
+    </nuxt-link>
+    </div>
+    </p>
+   
 </template>

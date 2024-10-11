@@ -25,7 +25,7 @@
                 <template v-if="$slots.webpagetext" #webpagetext><slot name="webpagetext"></slot></template>
             </resource-explain>
 
-            <nuxt-link v-if="buttonUrl != null" :to="buttonUrl"><v-btn prepend-icon="mdi-arrow-right-bold-box-outline" class="nocaps">Weiterführende Erklärung anzeigen</v-btn></nuxt-link>
+            <nuxt-link v-if="buttonUrl != null" :to="buttonUrl"><v-btn prepend-icon="mdi-lightbulb-on" class="nocaps" variant="elevated" color="">Fallbeispiel anzeigen</v-btn></nuxt-link>
         </v-row>        
     </v-tabs-window-item>
 </template>
