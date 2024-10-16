@@ -38,8 +38,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_functions: [
             "Frequenzen", 
             "KWICs", 
-            "Annotierte Daten", 
-            "Grafische Visualisierungen",
             "Belege"
           ],
           search_patterns: ["Dynamische Erschließung"],
@@ -64,7 +62,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Lückenfüllertabellen", 
             "Komponenten",
             "Felder",
-            "Grafische Visualisierungen",
             "Belege"
           ],
           search_patterns: ["Dynamische Erschließung"],
@@ -93,7 +90,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Komponenten",
             "Felder",
             "Fremdsprachige Äquivalenz",
-            "Grafische Visualisierungen",
             "Belege"
           ],
           search_patterns: ["Lexikografische Angabe"],
@@ -112,9 +108,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_type: "Explorative Datenbanken",
           search_functions: [
             "Frequenzen",
-            "Annotierte Daten",
             "Kategoriale Label",
-            "Grafische Visualisierungen"
           ],
           search_patterns: [
             "Dynamische Erschließung",
@@ -134,11 +128,9 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_type: "Deskriptive Datenbanken",
           search_functions: [
             "Belege",
-            "Annotierte Daten",
             "Kategoriale Label",
             "Narrative Beschreibungen",
             "Felder",
-            "Grafische Visualisierungen",
           ],
           search_patterns: ["Direkter Zugang"],
           search_parts: ["Verben", "Präpositionen", "Phraseme"],
@@ -157,8 +149,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_functions: [
             "Frequenzen",
             "KWICs",
-            "Belege",
-            "Grafische Visualisierungen"],
+            "Belege"],
           search_patterns: ["Dynamische Erschließung"],
           search_parts: ["Feste Sätze"],
         },
@@ -176,7 +167,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_functions: [
             "Frequenzen", 
             "KWICs",
-            "Annotierte Daten",
             "Kategoriale Label", 
             "Belege"
           ],
@@ -201,8 +191,8 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_type: "Deskriptive Datenbanken",
           search_functions: [
             "Frequenzen", 
-            "Annotierte Daten",
-            "Belege"
+            "Belege",
+            "Kategoriale Label"
           ],
           search_patterns: ["Dynamische Erschließung"],
           search_parts: ["Nomina", "Verben", "Phraseme"],

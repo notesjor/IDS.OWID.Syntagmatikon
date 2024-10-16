@@ -36,7 +36,7 @@ definePageMeta({
         <h2 style="margin:-20px 0px 10px 10px; border-bottom: 3px lightgray solid;">Automatische Informationstypen</h2>
 
         <div class="container" style="margin-left: -20px;">
-          <tile-gradient  color1="#fec037" color2="#ff3661" title="Frequenzen" link="/datatypes/frequency">
+          <tile-gradient   color1="#fec037" color2="#ff3661" title="Frequenzen" link="/datatypes/frequency">
             Häufigkeit des Vorkommens eines sprachlichen Ausdrucks im Korpus, ermittelt mithilfe von Zählungen
               und/oder Suchanfragen (queries)
               <div class="mt-2">
@@ -53,7 +53,7 @@ definePageMeta({
             </div>
           </tile-gradient>
 
-          <tile-gradient  color1="#fec037" color2="#ff3661" title="Kookkurrenzprofile" link="/datatypes/cooccurrence">
+          <tile-gradient color1="#fec037" color2="#ff3661"  title="Kookkurrenzprofile" link="/datatypes/cooccurrence">
             Durch statistische Berechnungen (sog. Kookkurrenzanalysen) ermittelte Partnerwort-Profile
               (überproportional häufiges Miteinandervorkommen von Wörtern und Wortgruppen)
               <div class="mt-2">
@@ -70,13 +70,6 @@ definePageMeta({
             </div>
           </tile-gradient>
 
-          <tile-gradient  color1="#fec037" color2="#ff3661" title="Annotierte Daten" link="/datatypes/annotation">
-            Durch automatische Annotationsprogramme kategorisierte Korpusdaten (z.B. nach Wortarten, Satztypen, semantischen Kategorien).
-            <div class="mt-2">
-            <resources-list-compact :filter="['Redeeinleiter', 'KoMuX', 'PhrasKomp', 
-            'PREPCON_ex', 'MAP']"></resources-list-compact>
-            </div>
-          </tile-gradient>
         </div>
 
         <h2 style="margin:40px 0px 10px 10px; border-bottom: 3px lightgray solid;">Bearbeitete Informationstypen</h2>
@@ -88,7 +81,7 @@ definePageMeta({
             Linguistische Etikettierung von Merkmalen sprachlicher Einheiten
             <div class="mt-2">
             <resources-list-compact :filter="['KoMuX', 'PhrasKomp', 
-            'PREPCON_ex', 'MAP', 'WVBF', 'Verlaufsformen', 'FesteWV']"></resources-list-compact>
+            'PREPCON_kon', 'MAP', 'WVBF', 'Verlaufsformen', 'FesteWV', 'Redeeinleiter']"></resources-list-compact>
             </div>
           </tile-gradient>
 
@@ -131,14 +124,6 @@ definePageMeta({
             </div>
             </tile-gradient>
 
-          
-          <tile-gradient color1="#fec037" color2="#801b31"  title="Grafische Visualisierungen" link="/datatypes/graphics">
-            
-            <div class="mt-2">
-            <resources-list-compact :filter="['SpruchList', 'MAP', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX']"></resources-list-compact>
-            </div>   
-          
-          </tile-gradient>
 
 
         </div>

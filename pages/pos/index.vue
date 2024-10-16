@@ -42,29 +42,29 @@ der Fokus auf der gesamten Einheit.</p>
     <v-row>
       <v-col cols="12">
         <div class="container">
-          <tile-gradient title="Nomina"  color1="#ff3661" color2="#33dcfe" link="pos/nouns">  
+          <tile-gradient title="Nomina"  color1="#12cb4b" color2="#fec037" link="pos/nouns">  
             <resources-list-compact :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'WVBF', 
             'PhrasKomp', 'DTWW', 'Redeeinleiter']"></resources-list-compact>    
           </tile-gradient>
          
 
-          <tile-gradient title="Verben" color1="#ff3661" color2="#33dcfe"  link="pos/verbs">   
+          <tile-gradient title="Verben" color1="#12cb4b" color2="#fec037" link="pos/verbs">   
             <resources-list-compact :filter="['MAP', 'Verlaufsformen', 'Redeeinleiter', 'KoMuX']"></resources-list-compact>       
           </tile-gradient>
 
-          <tile-gradient title="Präpositionen" color1="#ff3661" color2="#33dcfe"  link="pos/prepositions"> 
+          <tile-gradient title="Präpositionen" color1="#12cb4b" color2="#fec037"  link="pos/prepositions"> 
             <resources-list-compact :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'MAP', 'Verlaufsformen', 'WVBF', 'KoMuX']"></resources-list-compact> 
           </tile-gradient>
 
-          <tile-gradient title="Adjektive" color1="#ff3661" color2="#33dcfe"  link="pos/adjectives">
+          <tile-gradient title="Adjektive" color1="#12cb4b" color2="#fec037"  link="pos/adjectives">
             <resources-list-compact :filter="['FesteWV', 'KoMuX']"></resources-list-compact>
           </tile-gradient>
 
-          <tile-gradient title="Phraseme" color1="#ff3661" color2="#33dcfe"  link="pos/phrasemes">
+          <tile-gradient title="Phraseme" color1="#12cb4b" color2="#fec037"  link="pos/phrasemes">
             <resources-list-compact :filter="['PhrasKomp', 'MAP', 'Redeeinleiter', 'DTWW', 'DRI', 'WVBF', 'FesteWV']"></resources-list-compact>
           </tile-gradient>
 
-          <tile-gradient title="Feste Sätze" color1="#ff3661" color2="#33dcfe"  link="pos/sentences">  
+          <tile-gradient title="Feste Sätze" color1="#12cb4b" color2="#fec037"  link="pos/sentences">  
             <resources-list-compact :filter="['SpruchList', 'PhrasKomp', 'SPRW']"></resources-list-compact>  
           </tile-gradient>
 

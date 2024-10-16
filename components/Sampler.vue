@@ -4,7 +4,7 @@
   style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
   <v-row style="margin-top:-20px">
       <v-col>
-        <p class="text-xl">Interaktive Beispiele</p> 
+        <!-- <p class="text-xl">Interaktive Beispiele</p> -->
        <!-- <p class="text-l">Durch Klicken auf die Beispiele im Beleg werden darunter die zugehörigen Ressourcen im Syntagmatikon mit entsprechender Verlinkung zum dortigen Eintrag angezeigt. 
         </p>  -->     
       </v-col>
@@ -20,9 +20,18 @@
               <v-sheet height="100%">
                 <div style="padding:7px 75px 5px 75px;">
                   <v-row>
+                    <!--Styling für den Beleg-->
+                    <div style="padding:10px 40px 10px 40px; background-color: #fff9eb; margin-top:20px;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    font-family: 'Lucida Console', 'Courier New', monospace;">
+
+
                     <div v-html="item.html"
-                      style="margin:10px -20px 0px -20px; font-size: 1.1rem; line-height: 1.5; font-weight: 300;">
+                      style="margin:10px -20px 0px -20px; 
+                     
+                      line-height: 1.5; font-weight: 300;">
                     </div>
+                  </div>
                   </v-row>                  
                   <div style="width: 100%; margin: 0px 20px 20px 20px;">
                     <a v-for="r in item.references" :key="r" :href="r.href" target="_blank">
@@ -60,8 +69,9 @@
     <v-row style="margin-top:0px">
     <v-col>
         <!-- <p class="text-xl">Interaktive Beispiele</p> -->
-        <p class="text-l">Durch Klicken auf die Beispiele im Beleg werden darunter die zugehörigen Ressourcen im Syntagmatikon mit entsprechender Verlinkung zum dortigen Eintrag angezeigt. 
-        </p>        
+        <div class="caption">
+          Interaktive Beispiele. Sind mehrere Beispiele in einem Beleg, können diese durch Anklicken einzeln ausgewählt werden.
+        </div>        
       </v-col>
     </v-row>
   </div>

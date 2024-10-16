@@ -42,14 +42,14 @@ definePageMeta({
     <v-row>
       <v-col cols="12">
         <div class="container">
-          <tile-gradient title="Explorative Datenbanken" color1="#33dcfe" color2="#fec037" link="/resources/db_expl">           
+          <tile-gradient title="Explorative Datenbanken" color1="#33dcfe" color2="#d95dd9" link="/resources/db_expl">           
             Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von Korpusdaten 
             <div class="mt-2">
          <resources-list-compact :filter="['KoMuX', 'PREPCON_ex']" :showDesc="false"></resources-list-compact>
          </div>
           </tile-gradient>
 
-          <tile-gradient title="Deskriptive Datenbanken" color1="#33dcfe" color2="#fec037" link="/resources/db_desc">           
+          <tile-gradient title="Deskriptive Datenbanken" color1="#33dcfe" color2="#d95dd9" link="/resources/db_desc">           
             Eine Kombination aus automatisch erstellten
             Datenmengen und qualitativ erarbeiteten Informationen
             <div class="mt-2">
@@ -57,7 +57,7 @@ definePageMeta({
           </div>
           </tile-gradient>
 
-          <tile-gradient title="Inventare und Sammlungen" color1="#33dcfe" color2="#fec037" link="/resources/inventory">           
+          <tile-gradient title="Inventare und Sammlungen"  color1="#33dcfe" color2="#d95dd9" link="/resources/inventory">           
             Aus dem Korpus extrahierte oder im
             Korpus überprüfte Sammlungen sprachlicher Ausdrücke ähnlichen Typs
             <div class="mt-2">
@@ -65,14 +65,14 @@ definePageMeta({
             </div>
           </tile-gradient>
 
-          <tile-gradient title="Online-Wörterbücher" color1="#33dcfe" color2="#fec037" link="/resources/dictionaries">
+          <tile-gradient title="Online-Wörterbücher" color1="#33dcfe" color2="#d95dd9"link="/resources/dictionaries">
             Korpusbasierte Wörterbuchartikel im Hypertextformat
             <div class="mt-2">
             <resources-list-compact :filter="['SPRW', 'FesteWV','DRI']" :showDesc="false"></resources-list-compact>
             </div>
           </tile-gradient>
          
-          <tile-gradient title="Pilotstudien" color1="#33dcfe" color2="#fec037" link="/resources/prototypes">
+          <tile-gradient title="Pilotstudien" color1="#33dcfe" color2="#d95dd9" link="/resources/prototypes">
             Linguistische Studien bzw. lexikografische Beschreibungen zu ausgewählten Phänomen
             <div class="mt-2">
             <resources-list-compact :filter="['PREPCON_kon', 'WVBF']"></resources-list-compact>

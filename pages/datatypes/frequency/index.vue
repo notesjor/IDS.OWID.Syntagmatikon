@@ -52,8 +52,8 @@
           webpage="/img/datatypes/frequency/komux_fullscreen_01_annotated.png">
 
           <p>
-            In KoMuX werden Frequenzlisten von unterschiedlichen Merkmalskombinationen der verzeichneten Komposita
-            angezeigt: Lemma; Wortart; Wortbildungstyp; Thematische Kategorie.
+            In <resources-list-compact :filter="['KoMuX']"></resources-list-compact> werden Frequenzlisten von unterschiedlichen Merkmalskombinationen der verzeichneten Komposita
+            angezeigt: Lemma; Wortart; Wortbildungstyp; Thematische Kategorie. Zusätzlich bietet die Ressource eine grafische Darstellung der Frequenzentwicklung in der Treffermenge.
           </p>
 
           <template #explain>
@@ -65,9 +65,7 @@
               Ausschnitt aus der Ergebnistabelle für Komposita mit Erstglied <em>land</em> und Zweitglied NOMEN
             </div>
 
-            <p>
-              KoMuX bietet zusätzlich eine grafische Darstellung der Frequenzentwicklung in der Treffermenge.
-            </p>            
+        
             <div class="exampleImg">
             <img src="/img/datatypes/frequency/komux_part_03.png" alt="" />
             </div>
@@ -80,7 +78,7 @@
         <compare-item value="2" rkey="PhrasKomp" description="Frequenzangaben in PhrasKomp"
           webpage="/img/datatypes/frequency/phraskomp_fullscreen_01_annotated.png">
           <p>
-            In PhrasKomp werden Frequenzlisten von unterschiedlichen Merkmalskombinationen der verzeichneten
+            In  <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact> werden Frequenzlisten von unterschiedlichen Merkmalskombinationen der verzeichneten
             Phrasenkomposita angezeigt: Zweitglieder; Ableitungstypen; semantische Gruppen des Zweitglieds.
           </p>
 
@@ -105,7 +103,7 @@
 
         <compare-item value="3" rkey="PREPCON_ex" webpage="/img/datatypes/frequency/prepe_fullscreen_01_annotated.png">
           <p>
-            In PREPCON<sup>explorativ</sup> werden die absoluten und relativen Frequenzen der
+            In  <resources-list-compact :filter="['PREPCON_ex']"></resources-list-compact> werden die absoluten und relativen Frequenzen der
             Präposition-Nomen-Verbindungen in zwei Formaten aufgeführt: Präpositionstabellen und Nomentabellen.
           </p>
 
@@ -132,7 +130,7 @@
         <compare-item value="4" rkey="PREPCON_temp"
           webpage="/img/datatypes/frequency/prept_fullscreen_01_annotated.png">
           <p>
-            PREPCON<sup>temporal</sup> bietet zwei Typen von Frequenzangaben an:
+            <resources-list-compact :filter="['PREPCON_temp']"></resources-list-compact> bietet zwei Typen von Frequenzangaben an:
           <ul>
             <li>Häufigkeitsangaben für eine PN in „Kurzartikel zu temporalen Zweiworteinheiten“ mit drei Frequenzen und
               ihren zugrunde liegenden Suchanfragen Präposition in (Groß- und Kleinschreibung zusammen/einzeln plus
@@ -143,10 +141,7 @@
           </p>
 
           <template #explain>
-            <p>
-              Darstellung von Frequenzen und Suchanfragen für die PN <i>über Nacht</i>.
-              Beim Anklicken der Frequenzen erscheint die Suchanfrage.
-            </p>
+         
             <div class="exampleImg">
               <img src="/img/datatypes/frequency/prept_part_01.png" alt=""/>
             </div>
@@ -157,24 +152,19 @@
             <img src="/img/datatypes/frequency/prept_part_02.png" alt="" />
              </div>
              <div class="caption">
-              Einblendung der dazugehörigen Suchanfrage und Korpusinformation
-             </div> 
-          
-             <div class="caption">
-              Artikel „über Nacht“:
+              Durch Klick auf die Frequenzen wird die dazugehörige Suchanfrage und Korpusinformation gezeigt.
              </div> 
           
 
             
             <p style="margin-top: 10px;">
-              Ausschnitt aus den Frequenzangaben der Kategorie FEIERTAGE. Beim Anklicken auf eine PN wird man auf den
-              Eintrag in PREPCON<sup>explorativ</sup> verlinkt.
+             
             </p>
             <div class="exampleImg">
               <img src="/img/datatypes/frequency/prept_part_03.png" alt="" />
               </div>
             <div class="caption">
-              Ausschnitt aus dem Inventar "Feiertage" in PREPCON<sup>temporal</sup>
+              Ausschnitt aus den Frequenzangaben der Kategorie FEIERTAGE. Die Einträge sind mit PREPCON<sup>explorativ</sup> verlinkt.
             </div>
               <div class="exampleImg">
             <img src="/img/datatypes/frequency/prept_part_04.png" alt="" />
@@ -189,28 +179,24 @@
           description="Kontrastive Darstellung von Präposition-Nomen-Verbindungen im Kontext - Rubrik: „Quantitative Angaben“"
           webpage="/img/datatypes/frequency/prepk_fullscreen_01_annotated.png">
           <p>
-            In „PREPCON<sup>online</sup> kontrastiv“ lassen sich die Frequenzangaben sowohl für die deutsche PN als auch
+            In <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> lassen sich die Frequenzangaben sowohl für die deutsche PN als auch
             für die Sprachenpaare deutsch – spanisch und deutsch-slowakisch abrufen. Da die Frequenzerhebungen in den
             Kontrastsprachen in anderen Korpora (z.B. Webkorpora in Sketch Engine) durchgeführt wurden, sind die
             Frequenzen nicht aufeinander abbildbar, sondern nur in der jeweiligen Sprache zu interpretieren.
           </p>
 
           <template #explain>
-            <p>
-              Darstellung von Frequenzen und Suchanfragen für die PN‘s am Anfang – al principio (Deutsch-Spanisch). Beim
-              Anklicken der Frequenzen erscheint die Suchanfrage.
-            </p>
             <div class="exampleImg">
             <img src="/img/datatypes/frequency/prepk_part_01.png" alt="" />
             </div>
             <div class="caption">
-              Frequenzangaben zu Suchanfragen im Artikel „am Anfang“ (deutsch - spanisch):
+              Darstellung von Frequenzen und Suchanfragen für die Präposition-Nomen-Kombination "am Anfang" – "al principio" (Deutsch-Spanisch).
              </div> 
             <div class="exampleImg">
             <img src="/img/datatypes/frequency/prepk_part_02.png" alt="" />
             </div>
             <div class="caption">
-              Einblendung der dazugehörigen Suchanfrage und Korpusinformation
+              Durch Anklicken der Frequenzen wird die dazugehörige Suchanfrage und Korpusinformation gezeigt.
              </div> 
             
           </template>
@@ -221,7 +207,7 @@
           webpage="/img/datatypes/frequency/spruchlist_fullscreen_01_annotated.png">
 
           <p>
-            Die Frequenzangaben in SpruchList basieren auf engen und weiten Suchanfragen, die ebenfalls abrufbar sind.
+            Die Frequenzangaben in <resources-list-compact :filter="['SpruchList']"></resources-list-compact> basieren auf engen und weiten Suchanfragen, die ebenfalls abrufbar sind.
             Enge Suchanfragen umfassen die Wortformen des Spruchnamens in unmittelbarer Abfolge im Satz (ohne Lücken).
             Weite Suchanfragen umfassen die Komponenten im Satz (mit unterschiedlichen Wortformen), einer gewissen
             syntaktischen Varianz und unter Zulassung von Lücken.
@@ -241,7 +227,7 @@
           webpage="/img/datatypes/frequency/wvg_fullscreen_01_annotated.png">
 
           <p>
-            In WV-Feld GRUND werden zwei Suchanfragen angegeben: Präposition in Klein- sowie Großschreibung plus eine
+            In <resources-list-compact :filter="['WVBF']"></resources-list-compact> werden zwei Suchanfragen angegeben: Präposition in Klein- sowie Großschreibung plus eine
             Wortform des Lemma GRUND in unmittelbarer Folge. In bestimmten Fällen kann die Suchanfrage weitere Elemente
             enthalten, z.B. um nicht zutreffende Belege auszuschließen, die andere Wortverbindungen oder Muster
             erfassen.
@@ -273,18 +259,17 @@
           webpage="/img/datatypes/frequency/rede_fullscreen_annotated.png">
 
           <p>
-            Im "Kleinen Wörterbuch der Redeeinleiter" gibt es hinter jedem Eintrag eine Frequenzangabe, die aussagt, wie häufig dieser Redeeinleiter insgesamt im zugrunde liegenden Korpus auftritt. Zusätzlich wird in der rechten Spalte angegeben, wie häufig bestimmte Merkmalen in dieser Gruppe auftreten (z.B. Verwendung zur Einleitung direkter vs. indirekter Rede).
+           In der Ressource <resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact> gibt es hinter jedem Eintrag eine Frequenzangabe, die aussagt, wie häufig dieser Redeeinleiter insgesamt im zugrunde liegenden Korpus auftritt. Zusätzlich wird in der rechten Spalte angegeben, wie häufig bestimmte Merkmalen in dieser Gruppe auftreten (z.B. Verwendung zur Einleitung direkter vs. indirekter Rede).
           </p>
 
           <template #explain>
-           <p>Eintrag zum Redeeinleiter <em>sagen</em> - Gesamtfrequenz (siehe
-            <enum v="1" />) und Frequenzen verschiedener Merkmale innerhalb dieser Gruppe (siehe
-            <enum v="2" />)</p>
+           
             <div class="exampleImg">
               <img src="/img/datatypes/frequency/rede_part_01_num.png" alt=""/>
             </div>
             <div class="caption">
-              Eintrag zum Redeeinleiter <em>sagen</em>
+              Eintrag zum Redeeinleiter <em>sagen</em> - Gesamtfrequenz (1) und Frequenzen 
+              verschiedener Merkmale innerhalb dieser Gruppe (2)
             </div>
         
             
