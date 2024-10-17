@@ -52,18 +52,6 @@
       </v-list>
       <!-- HOME END -->
 
-      
-      <v-divider></v-divider>
-
-      <!-- ADDITIONAL INFORMATION START -->
-      <v-list density="compact" nav>
-        <v-list-subheader>Suche</v-list-subheader>
-        <router-link to="/search">
-          <v-list-item prepend-icon="mdi-magnify" title="nach Einträgen"></v-list-item>
-        </router-link>
-      </v-list>
-      <!-- ADDITIONAL INFORMATION END -->
-
       <v-divider></v-divider>
 
     <!-- ADDITIONAL INFORMATION START -->
@@ -89,8 +77,31 @@
       <!-- ADDITIONAL INFORMATION END -->
 
 
+      <v-divider></v-divider>
+
+      <!-- ADDITIONAL INFORMATION START -->
+      <v-list density="compact" nav>
+        <v-list-subheader>Suche</v-list-subheader>
+        <router-link to="/search">
+          <v-list-item prepend-icon="mdi-magnify" title="nach Einträgen"></v-list-item>
+        </router-link>
+      </v-list>
+      <!-- ADDITIONAL INFORMATION END -->
 
       <v-divider></v-divider>
+
+
+    <!-- ADDITIONAL INFORMATION START -->
+ <!--    <v-list density="compact" nav>
+      <v-list-subheader>Weitere Informationen</v-list-subheader>
+      <router-link to="/analysis">
+          <v-list-item prepend-icon="mdi-telescope" title="Sprachöffentlichkeit"></v-list-item>
+      </router-link>
+      <router-link to="/timeline">
+          <v-list-item prepend-icon="mdi-history" title="Forschungsgeschichte"></v-list-item>
+      </router-link>
+    </v-list> -->
+    <!-- ADDITIONAL INFORMATION END -->
 
      <!-- GENERAL INFORMATION START -->
      <v-list density="compact" nav>

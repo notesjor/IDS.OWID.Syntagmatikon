@@ -44,24 +44,24 @@ definePageMeta({
         <h2 style="margin:-20px 0px 10px 10px; border-bottom: 3px lightgray solid;">Muster im Syntagmatikon</h2>
 
         <div class="container">
-          <tile-gradient title="Direkter Zugang" color1="#d95dd9" color2="#ff5d48" link="/patterns/direct">
+          <tile-gradient title="Direkter Zugang" color1="#34ddff" color2="#87bfcc" link="/patterns/direct">
             In einigen Ressourcen bilden Muster den primären Zugriff auf die aufbereiteten Daten und die lexikografischen Beschreibungen. Das heißt, alle Informationen sind über das Netzwerk semiabstrakter Schablonen herleitbar.
-            <div class="mt-2">
-            <resources-list-compact :filter="['MAP', 'WVBF']"/>
+            <div class="mt-4">
+            <resources-list-small :filter="['MAP', 'WVBF']"/>
           </div>
           </tile-gradient>
 
-          <tile-gradient title="Lexikografische Angabe" color1="#d95dd9" color2="#ff5d48" link="/patterns/component">
+          <tile-gradient title="Lexikografische Angabe" color1="#87bfcc" color2="#ff5d48" link="/patterns/component">
             In einigen Ressourcen werden von Hand aufbereitete Musterangaben und -visualisierungen als eine Komponente von Wörterbuchartikeln angeboten.
-            <div class="mt-2">
-            <resources-list-compact :filter="['PREPCON_kon', 'SPRW', 'FesteWV']"/>
+            <div class="mt-4">
+            <resources-list-small :filter="['PREPCON_kon', 'SPRW', 'FesteWV']"/>
             </div>
           </tile-gradient>
 
-          <tile-gradient title="Dynamische Erschließung" color1="#d95dd9" color2="#ff5d48" link="/patterns/dynamic">
+          <tile-gradient title="Dynamische Erschließung" color1="#ff5d48" color2="#fec037" link="/patterns/dynamic">
             In vielen Ressourcen kann man sich selbst Muster erschließen, zum einen durch automatische Suchen und Sortierungen auf der Basis von vorgegebenen Kategorien; zum anderen durch eigene analytische Gruppierungen.
-            <div class="mt-2">
-            <resources-list-compact :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp', 'Redeeinleiter', 'Verlaufsformen']"/>
+            <div class="mt-4">
+            <resources-list-small :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp', 'Redeeinleiter', 'Verlaufsformen']"/>
             </div>
           </tile-gradient>
         </div>

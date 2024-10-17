@@ -2,11 +2,11 @@
   <v-tabs fixed-tabs style="width: 100%; margin-top:20px" v-model="tab">
     <v-tab value="2" class="nocaps">
       <v-tab-title><v-icon v-show="tab == 1"
-        style="margin-right: 5px;">mdi-arrow-right-bold-box-outline</v-icon>Beispiele</v-tab-title>
+          style="margin-right: 5px;">mdi-arrow-right-bold-box-outline</v-icon>Beispiele und
+        Interpretation?</v-tab-title>
     </v-tab>
     <v-tab value="1" class="nocaps">
-      <v-tab-title><v-icon v-show="tab == 2" 
-        style="margin-right: 5px;">mdi-arrow-right-bold-box-outline</v-icon>Wo
+      <v-tab-title><v-icon v-show="tab == 2" style="margin-right: 5px;">mdi-arrow-right-bold-box-outline</v-icon>Wo
         finde ich diese Angabe?</v-tab-title>
     </v-tab>    
   </v-tabs>
