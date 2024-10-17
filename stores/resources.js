@@ -1,4 +1,3 @@
-// stores/counter.js
 import { defineStore } from "pinia";
 
 export const useResourcesStore = defineStore("resourcesStore", {
@@ -16,9 +15,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           img: "./img/sources/prepcon.PNG",
           url: "http://uwv.ids-mannheim.de/prepcon/prepcon_online.html",
           tags: [],
-          // search_display: "Netz",
           search_type: [],
-          // search_subtype: "Explorativ",
           search_functions: [
           ],
           search_patterns: [
@@ -37,14 +34,10 @@ export const useResourcesStore = defineStore("resourcesStore", {
           url: "http://uwv.ids-mannheim.de/prepcon/modul1/",
           tags: [],
           quest: "http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?{q}",
-          //search_display: "Suche",
           search_type: "Explorative Datenbanken",
-          //search_subtype: "Explorativ",
           search_functions: [
             "Frequenzen", 
             "KWICs", 
-            "Annotierte Daten", 
-            "Grafische Visualisierungen",
             "Belege"
           ],
           search_patterns: ["Dynamische Erschließung"],
@@ -61,9 +54,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           url: "http://uwv.ids-mannheim.de/prepcon/modul2/",
           tags: [],
           quest: "http://uwv.ids-mannheim.de/prepcon/modul2/inventar/{q}",
-          //search_display: "Stichwortliste",
           search_type: "Inventare und Sammlungen",
-          //search_subtype: "Deskriptiv",
           search_functions: [
             "Frequenzen",
             "KWICs",
@@ -71,7 +62,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Lückenfüllertabellen", 
             "Komponenten",
             "Felder",
-            "Grafische Visualisierungen",
             "Belege"
           ],
           search_patterns: ["Dynamische Erschließung"],
@@ -89,9 +79,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           tags: [],
           quest:
             "http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/{q}.html",
-          //search_display: "Suche",
           search_type: "Pilotstudien",
-          //search_subtype: "Kontrastiv",
           search_functions: [
             "Frequenzen",
             "KWICs",
@@ -102,7 +90,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Komponenten",
             "Felder",
             "Fremdsprachige Äquivalenz",
-            "Grafische Visualisierungen",
             "Belege"
           ],
           search_patterns: ["Lexikografische Angabe"],
@@ -118,14 +105,10 @@ export const useResourcesStore = defineStore("resourcesStore", {
           url: "https://www.owid.de/plus/komux/",
           tags: [],
           quest: "https://www.owid.de/plus/komux/?lem={q}",
-          //search_display: "Netz",
           search_type: "Explorative Datenbanken",
-          //search_subtype: "Explorativ",
           search_functions: [
             "Frequenzen",
-            "Annotierte Daten",
             "Kategoriale Label",
-            "Grafische Visualisierungen"
           ],
           search_patterns: [
             "Dynamische Erschließung",
@@ -142,16 +125,12 @@ export const useResourcesStore = defineStore("resourcesStore", {
           img: "./img/sources/map.PNG",
           url: "http://lexik02.ids-mannheim.de/vas-v7/",
           tags: [],
-          //search_display: "Netz",
           search_type: "Deskriptive Datenbanken",
-          //search_subtype: "Semi-Automatisch",
           search_functions: [
             "Belege",
-            "Annotierte Daten",
             "Kategoriale Label",
             "Narrative Beschreibungen",
             "Felder",
-            "Grafische Visualisierungen",
           ],
           search_patterns: ["Direkter Zugang"],
           search_parts: ["Verben", "Präpositionen", "Phraseme"],
@@ -166,15 +145,12 @@ export const useResourcesStore = defineStore("resourcesStore", {
           img: "./img/sources/spruchlist.PNG",
           url: "http://uwv.ids-mannheim.de/spruchlist/",
           tags: [],
-          //search_display: "Stichwortliste",
           search_type: "Inventare und Sammlungen",
-          //search_subtype: "Deskriptiv",
           search_functions: [
             "Frequenzen",
             "KWICs",
-            "Belege",
-            "Grafische Visualisierungen"],
-          search_patterns: [],
+            "Belege"],
+          search_patterns: ["Dynamische Erschließung"],
           search_parts: ["Feste Sätze"],
         },
         {
@@ -187,13 +163,10 @@ export const useResourcesStore = defineStore("resourcesStore", {
           img: "./img/sources/phraskomp.PNG",
           url: "http://uwv.ids-mannheim.de/plus/phraskomp/",
           tags: [],
-          //search_display: "Netz",
           search_type: "Inventare und Sammlungen",
-          //search_subtype: "Semi-Automatisch",
           search_functions: [
             "Frequenzen", 
             "KWICs",
-            "Annotierte Daten",
             "Kategoriale Label", 
             "Belege"
           ],
@@ -215,13 +188,11 @@ export const useResourcesStore = defineStore("resourcesStore", {
           img: "./img/sources/redeeinleiter.PNG",
           url: "https://www.owid.de/plus/redeeinleiter",
           tags: [],
-          //search_display: "Stichwortliste",
           search_type: "Deskriptive Datenbanken",
-          //search_subtype: "Händisch / Qualitativ",
           search_functions: [
             "Frequenzen", 
-            "Annotierte Daten",
-            "Belege"
+            "Belege",
+            "Kategoriale Label"
           ],
           search_patterns: ["Dynamische Erschließung"],
           search_parts: ["Nomina", "Verben", "Phraseme"],
@@ -236,9 +207,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           url: "https://www.owid.de/wb/sprw/start.html",
           tags: [],
           quest: "https://www.owid.de/artikel/{q}",
-          //search_display: "Stichwortliste",
           search_type: "Online-Wörterbücher",
-          //search_subtype: "Deskriptiv",
           search_functions: [
             "Belege", 
             "Narrative Beschreibungen",
@@ -261,9 +230,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           url: "https://www.owid.de/service/stichwortlisten/progdb",
           tags: [],
           quest: "https://www.owid.de/artikel/{q}",
-          //search_display: "Suche",
           search_type: "Deskriptive Datenbanken",
-          //search_subtype: "Kontrastiv",
           search_functions: [
             "Kategoriale Label",
             "Belege"
@@ -285,9 +252,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           img: "./img/sources/wvfeld.PNG",
           url: "http://wvonline.ids-mannheim.de/wvfelder-v3/grund-graphik.html",
           tags: [],
-          //search_display: "Netz",
           search_type: "Pilotstudien",
-          //search_subtype: "Semi-Automatisch",
           search_functions: [
             "Frequenzen", 
             "KWICs", 
@@ -316,9 +281,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           url: "https://www.owid.de/wb/uwv/start.html",
           tags: [],
           quest: "https://www.owid.de",
-          //search_display: "Stichwortliste",
           search_type: "Online-Wörterbücher",
-          //search_subtype: "Deskriptiv",
           search_functions: [
             "Kategoriale Label", 
             "Belege", 
@@ -343,13 +306,13 @@ export const useResourcesStore = defineStore("resourcesStore", {
           img: "./img/sources/dtww.PNG",
           url: "http://wvonline.ids-mannheim.de/dtww/dtww_komplett.htm",
           tags: [],
-          //search_display: "Stichwortliste",
           search_type: "Inventare und Sammlungen",
           search_functions: [
             "Belege",
             "Fremdsprachige Äquivalenz"
           ],
           search_patterns: [
+            "Kein Musterzugang"
           ],
           search_parts: [
            "Nomina",
@@ -365,37 +328,19 @@ export const useResourcesStore = defineStore("resourcesStore", {
           img: "./img/sources/dri.PNG",
           url: "http://wvonline.ids-mannheim.de/idiome_russ/AKTE_zu_den_Akten_legen.htm",
           tags: [],
-          //search_display: "Netz",
           search_type: "Online-Wörterbücher",
-          //search_subtype: "Händisch / Qualitativ",
           search_functions: [
             "Belege",
             "Narrative Beschreibungen",
             "Fremdsprachige Äquivalenz"
           ],
           search_patterns: [
+            "Kein Musterzugang"
           ],
           search_parts: [
             "Phraseme",
           ],
-        },
-        /*  
-      {
-
-        "key": "Varietäten",
-        "nameShort": "Varietäten (geplant)",
-        "nameLong": "Studie 'Lexikalische Dynamik deutschsprachiger Varietäten im Kontakt'",
-        "description": 'Es wird eine technische Plattform entwickelt, die es erlaubt, korpusbasierte Daten von Diaspora-Varietäten einheitlich zu annotieren, sie lexikografisch und datenanalytisch aufzubereiten und online zu präsentieren. Dabei werden Schnittstellenphänomene im lexikalisch-syntagmatischen Bereich einbezogen; betrachtet werden unterschiedliche lexikalische Kategorien (z. B. Diskurspartikeln, Komplementierer) ebenso wie Argumentstrukturen und andere syntagmatische Phänomene.',
-        "img": "./img/sources/varietaeten.PNG",
-        "url": "",
-        "tags": [],
-        "search_display": "Netz",
-        "search_type": "Studie",
-        "search_subtype": "Semi-Automatisch",
-        "search_functions": [],
-        "search_patterns": [],
-        "search_parts": [],
-      },  */
+        },    
       ],
     };
   },

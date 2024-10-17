@@ -4,7 +4,7 @@
     style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
     <v-row style="margin-top:-20px">
       <v-col>
-        <p class="text-xl">{{ title }}:</p>
+        <p class="text-xl">{{ title }}</p>
         <v-tabs v-model="currentTab">
           <slot name="headers"></slot>
         </v-tabs>

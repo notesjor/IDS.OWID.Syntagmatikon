@@ -54,6 +54,18 @@
 
       <v-divider></v-divider>
 
+<!-- ADDITIONAL INFORMATION START -->
+<v-list density="compact" nav>
+  <v-list-subheader>Suche</v-list-subheader>
+  <router-link to="/search">
+    <v-list-item prepend-icon="mdi-magnify" title="nach Einträgen"></v-list-item>
+  </router-link>
+</v-list>
+<!-- ADDITIONAL INFORMATION END -->
+
+
+      <v-divider></v-divider>
+
       <!-- ADDITIONAL INFORMATION START -->
        <!-- altes icon: mdi-book-open-variant-->
       <v-list density="compact" nav>
@@ -76,16 +88,7 @@
       </v-list>
       <!-- ADDITIONAL INFORMATION END -->
 
-      <v-divider></v-divider>
-
-      <!-- ADDITIONAL INFORMATION START -->
-      <v-list density="compact" nav>
-        <v-list-subheader>Suche</v-list-subheader>
-        <router-link to="/search">
-          <v-list-item prepend-icon="mdi-magnify" title="nach Einträgen"></v-list-item>
-        </router-link>
-      </v-list>
-      <!-- ADDITIONAL INFORMATION END -->
+     
 
       <v-divider></v-divider>
 
