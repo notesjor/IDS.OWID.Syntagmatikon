@@ -9,7 +9,6 @@
       <v-col>
         <div>
           Das korpusbasierte Portal <hi>Syntagmatikon</hi> bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.</div>
-          <div>BALBLAB</div>
           <!--
           <div>Die folgenden <hi>interaktiven Beispiele</hi> illustrieren die Vielfalt solcher Ausdrücke und ihre Verwendung im Text. 
         </div> -->

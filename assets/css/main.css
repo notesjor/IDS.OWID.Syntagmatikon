@@ -255,6 +255,11 @@ div.caption {
   display: block;
 }
 
+span.pos_highlight {
+  color:#12cb4b; 
+  font-weight:bold
+}
+
 div.more {
   font-size: 0.9em;
   color: black;
