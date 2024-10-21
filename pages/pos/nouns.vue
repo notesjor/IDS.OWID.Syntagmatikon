@@ -141,11 +141,11 @@
          
           <template #explain>   
             <ul>
-            <li><span class="pos_highlight">Ost-West-Gerede</span> (Phrase: Ost-West + 
-                Nomen: <span class="pos_highlight">Gerede</span>)</li>
-            <li><span class="pos_highlight">"Ich-bin-dann-mal-weg"-Bedürfnis</span>  (Phrase: "Ich-bin-dann-mal-weg" + 
+            <li><span class="pos_highlight">Fünf-Tage-Woche</span> (Phrasem: Fünf Tage + 
+                Nomen: <span class="pos_highlight">Woche</span>)</li>
+            <li><span class="pos_highlight">"Ich-bin-dann-mal-weg"-Bedürfnis</span>  (Fester Satz: "Ich-bin-dann-mal-weg" + 
                 Nomen: <span class="pos_highlight">Bedürfnis</span>)</li>
-            <li><span class="pos_highlight">On-and-off-Freundschaft</span> (Phrase: On-and-Off + 
+            <li><span class="pos_highlight">On-and-off-Freundschaft</span> (Phrasem: On and Off + 
                 Nomen: <span class="pos_highlight">Freundschaft</span>)</li>
            </ul>    
           </template>
@@ -158,9 +158,9 @@
          
           <template #explain>   
             <ul>
-            <li><span class="pos_highlight">Absicht</span></li>
-            <li><span class="pos_highlight">Ahnung</span></li>
-            <li><span class="pos_highlight">Wort</span></li>
+            <li><span class="pos_highlight">Absicht</span>, sie zu beleidigen...</li>
+            <li><span class="pos_highlight">Ahnung</span>, es werde ihm vielleicht nicht gegönnt sein...</li>
+            <li>Aber er hält das dem Vater gegebne <span class="pos_highlight">Wort</span>, seine Traute nicht mehr zu besuchen.</li>
            </ul>  
           </template>
         </compare-item>
