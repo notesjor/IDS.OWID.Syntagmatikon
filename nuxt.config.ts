@@ -5,12 +5,12 @@ export default defineNuxtConfig({
   postcss: {
     plugins: {
       tailwindcss: {},
-      autoprefixer: {},
+      autoprefixer: {},      
     },
   },
 
   css: [
-    'vuetify/lib/styles/main.sass',
+    '@/node_modules/vuetify/lib/styles/main.sass',
     '@mdi/font/css/materialdesignicons.min.css',
     '~/assets/css/main.css'
   ],
@@ -23,7 +23,14 @@ export default defineNuxtConfig({
     define: {
       'process.env.DEBUG': false,
     },
-    plugins: [svgLoader()]
+    plugins: [svgLoader()],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler',
+        }
+      }
+    }
   },
 
   modules: ['@pinia/nuxt'],
