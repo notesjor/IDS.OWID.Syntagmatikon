@@ -23,33 +23,39 @@ definePageMeta({
         <!-- Anzeige-Optionen -->
         <div style="margin: -60px 0px 40px 0px;">
           <span style="position: relative; top: 0px">Anzeige-Optionen:</span>
-            <span>
-              <v-btn variant="text" density="compact" class="nocaps"
-                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px" @click="search_header_switch = false">
-                Alphabetisch
-              </v-btn>
-              <v-switch v-model="search_header_switch" style="display: inline-block; position: relative; top: 35px" density="compact"></v-switch>
-              <v-btn variant="text" density="compact" class="nocaps"
-                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px" @click="search_header_switch = true">
-                durchmischt nach Ressourcen
-              </v-btn>
-            </span>
+          <span>
+            <v-btn variant="text" density="compact" class="nocaps"
+              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
+              @click="search_header_switch = false">
+              Alphabetisch
+            </v-btn>
+            <v-switch v-model="search_header_switch" style="display: inline-block; position: relative; top: 35px"
+              density="compact"></v-switch>
+            <v-btn variant="text" density="compact" class="nocaps"
+              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
+              @click="search_header_switch = true">
+              durchmischt nach Ressourcen
+            </v-btn>
+          </span>
         </div>
 
         <!-- Genauigkeit der Suche -->
         <div style="margin: -75px 0px 50px 0px;">
           <span style="position: relative; top: 0px">Genauigkeit der Suche:</span>
-            <span>
-              <v-btn variant="text" density="compact" class="nocaps"
-                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px" @click="search_exact = false">
-                Unscharf
-              </v-btn>
-              <v-switch v-model="search_exact" style="display: inline-block; position: relative; top: 35px" density="compact"></v-switch>
-              <v-btn variant="text" density="compact" class="nocaps"
-                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px" @click="search_exact = true">
-                exakte Zeichenfolge
-              </v-btn>
-            </span>
+          <span>
+            <v-btn variant="text" density="compact" class="nocaps"
+              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
+              @click="search_exact = false">
+              Unscharf
+            </v-btn>
+            <v-switch v-model="search_exact" style="display: inline-block; position: relative; top: 35px"
+              density="compact"></v-switch>
+            <v-btn variant="text" density="compact" class="nocaps"
+              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
+              @click="search_exact = true">
+              exakte Zeichenfolge
+            </v-btn>
+          </span>
         </div>
 
         <!-- SUCH-Ergebnis -->
@@ -61,19 +67,24 @@ definePageMeta({
             </div>
           </v-tabs-window-item>
           <v-tabs-window-item value="byGroup">
-            <div v-for="g in resultGroups">
-              <div style="font-size: 0.8em; color:#999; margin-top:10px">
-                <span v-html="getResourcesShortName(g)"></span>
-                <span> ({{ searchApi.count[g] }} Einträge)</span>
-              </div>
-              <div v-for="x in resultsByGroup(g)">
-                <span style="font-size: 0.8em; color:#999">{{ String(x.index).padStart(2, "0") }}. </span>
-                <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl" /></a>
+            <div class="searchContainer">
+              <div v-for="g in resultGroups" class="searchContainerItem">
+                <div style="font-size: 0.8em; color:#999; margin-top:10px">
+                  <span v-html="getResourcesShortName(g)"></span>
+                  <span> ({{ searchApi.count[g] }} Einträge)</span>
+                </div>
+                <div v-for="x in resultsByGroup(g)">
+                  <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl" /></a>
+                </div>
+                <div style="text-align: left">
+                  <v-pagination density="compact" :length="getResourcesMaxPage(g)"
+                    style="margin:-5px 5px 20px -40px; width: 95%;"></v-pagination>
+                </div>
               </div>
             </div>
           </v-tabs-window-item>
         </v-tabs-window>
-        <v-pagination v-model="page" :length="searchApi?.pageMax" style="margin: 0px 0px 0px -50px"></v-pagination>
+        <!-- <v-pagination v-model="page" :length="searchApi?.pageMax" style="margin: 0px 0px 0px -50px"></v-pagination> -->
 
         <div style="text-align: center">
           <v-tabs-window v-model="search_header">
@@ -284,6 +295,9 @@ export default {
       }
       return res;
     },
+    getResourcesMaxPage(group) {
+      return Math.ceil(this.searchApi.hits[group] / this.pageSize_ByResources);
+    },
     getResourcesShortName(key) {
       return this.resourcesStore?.getResource(key)?.nameShort;
     }
@@ -350,11 +364,27 @@ export default {
 .v-pagination__list>.v-pagination__item {
   background-color: red;
 }
+
+.searchContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.searchContainerItem {
+  flex: 1 1 50%; /* Zweispaltige Ansicht */
+  margin-bottom: -10px;
+  min-width: 250px;
+  box-sizing: border-box;
+}
 </style>
 
 <style>
 .highlight {
   font-style: italic;
   border-bottom: 1px dotted #000;
+}
+
+.v-pagination__list {
+  width: fit-content !important;
 }
 </style>
