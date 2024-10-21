@@ -89,14 +89,14 @@ definePageMeta({
             Manuell ausgewählte KWICs und größere Volltextstellen
             <div class="mt-2">
             <resources-list-compact :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'PhrasKomp', 
-            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'Verlaufsformen', 'FesteWV', 'DRI', 'DTWW', 'SPRW']"></resources-list-compact>
+            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'Verlaufsformen', 'FesteWV', 'DTWW', 'SPRW']"></resources-list-compact>
             </div>
                 </tile-gradient>
 
           <tile-gradient color1="#fec037" color2="#801b31"  title="Narrative Beschreibungen" link="/datatypes/narration">
             Beschreibende Autorentexte, die ein Phänomen erklären
             <div class="mt-2">
-            <resources-list-compact :filter="['MAP', 'PREPCON_kon', 'SPRW', 'WVBF', 'FesteWV', 'DRI']"></resources-list-compact>   
+            <resources-list-compact :filter="['MAP', 'PREPCON_kon', 'SPRW', 'WVBF', 'FesteWV']"></resources-list-compact>   
             </div>
               </tile-gradient>
 
@@ -120,7 +120,7 @@ definePageMeta({
           <tile-gradient color1="#fec037" color2="#801b31"  title="Fremdsprachige Äquivalenz" link="/datatypes/equivalence">
             Angabe von Entsprechungen in anderen Sprachen
             <div class="mt-2">
-            <resources-list-compact :filter="['PREPCON_kon', 'DTWW', 'DRI']"></resources-list-compact>   
+            <resources-list-compact :filter="['PREPCON_kon', 'DTWW']"></resources-list-compact>   
             </div>
             </tile-gradient>
 

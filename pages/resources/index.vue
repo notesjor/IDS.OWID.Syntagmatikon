@@ -68,7 +68,7 @@ definePageMeta({
           <tile-gradient title="Online-Wörterbücher" color1="#33dcfe" color2="#d95dd9"link="/resources/dictionaries">
             Korpusbasierte Wörterbuchartikel im Hypertextformat
             <div class="mt-2">
-            <resources-list-compact :filter="['SPRW', 'FesteWV','DRI']" :showDesc="false"></resources-list-compact>
+            <resources-list-compact :filter="['SPRW', 'FesteWV']" :showDesc="false"></resources-list-compact>
             </div>
           </tile-gradient>
          

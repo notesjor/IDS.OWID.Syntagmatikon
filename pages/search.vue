@@ -26,12 +26,12 @@ definePageMeta({
             <span>
               <v-btn variant="text" density="compact" class="nocaps"
                 style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px" @click="search_header_switch = false">
-                Alphabetisch
+                alphabetisch
               </v-btn>
               <v-switch v-model="search_header_switch" style="display: inline-block; position: relative; top: 35px" density="compact"></v-switch>
               <v-btn variant="text" density="compact" class="nocaps"
                 style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px" @click="search_header_switch = true">
-                durchmischt nach Ressourcen
+                sortiert nach Ressourcen
               </v-btn>
             </span>
         </div>
@@ -101,29 +101,20 @@ definePageMeta({
               Wie funktioniert die Suche?
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <p style="font-size: 0.9em; margin-bottom: 10px; word-wrap: break-word;">
-                Dieses Suche erlaubt es, alle Ressourcen im Syntagmatikon gleichzeitig abzufragen.
-                Wie im Res&shy;sour&shy;cen&shy;kom&shy;pass be&shy;schrie&shy;ben, haben die Ressourcen verschiedene
-                Facetten,
-                die hier genutzt werden können, um die Stichworte zu filtern.</p>
-              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <i>Stichwortsuche:</i> Geben Sie ein beliebiges Stichwort in das Suchfeld ein, um alle aktiven
-                Ressourcen
-                danach zu durchsuchen.
+              <p style="font-size: 0.9em; margin-bottom: 10px; word-wrap: break-word;">Mit einer Eingabe im Suchfeld ("Stichwort hier eingeben...") können alle Ressourcen im Syntagmatikon gleichzeitig durchsucht werden. Wird kein Stichwort eingegeben, sieht man die Gesamtstichwortlisten. Der Klick auf einen Treffer führt direkt zur entsprechenden Ressource.
+                </p>
+                <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
+                <b>Anzeige-Optionen:</b> Die Anzeige  "sortiert nach Ressourcen" zeigt jeweils drei Treffer pro Ressource pro Seite und erlaubt so einen Überblick über die Treffermengen der jeweiligen Ressourcen. Die Anzeige "alphabetisch" zeigt alle Treffer in alphabetischer Reihenfolge.
               </p>
               <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <i>Anzeige-Optionen:</i> Die Einträge werden entweder alphabetisch (mit Ressourcenname) angezeigt
-                oder je Ressource einzeln gezogen.
+                <b>Genauigkeit der Suche:</b> Hier kann gesteuert werden, ob Treffer die eingegebene Zeichenfolge exakt enthalten müssen oder eine gewisse Varianz erlaubt ist.
               </p>
               <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <i>Angewählte Ressourcen:</i>
-                werden in die Suche einbezogen. Klicke Sie auf eine Ressource um sie zu aktivieren
-                <v-icon>mdi-check-circle</v-icon> oder deaktivieren <v-icon>mdi-circle-outline</v-icon>. Ressourcen, die
-                durch eine Facette ausgeschlossen sind, werden ebenfalls nicht angezeigt
-                <v-icon>mdi-circle-off-outline</v-icon>.
+                <b>Ressourcen:</b> Hier können einzelne Ressourcen direkt aktiviert
+                <v-icon>mdi-check-circle</v-icon> oder deaktiviert <v-icon>mdi-circle-outline</v-icon> werden. Ergebnisse aus deaktivierten Ressourcen werden ausgeblendet.
               </p>
               <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <i>Facetten:</i> schränken die Ressourcen anhand bestimmter Kategorien / Eigenschaften ein.
+                <b>Facetten-Filter:</b> Hier können Ressourcen anhand ihrer Merkmale ('Facetten') gefiltert werden. Beschreibungen der Facetten findet man im Ressourcenkompass. Ist eine Ressource aufgrund des Facetten-Filters deaktiviert, wird sie mit dem folgenden Symbol markiert: <v-icon>mdi-circle-off-outline</v-icon>
               </p>
             </v-expansion-panel-text>
           </v-expansion-panel>
@@ -170,7 +161,7 @@ definePageMeta({
           <!-- Facetten -->
           <v-expansion-panel elevation="0" value="fineGrain">
             <v-expansion-panel-title style="font-weight: 500; font-size: 1.2em;">
-              Facetten
+              Facetten-Filter
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels1">
@@ -218,7 +209,7 @@ export default {
       overlay: false,
       tab: "t1",
 
-      searchOptions: ["help", "resourcesSelection"],
+      searchOptions: ["help", "resourcesSelection", "fineGrain"],
       openPanels1: [],
       openPanels2: [],
 

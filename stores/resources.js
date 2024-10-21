@@ -319,28 +319,28 @@ export const useResourcesStore = defineStore("resourcesStore", {
            "Phraseme"
           ],
         },
-        {
-          key: "DRI",
-          nameShort: "DRI",
-          nameLong: "Deutsch-russische Idiome online",
-          description:
-            "Bei <b>Deutsch-russische Idiome online</b> handelt es sich um einen – in Kooperation mit dem Projekt „Usuelle Wortverbindungen“ – erstellten Auszug aus „Moderne deutsch-russische Idiomatik: Ein Korpus-Wörterbuch“ (D. Dobrovol’skij und A.Šarandin; RAW, Moskau / ÖAW, Wien). Die Online-Ressource enthält 70 Artikel zu deutschen Idiomen wie <em>sich schwarz ärgern</em> russische Entsprechungen sowie deutsche Korpusbelege mit wortwörtlichen Übersetzungen ins Russische.",
-          img: "./img/sources/dri.PNG",
-          url: "http://wvonline.ids-mannheim.de/idiome_russ/AKTE_zu_den_Akten_legen.htm",
-          tags: [],
-          search_type: "Online-Wörterbücher",
-          search_functions: [
-            "Belege",
-            "Narrative Beschreibungen",
-            "Fremdsprachige Äquivalenz"
-          ],
-          search_patterns: [
-            "Kein Musterzugang"
-          ],
-          search_parts: [
-            "Phraseme",
-          ],
-        },    
+        // {
+        //   key: "DRI",
+        //   nameShort: "DRI",
+        //   nameLong: "Deutsch-russische Idiome online",
+        //   description:
+        //     "Bei <b>Deutsch-russische Idiome online</b> handelt es sich um einen – in Kooperation mit dem Projekt „Usuelle Wortverbindungen“ – erstellten Auszug aus „Moderne deutsch-russische Idiomatik: Ein Korpus-Wörterbuch“ (D. Dobrovol’skij und A.Šarandin; RAW, Moskau / ÖAW, Wien). Die Online-Ressource enthält 70 Artikel zu deutschen Idiomen wie <em>sich schwarz ärgern</em> russische Entsprechungen sowie deutsche Korpusbelege mit wortwörtlichen Übersetzungen ins Russische.",
+        //   img: "./img/sources/dri.PNG",
+        //   url: "http://wvonline.ids-mannheim.de/idiome_russ/AKTE_zu_den_Akten_legen.htm",
+        //   tags: [],
+        //   search_type: "Online-Wörterbücher",
+        //   search_functions: [
+        //     "Belege",
+        //     "Narrative Beschreibungen",
+        //     "Fremdsprachige Äquivalenz"
+        //   ],
+        //   search_patterns: [
+        //     "Kein Musterzugang"
+        //   ],
+        //   search_parts: [
+        //     "Phraseme",
+        //   ],
+        // },    
       ],
     };
   },

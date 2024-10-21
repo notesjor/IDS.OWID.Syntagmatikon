@@ -61,7 +61,7 @@ der Fokus auf der gesamten Einheit.</p>
           </tile-gradient>
 
           <tile-gradient title="Phraseme" color1="#12cb4b" color2="#fec037"  link="pos/phrasemes">
-            <resources-list-compact :filter="['PhrasKomp', 'MAP', 'Redeeinleiter', 'DTWW', 'DRI', 'WVBF', 'FesteWV']"></resources-list-compact>
+            <resources-list-compact :filter="['PhrasKomp', 'MAP', 'Redeeinleiter', 'DTWW', 'WVBF', 'FesteWV']"></resources-list-compact>
           </tile-gradient>
 
           <tile-gradient title="Feste Sätze" color1="#12cb4b" color2="#fec037"  link="pos/sentences">  
