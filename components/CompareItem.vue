@@ -16,22 +16,19 @@
             </v-col>
 
         </v-row> -->
-        <v-row style="margin:20px 20px 20px 20px">
-        <v-row>
+        <v-row style="margin:10px 10px 5px 10px">
+
             <div class="relink"><slot></slot></div>
 
             <resource-explain v-if="!simple" :webpage="correctedWebPage">
                 <slot name="explain"></slot>
                 <template v-if="$slots.webpagetext" #webpagetext><slot name="webpagetext"></slot></template>
             </resource-explain>
-        </v-row>
-
-        <v-row>
-            
-            <nuxt-link v-if="buttonUrl != null" :to="buttonUrl"><v-btn prepend-icon="mdi-lightbulb-on" class="nocaps" variant="elevated" color="">Fallbeispiel</v-btn></nuxt-link>
+           
+            <nuxt-link v-if="buttonUrl != null" :to="buttonUrl"><v-btn prepend-icon="mdi-lightbulb-on" class="nocaps" variant="elevated" color="">Fallbeispiel anzeigen</v-btn></nuxt-link>
           <v-spacer></v-spacer>
             <nuxt-link v-if="!simple" :to="resource.url"><v-btn prepend-icon="mdi-arrow-right-bold-box-outline" class="nocaps" variant="elevated" color="">zur Ressource</v-btn></nuxt-link>
-        </v-row>
+        
         </v-row>        
     </v-tabs-window-item>
 </template>
@@ -53,7 +50,7 @@ export default {
         },
         webpage: {
             type: String,
-            default: null
+            default: "../dummy/resource.png"
         },
         simple: {
             type: Boolean,
@@ -84,12 +81,7 @@ export default {
     },
     computed: {
         correctedWebPage() {
-            if (this.$props.webpage != null) {
-                return ".." + this.$props.webpage;
-            }
-            else {
-                return this.$props.webpage;
-            }
+            return ".." + this.$props.webpage;
         }
     }
 }

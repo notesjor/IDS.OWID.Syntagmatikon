@@ -4,16 +4,16 @@
       <v-tab-title><v-icon v-show="tab == 1"
         style="margin-right: 5px;">mdi-arrow-right-bold-box-outline</v-icon>Beispiele</v-tab-title>
     </v-tab>
-    <v-tab v-if="webpage != null" value="1" class="nocaps">
+    <v-tab value="1" class="nocaps">
       <v-tab-title><v-icon v-show="tab == 2" 
         style="margin-right: 5px;">mdi-arrow-right-bold-box-outline</v-icon>Wo
         finde ich diese Angabe?</v-tab-title>
     </v-tab>    
   </v-tabs>
 
-  <v-tabs-window  v-model="tab"
+  <v-tabs-window v-model="tab"
     style="border: 1px white solid; border-radius: 5px; padding: 10px; background-color: white; margin:0px -10px 0px -10px">
-    <v-tabs-window-item v-if="webpage != null" value="1" style="padding:0px 0px 0px 0px">
+    <v-tabs-window-item value="1" style="padding:0px 0px 0px 0px">
       <v-row style="margin: 10px 0px;">
         <p style="margin: 10px 0px">
           <slot name="webpagetext">
@@ -40,11 +40,9 @@ export default {
   name: "ResourceExplain",
   props: {
     webpage: {
-            type: String,
-            default: null
-        },
-  }
-  ,
+      default: "../dummy/resource.png"
+    }
+  },
   data() {
     return {
       tab: "2"
