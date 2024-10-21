@@ -11,7 +11,7 @@
         <h2>Verantwortliche Personen für die integrierten Ressourcen</h2>
             <v-row class="d-flex align-center">
                 <v-col cols="4"><NuxtLink to="https://www.ids-mannheim.de/lexik/personal/steyer">Dr. Kathrin Steyer</NuxtLink></v-col>
-                <v-col cols=""> <resources-list-compact :filter="['PREPCON', 'SpruchList', 'SPRW', 'WVBF', 'FesteWV', 'DTWW', 'DRI']"/></v-col>
+                <v-col cols=""> <resources-list-compact :filter="['PREPCON', 'SpruchList', 'SPRW', 'WVBF', 'FesteWV', 'DTWW']"/></v-col>
             </v-row>
             <v-row class="d-flex align-center">
                 <v-col cols="4"><NuxtLink to="https://perso.ids-mannheim.de/seiten/hein.html">Dr. Katrin Hein</NuxtLink></v-col>

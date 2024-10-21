@@ -42,7 +42,7 @@ definePageMeta({
             <span>
               <v-btn variant="text" density="compact" class="nocaps"
                 style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px" @click="search_exact = false">
-                Unscharf
+                unscharf
               </v-btn>
               <v-switch v-model="search_exact" style="display: inline-block; position: relative; top: 35px" density="compact"></v-switch>
               <v-btn variant="text" density="compact" class="nocaps"
@@ -111,10 +111,10 @@ definePageMeta({
               </p>
               <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
                 <b>Ressourcen:</b> Hier können einzelne Ressourcen direkt aktiviert
-                <v-icon>mdi-check-circle</v-icon> oder deaktiviert <v-icon>mdi-circle-outline</v-icon> werden. Ergebnisse aus deaktivierten Ressourcen werden ausgeblendet.
+                <v-icon>mdi-check-circle</v-icon> oder deaktiviert <v-icon>mdi-circle-outline</v-icon> werden. Treffer in deaktivierten Ressourcen werden ausgeblendet.
               </p>
               <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <b>Facetten-Filter:</b> Hier können Ressourcen anhand ihrer Merkmale ('Facetten') gefiltert werden. Beschreibungen der Facetten findet man im Ressourcenkompass. Ist eine Ressource aufgrund des Facetten-Filters deaktiviert, wird sie mit dem folgenden Symbol markiert: <v-icon>mdi-circle-off-outline</v-icon>
+                <b>Facetten:</b> Hier können Ressourcen anhand ihrer Merkmale ('Facetten') gefiltert werden. Beschreibungen der Facetten findet man im Ressourcenkompass. Ist eine Ressource aufgrund des Facetten-Filters deaktiviert, wird sie mit dem folgenden Symbol markiert: <v-icon>mdi-circle-off-outline</v-icon>
               </p>
             </v-expansion-panel-text>
           </v-expansion-panel>
@@ -161,19 +161,19 @@ definePageMeta({
           <!-- Facetten -->
           <v-expansion-panel elevation="0" value="fineGrain">
             <v-expansion-panel-title style="font-weight: 500; font-size: 1.2em;">
-              Facetten-Filter
+              Facetten
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels1">
                 <!-- <search-box title="Zugänge" rkey="search_display" color1="#c79b31" color2="#a0ac67"></search-box>
                 <search-box title="Ressourcentypen (Zugang)" rkey="search_subtype" color1="#a0ac67"
                   color2="#6fc2ab"></search-box> -->
-                <search-box title="Ressourcentypen" rkey="search_type" color1="#6fc2ab" color2="#38daf7"></search-box>
-                <search-box title="Informationstypen" rkey="search_functions" color1="#42dbfb"
-                  color2="#7ba1c6"></search-box>
-                <search-box title="Wort- und Ausdrucksarten" rkey="search_parts" color1="#7ba1c6"
-                  color2="#5c93a0"></search-box>
-                <search-box title="Musterzugänge" rkey="search_patterns" color1="#5c93a0" color2="#fa3a65"></search-box>
+                <search-box title="Ressourcentypen" rkey="search_type" color1="#3468eb" color2="#ff3661" ></search-box>
+                <search-box title="Informationstypen" rkey="search_functions"  color1="#ff3661" color2="#fec037"
+                 ></search-box>
+                <search-box title="Wort- und Ausdrucksarten" rkey="search_parts"  color1="#fec037" color2="#12cb4b"
+                 ></search-box>
+                <search-box title="Musterzugänge" rkey="search_patterns" color1="#12cb4b" color2="#3468eb"></search-box>
               </v-expansion-panels>
             </v-expansion-panel-text>
           </v-expansion-panel>
@@ -316,7 +316,8 @@ export default {
         return [];
 
       var data = this.resourcesStore.resourcesState;
-      return Object.keys(data).map(x => {
+
+      return Object.keys(data).filter(x => x != "PREPCON").map(x => {
         return {
           key: x,
           nameShort: this.getResourcesShortName(x),

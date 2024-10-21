@@ -275,6 +275,11 @@ div.exampleImg img{
   display: block;
 }
 
+.pos_highlight {
+  background-color: #89e5a5;
+  padding: 2px;
+}
+
 hi {
   font-variant: small-caps;
 }
