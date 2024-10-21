@@ -56,7 +56,7 @@
 
           <template #explain>   
             <ul>
-            <li><span class="pos_highlight">Dabei sein ist alles</span></li>
+            <li><span class="pos_highlight">Wer die Wahl hat, hat die Qual</span></li>
             <li><span class="pos_highlight">Ende gut, alles gut</span></li>
             <li><span class="pos_highlight">Geiz ist geil</span></li>
                 </ul>
