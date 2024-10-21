@@ -1,6 +1,6 @@
 <template>
     <v-tabs-window-item :value="value">
-        <v-row v-if="!simple" style="margin:-5px 0px 0px 10px">
+        <!-- <v-row v-if="!simple" style="margin:-5px 0px 0px 10px">
             <v-col>
                 <v-row>
                     <div class="relink">
@@ -15,17 +15,23 @@
                 </v-row>
             </v-col>
 
-        </v-row>
-        <v-row style="margin:10px 10px 5px 10px">
-
+        </v-row> -->
+        <v-row style="margin:20px 20px 20px 20px">
+        <v-row>
             <div class="relink"><slot></slot></div>
 
             <resource-explain v-if="!simple" :webpage="correctedWebPage">
                 <slot name="explain"></slot>
                 <template v-if="$slots.webpagetext" #webpagetext><slot name="webpagetext"></slot></template>
             </resource-explain>
+        </v-row>
 
-            <nuxt-link v-if="buttonUrl != null" :to="buttonUrl"><v-btn prepend-icon="mdi-arrow-right-bold-box-outline" class="nocaps">Weiterführende Erklärung anzeigen</v-btn></nuxt-link>
+        <v-row>
+            
+            <nuxt-link v-if="buttonUrl != null" :to="buttonUrl"><v-btn prepend-icon="mdi-lightbulb-on" class="nocaps" variant="elevated" color="">Fallbeispiel</v-btn></nuxt-link>
+          <v-spacer></v-spacer>
+            <nuxt-link v-if="!simple" :to="resource.url"><v-btn prepend-icon="mdi-arrow-right-bold-box-outline" class="nocaps" variant="elevated" color="">zur Ressource</v-btn></nuxt-link>
+        </v-row>
         </v-row>        
     </v-tabs-window-item>
 </template>
@@ -47,7 +53,7 @@ export default {
         },
         webpage: {
             type: String,
-            default: "../dummy/resource.png"
+            default: null
         },
         simple: {
             type: Boolean,
@@ -78,7 +84,12 @@ export default {
     },
     computed: {
         correctedWebPage() {
-            return ".." + this.$props.webpage;
+            if (this.$props.webpage != null) {
+                return ".." + this.$props.webpage;
+            }
+            else {
+                return this.$props.webpage;
+            }
         }
     }
 }
