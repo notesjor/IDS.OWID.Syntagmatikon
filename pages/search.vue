@@ -209,7 +209,7 @@ export default {
       overlay: false,
       tab: "t1",
 
-      searchOptions: ["help", "resourcesSelection", "fineGrain"],
+      searchOptions: ["resourcesSelection", "fineGrain"],
       openPanels1: [],
       openPanels2: [],
 

@@ -10,6 +10,9 @@ definePageMeta({
       <v-col>
         <div>
           <h1>
+            <div style="width: 20px; float:left; margin-right:10px">
+            <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb" degree="180">                
+            </gradient></div>
             Ressourcentypen
           </h1>
         </div>
@@ -39,6 +42,97 @@ definePageMeta({
     </v-row>
   </div>
   <div style="max-width: 100ch;">
+    <v-row>
+      <v-col cols="12">
+        <div class="container nolink">
+       
+       
+        
+        <v-card style="width:350px; margin:10px"  variant="flat">
+         
+          <v-card-title>
+            <div style="width: 20px; float:left; margin-right:10px">
+            <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb"  degree="180">                
+            </gradient></div>
+            Explorative Datenbanken</v-card-title>
+          <v-card-text>
+           
+            <p>Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von Korpusdaten </p>
+           <p>
+            <resources-list-compact :filter="['KoMuX', 'PREPCON_ex']" :showDesc="false"></resources-list-compact></p>
+           <p><v-btn variant="tonal" size="small" prepend-icon="mdi-arrow-right-circle-outline">
+            <NuxtLink to="/resources/db_expl">Mehr dazu</NuxtLink> </v-btn></p>
+            
+          </v-card-text>
+        </v-card> 
+     
+
+      <NuxtLink to="/resources/db_desc">
+        <v-card style="width:350px; margin:10px" variant="flat" hover>
+          <v-card-title>
+            <div style="width: 20px; float:left; margin-right:10px">
+            <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb" degree="180">                
+            </gradient></div>
+            Deskriptive Datenbanken</v-card-title>
+          <v-card-text>
+            <p>  Eine Kombination aus automatisch erstellten
+              Datenmengen und qualitativ erarbeiteten Informationen</p>
+           <p>
+            <resources-list-compact :filter="['MAP', 'Verlaufsformen', 'Redeeinleiter']" :showDesc="false"></resources-list-compact></p>
+          </v-card-text>
+        </v-card>  
+        </NuxtLink>
+
+        <NuxtLink to="/resources/inventory">
+        <v-card style="width:350px; margin:10px" variant="flat" hover>
+          <v-card-title>
+            <div style="width: 20px; float:left; margin-right:10px">
+            <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb" degree="180">                
+            </gradient></div>
+            Inventare und Sammlungen</v-card-title>
+          <v-card-text>
+            <p>   Aus dem Korpus extrahierte oder im
+              Korpus überprüfte Sammlungen sprachlicher Ausdrücke ähnlichen Typs</p>
+           <p>
+            <resources-list-compact :filter="['SpruchList', 'PhrasKomp', 'PREPCON_temp', 'DTWW']" :showDesc="false"></resources-list-compact></p>
+          </v-card-text>
+        </v-card>  
+      </NuxtLink>
+
+      <NuxtLink to="/resources/dictionaries">
+        <v-card style="width:350px; margin:10px" variant="flat" hover>
+          <v-card-title>
+            <div style="width: 20px; float:left; margin-right:10px">
+            <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb" degree="180">                
+            </gradient></div>
+            Online-Wörterbücher</v-card-title>
+          <v-card-text>
+            <p>   Korpusbasierte Wörterbuchartikel im Hypertextformat</p>
+           <p>
+            <resources-list-compact :filter="['SPRW', 'FesteWV']" :showDesc="false"></resources-list-compact></p>
+          </v-card-text>
+        </v-card>  
+        </NuxtLink>
+
+        <NuxtLink to="/resources/prototypes">
+        <v-card style="width:350px; margin:10px" variant="flat" hover>
+          <v-card-title>
+            <div style="width: 20px; float:left; margin-right:10px">
+            <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb" degree="180">                
+            </gradient></div>
+           Pilotstudien</v-card-title>
+          <v-card-text>
+            <p>   Linguistische Studien bzw. lexikografische Beschreibungen zu ausgewählten Phänomen</p>
+           <p>
+            <resources-list-compact :filter="['PREPCON_kon', 'WVBF']"></resources-list-compact></p>
+          </v-card-text>
+        </v-card>  
+        </NuxtLink>
+
+        </div>
+        </v-col>
+    </v-row>
+
     <v-row>
       <v-col cols="12">
         <div class="container">

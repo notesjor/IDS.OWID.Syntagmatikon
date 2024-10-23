@@ -1,6 +1,6 @@
 <template>
   <span class="nolink" style="letter-spacing: normal;" v-for="item in resources" padding>
-    <v-chip class='ma-1' variant="tonal" density="compact" style="margin: 3px;">
+    <v-chip class='ma-1 pa-3' variant="outlined" density="compact">
     <!--<v-btn density="compact" class='ma-1 '> -->
       <span v-html="item.nameShort" /><br /> 
       <!--
