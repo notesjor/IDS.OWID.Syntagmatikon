@@ -1,12 +1,11 @@
 <template>
-  <v-app>
+  <img alt="Logo" src="/logo2.png" style="max-height:75px; position:fixed; top:0px; left: 10px; z-index: 9999999;" />
+  <v-app>    
     <div class="d-print-none"
       style="z-index:100; max-height: 75px; min-height:75px; background-color: black; padding:7px 10px 5px 10px; display: grid; grid-template-columns: 1fr auto 250px; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right'; ">
-      <div class="inline" style="color:white; grid-area: left; margin-left:5px">
+      <div class="inline" style="color:white; grid-area: left; margin-left:75px">
         <div style="min-height: 10px;" v-if="useMobileView"></div>
-        <div class="text-2xl">
-          <img alt="Logo" src="/logo_syntagmatikon_knoten.jpg"
-            style="max-height:50px; margin-right:10px; margin-top:5px; float: left;" />
+        <div class="text-2xl">          
           {{ appName }}
         </div>
         <div class="" style="text-align: left;">{{ useMobileView ? " " : appDescription }}</div>
@@ -25,9 +24,7 @@
     <v-navigation-drawer :permanent="!useMobileView" :rail="useMobileView" style="z-index:1; transform: none;"
       expand-on-hover>
       <!-- LOGO START -->
-      <div class="text-xl" style="margin: 7px 0px 15px 15px; opacity: 1" v-show="!useMobileView">
-        <img alt="Logo" src="/logo_syntagmatikon_knoten.jpg"
-          style="max-height:40px; margin-right:auto; margin-top:5px; float: left;" />
+      <div class="text-xl" style="margin: 20px 0px 5px 30px; opacity: 1" v-show="!useMobileView">
         <div style="margin-left: 50px; margin-bottom: 50px;">
           {{ appName }}
         </div>
@@ -133,7 +130,7 @@
     </div>
 
     <v-footer
-      style="z-index: 100; position: absolute; bottom: 0; width: 100%; max-height:64px; background-color: black; padding-left:25px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right';">
+      style="z-index: 100; position: absolute; bottom: 0; width: 100%; background-color: black; padding-left:25px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right';">
       <div style="color:white; grid-area: left; margin-top: 20px; font-size: 12px;" v-if="!useMobileView">
         <img alt="Logo" src="/logo_left.svg" style="max-height:35px; margin-top: -15px;" float="left" />
         <div style="display:inline-block">
@@ -164,10 +161,10 @@
 
       <div style="grid-area: middle;"></div>
 
-      <div style="text-align: right; grid-area: right">
+      <div style="text-align: right; grid-area: right; max-height: 64px;">
         <a :href="rightIconHref" target="_blank" style="display: inline-block; margin-top: 0px">
           <img alt="Logo" src="/logo_right.svg"
-            style="max-height:65px; min-height: 45px; min-width: 200px; margin-left: auto; " />
+            style="max-height:64px; min-height: 45px; min-width: 200px; margin-left: auto; " />
         </a>
       </div>
     </v-footer>
