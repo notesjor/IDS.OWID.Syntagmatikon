@@ -227,7 +227,8 @@ h3 {
 }
 
 div.main {
-  font-family: var(--FF-BODYTEXT);
+  /* font-family: var(--FF-BODYTEXT); */
+  font-family: "Libertinus Sans";
 }
 
 div.main a {
@@ -273,6 +274,11 @@ div.exampleImg {
 div.exampleImg img{
   margin: auto;
   display: block;
+}
+
+.pos_highlight {
+  background-color: #89e5a5;
+  padding: 2px;
 }
 
 hi {

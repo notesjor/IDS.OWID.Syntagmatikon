@@ -23,39 +23,33 @@ definePageMeta({
         <!-- Anzeige-Optionen -->
         <div style="margin: -60px 0px 40px 0px;">
           <span style="position: relative; top: 0px">Anzeige-Optionen:</span>
-          <span>
-            <v-btn variant="text" density="compact" class="nocaps"
-              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
-              @click="search_header_switch = false">
-              Alphabetisch
-            </v-btn>
-            <v-switch v-model="search_header_switch" style="display: inline-block; position: relative; top: 35px"
-              density="compact"></v-switch>
-            <v-btn variant="text" density="compact" class="nocaps"
-              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
-              @click="search_header_switch = true">
-              durchmischt nach Ressourcen
-            </v-btn>
-          </span>
+            <span>
+              <v-btn variant="text" density="compact" class="nocaps"
+                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px" @click="search_header_switch = false">
+                alphabetisch
+              </v-btn>
+              <v-switch v-model="search_header_switch" style="display: inline-block; position: relative; top: 35px" density="compact"></v-switch>
+              <v-btn variant="text" density="compact" class="nocaps"
+                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px" @click="search_header_switch = true">
+                sortiert nach Ressourcen
+              </v-btn>
+            </span>
         </div>
 
         <!-- Genauigkeit der Suche -->
         <div style="margin: -75px 0px 50px 0px;">
           <span style="position: relative; top: 0px">Genauigkeit der Suche:</span>
-          <span>
-            <v-btn variant="text" density="compact" class="nocaps"
-              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
-              @click="search_exact = false">
-              Unscharf
-            </v-btn>
-            <v-switch v-model="search_exact" style="display: inline-block; position: relative; top: 35px"
-              density="compact"></v-switch>
-            <v-btn variant="text" density="compact" class="nocaps"
-              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
-              @click="search_exact = true">
-              exakte Zeichenfolge
-            </v-btn>
-          </span>
+            <span>
+              <v-btn variant="text" density="compact" class="nocaps"
+                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px" @click="search_exact = false">
+                unscharf
+              </v-btn>
+              <v-switch v-model="search_exact" style="display: inline-block; position: relative; top: 35px" density="compact"></v-switch>
+              <v-btn variant="text" density="compact" class="nocaps"
+                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px" @click="search_exact = true">
+                exakte Zeichenfolge
+              </v-btn>
+            </span>
         </div>
 
         <!-- SUCH-Ergebnis -->
@@ -112,29 +106,20 @@ definePageMeta({
               Wie funktioniert die Suche?
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <p style="font-size: 0.9em; margin-bottom: 10px; word-wrap: break-word;">
-                Dieses Suche erlaubt es, alle Ressourcen im Syntagmatikon gleichzeitig abzufragen.
-                Wie im Res&shy;sour&shy;cen&shy;kom&shy;pass be&shy;schrie&shy;ben, haben die Ressourcen verschiedene
-                Facetten,
-                die hier genutzt werden können, um die Stichworte zu filtern.</p>
-              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <i>Stichwortsuche:</i> Geben Sie ein beliebiges Stichwort in das Suchfeld ein, um alle aktiven
-                Ressourcen
-                danach zu durchsuchen.
+              <p style="font-size: 0.9em; margin-bottom: 10px; word-wrap: break-word;">Mit einer Eingabe im Suchfeld ("Stichwort hier eingeben...") können alle Ressourcen im Syntagmatikon gleichzeitig durchsucht werden. Wird kein Stichwort eingegeben, sieht man die Gesamtstichwortlisten. Der Klick auf einen Treffer führt direkt zur entsprechenden Ressource.
+                </p>
+                <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
+                <b>Anzeige-Optionen:</b> Die Anzeige  "sortiert nach Ressourcen" zeigt jeweils drei Treffer pro Ressource pro Seite und erlaubt so einen Überblick über die Treffermengen der jeweiligen Ressourcen. Die Anzeige "alphabetisch" zeigt alle Treffer in alphabetischer Reihenfolge.
               </p>
               <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <i>Anzeige-Optionen:</i> Die Einträge werden entweder alphabetisch (mit Ressourcenname) angezeigt
-                oder je Ressource einzeln gezogen.
+                <b>Genauigkeit der Suche:</b> Hier kann gesteuert werden, ob Treffer die eingegebene Zeichenfolge exakt enthalten müssen oder eine gewisse Varianz erlaubt ist.
               </p>
               <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <i>Angewählte Ressourcen:</i>
-                werden in die Suche einbezogen. Klicke Sie auf eine Ressource um sie zu aktivieren
-                <v-icon>mdi-check-circle</v-icon> oder deaktivieren <v-icon>mdi-circle-outline</v-icon>. Ressourcen, die
-                durch eine Facette ausgeschlossen sind, werden ebenfalls nicht angezeigt
-                <v-icon>mdi-circle-off-outline</v-icon>.
+                <b>Ressourcen:</b> Hier können einzelne Ressourcen direkt aktiviert
+                <v-icon>mdi-check-circle</v-icon> oder deaktiviert <v-icon>mdi-circle-outline</v-icon> werden. Treffer in deaktivierten Ressourcen werden ausgeblendet.
               </p>
               <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <i>Facetten:</i> schränken die Ressourcen anhand bestimmter Kategorien / Eigenschaften ein.
+                <b>Facetten:</b> Hier können Ressourcen anhand ihrer Merkmale ('Facetten') gefiltert werden. Beschreibungen der Facetten findet man im Ressourcenkompass. Ist eine Ressource aufgrund des Facetten-Filters deaktiviert, wird sie mit dem folgenden Symbol markiert: <v-icon>mdi-circle-off-outline</v-icon>
               </p>
             </v-expansion-panel-text>
           </v-expansion-panel>
@@ -188,12 +173,12 @@ definePageMeta({
                 <!-- <search-box title="Zugänge" rkey="search_display" color1="#c79b31" color2="#a0ac67"></search-box>
                 <search-box title="Ressourcentypen (Zugang)" rkey="search_subtype" color1="#a0ac67"
                   color2="#6fc2ab"></search-box> -->
-                <search-box title="Ressourcentypen" rkey="search_type" color1="#6fc2ab" color2="#38daf7"></search-box>
-                <search-box title="Informationstypen" rkey="search_functions" color1="#42dbfb"
-                  color2="#7ba1c6"></search-box>
-                <search-box title="Wort- und Ausdrucksarten" rkey="search_parts" color1="#7ba1c6"
-                  color2="#5c93a0"></search-box>
-                <search-box title="Musterzugänge" rkey="search_patterns" color1="#5c93a0" color2="#fa3a65"></search-box>
+                <search-box title="Ressourcentypen" rkey="search_type" color1="#3468eb" color2="#ff3661" ></search-box>
+                <search-box title="Informationstypen" rkey="search_functions"  color1="#ff3661" color2="#fec037"
+                 ></search-box>
+                <search-box title="Wort- und Ausdrucksarten" rkey="search_parts"  color1="#fec037" color2="#12cb4b"
+                 ></search-box>
+                <search-box title="Musterzugänge" rkey="search_patterns" color1="#12cb4b" color2="#3468eb"></search-box>
               </v-expansion-panels>
             </v-expansion-panel-text>
           </v-expansion-panel>
@@ -229,7 +214,7 @@ export default {
       overlay: false,
       tab: "t1",
 
-      searchOptions: ["help", "resourcesSelection"],
+      searchOptions: ["resourcesSelection", "fineGrain"],
       openPanels1: [],
       openPanels2: [],
 

@@ -19,7 +19,7 @@ definePageMeta({
       <v-row>
         <v-col>
           <div>
-            <p>Das Syntagmatikon enthält aktuell 12 Ressourcen, die hier kurz vorgestellt werden. Klicken Sie auf eine
+            <p>Das Syntagmatikon enthält aktuell 11 Ressourcen, die hier kurz vorgestellt werden. Klicken Sie auf eine
               der Ressourcen, um diese direkt aufzurufen.</p>
             <br />&nbsp;<br />
           </div>
@@ -76,7 +76,7 @@ export default {
       resources: [],
       filter: ["KoMuX", 'PREPCON', 'MAP', 'Redeeinleiter', 'SpruchList',
         'DTWW', 'SPRW', 'FesteWV', 'Verlaufsformen', 'WVBF',
-        'DRI', 'PhrasKomp', 'Varietäten']
+        'PhrasKomp', 'Varietäten']
     }
   },
   mounted() {

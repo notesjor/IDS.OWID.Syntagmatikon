@@ -19,5 +19,5 @@
             href="http://wvonline.ids-mannheim.de/idiome_russ/hintergrund.htm">Deutsche Russische Idiome
             online</a>)</p>
     <br />
-    <resources-list :filter="['SPRW', 'DRI', 'FesteWV']" :showDesc="false"></resources-list>
+    <resources-list :filter="['SPRW', 'FesteWV']" :showDesc="false"></resources-list>
 </template>
