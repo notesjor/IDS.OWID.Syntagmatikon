@@ -8,17 +8,12 @@ definePageMeta({
   <div style="max-width: 86ch; margin:auto">
     <v-row>
       <v-col>
-        <div>
-          <h1>
-            <gradient color1="#ff3661" color2="#3468eb" style="margin:0px -30px 0px -40px"/>
-            Ressourcentypen
-          </h1>
-        </div>
+        <headline :h="1" color1="#ff3661" color2="#3468eb">Ressourcentypen</headline>
       </v-col>
     </v-row>
     <v-row>
       <v-col>
-        <div style="margin-top: -30px;">
+        <div>
           <p>Das <hi>Syntagmatikon</hi> vereint sehr unterschiedliche Ressourcentypen, die
             im Folgenden kurz charakterisiert werden. Als Kriterien dienten der Grad
             der Exhaustivität sowie das Verhältnis von automatischer

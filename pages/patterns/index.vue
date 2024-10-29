@@ -44,26 +44,17 @@ definePageMeta({
         <h2 style="margin:-20px 0px 10px 10px; border-bottom: 3px lightgray solid;">Muster im Syntagmatikon</h2>
 
         <div class="container">
-          <tile-gradient title="Direkter Zugang" color1="#12cb4b" color2="#3468eb" link="/patterns/direct">
+          <info-box title="Direkter Zugang" color1="#12cb4b" color2="#3468eb" link="/patterns/direct" :filter="['MAP', 'WVBF']">
             In einigen Ressourcen bilden Muster den primären Zugriff auf die aufbereiteten Daten und die lexikografischen Beschreibungen. Das heißt, alle Informationen sind über das Netzwerk semiabstrakter Schablonen herleitbar.
-            <div class="mt-2">
-            <resources-list-compact :filter="['MAP', 'WVBF']"/>
-          </div>
-          </tile-gradient>
+          </info-box>
 
-          <tile-gradient title="Lexikografische Angabe"  color1="#12cb4b" color2="#3468eb" link="/patterns/component">
+          <info-box title="Lexikografische Angabe"  color1="#12cb4b" color2="#3468eb" link="/patterns/component" :filter="['PREPCON_kon', 'SPRW', 'FesteWV']">
             In einigen Ressourcen werden von Hand aufbereitete Musterangaben und -visualisierungen als eine Komponente von Wörterbuchartikeln angeboten.
-            <div class="mt-2">
-            <resources-list-compact :filter="['PREPCON_kon', 'SPRW', 'FesteWV']"/>
-            </div>
-          </tile-gradient>
+          </info-box>
 
-          <tile-gradient title="Dynamische Erschließung"  color1="#12cb4b" color2="#3468eb" link="/patterns/dynamic">
+          <info-box title="Dynamische Erschließung"  color1="#12cb4b" color2="#3468eb" link="/patterns/dynamic" :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp', 'Redeeinleiter', 'Verlaufsformen']">
             In vielen Ressourcen kann man sich selbst Muster erschließen, zum einen durch automatische Suchen und Sortierungen auf der Basis von vorgegebenen Kategorien; zum anderen durch eigene analytische Gruppierungen.
-            <div class="mt-2">
-            <resources-list-compact :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp', 'Redeeinleiter', 'Verlaufsformen']"/>
-            </div>
-          </tile-gradient>
+          </info-box>
         </div>
       </v-col>
     </v-row>

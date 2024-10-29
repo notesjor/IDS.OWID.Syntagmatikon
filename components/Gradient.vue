@@ -14,11 +14,11 @@ export default {
   props: {
       color1: {
           type: String,
-          default: "#f00"
+          default: "#000"
       },
       color2: {
           type: String,
-          default: "#00f"
+          default: "#000"
       },
       height: {
           type: Number,
