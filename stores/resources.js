@@ -14,14 +14,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "<b>PREPCON<sup>online</sup></b> bietet Informationen zum Gebrauch von ca. 80.000 Präposition-Nomen-Verbindungen des Deutschen (z.B. <em>über Jahre; nach Belieben</em>). Abrufbar sind systematisierte Korpusdaten (Frequenzen, KWICs, Volltextstellen, Kookkurrenzprofile, <em>lexpan</em>-Mustertabellen) und narrative Kommentare. Diese verfestigten Ausdrücke und ihnen zugrunde liegende Muster werden in drei Modulen dokumentiert: PREPCON<sup>explorativ</sup>; PREPCON<sup>temporal</sup>; PREPCON<sup>kontrastiv</sup>.",
           img: "./img/sources/prepcon.PNG",
           url: "http://uwv.ids-mannheim.de/prepcon/prepcon_online.html",
-          tags: [],
-          search_type: [],
-          search_functions: [
-          ],
-          search_patterns: [
-          ],
-          search_parts: [
-          ],
+          hideInSearch: true,
         },
         {
           key: "PREPCON_ex",
@@ -426,6 +419,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
     resourcesState: function (state) {
       var res = {};
       for (var i = 0; i < state.info.length; i++) {
+        if(state.info[i].hideInSearch) continue;
         var done = false;
         for (var key in state.valuesSelected)
           if (typeof state.info[i][key] === "string") {
