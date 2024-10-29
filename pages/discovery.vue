@@ -32,11 +32,12 @@ definePageMeta({
         <div v-for="x in resources" :key="x"
           style="width: 350px; display: inline-block; margin: 10px; text-align: left; vertical-align: top;">
 
-          <v-card style="margin-bottom: 10px;" elevation="0">
+          <v-card style="margin-bottom: 10px;" variant="flat" hover position="relative">
             <v-card-title>
               <a :href="x.url" target="_blank">
                 <h2>
-                  <v-btn variant="tonal" icon="mdi-arrow-right-circle-outline" style="display:inline-block; margin-top:-5px"></v-btn>
+                  <v-btn variant="tonal" icon="mdi-arrow-right-circle-outline"
+                    style="display:inline-block; margin-top:-5px"></v-btn>
                   <div style="display: inline-block; margin-left: 5px;" v-html="x.nameShort"></div>
                 </h2>
               </a>
@@ -45,7 +46,7 @@ definePageMeta({
               <a :href="x.url" target="_blank">
                 <img v-if="x.img != undefined" :src="x.img" style="width: 100%; height: auto; margin-bottom: 10px;" />
                 <img v-else src="/dummy/resource.png" style="width: 100%; height: auto; margin-bottom: 10px;" />
-                <div style="text-align: justify;" v-html="x.description">
+                <div style="text-align: justify; font-weight: 300" v-html="x.description">
                 </div>
               </a>
               <br />
