@@ -10,7 +10,7 @@ definePageMeta({
       <v-col>
         <div>
           <h1>
-            <signee color1="#ff3661" color2="#3468eb" />
+            <signee color1="#ff3661" color2="#3468eb" style="margin:0px -30px 0px -40px"/>
             Ressourcentypen
           </h1>
         </div>
@@ -18,7 +18,7 @@ definePageMeta({
     </v-row>
     <v-row>
       <v-col>
-        <div>
+        <div style="margin-top: -30px;">
           <p>Das <hi>Syntagmatikon</hi> vereint sehr unterschiedliche Ressourcentypen, die
             im Folgenden kurz charakterisiert werden. Als Kriterien dienten der Grad
             der Exhaustivität sowie das Verhältnis von automatischer
@@ -41,151 +41,33 @@ definePageMeta({
     <v-row>
       <v-col cols="12">
         <div class="container nolink">
-          <v-card style="width:350px; margin:10px" variant="flat">
+          <info-box title="Explorative Datenbanken" href="/resources/db_expl" :filter="['KoMuX', 'PREPCON_ex']"
+            color1="#ff3661" color2="#3468eb">
+            Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von
+            Korpusdaten
+          </info-box>
 
-            <v-card-title>
-              <div style="width: 20px; float:left; margin-right:10px">
-                <signee color1="#ff3661" color2="#3468eb">
-                </signee>
-              </div>
-              Explorative Datenbanken
-            </v-card-title>
-            <v-card-text>
-
-              <p>Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von
-                Korpusdaten </p>
-              <p>
-                <resources-list-compact :filter="['KoMuX', 'PREPCON_ex']" :showDesc="false"></resources-list-compact>
-              </p>
-              <p><v-btn variant="tonal" size="small" prepend-icon="mdi-arrow-right-circle-outline">
-                  <NuxtLink to="/resources/db_expl">Mehr dazu</NuxtLink>
-                </v-btn></p>
-
-            </v-card-text>
-          </v-card>
-
-
-          <NuxtLink to="/resources/db_desc">
-            <v-card style="width:350px; margin:10px" variant="flat" hover>
-              <v-card-title>
-                <div style="width: 20px; float:left; margin-right:10px">
-                  <signee color1="#ff3661" color2="#3468eb">
-                  </signee>
-                </div>
-                Deskriptive Datenbanken
-              </v-card-title>
-              <v-card-text>
-                <p> Eine Kombination aus automatisch erstellten
-                  Datenmengen und qualitativ erarbeiteten Informationen</p>
-                <p>
-                  <resources-list-compact :filter="['MAP', 'Verlaufsformen', 'Redeeinleiter']"
-                    :showDesc="false"></resources-list-compact>
-                </p>
-              </v-card-text>
-            </v-card>
-          </NuxtLink>
-
-          <NuxtLink to="/resources/inventory">
-            <v-card style="width:350px; margin:10px" variant="flat" hover>
-              <v-card-title>
-                <div style="width: 20px; float:left; margin-right:10px">
-                  <signee color1="#ff3661" color2="#3468eb">
-                  </signee>
-                </div>
-                Inventare und Sammlungen
-              </v-card-title>
-              <v-card-text>
-                <p> Aus dem Korpus extrahierte oder im
-                  Korpus überprüfte Sammlungen sprachlicher Ausdrücke ähnlichen Typs</p>
-                <p>
-                  <resources-list-compact :filter="['SpruchList', 'PhrasKomp', 'PREPCON_temp', 'DTWW']"
-                    :showDesc="false"></resources-list-compact>
-                </p>
-              </v-card-text>
-            </v-card>
-          </NuxtLink>
-
-          <NuxtLink to="/resources/dictionaries">
-            <v-card style="width:350px; margin:10px" variant="flat" hover>
-              <v-card-title>
-                <div style="width: 20px; float:left; margin-right:10px">
-                  <signee color1="#ff3661" color2="#3468eb">
-                  </signee>
-                </div>
-                Online-Wörterbücher
-              </v-card-title>
-              <v-card-text>
-                <p> Korpusbasierte Wörterbuchartikel im Hypertextformat</p>
-                <p>
-                  <resources-list-compact :filter="['SPRW', 'FesteWV']" :showDesc="false"></resources-list-compact>
-                </p>
-              </v-card-text>
-            </v-card>
-          </NuxtLink>
-
-          <NuxtLink to="/resources/prototypes">
-            <v-card style="width:350px; margin:10px" variant="flat" hover>
-              <v-card-title>
-                <div style="width: 20px; float:left; margin-right:10px">
-                  <signee color1="#ff3661" color2="#3468eb">
-                  </signee>
-                </div>
-                Pilotstudien
-              </v-card-title>
-              <v-card-text>
-                <p> Linguistische Studien bzw. lexikografische Beschreibungen zu ausgewählten Phänomen</p>
-                <p>
-                  <resources-list-compact :filter="['PREPCON_kon', 'WVBF']"></resources-list-compact>
-                </p>
-              </v-card-text>
-            </v-card>
-          </NuxtLink>
-
-        </div>
-      </v-col>
-    </v-row>
-
-    <v-row>
-      <v-col cols="12">
-        <div class="container">
-          <tile-signee title="Explorative Datenbanken" color1="#3468eb" color2="#ff3661" link="/resources/db_expl">
-            Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von Korpusdaten
-            <div class="mt-2">
-              <resources-list-compact :filter="['KoMuX', 'PREPCON_ex']" :showDesc="false"></resources-list-compact>
-            </div>
-          </tile-signee>
-
-          <tile-signee title="Deskriptive Datenbanken" color1="#3468eb" color2="#ff3661" link="/resources/db_desc">
+          <info-box title="Deskriptive Datenbanken" href="/resources/db_desc"
+            :filter="['MAP', 'Verlaufsformen', 'Redeeinleiter']" color1="#ff3661" color2="#3468eb">
             Eine Kombination aus automatisch erstellten
             Datenmengen und qualitativ erarbeiteten Informationen
-            <div class="mt-2">
-              <resources-list-compact :filter="['MAP', 'Verlaufsformen', 'Redeeinleiter']"
-                :showDesc="false"></resources-list-compact>
-            </div>
-          </tile-signee>
+          </info-box>
 
-          <tile-signee title="Inventare und Sammlungen" color1="#3468eb" color2="#ff3661" link="/resources/inventory">
+          <info-box title="Inventare und Sammlungen" href="/resources/inventory"
+            :filter="['SpruchList', 'PhrasKomp', 'PREPCON_temp', 'DTWW']" color1="#ff3661" color2="#3468eb">
             Aus dem Korpus extrahierte oder im
             Korpus überprüfte Sammlungen sprachlicher Ausdrücke ähnlichen Typs
-            <div class="mt-2">
-              <resources-list-compact :filter="['SpruchList', 'PhrasKomp', 'PREPCON_temp', 'DTWW']"
-                :showDesc="false"></resources-list-compact>
-            </div>
-          </tile-signee>
+          </info-box>
 
-          <tile-signee title="Online-Wörterbücher" color1="#3468eb" color2="#ff3661" link="/resources/dictionaries">
+          <info-box title="Online-Wörterbücher" href="/resources/dictionaries" :filter="['SPRW', 'FesteWV']"
+            color1="#ff3661" color2="#3468eb">
             Korpusbasierte Wörterbuchartikel im Hypertextformat
-            <div class="mt-2">
-              <resources-list-compact :filter="['SPRW', 'FesteWV']" :showDesc="false"></resources-list-compact>
-            </div>
-          </tile-signee>
+          </info-box>
 
-          <tile-signee title="Pilotstudien" color1="#3468eb" color2="#ff3661" link="/resources/prototypes">
+          <info-box title="Pilotstudien" href="/resources/prototypes" :filter="['PREPCON_kon', 'WVBF']" color1="#ff3661"
+            color2="#3468eb">
             Linguistische Studien bzw. lexikografische Beschreibungen zu ausgewählten Phänomen
-            <div class="mt-2">
-              <resources-list-compact :filter="['PREPCON_kon', 'WVBF']"></resources-list-compact>
-            </div>
-          </tile-signee>
+          </info-box>
 
         </div>
       </v-col>

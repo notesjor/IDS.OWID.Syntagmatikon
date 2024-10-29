@@ -1,7 +1,11 @@
 <template>
-    <svg viewBox="0 0 24 84" version="1.1" :style="style">
-        <path id="back" d="M24.112,5.304l-13.015,-5.304l-8.567,78.696l13.015,5.304l8.567,-78.696Z" :style="c2" />
-        <path id="front" d="M17.623,1.662l-15.093,3.322l4.54,77.202l15.092,-3.322l-4.539,-77.202Z" :style="c1" />
+    <svg width="10%" height="100%" viewBox="0 0 1 84" version="1.1" :style="style">
+        <path
+            d="M18,-0.24l-10.86,0l0,22.56l5.58,19.68l5.28,19.68l-0,22.32l10.86,0l-0.12,-22.32l-5.46,-19.68l-5.28,-19.68l0,-22.56Z"
+            :style="c2" />
+        <path
+            d="M18,-0.48l10.86,0l0,22.8l-5.58,19.68l-5.28,19.92l-0,22.56l-10.86,-0l0.12,-22.8l5.46,-19.68l5.28,-19.68l0,-22.8Z"
+            :style="c1" />
     </svg>
 </template>
 
@@ -23,7 +27,7 @@ export default {
     },
     computed: {
         c1() {
-            return `fill:${this.color1};`
+            return `fill:${this.color1};stroke:#fff;stroke-width:3px;`
         },
         c2() {
             return `fill:${this.color2};`
