@@ -8,6 +8,7 @@ export default class search {
   callSearch = null;
   max = 0;
   count = null;
+  hits = [];
 
   exact = true;
 
@@ -42,7 +43,9 @@ export default class search {
     this.__ensureSearch();
     var res = [];
     var nmax = 0;
+    
     if (this.count == null) this.count = {};
+    this.hits = [];
 
     for (var i = 0; i < this.sources.length; i++) {
       var myHeaders = new Headers();
@@ -80,6 +83,7 @@ export default class search {
         if (this.count != null)
           this.count[this.sources[i]] = result.estimatedTotalHits;
         if (result.estimatedTotalHits > nmax) nmax = result.estimatedTotalHits;
+        this.hits[this.sources[i]] = result.estimatedTotalHits;
 
         res.push(...result.hits);
       } catch (error) {

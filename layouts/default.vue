@@ -1,5 +1,5 @@
 <template>
-  <img alt="Logo" src="/logo2.png" style="max-height:75px; position:fixed; top:0px; left: 10px; z-index: 9999999;" />
+  <img alt="Logo" src="/logo3.svg" style="max-height:65px; position:fixed; top:5px; left: 10px; z-index: 9999999;" />
   <v-app>    
     <div class="d-print-none"
       style="z-index:100; max-height: 75px; min-height:75px; background-color: black; padding:7px 10px 5px 10px; display: grid; grid-template-columns: 1fr auto 250px; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right'; ">

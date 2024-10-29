@@ -61,19 +61,24 @@ definePageMeta({
             </div>
           </v-tabs-window-item>
           <v-tabs-window-item value="byGroup">
-            <div v-for="g in resultGroups">
-              <div style="font-size: 0.8em; color:#999; margin-top:10px">
-                <span v-html="getResourcesShortName(g)"></span>
-                <span> ({{ searchApi.count[g] }} Einträge)</span>
-              </div>
-              <div v-for="x in resultsByGroup(g)">
-                <span style="font-size: 0.8em; color:#999">{{ String(x.index).padStart(2, "0") }}. </span>
-                <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl" /></a>
+            <div class="searchContainer">
+              <div v-for="g in resultGroups" class="searchContainerItem">
+                <div style="font-size: 0.8em; color:#999; margin-top:10px">
+                  <span v-html="getResourcesShortName(g)"></span>
+                  <span> ({{ searchApi.count[g] }} Einträge)</span>
+                </div>
+                <div v-for="x in resultsByGroup(g)">
+                  <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl" /></a>
+                </div>
+                <div style="text-align: left">
+                  <v-pagination density="compact" :length="getResourcesMaxPage(g)"
+                    style="margin:-5px 5px 20px -40px; width: 95%;"></v-pagination>
+                </div>
               </div>
             </div>
           </v-tabs-window-item>
         </v-tabs-window>
-        <v-pagination v-model="page" :length="searchApi?.pageMax" style="margin: 0px 0px 0px -50px"></v-pagination>
+        <!-- <v-pagination v-model="page" :length="searchApi?.pageMax" style="margin: 0px 0px 0px -50px"></v-pagination> -->
 
         <div style="text-align: center">
           <v-tabs-window v-model="search_header">
@@ -275,6 +280,9 @@ export default {
       }
       return res;
     },
+    getResourcesMaxPage(group) {
+      return Math.ceil(this.searchApi.hits[group] / this.pageSize_ByResources);
+    },
     getResourcesShortName(key) {
       return this.resourcesStore?.getResource(key)?.nameShort;
     }
@@ -316,8 +324,7 @@ export default {
         return [];
 
       var data = this.resourcesStore.resourcesState;
-
-      return Object.keys(data).filter(x => x != "PREPCON").map(x => {
+      return Object.keys(data).map(x => {
         return {
           key: x,
           nameShort: this.getResourcesShortName(x),
@@ -342,11 +349,27 @@ export default {
 .v-pagination__list>.v-pagination__item {
   background-color: red;
 }
+
+.searchContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.searchContainerItem {
+  flex: 1 1 50%; /* Zweispaltige Ansicht */
+  margin-bottom: -10px;
+  min-width: 250px;
+  box-sizing: border-box;
+}
 </style>
 
 <style>
 .highlight {
   font-style: italic;
   border-bottom: 1px dotted #000;
+}
+
+.v-pagination__list {
+  width: fit-content !important;
 }
 </style>
