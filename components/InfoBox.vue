@@ -1,9 +1,9 @@
 <template>
     <div class="nolink">
-        <NuxtLink :to="href">
+        <NuxtLink :to="link">
         <v-card style="width:350px; margin:0.75rem" variant="flat" hover>
             <v-card-title>
-                <signee :color1="color1" :color2="color2" style="margin: 0px 5px 5px -30px;"/>
+                <gradient :color1="color1" :color2="color2" style="margin: 0px 5px 5px -30px;"/>
                 <span v-html="title" style="font-weight: 300;"/>
             </v-card-title>
             <v-card-text>
@@ -28,7 +28,7 @@
 <script>
 export default{
     props: {
-        href: {
+        link: {
             type: String,
             required: true
         },

@@ -36,39 +36,32 @@ definePageMeta({
         <h2 style="margin:-20px 0px 10px 10px; border-bottom: 3px lightgray solid;">Automatische Informationstypen</h2>
 
         <div class="container" style="margin-left: -20px;">
-          <tile-gradient   color1="#ff3661" color2="#fec037" title="Frequenzen" link="/datatypes/frequency">
-            Häufigkeit des Vorkommens eines sprachlichen Ausdrucks im Korpus, ermittelt mithilfe von Zählungen
-              und/oder Suchanfragen (queries)
-              <div class="mt-2">
-            <resources-list-compact :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'KoMuX', 'PhrasKomp', 
-            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']"></resources-list-compact>
-            </div>
-          </tile-gradient>
 
-          <tile-gradient  color1="#ff3661" color2="#fec037" title="KWICs <span style='font-size:0.8em'>(KeyWord In Context)</span>" link="/datatypes/kwic">
-            Zeilen (Konkordanzen), in denen das Suchobjekt vorkommt (Textschnipsel)
-            <div class="mt-2">
-            <resources-list-compact :filter="['WVBF', 'SpruchList',
-            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']"></resources-list-compact>
-            </div>
-          </tile-gradient>
+          <info-box title="Frequenzen" link="/datatypes/frequency" :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'KoMuX', 'PhrasKomp', 
+            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']"
+          color1="#ff3661" color2="#fec037">
+          Häufigkeit des Vorkommens eines sprachlichen Ausdrucks im Korpus, ermittelt mithilfe von Zählungen
+          und/oder Suchanfragen (queries)
+          </info-box>
 
-          <tile-gradient color1="#ff3661" color2="#fec037"  title="Kookkurrenzprofile" link="/datatypes/cooccurrence">
-            Durch statistische Berechnungen (sog. Kookkurrenzanalysen) ermittelte Partnerwort-Profile
-              (überproportional häufiges Miteinandervorkommen von Wörtern und Wortgruppen)
-              <div class="mt-2">
-            <resources-list-compact :filter="['WVBF', 
-            'PREPCON_temp', 'PREPCON_kon']"></resources-list-compact>
-            </div>
-          </tile-gradient>
+          <info-box title="KWICs <span style='font-size:0.8em'>(KeyWord In Context)</span>" link="/datatypes/kwic" :filter="['WVBF', 'SpruchList',
+            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']"
+          color1="#ff3661" color2="#fec037">
+          Zeilen (Konkordanzen), in denen das Suchobjekt vorkommt (Textschnipsel)
+          </info-box>
 
-          <tile-gradient  color1="#ff3661" color2="#fec037" title="Lückenfüllertabellen" link="/datatypes/patterntable">
-            Durch automatische Auswertung ermittelte Füllerhäufigkeiten innerhalb eines Musterslots
-            <div class="mt-2">
-            <resources-list-compact :filter="['WVBF', 
-            'PREPCON_temp', 'PREPCON_kon']"></resources-list-compact>
-            </div>
-          </tile-gradient>
+          <info-box title="Kookkurrenzprofile" link="/datatypes/cooccurrence" :filter="['WVBF', 
+            'PREPCON_temp', 'PREPCON_kon']"
+          color1="#ff3661" color2="#fec037">
+          Durch statistische Berechnungen (sog. Kookkurrenzanalysen) ermittelte Partnerwort-Profile
+          (überproportional häufiges Miteinandervorkommen von Wörtern und Wortgruppen)
+          </info-box>
+
+          <info-box title="Lückenfüllertabellen" link="/datatypes/patterntable" :filter="['WVBF', 
+            'PREPCON_temp', 'PREPCON_kon']"
+          color1="#ff3661" color2="#fec037">
+          Durch automatische Auswertung ermittelte Füllerhäufigkeiten innerhalb eines Musterslots
+          </info-box>
 
         </div>
 
@@ -76,6 +69,42 @@ definePageMeta({
 
         <div class="container" style="margin-left: -20px;">
 
+          
+        <info-box title="Explorative Datenbanken" href="/resources/db_expl" :filter="['KoMuX', 'PREPCON_ex']"
+            color1="#ff3661" color2="#3468eb">
+            Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von
+            Korpusdaten
+          </info-box>
+
+          <info-box title="Explorative Datenbanken" href="/resources/db_expl" :filter="['KoMuX', 'PREPCON_ex']"
+            color1="#ff3661" color2="#3468eb">
+            Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von
+            Korpusdaten
+          </info-box>
+
+          <info-box title="Explorative Datenbanken" href="/resources/db_expl" :filter="['KoMuX', 'PREPCON_ex']"
+            color1="#ff3661" color2="#3468eb">
+            Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von
+            Korpusdaten
+          </info-box>
+
+          <info-box title="Explorative Datenbanken" href="/resources/db_expl" :filter="['KoMuX', 'PREPCON_ex']"
+            color1="#ff3661" color2="#3468eb">
+            Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von
+            Korpusdaten
+          </info-box>
+
+          <info-box title="Explorative Datenbanken" href="/resources/db_expl" :filter="['KoMuX', 'PREPCON_ex']"
+            color1="#ff3661" color2="#3468eb">
+            Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von
+            Korpusdaten
+          </info-box>
+
+          <info-box title="Explorative Datenbanken" href="/resources/db_expl" :filter="['KoMuX', 'PREPCON_ex']"
+            color1="#ff3661" color2="#3468eb">
+            Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von
+            Korpusdaten
+          </info-box>
 
           <tile-gradient  color1="#801b31"  color2="#fec037" title="Kategoriale Label" link="/datatypes/category">
             Linguistische Etikettierung von Merkmalen sprachlicher Einheiten

@@ -10,7 +10,7 @@ definePageMeta({
       <v-col>
         <div>
           <h1>
-            <signee color1="#ff3661" color2="#3468eb" style="margin:0px -30px 0px -40px"/>
+            <gradient color1="#ff3661" color2="#3468eb" style="margin:0px -30px 0px -40px"/>
             Ressourcentypen
           </h1>
         </div>
@@ -41,30 +41,30 @@ definePageMeta({
     <v-row>
       <v-col cols="12">
         <div class="container nolink">
-          <info-box title="Explorative Datenbanken" href="/resources/db_expl" :filter="['KoMuX', 'PREPCON_ex']"
+          <info-box title="Explorative Datenbanken" link="/resources/db_expl" :filter="['KoMuX', 'PREPCON_ex']"
             color1="#ff3661" color2="#3468eb">
             Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von
             Korpusdaten
           </info-box>
 
-          <info-box title="Deskriptive Datenbanken" href="/resources/db_desc"
+          <info-box title="Deskriptive Datenbanken" link="/resources/db_desc"
             :filter="['MAP', 'Verlaufsformen', 'Redeeinleiter']" color1="#ff3661" color2="#3468eb">
             Eine Kombination aus automatisch erstellten
             Datenmengen und qualitativ erarbeiteten Informationen
           </info-box>
 
-          <info-box title="Inventare und Sammlungen" href="/resources/inventory"
+          <info-box title="Inventare und Sammlungen" link="/resources/inventory"
             :filter="['SpruchList', 'PhrasKomp', 'PREPCON_temp', 'DTWW']" color1="#ff3661" color2="#3468eb">
             Aus dem Korpus extrahierte oder im
             Korpus überprüfte Sammlungen sprachlicher Ausdrücke ähnlichen Typs
           </info-box>
 
-          <info-box title="Online-Wörterbücher" href="/resources/dictionaries" :filter="['SPRW', 'FesteWV']"
+          <info-box title="Online-Wörterbücher" link="/resources/dictionaries" :filter="['SPRW', 'FesteWV']"
             color1="#ff3661" color2="#3468eb">
             Korpusbasierte Wörterbuchartikel im Hypertextformat
           </info-box>
 
-          <info-box title="Pilotstudien" href="/resources/prototypes" :filter="['PREPCON_kon', 'WVBF']" color1="#ff3661"
+          <info-box title="Pilotstudien" link="/resources/prototypes" :filter="['PREPCON_kon', 'WVBF']" color1="#ff3661"
             color2="#3468eb">
             Linguistische Studien bzw. lexikografische Beschreibungen zu ausgewählten Phänomen
           </info-box>
