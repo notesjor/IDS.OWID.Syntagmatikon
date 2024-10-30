@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div style="max-width: 72ch; margin:auto">
+  <div style="max-width: 80ch; margin:auto">
     <v-row>
       <v-col>
         <headline :h="1" color1="#ff3661" color2="#fec037">Informationstypen</headline>
@@ -33,7 +33,7 @@ definePageMeta({
       <v-col cols="12">
         <headline :h="4">Automatische Informationstypen</headline>
 
-        <div class="container" style="margin-left: -20px;">
+        <div class="container">
 
           <info-box title="Frequenzen" link="/datatypes/frequency" :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'KoMuX', 'PhrasKomp',
             'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']" color1="#ff3661" color2="#fec037">
@@ -62,7 +62,7 @@ definePageMeta({
 
         <h2 style="margin:40px 0px 10px 10px; border-bottom: 3px lightgray solid;">Bearbeitete Informationstypen</h2>
 
-        <div class="container" style="margin-left: -20px;">
+        <div class="container">
 
           <info-box color1="#801b31" color2="#fec037" title="Kategoriale Label" link="/datatypes/category" :filter="['KoMuX', 'PhrasKomp',
                 'PREPCON_kon', 'MAP', 'WVBF', 'Verlaufsformen', 'FesteWV', 'Redeeinleiter']">

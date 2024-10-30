@@ -53,7 +53,7 @@
       <v-divider></v-divider>
 
       <!-- ADDITIONAL INFORMATION START -->
-      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY);">
+      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY); margin-top:0.7rem">
         <v-list-subheader>Suche</v-list-subheader>
         <router-link to="/search">
           <v-list-item prepend-icon="mdi-magnify" title="nach Einträgen"></v-list-item>
@@ -65,7 +65,7 @@
 
       <!-- ADDITIONAL INFORMATION START -->
       <!-- altes icon: mdi-book-open-variant-->
-      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY);">
+      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY); margin-top:0.7rem">
         <v-list-subheader>Ressourcenkompass</v-list-subheader>
         <router-link to="/resources">
           <v-list-item prepend-icon="mdi-compass" title="Ressourcentypen"></v-list-item>
@@ -90,13 +90,10 @@
       <v-divider></v-divider>
 
       <!-- GENERAL INFORMATION START -->
-      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY);">
+      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY); margin-top:0.7rem">
         <v-list-subheader>Hintergrund</v-list-subheader>
         <router-link to="/team">
           <v-list-item prepend-icon="mdi-account-group" title="Beteiligte Projekte"></v-list-item>
-        </router-link>
-        <router-link to="/contact">
-          <v-list-item prepend-icon="mdi-email" title="Kontakt"></v-list-item>
         </router-link>
       </v-list>
       <!-- GENERAL INFORMATION END -->

@@ -1,7 +1,7 @@
 <template>
   <span class="nolink" style="letter-spacing: normal;">
     <v-chip variant="outlined" density="compact" v-for="item in resources">
-      <span v-html="item.nameShort" /><br /> 
+      <span v-html="item.nameShort" style="font-family: var(--FF-DISPLAY);" /><br /> 
     </v-chip>
   </span>
 

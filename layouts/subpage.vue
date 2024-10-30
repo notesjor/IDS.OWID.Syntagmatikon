@@ -53,7 +53,7 @@
       <v-divider></v-divider>
 
       <!-- ADDITIONAL INFORMATION START -->
-      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY);">
+      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY); margin-top:0.7rem">
         <v-list-subheader>Suche</v-list-subheader>
         <router-link to="/search">
           <v-list-item prepend-icon="mdi-magnify" title="nach Einträgen"></v-list-item>
@@ -65,7 +65,7 @@
 
       <!-- ADDITIONAL INFORMATION START -->
       <!-- altes icon: mdi-book-open-variant-->
-      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY);">
+      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY); margin-top:0.7rem">
         <v-list-subheader>Ressourcenkompass</v-list-subheader>
         <router-link to="/resources">
           <v-list-item prepend-icon="mdi-compass" title="Ressourcentypen"></v-list-item>
@@ -88,13 +88,10 @@
       <v-divider></v-divider>
 
       <!-- GENERAL INFORMATION START -->
-      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY);">
+      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY); margin-top:0.7rem">
         <v-list-subheader>Hintergrund</v-list-subheader>
         <router-link to="/team">
           <v-list-item prepend-icon="mdi-account-group" title="Beteiligte Projekte"></v-list-item>
-        </router-link>
-        <router-link to="/contact">
-          <v-list-item prepend-icon="mdi-email" title="Kontakt"></v-list-item>
         </router-link>
       </v-list>
       <!-- GENERAL INFORMATION END -->
@@ -103,7 +100,7 @@
 
     <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
       <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
-        <div style="max-width: 72ch;">
+        <div style="max-width: 80ch;">
           <div class="nolink" style="margin:0px 0px 10px -15px">
             <v-btn variant="text" class="nocaps"><v-icon icon="mdi-step-backward"></v-icon>Zurück zu: "{{ layoutVars?.parent }}"</v-btn>          
           </div>
@@ -112,7 +109,7 @@
         </div>
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
-        <div style="max-width: 72ch;">
+        <div style="max-width: 80ch;">
           <slot />
         </div>
       </div>

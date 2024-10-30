@@ -7,7 +7,7 @@
 @font-face {
   font-family: 'Libertinus';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 200;
   font-size: 20px;
   src: local(""), url("/fonts/libertinus/LibertinusSerifRegular.woff2") format("woff2");
 }
@@ -201,7 +201,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   --FS-BODYTEXT: 18px;
-  --FF-BODYTEXT: "Fira Sans";
+  --FF-BODYTEXT: "Libertinus";
   --FF-DISPLAY: "Fira Sans";
   --FF-TERMS: "Fira Sans";
 }
@@ -238,12 +238,13 @@ div.main {
 }
 
 div.main a {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 div.main a::before {
   content: "\F0CE0  ";
-  font: normal normal normal 18px/1 "Material Design Icons"
+  font: normal normal normal 18px/1 "Material Design Icons";
+  margin: 0px -5px 0px 0px;
 }
 
 div.nolink a::before {

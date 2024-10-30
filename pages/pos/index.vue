@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div style="max-width: 86ch; margin:auto">
+  <div style="max-width: 80ch; margin:auto">
     <v-row>
       <v-col>
         <div>
@@ -39,6 +39,7 @@ definePageMeta({
   <div>
     <v-row>
       <v-col cols="12">
+        <div style="max-width: 100ch;">
         <div class="container">
           <info-box title="Nomina" color1="#fec037" color2="#12cb4b" link="pos/nouns" :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'WVBF',
             'PhrasKomp', 'DTWW', 'Redeeinleiter']">
@@ -65,6 +66,7 @@ definePageMeta({
           </info-box>
 
         </div>
+      </div>
       </v-col>
     </v-row>
   </div>
