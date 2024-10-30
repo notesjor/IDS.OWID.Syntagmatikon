@@ -9,9 +9,7 @@ definePageMeta({
     <v-row>
       <v-col>
         <div>
-          <h1>
-            Wort- und Ausdrucksarten
-          </h1>
+          <headline :h="1" color1="#fec037" color2="#12cb4b">Wort- und Ausdrucksarten</headline>
         </div>
       </v-col>
     </v-row>

@@ -32,7 +32,7 @@
       <!-- LOGO END -->
 
       <!-- HOME START -->
-      <v-list density="compact" nav :style="menuStyleMobileFix">
+      <v-list density="compact" nav :style="menuStyleMobileFix" style="font-family: var(--FF-DISPLAY);">
         <v-list-subheader>Übersicht</v-list-subheader>
         <router-link to="/">
           <v-list-item prepend-icon="mdi-home" title="Startseite"></v-list-item>
@@ -53,7 +53,7 @@
       <v-divider></v-divider>
 
       <!-- ADDITIONAL INFORMATION START -->
-      <v-list density="compact" nav>
+      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY);">
         <v-list-subheader>Suche</v-list-subheader>
         <router-link to="/search">
           <v-list-item prepend-icon="mdi-magnify" title="nach Einträgen"></v-list-item>
@@ -65,19 +65,22 @@
 
       <!-- ADDITIONAL INFORMATION START -->
       <!-- altes icon: mdi-book-open-variant-->
-      <v-list density="compact" nav>
+      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY);">
         <v-list-subheader>Ressourcenkompass</v-list-subheader>
         <router-link to="/resources">
-          <v-list-item prepend-icon="mdi-compass" title="Ressourcentypen"></v-list-item>
+          <gradient style="margin:0px 10px 0px 5px; display: inline-block;" />
+          <v-list-item class="compass">
+            <span>Ressourcentypen</span>
+          </v-list-item>
         </router-link>
         <router-link to="/datatypes">
-          <v-list-item prepend-icon="mdi-compass" title="Informationstypen"></v-list-item>
+          <v-list-item class="compass">Informationstypen</v-list-item>
         </router-link>
         <router-link to="/pos">
-          <v-list-item prepend-icon="mdi-compass" title="Wort- und Ausdrucksarten"></v-list-item>
+          <v-list-item class="compass">Wort- und Ausdrucksarten</v-list-item>
         </router-link>
         <router-link to="/patterns">
-          <v-list-item prepend-icon="mdi-compass" title="Musterzugänge"></v-list-item>
+          <v-list-item class="compass">Musterzugänge</v-list-item>
         </router-link>
         <router-link to="/examples">
           <v-list-item prepend-icon="mdi-lightbulb-on" title="Fallbeispiele"></v-list-item>
@@ -90,7 +93,7 @@
       <v-divider></v-divider>
 
       <!-- GENERAL INFORMATION START -->
-      <v-list density="compact" nav>
+      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY);">
         <v-list-subheader>Hintergrund</v-list-subheader>
         <router-link to="/team">
           <v-list-item prepend-icon="mdi-account-group" title="Beteiligte Projekte"></v-list-item>
@@ -164,6 +167,12 @@
   margin: -15px 0px 0px 45px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
+.compass {
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 0.8125rem;
+  display: inline-block;
+}
 </style>
 
 <style>
@@ -173,8 +182,7 @@
 
 .v-list-item--nav .v-list-item-title
 {
-  font-weight: 300;
-  font-family: var(--FF-DISPLAY);
+  font-weight: 300;  
 }
 
 body {

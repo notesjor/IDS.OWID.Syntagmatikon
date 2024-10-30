@@ -9,9 +9,7 @@ definePageMeta({
     <v-row>
       <v-col>
         <div>
-          <h1>
-            Musterzugänge
-          </h1>
+          <headline :h="1" color1="#12cb4b" color2="#3468eb">Musterzugänge</headline>
         </div>
       </v-col>
     </v-row>

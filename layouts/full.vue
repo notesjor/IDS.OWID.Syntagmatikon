@@ -32,7 +32,7 @@
       <!-- LOGO END -->
 
       <!-- HOME START -->
-      <v-list density="compact" nav :style="menuStyleMobileFix">
+      <v-list density="compact" nav :style="menuStyleMobileFix" style="font-family: var(--FF-DISPLAY);">
         <v-list-subheader>Übersicht</v-list-subheader>
         <router-link to="/">
           <v-list-item prepend-icon="mdi-home" title="Startseite"></v-list-item>
@@ -53,7 +53,7 @@
       <v-divider></v-divider>
 
       <!-- ADDITIONAL INFORMATION START -->
-      <v-list density="compact" nav>
+      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY);">
         <v-list-subheader>Suche</v-list-subheader>
         <router-link to="/search">
           <v-list-item prepend-icon="mdi-magnify" title="nach Einträgen"></v-list-item>
@@ -65,7 +65,7 @@
 
       <!-- ADDITIONAL INFORMATION START -->
       <!-- altes icon: mdi-book-open-variant-->
-      <v-list density="compact" nav>
+      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY);">
         <v-list-subheader>Ressourcenkompass</v-list-subheader>
         <router-link to="/resources">
           <v-list-item prepend-icon="mdi-compass" title="Ressourcentypen"></v-list-item>
@@ -90,7 +90,7 @@
       <v-divider></v-divider>
 
       <!-- GENERAL INFORMATION START -->
-      <v-list density="compact" nav>
+      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY);">
         <v-list-subheader>Hintergrund</v-list-subheader>
         <router-link to="/team">
           <v-list-item prepend-icon="mdi-account-group" title="Beteiligte Projekte"></v-list-item>
@@ -170,6 +170,10 @@
 .v-list-item--nav .v-list-item-title
 {
   font-weight: 300;
+  font-family: var(--FF-DISPLAY);
+}
+
+.v-expansion-panel{
   font-family: var(--FF-DISPLAY);
 }
 

@@ -1,6 +1,6 @@
 <script setup>
 definePageMeta({
-  layout: "full",
+  layout: "full"
 })
 </script>
 
