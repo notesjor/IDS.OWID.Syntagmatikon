@@ -13,7 +13,7 @@ definePageMeta({
     </v-row>
     <v-row>
       <v-col>
-        <div style="font-family: 'Libertinus';">
+        <div>
           <p>Das <hi>Syntagmatikon</hi> vereint sehr unterschiedliche Ressourcentypen, die
             im Folgenden kurz charakterisiert werden. Als Kriterien dienten der Grad
             der Exhaustivität sowie das Verhältnis von automatischer
