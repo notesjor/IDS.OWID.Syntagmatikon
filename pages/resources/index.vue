@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div style="max-width: 86ch; margin:auto">
+  <div style="max-width: 80ch; margin:auto">
     <v-row>
       <v-col>
         <headline :h="1" color1="#ff3661" color2="#3468eb">Ressourcentypen</headline>
@@ -13,7 +13,7 @@ definePageMeta({
     </v-row>
     <v-row>
       <v-col>
-        <div>
+        <div style="font-family: 'Libertinus';">
           <p>Das <hi>Syntagmatikon</hi> vereint sehr unterschiedliche Ressourcentypen, die
             im Folgenden kurz charakterisiert werden. Als Kriterien dienten der Grad
             der Exhaustivität sowie das Verhältnis von automatischer

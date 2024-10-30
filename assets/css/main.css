@@ -201,7 +201,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   --FS-BODYTEXT: 18px;
-  --FF-BODYTEXT: "Fira Sans";
+  --FF-BODYTEXT: "Libertinus";
   --FF-DISPLAY: "Fira Sans";
   --FF-TERMS: "Fira Sans";
 }
@@ -215,16 +215,19 @@ html {
 h1 {
   @apply text-3xl;
   margin: 10px 0 10px 0;
+  font-family: var(--FF-DISPLAY);
 }
 
 h2 {
   @apply text-2xl;
   margin: 10px 0 10px 0;
+  font-family: var(--FF-DISPLAY);
 }
 
 h3 {
   @apply text-xl;
   margin: 10px 0 10px 0;
+  font-family: var(--FF-DISPLAY);
 }
 
 div.main {

@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <v-navigation-drawer :permanent="!useMobileView" :rail="useMobileView" style="z-index:1; transform: none;"
+    <v-navigation-drawer :permanent="!useMobileView" :rail="useMobileView" style="z-index:1; transform: none; font-family: var(--FF-BODYTEXT);"
       expand-on-hover>
       <!-- LOGO START -->
       <div class="text-xl" style="margin: 20px 0px 5px 30px; opacity: 1" v-show="!useMobileView">
@@ -165,6 +165,12 @@
 <style>
 .v-list-item__prepend {
   max-width: 35px !important;
+}
+
+.v-list-item--nav .v-list-item-title
+{
+  font-weight: 300;
+  font-family: var(--FF-DISPLAY);
 }
 
 body {

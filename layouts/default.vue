@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <v-navigation-drawer :permanent="!useMobileView" :rail="useMobileView" style="z-index:1; transform: none;"
+    <v-navigation-drawer :permanent="!useMobileView" :rail="useMobileView" style="z-index:1; transform: none; font-family: var(--FF-BODYTEXT);"
       expand-on-hover>
       <!-- LOGO START -->
       <div class="text-xl" style="margin: 20px 0px 5px 30px; opacity: 1" v-show="!useMobileView">
@@ -105,12 +105,12 @@
 
     <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
       <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
-        <div style="max-width: 70ch;">
+        <div style="max-width: 80ch;">
           <slot />
         </div>
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
-        <div style="max-width: 70ch;">
+        <div style="max-width: 80ch;">
           <slot />
         </div>
       </div>
@@ -169,6 +169,12 @@
 <style>
 .v-list-item__prepend {
   max-width: 35px !important;
+}
+
+.v-list-item--nav .v-list-item-title
+{
+  font-weight: 300;
+  font-family: var(--FF-DISPLAY);
 }
 
 body {
