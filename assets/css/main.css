@@ -201,7 +201,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   --FS-BODYTEXT: 18px;
-  --FF-BODYTEXT: "Libertinus";
+  --FF-BODYTEXT: "Fira Sans";
   --FF-DISPLAY: "Fira Sans";
   --FF-TERMS: "Fira Sans";
 }
@@ -209,6 +209,7 @@
 html {
   scroll-behavior: smooth;
   font-size: var(--FS-BODYTEXT);
+  font-weight: 300;
 }
 
 h1 {
@@ -227,8 +228,7 @@ h3 {
 }
 
 div.main {
-  /*font-family: var(--FF-BODYTEXT); */
-  font-family: "Libertinus Sans";
+  font-family: var(--FF-BODYTEXT);
 }
 
 div.main a {

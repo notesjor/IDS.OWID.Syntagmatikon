@@ -8,23 +8,21 @@ definePageMeta({
   <div style="max-width: 86ch; margin:auto">
     <v-row>
       <v-col>
-        <div>
-          <h1>
-            Informationstypen
-          </h1>
-        </div>
+        <headline :h="1" color1="#ff3661" color2="#fec037">Informationstypen</headline>
       </v-col>
     </v-row>
     <v-row>
       <v-col>
         <div>
           <p>
-            Die Rubrik bündelt die Ressourcen unter dem Gesichtspunkt der Charakteristik ihrer Angaben (Informationstypen). Es wird zwischen rein automatischen und manuell bearbeiteten Daten unterschieden.</p>
-            <p> Die Hintergrundtexte zeigen anhand anschaulicher Beispiele aus den Ressourcen, welche Fragen sich mit den jeweiligen Informationstypen bezüglich sprachlicher Struktur, Bedeutung, Gebrauch, Festigkeit, Varianz sowie Musterhaftigkeit beantworten lassen. Es handelt sich explizit nicht um ein Tutorial etwa zur Korpuslinguistik, sondern um einen Leitfaden zur Interpretation der im Syntagmatikon dargestellten Ergebnisse. 
-</p>
-
-          <br />&nbsp;<br />
-
+            Die Rubrik bündelt die Ressourcen unter dem Gesichtspunkt der Charakteristik ihrer Angaben
+            (Informationstypen). Es wird zwischen rein automatischen und manuell bearbeiteten Daten unterschieden.</p>
+          <p> Die Hintergrundtexte zeigen anhand anschaulicher Beispiele aus den Ressourcen, welche Fragen sich mit den
+            jeweiligen Informationstypen bezüglich sprachlicher Struktur, Bedeutung, Gebrauch, Festigkeit, Varianz sowie
+            Musterhaftigkeit beantworten lassen. Es handelt sich explizit nicht um ein Tutorial etwa zur
+            Korpuslinguistik, sondern um einen Leitfaden zur Interpretation der im Syntagmatikon dargestellten
+            Ergebnisse.
+          </p>
         </div>
       </v-col>
 
@@ -33,42 +31,32 @@ definePageMeta({
   <div style="max-width: 100ch;">
     <v-row style="max-width: 1140px;">
       <v-col cols="12">
-        <h2 style="margin:-20px 0px 10px 10px; border-bottom: 3px lightgray solid;">Automatische Informationstypen</h2>
+        <headline :h="4">Automatische Informationstypen</headline>
 
         <div class="container" style="margin-left: -20px;">
-          <tile-gradient   color1="#ff3661" color2="#fec037" title="Frequenzen" link="/datatypes/frequency">
+
+          <info-box title="Frequenzen" link="/datatypes/frequency" :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'KoMuX', 'PhrasKomp',
+            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']" color1="#ff3661" color2="#fec037">
             Häufigkeit des Vorkommens eines sprachlichen Ausdrucks im Korpus, ermittelt mithilfe von Zählungen
-              und/oder Suchanfragen (queries)
-              <div class="mt-2">
-            <resources-list-compact :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'KoMuX', 'PhrasKomp', 
-            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']"></resources-list-compact>
-            </div>
-          </tile-gradient>
+            und/oder Suchanfragen (queries)
+          </info-box>
 
-          <tile-gradient  color1="#ff3661" color2="#fec037" title="KWICs <span style='font-size:0.8em'>(KeyWord In Context)</span>" link="/datatypes/kwic">
+          <info-box title="KWICs <span style='font-size:0.8em'>(KeyWord In Context)</span>" link="/datatypes/kwic"
+            :filter="['WVBF', 'SpruchList',
+              'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']" color1="#ff3661" color2="#fec037">
             Zeilen (Konkordanzen), in denen das Suchobjekt vorkommt (Textschnipsel)
-            <div class="mt-2">
-            <resources-list-compact :filter="['WVBF', 'SpruchList',
-            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']"></resources-list-compact>
-            </div>
-          </tile-gradient>
+          </info-box>
 
-          <tile-gradient color1="#ff3661" color2="#fec037"  title="Kookkurrenzprofile" link="/datatypes/cooccurrence">
+          <info-box title="Kookkurrenzprofile" link="/datatypes/cooccurrence" :filter="['WVBF',
+            'PREPCON_temp', 'PREPCON_kon']" color1="#ff3661" color2="#fec037">
             Durch statistische Berechnungen (sog. Kookkurrenzanalysen) ermittelte Partnerwort-Profile
-              (überproportional häufiges Miteinandervorkommen von Wörtern und Wortgruppen)
-              <div class="mt-2">
-            <resources-list-compact :filter="['WVBF', 
-            'PREPCON_temp', 'PREPCON_kon']"></resources-list-compact>
-            </div>
-          </tile-gradient>
+            (überproportional häufiges Miteinandervorkommen von Wörtern und Wortgruppen)
+          </info-box>
 
-          <tile-gradient  color1="#ff3661" color2="#fec037" title="Lückenfüllertabellen" link="/datatypes/patterntable">
+          <info-box title="Lückenfüllertabellen" link="/datatypes/patterntable" :filter="['WVBF',
+            'PREPCON_temp', 'PREPCON_kon']" color1="#ff3661" color2="#fec037">
             Durch automatische Auswertung ermittelte Füllerhäufigkeiten innerhalb eines Musterslots
-            <div class="mt-2">
-            <resources-list-compact :filter="['WVBF', 
-            'PREPCON_temp', 'PREPCON_kon']"></resources-list-compact>
-            </div>
-          </tile-gradient>
+          </info-box>
 
         </div>
 
@@ -76,53 +64,33 @@ definePageMeta({
 
         <div class="container" style="margin-left: -20px;">
 
-
-          <tile-gradient  color1="#801b31"  color2="#fec037" title="Kategoriale Label" link="/datatypes/category">
+          <info-box color1="#801b31" color2="#fec037" title="Kategoriale Label" link="/datatypes/category" :filter="['KoMuX', 'PhrasKomp',
+                'PREPCON_kon', 'MAP', 'WVBF', 'Verlaufsformen', 'FesteWV', 'Redeeinleiter']">
             Linguistische Etikettierung von Merkmalen sprachlicher Einheiten
-            <div class="mt-2">
-            <resources-list-compact :filter="['KoMuX', 'PhrasKomp', 
-            'PREPCON_kon', 'MAP', 'WVBF', 'Verlaufsformen', 'FesteWV', 'Redeeinleiter']"></resources-list-compact>
-            </div>
-          </tile-gradient>
+          </info-box>
 
-          <tile-gradient color1="#801b31"  color2="#fec037"  title="Belege" link="/datatypes/matches">
+          <info-box color1="#801b31" color2="#fec037" title="Belege" link="/datatypes/matches" :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'PhrasKomp',
+                  'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'Verlaufsformen', 'FesteWV', 'DTWW', 'SPRW']">
             Manuell ausgewählte KWICs und größere Volltextstellen
-            <div class="mt-2">
-            <resources-list-compact :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'PhrasKomp', 
-            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'Verlaufsformen', 'FesteWV', 'DTWW', 'SPRW']"></resources-list-compact>
-            </div>
-                </tile-gradient>
+          </info-box>
 
-          <tile-gradient color1="#801b31"  color2="#fec037"  title="Narrative Beschreibungen" link="/datatypes/narration">
+          <info-box color1="#801b31" color2="#fec037" title="Narrative Beschreibungen" link="/datatypes/narration" :filter="['MAP', 'PREPCON_kon', 'SPRW', 'WVBF', 'FesteWV']">
             Beschreibende Autorentexte, die ein Phänomen erklären
-            <div class="mt-2">
-            <resources-list-compact :filter="['MAP', 'PREPCON_kon', 'SPRW', 'WVBF', 'FesteWV']"></resources-list-compact>   
-            </div>
-              </tile-gradient>
+          </info-box>
 
-          <tile-gradient color1="#801b31"  color2="#fec037"  title="Komponenten" link="/datatypes/elements">
+          <info-box color1="#801b31" color2="#fec037" title="Komponenten" link="/datatypes/elements" :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW', 'FesteWV']">
             Auszeichnung der einzelnen Komponenten einer Wortverbindung und Verlinkung mit anderen Einträgen.
-            <div class="mt-2">
-            <resources-list-compact :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW',  'FesteWV']"></resources-list-compact>   
-            </div>
-            </tile-gradient>
+          </info-box>
 
 
-          <tile-gradient color1="#801b31"  color2="#fec037" title="Felder" link="/datatypes/fields">
+          <info-box color1="#801b31" color2="#fec037" title="Felder" link="/datatypes/fields" :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW', 'FesteWV', 'MAP']">
             Nach inhaltlichen Kriterien manuell zusammengestellte Gruppen von sprachlichen Einheiten mit verwandten
-              Gebrauchsmerkmalen
-              <div class="mt-2">
-            <resources-list-compact :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW',  'FesteWV', 'MAP']"></resources-list-compact>   
-            </div>
-         </tile-gradient>
+            Gebrauchsmerkmalen
+          </info-box>
 
-
-          <tile-gradient color1="#801b31"  color2="#fec037" title="Fremdsprachige Äquivalenz" link="/datatypes/equivalence">
+          <info-box color1="#801b31" color2="#fec037" title="Fremdsprachige Äquivalenz" link="/datatypes/equivalence" :filter="['PREPCON_kon', 'DTWW']">
             Angabe von Entsprechungen in anderen Sprachen
-            <div class="mt-2">
-            <resources-list-compact :filter="['PREPCON_kon', 'DTWW']"></resources-list-compact>   
-            </div>
-            </tile-gradient>
+          </info-box>
 
 
 

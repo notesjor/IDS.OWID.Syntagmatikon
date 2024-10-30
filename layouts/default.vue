@@ -1,12 +1,11 @@
 <template>
+  <img alt="Logo" src="/logo3.svg" style="max-height:65px; position:fixed; top:5px; left: 10px; z-index: 1000;" />
   <v-app>
     <div class="d-print-none"
       style="z-index:100; max-height: 75px; min-height:75px; background-color: black; padding:7px 10px 5px 10px; display: grid; grid-template-columns: 1fr auto 250px; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right'; ">
-      <div class="inline" style="color:white; grid-area: left; margin-left:5px">
+      <div class="inline" style="color:white; grid-area: left; margin-left:75px">
         <div style="min-height: 10px;" v-if="useMobileView"></div>
         <div class="text-2xl">
-          <img alt="Logo" src="/logo_syntagmatikon_knoten.jpg"
-            style="max-height:50px; margin-right:10px; margin-top:5px; float: left;" />
           {{ appName }}
         </div>
         <div class="" style="text-align: left;">{{ useMobileView ? " " : appDescription }}</div>
@@ -25,17 +24,15 @@
     <v-navigation-drawer :permanent="!useMobileView" :rail="useMobileView" style="z-index:1; transform: none;"
       expand-on-hover>
       <!-- LOGO START -->
-      <div class="text-xl" style="margin: 7px 0px 15px 15px; opacity: 1" v-show="!useMobileView">
-        <img alt="Logo" src="/logo_syntagmatikon_knoten.jpg"
-          style="max-height:40px; margin-right:auto; margin-top:5px; float: left;" />
-        <div style="margin-left: 50px; margin-bottom: 50px;">
+      <div class="text-xl" style="margin: 20px 0px 5px 30px; opacity: 1" v-show="!useMobileView">
+        <div style="margin-left: 50px; margin-bottom: 40px;">
           {{ appName }}
         </div>
       </div>
       <!-- LOGO END -->
 
-     <!-- HOME START -->
-     <v-list density="compact" nav :style="menuStyleMobileFix">
+      <!-- HOME START -->
+      <v-list density="compact" nav :style="menuStyleMobileFix">
         <v-list-subheader>Übersicht</v-list-subheader>
         <router-link to="/">
           <v-list-item prepend-icon="mdi-home" title="Startseite"></v-list-item>
@@ -52,22 +49,22 @@
       </v-list>
       <!-- HOME END -->
 
-      <v-divider></v-divider>
-
-<!-- ADDITIONAL INFORMATION START -->
-<v-list density="compact" nav>
-  <v-list-subheader>Suche</v-list-subheader>
-  <router-link to="/search">
-    <v-list-item prepend-icon="mdi-magnify" title="nach Einträgen"></v-list-item>
-  </router-link>
-</v-list>
-<!-- ADDITIONAL INFORMATION END -->
-
 
       <v-divider></v-divider>
 
       <!-- ADDITIONAL INFORMATION START -->
-       <!-- altes icon: mdi-book-open-variant-->
+      <v-list density="compact" nav>
+        <v-list-subheader>Suche</v-list-subheader>
+        <router-link to="/search">
+          <v-list-item prepend-icon="mdi-magnify" title="nach Einträgen"></v-list-item>
+        </router-link>
+      </v-list>
+      <!-- ADDITIONAL INFORMATION END -->
+
+      <v-divider></v-divider>
+
+      <!-- ADDITIONAL INFORMATION START -->
+      <!-- altes icon: mdi-book-open-variant-->
       <v-list density="compact" nav>
         <v-list-subheader>Ressourcenkompass</v-list-subheader>
         <router-link to="/resources">
@@ -88,52 +85,39 @@
       </v-list>
       <!-- ADDITIONAL INFORMATION END -->
 
-     
+
 
       <v-divider></v-divider>
 
-    <!-- ADDITIONAL INFORMATION START -->
- <!--    <v-list density="compact" nav>
-      <v-list-subheader>Weitere Informationen</v-list-subheader>
-      <router-link to="/analysis">
-          <v-list-item prepend-icon="mdi-telescope" title="Sprachöffentlichkeit"></v-list-item>
-      </router-link>
-      <router-link to="/timeline">
-          <v-list-item prepend-icon="mdi-history" title="Forschungsgeschichte"></v-list-item>
-      </router-link>
-    </v-list> -->
-    <!-- ADDITIONAL INFORMATION END -->
-
-     <!-- GENERAL INFORMATION START -->
-     <v-list density="compact" nav>
-      <v-list-subheader>Hintergrund</v-list-subheader>
-      <router-link to="/team">
+      <!-- GENERAL INFORMATION START -->
+      <v-list density="compact" nav>
+        <v-list-subheader>Hintergrund</v-list-subheader>
+        <router-link to="/team">
           <v-list-item prepend-icon="mdi-account-group" title="Beteiligte Projekte"></v-list-item>
-      </router-link>
-      <router-link to="/contact">
+        </router-link>
+        <router-link to="/contact">
           <v-list-item prepend-icon="mdi-email" title="Kontakt"></v-list-item>
-      </router-link>
-    </v-list>
-    <!-- GENERAL INFORMATION END -->
-
+        </router-link>
+      </v-list>
+      <!-- GENERAL INFORMATION END -->
 
     </v-navigation-drawer>
 
     <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
       <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
-        <div style="max-width: 86ch;">
+        <div style="max-width: 70ch;">
           <slot />
         </div>
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
-        <div style="max-width: 86ch;">
+        <div style="max-width: 70ch;">
           <slot />
         </div>
       </div>
     </div>
 
     <v-footer
-      style="z-index: 100; position: absolute; bottom: 0; width: 100%; max-height:64px; background-color: black; padding-left:25px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right';">
+      style="z-index: 100; position: relative; bottom: 0; width: 100%; background-color: black; padding-left:25px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right';">
       <div style="color:white; grid-area: left; margin-top: 20px; font-size: 12px;" v-if="!useMobileView">
         <img alt="Logo" src="/logo_left.svg" style="max-height:35px; margin-top: -15px;" float="left" />
         <div style="display:inline-block">
@@ -164,10 +148,10 @@
 
       <div style="grid-area: middle;"></div>
 
-      <div style="text-align: right; grid-area: right">
+      <div style="text-align: right; grid-area: right; max-height: 64px;">
         <a :href="rightIconHref" target="_blank" style="display: inline-block; margin-top: 0px">
           <img alt="Logo" src="/logo_right.svg"
-            style="max-height:65px; min-height: 45px; min-width: 200px; margin-left: auto; " />
+            style="max-height:64px; min-height: 45px; min-width: 200px; margin-left: auto; " />
         </a>
       </div>
     </v-footer>
@@ -177,7 +161,7 @@
 
 <style scoped>
 .v-list-subheader {
-  margin-left: 45px;
+  margin: -15px 0px 0px 45px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 </style>

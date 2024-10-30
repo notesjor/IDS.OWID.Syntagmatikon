@@ -12,9 +12,7 @@
       <v-col>
         <div>
           <h1>
-            <div style="width: 20px; float:left; margin-right:10px">
-            <gradient style="styleGradient" color1="#3468eb" color2="#ff3661">                
-            </gradient></div>
+            <gradient color1="#3468eb" color2="#ff3661"/>                
             Explorative Datenbanken
           </h1>
         </div>

@@ -8,14 +8,7 @@ definePageMeta({
   <div style="max-width: 86ch; margin:auto">
     <v-row>
       <v-col>
-        <div>
-          <h1>
-            <!-- <div style="width: 10px; float:left; margin-right:10px">
-            <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb" degree="180">                
-            </gradient></div> -->
-            Ressourcentypen
-          </h1>
-        </div>
+        <headline :h="1" color1="#ff3661" color2="#3468eb">Ressourcentypen</headline>
       </v-col>
     </v-row>
     <v-row>
@@ -26,8 +19,8 @@ definePageMeta({
             der Exhaustivität sowie das Verhältnis von automatischer
             Datenaufbereitung; händischer Bearbeitung und
             linguistisch-lexikografischer Beschreibung.</p>
-            <p> 
-            Die aufgeführten Beispielressourcen sind jeweils die prototypischen Vertreter. 
+          <p>
+            Die aufgeführten Beispielressourcen sind jeweils die prototypischen Vertreter.
             Das heißt, dass diese hauptsächlich durch den zuvor
             beschriebenen Typ charakterisiert sind. Gleichzeitig gibt es zahlreiche
             Überschneidungen zwischen den Ressourcen: Eine Datenbank kann z.B.
@@ -35,143 +28,41 @@ definePageMeta({
             PREPCON<sup>explorativ</sup> oder KoMuX. Um diese Mehrfachzuordnung
             sichtbar zu machen, wurden Suchattribute hinzugefügt, die eine
             automatische Bündelung nach spezifischen Kriterien ermöglichen.</p>
-          <br />&nbsp;<br />
         </div>
       </v-col>
-
     </v-row>
   </div>
   <div style="max-width: 100ch;">
     <v-row>
       <v-col cols="12">
         <div class="container nolink">
-       
-       
-        
-        <v-card style="width:350px; margin:10px"  variant="flat">
-         
-          <v-card-title>
-            <div style="width: 10px; float:left; margin-right:10px">
-            <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb"  degree="180">                
-            </gradient></div>
-            Explorative Datenbanken</v-card-title>
-          <v-card-text>
-           
-            <p>Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von Korpusdaten </p>
-           <p>
-            <resources-list-compact :filter="['KoMuX', 'PREPCON_ex']" :showDesc="false"></resources-list-compact></p>
-           <p><v-btn variant="tonal" size="small" prepend-icon="mdi-arrow-right-circle-outline">
-            <NuxtLink to="/resources/db_expl">Mehr dazu</NuxtLink> </v-btn></p>
-            
-          </v-card-text>
-        </v-card> 
-     
+          <info-box title="Explorative Datenbanken" link="/resources/db_expl" :filter="['KoMuX', 'PREPCON_ex']"
+            color1="#ff3661" color2="#3468eb">
+            Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von
+            Korpusdaten
+          </info-box>
 
-      <NuxtLink to="/resources/db_desc">
-        <v-card style="width:350px; margin:10px" variant="flat" hover>
-          <v-card-title>
-            <div style="width: 10px; float:left; margin-right:10px">
-            <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb" degree="180">                
-            </gradient></div>
-            Deskriptive Datenbanken</v-card-title>
-          <v-card-text>
-            <p>  Eine Kombination aus automatisch erstellten
-              Datenmengen und qualitativ erarbeiteten Informationen</p>
-           <p>
-            <resources-list-compact :filter="['MAP', 'Verlaufsformen', 'Redeeinleiter']" :showDesc="false"></resources-list-compact></p>
-          </v-card-text>
-        </v-card>  
-        </NuxtLink>
-
-        <NuxtLink to="/resources/inventory">
-        <v-card style="width:350px; margin:10px" variant="flat" hover>
-          <v-card-title>
-            <div style="width: 10px; float:left; margin-right:10px">
-            <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb" degree="180">                
-            </gradient></div>
-            Inventare und Sammlungen</v-card-title>
-          <v-card-text>
-            <p>   Aus dem Korpus extrahierte oder im
-              Korpus überprüfte Sammlungen sprachlicher Ausdrücke ähnlichen Typs</p>
-           <p>
-            <resources-list-compact :filter="['SpruchList', 'PhrasKomp', 'PREPCON_temp', 'DTWW']" :showDesc="false"></resources-list-compact></p>
-          </v-card-text>
-        </v-card>  
-      </NuxtLink>
-
-      <NuxtLink to="/resources/dictionaries">
-        <v-card style="width:350px; margin:10px" variant="flat" hover>
-          <v-card-title>
-            <div style="width: 10px; float:left; margin-right:10px">
-            <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb" degree="180">                
-            </gradient></div>
-            Online-Wörterbücher</v-card-title>
-          <v-card-text>
-            <p>   Korpusbasierte Wörterbuchartikel im Hypertextformat</p>
-           <p>
-            <resources-list-compact :filter="['SPRW', 'FesteWV']" :showDesc="false"></resources-list-compact></p>
-          </v-card-text>
-        </v-card>  
-        </NuxtLink>
-
-        <NuxtLink to="/resources/prototypes">
-        <v-card style="width:350px; margin:10px" variant="flat" hover>
-          <v-card-title>
-            <div style="width: 10px; float:left; margin-right:10px">
-            <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb" degree="180">                
-            </gradient></div>
-           Pilotstudien</v-card-title>
-          <v-card-text>
-            <p>   Linguistische Studien bzw. lexikografische Beschreibungen zu ausgewählten Phänomen</p>
-           <p>
-            <resources-list-compact :filter="['PREPCON_kon', 'WVBF']"></resources-list-compact></p>
-          </v-card-text>
-        </v-card>  
-        </NuxtLink>
-
-        </div>
-        </v-col>
-    </v-row>
-
-    <v-row>
-      <v-col cols="12">
-        <div class="container">
-          <tile-gradient title="Explorative Datenbanken" color1="#3468eb" color2="#ff3661" link="/resources/db_expl">           
-            Primär automatisch erstellte Informationen zu umfassenden Sprachausschnitten auf der Basis von Korpusdaten 
-            <div class="mt-2">
-         <resources-list-compact :filter="['KoMuX', 'PREPCON_ex']" :showDesc="false"></resources-list-compact>
-         </div>
-          </tile-gradient>
-
-          <tile-gradient title="Deskriptive Datenbanken" color1="#3468eb" color2="#ff3661" link="/resources/db_desc">           
+          <info-box title="Deskriptive Datenbanken" link="/resources/db_desc"
+            :filter="['MAP', 'Verlaufsformen', 'Redeeinleiter']" color1="#ff3661" color2="#3468eb">
             Eine Kombination aus automatisch erstellten
             Datenmengen und qualitativ erarbeiteten Informationen
-            <div class="mt-2">
-            <resources-list-compact :filter="['MAP', 'Verlaufsformen', 'Redeeinleiter']" :showDesc="false"></resources-list-compact>
-          </div>
-          </tile-gradient>
+          </info-box>
 
-          <tile-gradient title="Inventare und Sammlungen"color1="#3468eb" color2="#ff3661" link="/resources/inventory">           
+          <info-box title="Inventare und Sammlungen" link="/resources/inventory"
+            :filter="['SpruchList', 'PhrasKomp', 'PREPCON_temp', 'DTWW']" color1="#ff3661" color2="#3468eb">
             Aus dem Korpus extrahierte oder im
             Korpus überprüfte Sammlungen sprachlicher Ausdrücke ähnlichen Typs
-            <div class="mt-2">
-            <resources-list-compact :filter="['SpruchList', 'PhrasKomp', 'PREPCON_temp', 'DTWW']" :showDesc="false"></resources-list-compact>
-            </div>
-          </tile-gradient>
+          </info-box>
 
-          <tile-gradient title="Online-Wörterbücher" color1="#3468eb" color2="#ff3661" link="/resources/dictionaries">
+          <info-box title="Online-Wörterbücher" link="/resources/dictionaries" :filter="['SPRW', 'FesteWV']"
+            color1="#ff3661" color2="#3468eb">
             Korpusbasierte Wörterbuchartikel im Hypertextformat
-            <div class="mt-2">
-            <resources-list-compact :filter="['SPRW', 'FesteWV']" :showDesc="false"></resources-list-compact>
-            </div>
-          </tile-gradient>
-         
-          <tile-gradient title="Pilotstudien" color1="#3468eb" color2="#ff3661" link="/resources/prototypes">
+          </info-box>
+
+          <info-box title="Pilotstudien" link="/resources/prototypes" :filter="['PREPCON_kon', 'WVBF']" color1="#ff3661"
+            color2="#3468eb">
             Linguistische Studien bzw. lexikografische Beschreibungen zu ausgewählten Phänomen
-            <div class="mt-2">
-            <resources-list-compact :filter="['PREPCON_kon', 'WVBF']"></resources-list-compact>
-            </div>
-          </tile-gradient>
+          </info-box>
 
         </div>
       </v-col>

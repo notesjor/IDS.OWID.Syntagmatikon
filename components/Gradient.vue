@@ -1,71 +1,40 @@
 <template>
-  <div :style="gradientStyle">
-    <slot />
-  </div>
+  <svg width="10%" height="100%" viewBox="0 0 1 84" version="1.1" :style="style">
+      <path
+          d="M18,-0.24l-10.86,0l0,22.56l5.58,19.68l5.28,19.68l-0,22.32l10.86,0l-0.12,-22.32l-5.46,-19.68l-5.28,-19.68l0,-22.56Z"
+          :style="c2" />
+      <path
+          d="M18,-0.48l10.86,0l0,22.8l-5.58,19.68l-5.28,19.92l-0,22.56l-10.86,-0l0.12,-22.8l5.46,-19.68l5.28,-19.68l0,-22.8Z"
+          :style="c1" />
+  </svg>
 </template>
 
 <script>
 export default {
   props: {
-    color1: {
-      type: String,
-      required: false,
-      default: '#000000'
-    },
-    color2: {
-      type: String,
-      required: false,
-      default: '#ffff00'
-    },
-    color3: {
-      type: String,
-      required: false,
-      default: ''
-    },
-    width: {
-      type: String,
-      required: false,
-      default: '100%'
-    },
-    height: {
-      type: String,
-      required: false,
-      default: '50px'
-    },
-    degree: {
-      type: Number,
-      required: false,
-      default: 0
-    }
+      color1: {
+          type: String,
+          default: "#000"
+      },
+      color2: {
+          type: String,
+          default: "#000"
+      },
+      height: {
+          type: Number,
+          default: 40
+      },
   },
-
-  data() {
-    return {
-      addDegree: 0
-    };
-  },
-
-  methods: {
-    rotateGradient() {
-      this.addDegree += 180;
-    },    
-  },
-
   computed: {
-    gradientStyle() {
-      if (this.color3 == '')
-        return `width:${this.width}; height:${this.height}; transition: background 3s ease; background-image: linear-gradient(${this.degree + this.addDegree}deg, ${this.color1} 0%, ${this.color2} 100%);`;
-      else
-        return `width:${this.width}; height:${this.height}; transition: background 3s ease; background-image: linear-gradient(${this.degree + this.addDegree}deg, ${this.color1} 0%, ${this.color2} 50%, ${this.color3} 100%);`;
-    }
+      c1() {
+          return `fill:${this.color1};stroke:#fff;stroke-width:3px;`
+      },
+      c2() {
+          return `fill:${this.color2};`
+      },
+      style() {
+          return `display:inline-block;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;max-height:${this.height}px;`
+      }
   }
-};
-</script>
-
-<style scoped>
-div {
-  width: 100%;
-  /* height: 200px; */
-  height: 100%;
 }
-</style>
+</script>
