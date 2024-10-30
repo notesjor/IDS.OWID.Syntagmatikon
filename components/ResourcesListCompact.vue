@@ -1,13 +1,7 @@
 <template>
-  <span class="nolink" style="letter-spacing: normal;" v-for="item in resources" padding>
-    <v-chip class='ma-1 pa-3' variant="outlined" density="compact">
-    <!--<v-btn density="compact" class='ma-1 '> -->
+  <span class="nolink" style="letter-spacing: normal;">
+    <v-chip variant="outlined" density="compact" v-for="item in resources">
       <span v-html="item.nameShort" /><br /> 
-      <!--
-      <NuxtLink :to="item.url"> 
-        <span v-html="item.nameShort" /><br />
-      </NuxtLink> 
-    -->
     </v-chip>
   </span>
 
@@ -55,6 +49,11 @@ export default {
 
 .containerItem:hover {
   background-color: #ddd;
+}
+
+.v-chip{
+  margin: 5px;
+
 }
 
 .left {

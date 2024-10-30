@@ -2,22 +2,13 @@
 <template>
   <div class="nolink"
   style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
-  <v-row style="margin-top:-20px">
-      <v-col>
-        <!-- <p class="text-xl">Interaktive Beispiele</p> -->
-       <!-- <p class="text-l">Durch Klicken auf die Beispiele im Beleg werden darunter die zugehörigen Ressourcen im Syntagmatikon mit entsprechender Verlinkung zum dortigen Eintrag angezeigt. 
-        </p>  -->     
-      </v-col>
-    </v-row> 
-
     <v-row>
       <v-col>
         <div @mouseenter="carouselStop" @mouseleave="carouselStart"
           style="border: 1px white solid; border-radius: 5px; padding: 5px; background-color: white;">
-          <v-carousel hide-delimiter-background hide-delimiters continuous ref="carousel" v-model="tab" :cycle="cycle"
+          <v-tabs-window hide-delimiter-background hide-delimiters continuous v-model="tab" :cycle="cycle"
             class="notransition" interval="10000">
-            <v-carousel-item v-for="(item, i) in generatePages()" :key="i" eager>
-              <v-sheet height="100%">
+            <v-tabs-window-item v-for="(item, i) in generatePages()" :key="i" eager>
                 <div style="padding:7px 75px 5px 75px;">
                   <v-row>
                     <!--Styling für den Beleg-->
@@ -52,16 +43,10 @@
                     </a>
                   </div>
                 </div>
-              </v-sheet>
-            </v-carousel-item>
-
-            <template #prev="{ props }">
-              <v-btn density="dense" variant="text" @click="props.onClick" icon="mdi-arrow-left-bold-box-outline" class="myBtnPrev"></v-btn>
-            </template>
-            <template #next="{ props }">
-              <v-btn density="dense" variant="text" @click="props.onClick" icon="mdi-arrow-right-bold-box-outline" class="myBtnNext"></v-btn>
-            </template>
-          </v-carousel>
+            </v-tabs-window-item>            
+          </v-tabs-window>
+          <v-btn density="dense" variant="text" @click="tabPrev" icon="mdi-arrow-left-bold-box-outline" class="myBtnPrev"></v-btn>
+          <v-btn density="dense" variant="text" @click="tabNext" icon="mdi-arrow-right-bold-box-outline" class="myBtnNext"></v-btn>
         </div>
       </v-col>
     </v-row>
@@ -152,6 +137,14 @@ export default {
     carouselStart() {
       this.cycle = true;
     },
+    tabPrev(){
+      if (this.tab > 0) 
+        this.tab = this.tab - 1;
+    },
+    tabNext(){
+      if (this.tab < this.$props.items.length - 1) 
+        this.tab = this.tab + 1;
+    }
   },
   mounted() {
     var self = this;
@@ -207,13 +200,16 @@ export default {
 }
 
 .myBtnPrev {
-  margin-left:-15px;
   color: darkgrey;
+  position: relative;
+  top: 30%;
 }
 
 .myBtnNext {
   margin-right:-15px;
   color: darkgrey;
+  position: relative;
+  top: 50%;
 }
 
 </style>
