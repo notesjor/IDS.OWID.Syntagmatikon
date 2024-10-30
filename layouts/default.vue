@@ -67,20 +67,21 @@
       <!-- altes icon: mdi-book-open-variant-->
       <v-list density="compact" nav style="font-family: var(--FF-DISPLAY);">
         <v-list-subheader>Ressourcenkompass</v-list-subheader>
-        <router-link to="/resources">
-          <gradient style="margin:0px 10px 0px 5px; display: inline-block;" />
-          <v-list-item class="compass">
-            <span>Ressourcentypen</span>
-          </v-list-item>
+        <router-link to="/resources" class="sim_listItem">
+          <gradient style="margin:0px 10px 0px 5px; display: inline-block;" color1="#3468eb" color2="#ff3661"/>
+          <span class="compass">Ressourcentypen</span>
         </router-link>
-        <router-link to="/datatypes">
-          <v-list-item class="compass">Informationstypen</v-list-item>
+        <router-link to="/datatypes" class="sim_listItem">
+          <gradient style="margin:0px 10px 0px 5px; display: inline-block;" color1="#ff3661" color2="#fec037"/>
+          <span class="compass">Informationstypen</span>
         </router-link>
-        <router-link to="/pos">
-          <v-list-item class="compass">Wort- und Ausdrucksarten</v-list-item>
+        <router-link to="/pos" class="sim_listItem">
+          <gradient style="margin:0px 10px 0px 5px; display: inline-block;" color1="#fec037" color2="#12cb4b"/>
+          <span class="compass">Wort- und Ausdrucksarten</span>
         </router-link>
-        <router-link to="/patterns">
-          <v-list-item class="compass">Musterzugänge</v-list-item>
+        <router-link to="/patterns" class="sim_listItem">
+          <gradient style="margin:0px 10px 0px 5px; display: inline-block;" color1="#12cb4b" color2="#3468eb"/>
+          <span class="compass">Musterzugänge</span>
         </router-link>
         <router-link to="/examples">
           <v-list-item prepend-icon="mdi-lightbulb-on" title="Fallbeispiele"></v-list-item>
@@ -172,6 +173,10 @@
   color: rgba(0, 0, 0, 0.8);
   font-size: 0.8125rem;
   display: inline-block;
+}
+.sim_listItem {
+  display: block;
+  margin-left: 3px;
 }
 </style>
 

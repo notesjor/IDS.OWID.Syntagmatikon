@@ -216,18 +216,21 @@ h1 {
   @apply text-3xl;
   margin: 10px 0 10px 0;
   font-family: var(--FF-DISPLAY);
+  text-align: left;
 }
 
 h2 {
   @apply text-2xl;
   margin: 10px 0 10px 0;
   font-family: var(--FF-DISPLAY);
+  text-align: left;
 }
 
 h3 {
   @apply text-xl;
   margin: 10px 0 10px 0;
   font-family: var(--FF-DISPLAY);
+  text-align: left;
 }
 
 div.main {
