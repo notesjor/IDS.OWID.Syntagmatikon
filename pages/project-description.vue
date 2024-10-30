@@ -3,7 +3,7 @@
     <v-row>
       <v-col>
         <h1>
-          Was ist das Syntagmatikon?
+          Was ist das <hi>Syntagmatikon</hi>?
         </h1>
       </v-col>
     </v-row>
@@ -23,12 +23,9 @@
           <p>Die Abbildungen illustrieren Zusammenhänge zwischen Ausdrücken, die
             linear verfestigt und als syntagmatische lexikalische Einheiten zu
             verstehen sind – Wortgruppen und &#8209;folgen also, die als „eingefrorene“
-            Bausteine im Sprachgebrauch eingesetzt werden. <a
-              href="https://de.wikipedia.org/wiki/Lexikalische_Funktion">(Lexikalische
-              Funktion</a>)</p>
-          <p>Die Wortschatzeinheiten und -ausschnitte im <span class="smallcaps">Syntagmatikon</span> wurden und werden
-            in
-            unterschiedlichen IDS-Projekten (<a
+            Bausteine im Sprachgebrauch eingesetzt werden.</p>
+          <p>Die Wortschatzeinheiten und -ausschnitte im <hi>Syntagmatikon</hi> wurden und werden
+            in unterschiedlichen IDS-Projekten (<a
               href="https://www.ids-mannheim.de/lexik/syntagmatik-im-lexikon/">Syntagmatik
               im Lexikon</a>; <a href="http://www.redewiedergabe.de/">Redewiedergabe</a>) auf der Basis
             sehr großer Korpora (<a href="https://www.ids-mannheim.de/digspra/kl/projekte/korpora/">DeReKo</a>)
@@ -40,8 +37,11 @@
             Angabetypen in den Ressourcen. Es handelt sich um ein modulares
             Onlineformat, bei dem verfestigte Wortgruppen und lexikalisch geprägte
             Mustern nicht nach einem einheitlichen Raster dargestellt werden,
-            sondern dynamisch-flexibel in unterschiedlichen Beschreibungstiefen.</p>
-          <p>Die Heterogenität der Formate spiegelt ebenso die
+            sondern dynamisch-flexibel in unterschiedlichen Beschreibungstiefen. 
+             <v-btn density="compact" size="small" variant=tonal icon="mdi-plus" @click="toggleDiv"></v-btn></p>
+
+            <div class="more" v-show="isVisible">
+            Die Heterogenität der Formate spiegelt ebenso die
             wissenschaftshistorische Entwicklung des korpuslinguistischen Paradigmas
             (<a href="https://www.ids-mannheim.de/digspra/kl/projekte/methoden/">Korpusanalyse
               und- erschließung</a>) und seiner onlinelexikografischen Umsetzungen am
@@ -49,15 +49,12 @@
               href="https://www.ids-mannheim.de/lexik/elexiko">elexiko</a>) über
             Pilotstudien (<a href="http://wvonline.ids-mannheim.de/home.htm">WV
               online</a>) und Aufbereitung in großen Online-Wörterbüchern in den
-            Nuller- und Zehnerjahren <a href="https://www.owid.de/">OWID</a>(<a
-              href="https://www.owid.de/wb/progdb/start.html">Verlaufsformen</a>; <a
-              href="https://www.owid.de/wb/sprw/start.html">Sprichwörterbuch</a>) bis
-            hin zu Datenbanken (<a href="https://www.owid.de/plus/komux/">KoMuX</a>;
-            MAP; <a href="https://www.owid.de/plus/redeeinleiter/">Redeeinleiter</a>);
-            neuartigen Präsentationsformaten (<a
-              href="http://uwv.ids-mannheim.de/prepcon/prepcon_online.html">PREPCON<sup>online</sup></a>)
-            und Inventaren (PhK; <a href="http://uwv.ids-mannheim.de/spruchlist/">SpruchList</a>) in der
-            Gegenwart.</p>
+            Nuller- und Zehnerjahren in <a href="https://www.owid.de/">OWID</a> (<resources-list-compact :filter="['Verlaufsformen', 'SPRW']"></resources-list-compact>) bis
+            hin zu Datenbanken (<resources-list-compact :filter="['KoMuX', 'MAP', 'Redeeinleiter']"></resources-list-compact>);
+            neuartigen Präsentationsformaten (<resources-list-compact :filter="['PREPCON']"></resources-list-compact>)
+            und Inventaren (<resources-list-compact :filter="['Spruchlist', 'PhrasKomp']"></resources-list-compact>) in der
+            Gegenwart.</div>
+
           <p>Eine Besonderheit des <span class="smallcaps">Syntagmatikons</span>
             stellen erklärende Texte mit unterschiedlichen Informationstiefen dar,
             die als Leitfaden eine Navigationsfunktion für das gesamte Portal
@@ -66,7 +63,10 @@
             „andocken“ und die Angebote für ihre Zwecke nutzen und weiterverarbeiten
             können, z. B. im Bereich Deutsch als Fremdsprache. Es geht dabei
             erklärtermaßen nicht um Didaktisierung im strengen Sinne, sondern um
-            allgemeinverständliche Erklärungen.</p>
+            allgemeinverständliche Erklärungen.
+           </p>
+            
+           
         </div>
       </v-col>
     </v-row>
@@ -79,6 +79,7 @@ export default {
   theme: { dark: false },
   data() {
     return {
+      isVisible: false, // initial state of the div (visible)
     }
   },
 
@@ -86,9 +87,9 @@ export default {
   },
 
   methods: {
-    test() {
-      alert("test");
-    }
+    toggleDiv() {
+        this.isVisible = !this.isVisible; // toggle visibility
+      },
   }
 }
 </script>

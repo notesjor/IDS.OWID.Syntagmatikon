@@ -10,9 +10,9 @@ definePageMeta({
       <v-col>
         <div>
           <h1>
-            <div style="width: 20px; float:left; margin-right:10px">
+            <!-- <div style="width: 10px; float:left; margin-right:10px">
             <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb" degree="180">                
-            </gradient></div>
+            </gradient></div> -->
             Ressourcentypen
           </h1>
         </div>
@@ -51,7 +51,7 @@ definePageMeta({
         <v-card style="width:350px; margin:10px"  variant="flat">
          
           <v-card-title>
-            <div style="width: 20px; float:left; margin-right:10px">
+            <div style="width: 10px; float:left; margin-right:10px">
             <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb"  degree="180">                
             </gradient></div>
             Explorative Datenbanken</v-card-title>
@@ -70,7 +70,7 @@ definePageMeta({
       <NuxtLink to="/resources/db_desc">
         <v-card style="width:350px; margin:10px" variant="flat" hover>
           <v-card-title>
-            <div style="width: 20px; float:left; margin-right:10px">
+            <div style="width: 10px; float:left; margin-right:10px">
             <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb" degree="180">                
             </gradient></div>
             Deskriptive Datenbanken</v-card-title>
@@ -86,7 +86,7 @@ definePageMeta({
         <NuxtLink to="/resources/inventory">
         <v-card style="width:350px; margin:10px" variant="flat" hover>
           <v-card-title>
-            <div style="width: 20px; float:left; margin-right:10px">
+            <div style="width: 10px; float:left; margin-right:10px">
             <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb" degree="180">                
             </gradient></div>
             Inventare und Sammlungen</v-card-title>
@@ -102,7 +102,7 @@ definePageMeta({
       <NuxtLink to="/resources/dictionaries">
         <v-card style="width:350px; margin:10px" variant="flat" hover>
           <v-card-title>
-            <div style="width: 20px; float:left; margin-right:10px">
+            <div style="width: 10px; float:left; margin-right:10px">
             <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb" degree="180">                
             </gradient></div>
             Online-Wörterbücher</v-card-title>
@@ -117,7 +117,7 @@ definePageMeta({
         <NuxtLink to="/resources/prototypes">
         <v-card style="width:350px; margin:10px" variant="flat" hover>
           <v-card-title>
-            <div style="width: 20px; float:left; margin-right:10px">
+            <div style="width: 10px; float:left; margin-right:10px">
             <gradient :style="styleGradient" color1="#ff3661" color2="#3468eb" degree="180">                
             </gradient></div>
            Pilotstudien</v-card-title>
