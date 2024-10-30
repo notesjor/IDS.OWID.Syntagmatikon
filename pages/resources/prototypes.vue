@@ -1,18 +1,23 @@
 <template>
-       <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
+    <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
         <div class="nolink">
-        <NuxtLink to="/resources">
-            Zurück zu "Ressourcentypen"
-        </NuxtLink>
-        </div> 
+            <NuxtLink to="/resources">
+                Zurück zu "Ressourcentypen"
+            </NuxtLink>
+        </div>
     </v-btn>
     <h1>Pilot- und Einzelstudien</h1>
-    <img src="/img/resources/05.png" alt="Pilot- und Einzelstudien" style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
+    <img src="/img/resources/05.png" alt="Pilot- und Einzelstudien"
+        style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
     <div>
-        Korpuszentrierte Präsentationsformate betonen die Analyse manuell systematisierter Korpusdaten. Hierbei
-        werden Gebrauchsmerkmale direkt aus authentischen Sprachdaten erschlossen, um die Sprache realitätsnah zu
-        erforschen. Optionale narrative Kommentare bieten zusätzlichen Kontext, ohne den Fokus von den primären
-        Korpusdaten abzulenken.
+        <p>Bei den Pilotstudien im <hi>Syntagmatikon</hi> handelt es sich um exemplarische Fallstudien zu ausgewählten
+            syntagmatischen Aspekten, bei denen neue datennahe Präsentationsformate entwickelt und ausgetestet wurden.
+            Im Zentrum stehen Kookkurrenzprofile, Lückenfüllertabellen und KWICs.</p>
+        <resources-list-compact :filter="['WVBF']"></resources-list-compact> ist eine netzartige, hierarchische
+        Visualisierung, bei der die Knoten mit Korpusdaten und Kommentaren angereichert werden.
+        In <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> wird ein Vorgehensmodell für die
+        manuelle Aufbereitung von Korpusdaten im Sprachkontrast präsentiert.
+
     </div>
     <resources-list :filter="['PREPCON_kon', 'WVBF']"></resources-list>
 </template>

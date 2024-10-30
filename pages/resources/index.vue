@@ -14,20 +14,9 @@ definePageMeta({
     <v-row>
       <v-col>
         <div>
-          <p>Das <hi>Syntagmatikon</hi> vereint sehr unterschiedliche Ressourcentypen, die
-            im Folgenden kurz charakterisiert werden. Als Kriterien dienten der Grad
-            der Exhaustivität sowie das Verhältnis von automatischer
-            Datenaufbereitung; händischer Bearbeitung und
-            linguistisch-lexikografischer Beschreibung.</p>
-          <p>
-            Die aufgeführten Beispielressourcen sind jeweils die prototypischen Vertreter.
-            Das heißt, dass diese hauptsächlich durch den zuvor
-            beschriebenen Typ charakterisiert sind. Gleichzeitig gibt es zahlreiche
-            Überschneidungen zwischen den Ressourcen: Eine Datenbank kann z.B.
-            gleichzeitig als Inventar verstanden werden wie
-            PREPCON<sup>explorativ</sup> oder KoMuX. Um diese Mehrfachzuordnung
-            sichtbar zu machen, wurden Suchattribute hinzugefügt, die eine
-            automatische Bündelung nach spezifischen Kriterien ermöglichen.</p>
+          <p>Das <hi>Syntagmatikon</hi> vereint sehr unterschiedliche Ressourcentypen. Die Zuordnungen basieren auf Kriterien wie Menge der aufbereiteten Daten, Grad der Vollständigkeit sowie Verhältnis von automatischer Datenaufbereitung; händischer Bearbeitung und linguistisch-lexikografischer Beschreibung.</p>
+          <p>Die aufgeführten Beispielressourcen sind jeweils die prototypischen Vertreter. Gleichzeitig gibt es zahlreiche Überschneidungen zwischen den Ressourcen: Eine Datenbank kann z.B. gleichzeitig als Inventar verstanden werden wie <resources-list-compact :filter="['PREPCON_ex']"></resources-list-compact> oder <resources-list-compact :filter="['KoMuX']"></resources-list-compact>.</p>
+          <p>Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur Charakteristik der einzelnen Ressourcen.</p>
         </div>
       </v-col>
     </v-row>

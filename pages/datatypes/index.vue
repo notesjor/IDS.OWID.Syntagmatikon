@@ -15,14 +15,10 @@ definePageMeta({
       <v-col>
         <div>
           <p>
-            Die Rubrik bündelt die Ressourcen unter dem Gesichtspunkt der Charakteristik ihrer Angaben
-            (Informationstypen). Es wird zwischen rein automatischen und manuell bearbeiteten Daten unterschieden.</p>
-          <p> Die Hintergrundtexte zeigen anhand anschaulicher Beispiele aus den Ressourcen, welche Fragen sich mit den
-            jeweiligen Informationstypen bezüglich sprachlicher Struktur, Bedeutung, Gebrauch, Festigkeit, Varianz sowie
-            Musterhaftigkeit beantworten lassen. Es handelt sich explizit nicht um ein Tutorial etwa zur
-            Korpuslinguistik, sondern um einen Leitfaden zur Interpretation der im Syntagmatikon dargestellten
-            Ergebnisse.
-          </p>
+            Die Rubrik dient dazu, Ressourcen im <hi>Syntagmatikon</hi> entsprechend der Charakteristik ihrer Informationstypen zu bündeln. Bei den primär automatisch-quantitativ erstellten Angaben werden die Korpusdaten selbst zur lexikografischen Einträgen. Die manuell-qualitativ erarbeiteten Informationstypen basieren ebenso auf Korpusanalysen. Hier finden sich unterschiedliche Kombinationen von systematisierten und interpretierten Korpusdaten mit verschiedenen Formen der narrativen Beschreibung.</p>
+<p>Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur Aussagekraft der Informationstypen in den jeweiligen Ressourcen.</p>
+
+         
         </div>
       </v-col>
 
@@ -65,30 +61,34 @@ definePageMeta({
         <div class="container" style="margin-left: -20px;">
 
           <info-box color1="#801b31" color2="#fec037" title="Kategoriale Label" link="/datatypes/category" :filter="['KoMuX', 'PhrasKomp',
-                'PREPCON_kon', 'MAP', 'WVBF', 'Verlaufsformen', 'FesteWV', 'Redeeinleiter']">
+            'PREPCON_kon', 'MAP', 'WVBF', 'Verlaufsformen', 'FesteWV', 'Redeeinleiter']">
             Linguistische Etikettierung von Merkmalen sprachlicher Einheiten
           </info-box>
 
           <info-box color1="#801b31" color2="#fec037" title="Belege" link="/datatypes/matches" :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'PhrasKomp',
-                  'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'Verlaufsformen', 'FesteWV', 'DTWW', 'SPRW']">
+            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'Verlaufsformen', 'FesteWV', 'DTWW', 'SPRW']">
             Manuell ausgewählte KWICs und größere Volltextstellen
           </info-box>
 
-          <info-box color1="#801b31" color2="#fec037" title="Narrative Beschreibungen" link="/datatypes/narration" :filter="['MAP', 'PREPCON_kon', 'SPRW', 'WVBF', 'FesteWV']">
+          <info-box color1="#801b31" color2="#fec037" title="Narrative Beschreibungen" link="/datatypes/narration"
+            :filter="['MAP', 'PREPCON_kon', 'SPRW', 'WVBF', 'FesteWV']">
             Beschreibende Autorentexte, die ein Phänomen erklären
           </info-box>
 
-          <info-box color1="#801b31" color2="#fec037" title="Komponenten" link="/datatypes/elements" :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW', 'FesteWV']">
+          <info-box color1="#801b31" color2="#fec037" title="Komponenten" link="/datatypes/elements"
+            :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW', 'FesteWV']">
             Auszeichnung der einzelnen Komponenten einer Wortverbindung und Verlinkung mit anderen Einträgen.
           </info-box>
 
 
-          <info-box color1="#801b31" color2="#fec037" title="Felder" link="/datatypes/fields" :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW', 'FesteWV', 'MAP']">
+          <info-box color1="#801b31" color2="#fec037" title="Felder" link="/datatypes/fields"
+            :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW', 'FesteWV', 'MAP']">
             Nach inhaltlichen Kriterien manuell zusammengestellte Gruppen von sprachlichen Einheiten mit verwandten
             Gebrauchsmerkmalen
           </info-box>
 
-          <info-box color1="#801b31" color2="#fec037" title="Fremdsprachige Äquivalenz" link="/datatypes/equivalence" :filter="['PREPCON_kon', 'DTWW']">
+          <info-box color1="#801b31" color2="#fec037" title="Fremdsprachige Äquivalenz" link="/datatypes/equivalence"
+            :filter="['PREPCON_kon', 'DTWW']">
             Angabe von Entsprechungen in anderen Sprachen
           </info-box>
 
