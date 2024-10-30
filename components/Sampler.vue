@@ -1,7 +1,7 @@
 <!-- HINWEIS: Dies ist eine Kompoente, mit mehreren Sub-Komponenten: SamplerItem +> SamplerItemText -->
 <template>
   <div class="nolink"
-  style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
+    style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
     <v-row>
       <v-col>
         <div @mouseenter="carouselStop" @mouseleave="carouselStart"
@@ -9,54 +9,50 @@
           <v-tabs-window hide-delimiter-background hide-delimiters continuous v-model="tab" :cycle="cycle"
             class="notransition" interval="10000">
             <v-tabs-window-item v-for="(item, i) in generatePages()" :key="i" eager>
-                <div style="padding:7px 75px 5px 75px;">
-                  <v-row>
-                    <!--Styling für den Beleg-->
-                    <div style="padding:10px 40px 10px 40px; background-color: #fff9eb; margin-top:20px;
+              <div style="padding:20px 75px 0px 75px;">
+                <v-row>
+                  <!--Styling für den Beleg-->
+                  <div style="padding:10px 40px 10px 40px; background-color: #fff9eb; margin-top:20px;
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                     font-family: 'Lucida Console', 'Courier New', monospace;">
 
 
-                    <div v-html="item.html"
-                      style="margin:10px -20px 0px -20px; 
+                    <div v-html="item.html" style="margin:10px -20px 0px -20px; 
                      
                       line-height: 1.5; font-weight: 300;">
                     </div>
                   </div>
-                  </v-row>                  
-                  <div style="width: 100%; margin: 0px 20px 20px 20px;">
-                    <a v-for="r in item.references" :key="r" :href="r.href" target="_blank">
-                      <v-row>&nbsp;</v-row>
-                      <v-row>
-                        <hr style="width: 75%;" />
-                      </v-row>
-                      <v-row>
-                        <div style="font-weight: 200;" v-html="r.source"></div>
-                      </v-row>
-                      <v-row>
-                        <v-icon :style="`color:${r.color}; margin-right: 5px;`" class="animated">mdi-arrow-right-circle-outline</v-icon>
-                        <div :style="`color:${r.color}`">{{ r.article }}</div>
-                      </v-row>
-                      <v-row style="font-weight: 200; font-style: italic;">
-                        <div>{{ r.type }}</div>
-                      </v-row>
-                    </a>
-                  </div>
+                </v-row>
+                <div style="width: 100%; margin: 40px 0px 0px 0px">
+                  <a v-for="r in item.references" :key="r" :href="r.href" target="_blank">
+                    <hr style="width: 75%; margin-left: auto; margin-right: auto;" />
+                    <div style="font-weight: 200;" v-html="r.source"></div>
+                    <div>
+                      <v-icon :style="`color:${r.color}; margin-right: 5px;display:inline-block;margin:-7px 5px 0px 0px`"
+                        class="animated">mdi-arrow-right-circle-outline</v-icon>
+                      <div :style="`color:${r.color};display:inline-block;`">{{ r.article }}</div>
+                    </div>
+                    <div>{{ r.type }}</div>
+                  </a>
                 </div>
-            </v-tabs-window-item>            
+              </div>
+            </v-tabs-window-item>
           </v-tabs-window>
-          <v-btn density="dense" variant="text" @click="tabPrev" icon="mdi-arrow-left-bold-box-outline" class="myBtnPrev"></v-btn>
-          <v-btn density="dense" variant="text" @click="tabNext" icon="mdi-arrow-right-bold-box-outline" class="myBtnNext"></v-btn>
+          <v-btn density="dense" variant="text" @click="tabPrev" icon="mdi-arrow-left-bold-box-outline"
+            class="myBtnPrev"></v-btn>
+          <v-btn density="dense" variant="text" @click="tabNext" icon="mdi-arrow-right-bold-box-outline"
+            class="myBtnNext"></v-btn>
         </div>
       </v-col>
     </v-row>
-    
+
     <v-row style="margin-top:0px">
-    <v-col>
+      <v-col>
         <!-- <p class="text-xl">Interaktive Beispiele</p> -->
         <div class="caption">
-          Interaktive Beispiele. Sind mehrere Beispiele in einem Beleg, können diese durch Anklicken einzeln ausgewählt werden.
-        </div>        
+          Interaktive Beispiele. Sind mehrere Beispiele in einem Beleg, können diese durch Anklicken einzeln ausgewählt
+          werden.
+        </div>
       </v-col>
     </v-row>
   </div>
@@ -137,12 +133,12 @@ export default {
     carouselStart() {
       this.cycle = true;
     },
-    tabPrev(){
-      if (this.tab > 0) 
+    tabPrev() {
+      if (this.tab > 0)
         this.tab = this.tab - 1;
     },
-    tabNext(){
-      if (this.tab < this.$props.items.length - 1) 
+    tabNext() {
+      if (this.tab < this.$props.items.length - 1)
         this.tab = this.tab + 1;
     }
   },
@@ -161,7 +157,7 @@ export default {
   },
 }
 </script>
-  
+
 <style scoped>
 .imgback {
   background: url('logo_syntagmatikon_knoten.jpg');
@@ -182,9 +178,11 @@ export default {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.1;
   }
+
   100% {
     opacity: 1;
   }
@@ -194,7 +192,7 @@ export default {
   animation: pulsate 10s infinite;
 }
 
-.v-window__controls > button {
+.v-window__controls>button {
   position: relative;
   top: -55px;
 }
@@ -202,15 +200,13 @@ export default {
 .myBtnPrev {
   color: darkgrey;
   position: relative;
-  top: 30%;
+  top: -10rem;
 }
 
 .myBtnNext {
-  margin-right:-15px;
   color: darkgrey;
   position: relative;
-  top: 50%;
+  top: -10rem;
+  left: 35rem;
 }
-
 </style>
-

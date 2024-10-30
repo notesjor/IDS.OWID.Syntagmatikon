@@ -11,7 +11,7 @@
                         <slot></slot>
                     </v-row>
                     <v-row style="border-bottom: 1px lightgray solid; margin:1.0rem -10px 0px -10px; font-weight: 400; color:#666" v-if="filter != null">
-                        Verfügbare Ressourcen:
+                        Verfügbar in:
                     </v-row>
                     <v-row style="margin-top: 0rem; color:#666" v-if="filter != null">
                         <resources-list-compact :filter="filter" :showDesc="false" />

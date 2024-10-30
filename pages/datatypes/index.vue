@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div style="max-width: 86ch; margin:auto">
+  <div style="max-width: 72ch; margin:auto">
     <v-row>
       <v-col>
         <headline :h="1" color1="#ff3661" color2="#fec037">Informationstypen</headline>

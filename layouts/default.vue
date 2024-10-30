@@ -109,12 +109,12 @@
 
     <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
       <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
-        <div style="max-width: 80ch;">
+        <div style="max-width: 72ch;">
           <slot />
         </div>
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
-        <div style="max-width: 80ch;">
+        <div style="max-width: 72ch;">
           <slot />
         </div>
       </div>
