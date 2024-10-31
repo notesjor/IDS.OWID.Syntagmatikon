@@ -203,6 +203,12 @@
   --FS-BODYTEXT: 18px;
   --FF-BODYTEXT: "Libertinus";
   --FF-DISPLAY: "Fira Sans";
+
+  --CC-BASE: #0dcaf2;
+  --CC-RES: #0df279;
+  --CC-INF: #f25e0d;
+  --CC-POS: #f20daf;
+  --CC-PAT: #3313f2;
 }
 
 html {

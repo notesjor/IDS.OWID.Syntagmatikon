@@ -3,7 +3,7 @@
         <NuxtLink :to="link">
             <v-card style="width:350px; margin:0.75rem" variant="flat" hover>
                 <v-card-title>
-                    <gradient :color1="color1" :color2="color2" style="margin: 0px 5px 0px -13px;"/>
+                    <gradient :color1="color1" style="margin: 0px 5px 0px -13px;"/>
                     <span style="font-weight: 300; font-size: 1.25rem;" v-html="title"/>
                 </v-card-title>
                 <v-card-text>
