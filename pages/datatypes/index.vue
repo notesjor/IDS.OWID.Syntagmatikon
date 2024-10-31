@@ -8,7 +8,7 @@ definePageMeta({
   <div style="max-width: 80ch; margin:auto">
     <v-row>
       <v-col>
-        <headline :h="1" color1="#ff3661" color2="#fec037">Informationstypen</headline>
+        <h1>Informationstypen</h1>
       </v-col>
     </v-row>
     <v-row>
@@ -36,25 +36,25 @@ definePageMeta({
         <div class="container">
 
           <info-box title="Frequenzen" link="/datatypes/frequency" :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'KoMuX', 'PhrasKomp',
-            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']" color1="#ff3661" color2="#fec037">
+            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']" color1="#ff3661">
             Häufigkeit des Vorkommens eines sprachlichen Ausdrucks im Korpus, ermittelt mithilfe von Zählungen
             und/oder Suchanfragen (queries)
           </info-box>
 
           <info-box title="KWICs <span style='font-size:0.8em'>(KeyWord In Context)</span>" link="/datatypes/kwic"
             :filter="['WVBF', 'SpruchList',
-              'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']" color1="#ff3661" color2="#fec037">
+              'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']" color1="#ff3661"">
             Zeilen (Konkordanzen), in denen das Suchobjekt vorkommt (Textschnipsel)
           </info-box>
 
           <info-box title="Kookkurrenzprofile" link="/datatypes/cooccurrence" :filter="['WVBF',
-            'PREPCON_temp', 'PREPCON_kon']" color1="#ff3661" color2="#fec037">
+            'PREPCON_temp', 'PREPCON_kon']" color1="#ff3661">
             Durch statistische Berechnungen (sog. Kookkurrenzanalysen) ermittelte Partnerwort-Profile
             (überproportional häufiges Miteinandervorkommen von Wörtern und Wortgruppen)
           </info-box>
 
           <info-box title="Lückenfüllertabellen" link="/datatypes/patterntable" :filter="['WVBF',
-            'PREPCON_temp', 'PREPCON_kon']" color1="#ff3661" color2="#fec037">
+            'PREPCON_temp', 'PREPCON_kon']" color1="#ff3661">
             Durch automatische Auswertung ermittelte Füllerhäufigkeiten innerhalb eines Musterslots
           </info-box>
 
@@ -64,31 +64,31 @@ definePageMeta({
 
         <div class="container">
 
-          <info-box color1="#801b31" color2="#fec037" title="Kategoriale Label" link="/datatypes/category" :filter="['KoMuX', 'PhrasKomp',
+          <info-box color1="#ff3661" title="Kategoriale Label" link="/datatypes/category" :filter="['KoMuX', 'PhrasKomp',
                 'PREPCON_kon', 'MAP', 'WVBF', 'Verlaufsformen', 'FesteWV', 'Redeeinleiter']">
             Linguistische Etikettierung von Merkmalen sprachlicher Einheiten
           </info-box>
 
-          <info-box color1="#801b31" color2="#fec037" title="Belege" link="/datatypes/matches" :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'PhrasKomp',
+          <info-box color1="#ff3661" title="Belege" link="/datatypes/matches" :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'PhrasKomp',
                   'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'Verlaufsformen', 'FesteWV', 'DTWW', 'SPRW']">
             Manuell ausgewählte KWICs und größere Volltextstellen
           </info-box>
 
-          <info-box color1="#801b31" color2="#fec037" title="Narrative Beschreibungen" link="/datatypes/narration" :filter="['MAP', 'PREPCON_kon', 'SPRW', 'WVBF', 'FesteWV']">
+          <info-box color1="#ff3661" title="Narrative Beschreibungen" link="/datatypes/narration" :filter="['MAP', 'PREPCON_kon', 'SPRW', 'WVBF', 'FesteWV']">
             Beschreibende Autorentexte, die ein Phänomen erklären
           </info-box>
 
-          <info-box color1="#801b31" color2="#fec037" title="Komponenten" link="/datatypes/elements" :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW', 'FesteWV']">
+          <info-box color1="#ff3661" title="Komponenten" link="/datatypes/elements" :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW', 'FesteWV']">
             Auszeichnung der einzelnen Komponenten einer Wortverbindung und Verlinkung mit anderen Einträgen.
           </info-box>
 
 
-          <info-box color1="#801b31" color2="#fec037" title="Felder" link="/datatypes/fields" :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW', 'FesteWV', 'MAP']">
+          <info-box color1="#ff3661" title="Felder" link="/datatypes/fields" :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW', 'FesteWV', 'MAP']">
             Nach inhaltlichen Kriterien manuell zusammengestellte Gruppen von sprachlichen Einheiten mit verwandten
             Gebrauchsmerkmalen
           </info-box>
 
-          <info-box color1="#801b31" color2="#fec037" title="Fremdsprachige Äquivalenz" link="/datatypes/equivalence" :filter="['PREPCON_kon', 'DTWW']">
+          <info-box color1="#ff3661" title="Fremdsprachige Äquivalenz" link="/datatypes/equivalence" :filter="['PREPCON_kon', 'DTWW']">
             Angabe von Entsprechungen in anderen Sprachen
           </info-box>
 

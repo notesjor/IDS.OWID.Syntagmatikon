@@ -9,7 +9,7 @@ definePageMeta({
     <v-row>
       <v-col>
         <div>
-          <headline :h="1" color1="#fec037" color2="#12cb4b">Wort- und Ausdrucksarten</headline>
+          <h1>Wort- und Ausdrucksarten</h1>
         </div>
       </v-col>
     </v-row>
@@ -41,27 +41,27 @@ definePageMeta({
       <v-col cols="12">
         <div style="max-width: 100ch;">
         <div class="container">
-          <info-box title="Nomina" color1="#fec037" color2="#12cb4b" link="pos/nouns" :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'WVBF',
+          <info-box title="Nomina" color1="#fec037" link="pos/nouns" :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'WVBF',
             'PhrasKomp', 'DTWW', 'Redeeinleiter']">
           </info-box>
 
-          <info-box title="Verben" color1="#fec037" color2="#12cb4b" link="pos/verbs"
+          <info-box title="Verben" color1="#fec037" link="pos/verbs"
             :filter="['MAP', 'Verlaufsformen', 'Redeeinleiter', 'KoMuX']">
           </info-box>
 
-          <info-box title="Präpositionen" color1="#fec037" color2="#12cb4b" link="pos/prepositions"
+          <info-box title="Präpositionen" color1="#fec037" link="pos/prepositions"
             :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'MAP', 'Verlaufsformen', 'WVBF', 'KoMuX']">
           </info-box>
 
-          <info-box title="Adjektive" color1="#fec037" color2="#12cb4b" link="pos/adjectives"
+          <info-box title="Adjektive" color1="#fec037" link="pos/adjectives"
             :filter="['FesteWV', 'KoMuX']">
           </info-box>
 
-          <info-boxt title="Phraseme" color1="#fec037" color2="#12cb4b" link="pos/phrasemes"
+          <info-boxt title="Phraseme" color1="#fec037" link="pos/phrasemes"
             :filter="['PhrasKomp', 'MAP', 'Redeeinleiter', 'DTWW', 'WVBF', 'FesteWV']">
           </info-boxt>
 
-          <info-box title="Feste Sätze" color1="#fec037" color2="#12cb4b" link="pos/sentences"
+          <info-box title="Feste Sätze" color1="#fec037" link="pos/sentences"
             :filter="['SpruchList', 'PhrasKomp', 'SPRW']">
           </info-box>
 

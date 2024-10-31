@@ -21,88 +21,7 @@
       </div>
     </div>
 
-    <v-navigation-drawer :permanent="!useMobileView" :rail="useMobileView" style="z-index:1; transform: none; font-family: var(--FF-BODYTEXT);"
-      expand-on-hover>
-      <!-- LOGO START -->
-      <div class="text-xl" style="margin: 20px 0px 5px 30px; opacity: 1" v-show="!useMobileView">
-        <div style="margin-left: 50px; margin-bottom: 40px;">
-          {{ appName }}
-        </div>
-      </div>
-      <!-- LOGO END -->
-
-      <!-- HOME START -->
-      <v-list density="compact" nav :style="menuStyleMobileFix" style="font-family: var(--FF-DISPLAY);">
-        <v-list-subheader>Übersicht</v-list-subheader>
-        <router-link to="/">
-          <v-list-item prepend-icon="mdi-home" title="Startseite"></v-list-item>
-        </router-link>
-        <router-link to="/project-description">
-          <v-list-item prepend-icon="mdi-information" title="Was ist das Syntagmatikon?"></v-list-item>
-        </router-link>
-        <router-link to="/corpora">
-          <v-list-item prepend-icon="mdi-book-open" title="Korpora"></v-list-item>
-        </router-link>
-        <router-link to="/discovery">
-          <v-list-item prepend-icon="mdi-web" title="Ressourcenüberblick"></v-list-item>
-        </router-link>
-      </v-list>
-      <!-- HOME END -->
-
-
-      <v-divider></v-divider>
-
-      <!-- ADDITIONAL INFORMATION START -->
-      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY); margin-top:0.7rem">
-        <v-list-subheader>Suche</v-list-subheader>
-        <router-link to="/search">
-          <v-list-item prepend-icon="mdi-magnify" title="nach Einträgen"></v-list-item>
-        </router-link>
-      </v-list>
-      <!-- ADDITIONAL INFORMATION END -->
-
-      <v-divider></v-divider>
-
-      <!-- ADDITIONAL INFORMATION START -->
-      <!-- altes icon: mdi-book-open-variant-->
-      <v-list density="compact" nav >
-        <v-list-subheader>Ressourcenkompass</v-list-subheader>
-        <router-link to="/resources" class="sim_listItem">
-          <gradient style="margin:0px 10px 0px 5px; display: inline-block;" color1="#3468eb" color2="#ff3661"/>
-          <span class="compass">Ressourcentypen</span>
-        </router-link>
-        <router-link to="/datatypes" class="sim_listItem">
-          <gradient style="margin:0px 10px 0px 5px; display: inline-block;" color1="#ff3661" color2="#fec037"/>
-          <span class="compass">Informationstypen</span>
-        </router-link>
-        <router-link to="/pos" class="sim_listItem">
-          <gradient style="margin:0px 10px 0px 5px; display: inline-block;" color1="#fec037" color2="#12cb4b"/>
-          <span class="compass">Wort- und Ausdrucksarten</span>
-        </router-link>
-        <router-link to="/patterns" class="sim_listItem">
-          <gradient style="margin:0px 10px 0px 5px; display: inline-block;" color1="#12cb4b" color2="#3468eb"/>
-          <span class="compass">Musterzugänge</span>
-        </router-link>
-        <router-link to="/examples">
-          <v-list-item prepend-icon="mdi-lightbulb-on" title="Fallbeispiele"></v-list-item>
-        </router-link>
-      </v-list>
-      <!-- ADDITIONAL INFORMATION END -->
-
-
-
-      <v-divider></v-divider>
-
-      <!-- GENERAL INFORMATION START -->
-      <v-list density="compact" nav style="font-family: var(--FF-DISPLAY); margin-top:0.7rem">
-        <v-list-subheader>Hintergrund</v-list-subheader>
-        <router-link to="/team">
-          <v-list-item prepend-icon="mdi-account-group" title="Beteiligte Projekte"></v-list-item>
-        </router-link>
-      </v-list>
-      <!-- GENERAL INFORMATION END -->
-
-    </v-navigation-drawer>
+    <main-menu :useMobileView="useMobileView" />
 
     <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
       <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
@@ -164,16 +83,6 @@
 .v-list-subheader {
   margin: -15px 0px 0px 45px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-}
-.compass {
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 0.8125rem;
-  display: inline-block;
-}
-.sim_listItem {
-  display: block;
-  margin-left: 3px;
 }
 </style>
 
@@ -250,24 +159,12 @@ export default {
     window.addEventListener('resize', this.windowResize);
   },
 
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll);
-  },
-
   methods: {
     windowResize() {
       this.useMobileView = this.$vuetify.display.width < 960;
     }
   },
 
-  computed: {
-    menuStyleMobileFix() {
-      if (this.useMobileView) {
-        return "margin-top: 75px;"
-      } else {
-        return ""
-      }
-    }
-  },
+  
 }
 </script>
