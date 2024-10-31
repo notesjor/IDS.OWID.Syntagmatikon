@@ -52,7 +52,7 @@
 
 
           <div style="text-align: center; width:100%">
-            <img src="/img/datatypes/frequency/frequencies_all_white.png" style="text-align: center;" />
+            <img src="/img/datatypes/frequency/frequencies_all.png" style="text-align: center;" />
           </div>
 
         </compare-item>

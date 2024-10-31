@@ -40,7 +40,7 @@
           <!-- NOTE: Bitte das Bild manuell erstellen - Größe: 720x480 Pixel - 300dpi -->
 
           <div style="text-align: center; width:100%">
-            <img src="/img/datatypes/fields/fields_all_white.svg" style="text-align: center;" />
+            <img src="/img/datatypes/fields/fields_all.png" style="text-align: center;" />
           </div>
         
         </compare-item>
