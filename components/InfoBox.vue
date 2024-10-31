@@ -37,10 +37,6 @@ export default {
             type: String,
             default: '#000'
         },
-        color2: {
-            type: String,
-            default: '#000'
-        },
         title: {
             type: String,
             default: 'TITLE'

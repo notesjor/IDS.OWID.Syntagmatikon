@@ -30,7 +30,6 @@ export default {
     },
     methods: {
         mouseEnter() {
-            console.log("mouseEnter");
             this.focused = true;
         },
         mouseLeave() {
