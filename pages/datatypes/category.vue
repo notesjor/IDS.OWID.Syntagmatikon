@@ -12,7 +12,6 @@
         qualitativer Interpretation basierend auf spezifischen Modellen. Sie können bereits in den Korpora im
         Hintergrund vorhanden sein (automatisch annotierte Daten) oder im Nachhinein händisch hinzugefügt werden.</p>
 
-    <p>Im <hi>Syntagmatikon</hi> werden Ausdrücke und Syntagmen bezüglich Wortarten, grammatischen Merkmalen,
-        semantischen und thematischen Konzepten, pragmatischen Eigenschaften und Relationen untereinander gelabelt.</p>
+    <p>Im <hi>Syntagmatikon</hi> werden Ausdrücke und Syntagmen bezüglich Wortarten, grammatischer Merkmale, semantischer und thematischer Konzepte, pragmatischer Eigenschaften und Relationen untereinander gelabelt.</p>
 
 </template>
