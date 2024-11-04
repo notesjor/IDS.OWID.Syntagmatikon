@@ -65,7 +65,7 @@ export default {
   data() {
     return {
       highlight: null,
-      color1: "#3313f2"
+      color1: "#F25A40"
     };
   },
   mounted() {

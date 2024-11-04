@@ -64,6 +64,6 @@ export default {
 
 .sim_listItem {
     display: block;
-    margin-left: 3px;
+    margin: 0px 0px 7.5px 0px;
 }
 </style>

@@ -184,10 +184,10 @@ definePageMeta({
                 <!-- <search-box title="Zugänge" rkey="search_display" color1="#c79b31" color2="#a0ac67"></search-box>
                 <search-box title="Ressourcentypen (Zugang)" rkey="search_subtype" color1="#a0ac67"
                   color2="#6fc2ab"></search-box> -->
-                <search-box title="Ressourcentypen" rkey="search_type" color1="#0df279"></search-box>
-                <search-box title="Informationstypen" rkey="search_functions" color1="#f25e0d"></search-box>
-                <search-box title="Wort- und Ausdrucksarten" rkey="search_parts" color1="#f20daf"></search-box>
-                <search-box title="Musterzugänge" rkey="search_patterns" color1="#3313f2"></search-box>
+                <search-box title="Ressourcentypen" rkey="search_type" color1="#F24162"></search-box>
+                <search-box title="Informationstypen" rkey="search_functions" color1="#58F380"></search-box>
+                <search-box title="Wort- und Ausdrucksarten" rkey="search_parts" color1="#A24CC2"></search-box>
+                <search-box title="Musterzugänge" rkey="search_patterns" color1="#F25A40"></search-box>
               </v-expansion-panels>
             </v-expansion-panel-text>
           </v-expansion-panel>

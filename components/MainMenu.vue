@@ -12,17 +12,17 @@
         <!-- HOME START -->
         <v-list density="compact" nav :style="menuStyleMobileFix" style="font-family: var(--FF-DISPLAY);">
             <v-list-subheader>Übersicht</v-list-subheader>
-            <main-menu-item :useMobileView="useMobileView" color2="#0dcaf2" icon="mdi-home" to="/">
+            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-home" to="/">
                 Startseite
             </main-menu-item>
-            <main-menu-item :useMobileView="useMobileView" color2="#0dcaf2" icon="mdi-information"
+            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-information"
                 to="/project-description">
                 Was ist das Syntagmatikon?
             </main-menu-item>
-            <main-menu-item :useMobileView="useMobileView" color2="#0dcaf2" icon="mdi-book-open" to="/corpora">
+            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-book-open" to="/corpora">
                 Korpora
             </main-menu-item>
-            <main-menu-item :useMobileView="useMobileView" color2="#0dcaf2" icon="mdi-web" to="/discovery">
+            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-web" to="/discovery">
                 Ressourcenüberblick
             </main-menu-item>
         </v-list>
@@ -34,7 +34,7 @@
         <!-- ADDITIONAL INFORMATION START -->
         <v-list density="compact" nav style="font-family: var(--FF-DISPLAY); margin-top:0.7rem">
             <v-list-subheader>Suche</v-list-subheader>
-            <main-menu-item :useMobileView="useMobileView" color2="#0dcaf2" icon="mdi-magnify" to="/search">
+            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-magnify" to="/search">
                 Suche
             </main-menu-item>
         </v-list>
@@ -46,20 +46,20 @@
         <!-- altes icon: mdi-book-open-variant-->
         <v-list density="compact" nav>
             <v-list-subheader>Ressourcenkompass</v-list-subheader>
-            <main-menu-item :useMobileView="useMobileView" color2="#0df279" icon="mdi-compass" to="/resources">
+            <main-menu-item :useMobileView="useMobileView" color2="#F24162" icon="mdi-compass" to="/resources">
                 Ressourcentypen
             </main-menu-item>
-            <main-menu-item :useMobileView="useMobileView" color2="#f25e0d" icon="mdi-compass" to="/datatypes">
+            <main-menu-item :useMobileView="useMobileView" color2="#58F380" icon="mdi-compass" to="/datatypes">
                 Informationstypen
             </main-menu-item>
-            <main-menu-item :useMobileView="useMobileView" color2="#f20daf" icon="mdi-compass" to="/pos">
+            <main-menu-item :useMobileView="useMobileView" color2="#A24CC2" icon="mdi-compass" to="/pos">
                 Wort- und Ausdrucksarten
             </main-menu-item>
-            <main-menu-item :useMobileView="useMobileView" color2="#3313f2" icon="mdi-compass" to="/patterns">
+            <main-menu-item :useMobileView="useMobileView" color2="#F25A40" icon="mdi-compass" to="/patterns">
                 Musterzugänge
             </main-menu-item>
 
-            <main-menu-item :useMobileView="useMobileView" color2="#0dcaf2" icon="mdi-lightbulb-on" to="/examples">
+            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-lightbulb-on" to="/examples">
                 Fallbeispiele
             </main-menu-item>
         </v-list>
@@ -70,7 +70,7 @@
         <!-- GENERAL INFORMATION START -->
         <v-list density="compact" nav style="font-family: var(--FF-DISPLAY); margin-top:0.7rem">
             <v-list-subheader>Hintergrund</v-list-subheader>
-            <main-menu-item :useMobileView="useMobileView" color2="#0dcaf2" icon="mdi-account-group" to="/team">
+            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-account-group" to="/team">
                 Beteiligte Projekte
             </main-menu-item>
         </v-list>

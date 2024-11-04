@@ -7,8 +7,7 @@
 @font-face {
   font-family: 'Libertinus';
   font-style: normal;
-  font-weight: 200;
-  font-size: 20px;
+  font-weight: 400;
   src: local(""), url("/fonts/libertinus/LibertinusSerifRegular.woff2") format("woff2");
 }
 
@@ -203,18 +202,19 @@
   --FS-BODYTEXT: 18px;
   --FF-BODYTEXT: "Libertinus";
   --FF-DISPLAY: "Fira Sans";
+  --FF-TERMS: "Fira Sans";
 
-  --CC-BASE: #0dcaf2;
-  --CC-RES: #0df279;
-  --CC-INF: #f25e0d;
-  --CC-POS: #f20daf;
-  --CC-PAT: #3313f2;
+  --CC-BASE: #2962FF;
+  --CC-RES: #F24162;
+  --CC-INF: #58F380;
+  --CC-POS: #A24CC2;
+  --CC-PAT: #F25A40;
 }
 
 html {
   scroll-behavior: smooth;
   font-size: var(--FS-BODYTEXT);
-  font-weight: 300;
+  font-family: var(--FF-BODYTEXT);
 }
 
 h1 {
@@ -240,10 +240,11 @@ h3 {
 
 div.main {
   font-family: var(--FF-BODYTEXT);
+  font-weight: 600;
 }
 
 div.main a {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 div.main a::before {
