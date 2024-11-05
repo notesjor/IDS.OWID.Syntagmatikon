@@ -7,12 +7,6 @@
         </div> 
     </v-btn>
     <h1>Nomina</h1>
-    <p>In den folgenden Ressourcen sind Nomina Stichwörter und/oder zentrale Einheiten:</p>
-    <p>
-    <resources-list-compact :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'WVBF', 'PhrasKomp', 'Redeeinleiter', 'WVBF','DTWW']"></resources-list-compact>
-    </p>
-
-
     <div>
     <compare title="">
 

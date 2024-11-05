@@ -7,11 +7,7 @@
         </div> 
     </v-btn>
     <h1>Feste Sätze</h1>
-    <p>In den folgenden Ressourcen sind feste Sätze Stichwörter und/oder zentrale Einheiten:</p>
-    <p>
-    <resources-list-compact :filter="['SpruchList', 'PhrasKomp', 'SPRW']"></resources-list-compact>
-  </p>
-    
+   
     <div>
     <compare title="">
 
