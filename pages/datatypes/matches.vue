@@ -158,7 +158,15 @@
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact>  ist in der Spalte „Beleg“ je Redeeinleiter jeweils ein Beleg pro Attributekombination hinterlegt. Der Beleg besteht aus dem Satz, der den Redeeinleiter enthält, sowie, wenn vorhanden, den vorangehenden und nachfolgenden Satz. Auf den Beleg-Satz folgt darunter eine Angabe zur Attributkombination des jeweiligen Redeeinleiters. Hierunter findet sich ein anklickbarer Link zu der Datei aus dem Redewiedergabe-Korpus, aus dem der Beleg entnommen ist. 
+                        In <resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact> ist in der
+                        Spalte „Beleg“ je
+                        Redeeinleiter jeweils ein Beleg pro Attributekombination hinterlegt. Der Beleg besteht aus dem
+                        Satz, der den
+                        Redeeinleiter enthält, sowie, wenn vorhanden, den vorangehenden und nachfolgenden Satz. Auf den
+                        Beleg-Satz folgt
+                        darunter eine Angabe zur Attributkombination des jeweiligen Redeeinleiters. Hierunter findet
+                        sich ein
+                        anklickbarer Link zu der Datei aus dem Redewiedergabe-Korpus, aus dem der Beleg entnommen ist.
                     </p>
 
                     <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->

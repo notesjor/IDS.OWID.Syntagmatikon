@@ -181,7 +181,7 @@
               <img src="/img/datatypes/kwics/prepcon_kon_quantPartner.png" alt="" />
             </div>
             <div class="caption">
-              Ausschnitt aus KWIC-Anzeige des Kookkurrenz-Clusters mit Genugtuung – erfüllt im Artikel „mit Genugtuung“ (Rubrik „Quantitative Angaben“: ‚Typische Partnerwörter‘) (KWIC-Export nur für deutsche Daten möglich)  
+              Ausschnitt aus KWIC-Anzeige des Kookkurrenz-Clusters <em>mit Genugtuung – erfüllt</em> im Artikel „mit Genugtuung“ (Rubrik „Quantitative Angaben“: ‚Typische Partnerwörter‘) (KWIC-Export nur für deutsche Daten möglich)  
             </div>
 
             <div class="exampleImg">
