@@ -41,7 +41,7 @@
                     <!-- NOTE: Bitte das Bild manuell erstellen - Größe: 720x480 Pixel - 300dpi -->
 
                     <div style="text-align: center; width:100%">
-                        <img src="/dummy/infobox_dummy.png" style="text-align: center;" /> 
+                        <img src="/img/datatypes/cooccurrence/cooccurrence_all.png" style="text-align: center;" /> 
                     </div>
 
                 </compare-item>

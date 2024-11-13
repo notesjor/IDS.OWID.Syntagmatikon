@@ -50,9 +50,9 @@ definePageMeta({
             :filter="['FesteWV', 'KoMuX']">
           </info-box>
 
-          <info-boxt title="Phraseme" color1="#fec037" color2="#12cb4b" link="pos/phrasemes"
+          <info-box title="Phraseme" color1="#fec037" color2="#12cb4b" link="pos/phrasemes"
             :filter="['PhrasKomp', 'MAP', 'Redeeinleiter', 'DTWW', 'WVBF', 'FesteWV']">
-          </info-boxt>
+          </info-box>
 
           <info-box title="Feste Sätze" color1="#fec037" color2="#12cb4b" link="pos/sentences"
             :filter="['SpruchList', 'PhrasKomp', 'SPRW']">

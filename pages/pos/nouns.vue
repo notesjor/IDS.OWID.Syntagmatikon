@@ -147,7 +147,7 @@
 
         <compare-item value="6" rkey="Redeeinleiter">
           <p>
-            In <resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact> sind Nomina ein Teil des Inventars von Redeeinleitern.
+            In <resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact> kann man alle Nomen aus dem Redewiedergabe-Korpus abrufen, die als Rede- oder Gedankeneinleiter genutzt werden.
           </p>
          
           <template #explain>   

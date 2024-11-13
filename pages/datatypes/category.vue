@@ -124,13 +124,18 @@
                 <compare-item value="4" rkey="Redeeinleiter" webpage="">
 
                     <p>
-                        [zu ergänzen]
+                        In <resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact> ist, basierend auf den manuellen Annotationen des Redewiedergabe-Korpus, für jeden Redeeinleiter angegeben, ob dieser eine Rede- oder Gedankenwiedergabe einleitet sowie mit welchem Wiedergabetyp (direkt / indirekt), in welcher Position im Syntagma (initial, medial, final) und in welcher Textsorte (fiktional / nicht-fiktional) der Redeeinleiter belegt ist.  
                     </p>
 
                     <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
 
                     <template #explain>
-
+                        <div class="exampleImg">
+                         <img src="/img/datatypes/categories/rede_freq.png" width="70%" alt="" />
+            </div>
+            <div class="caption">
+                Die Attribute der Belege, in denen der Redeeinleiter „sagen“ belegt ist. 
+            </div>
                     </template>
 
                 </compare-item>

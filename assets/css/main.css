@@ -251,8 +251,8 @@ div.relink a::before {
 
 div.caption {
   font-size: 0.8em;
-  color: grey;
-  margin-bottom: 10px;
+  color:  #666666 ;
+  margin-bottom: 20px;
   display: block;
 }
 
@@ -269,6 +269,11 @@ div.exampleImg {
   width: 100%;
   border-width: 2px;
   padding: 2px;
+}
+
+div.exampleHeadline {
+  margin-bottom:10px;
+  font-weight: bold;
 }
 
 div.exampleImg img{

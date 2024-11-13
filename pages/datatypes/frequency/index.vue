@@ -285,23 +285,16 @@
           webpage="/img/datatypes/frequency/rede_fullscreen_annotated.png">
 
           <p>
-            In der Ressource <resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact> gibt es
-            hinter jedem
-            Eintrag eine Frequenzangabe, die aussagt, wie häufig dieser Redeeinleiter insgesamt im zugrunde liegenden
-            Korpus
-            auftritt. Zusätzlich wird in der rechten Spalte angegeben, wie häufig bestimmte Merkmalen in dieser Gruppe
-            auftreten
-            (z.B. Verwendung zur Einleitung direkter vs. indirekter Rede).
+            In <resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact> ist in der Spalte „Redeeinleiter“ in Klammern nachfolgend auf den jeweiligen Rede-einleiter hinterlegt, wie häufig dieser im Redewiedergabe-Korpus belegt ist. In der Spalte „Attribute“ ist hinterlegt, wie häufig der jeweilige Redeeinleiter im Redewiedergabe-Korpus mit dem jeweiligen Attribut belegt ist.
           </p>
 
           <template #explain>
 
             <div class="exampleImg">
-              <img src="/img/datatypes/frequency/rede_part_01_num.png" alt="" />
+              <img src="/img/datatypes/frequency/rede_freq.png" width="70%" alt="" />
             </div>
             <div class="caption">
-              Eintrag zum Redeeinleiter <em>sagen</em> - Gesamtfrequenz (1) und Frequenzen
-              verschiedener Merkmale innerhalb dieser Gruppe (2)
+              Die Frequenz des Redeeinleiters „sagen“ im Redewiedergabe-Korpus insgesamt und aufgespaltet nach Attributen.
             </div>
 
 

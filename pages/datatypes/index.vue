@@ -65,8 +65,8 @@ definePageMeta({
             Linguistische Etikettierung von Merkmalen sprachlicher Einheiten
           </info-box>
 
-          <info-box color1="#801b31" color2="#fec037" title="Belege" link="/datatypes/matches" :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'PhrasKomp',
-            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'Verlaufsformen', 'FesteWV', 'DTWW', 'SPRW']">
+          <info-box color1="#801b31" color2="#fec037" title="Belege" link="/datatypes/matches" :filter="['WVBF', 'Redeeinleiter', 'PhrasKomp',
+            'PREPCON_temp', 'PREPCON_kon', 'Verlaufsformen', 'FesteWV', 'DTWW', 'SPRW']">
             Manuell ausgewählte KWICs und größere Volltextstellen
           </info-box>
 
