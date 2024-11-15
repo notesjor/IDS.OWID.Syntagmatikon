@@ -285,7 +285,7 @@
           webpage="/img/datatypes/frequency/rede_fullscreen_annotated.png">
 
           <p>
-            In <resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact> ist in der Spalte „Redeeinleiter“ in Klammern nachfolgend auf den jeweiligen Rede-einleiter hinterlegt, wie häufig dieser im Redewiedergabe-Korpus belegt ist. In der Spalte „Attribute“ ist hinterlegt, wie häufig der jeweilige Redeeinleiter im Redewiedergabe-Korpus mit dem jeweiligen Attribut belegt ist.
+            In <resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact> ist in der Spalte „Redeeinleiter“ in Klammern nachfolgend auf den jeweiligen Redeeinleiter hinterlegt, wie häufig dieser im Redewiedergabe-Korpus belegt ist. In der Spalte „Attribute“ ist hinterlegt, wie häufig der jeweilige Redeeinleiter im Redewiedergabe-Korpus mit dem jeweiligen Attribut belegt ist.
           </p>
 
           <template #explain>

@@ -165,39 +165,42 @@
           <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
 
           <template #explain>
+            <div class="exampleHeadline">Rubrik „Quantitative Angaben“: ‚Häufigkeit im Korpus‘</div>
             <div class="exampleImg">
               <img src="/img/datatypes/kwics/prepcon_kon_quantSuche.png" alt="" />
             </div>
             <div class="caption">
-              Ausschnitt aus KWIC-Anzeige (Großschreibung) im Artikel „mit Genugtuung“ (Rubrik „Quantitative Angaben“: ‚Häufigkeit im Korpus‘)
+              Ausschnitt aus KWIC-Anzeige (Großschreibung) im Artikel „mit Genugtuung“
             </div>
             <div class="exampleImg">
               <img src="/img/datatypes/kwics/prepcon_kon_quantSucheSpanisch.png" alt="" />
             </div>
             <div class="caption">
-              Ausschnitt aus KWIC-Anzeige (Kleinschreibung) im Artikel „mit Genugtuung - con satisfacción“ (Rubrik „Quantitative Angaben“: ‚Häufigkeit im Korpus‘)
+              Ausschnitt aus KWIC-Anzeige (Kleinschreibung) im Artikel „mit Genugtuung - con satisfacción“ 
             </div>
+
+            <div class="exampleHeadline">Rubrik „Quantitative Angaben“: ‚Typische Partnerwörter‘)</div>
             <div class="exampleImg">
               <img src="/img/datatypes/kwics/prepcon_kon_quantPartner.png" alt="" />
             </div>
             <div class="caption">
-              Ausschnitt aus KWIC-Anzeige des Kookkurrenz-Clusters <em>mit Genugtuung – erfüllt</em> im Artikel „mit Genugtuung“ (Rubrik „Quantitative Angaben“: ‚Typische Partnerwörter‘) (KWIC-Export nur für deutsche Daten möglich)  
+              Ausschnitt aus KWIC-Anzeige des Kookkurrenz-Clusters <em>mit Genugtuung – erfüllt</em> im Artikel „mit Genugtuung“ (KWIC-Angaben nur für deutsche Daten verfügbar)  
             </div>
 
+
+            <div class="exampleHeadline">Rubrik „Quantitative Angaben“: ‚Muster‘)</div>
             <div class="exampleImg">
               <img src="/img/datatypes/kwics/prepcon_kon_quantMuster.png" alt="" />
             </div>
             <div class="caption">
-              Ausschnitt aus KWIC-Anzeige des Füllers <em>sichtlicher</em> (Muster: <em>mit</em> X <em>Genugtuung</em>) im Artikel „mit Genugtuung“ (Rubrik „Quantitative Angaben“: ‚Muster‘) 
+              Ausschnitt aus KWIC-Anzeige des Füllers <em>sichtlicher</em> (Muster: <em>mit</em> X <em>Genugtuung</em>) im Artikel „mit Genugtuung“ 
             </div>
 
             <div class="exampleImg">
               <img src="/img/datatypes/kwics/prepcon_kon_quantMusterSpanisch.png" alt="" />
             </div>
             <div class="caption">
-              Ausschnitt aus KWIC-Anzeige des Füllers <em>gran</em>  (Muster: <em>con</em> X <em>satisfacción</em>) im Artikel „mit Genugtuung – con satisfacción“ (Rubrik „Quantitative Angaben“: ‚Muster‘)
-
-
+              Ausschnitt aus KWIC-Anzeige des Füllers <em>gran</em>  (Muster: <em>con</em> X <em>satisfacción</em>) im Artikel „mit Genugtuung – con satisfacción“ 
             </div>
 
           </template>
@@ -238,7 +241,7 @@
     <img src="/img/datatypes/kwics/wvGrund.png" alt="" />
   </div>
   <div class="caption">
-    Ausschnitt aus KWIC-Anzeige im Eintrag „Ausnahmen bestätigen die Regel“
+    Ausschnitt aus KWIC-Anzeige des Knotens „aus ADJ Gründen“
   </div>
 </template>
 </compare-item>

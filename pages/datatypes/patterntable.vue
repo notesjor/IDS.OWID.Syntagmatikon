@@ -22,7 +22,7 @@
         Basis, sondern werden in einigen Ressourcen selbst als lexikografische Informationseinheiten angeboten.</p>
 
     <div>
-        <compare>
+        <compare >
 
             <!-- NOTE: Zuerst muss ein <template #headers> erstellt werden -->
             <!-- NOTE: dieses sollte mehrerer Tabs: <v-tab value="ALL" class="nocaps"> enthalten -->

@@ -6,11 +6,11 @@
        </NuxtLink>
        </div> 
    </v-btn>
-   <h1>Fremdsprachige Äquivalenz</h1>
-   <p>Das Syntagmatikon bietet drei Ressourcen, die Syntagmen im Sprachkontrast dokumentieren. Die entsprechenden Angaben werden Äquivalenzangaben genannt, d.h. Einheiten der Ausgangssprache Deutsch werden Entsprechungen in anderen Sprachen und Korpusbelege hinzugefügt. Diese können 1:1-Entsprechungen auf der Formseite sein oder konzeptuelle Entsprechungen, die denselben Bedeutungskern aufweisen, aber auch durch andere Wörter und Wortgruppen ausgedrückt werden. Von Interesse ist dabei, auf welchen Ebenen es Gemeinsamkeiten (Konvergenzen) und Unterschiede (Divergenzen) gibt.</p> 
+   <h1>Fremdsprachige Äquivalenzen</h1>
+   <p>Im <hi>Syntagmatikon</hi> dokumentieren zwei Ressourcen den Gebrauch von Syntagmen im Sprachkontrast. Die entsprechenden Angaben werden Äquivalenzangaben genannt, d.h. Einheiten der Ausgangssprache Deutsch werden Entsprechungen in anderen Sprachen und Korpusbelege hinzugefügt. Diese können 1:1-Entsprechungen auf der Formseite sein oder konzeptuelle Entsprechungen, die denselben Bedeutungskern aufweisen, aber auch durch andere Wörter und Wortgruppen ausgedrückt werden. </p> 
 
    <div>
-        <compare>
+        <compare title="">
 
             <!-- NOTE: Zuerst muss ein <template #headers> erstellt werden -->
             <!-- NOTE: dieses sollte mehrerer Tabs: <v-tab value="ALL" class="nocaps"> enthalten -->
@@ -35,7 +35,7 @@
                     <!-- NOTE: Bitte das Bild manuell erstellen - Größe: 720x480 Pixel - 300dpi -->
 
                     <div style="text-align: center; width:100%">
-                        <img src="/dummy/infobox_dummy.png" style="text-align: center;" />
+                        <img src="/img/datatypes/equivalence/equivalence_all.png" style="text-align: center;" />
                     </div>
 
                 </compare-item>
@@ -50,17 +50,23 @@
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> TODO
+                        <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> beinhaltet eine  korpusgesteuerte Vergleichstudie von quantitativen Daten, Bedeutungs- und Gebrauchsaspekten sowie semi-abstrakten Mustern für die Sprachenpaare Deutsch – Spanisch und Deutsch – Slowakisch; ausgehend vom Deutschen. Beschrieben werden die Präposition-Nomen-Verbindungen <em>am Anfang; auf Anhieb; mit Genugtuung; nach Belieben</em> und die prototypischen Äquivalente in Spanisch (<em>al principio; de inmediato; con satisfacción; a su/... gusto</em>) und Slowakisch (<em>na začiatku; na prvý pokus; so zadosťučinením; podľa ľubovôle</em>).
                     </p>
 
                     <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
                     <template #explain>
-                        <div class="exampleHeadline">Dummy</div>
                         <div class="exampleImg">
-                            <img src="" alt="" />
+                            <img src="/img/datatypes/equivalence/prepcon_kon_spanisch.png" alt="" />
                         </div>
                         <div class="caption">
-                            dummy
+                            Äquivalenzpaar Deutsch – Spanisch im Artikel „am Anfang – al principio“
+                        </div>
+
+                        <div class="exampleImg">
+                            <img src="/img/datatypes/equivalence/prepcon_kon_slowakisch.png" alt="" />
+                        </div>
+                        <div class="caption">
+                            Äquivalenzpaar Deutsch – Slowakisch im Artikel „am Anfang – na začiatku“
                         </div>
                     </template>
                 </compare-item>
@@ -69,17 +75,16 @@
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        <resources-list-compact :filter="['DTWW']"></resources-list-compact> TODO
+                        <resources-list-compact :filter="['DTWW']"></resources-list-compact> ist eine Sammlung fester deutsch-türkischer Wortverbindungen und Einwortphraseologismen aus der Domäne Wirtschaft. Sie enthält ca. 900 deutsche Einträge und ihre türkischen Entsprechungen mit wörtlichen Übersetzungen ins Deutsche.
                     </p>
 
                     <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
                     <template #explain>
-                        <div class="exampleHeadline">Dummy</div>
                         <div class="exampleImg">
-                            <img src="" alt="" />
+                            <img src="/img/datatypes/equivalence/dtww.png" alt="" />
                         </div>
                         <div class="caption">
-                            dummy
+                            Ausschnitt aus der Buchstabenstrecke A
                         </div>
                     </template>
                 </compare-item>

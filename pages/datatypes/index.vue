@@ -87,7 +87,7 @@ definePageMeta({
             Gebrauchsmerkmalen
           </info-box>
 
-          <info-box color1="#801b31" color2="#fec037" title="Fremdsprachige Äquivalenz" link="/datatypes/equivalence"
+          <info-box color1="#801b31" color2="#fec037" title="Fremdsprachige Äquivalenzen" link="/datatypes/equivalence"
             :filter="['PREPCON_kon', 'DTWW']">
             Angabe von Entsprechungen in anderen Sprachen
           </info-box>

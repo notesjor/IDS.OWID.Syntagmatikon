@@ -7,7 +7,7 @@
     
     <h1>Adjektive</h1>
     <div>
-        <compare>
+        <compare title="">
 
             <!-- NOTE: Zuerst muss ein <template #headers> erstellt werden -->
             <!-- NOTE: dieses sollte mehrerer Tabs: <v-tab value="ALL" class="nocaps"> enthalten -->
