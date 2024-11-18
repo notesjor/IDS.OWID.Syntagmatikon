@@ -1,13 +1,13 @@
 <template>
-        <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
+    <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
         <div class="nolink">
-        <NuxtLink to="/pos">
-            Zurück zu "Wort- und Ausdrucksarten"
-        </NuxtLink>
-        </div> 
+            <NuxtLink to="/pos">
+                Zurück zu "Wort- und Ausdrucksarten"
+            </NuxtLink>
+        </div>
     </v-btn>
     <h1>Verben</h1>
-   
+
     <div>
         <compare title="">
 
@@ -38,7 +38,7 @@
                     <!-- NOTE: Bitte das Bild manuell erstellen - Größe: 720x480 Pixel - 300dpi -->
 
                     <div style="text-align: center; width:100%">
-                        <img src="/dummy/infobox_dummy.png" style="text-align: center;" />
+                        <img src="/img/pos/verbs/verbs_all.png" style="text-align: center;" />
                     </div>
 
                 </compare-item>
@@ -51,16 +51,28 @@
 
                 <compare-item value="1" rkey="KoMuX">
 
-                    <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
+                    <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        <resources-list-compact :filter="['KoMuX']"></resources-list-compact> TODO
+                        In <resources-list-compact :filter="['KoMuX']"></resources-list-compact> können Verben
+                        neben anderen Wort- und Ausdrucksarten als Erstglieder fungieren.
+                       
                     </p>
 
-                    <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
                     <template #explain>
                         <div>
                             <ul>
-                                <li> <span class="pos_highlight">WORT</span></li>
+                                <li>
+                                    <span class="pos_highlight">Fahr</span>bahn
+                                </li>
+                                <li>
+                                    <span class="pos_highlight">Wohn</span>haus
+                                </li>
+                                <li>
+                                    <span class="pos_highlight">Trink</span>wasser
+                                </li>
+                                <li>
+                                    <span class="pos_highlight">Turn</span>verein
+                                </li>
                             </ul>
                         </div>
                     </template>
@@ -68,18 +80,13 @@
 
                 <compare-item value="2" rkey="MAP">
 
-                    <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
+                    <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        <resources-list-compact :filter="['MAP']"></resources-list-compact> TODO
+                        Informationen zu <resources-list-compact :filter="['MAP']"></resources-list-compact>
+                        sind noch in Vorbereitung.
                     </p>
 
-                    <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
                     <template #explain>
-                        <div>
-                            <ul>
-                                <li> <span class="pos_highlight">WORT</span></li>
-                            </ul>
-                        </div>
                     </template>
                 </compare-item>
 
@@ -87,22 +94,29 @@
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact> kann man alle Verben aus dem Redewiedergabe-Korpus abrufen, die als Rede- oder Gedankeneinleiter genutzt werden.
+                        In <resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact> kann man alle
+                        Verben aus dem
+                        Redewiedergabe-Korpus abrufen, die als Rede- oder Gedankeneinleiter genutzt werden.
                     </p>
 
                     <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
                     <template #explain>
                         <div>
                             <ul>
-                                <li> „Doch, ich muß es berichten“, <span class="pos_highlight">sagte</span> Marie eifrig.</li>
+                                <li> „Doch, ich muß es berichten“, <span class="pos_highlight">sagte</span> Marie
+                                    eifrig.</li>
                                 <li>
-                                    »Kann sein,« <span class="pos_highlight">lachte</span> der Bursche, »daß das einmal ist gewest.
+                                    »Kann sein,« <span class="pos_highlight">lachte</span> der Bursche, »daß das einmal
+                                    ist gewest.
                                 </li>
                                 <li>
-                                    Und es kann auch nicht <span class="pos_highlight">verschwiegen</span> werden, daß unsre Parlamente gegen diesen undeutschen Geist der Zeit kein genügendes Bollwerk bilden
+                                    Und es kann auch nicht <span class="pos_highlight">verschwiegen</span> werden, daß
+                                    unsre Parlamente gegen diesen undeutschen Geist der Zeit kein genügendes Bollwerk
+                                    bilden
                                 </li>
                                 <li>
-                                    Daß ein moderner Fabrikmensch auf einer geistig höheren Stufe steht wie ein früherer Handwerker, wage ich <span class="pos_highlight">anzuzweifeln</span>.
+                                    Daß ein moderner Fabrikmensch auf einer geistig höheren Stufe steht wie ein früherer
+                                    Handwerker, wage ich <span class="pos_highlight">anzuzweifeln</span>.
                                 </li>
                             </ul>
                         </div>
@@ -114,16 +128,32 @@
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        <resources-list-compact :filter="['Verlaufsformen']"></resources-list-compact> TODO
+                        In <resources-list-compact :filter="['Verlaufsformen']"></resources-list-compact> stellt eine
+                        Stichwortliste mit
+                        über 900 deutschen Verben die primäre Zugriffsstruktur dar. Diese Verben werden in den Einträgen
+                        und Belegen
+                        immer als Nominalisierungen gebraucht.
                     </p>
+                    <!-- <div class="exampleImg">
+                        <img src="/img/pos/verbs/verben_verlaufsformen.png" alt="" />
+                    </div>
+                    <div class="caption">
+                        Ausschnitt aus der Stichwortliste
+                    </div> -->
+
 
                     <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
                     <template #explain>
-                        <div>
+                        <div style="margin-bottom: 20px; width: 100%;">
                             <ul>
-                                <li> <span class="pos_highlight">WORT</span></li>
+                                <li> (am) <span class="pos_highlight">Abbauen</span></li>
+                                <li> (am) <span class="pos_highlight">Platzen</span></li>
+                                <li> (beim) <span class="pos_highlight">Komponieren</span></li>
+                                <li> (beim) <span class="pos_highlight">Röntgen</span></li>
                             </ul>
                         </div>
+
+
                     </template>
                 </compare-item>
             </template>

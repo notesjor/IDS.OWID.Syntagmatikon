@@ -101,21 +101,13 @@
 
                 <compare-item value="2" rkey="MAP">
 
-                    <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
+                    <!-- TODO: Inhalt ergänzen -->
                     <p>
                         Informationen zu <resources-list-compact :filter="['MAP']"></resources-list-compact> 
                             sind noch in Vorbereitung.
                     </p>
-
-                    <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
+                    
                     <template #explain>
-                        <!-- <div class="exampleHeadline">Dummy</div>
-                        <div class="exampleImg">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="caption">
-                            dummy
-                        </div> -->
                     </template>
                 </compare-item>
 

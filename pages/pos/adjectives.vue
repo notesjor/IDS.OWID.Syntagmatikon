@@ -1,10 +1,10 @@
 <template>
-     <v-btn>
+    <v-btn>
         <NuxtLink to="/pos">
             Zurück zu "Wort- und Ausdrucksarten"
         </NuxtLink>
     </v-btn>
-    
+
     <h1>Adjektive</h1>
     <div>
         <compare title="">
@@ -32,7 +32,7 @@
                     <!-- NOTE: Bitte das Bild manuell erstellen - Größe: 720x480 Pixel - 300dpi -->
 
                     <div style="text-align: center; width:100%">
-                        <img src="/dummy/infobox_dummy.png" style="text-align: center;" />
+                        <img src="/img/pos/adjectives/adjectives_all.png" style="text-align: center;" />
                     </div>
 
                 </compare-item>
@@ -44,17 +44,19 @@
                 <!-- NOTE: Außerdem muss ein <template #explain> angelegt werden (siehe unten) -->
 
                 <compare-item value="1" rkey="KoMuX">
-
-                    <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
+                    <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        <resources-list-compact :filter="['KoMuX']"></resources-list-compact> TODO
+                        In <resources-list-compact :filter="['KoMuX']"></resources-list-compact> können Adjektive
+                        neben anderen Wort- und Ausdrucksarten als Erstglieder fungieren.
                     </p>
 
-                    <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
                     <template #explain>
                         <div>
                             <ul>
-                                <li> <span class="pos_highlight">WORT</span></li>
+                                <li><span class="pos_highlight">Klein</span>kind</li>
+                                <li><span class="pos_highlight">Blau</span>licht</li>
+                                <li><span class="pos_highlight">Top</span>-spiel</li>
+                                <li><span class="pos_highlight">Billig</span>kraft</li>
                             </ul>
                         </div>
                     </template>
@@ -64,14 +66,25 @@
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        <resources-list-compact :filter="['FesteWV']"></resources-list-compact> TODO
+                        In <resources-list-compact :filter="['FesteWV']"></resources-list-compact> bilden folgende
+                        Adjektive die
+                        Kernkomponente für die Stichwortliste: <em>blind; geistig; gesund; normal; sanft</em>.
                     </p>
+                    <!-- <div class="exampleImg">
+                        <img src="/img/pos/adjectives/festeWV.png" alt="" />
+                    </div>
+                    <div class="caption">Zugriff über die Adjektiv-Stichwortliste</div> -->
+
 
                     <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
                     <template #explain>
                         <div>
                             <ul>
-                                <li> <span class="pos_highlight">WORT</span></li>
+                                <li> (sich) <span class="pos_highlight">blind</span> (und taub stellen)</li>
+                                <li> <span class="pos_highlight">geistiger</span> (Vater)</li>
+                                <li> (auf) <span class="pos_highlight">gesunden</span> (Beinen stehen)</li>
+                                <li> (der ganz) <span class="pos_highlight">normale</span> (Wahnsinn)</li>
+                                <li> (Ruhe) <span class="pos_highlight">sanft</span></li>
                             </ul>
                         </div>
                     </template>

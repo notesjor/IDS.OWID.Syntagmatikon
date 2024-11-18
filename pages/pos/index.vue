@@ -35,7 +35,7 @@ definePageMeta({
       <v-col cols="12">
         <div class="container">
           <info-box title="Nomina" color1="#fec037" color2="#12cb4b" link="pos/nouns" :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'WVBF',
-            'PhrasKomp', 'DTWW', 'Redeeinleiter']">
+            'PhrasKomp', 'DTWW', 'Redeeinleiter', 'Verlaufsformen']">
           </info-box>
 
           <info-box title="Verben" color1="#fec037" color2="#12cb4b" link="pos/verbs"
@@ -51,11 +51,11 @@ definePageMeta({
           </info-box>
 
           <info-box title="Phraseme" color1="#fec037" color2="#12cb4b" link="pos/phrasemes"
-            :filter="['PhrasKomp', 'MAP', 'Redeeinleiter', 'DTWW', 'WVBF', 'FesteWV']">
+            :filter="['PhrasKomp', 'MAP', 'Redeeinleiter', 'DTWW', 'WVBF', 'FesteWV', 'KoMuX']">
           </info-box>
 
           <info-box title="Feste Sätze" color1="#fec037" color2="#12cb4b" link="pos/sentences"
-            :filter="['SpruchList', 'PhrasKomp', 'SPRW']">
+            :filter="['KoMuX', 'SpruchList', 'PhrasKomp', 'SPRW']">
           </info-box>
 
         </div>

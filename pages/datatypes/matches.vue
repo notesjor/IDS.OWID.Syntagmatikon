@@ -142,13 +142,11 @@
                 </compare-item>
 
                 <compare-item value="3" rkey="PhrasKomp">
-
-                    <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
+                    <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        [zu ergänzen]
+                        Informationen zu <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
+                        sind noch in Vorbereitung.
                     </p>
-
-                    <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
 
                     <template #explain>
                     </template>
@@ -186,12 +184,22 @@
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        [zu ergänzen]
+                        In <resources-list-compact :filter="['Verlaufsformen']"></resources-list-compact> werden manuell
+                        ausgewählte
+                        Belege zum Vorkommen eines Verbs in einer, zwei oder alle drei Verlaufsformen angegeben –
+                        ergänzt um den engen
+                        Kontext des Belegs.
                     </p>
 
                     <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
 
                     <template #explain>
+                        <div class="exampleImg">
+                            <img src="/img/datatypes/matches/verlaufsformen_beleg_eng.png" alt="" />
+                        </div>
+                        <div class="caption">
+                            Beleg für eine <em>am</em>-Progressiv-Verwendung im Eintrag „staunen“
+                        </div>
                     </template>
                 </compare-item>
 
@@ -294,6 +302,13 @@
                         <div class="caption">
                             Belege zum Muster <em>Der/Die X macht/machen die Musik</em> (‚Ersetzung von Komponenten‘) im
                             Artikel „Der Ton macht die Musik“
+                        </div>
+
+                        <div class="exampleImg">
+                            <img src="/img/datatypes/matches/sprw_geschichte_gap.png" alt="" />
+                        </div>
+                        <div class="caption">
+                            Beleg zur Angabe ‚Geschichte‘ im Artikel „Geiz ist geil“
                         </div>
 
                     </template>
