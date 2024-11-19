@@ -40,7 +40,10 @@
             :filter="['PREPCON_kon']"></resources-list-compact></v-tab>
         <v-tab value="4" class="nocaps"><resources-list-compact
             :filter="['SpruchList']"></resources-list-compact></v-tab>
-        <v-tab value="5" class="nocaps"><resources-list-compact :filter="['WVBF']"></resources-list-compact></v-tab>
+        <v-tab value="5" class="nocaps"><resources-list-compact 
+          :filter="['SPRW']"></resources-list-compact></v-tab>
+        <v-tab value="6" class="nocaps"><resources-list-compact 
+          :filter="['WVBF']"></resources-list-compact></v-tab>
       </template>
       <template #tabs>
 
@@ -147,21 +150,27 @@
 
           <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
           <p>
-            In <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> kann man automatisch selektierte KWICs an unterschiedlichen Stellen für die Ausgangssprache Deutsch und die Kontrastsprachen Spanisch und Slowakisch mit Zufallsauswahl abrufen:</p>
-            <p>Rubrik „Quantitative Angaben“</p>
-            <ul>
-              <li>in ‚Häufigkeit im Korpus‘ für die jeweilige Suchen/Frequenzen (Groß- und Kleinschreibung; Großschreibung; Kleinschreibung)</li>
-              <li>in ‚Typische Partnerwörter‘ für die jeweiligen Kookkurrenzcluster</li>
-              <li>in ‚Muster‘ für die jeweiligen Lückenfüllertabellen</li>
-            </ul>
-            <p>Rubrik „Gebrauchsaspekte“</p>
-            <ul>
-              <li>für die manuell zusammengestellten Satelliten-Felder</li>
-            </ul>
-            <p>Rubrik „Gebrauchsaspekte“</p>
-            <ul>
-              <li>für die manuell systematisierten Lückenfüller</li>
-            </ul>
+            In <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> kann man automatisch
+            selektierte
+            KWICs an unterschiedlichen Stellen für die Ausgangssprache Deutsch und die Kontrastsprachen Spanisch und
+            Slowakisch
+            mit Zufallsauswahl abrufen:</p>
+          <p>Rubrik „Quantitative Angaben“</p>
+          <ul>
+            <li>in ‚Häufigkeit im Korpus‘ für die jeweilige Suchen/Frequenzen (Groß- und Kleinschreibung;
+              Großschreibung;
+              Kleinschreibung)</li>
+            <li>in ‚Typische Partnerwörter‘ für die jeweiligen Kookkurrenzcluster</li>
+            <li>in ‚Muster‘ für die jeweiligen Lückenfüllertabellen</li>
+          </ul>
+          <p>Rubrik „Gebrauchsaspekte“</p>
+          <ul>
+            <li>für die manuell zusammengestellten Satelliten-Felder</li>
+          </ul>
+          <p>Rubrik „Gebrauchsaspekte“</p>
+          <ul>
+            <li>für die manuell systematisierten Lückenfüller</li>
+          </ul>
           <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
 
           <template #explain>
@@ -176,7 +185,7 @@
               <img src="/img/datatypes/kwics/prepcon_kon_quantSucheSpanisch.png" alt="" />
             </div>
             <div class="caption">
-              Ausschnitt aus KWIC-Anzeige (Kleinschreibung) im Artikel „mit Genugtuung - con satisfacción“ 
+              Ausschnitt aus KWIC-Anzeige (Kleinschreibung) im Artikel „mit Genugtuung - con satisfacción“
             </div>
 
             <div class="exampleHeadline">Rubrik „Quantitative Angaben“: ‚Typische Partnerwörter‘)</div>
@@ -184,7 +193,8 @@
               <img src="/img/datatypes/kwics/prepcon_kon_quantPartner.png" alt="" />
             </div>
             <div class="caption">
-              Ausschnitt aus KWIC-Anzeige des Kookkurrenz-Clusters <em>mit Genugtuung – erfüllt</em> im Artikel „mit Genugtuung“ (KWIC-Angaben nur für deutsche Daten verfügbar)  
+              Ausschnitt aus KWIC-Anzeige des Kookkurrenz-Clusters <em>mit Genugtuung – erfüllt</em> im Artikel „mit
+              Genugtuung“ (KWIC-Angaben nur für deutsche Daten verfügbar)
             </div>
 
 
@@ -193,14 +203,16 @@
               <img src="/img/datatypes/kwics/prepcon_kon_quantMuster.png" alt="" />
             </div>
             <div class="caption">
-              Ausschnitt aus KWIC-Anzeige des Füllers <em>sichtlicher</em> (Muster: <em>mit</em> X <em>Genugtuung</em>) im Artikel „mit Genugtuung“ 
+              Ausschnitt aus KWIC-Anzeige des Füllers <em>sichtlicher</em> (Muster: <em>mit</em> X <em>Genugtuung</em>)
+              im Artikel „mit Genugtuung“
             </div>
 
             <div class="exampleImg">
               <img src="/img/datatypes/kwics/prepcon_kon_quantMusterSpanisch.png" alt="" />
             </div>
             <div class="caption">
-              Ausschnitt aus KWIC-Anzeige des Füllers <em>gran</em>  (Muster: <em>con</em> X <em>satisfacción</em>) im Artikel „mit Genugtuung – con satisfacción“ 
+              Ausschnitt aus KWIC-Anzeige des Füllers <em>gran</em> (Muster: <em>con</em> X <em>satisfacción</em>) im
+              Artikel „mit Genugtuung – con satisfacción“
             </div>
 
           </template>
@@ -208,9 +220,31 @@
 
         <compare-item value="4" rkey="SpruchList">
 
+          <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
+          <p>
+            In <resources-list-compact :filter="['SpruchList']"></resources-list-compact> werden für die weite
+            Suchanfrage eines
+            Eintrags automatisch selektierte KWICs angezeigt (bis 1000 Zufallsauswahl).
+          </p>
+
+          <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
+
+          <template #explain>
+
+            <div class="exampleImg">
+              <img src="/img/datatypes/kwics/spruchList.png" alt="" />
+            </div>
+            <div class="caption">
+              Ausschnitt aus KWIC-Anzeige im Eintrag „Ausnahmen bestätigen die Regel“
+            </div>
+          </template>
+        </compare-item>
+
+        <compare-item value="5" rkey="SPRW">
+
 <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
 <p>
-  In <resources-list-compact :filter="['SpruchList']"></resources-list-compact> werden für die weite Suchanfrage eines Eintrags automatisch selektierte KWICs angezeigt (bis 1000 Zufallsauswahl).
+  <resources-list-compact :filter="['SPRW']"></resources-list-compact> bietet einen dynamischen Zugang zu automatisch ermittetelten KWICs und Volltextstellen auf dem aktuellen Stand des DeReKo-W-Archivs. Dazu wurden Suchanfragen hinterlegt, die bei Aktivierung die COSMAS-II-Suche starten.
 </p>
 
 <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
@@ -218,33 +252,37 @@
 <template #explain>
 
   <div class="exampleImg">
-    <img src="/img/datatypes/kwics/spruchList.png" alt="" />
+    <img src="/img/datatypes/kwics/sprw_cosmas.png" alt="" />
   </div>
   <div class="caption">
-    Ausschnitt aus KWIC-Anzeige im Eintrag „Ausnahmen bestätigen die Regel“
+    Ausschnitt aus KWIC-Anzeige im Artikel „Not macht erfinderisch“ 
   </div>
 </template>
 </compare-item>
 
-<compare-item value="5" rkey="WVBF">
 
-<!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
-<p>
-  In <resources-list-compact :filter="['WVBF']"></resources-list-compact> werden automatisch selektierte KWICs für die jeweiligen Knoten angezeigt, sowohl für lexikalisierte Wortverbindungen als auch für Muster (bis zu 2000 Zufallsauswahl).
-</p>
+        <compare-item value="6" rkey="WVBF">
 
-<!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
+          <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
+          <p>
+            In <resources-list-compact :filter="['WVBF']"></resources-list-compact> werden automatisch selektierte KWICs
+            für die
+            jeweiligen Knoten angezeigt, sowohl für lexikalisierte Wortverbindungen als auch für Muster (bis zu 2000
+            Zufallsauswahl).
+          </p>
 
-<template #explain>
+          <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
 
-  <div class="exampleImg">
-    <img src="/img/datatypes/kwics/wvGrund.png" alt="" />
-  </div>
-  <div class="caption">
-    Ausschnitt aus KWIC-Anzeige des Knotens „aus ADJ Gründen“
-  </div>
-</template>
-</compare-item>
+          <template #explain>
+
+            <div class="exampleImg">
+              <img src="/img/datatypes/kwics/wvGrund.png" alt="" />
+            </div>
+            <div class="caption">
+              Ausschnitt aus KWIC-Anzeige des Knotens „aus ADJ Gründen“
+            </div>
+          </template>
+        </compare-item>
 
 
       </template>

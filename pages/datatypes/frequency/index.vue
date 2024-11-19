@@ -65,14 +65,12 @@
             für abstrakte oder lexikalisch teil-spezifizierte Komposita-Muster angezeigt. Solche Muster sind über
             formale und/oder lexikalisch-semantische Eigenschaften der Konstituenten definiert und dienen als
             Suchmuster.</p>
-          <p>Zum anderen werden in <resources-list-compact :filter="['KoMuX']"></resources-list-compact>
+          <p>Zum anderen werden
             Einzelfrequenzen für jedes Kompositum angezeigt, das zu einem bestimmten Suchmuster gehört.</p>
-          <p>Neben diesen auf ein bestimmtes Suchmuster beschränkten Frequenzangaben kann man sich in
-            <resources-list-compact :filter="['KoMuX']"></resources-list-compact> außerdem anzeigen lassen, wie häufig
+          <p>Neben diesen auf ein bestimmtes Suchmuster beschränkten Frequenzangaben kann man sich außerdem anzeigen lassen, wie häufig
             die in einer Suchanfrage enthaltenen Komposita-Konstituenten innerhalb der Gesamtdaten vorkommen (z.B.: Wie
             oft kommt die Konstituente Fußball insgesamt als Erstglied bzw. als Zweitglied vor?) </p>
-          <p>Ein besonderes frequenzbezogenes Feature von <resources-list-compact
-              :filter="['KoMuX']"></resources-list-compact> besteht darin, dass zu jedem Suchmuster Visualisierungen
+          <p>Ein besonderes frequenzbezogenes Feature besteht darin, dass zu jedem Suchmuster Visualisierungen
             angezeigt werden, welche die Frequenzverläufe innerhalb der Treffermenge illustrieren (z.B.: Wie ist die
             Verteilung der Wortarten innerhalb eines bestimmten Suchmusters?)</p>
 
@@ -110,11 +108,28 @@
         <compare-item value="2" rkey="PhrasKomp" description="Frequenzangaben in PhrasKomp">
           <!-- TODO: Inhalt ergänzen -->
           <p>
-            Informationen zu <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
-            sind noch in Vorbereitung.
-          </p>
+            In <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
+            werden zum einen Einzelfrequenzen für jedes Phrasenkompositum des Inventars angezeigt. Zum anderen kann man sich Frequenzen für bestimmte Gruppen von Phrasenkomposita anzeigen lassen, die jeweils über formale und/oder lexikalisch-semantische Eigenschaften des Zweitglieds definiert werden:</p>
+            <ul>
+              <li>Konkretes Zweitgliedlexem</li>
+              <li>Ableitungstyp des Zweitglieds</li>
+              <li>Abstrakte semantische Gruppe des Zweitglieds</li>
+            </ul>
 
           <template #explain>
+            <div class="exampleImg">
+              <img src="/img/datatypes/frequency/phraskomp_part_01.png" alt="" />
+            </div>
+            <div class="caption">
+             Gesamt-Stichwortliste mit Frequenzangaben
+            </div>
+
+            <div class="exampleImg">
+              <img src="/img/datatypes/frequency/phraskomp_gerede.png" alt="" />
+            </div>
+            <div class="caption">
+              Ausschnitt aus der Treffermenge für Phrasenkomposita mit dem Zweitglied <em>Gerede</em>
+            </div>
           </template>
 
         </compare-item>

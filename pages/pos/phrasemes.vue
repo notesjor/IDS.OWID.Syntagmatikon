@@ -89,11 +89,19 @@
                 <compare-item value="3" rkey="PhrasKomp">
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        Informationen zu <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
-                        sind noch in Vorbereitung.
+                        In <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
+                        können Phraseme, neben festen Sätzen, als Erstglied fungieren. Alternativ zu dieser phraseologischen Perspektive können die Erstglieder von Phrasenkomposita auch unter einer syntaktischen Perspektive, d.h. als Phrasen und Sätze, klassifiziert werden. 
                     </p>
 
                     <template #explain>
+                        <div>
+                            <ul>
+                                <li><span class="pos_highlight">Pleiten-Pech-und-Pannen</span>-Woche</li>
+                                <li><span class="pos_highlight">Working-Class</span>-Junge</li>
+                                <li><span class="pos_highlight">"Sex and the City"</span>-Mädchen</li>
+                                <li><span class="pos_highlight">"Zu mir oder zu dir"</span>-Gequatsche</li>
+                            </ul>
+                        </div>
                     </template>
                 </compare-item>
 

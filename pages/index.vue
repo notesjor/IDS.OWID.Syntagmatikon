@@ -28,12 +28,8 @@
         </div>
       </v-col>
     </v-row>
-    <v-row>
-      <!--
-      <v-col cols="12">
-        
-      </v-col>
-      -->
+    <!-- <v-row>
+    
       <v-col cols="4">
         <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
           <div style="text-align: center;">
@@ -89,7 +85,7 @@
           </div>
            </div> 
       </v-col>
-    </v-row>
+    </v-row> -->
   </div>
 </template>
 
@@ -391,7 +387,9 @@ export default {
             ]
           },
           ],
-        }, {
+        }, 
+        /*
+        {
           tokens: ["Wo", "die", "Wirtschaft", "in", "der", "Krise", "steckt,", "da", "steigt", "die", "Angst", "der", "Geschäftsleute,", "den", "Boden", "unter", "den", "Füßen", "zu", "verlieren."],
           annotations: [{
             ranges: [{
@@ -409,7 +407,9 @@ export default {
             ]
           }
           ],
-        }, {
+        }, 
+        */
+        {
           tokens: ["Die", "Dachgesellschaft", "der", "Eglo-Unternehmensgruppe", "-", "die", "Obwieser", "Holding", "GmbH", "mit", "Sitz", "in", "Pill", "-vereint", "auf", "internationaler", "Ebene", "12", "eigenständige", "Gesellschaften.", "Nach", "dem", "Gründungsjahr", "1969", "folgte", "die", "erste", "Auslandsniederlassung", "im", "Hauptmarkt", "Deutschland", "im", "Jahre", "1986."],
           annotations: [{
             ranges: [{

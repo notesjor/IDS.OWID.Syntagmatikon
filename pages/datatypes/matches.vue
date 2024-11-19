@@ -144,11 +144,17 @@
                 <compare-item value="3" rkey="PhrasKomp">
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        Informationen zu <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
-                        sind noch in Vorbereitung.
+                        In <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
+                        wird zu jedem der 1.576 Phrasenkomposita des Inventars ein manuell ausgewählter Beleg angeführt, der die Verwendung und Bedeutung der jeweiligen Bildung prototypisch illustriert. Die Belege enthalten das jeweilige Phrasenkompositum, ergänzt um den engen textuellen Kontext. Die Belege sind in den Ergebnistabellen standardmäßig ausgeblendet und lassen sich für jedes Phrasenkompositum separat aufklappen.
                     </p>
 
                     <template #explain>
+                        <div class="exampleImg">
+                            <img src="/img/datatypes/matches/phraskomp_gerede.png" alt="" />
+                        </div>
+                        <div class="caption">
+                            Ausschnitt aus der Treffermenge zu Phrasenkomposita mit dem Zweitglied <em>Gerede</em> (mit ausgeklappten Belegen)
+                        </div>
                     </template>
                 </compare-item>
 

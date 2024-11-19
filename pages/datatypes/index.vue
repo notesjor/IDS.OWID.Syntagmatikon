@@ -39,7 +39,7 @@ definePageMeta({
 
           <info-box title="KWICs <span style='font-size:0.8em'>(KeyWord In Context)</span>" link="/datatypes/kwic"
             :filter="['WVBF', 'SpruchList',
-              'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']" color1="#ff3661" color2="#fec037">
+              'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'SPRW']" color1="#ff3661" color2="#fec037">
             Zeilen (Konkordanzen), in denen das Suchobjekt vorkommt (Textschnipsel)
           </info-box>
 

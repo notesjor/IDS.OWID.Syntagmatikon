@@ -123,10 +123,10 @@
 
           <template #explain>
             <ul>
-              <li>(am) <span class="pos_highlight">Anfang</span> - al principio - na začiatku</li>
-              <li>(auf) <span class="pos_highlight">Anhieb</span> - de inmediato - na prvý pokus</li>
-              <li>(mit) <span class="pos_highlight">Genugtuung</span> - con satisfacción - so zadosťučinením</li>
-              <li>(nach) <span class="pos_highlight">Belieben</span> - a su gusto - podľa ľubovôle</li>
+              <li>(am) <span class="pos_highlight">Anfang</span> - al <span class="pos_highlight">principio</span> - na <span class="pos_highlight">začiatku</span></li>
+              <li>(auf) <span class="pos_highlight">Anhieb</span> - de <span class="pos_highlight">inmediato</span> - na prvý <span class="pos_highlight">pokus</span></li>
+              <li>(mit) <span class="pos_highlight">Genugtuung</span> - con <span class="pos_highlight">satisfacción</span> - so <span class="pos_highlight">zadosťučinením</span></li>
+              <li>(nach) <span class="pos_highlight">Belieben</span> - a su <span class="pos_highlight">gusto</span> - podľa <span class="pos_highlight">ľubovôle</span></li>
             </ul>
 
           </template>
@@ -142,9 +142,21 @@
           <template #explain>
             <ul>
               <li><span class="pos_highlight">Fußball</span></li>
-              <li>Klein<span class="pos_highlight">kind</span></li>
-              <li><span class="pos_highlight">Fahr</span>rad</li>
-              <li>Ich-<span class="pos_highlight">Erzähler</span></li>
+              <ul>
+                <li> <em>Konstituenten</em>: <span class="pos_highlight">Fuß</span> + <span class="pos_highlight">ball</span></li>
+                </ul>
+              <li><span class="pos_highlight">Kleinkind</span></li>
+              <ul>
+                <li> <em>Konstituenten</em>: Klein + <span class="pos_highlight">kind</span></li>
+                </ul>
+              <li><span class="pos_highlight">Fahrrad</span></li>
+              <ul>
+                <li> <em>Konstituenten</em>: Fahr + <span class="pos_highlight">rad</span></li>
+                </ul>
+              <li><span class="pos_highlight">Ich-Erzähler</span></li>
+              <ul>
+                <li> <em>Konstituenten</em>: Ich + <span class="pos_highlight">Erzähler</span></li>
+                </ul>
             </ul>
           </template>
         </compare-item>
@@ -152,11 +164,30 @@
         <compare-item value="5" rkey="PhrasKomp">
           <!-- TODO: Inhalt ergänzen -->
           <p>
-            Informationen zu <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
-            sind noch in Vorbereitung.
+            In <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
+            bilden Nomina die Gruppe der Zweitglieder. Auch bei den Gesamtbildungen handelt es sich somit um Nomina.
           </p>
 
           <template #explain>
+            <ul>
+              <li><span class="pos_highlight">Wer-kriegt-wen-Albernheit</span></li>
+                <ul>
+                  <li> <em>Konstituenten</em>: Wer-kriegt-wen + <span class="pos_highlight">Albernheit</span></li>
+                </ul>
+               
+              <li><span class="pos_highlight">"Schau'mer-mal"-Franz</span></li>
+              <ul>
+                <li> <em>Konstituenten</em>: "Schau'mer-mal" + <span class="pos_highlight">Franz</span></li>
+                </ul>
+              <li><span class="pos_highlight">"Der tut nichts"-Hund</span></li>
+                <ul>
+                  <li> <em>Konstituenten</em>: "Der tut nichts" + <span class="pos_highlight">Hund</span></li>
+                  </ul>
+              <li><span class="pos_highlight">Hin-und-her-Gerede</span></li>
+              <ul>
+                <li> <em>Konstituenten</em>: Hin-und-her + <span class="pos_highlight">Gerede</span></li>
+                </ul>
+            </ul>
           </template>
         </compare-item>
 
@@ -183,16 +214,14 @@
             In <resources-list-compact :filter="['Verlaufsformen']"></resources-list-compact> wird der Gebrauch
             nominalisierter
             deutscher Verben hinsichtlich ihres Vorkommens in drei Verlaufsformen dokumentiert.
-
-
           </p>
 
           <template #explain>
             <ul>
-              <li>(am) + <span class="pos_highlight">Anrollen</span></li>
-              <li>(am) + <span class="pos_highlight">Verfallen</span></li>
-              <li>(beim) + <span class="pos_highlight">Pflücken</span></li>
-              <li>(beim) + <span class="pos_highlight">Testen</span></li>
+              <li>(am) <span class="pos_highlight">Anrollen</span></li>
+              <li>(am) <span class="pos_highlight">Verfallen</span></li>
+              <li>(beim) <span class="pos_highlight">Pflücken</span></li>
+              <li>(beim) <span class="pos_highlight">Testen</span></li>
             </ul>
           </template>
         </compare-item>
@@ -206,11 +235,11 @@
 
           <template #explain>
             <ul>
-              <li>(aus) + <span class="pos_highlight">Grund</span></li>
-              <li>(auf) + <span class="pos_highlight">Grund</span></li>
-              <li>(im) + <span class="pos_highlight">Grund</span></li>
-              <li>(mit) + <span class="pos_highlight">Grund</span></li>
-              <li>(ohne) + <span class="pos_highlight">Grund</span></li>
+              <li>(aus) <span class="pos_highlight">Grund</span></li>
+              <li>(auf) <span class="pos_highlight">Grund</span></li>
+              <li>(im) <span class="pos_highlight">Grund</span></li>
+              <li>(mit) <span class="pos_highlight">Grund</span></li>
+              <li>(ohne) <span class="pos_highlight">Grund</span></li>
             </ul>
           </template>
         </compare-item>
