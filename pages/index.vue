@@ -9,9 +9,6 @@
       <v-col>
         <div>
           Das korpusbasierte Portal <hi>Syntagmatikon</hi> bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.</div>
-          <!--
-          <div>Die folgenden <hi>interaktiven Beispiele</hi> illustrieren die Vielfalt solcher Ausdrücke und ihre Verwendung im Text. 
-        </div> -->
       </v-col>
     </v-row>
     <v-row>
@@ -28,64 +25,6 @@
         </div>
       </v-col>
     </v-row>
-    <!-- <v-row>
-    
-      <v-col cols="4">
-        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
-          <div style="text-align: center;">
-            <v-icon style="font-size: 60px;">
-              mdi-cube-outline
-            </v-icon>
-            <div><strong>XX</strong> Lexikalische Ressourcen</div>
-          </div>
-        </div>
-        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
-          <div style="text-align: center;">
-            <v-icon style="font-size: 60px;">
-              mdi-magnify
-            </v-icon>
-            <div><strong>XX</strong> Verschiedene Suchen</div>
-          </div>
-        </div>
-      </v-col>
-      <v-col cols="4">
-        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
-          <div style="text-align: center;">
-            <v-icon style="font-size: 60px;">
-              mdi-puzzle-outline
-            </v-icon>
-            <div><strong>XX</strong> Sprachmuster, Phrasen und Redewendungen</div>
-          </div>
-        </div>
-        
-        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
-          <div style="text-align: center;">
-            <v-icon style="font-size: 60px;">
-              mdi-text-box-outline
-            </v-icon>
-            <div><strong>XX</strong> Lorem Ipsum</div>
-          </div>
-        </div>
-      </v-col>
-      <v-col cols="4">
-        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
-          <div style="text-align: center;">
-            <v-icon style="font-size: 60px;">
-              mdi-touch-text-outline
-            </v-icon>
-            <div><strong>XX</strong> Interaktive Texte und Analysen</div>
-          </div>
-        </div>
-        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
-          <div style="text-align: center;">
-            <v-icon style="font-size: 60px;">
-              mdi-database-search-outline
-            </v-icon>
-            <div><strong>XX</strong> Lorem Ipsum</div>
-          </div>
-           </div> 
-      </v-col>
-    </v-row> -->
   </div>
 </template>
 
@@ -96,31 +35,6 @@ export default {
   data() {
     return {
       sample: [
-      // {
-      //     tokens: ["Andere", "Länder,", "andere", "Sitten:", "Wenn", "deutsche", "Kinder", "am", "6.", "Dezember", "auf", "den", "Nikolaus", "in", "rotem", "Mantel", "und", "weißem", "Rauschebart", "warten,", "ist", "dieser", "Tag", "für", "spanische", "Mädchen", "und", "Jungen", "gar", "kein", "ereignisreiches", "Datum.", "Sie", "hoffen", "nämlich,", "daß", "die", "Heiligen", "Drei", "Könige", "-", "Caspar,", "Melchior", "und", "Balthasar", "sie", "am", "6.", "Januar", "reichlich", "beschenken,", "meist", "mit", "zuckersüßen", "Bonbons", "und", "Schokolade."],
-      //     annotations: [{
-      //       ranges: [{
-      //         from: 0,
-      //         to: 4
-      //       }
-      //       ],
-      //       references: [{
-      //         color: '#0d65c2',
-      //         source: 'OWID-Sprichwörterbuch',
-      //         article: 'Andere Länder, andere Sitten',
-      //         type: 'Sprichwort',
-      //         href: 'https://www.owid.de/artikel/404233',
-      //       }, {
-      //         color: '#008702',
-      //         source: 'SpruchList',
-      //         article: 'Andere Länder, andere Sitten',
-      //         type: 'Sprichwort',
-      //         href: 'http://uwv.ids-mannheim.de/spruchlist/?search=Andere%20L%C3%A4nder,%20andere%20Sitten',
-      //       }
-      //       ]
-      //     }
-      //     ],
-      //   }, 
         {
           tokens: ["Wie", "Tag", "und", "Nacht", "oder:", "Andere", "Länder,", "andere", "Sitten.", "Während", "Jamaica-Fans", "90", "Minuten", "lang", "dem", "Reggae","frönten,", "fleht", "man", "für", "Iran", "zu", "Allah."],
           annotations: [{
@@ -387,28 +301,7 @@ export default {
             ]
           },
           ],
-        }, 
-        /*
-        {
-          tokens: ["Wo", "die", "Wirtschaft", "in", "der", "Krise", "steckt,", "da", "steigt", "die", "Angst", "der", "Geschäftsleute,", "den", "Boden", "unter", "den", "Füßen", "zu", "verlieren."],
-          annotations: [{
-            ranges: [{
-              from: 13,
-              to: 19
-            }
-            ],
-            references: [{
-              source: 'Deutsch-Russische Idiome online',
-              article: 'den Boden unter den Füßen verlieren',
-              type: 'Verbales Phrasem',
-              href: 'http://wvonline.ids-mannheim.de/idiome_russ/BODEN_den_Boden_unter_den_Fuessen_verlieren.htm',
-              color: '#0d65c2'
-            }
-            ]
-          }
-          ],
-        }, 
-        */
+        },
         {
           tokens: ["Die", "Dachgesellschaft", "der", "Eglo-Unternehmensgruppe", "-", "die", "Obwieser", "Holding", "GmbH", "mit", "Sitz", "in", "Pill", "-vereint", "auf", "internationaler", "Ebene", "12", "eigenständige", "Gesellschaften.", "Nach", "dem", "Gründungsjahr", "1969", "folgte", "die", "erste", "Auslandsniederlassung", "im", "Hauptmarkt", "Deutschland", "im", "Jahre", "1986."],
           annotations: [{
