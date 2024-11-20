@@ -50,7 +50,7 @@ definePageMeta({
             :filter="['FesteWV', 'KoMuX']">
           </info-box>
 
-          <info-boxt title="Phraseme" :color1="color1" link="pos/phrasemes"
+          <info-box title="Phraseme" :color1="color1" link="pos/phrasemes"
             :filter="['PhrasKomp', 'MAP', 'Redeeinleiter', 'DTWW', 'WVBF', 'FesteWV', 'KoMuX']">
           </info-box>
 

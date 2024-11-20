@@ -8,7 +8,7 @@ definePageMeta({
   <div style="max-width: 80ch; margin:auto">
     <v-row>
       <v-col>
-        <headline :h="1" color1="#ff3661" color2="#fec037">Informationstypen</headline>
+        <headline :h="1" :color1="color1">Informationstypen</headline>
       </v-col>
     </v-row>
     <v-row>
@@ -32,25 +32,25 @@ definePageMeta({
         <div class="container">
 
           <info-box title="Frequenzen" link="/datatypes/frequency" :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'KoMuX', 'PhrasKomp',
-            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']" color1="#ff3661" color2="#fec037">
+            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']" :color1="color1">
             Häufigkeit des Vorkommens eines sprachlichen Ausdrucks im Korpus, ermittelt mithilfe von Zählungen
             und/oder Suchanfragen (queries)
           </info-box>
 
           <info-box title="KWICs <span style='font-size:0.8em'>(KeyWord In Context)</span>" link="/datatypes/kwic"
             :filter="['WVBF', 'SpruchList',
-              'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'SPRW']" color1="#ff3661" color2="#fec037">
+              'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'SPRW']" :color1="color1">
             Zeilen (Konkordanzen), in denen das Suchobjekt vorkommt (Textschnipsel)
           </info-box>
 
           <info-box title="Kookkurrenzprofile" link="/datatypes/cooccurrence" :filter="['WVBF',
-            'PREPCON_temp', 'PREPCON_kon']" color1="#ff3661" color2="#fec037">
+            'PREPCON_temp', 'PREPCON_kon']" :color1="color1">
             Durch statistische Berechnungen (sog. Kookkurrenzanalysen) ermittelte Partnerwort-Profile
             (überproportional häufiges Miteinandervorkommen von Wörtern und Wortgruppen)
           </info-box>
 
           <info-box title="Lückenfüllertabellen" link="/datatypes/patterntable" :filter="['WVBF',
-            'PREPCON_temp', 'PREPCON_kon']" color1="#ff3661" color2="#fec037">
+            'PREPCON_temp', 'PREPCON_kon']" :color1="color1">
             Durch automatische Auswertung ermittelte Füllerhäufigkeiten innerhalb eines Musterslots
           </info-box>
 
@@ -106,7 +106,7 @@ export default {
   data() {
     return {
       highlight: null,
-      color1: "#58F380"
+      color1: "#58f380"
     };
   },
   mounted() {
