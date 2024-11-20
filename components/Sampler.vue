@@ -159,16 +159,6 @@ export default {
 </script>
 
 <style scoped>
-.imgback {
-  background: url('logo_syntagmatikon_knoten.jpg');
-  background-size: cover;
-  height: 100vh;
-}
-
-.v-window {
-  max-height: 375px;
-}
-
 .notransition div {
   transition: none !important;
   transition-timing-function: none !important;
@@ -207,6 +197,6 @@ export default {
   color: darkgrey;
   position: relative;
   top: -10rem;
-  left: 35rem;
+  left: 28.5rem;
 }
 </style>

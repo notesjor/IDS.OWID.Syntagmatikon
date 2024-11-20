@@ -46,7 +46,7 @@ definePageMeta({
               <a :href="x.url" target="_blank">
                 <img v-if="x.img != undefined" :src="x.img" style="width: 100%; height: auto; margin-bottom: 10px;" />
                 <img v-else src="/dummy/resource.png" style="width: 100%; height: auto; margin-bottom: 10px;" />
-                <div style="text-align: justify; font-weight: 300" v-html="x.description">
+                <div style="text-align: justify; font-weight: 400" v-html="x.description">
                 </div>
               </a>
               <br />

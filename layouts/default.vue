@@ -25,12 +25,12 @@
 
     <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
       <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
-        <div style="max-width: 80ch;">
+        <div style="max-width: 60ch;">
           <slot />
         </div>
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
-        <div style="max-width: 80ch;">
+        <div style="max-width: 60ch;">
           <slot />
         </div>
       </div>
@@ -78,42 +78,6 @@
 
   </v-app>
 </template>
-
-<style scoped>
-.v-list-subheader {
-  margin: -15px 0px 0px 45px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-}
-</style>
-
-<style>
-.v-list-item__prepend {
-  max-width: 35px !important;
-}
-
-.v-list-item--nav .v-list-item-title
-{
-  font-weight: 300;  
-}
-
-body {
-  hyphens: auto;
-  hyphenate-character: auto 5;
-  hyphenate-limit-chars: auto 5;
-  hyphenate-limit-lines: 2;
-  -webkit-hyphens: auto;
-  -webkit-hyphenate-limit-chars: auto 3;
-  -webkit-hyphenate-limit-lines: 4;
-  -ms-hyphens: auto;
-  -ms-hyphenate-limit-chars: auto 3;
-  -ms-hyphenate-limit-lines: 4;
-  text-align: justify;
-}
-
-.nocaps {
-  text-transform: none;
-}
-</style>
 
 <script setup>
 useHead({

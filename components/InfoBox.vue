@@ -7,7 +7,7 @@
                     <span style="font-weight: 300; font-size: 1.25rem;" v-html="title"/>
                 </v-card-title>
                 <v-card-text>
-                    <v-row style="padding: 0.5rem 0rem; font-weight: 300; text-align: left;">
+                    <v-row style="padding: 0.5rem 0rem; font-weight: 400; text-align: left;">
                         <slot></slot>
                     </v-row>
                     <v-row style="font-family:var(--FF-DISPLAY);border-bottom: 1px lightgray solid; margin:1.0rem -10px 0px -10px; font-weight: 400; color:#666" v-if="filter != null">

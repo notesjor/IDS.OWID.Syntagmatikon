@@ -75,47 +75,6 @@
   </v-app>
 </template>
 
-<style scoped>
-.v-list-subheader {
-  margin: -15px 0px 0px 45px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-}
-</style>
-
-<style>
-.v-list-item__prepend {
-  max-width: 35px !important;
-}
-
-.v-list-item--nav .v-list-item-title
-{
-  font-weight: 300;
-  font-family: var(--FF-DISPLAY);
-}
-
-.v-expansion-panel{
-  font-family: var(--FF-DISPLAY);
-}
-
-body {
-  hyphens: auto;
-  hyphenate-character: auto 5;
-  hyphenate-limit-chars: auto 5;
-  hyphenate-limit-lines: 2;
-  -webkit-hyphens: auto;
-  -webkit-hyphenate-limit-chars: auto 3;
-  -webkit-hyphenate-limit-lines: 4;
-  -ms-hyphens: auto;
-  -ms-hyphenate-limit-chars: auto 3;
-  -ms-hyphenate-limit-lines: 4;
-  text-align: justify;
-}
-
-.nocaps {
-  text-transform: none;
-}
-</style>
-
 <script setup>
 useHead({
   htmlAttrs: {

@@ -200,7 +200,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   --FS-BODYTEXT: 18px;
-  --FF-BODYTEXT: "Libertinus";
+  --FF-BODYTEXT: "Fira Sans";
   --FF-DISPLAY: "Fira Sans";
   --FF-TERMS: "Fira Sans";
 
@@ -215,6 +215,18 @@ html {
   scroll-behavior: smooth;
   font-size: var(--FS-BODYTEXT);
   font-family: var(--FF-BODYTEXT);
+
+  hyphens: auto;
+  hyphenate-character: auto 5;
+  hyphenate-limit-chars: auto 5;
+  hyphenate-limit-lines: 2;
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-chars: auto 3;
+  -webkit-hyphenate-limit-lines: 4;
+  -ms-hyphens: auto;
+  -ms-hyphenate-limit-chars: auto 3;
+  -ms-hyphenate-limit-lines: 4;
+  text-align: justify;
 }
 
 h1 {
@@ -240,7 +252,7 @@ h3 {
 
 div.main {
   font-family: var(--FF-BODYTEXT);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 div.main a {
@@ -332,4 +344,27 @@ ul ol {
   list-style-type: lower-latin;
   list-style-position: inside;
   margin-left: 15px;
+}
+
+.nocaps {
+  text-transform: none;
+}
+
+.v-list-subheader {
+  margin: -15px 0px 0px 45px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.v-list-item__prepend {
+  max-width: 35px !important;
+}
+
+.v-list-item--nav .v-list-item-title
+{
+  font-weight: 300;
+  font-family: var(--FF-DISPLAY);
+}
+
+.v-expansion-panel{
+  font-family: var(--FF-DISPLAY);
 }
