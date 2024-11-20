@@ -121,7 +121,7 @@
               <img src="/img/datatypes/frequency/phraskomp_part_01.png" alt="" />
             </div>
             <div class="caption">
-             Gesamt-Stichwortliste mit Frequenzangaben
+             Ausschnitt aus der Liste der Phrasenkomposita mit Frequenzangaben
             </div>
 
             <div class="exampleImg">
