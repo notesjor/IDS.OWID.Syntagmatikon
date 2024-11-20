@@ -5,33 +5,27 @@ definePageMeta({
 </script>
 
 <template>
-  <div style="max-width: 80ch; margin:auto">
+  <div style="max-width: 86ch; margin:auto">
     <v-row>
       <v-col>
         <div>
-          <h1>Wort- und Ausdrucksarten</h1>
+          <h1>
+            Wort- und Ausdrucksarten
+          </h1>
         </div>
       </v-col>
     </v-row>
     <v-row>
       <v-col>
         <div>
-          <p>Die Beschreibungskandidaten bzw. Stichwörter im Syntagmatikon sowie
-            deren Komponenten basieren auf unterschiedlichen Wort- und
-            Ausdrucksarten. Phraseme und feste Sätze werden als geronnene
-            Ausdrucksarten angesehen und daher ebenso als autonome Einheit
-            betrachtet wie die klassischen Wortarten. Unter Phrasemen werden neben
-            Phraseologismen und Idiomen auch Kollokationen und Funktionsverbgefüge
-            subsumiert.</p>
-          <p>Die Zuordnung der Ressourcen erfolgt nach folgenden Kriterien:</p>
+          <p>Die Beschreibungskandidaten bzw. Stichwörter im SYNTAGMATIKON sowie deren Komponenten basieren auf unterschiedlichen Wort- und Ausdrucksarten. In dieser Rubrik werden jene näher beschrieben, die in mehr als einer Ressource relevant sind.</p>
+          <p>Die Zuordnung der Ressourcen zu Wort- und Ausdrucksarten erfolgt gemäß folgender Kriterien:</p>
           <ul>
-            <li>holistischer Typ (Phraseme, Feste Sätze)</li>
-            <li>Hauptkomponenten, die diesen Eintrag zentral
-              konstituieren</li>
+            <li>Hauptkomponenten, die diesen Eintrag zentral konstituieren</li>
+            <li>sprachliche Einheit als Ganzes (Phraseme; feste Sätze)</li>
           </ul>
-          <p>Nicht gesondert markiert werden Komponenten von Phrasemen und feste
-            Sätzen, da diese potenziell alle Wortarten umfassen können. Hier liegt
-            der Fokus auf der gesamten Einheit.</p>
+          <p>Unter Phrasemen werden Phraseologismen, Idiome, Kollokationen (auch nicht-idiomatische) sowie Funktionsverbgefüge subsumiert. Nicht gesondert markiert werden Komponenten von Phrasemen und feste Sätzen, da diese Mehrworteinheiten potenziell alle Wortarten umfassen können. Hier liegt der Fokus auf der gesamten Einheit.</p>
+          <p>Jedes Kästchen linkt zu einer Hintergrundseite mit Beispielen für Wort- und Ausdrucksarten in den Ressourcen.</p>
         </div>
       </v-col>
     </v-row>
@@ -39,10 +33,9 @@ definePageMeta({
   <div>
     <v-row>
       <v-col cols="12">
-        <div style="max-width: 100ch;">
         <div class="container">
           <info-box title="Nomina" :color1="color1" link="pos/nouns" :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'WVBF',
-            'PhrasKomp', 'DTWW', 'Redeeinleiter']">
+            'PhrasKomp', 'DTWW', 'Redeeinleiter', 'Verlaufsformen']">
           </info-box>
 
           <info-box title="Verben" :color1="color1" link="pos/verbs"
@@ -58,15 +51,14 @@ definePageMeta({
           </info-box>
 
           <info-boxt title="Phraseme" :color1="color1" link="pos/phrasemes"
-            :filter="['PhrasKomp', 'MAP', 'Redeeinleiter', 'DTWW', 'WVBF', 'FesteWV']">
-          </info-boxt>
+            :filter="['PhrasKomp', 'MAP', 'Redeeinleiter', 'DTWW', 'WVBF', 'FesteWV', 'KoMuX']">
+          </info-box>
 
           <info-box title="Feste Sätze" :color1="color1" link="pos/sentences"
-            :filter="['SpruchList', 'PhrasKomp', 'SPRW']">
+            :filter="['KoMuX', 'SpruchList', 'PhrasKomp', 'SPRW']">
           </info-box>
 
         </div>
-      </div>
       </v-col>
     </v-row>
   </div>

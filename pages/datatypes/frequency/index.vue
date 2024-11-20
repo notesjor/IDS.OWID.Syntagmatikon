@@ -20,13 +20,13 @@
     -proportionen.
   </div>
   <p>Im Syntagmatikon dienen Frequenzen nicht nur als empirische Basis, sondern werden selbst als
-            lexikografische Informationseinheiten angeboten:</p>
-          <ul>
-            <li>in Form von Frequenzlisten.</li>
-            <li>als Häufigkeitsangaben zu einzelnen Einträgen/Stichwörtern.
-            </li>
-          </ul>
-    <br/>
+    lexikografische Informationseinheiten angeboten:</p>
+  <ul>
+    <li>in Form von Frequenzlisten.</li>
+    <li>als Häufigkeitsangaben zu einzelnen Einträgen/Stichwörtern.
+    </li>
+  </ul>
+  <br />
 
   <div>
     <compare title="">
@@ -52,7 +52,7 @@
 
 
           <div style="text-align: center; width:100%">
-            <img src="/img/datatypes/frequency/frequencies_all_white.png" style="text-align: center;" />
+            <img src="/img/datatypes/frequency/frequencies_all.png" style="text-align: center;" />
           </div>
 
         </compare-item>
@@ -61,56 +61,77 @@
           webpage="/img/datatypes/frequency/komux_fullscreen_01_annotated.png">
 
           <p>
-            In <resources-list-compact :filter="['KoMuX']"></resources-list-compact> werden Frequenzlisten von
-            unterschiedlichen Merkmalskombinationen der verzeichneten Komposita
-            angezeigt: Lemma; Wortart; Wortbildungstyp; Thematische Kategorie. Zusätzlich bietet die Ressource eine
-            grafische Darstellung der Frequenzentwicklung in der Treffermenge.
-          </p>
+            In <resources-list-compact :filter="['KoMuX']"></resources-list-compact> werden zum einen Gesamtfrequenzen
+            für abstrakte oder lexikalisch teil-spezifizierte Komposita-Muster angezeigt. Solche Muster sind über
+            formale und/oder lexikalisch-semantische Eigenschaften der Konstituenten definiert und dienen als
+            Suchmuster.</p>
+          <p>Zum anderen werden
+            Einzelfrequenzen für jedes Kompositum angezeigt, das zu einem bestimmten Suchmuster gehört.</p>
+          <p>Neben diesen auf ein bestimmtes Suchmuster beschränkten Frequenzangaben kann man sich außerdem anzeigen lassen, wie häufig
+            die in einer Suchanfrage enthaltenen Komposita-Konstituenten innerhalb der Gesamtdaten vorkommen (z.B.: Wie
+            oft kommt die Konstituente Fußball insgesamt als Erstglied bzw. als Zweitglied vor?) </p>
+          <p>Ein besonderes frequenzbezogenes Feature besteht darin, dass zu jedem Suchmuster Visualisierungen
+            angezeigt werden, welche die Frequenzverläufe innerhalb der Treffermenge illustrieren (z.B.: Wie ist die
+            Verteilung der Wortarten innerhalb eines bestimmten Suchmusters?)</p>
+
+
 
           <template #explain>
 
             <div class="exampleImg">
-              <img src="/img/datatypes/frequency/komux_part_01.png" alt="" />
+              <img src="/img/datatypes/frequency/komux_hauptsuche.png" alt="" />
             </div>
             <div class="caption">
-              Ausschnitt aus der Ergebnistabelle für Komposita mit Erstglied <em>land</em> und Zweitglied NOMEN
+              Ausschnitt aus der Treffermenge zum Suchmuster [[KOMPOSTIUM][KOMPOSITUM]]<sub>Kompositum</sub>
             </div>
 
 
             <div class="exampleImg">
-              <img src="/img/datatypes/frequency/komux_part_03.png" alt="" />
+              <img src="/img/datatypes/frequency/komux_konstituenten.png" alt="" />
             </div>
             <div class="caption">
-              Frequenzverlauf für Komposita mit Erstglied <em>land</em> und Zweitglied NOMEN
+              Ausschnitt aus der Konstituenten-Ansicht für das Suchmuster
+              [[KOMPOSTIUM][KOMPOSITUM]]<sub>Kompositum</sub>
             </div>
+
+            <div class="exampleImg">
+              <img src="/img/datatypes/frequency/komux_wortarten.png" alt="" />
+            </div>
+            <div class="caption">
+              Grafische Darstellung der Wortartenverteilung innerhalb des Suchmusters
+              [[KOMPOSTIUM][KOMPOSITUM]]<sub>Kompositum</sub>
+            </div>
+
           </template>
         </compare-item>
 
-        <compare-item value="2" rkey="PhrasKomp" description="Frequenzangaben in PhrasKomp"
-          webpage="/img/datatypes/frequency/phraskomp_fullscreen_01_annotated.png">
+        <compare-item value="2" rkey="PhrasKomp" description="Frequenzangaben in PhrasKomp">
+          <!-- TODO: Inhalt ergänzen -->
           <p>
-            In <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact> werden Frequenzlisten von
-            unterschiedlichen Merkmalskombinationen der verzeichneten
-            Phrasenkomposita angezeigt: Zweitglieder; Ableitungstypen; semantische Gruppen des Zweitglieds.
-          </p>
+            In <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
+            werden zum einen Einzelfrequenzen für jedes Phrasenkompositum des Inventars angezeigt. Zum anderen kann man sich Frequenzen für bestimmte Gruppen von Phrasenkomposita anzeigen lassen, die jeweils über formale und/oder lexikalisch-semantische Eigenschaften des Zweitglieds definiert werden:</p>
+            <ul>
+              <li>Konkretes Zweitgliedlexem</li>
+              <li>Ableitungstyp des Zweitglieds</li>
+              <li>Abstrakte semantische Gruppe des Zweitglieds</li>
+            </ul>
 
           <template #explain>
-
             <div class="exampleImg">
               <img src="/img/datatypes/frequency/phraskomp_part_01.png" alt="" />
             </div>
             <div class="caption">
-              Ausschnitt aus der Frequenzliste: Häufigste Phrasenkomposita (ohne Attribuierung):
+             Ausschnitt aus der Liste der Phrasenkomposita mit Frequenzangaben
             </div>
 
             <div class="exampleImg">
-              <img src="/img/datatypes/frequency/phraskomp_part_02.png" alt="" />
+              <img src="/img/datatypes/frequency/phraskomp_gerede.png" alt="" />
             </div>
-
             <div class="caption">
-              Ausschnitt aus der Frequenzliste für Treffer mit Zweitglied <em>Gerede</em>
+              Ausschnitt aus der Treffermenge für Phrasenkomposita mit dem Zweitglied <em>Gerede</em>
             </div>
           </template>
+
         </compare-item>
 
         <compare-item value="3" rkey="PREPCON_ex" webpage="/img/datatypes/frequency/prepe_fullscreen_01_annotated.png">
@@ -285,23 +306,22 @@
           webpage="/img/datatypes/frequency/rede_fullscreen_annotated.png">
 
           <p>
-            In der Ressource <resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact> gibt es
-            hinter jedem
-            Eintrag eine Frequenzangabe, die aussagt, wie häufig dieser Redeeinleiter insgesamt im zugrunde liegenden
-            Korpus
-            auftritt. Zusätzlich wird in der rechten Spalte angegeben, wie häufig bestimmte Merkmalen in dieser Gruppe
-            auftreten
-            (z.B. Verwendung zur Einleitung direkter vs. indirekter Rede).
+            In <resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact> ist in der Spalte
+            „Redeeinleiter“
+            in Klammern nachfolgend auf den jeweiligen Redeeinleiter hinterlegt, wie häufig dieser im
+            Redewiedergabe-Korpus
+            belegt ist. In der Spalte „Attribute“ ist hinterlegt, wie häufig der jeweilige Redeeinleiter im
+            Redewiedergabe-Korpus mit dem jeweiligen Attribut belegt ist.
           </p>
 
           <template #explain>
 
             <div class="exampleImg">
-              <img src="/img/datatypes/frequency/rede_part_01_num.png" alt="" />
+              <img src="/img/datatypes/frequency/rede_freq.png" width="70%" alt="" />
             </div>
             <div class="caption">
-              Eintrag zum Redeeinleiter <em>sagen</em> - Gesamtfrequenz (1) und Frequenzen
-              verschiedener Merkmale innerhalb dieser Gruppe (2)
+              Die Frequenz des Redeeinleiters „sagen“ im Redewiedergabe-Korpus insgesamt und aufgespaltet nach
+              Attributen.
             </div>
 
 

@@ -1,6 +1,38 @@
 <template>
-    <h1>Sprachaneignung durch wiederkehrende Muster in
-Korpora</h1>
+    <h1>Korpora im <hi>Syntagmatikon</hi></h1>
+    <p>Das am IDS beheimatete <a
+href="https://www.ids-mannheim.de/digspra/kl/projekte/korpora/">Deutsche
+Referenzkorpus (DeReKo)</a> ist die empirische Grundlage für nahezu alle
+Ressourcen des Syntagmatikons. Bei DeReKo handelt es sich um die
+„weltweit größte Sammlung deutschsprachiger Korpora als empirische Basis
+für die linguistische Forschung“ (57,6 Mrd. Wörter; Stand 09.01.2024).
+Den einzelnen Ressourcen liegen unterschiedliche nicht-annotierte und
+annotierte Teilkorpora zugrunde:</p>
+<p>KoMuX: <a
+href="https://grammis.ids-mannheim.de/korpusgrammatik/6615">KoGra
+Untersuchungskorpus</a> (Ausschnitt aus <a
+href="https://www.ids-mannheim.de/digspra/kl/projekte/korpora/">DeReKo)</a></p>
+
+<p>Redeeinleiter: <a
+href="https://github.com/redewiedergabe/corpus">Redewiedergabe-Korpus</a></p>
+<p>PREPCON<sup>explorativ</sup>: Tagged-T (DeReKo-Teilkorpus)</p>
+
+<p>PREPCON<sup>kontrastiv</sup>: Webkorpora <a
+href="https://www.sketchengine.eu/estenten-spanish-corpus/">esTenTen18</a>;
+<a href="https://www.sketchengine.eu/sktenten-slovak-corpus/">skTenTen
+11</a>; Slowakisches Nationalkorpus <a
+href="https://korpus.sk/index_en.html">SNK</a></p>
+
+<p>Alle anderen Ressourcen basieren unterschiedlichen Ausgaben der
+DeReKo-W-Archive.</p>
+<p>Für die Auswertung kamen quantitative Methoden wie Frequenzzählungen,
+iterative Suchen nach Textbelegen, statistische Kookkurrenzanalysen
+sowie Slot-Füller-Analysen zum Einsatz. <v-btn density="compact" size="small" variant=tonal icon="mdi-plus" @click="toggleDiv"></v-btn></p>
+
+<div class="more" v-show="isVisible">
+  <p>
+  <strong>Sprachaneignung durch wiederkehrende Muster in
+Korpora</strong></p>
 <p>Was tun wir in der Regel, wenn wir nach einem angemessenen Ausdruck
 suchen? Klassischerweise schlagen wir im Wörterbuch nach. Heute nutzen
 wir aber auch die Ressourcen im Internet, seien es elektronische
@@ -35,22 +67,21 @@ Einsichten zu typischem Sprachgebrauch gewinnen. Typischer
 Sprachgebrauch manifestiert sich darin, dass viele Sprecher einer
 Sprachgemeinschaft verteilt über viele Texte und Zeitverläufe bestimmte
 sprachliche Einheiten auf dieselbe oder ähnliche Weise einsetzen.</p>
-<p>Die Herausforderung ist nun, die Ergebnisse, die der Computer uns
-liefert, zu verstehen und zu interpretieren.</p>
-<p>Das am IDS beheimatete 
-<NuxtLink to="https://www.ids-mannheim.de/digspra/kl/projekte/korpora/">
-    Deutsche Referenzkorpus (DeReKo)</NuxtLink> ist die
-empirische Grundlage für alle Ressourcen des <hi>Syntagmatikons</hi>. 
-Bei DeReKo handelt es sich um die „weltweit größte
-Sammlung deutschsprachiger Korpora als empirische Basis für die
-linguistische Forschung“ (57,6 Mrd. Wörter; Stand 09.01.2024). Den
-einzelnen Ressourcen liegen unterschiedliche Teilkopora zugrunde.</p>
-
-<p>Für vertiefende Informationen empfehlen wir folgende
-Webseite: <NuxtLink to="https://www.bubenhofer.com/korpuslinguistik/kurs/">
-Einführung in die Korpuslinguistik. Praktische Grundlagen und
-Werkzeuge</NuxtLink>.</p>
   
-
-    
+  </div>
 </template>
+
+<script>
+export default {
+    data() {
+      return {
+        isVisible: false, // initial state of the div (visible)
+      };
+    },
+    methods: {
+      toggleDiv() {
+        this.isVisible = !this.isVisible; // toggle visibility
+      },
+    },
+  };
+  </script>
