@@ -8,7 +8,9 @@
     <v-row>
       <v-col>
         <div>
-          Das korpusbasierte Portal <hi>Syntagmatikon</hi> bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.</div>
+          Das korpusbasierte Portal <hi>Syntagmatikon</hi> bietet Informationen zum Gebrauch von sprachlichen
+          Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten
+          geworden sind.</div>
       </v-col>
     </v-row>
     <v-row>
@@ -21,7 +23,11 @@
     <v-row>
       <v-col>
         <div>
-          Aktuell werden Phraseologismen, Sprichwörter und Sprüche; Kollokationen; Komposita und andere Wortbildungseinheiten; Präpositionen + Substantiv-Kombinationen; Verb + Präpositionen-Kombinationen; wortgruppenartige Redeeinleiter dokumentiert und beschrieben. Des Weiteren widmet sich das Portal der Analyse und Darstellung zugrunde liegender Schablonen und Schemata (Muster) und deren vielfachen Vernetzungen im deutschen Wortschatz.
+          Aktuell werden Phraseologismen, Sprichwörter und Sprüche; Kollokationen; Komposita und andere
+          Wortbildungseinheiten; Präpositionen + Substantiv-Kombinationen; Verb + Präpositionen-Kombinationen;
+          wortgruppenartige Redeeinleiter dokumentiert und beschrieben. Des Weiteren widmet sich das Portal der Analyse
+          und Darstellung zugrunde liegender Schablonen und Schemata (Muster) und deren vielfachen Vernetzungen im
+          deutschen Wortschatz.
         </div>
       </v-col>
     </v-row>
@@ -36,7 +42,7 @@ export default {
     return {
       sample: [
         {
-          tokens: ["Wie", "Tag", "und", "Nacht", "oder:", "Andere", "Länder,", "andere", "Sitten.", "Während", "Jamaica-Fans", "90", "Minuten", "lang", "dem", "Reggae","frönten,", "fleht", "man", "für", "Iran", "zu", "Allah."],
+          tokens: ["Wie", "Tag", "und", "Nacht", "oder:", "Andere", "Länder,", "andere", "Sitten.", "Während", "Jamaica-Fans", "90", "Minuten", "lang", "dem", "Reggae", "frönten,", "fleht", "man", "für", "Iran", "zu", "Allah."],
           annotations: [{
             ranges: [{
               from: 5,
@@ -235,7 +241,7 @@ export default {
             }
             ]
           }
-          ,   {
+            , {
             ranges: [{
               from: 10,
               to: 12
@@ -322,14 +328,14 @@ export default {
           ],
         },
         {
-          tokens: ["Aber", "der", "Sohn", "kam", "nicht", "nach", "dem", "Vater,", "sondern", "nach", "der", "exzentrischen,",  "fantasievollen,", "unangepassten", "Mutter."],
+          tokens: ["Aber", "der", "Sohn", "kam", "nicht", "nach", "dem", "Vater,", "sondern", "nach", "der", "exzentrischen,", "fantasievollen,", "unangepassten", "Mutter."],
           annotations: [{
             ranges: [{
               from: 3,
               to: 4
             },
-            {   
-            from: 5,
+            {
+              from: 5,
               to: 6
             }
             ],

@@ -37,23 +37,26 @@
             Angabetypen in den Ressourcen. Es handelt sich um ein modulares
             Onlineformat, bei dem verfestigte Wortgruppen und lexikalisch geprägte
             Mustern nicht nach einem einheitlichen Raster dargestellt werden,
-            sondern dynamisch-flexibel in unterschiedlichen Beschreibungstiefen. 
-             <v-btn density="compact" size="small" variant=tonal icon="mdi-plus" @click="toggleDiv"></v-btn></p>
-
-            <div class="more" v-show="isVisible">
-            Die Heterogenität der Formate spiegelt ebenso die
-            wissenschaftshistorische Entwicklung des korpuslinguistischen Paradigmas
-            (<a href="https://www.ids-mannheim.de/digspra/kl/projekte/methoden/">Korpusanalyse
-              und- erschließung</a>) und seiner onlinelexikografischen Umsetzungen am
-            IDS wider: von den Anfängen zur Jahrtausendwende (<a
-              href="https://www.ids-mannheim.de/lexik/elexiko">elexiko</a>) über
-            Pilotstudien (<a href="http://wvonline.ids-mannheim.de/home.htm">WV
-              online</a>) und Aufbereitung in großen Online-Wörterbüchern in den
-            Nuller- und Zehnerjahren in <a href="https://www.owid.de/">OWID</a> (<resources-list-compact :filter="['Verlaufsformen', 'SPRW']"></resources-list-compact>) bis
-            hin zu Datenbanken (<resources-list-compact :filter="['KoMuX', 'MAP', 'Redeeinleiter']"></resources-list-compact>);
-            neuartigen Präsentationsformaten (<resources-list-compact :filter="['PREPCON']"></resources-list-compact>)
-            und Inventaren (<resources-list-compact :filter="['Spruchlist', 'PhrasKomp']"></resources-list-compact>) in der
-            Gegenwart.</div>
+            sondern dynamisch-flexibel in unterschiedlichen Beschreibungstiefen.
+            <expand-me>Die Heterogenität der Formate spiegelt ebenso die
+              wissenschaftshistorische Entwicklung des korpuslinguistischen Paradigmas
+              (<a href="https://www.ids-mannheim.de/digspra/kl/projekte/methoden/">Korpusanalyse
+                und- erschließung</a>) und seiner onlinelexikografischen Umsetzungen am
+              IDS wider: von den Anfängen zur Jahrtausendwende (<a
+                href="https://www.ids-mannheim.de/lexik/elexiko">elexiko</a>) über
+              Pilotstudien (<a href="http://wvonline.ids-mannheim.de/home.htm">WV
+                online</a>) und Aufbereitung in großen Online-Wörterbüchern in den
+              Nuller- und Zehnerjahren in <a href="https://www.owid.de/">OWID</a> (<resources-list-compact
+                :filter="['Verlaufsformen', 'SPRW']"></resources-list-compact>) bis
+              hin zu Datenbanken (<resources-list-compact
+                :filter="['KoMuX', 'MAP', 'Redeeinleiter']"></resources-list-compact>);
+              neuartigen Präsentationsformaten (<resources-list-compact :filter="['PREPCON']"></resources-list-compact>)
+              und Inventaren (<resources-list-compact :filter="['Spruchlist', 'PhrasKomp']"></resources-list-compact>)
+              in
+              der
+              Gegenwart.
+            </expand-me>
+          </p>
 
           <p>Eine Besonderheit des <span class="smallcaps">Syntagmatikons</span>
             stellen erklärende Texte mit unterschiedlichen Informationstiefen dar,
@@ -64,60 +67,11 @@
             können, z. B. im Bereich Deutsch als Fremdsprache. Es geht dabei
             erklärtermaßen nicht um Didaktisierung im strengen Sinne, sondern um
             allgemeinverständliche Erklärungen.
-           </p>
-            
-           
+          </p>
+
+
         </div>
       </v-col>
     </v-row>
   </div>
 </template>
-
-<script>
-export default {
-  name: "Index",
-  theme: { dark: false },
-  data() {
-    return {
-      isVisible: false, // initial state of the div (visible)
-    }
-  },
-
-  mounted() {
-  },
-
-  methods: {
-    toggleDiv() {
-        this.isVisible = !this.isVisible; // toggle visibility
-      },
-  }
-}
-</script>
-
-<style scoped>
-ul {
-  list-style-type: disc;
-  list-style-position: inside;
-  margin-left: 25px;
-}
-
-ol {
-  list-style-type: decimal;
-  list-style-position: inside;
-  margin-left: 25px;
-}
-
-ul ul,
-ol ul {
-  list-style-type: circle;
-  list-style-position: inside;
-  margin-left: 15px;
-}
-
-ol ol,
-ul ol {
-  list-style-type: lower-latin;
-  list-style-position: inside;
-  margin-left: 15px;
-}
-</style>
