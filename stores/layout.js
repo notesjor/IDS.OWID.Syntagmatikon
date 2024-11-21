@@ -7,10 +7,10 @@ export const useLayoutStore = defineStore("layoutStore", {
       parent: "",      
 
       colors: {
-        "Ressourcentypen": [ "#3468eb", "#ff3661" ],
-        "Informationstypen": [ "#ff3661", "#fec037" ],
-        "Wort- und Ausdrucksarten": [ "#fec037", "#12cb4b" ],
-        "Musterzugänge": [ "#12cb4b", "#3468eb" ],
+        "Ressourcentypen": "#f24162",
+        "Informationstypen": "#58f380",
+        "Wort- und Ausdrucksarten": "#a24cc2",
+        "Musterzugänge": "#f25a40",
       }
     };
   },

@@ -13,7 +13,7 @@
                     <v-row style="font-family:var(--FF-DISPLAY);border-bottom: 1px lightgray solid; margin:1.0rem -10px 0px -10px; font-weight: 400; color:#666" v-if="filter != null">
                         Verfügbar in:
                     </v-row>
-                    <v-row style="margin-top: 0rem; color:#666" v-if="filter != null">
+                    <v-row style="margin-top: 0rem; color:#666; padding: 8px 0px 5px 0px" v-if="filter != null">
                         <resources-list-compact :filter="filter" :showDesc="false" />
                     </v-row>
                     <v-row style="border-top: 1px lightgray solid; margin:0.75rem -10px 0px -10px;">

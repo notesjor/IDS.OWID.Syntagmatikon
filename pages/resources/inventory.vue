@@ -1,12 +1,20 @@
+<script setup>
+definePageMeta({
+    layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+    mounted() {
+        const props = useLayoutStore();
+        props.title = 'Inventare und Sammlungen';
+        props.parent = 'Ressourcentypen';
+    },
+}
+</script>
+
 <template>
-    <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
-        <div class="nolink">
-            <NuxtLink to="/resources">
-                Zurück zu "Ressourcentypen"
-            </NuxtLink>
-        </div>
-    </v-btn>
-    <h1>Inventare und Sammlungen</h1>
     <img src="/img/resources/03.png" alt="Inventare und Sammlungen"
         style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
     <p>Inventare im <hi>Syntagmatikon</hi> sind aus dem Korpus extrahierte oder im Korpus überprüfte große Sammlungen

@@ -25,16 +25,16 @@
 
     <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
       <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
-        <div style="max-width: 80ch;">
+        <div style="max-width: 60ch;">
           <div class="nolink" style="margin:0px 0px 10px -15px">
-            <v-btn variant="text" class="nocaps"><v-icon icon="mdi-step-backward"></v-icon>Zurück zu: "{{ layoutVars?.parent }}"</v-btn>          
+            <v-btn variant="text" class="nocaps" @click="goToParentPage"><v-icon icon="mdi-step-backward"></v-icon>Zurück zu: "{{ layoutVars?.parent }}"</v-btn>          
           </div>
-          <div style="margin-bottom: 0.6rem;"><headline :h1="1" :color1="color1" :color2="color2">{{ layoutVars?.title }}</headline></div>
+          <div style="margin-bottom: 0.6rem;"><h1><v-icon :color="color1">mdi-compass</v-icon>{{ layoutVars?.title }}</h1></div>
           <slot />
         </div>
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
-        <div style="max-width: 80ch;">
+        <div style="max-width: 60ch;">
           <slot />
         </div>
       </div>
@@ -174,7 +174,12 @@ export default {
   methods: {
     windowResize() {
       this.useMobileView = this.$vuetify.display.width < 960;
-    }
+    },
+    goToParentPage() {
+      let path = this.$route.path.split("/");
+      path.pop();
+      this.$router.push(path.join("/"));
+    }    
   },
 
   computed: {
@@ -188,14 +193,7 @@ export default {
     color1() {
       if(this.layoutVars == null)
         return "#000";
-      console.log("1");
-      return this.layoutVars?.getParentColor[0];
-    },
-    color2() {
-      if(this.layoutVars == null)
-        return "#000";
-        console.log("2");
-      return this.layoutVars?.getParentColor[1];
+      return this.layoutVars?.getParentColor;
     },
   },
 }

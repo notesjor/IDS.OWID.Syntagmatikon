@@ -1,12 +1,20 @@
+<script setup>
+definePageMeta({
+    layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+    mounted() {
+        const props = useLayoutStore();
+        props.title = 'Pilot- und Einzelstudien';
+        props.parent = 'Ressourcentypen';
+    },
+}
+</script>
+
 <template>
-    <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
-        <div class="nolink">
-            <NuxtLink to="/resources">
-                Zurück zu "Ressourcentypen"
-            </NuxtLink>
-        </div>
-    </v-btn>
-    <h1>Pilot- und Einzelstudien</h1>
     <img src="/img/resources/05.png" alt="Pilot- und Einzelstudien"
         style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
     <div>

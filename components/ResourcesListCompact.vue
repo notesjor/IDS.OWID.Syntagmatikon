@@ -52,8 +52,7 @@ export default {
 }
 
 .v-chip{
-  margin: 5px;
-
+  margin: 0px 2px 2px 0px;
 }
 
 .left {
