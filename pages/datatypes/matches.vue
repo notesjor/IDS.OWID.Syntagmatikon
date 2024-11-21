@@ -74,12 +74,12 @@
                     <p>
                         In <resources-list-compact :filter="['PREPCON_temp']"></resources-list-compact> werden Belege in
                         zwei Formen angeboten:
+                    </p>
                     <ul>
                         <li>ausgewählte KWICs, die die Autonomie einer Präposition-Nomen-Verbindung (ohne weitere
                             Ergänzungen) dokumentieren</li>
                         <li>ausgewählte Volltextbelege, die den typischen Gebrauch illustrieren</li>
                     </ul>
-                    </p>
 
                     <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
 

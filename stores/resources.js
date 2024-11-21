@@ -12,7 +12,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameLong: "PREPCON - Präposition-Nomen-Verbindungen im Kontext",
           description:
             "<b>PREPCON<sup>online</sup></b> bietet Informationen zum Gebrauch von ca. 80.000 Präposition-Nomen-Verbindungen des Deutschen (z.B. <em>über Jahre; nach Belieben</em>). Abrufbar sind systematisierte Korpusdaten (Frequenzen, KWICs, Volltextstellen, Kookkurrenzprofile, <em>lexpan</em>-Mustertabellen) und narrative Kommentare. Diese verfestigten Ausdrücke und ihnen zugrunde liegende Muster werden in drei Modulen dokumentiert: PREPCON<sup>explorativ</sup>; PREPCON<sup>temporal</sup>; PREPCON<sup>kontrastiv</sup>.",
-          img: "./img/sources/prepcon.PNG",
+          img: "./img/sources/prepcon.png",
           url: "http://uwv.ids-mannheim.de/prepcon/prepcon_online.html",
           hideInSearch: true,
         },
@@ -23,7 +23,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "PREPCON<sup>explorativ</sup> - Explorative Datenbank zu Präposition-Nomen-Verbindungen im Kontext",
           description:
             "",
-          img: "./img/sources/prepcon_ex.PNG",
+          img: "./img/sources/prepcon_ex.png",
           url: "http://uwv.ids-mannheim.de/prepcon/modul1/",
           tags: [],
           quest: "http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?{q}",
@@ -43,7 +43,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "PREPCON<sup>temporal</sup> - Kurzartikel zu temporalen Präposition-Nomen-Verbindungen im Kontext",
           description:
             "",
-          img: "./img/sources/prepcon_temp.PNG",
+          img: "./img/sources/prepcon_temp.png",
           url: "http://uwv.ids-mannheim.de/prepcon/modul2/",
           tags: [],
           quest: "http://uwv.ids-mannheim.de/prepcon/modul2/inventar/{q}",
@@ -67,7 +67,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "PREPCON<sup>kontrastiv</sup> - Kontrastive Darstellung von Präposition-Nomen-Verbindungen im Kontext",
           description:
             "",
-          img: "./img/sources/prepcon_kon.PNG",
+          img: "./img/sources/prepcon_kon.png",
           url: "http://uwv.ids-mannheim.de/prepcon/modul3/",
           tags: [],
           quest:
@@ -94,7 +94,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameLong: "KoMuX - Kompositamuster-Explorer",
           description:
             "Der <b>Kompositamuster-Explorer</b> bietet die Möglichkeit, ein Inventar von ca. 50.000 nominalen Komposita gezielt nach abstrakten oder lexikalisch-teilspezifizierten Mustern zu durchsuchen. Gruppen von Komposita lassen sich über grammatische (Wortbildungstyp oder Wortart), (semantisch-)thematische (GermaNet-Wortfelder) oder lexikalische Eigenschaften (konkretes Lemma) ihrer Erst- und Zweitglieder definieren. KoMuX beruht auf automatischen Annotationen, die manuell bereinigt wurden.",
-          img: "./img/sources/komux.PNG",
+          img: "./img/sources/komux.png",
           url: "https://www.owid.de/plus/komux/",
           tags: [],
           quest: "https://www.owid.de/plus/komux/?lem={q}",
@@ -115,7 +115,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameLong: "MAP - Musterbank argumentmarkierender Präpositionen",
           description:
             "<b>MAP</b> ist eine empirisch fundierte Onlineressource, die sich als Gegenstück zu traditionellen Valenzlexika versteht („Musterbank“). Behandelt werden Verbindungen von Verben mit vermeintlich bedeutungsleeren Präpositionen. MAP rekonstruiert die verblasste semantische Motivation dieser Muster und dokumentiert ihre produktive Ausstrahlung sowie ihre Relationen zu anderen Mustern in textlichen Beschreibungen und Visualisierungen.",
-          img: "./img/sources/map.PNG",
+          img: "./img/sources/map.png",
           url: "http://lexik02.ids-mannheim.de/vas-v7/",
           tags: [],
           search_type: "Deskriptive Datenbanken",
@@ -135,7 +135,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "SpruchList - Referenzinventar deutscher Sprichwörter und Sprüche",
           description:
             "<b>SpruchList</b> ist eine korpusbasierte, durchsuch- und sortierbare Häufigkeitsliste von 650 Sprichwörtern, Sprüchen und festen Gebrauchssätzen des Deutschen – angereichert mit hinterlegten Suchanfragen, Kontextzeilen, Verlinkungen und Visualisierungen. Das  Referenzinventar enthält Sprichwörter wie <em>wer A sagt, muss auch B sagen</em> und andere feste Sätze, die Eingang in die Allgemeinsprache gefunden haben wie <em>klein, aber fein</em> oder <em>aus die Maus</em>.",
-          img: "./img/sources/spruchlist.PNG",
+          img: "./img/sources/spruchlist.png",
           url: "http://uwv.ids-mannheim.de/spruchlist/",
           tags: [],
           search_type: "Inventare und Sammlungen",
@@ -153,7 +153,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "PhrasKomp - Korpusbasiertes Inventar nominaler Phrasenkomposita(muster) im Deutschen",
           description:
             "<b>PhrasKomp</b> ist ein korpusbasiertes, durchsuchbares Inventar von 1.576 nominalen Phrasenkomposita des Deutschen.  Es hat den Anspruch, die Bildungsmöglichkeiten der Phrasenkomposition im Deutschen repräsentativ abzubilden. Aufgrund der enthaltenen manuellen Annotationen kann das Inventar zudem gezielt nach lexikalisch teilspezifizierten oder abstrakten Submustern der Phrasenkomposition durchsucht werden, und zwar in Abhängigkeit des Zweitgliedtyps.",
-          img: "./img/sources/phraskomp.PNG",
+          img: "./img/sources/phraskomp.png",
           url: "http://uwv.ids-mannheim.de/plus/phraskomp/",
           tags: [],
           search_type: "Inventare und Sammlungen",
@@ -178,7 +178,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameLong: "Das kleine Wörterbuch der Redeeinleiter",
           description:
             "<b>Das kleine Wörterbuch der Redeeinleiter</b> ist eine korpusbasierte und durchsuchbare Häufigkeitsliste von 523 Redeeinleitern. Für jeden Redeeinleiter bietet die Ressource einen Überblick über die Vorkommensverteilung nach den Attributen „Medium“ (Rede- oder Gedankenwiedergabe), „Wiedergabetyp“ (direkt oder indirekt), „Position“ (initial, medial oder final) und „Textsorte“ (fiktional oder nicht-fiktional).",
-          img: "./img/sources/redeeinleiter.PNG",
+          img: "./img/sources/redeeinleiter.png",
           url: "https://www.owid.de/plus/redeeinleiter",
           tags: [],
           search_type: "Deskriptive Datenbanken",
@@ -196,7 +196,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameLong: "Sprichwörterbuch",
           description:
             "Das <b>Sprichwörterbuch</b> ist das erste empirisch abgesicherte und nach Kriterien der wissenschaftlichen Lexikografie erarbeitete Online-Wörterbuch zum aktuellen Gebrauch fester Sätze der deutschen Sprache – im Kern Sprichwörter. Es wurde mithilfe systematischer Korpusanalysen neu erarbeitet und stellt somit keine Fortschreibung tradierter Wörterbücher dar. SWB umfasst drei Teilbereiche: 300 Einträge aus dem EU-Projekt „Sprichwort“, häufige Sprichwörter und Werbeslogans.",
-          img: "./img/sources/sprw.PNG",
+          img: "./img/sources/sprw.png",
           url: "https://www.owid.de/wb/sprw/start.html",
           tags: [],
           quest: "https://www.owid.de/artikel/{q}",
@@ -219,7 +219,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameLong: "Kleines Wörterbuch der Verlaufsformen im Deutschen",
           description:
             "Das <b>Verlaufsformenwörterbuch</b> dokumentiert das Auftreten der drei Verlaufsformen <em>am</em>-Progressiv (<em>sie ist am Arbeiten</em>), Absentiv (<em>sie ist arbeiten</em>) und <em>beim</em>-Verlaufsform (<em>sie ist beim Arbeiten</em>). Dabei werden Verlaufsformen zu über 900 Verben mit mehr als 5000 Belegen dokumentiert, die nach verschiedenen Parametern gefiltert werden können, u.a. nach der Region des Belegs, nach dem Vorkommen eines direkten Objekts, eines inkorporierten Objekts oder eines Reflexivums.",
-          img: "./img/sources/verlaufsformen.PNG",
+          img: "./img/sources/verlaufsformen.png",
           url: "https://www.owid.de/service/stichwortlisten/progdb",
           tags: [],
           quest: "https://www.owid.de/artikel/{q}",
@@ -242,7 +242,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameLong: "Wortverbindungsfeld zu Präposition+GRUND",
           description:
             "Das <b>Wortverbindungsfeld GRUND</b> visualisiert die Vernetzung von Wortverbindungen und semiabstrakten Mustern des Bezugslexems GRUND in Kombination mit den Präpositionen <em>aus; auf; in; mit</em> und <em>ohne</em> (basierend auf Steyer 2013). Die hierarchisch angeordneten 50 Knoten bündeln jeweils automatisch ermittelte Angaben wie Frequenz; KWIC; Kookkurrenz; Slot-Füller und inhaltliche Beschreibungen. Bei diesem Präsentationsformat rücken die systematisierten Korpusdaten selbst ins Zentrum der Einträge.",
-          img: "./img/sources/wvfeld.PNG",
+          img: "./img/sources/wvfeld.png",
           url: "http://wvonline.ids-mannheim.de/wvfelder-v3/grund-graphik.html",
           tags: [],
           search_type: "Pilotstudien",
@@ -270,7 +270,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameLong: "Feste Wortverbindungen des Deutschen",
           description:
             "<b>Feste Wortverbindungen</b> wurde in der frühen Entwicklungsphase von OWID als neuer, korpusbasierter Zugang zu Bedeutung und Gebrauch in der Mehrwortlexikografie erarbeitet. Diese Rubrik enthält 25 Musterartikel (Phraseologismen, z. B. etw. <em>an die große Glocke hängen</em>) sowie 100 Kurzartikel (Wortverbindungen mit den adjektivischen Komponenten <em>blind; geistig; gesund; normal</em> und <em>sanft</em>). Die Beschreibungen fußen auf typischen Kookkurrenz- und Kontextmustern in Korpora.",
-          img: "./img/sources/festeWV.PNG",
+          img: "./img/sources/festeWV.png",
           url: "https://www.owid.de/wb/uwv/start.html",
           tags: [],
           quest: "https://www.owid.de",
@@ -296,7 +296,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameLong: "DTWW - Deutsch-türkische Wortverbindungen Wirtschaft",
           description:
             "<b>Deutsch-türkische Wortverbindungen Wirtschaft</b> ist eine Sammlung deutsch-türkischer Wortverbindungen und Einwortphraseologismen der Domäne ‚Wirtschaft‘. Sie enthält ca. 900 deutsche Einträge, ihre türkischen Entsprechungen und typische Belege aus DeReKo sowie die wörtliche Übersetzung der türkischen Äquivalente, die nicht 1:1 übertragbar sind. Es handelt sich um eine bearbeitete und erweiterte Liste aus Aktaş A. (†) (2008) (Kooperation Marmara-Universität Istanbul und Projekt „Usuelle Wortverbindungen“).",
-          img: "./img/sources/dtww.PNG",
+          img: "./img/sources/dtww.png",
           url: "http://wvonline.ids-mannheim.de/dtww/dtww_komplett.htm",
           tags: [],
           search_type: "Inventare und Sammlungen",
@@ -318,7 +318,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
         //   nameLong: "Deutsch-russische Idiome online",
         //   description:
         //     "Bei <b>Deutsch-russische Idiome online</b> handelt es sich um einen – in Kooperation mit dem Projekt „Usuelle Wortverbindungen“ – erstellten Auszug aus „Moderne deutsch-russische Idiomatik: Ein Korpus-Wörterbuch“ (D. Dobrovol’skij und A.Šarandin; RAW, Moskau / ÖAW, Wien). Die Online-Ressource enthält 70 Artikel zu deutschen Idiomen wie <em>sich schwarz ärgern</em> russische Entsprechungen sowie deutsche Korpusbelege mit wortwörtlichen Übersetzungen ins Russische.",
-        //   img: "./img/sources/dri.PNG",
+        //   img: "./img/sources/dri.png",
         //   url: "http://wvonline.ids-mannheim.de/idiome_russ/AKTE_zu_den_Akten_legen.htm",
         //   tags: [],
         //   search_type: "Online-Wörterbücher",

@@ -169,6 +169,7 @@
             <resources-list-compact :filter="['PREPCON_temp']"></resources-list-compact> bietet zwei Typen von
             Frequenzangaben
             an:
+          </p>
           <ul>
             <li>Häufigkeitsangaben für eine PN in „Kurzartikel zu temporalen Zweiworteinheiten“ mit drei Frequenzen und
               ihren zugrunde liegenden Suchanfragen Präposition in (Groß- und Kleinschreibung zusammen/einzeln plus
@@ -176,7 +177,6 @@
             <li>Frequenzliste in „Inventar temporaler Präposition-Nomen-Verbindungen“ mit Häufigkeitsangaben, die aus
               PREPCON<sup>explorativ</sup> übernommen wurden und mit den Einträgen dort verlinkt sind.</li>
           </ul>
-          </p>
 
           <template #explain>
 
