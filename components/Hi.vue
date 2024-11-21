@@ -1,0 +1,3 @@
+<template>
+    <span style="font-variant: small-caps;"><slot/></span>
+</template>

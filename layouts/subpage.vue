@@ -29,7 +29,12 @@
           <div class="nolink" style="margin:0px 0px 10px -15px">
             <v-btn variant="text" class="nocaps" @click="goToParentPage"><v-icon icon="mdi-step-backward"></v-icon>Zurück zu: "{{ layoutVars?.parent }}"</v-btn>          
           </div>
-          <div style="margin-bottom: 0.6rem;"><h1><v-icon :color="color1">mdi-compass</v-icon><span v-html="layoutVars?.title"/></h1></div>
+          <div style="margin-bottom: 0.6rem;">
+            <div style="display: grid; grid-template-columns: auto 1fr; align-items: center;">
+              <v-icon :color="color1" style="font-size: 2.5rem; margin-right: 10px;">{{ icon }}</v-icon>
+              <h1><span v-html="layoutVars?.title"/></h1>
+            </div>
+          </div>
           <v-row>
             <v-col>
               <slot />
@@ -90,42 +95,6 @@
 
   </v-app>
 </template>
-
-<style scoped>
-.v-list-subheader {
-  margin: -15px 0px 0px 45px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-}
-</style>
-
-<style>
-.v-list-item__prepend {
-  max-width: 35px !important;
-}
-
-.v-list-item--nav .v-list-item-title {
-  font-weight: 300;
-  font-family: var(--FF-DISPLAY);
-}
-
-body {
-  hyphens: auto;
-  hyphenate-character: auto 5;
-  hyphenate-limit-chars: auto 5;
-  hyphenate-limit-lines: 2;
-  -webkit-hyphens: auto;
-  -webkit-hyphenate-limit-chars: auto 3;
-  -webkit-hyphenate-limit-lines: 4;
-  -ms-hyphens: auto;
-  -ms-hyphenate-limit-chars: auto 3;
-  -ms-hyphenate-limit-lines: 4;
-  text-align: justify;
-}
-
-.nocaps {
-  text-transform: none;
-}
-</style>
 
 <script setup>
 useHead({
@@ -203,6 +172,11 @@ export default {
         return "#000";
       return this.layoutVars?.getParentColor;
     },
+    icon() {
+      if(this.layoutVars == null)
+        return "";
+      return this.layoutVars?.getParentIcon;
+    }
   },
 }
 </script>

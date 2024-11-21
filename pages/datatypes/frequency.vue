@@ -20,12 +20,10 @@ export default {
     Phänomene eher einen typischen Aspekt des Sprachgebrauchs in den jeweiligen Korpora abbilden als seltene. Allerdings
     sind Frequenzen nur Anhaltspunkte, denn es spielen viele Faktoren bei der automatischen Häufigkeitsermittlung eine
     Rolle. Deshalb sollten auch die Ko- und Kontexte in die Analyse einbezogen werden.
-    <expand-me>Generell gibt es keine Häufigkeit in der Sprache an sich (z.B. die häufigsten Sprichwörter oder Komposita
-      des
-      Deutschen), sondern immer nur eine relative in Bezug auf die vorher formulierte Suchanfrage fußend auf der zu
-      einem
-      bestimmten Zeitpunkt ausgewählten Korpusbasis. Es geht also eher um Frequenzbereiche und Häufigkeitstrends bzw.
-      -proportionen.
+    <expand-me>Generell gibt es keine Häufigkeit in der Sprache an sich (z.B. die häufigsten Sprichwörter oder Komposita des
+    Deutschen), sondern immer nur eine relative in Bezug auf die vorher formulierte Suchanfrage fußend auf der zu einem
+    bestimmten Zeitpunkt ausgewählten Korpusbasis. Es geht also eher um Frequenzbereiche und Häufigkeitstrends bzw.
+    -proportionen.
     </expand-me>
   </p>
   <p>Im Syntagmatikon dienen Frequenzen nicht nur als empirische Basis, sondern werden selbst als
@@ -35,6 +33,7 @@ export default {
     <li>als Häufigkeitsangaben zu einzelnen Einträgen/Stichwörtern.
     </li>
   </ul>
+  <br />
 
   <div>
     <compare title="">
@@ -75,8 +74,7 @@ export default {
             Suchmuster.</p>
           <p>Zum anderen werden
             Einzelfrequenzen für jedes Kompositum angezeigt, das zu einem bestimmten Suchmuster gehört.</p>
-          <p>Neben diesen auf ein bestimmtes Suchmuster beschränkten Frequenzangaben kann man sich außerdem anzeigen
-            lassen, wie häufig
+          <p>Neben diesen auf ein bestimmtes Suchmuster beschränkten Frequenzangaben kann man sich außerdem anzeigen lassen, wie häufig
             die in einer Suchanfrage enthaltenen Komposita-Konstituenten innerhalb der Gesamtdaten vorkommen (z.B.: Wie
             oft kommt die Konstituente Fußball insgesamt als Erstglied bzw. als Zweitglied vor?) </p>
           <p>Ein besonderes frequenzbezogenes Feature besteht darin, dass zu jedem Suchmuster Visualisierungen
@@ -118,22 +116,19 @@ export default {
           <!-- TODO: Inhalt ergänzen -->
           <p>
             In <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
-            werden zum einen Einzelfrequenzen für jedes Phrasenkompositum des Inventars angezeigt. Zum anderen kann man
-            sich
-            Frequenzen für bestimmte Gruppen von Phrasenkomposita anzeigen lassen, die jeweils über formale und/oder
-            lexikalisch-semantische Eigenschaften des Zweitglieds definiert werden:</p>
-          <ul>
-            <li>Konkretes Zweitgliedlexem</li>
-            <li>Ableitungstyp des Zweitglieds</li>
-            <li>Abstrakte semantische Gruppe des Zweitglieds</li>
-          </ul>
+            werden zum einen Einzelfrequenzen für jedes Phrasenkompositum des Inventars angezeigt. Zum anderen kann man sich Frequenzen für bestimmte Gruppen von Phrasenkomposita anzeigen lassen, die jeweils über formale und/oder lexikalisch-semantische Eigenschaften des Zweitglieds definiert werden:</p>
+            <ul>
+              <li>Konkretes Zweitgliedlexem</li>
+              <li>Ableitungstyp des Zweitglieds</li>
+              <li>Abstrakte semantische Gruppe des Zweitglieds</li>
+            </ul>
 
           <template #explain>
             <div class="exampleImg">
               <img src="/img/datatypes/frequency/phraskomp_part_01.png" alt="" />
             </div>
             <div class="caption">
-              Ausschnitt aus der Liste der Phrasenkomposita mit Frequenzangaben
+             Ausschnitt aus der Liste der Phrasenkomposita mit Frequenzangaben
             </div>
 
             <div class="exampleImg">
@@ -181,7 +176,6 @@ export default {
             <resources-list-compact :filter="['PREPCON_temp']"></resources-list-compact> bietet zwei Typen von
             Frequenzangaben
             an:
-          </p>
           <ul>
             <li>Häufigkeitsangaben für eine PN in „Kurzartikel zu temporalen Zweiworteinheiten“ mit drei Frequenzen und
               ihren zugrunde liegenden Suchanfragen Präposition in (Groß- und Kleinschreibung zusammen/einzeln plus
@@ -189,6 +183,7 @@ export default {
             <li>Frequenzliste in „Inventar temporaler Präposition-Nomen-Verbindungen“ mit Häufigkeitsangaben, die aus
               PREPCON<sup>explorativ</sup> übernommen wurden und mit den Einträgen dort verlinkt sind.</li>
           </ul>
+          </p>
 
           <template #explain>
 

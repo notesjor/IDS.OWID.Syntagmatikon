@@ -37,9 +37,9 @@
               </div>
             </v-tabs-window-item>
           </v-tabs-window>
-          <v-btn density="dense" variant="text" @click="tabPrev" icon="mdi-arrow-left-bold-box-outline"
+          <v-btn density="compact" variant="text" @click="tabPrev" icon="mdi-arrow-left-bold-box-outline"
             class="myBtnPrev"></v-btn>
-          <v-btn density="dense" variant="text" @click="tabNext" icon="mdi-arrow-right-bold-box-outline"
+          <v-btn density="compact" variant="text" @click="tabNext" icon="mdi-arrow-right-bold-box-outline"
             class="myBtnNext"></v-btn>
         </div>
       </v-col>
