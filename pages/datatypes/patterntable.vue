@@ -1,13 +1,20 @@
-<template>
-    <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
-        <div class="nolink">
-            <NuxtLink to="/datatypes">
-                Zurück zu "Informationstypen"
-            </NuxtLink>
-        </div>
-    </v-btn>
-    <h1>Lückenfüllertabellen</h1>
+<script setup>
+definePageMeta({
+    layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+    mounted() {
+        const props = useLayoutStore();
+        props.title = 'Lückenfüllertabellen';
+        props.parent = 'Informationstypen';
+    },
+}
+</script>
 
+<template>
     <p>Syntagmen zeichnen sich nicht nur dadurch aus, dass sie verfestigte Wortgruppen sind, sondern dass gleichzeitig
         bestimmte Komponenten austauschbar sind. Diese Ersetzung ist aber nicht eine Sache von Sprachspiel oder
         stilistischer Variation. Vielmehr folgt dieser Mechanismus Mustern: Viele Sprachteilhaber füllen diese Slots auf
@@ -22,7 +29,7 @@
         Basis, sondern werden in einigen Ressourcen selbst als lexikografische Informationseinheiten angeboten.</p>
 
     <div>
-        <compare >
+        <compare>
 
             <!-- NOTE: Zuerst muss ein <template #headers> erstellt werden -->
             <!-- NOTE: dieses sollte mehrerer Tabs: <v-tab value="ALL" class="nocaps"> enthalten -->

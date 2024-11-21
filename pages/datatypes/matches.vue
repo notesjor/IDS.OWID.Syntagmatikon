@@ -1,12 +1,20 @@
+<script setup>
+definePageMeta({
+    layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+    mounted() {
+        const props = useLayoutStore();
+        props.title = 'Belege';
+        props.parent = 'Informationstypen';
+    },
+}
+</script>
+
 <template>
-    <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
-        <div class="nolink">
-            <NuxtLink to="/datatypes">
-                Zurück zu "Informationstypen"
-            </NuxtLink>
-        </div>
-    </v-btn>
-    <h1>Belege</h1>
     <p>Belege sind vom Lexikografen ausgewählte Textausschnitte auf der Basis von Korpusdaten. Belege können manuell
         ausgewählte KWICs sein, aber ebenso mehrere Sätze oder ganze Textabschnitte. Ihre Auswahl ist eine der
         anspruchsvollsten Aufgaben in der lexikografischen Praxis. In der oft riesigen Anzahl automatisch ermittelter
@@ -145,7 +153,13 @@
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
                         In <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
-                        wird zu jedem der 1.576 Phrasenkomposita des Inventars ein manuell ausgewählter Beleg angeführt, der die Verwendung und Bedeutung der jeweiligen Bildung prototypisch illustriert. Die Belege enthalten das jeweilige Phrasenkompositum, ergänzt um den engen textuellen Kontext. Die Belege sind in den Ergebnistabellen standardmäßig ausgeblendet und lassen sich für jedes Phrasenkompositum separat aufklappen.
+                        wird zu jedem der 1.576 Phrasenkomposita des Inventars ein manuell ausgewählter Beleg angeführt,
+                        der die
+                        Verwendung und Bedeutung der jeweiligen Bildung prototypisch illustriert. Die Belege enthalten
+                        das jeweilige
+                        Phrasenkompositum, ergänzt um den engen textuellen Kontext. Die Belege sind in den
+                        Ergebnistabellen
+                        standardmäßig ausgeblendet und lassen sich für jedes Phrasenkompositum separat aufklappen.
                     </p>
 
                     <template #explain>
@@ -153,7 +167,8 @@
                             <img src="/img/datatypes/matches/phraskomp_gerede.png" alt="" />
                         </div>
                         <div class="caption">
-                            Ausschnitt aus der Treffermenge zu Phrasenkomposita mit dem Zweitglied <em>Gerede</em> (mit ausgeklappten Belegen)
+                            Ausschnitt aus der Treffermenge zu Phrasenkomposita mit dem Zweitglied <em>Gerede</em> (mit
+                            ausgeklappten Belegen)
                         </div>
                     </template>
                 </compare-item>

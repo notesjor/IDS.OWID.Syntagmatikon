@@ -1,12 +1,19 @@
+<script setup>
+definePageMeta({
+    layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+    mounted() {
+        const props = useLayoutStore();
+        props.title = 'Kookkurrenzprofile';
+        props.parent = 'Informationstypen';
+    },
+}
+</script>
 <template>
-    <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
-        <div class="nolink">
-            <NuxtLink to="/datatypes">
-                Zurück zu "Informationstypen"
-            </NuxtLink>
-        </div>
-    </v-btn>
-    <h1>Kookkurrenzprofile</h1>
     <h2>Typische Partnerwörter</h2>
 
     <p>Mithilfe statistischer Berechnungen (sog. Kookkurrenzanalysen) lassen sich besondere Anziehungskräfte (Cluster)

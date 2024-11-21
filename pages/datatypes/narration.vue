@@ -1,19 +1,30 @@
+<script setup>
+definePageMeta({
+    layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+    mounted() {
+        const props = useLayoutStore();
+        props.title = 'Narrative Beschreibungen';
+        props.parent = 'Informationstypen';
+    },
+}
+</script>
+
 <template>
-    <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
-        <div class="nolink">
-            <NuxtLink to="/datatypes">
-                Zurück zu "Informationstypen"
-            </NuxtLink>
-        </div>
-    </v-btn>
-    <h1>Narrative Beschreibungen</h1>
-    <p>Neben den Korpusdaten nehmen  manuell verfasste narrative Kommentare und Beschreibungen einen zentralen Platz in nahezu allen Ressourcen des <hi>Syntagmatikons</hi> ein. Diese erläutern unterschiedliche Aspekte des sprachlichen Gebrauchs eines Eintrags. Vor allem sind es:</p>
+    <p>Neben den Korpusdaten nehmen manuell verfasste narrative Kommentare und Beschreibungen einen zentralen Platz in
+        nahezu allen Ressourcen des <hi>Syntagmatikons</hi> ein. Diese erläutern unterschiedliche Aspekte des
+        sprachlichen Gebrauchs eines Eintrags. Vor allem sind es:</p>
     <ul>
         <li>Bedeutungsbeschreibungen (in der Lexikografie auch Paraphrasen genannt)</li>
         <li>Beschreibungen von Gebrauchsaspekten</li>
         <li>Beschreibungen von Mustern</li>
     </ul>
-    <p>Die Beschreibungsformen reichen von kurzen Etikettierungen (z. B. einer Kernbedeutung) über standardisierte lexikografische Paraphrasen bis hin zu mehr oder weniger ausführlichen linguistischen Analysetexten.</p>
+    <p>Die Beschreibungsformen reichen von kurzen Etikettierungen (z. B. einer Kernbedeutung) über standardisierte
+        lexikografische Paraphrasen bis hin zu mehr oder weniger ausführlichen linguistischen Analysetexten.</p>
 
 
     <div>
@@ -64,7 +75,9 @@
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> werden in der Ausgangssprache Deutsch und den Kontrastsprachen Spanisch und Slowakisch Gebrauchsaspekte und lexikalische Erweiterungen narrativ kommentiert (auf Deutsch).
+                        In <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> werden in der
+                        Ausgangssprache Deutsch und den Kontrastsprachen Spanisch und Slowakisch Gebrauchsaspekte und
+                        lexikalische Erweiterungen narrativ kommentiert (auf Deutsch).
                     </p>
 
                     <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
@@ -74,13 +87,15 @@
                             <img src="/img/datatypes/narration/prepcon_kon_gebrauch.png" alt="" />
                         </div>
                         <div class="caption">
-                            Beschreibungstext zum Gebrauchsaspekt ‚Thematisierung von Schwierigkeiten‘ im Artikel „am Anfang – al principio“ (Konvergenz)
+                            Beschreibungstext zum Gebrauchsaspekt ‚Thematisierung von Schwierigkeiten‘ im Artikel „am
+                            Anfang – al principio“ (Konvergenz)
                         </div>
                         <div class="exampleImg">
                             <img src="/img/datatypes/narration/prepcon_kon_gebrauch_div.png" alt="" />
                         </div>
                         <div class="caption">
-                            Beschreibungstext zum Gebrauchsaspekt ‚Rückblicke‘ im Artikel „am Anfang – al principio“ (Divergenz)
+                            Beschreibungstext zum Gebrauchsaspekt ‚Rückblicke‘ im Artikel „am Anfang – al principio“
+                            (Divergenz)
                         </div>
 
                         <div class="exampleHeadline">Rubrik: „Lexikalische Erweiterungen“</div>
@@ -88,13 +103,16 @@
                             <img src="/img/datatypes/narration/prepcon_kon_muster_div.png" alt="" />
                         </div>
                         <div class="caption">
-                            Kommentar zu lexikalischen Erweiterung <em>mit einer gewissen Genugtuung</em> des Muster <em>mit X Genugtuung</em> im Artikel „mit Genugtuung – con satisfacción“ (Divergenz)
+                            Kommentar zu lexikalischen Erweiterung <em>mit einer gewissen Genugtuung</em> des Muster
+                            <em>mit X Genugtuung</em> im Artikel „mit Genugtuung – con satisfacción“ (Divergenz)
                         </div>
                         <div class="exampleImg">
                             <img src="/img/datatypes/narration/prepcon_kon_muster_konv.png" alt="" />
                         </div>
                         <div class="caption">
-                            Kommentar zu lexikalischen Erweiterung zum Muster <em>mit [(...) ADJ] Genugtuung  - con [(...) ADJ] satisfacción</em> im Artikel „mit Genugtuung – con satisfacción“ (Konvergenz)
+                            Kommentar zu lexikalischen Erweiterung zum Muster <em>mit [(...) ADJ] Genugtuung - con
+                                [(...) ADJ] satisfacción</em> im Artikel „mit Genugtuung – con satisfacción“
+                            (Konvergenz)
                         </div>
                     </template>
                 </compare-item>
@@ -103,10 +121,10 @@
 
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        Informationen zu <resources-list-compact :filter="['MAP']"></resources-list-compact> 
-                            sind noch in Vorbereitung.
+                        Informationen zu <resources-list-compact :filter="['MAP']"></resources-list-compact>
+                        sind noch in Vorbereitung.
                     </p>
-                    
+
                     <template #explain>
                     </template>
                 </compare-item>
@@ -115,19 +133,21 @@
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['SPRW']"></resources-list-compact> werden narrative Texte und Kommentare zu folgenden Aspekten angezeigt:</p>
-                        <ul>
-                            <li>Bedeutung</li>
-                            <li>Gebrauchsbesonderheiten</li>
-                            <li>Formvarianten</li>
-                            <li>Ersetzung von Komponenten</li>
-                            <li>Typische Verwendung im Text</li>
-                        </ul>
-                        <p>Des Weiteren gibt es Hintergrund- und Fachkommentare. </p>
+                        In <resources-list-compact :filter="['SPRW']"></resources-list-compact> werden narrative Texte
+                        und Kommentare zu
+                        folgenden Aspekten angezeigt:</p>
+                    <ul>
+                        <li>Bedeutung</li>
+                        <li>Gebrauchsbesonderheiten</li>
+                        <li>Formvarianten</li>
+                        <li>Ersetzung von Komponenten</li>
+                        <li>Typische Verwendung im Text</li>
+                    </ul>
+                    <p>Des Weiteren gibt es Hintergrund- und Fachkommentare. </p>
 
                     <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
                     <template #explain>
-                        
+
                         <div class="exampleImg">
                             <img src="/img/datatypes/narration/sprw_bedeutung.png" alt="" />
                         </div>
@@ -150,11 +170,13 @@
                             <img src="/img/datatypes/narration/sprw_varianten.png" alt="" />
                         </div>
                         <div class="caption">
-                            Kommentartext für Formvariante <em>Alles hat ein Ende, nur die Wurst hat zwei</em> im Artikel „Alles hat ein Ende“
+                            Kommentartext für Formvariante <em>Alles hat ein Ende, nur die Wurst hat zwei</em> im
+                            Artikel „Alles hat ein Ende“
                         </div>
 
                         <p>
-                            Im Modul „Werbeslogans“ sind zusätzlich narrative Beschreibungen zur Entstehungsgeschichte hinterlegt. 
+                            Im Modul „Werbeslogans“ sind zusätzlich narrative Beschreibungen zur Entstehungsgeschichte
+                            hinterlegt.
                         </p>
                         <div class="exampleImg">
                             <img src="/img/datatypes/narration/sprw_geschichte.png" alt="" />
@@ -169,12 +191,15 @@
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['WVBF']"></resources-list-compact> werden narrative Text in unterschiedlicher Form in den einzelnen Knoten angeboten:
+                        In <resources-list-compact :filter="['WVBF']"></resources-list-compact> werden narrative Text in
+                        unterschiedlicher Form in den einzelnen Knoten angeboten:
                     </p>
                     <ul>
                         <li>prägnante Sätze, die die abstrakte Kernbedeutung paraphrasieren</li>
-                        <li>ausführliche Fachkommentare, die weitere sprachliche Merkmale dieses Knotens beschreiben</li>
-                        <li>ausführliche Fachkommentare, die Merkmale der Lückenfüller auf einer abstrakten Ebene erfassen</li>
+                        <li>ausführliche Fachkommentare, die weitere sprachliche Merkmale dieses Knotens beschreiben
+                        </li>
+                        <li>ausführliche Fachkommentare, die Merkmale der Lückenfüller auf einer abstrakten Ebene
+                            erfassen</li>
                         <li>ausführliche Fachkommentare, die die Beziehung zu Kontrasteinheiten thematisieren</li>
                     </ul>
 
@@ -202,12 +227,25 @@
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        <resources-list-compact :filter="['FesteWV']"></resources-list-compact> wurde als experimentelle Ressource für die korpusbasierte Beschreibung von Wortverbindungen in den Anfangsjahren der Online-Lexikografie am IDS erarbeitet. Deshalb finden sich in den zwei Rubriken unterschiedliche Formen von narrativen Gebrauchsbeschreibungen.
+                        <resources-list-compact :filter="['FesteWV']"></resources-list-compact> wurde als experimentelle
+                        Ressource für
+                        die korpusbasierte Beschreibung von Wortverbindungen in den Anfangsjahren der
+                        Online-Lexikografie am IDS
+                        erarbeitet. Deshalb finden sich in den zwei Rubriken unterschiedliche Formen von narrativen
+                        Gebrauchsbeschreibungen.
                     </p>
                     <ul>
-                        <li>In der Rubrik „Musterartikel“ wurden Artikel für unterschiedliche Phrasemtypen erarbeitet, mit Bedeutungsparaphrasen und Texten zu den Angaben ‚Wertungsaspekt‘‚ ‚Funktion in der Kommunikation‘ sowie ‘grammatische Besonderheiten‘.</li>
+                        <li>In der Rubrik „Musterartikel“ wurden Artikel für unterschiedliche Phrasemtypen erarbeitet,
+                            mit
+                            Bedeutungsparaphrasen und Texten zu den Angaben ‚Wertungsaspekt‘‚ ‚Funktion in der
+                            Kommunikation‘ sowie
+                            ‘grammatische Besonderheiten‘.</li>
                         <li>
-                            In der Rubrik „Wortverbindungen mit Adjektiven“ wurde getestet, wie man mit einer reduzierten Artikelstruktur eine größere Lemmastrecke bearbeiten könnte. Hier wurden umfangreichere narrative Texte zum Gebrauch in einer einzigen Angabe formuliert.  
+                            In der Rubrik „Wortverbindungen mit Adjektiven“ wurde getestet, wie man mit einer
+                            reduzierten
+                            Artikelstruktur eine größere Lemmastrecke bearbeiten könnte. Hier wurden umfangreichere
+                            narrative Texte zum
+                            Gebrauch in einer einzigen Angabe formuliert.
                         </li>
                     </ul>
 
@@ -218,7 +256,7 @@
                             <img src="/img/datatypes/narration/festeWV_bedeutung.png" alt="" />
                         </div>
                         <div class="caption">
-                            Bedeutungsbeschreibung im Artikel „reden, wie einem der Schnabel gewachsen ist“ 
+                            Bedeutungsbeschreibung im Artikel „reden, wie einem der Schnabel gewachsen ist“
                         </div>
                         <div class="exampleImg">
                             <img src="/img/datatypes/narration/festeWV_wertung.png" alt="" />
@@ -230,7 +268,8 @@
                             <img src="/img/datatypes/narration/festeWV_funktion.png" alt="" />
                         </div>
                         <div class="caption">
-                            Beschreibungstext für ‚Funktion in der Kommunikation‘ im Artikel „an die große Glocke hängen“
+                            Beschreibungstext für ‚Funktion in der Kommunikation‘ im Artikel „an die große Glocke
+                            hängen“
                         </div>
                         <div class="exampleImg">
                             <img src="/img/datatypes/narration/festeWV_grammatik.png" alt="" />

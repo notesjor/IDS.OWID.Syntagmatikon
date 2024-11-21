@@ -1,15 +1,26 @@
+<script setup>
+definePageMeta({
+    layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+    mounted() {
+        const props = useLayoutStore();
+        props.title = 'Fremdsprachige Äquivalenzen';
+        props.parent = 'Informationstypen';
+    },
+}
+</script>
 <template>
-    <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
-       <div class="nolink">
-       <NuxtLink to="/datatypes">
-           Zurück zu "Informationstypen"
-       </NuxtLink>
-       </div> 
-   </v-btn>
-   <h1>Fremdsprachige Äquivalenzen</h1>
-   <p>Im <hi>Syntagmatikon</hi> dokumentieren zwei Ressourcen den Gebrauch von Syntagmen im Sprachkontrast. Die entsprechenden Angaben werden Äquivalenzangaben genannt, d.h. Einheiten der Ausgangssprache Deutsch werden Entsprechungen in anderen Sprachen und Korpusbelege hinzugefügt. Diese können 1:1-Entsprechungen auf der Formseite sein oder konzeptuelle Entsprechungen, die denselben Bedeutungskern aufweisen, aber auch durch andere Wörter und Wortgruppen ausgedrückt werden. </p> 
+    <p>Im <hi>Syntagmatikon</hi> dokumentieren zwei Ressourcen den Gebrauch von Syntagmen im Sprachkontrast. Die
+        entsprechenden Angaben werden Äquivalenzangaben genannt, d.h. Einheiten der Ausgangssprache Deutsch werden
+        Entsprechungen in anderen Sprachen und Korpusbelege hinzugefügt. Diese können 1:1-Entsprechungen auf der
+        Formseite sein oder konzeptuelle Entsprechungen, die denselben Bedeutungskern aufweisen, aber auch durch andere
+        Wörter und Wortgruppen ausgedrückt werden. </p>
 
-   <div>
+    <div>
         <compare title="">
 
             <!-- NOTE: Zuerst muss ein <template #headers> erstellt werden -->
@@ -20,7 +31,8 @@
 
             <template #headers>
                 <v-tab value="ALL" class="nocaps">alle Ressourcen</v-tab>
-                <v-tab value="1" class="nocaps"><resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact>
+                <v-tab value="1" class="nocaps"><resources-list-compact
+                        :filter="['PREPCON_kon']"></resources-list-compact>
                 </v-tab>
                 <v-tab value="2" class="nocaps"><resources-list-compact
                         :filter="['DTWW']"></resources-list-compact></v-tab>
@@ -50,7 +62,13 @@
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> beinhaltet eine  korpusgesteuerte Vergleichstudie von quantitativen Daten, Bedeutungs- und Gebrauchsaspekten sowie semi-abstrakten Mustern für die Sprachenpaare Deutsch – Spanisch und Deutsch – Slowakisch; ausgehend vom Deutschen. Beschrieben werden die Präposition-Nomen-Verbindungen <em>am Anfang; auf Anhieb; mit Genugtuung; nach Belieben</em> und die prototypischen Äquivalente in Spanisch (<em>al principio; de inmediato; con satisfacción; a su/... gusto</em>) und Slowakisch (<em>na začiatku; na prvý pokus; so zadosťučinením; podľa ľubovôle</em>).
+                        <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> beinhaltet eine
+                        korpusgesteuerte Vergleichstudie von quantitativen Daten, Bedeutungs- und Gebrauchsaspekten
+                        sowie semi-abstrakten Mustern für die Sprachenpaare Deutsch – Spanisch und Deutsch – Slowakisch;
+                        ausgehend vom Deutschen. Beschrieben werden die Präposition-Nomen-Verbindungen <em>am Anfang;
+                            auf Anhieb; mit Genugtuung; nach Belieben</em> und die prototypischen Äquivalente in
+                        Spanisch (<em>al principio; de inmediato; con satisfacción; a su/... gusto</em>) und Slowakisch
+                        (<em>na začiatku; na prvý pokus; so zadosťučinením; podľa ľubovôle</em>).
                     </p>
 
                     <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
@@ -75,7 +93,11 @@
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        <resources-list-compact :filter="['DTWW']"></resources-list-compact> ist eine Sammlung fester deutsch-türkischer Wortverbindungen und Einwortphraseologismen aus der Domäne Wirtschaft. Sie enthält ca. 900 deutsche Einträge und ihre türkischen Entsprechungen mit wörtlichen Übersetzungen ins Deutsche.
+                        <resources-list-compact :filter="['DTWW']"></resources-list-compact> ist eine Sammlung fester
+                        deutsch-türkischer
+                        Wortverbindungen und Einwortphraseologismen aus der Domäne Wirtschaft. Sie enthält ca. 900
+                        deutsche Einträge und
+                        ihre türkischen Entsprechungen mit wörtlichen Übersetzungen ins Deutsche.
                     </p>
 
                     <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->

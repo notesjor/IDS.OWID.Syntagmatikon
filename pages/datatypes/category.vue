@@ -1,12 +1,20 @@
+<script setup>
+definePageMeta({
+    layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+    mounted() {
+        const props = useLayoutStore();
+        props.title = 'Kategoriale Label';
+        props.parent = 'Informationstypen';
+    },
+}
+</script>
+
 <template>
-    <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
-        <div class="nolink">
-            <NuxtLink to="/datatypes">
-                Zurück zu "Informationstypen"
-            </NuxtLink>
-        </div>
-    </v-btn>
-    <h1>Kategoriale Label</h1>
     <p>Kategoriale Label etikettieren bestimmte Einheiten oder Strukturen mit linguistischen klassifikatorischen
         Merkmalen. Diese Markierungen dienen der Gruppierung von sprachlichen Einheiten. Sie sind immer Ergebnisse
         qualitativer Interpretation basierend auf spezifischen Modellen. Sie können bereits in den Korpora im
@@ -142,27 +150,42 @@
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
                         In <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
-                        können die Phrasenkomposita des Inventars gruppiert werden, und zwar in Abhängigkeit ihres Zweitglied-Lexems bzw. in Abhängigkeit der abstrakten Eigenschaften des Zweitglieds. </p>
-<p>Eine solche Gruppierung ist möglich, weil jedes Kompositum bzw. jedes Zweitglied des Inventars mit kategorialen Labels verstehen ist, die sowohl formale Eigenschaften (Ableitungstyp) als auch semantische Eigenschaften (semantische Gruppe) abdecken. Diese Label wurden den insgesamt 1.576 Phrasenkomposita des Inventars händisch zugeordnet:
+                        können die Phrasenkomposita des Inventars gruppiert werden, und zwar in Abhängigkeit ihres
+                        Zweitglied-Lexems
+                        bzw. in Abhängigkeit der abstrakten Eigenschaften des Zweitglieds. </p>
+                    <p>Eine solche Gruppierung ist möglich, weil jedes Kompositum bzw. jedes Zweitglied des Inventars
+                        mit kategorialen
+                        Labels verstehen ist, die sowohl formale Eigenschaften (Ableitungstyp) als auch semantische
+                        Eigenschaften
+                        (semantische Gruppe) abdecken. Diese Label wurden den insgesamt 1.576 Phrasenkomposita des
+                        Inventars händisch
+                        zugeordnet:
                     </p>
                     <ul>
                         <li>Ableitungstyp: simplizisch; desubstantivisch; deadjektivisch; deverbal</li>
-                        <li>Semantische Gruppe:  ABSOLUTE KONKRETA; ABSTRAKTA ZUR BESCHREIBUNG EINES STANDPUNKTS; ABSTRAKTA ZUR ‘SCHLAGWORTARTIGE ZUSAMMENFASSUNG’; KOLLEKTIVA; NOMINA QUALITATIS; NOMINA AGENTIS; NOMINA ACTIONIS; NOMINA ACTI; NOMINA LOCI; PERSONENBEZEICHNUNGEN; PLATZHALTER-SUBSTANTIVE; RELATIONALE SUBSTANTIVE; TEMPORALE SUBSTANTIVE;  VALENTE SUBSTANTIVE; VALENTE ZGS: RELATIONALE KONKRETA.</li>
+                        <li>Semantische Gruppe: ABSOLUTE KONKRETA; ABSTRAKTA ZUR BESCHREIBUNG EINES STANDPUNKTS;
+                            ABSTRAKTA ZUR
+                            ‘SCHLAGWORTARTIGE ZUSAMMENFASSUNG’; KOLLEKTIVA; NOMINA QUALITATIS; NOMINA AGENTIS; NOMINA
+                            ACTIONIS; NOMINA
+                            ACTI; NOMINA LOCI; PERSONENBEZEICHNUNGEN; PLATZHALTER-SUBSTANTIVE; RELATIONALE SUBSTANTIVE;
+                            TEMPORALE
+                            SUBSTANTIVE; VALENTE SUBSTANTIVE; VALENTE ZGS: RELATIONALE KONKRETA.</li>
                     </ul>
 
                     <template #explain>
-                        
+
                         <div class="exampleImg">
                             <img src="/img/datatypes/categories/phraskomp_deadj.png" alt="" />
                         </div>
                         <div class="caption">
-                            Ausschnitt aus der Treffermenge für Phrasenkomposita mit deadjektivischem Zweitglied  
+                            Ausschnitt aus der Treffermenge für Phrasenkomposita mit deadjektivischem Zweitglied
                         </div>
                         <div class="exampleImg">
                             <img src="/img/datatypes/categories/phraskomp_personen.png" alt="" />
                         </div>
                         <div class="caption">
-                            Ausschnitt aus der Treffermenge für Phrasenkomposita mit einer Personenbezeichnung im Zweitglied
+                            Ausschnitt aus der Treffermenge für Phrasenkomposita mit einer Personenbezeichnung im
+                            Zweitglied
                         </div>
                     </template>
                 </compare-item>

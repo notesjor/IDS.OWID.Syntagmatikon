@@ -1,22 +1,30 @@
-<template>
-  <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
-    <div class="nolink">
-      <NuxtLink to="/datatypes">
-        Zurück zu "Informationstypen"
-      </NuxtLink>
-    </div>
-  </v-btn>
+<script setup>
+definePageMeta({
+  layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+  mounted() {
+    const props = useLayoutStore();
+    props.title = 'KWICs';
+    props.parent = 'Informationstypen';
+  },
+}
+</script>
 
-  <h1>KWICs</h1>
+<template>
   <h2>KeyWords In Context: „Schlüsselwörter im Kontext“</h2>
   <p>Wenn man eine Zeichenkette (z.B. ein Wort oder eine Wortgruppe) im Korpus sucht, bekommt man in der Regel Zeilen
-    (Konkordanzen) angezeigt, in denen das Suchobjekt vorkommt, ergänzt durch ein wenig Text davor und danach. <v-btn
-      density="compact" size="small" variant=tonal icon="mdi-plus" @click="toggleDiv"></v-btn></p>
-  <div class="more" v-show="isVisible">
-    Es handelt sich um Textschnipsel, die nicht immer grammatisch vollständige Sätze sein müssen. Anhand solcher
-    Konkordanzen lassen sich jedoch bereits wichtige Hinweise gewinnen, in welchen Satzzusammenhängen eine sprachliche
-    Einheit häufig verwendet wird (typische Kontextmuster), z.B. häufig eingebettet in wörtliche Rede; mit Modalverben
-    oder Negationswörtern verbunden. Bei Wortgruppen kann man bspw. erkennen, wie fest oder variabel sie sind.</div>
+    (Konkordanzen) angezeigt, in denen das Suchobjekt vorkommt, ergänzt durch ein wenig Text davor und danach.
+    <expand-me>Es handelt sich um Textschnipsel, die nicht immer grammatisch vollständige Sätze sein müssen. Anhand
+      solcher
+      Konkordanzen lassen sich jedoch bereits wichtige Hinweise gewinnen, in welchen Satzzusammenhängen eine sprachliche
+      Einheit häufig verwendet wird (typische Kontextmuster), z.B. häufig eingebettet in wörtliche Rede; mit Modalverben
+      oder Negationswörtern verbunden. Bei Wortgruppen kann man bspw. erkennen, wie fest oder variabel sie
+      sind.</expand-me>
+  </p>
   <p>Im Syntagmatikon dienen automatisch ermittelte KWICs nicht nur als empirische Basis, sondern werden in einigen
     Ressourcen selbst als lexikografische Informationseinheiten angeboten.
   </p>
@@ -40,10 +48,8 @@
             :filter="['PREPCON_kon']"></resources-list-compact></v-tab>
         <v-tab value="4" class="nocaps"><resources-list-compact
             :filter="['SpruchList']"></resources-list-compact></v-tab>
-        <v-tab value="5" class="nocaps"><resources-list-compact 
-          :filter="['SPRW']"></resources-list-compact></v-tab>
-        <v-tab value="6" class="nocaps"><resources-list-compact 
-          :filter="['WVBF']"></resources-list-compact></v-tab>
+        <v-tab value="5" class="nocaps"><resources-list-compact :filter="['SPRW']"></resources-list-compact></v-tab>
+        <v-tab value="6" class="nocaps"><resources-list-compact :filter="['WVBF']"></resources-list-compact></v-tab>
       </template>
       <template #tabs>
 
@@ -242,23 +248,27 @@
 
         <compare-item value="5" rkey="SPRW">
 
-<!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
-<p>
-  <resources-list-compact :filter="['SPRW']"></resources-list-compact> bietet einen dynamischen Zugang zu automatisch ermittetelten KWICs und Volltextstellen auf dem aktuellen Stand des DeReKo-W-Archivs. Dazu wurden Suchanfragen hinterlegt, die bei Aktivierung die COSMAS-II-Suche starten.
-</p>
+          <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
+          <p>
+            <resources-list-compact :filter="['SPRW']"></resources-list-compact> bietet einen dynamischen Zugang zu
+            automatisch
+            ermittetelten KWICs und Volltextstellen auf dem aktuellen Stand des DeReKo-W-Archivs. Dazu wurden
+            Suchanfragen
+            hinterlegt, die bei Aktivierung die COSMAS-II-Suche starten.
+          </p>
 
-<!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
+          <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
 
-<template #explain>
+          <template #explain>
 
-  <div class="exampleImg">
-    <img src="/img/datatypes/kwics/sprw_cosmas.png" alt="" />
-  </div>
-  <div class="caption">
-    Ausschnitt aus KWIC-Anzeige im Artikel „Not macht erfinderisch“ 
-  </div>
-</template>
-</compare-item>
+            <div class="exampleImg">
+              <img src="/img/datatypes/kwics/sprw_cosmas.png" alt="" />
+            </div>
+            <div class="caption">
+              Ausschnitt aus KWIC-Anzeige im Artikel „Not macht erfinderisch“
+            </div>
+          </template>
+        </compare-item>
 
 
         <compare-item value="6" rkey="WVBF">
@@ -288,21 +298,4 @@
       </template>
     </compare>
   </div>
-
-
-
 </template>
-<script>
-export default {
-  data() {
-    return {
-      isVisible: false, // initial state of the div (visible)
-    };
-  },
-  methods: {
-    toggleDiv() {
-      this.isVisible = !this.isVisible; // toggle visibility
-    },
-  },
-};
-</script>
