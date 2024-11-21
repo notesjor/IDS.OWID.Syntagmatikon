@@ -5,28 +5,22 @@ definePageMeta({
 </script>
 
 <template>
-  <div style="max-width: 80ch; margin:auto">
-    <v-row>
-      <v-col>
-        <headline :h="1" :color1="color1">Informationstypen</headline>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <div>
-          <p>
-            Die Rubrik dient dazu, Ressourcen im <hi>Syntagmatikon</hi> entsprechend der Charakteristik ihrer Informationstypen zu bündeln. Bei den primär automatisch-quantitativ erstellten Angaben werden die Korpusdaten selbst zur lexikografischen Einträgen. Die manuell-qualitativ erarbeiteten Informationstypen basieren ebenso auf Korpusanalysen. Hier finden sich unterschiedliche Kombinationen von systematisierten und interpretierten Korpusdaten mit verschiedenen Formen der narrativen Beschreibung.</p>
-<p>Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur Aussagekraft der Informationstypen in den jeweiligen Ressourcen.</p>
-
-         
-        </div>
-      </v-col>
-
-    </v-row>
+  <div style="max-width: var(--TXT-WIDTH); margin:auto">
+    <h1>Informationstypen</h1>
+    <p>
+      Die Rubrik dient dazu, Ressourcen im <hi>Syntagmatikon</hi> entsprechend der Charakteristik ihrer
+      Informationstypen zu bündeln. Bei den primär automatisch-quantitativ erstellten Angaben werden die Korpusdaten
+      selbst zur lexikografischen Einträgen. Die manuell-qualitativ erarbeiteten Informationstypen basieren ebenso auf
+      Korpusanalysen. Hier finden sich unterschiedliche Kombinationen von systematisierten und interpretierten
+      Korpusdaten mit verschiedenen Formen der narrativen Beschreibung.</p>
+    <p>Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur Aussagekraft der
+      Informationstypen in den jeweiligen Ressourcen.</p>
   </div>
-  <div style="max-width: 100ch;">
-    <v-row style="max-width: 1140px;">
-      <v-col cols="12">
+  <div>
+    <v-row>
+      <v-col cols="2"></v-col>
+      <v-col cols="8">
+        <empty/>
         <headline :h="4">Automatische Informationstypen</headline>
 
         <div class="container">
@@ -56,7 +50,8 @@ definePageMeta({
 
         </div>
 
-        <h2 style="margin:40px 0px 10px 10px; border-bottom: 3px lightgray solid;">Bearbeitete Informationstypen</h2>
+        <empty/>
+        <headline :h="4">Bearbeitete Informationstypen</headline>
 
         <div class="container">
 

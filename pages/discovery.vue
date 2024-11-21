@@ -5,62 +5,54 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="nolink">
-    <div style="max-width: 86ch; margin:auto">
-      <v-row>
-        <v-col>
-          <div>
-            <h1>
-              Ressourcenüberblick
-            </h1>
-          </div>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
-          <div>
-            <p>Das Syntagmatikon enthält aktuell 11 Ressourcen, die hier kurz vorgestellt werden. Klicken Sie auf eine
-              der Ressourcen, um diese direkt aufzurufen.</p>
-            <br />&nbsp;<br />
-          </div>
-        </v-col>
-
-      </v-row>
-    </div>
-    <v-row>
-      <v-col style="text-align: center;">
-        <div v-for="x in resources" :key="x"
-          style="width: 350px; display: inline-block; margin: 10px; text-align: left; vertical-align: top;">
-
-          <v-card style="margin-bottom: 10px;" variant="flat" hover position="relative">
-            <v-card-title>
-              <a :href="x.url" target="_blank">
-                <h2>
-                  <v-btn variant="tonal" icon="mdi-arrow-right-circle-outline"
-                    style="display:inline-block; margin-top:-5px"></v-btn>
-                  <div style="display: inline-block; margin-left: 5px;" v-html="x.nameShort"></div>
-                </h2>
-              </a>
-            </v-card-title>
-            <v-card-text>
-              <a :href="x.url" target="_blank">
-                <img v-if="x.img != undefined" :src="x.img" style="width: 100%; height: auto; margin-bottom: 10px;" />
-                <img v-else src="/dummy/resource.png" style="width: 100%; height: auto; margin-bottom: 10px;" />
-                <div style="text-align: justify; font-weight: 400" v-html="x.description">
-                </div>
-              </a>
-              <br />
-              <div>
-                <v-chip v-for="t in x.tags" color="darkgrey" style="margin: 5px;" :variant="getChipVariant(t)"
-                  size="small" @click="switchChip(t)">{{ t }}</v-chip>
-              </div>
-            </v-card-text>
-          </v-card>
-
+  <v-row>
+    <v-col>
+      <div class="nolink">
+        <div style="max-width: var(--TXT-WIDTH); margin:auto">
+          <h1>
+            Ressourcenüberblick
+          </h1>
+          <p>Das Syntagmatikon enthält aktuell 11 Ressourcen, die hier kurz vorgestellt werden. Klicken Sie auf eine
+            der Ressourcen, um diese direkt aufzurufen.</p>
         </div>
-      </v-col>
-    </v-row>
-  </div>
+        <v-row>
+          <v-col style="text-align: center;">
+            <div v-for="x in resources" :key="x"
+              style="width: 350px; display: inline-block; margin: 10px; text-align: left; vertical-align: top;">
+
+              <v-card style="margin-bottom: 10px;" variant="flat" hover position="relative">
+                <v-card-title>
+                  <a :href="x.url" target="_blank">
+                    <h2>
+                      <v-btn variant="tonal" icon="mdi-arrow-right-circle-outline"
+                        style="display:inline-block; margin-top:-5px; font-size: 15px; max-width: 2rem; max-height: 2rem;"></v-btn>
+                      <div style="display: inline-block; margin-left: 5px; font-size: 1.3rem;" v-html="x.nameShort">
+                      </div>
+                    </h2>
+                  </a>
+                </v-card-title>
+                <v-card-text>
+                  <a :href="x.url" target="_blank">
+                    <img v-if="x.img != undefined" :src="x.img"
+                      style="width: 100%; height: auto; margin-bottom: 10px;" />
+                    <img v-else src="/dummy/resource.png" style="width: 100%; height: auto; margin-bottom: 10px;" />
+                    <div style="text-align: justify; font-weight: 400" v-html="x.description">
+                    </div>
+                  </a>
+                  <br />
+                  <div>
+                    <v-chip v-for="t in x.tags" color="darkgrey" style="margin: 5px;" :variant="getChipVariant(t)"
+                      size="small" @click="switchChip(t)">{{ t }}</v-chip>
+                  </div>
+                </v-card-text>
+              </v-card>
+
+            </div>
+          </v-col>
+        </v-row>
+      </div>
+    </v-col>
+  </v-row>
 </template>
 
 <script>

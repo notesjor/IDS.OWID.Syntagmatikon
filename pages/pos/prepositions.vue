@@ -1,12 +1,20 @@
+<script setup>
+definePageMeta({
+    layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+    mounted() {
+        const props = useLayoutStore();
+        props.title = 'Präpositionen';
+        props.parent = 'Wort- und Ausdrucksarten';
+    },
+}
+</script>
+
 <template>
-    <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
-        <div class="nolink">
-            <NuxtLink to="/pos">
-                Zurück zu "Wort- und Ausdrucksarten"
-            </NuxtLink>
-        </div>
-    </v-btn>
-    <h1>Präpositionen</h1>
     <div>
         <compare title="">
 

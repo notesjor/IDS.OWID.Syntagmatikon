@@ -1,12 +1,19 @@
+<script setup>
+definePageMeta({
+    layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+    mounted() {
+        const props = useLayoutStore();
+        props.title = 'Phraseme';
+        props.parent = 'Wort- und Ausdrucksarten';
+    },
+}
+</script>
 <template>
-    <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
-        <div class="nolink">
-            <NuxtLink to="/pos">
-                Zurück zu "Wort- und Ausdrucksarten"
-            </NuxtLink>
-        </div>
-    </v-btn>
-    <h1>Phraseme</h1>
     <div>
         <compare title="">
 
@@ -58,7 +65,11 @@
 
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        In <resources-list-compact :filter="['KoMuX']"></resources-list-compact> können Phraseme neben anderen Wort- und Ausdrucksarten als Erstglied fungieren. Sie werden in dieser Ressource über das Label ‚Phrase‘ erfasst, das auf ein syntaktisches Phrasenmodell in Hein 2015 zurückgeht. Im Gegensatz zu allen anderen Wort- und Ausdrucksarten wurde das Label ‚Phrase‘ aber nicht automatisch zugewiesen, sondern manuell nachannotiert. 
+                        In <resources-list-compact :filter="['KoMuX']"></resources-list-compact> können Phraseme neben
+                        anderen Wort- und Ausdrucksarten als Erstglied fungieren. Sie werden in dieser Ressource über
+                        das Label ‚Phrase‘ erfasst, das auf ein syntaktisches Phrasenmodell in Hein 2015 zurückgeht. Im
+                        Gegensatz zu allen anderen Wort- und Ausdrucksarten wurde das Label ‚Phrase‘ aber nicht
+                        automatisch zugewiesen, sondern manuell nachannotiert.
                     </p>
 
                     <template #explain>
@@ -90,7 +101,11 @@
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
                         In <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
-                        können Phraseme, neben festen Sätzen, als Erstglied fungieren. Alternativ zu dieser phraseologischen Perspektive können die Erstglieder von Phrasenkomposita auch unter einer syntaktischen Perspektive, d.h. als Phrasen und Sätze, klassifiziert werden. 
+                        können Phraseme, neben festen Sätzen, als Erstglied fungieren. Alternativ zu dieser
+                        phraseologischen Perspektive
+                        können die Erstglieder von Phrasenkomposita auch unter einer syntaktischen Perspektive, d.h. als
+                        Phrasen und
+                        Sätze, klassifiziert werden.
                     </p>
 
                     <template #explain>
@@ -177,7 +192,9 @@
                     <div class="caption">Zugriff auf die Musterartikel</div> -->
 
                     <p>
-                        In der Rubrik „Wortverbindungen mit Adjektiven“ bilden Phraseme den zweiten Zugang (neben Adjektiven) in Form einer Stichwortliste.  
+                        In der Rubrik „Wortverbindungen mit Adjektiven“ bilden Phraseme den zweiten Zugang (neben
+                        Adjektiven) in Form
+                        einer Stichwortliste.
                     </p>
 
                     <!--

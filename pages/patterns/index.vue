@@ -24,7 +24,7 @@ definePageMeta({
             <br />&nbsp;<br />
             Beispiele für Muster sind:
           </p>          
-          <ul>
+          <ul class="example">
             <li><strong>vor-sich-hin-Muster</strong>: <br /> {das Boot dümpelt; das Brot gammelt; sie paddelt so} vor sich hin</li>
             <li><strong>w-x-ist-ist-auch-y-Muster</strong>: <br /> {Licht – Schatten; Rauch – Feuer; Arbeit – Brot} </li>
           </ul>
@@ -125,14 +125,4 @@ td {
   flex-wrap: wrap;
   justify-content: center;
 }
-
-li {
-  list-style: none;
-  margin: 10px 20px 10px 20px;
-  border-top: 1px solid #d6d6d6;
-  padding-top: 10px;
-}
-
-li:hover {
-  background-color: #d6d6d6;
-}</style>
+</style>

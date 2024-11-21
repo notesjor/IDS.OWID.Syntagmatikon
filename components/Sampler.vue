@@ -13,8 +13,7 @@
                 <v-row>
                   <!--Styling für den Beleg-->
                   <div style="padding:10px 40px 10px 40px; background-color: #fff9eb; margin-top:20px;
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                    font-family: 'Lucida Console', 'Courier New', monospace;">
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
 
                     <div v-html="item.html" style="margin:10px -20px 0px -20px; 

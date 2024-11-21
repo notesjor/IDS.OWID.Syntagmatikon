@@ -1,13 +1,20 @@
-<template>
-  <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
-    <div class="nolink">
-      <NuxtLink to="/pos">
-        Zurück zu "Wort- und Ausdrucksarten"
-      </NuxtLink>
-    </div>
-  </v-btn>
-  <h1>Feste Sätze</h1>
+<script setup>
+definePageMeta({
+  layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+  mounted() {
+    const props = useLayoutStore();
+    props.title = 'Feste Sätze';
+    props.parent = 'Wort- und Ausdrucksarten';
+  },
+}
+</script>
 
+<template>
   <div>
     <compare title="">
 
@@ -52,19 +59,21 @@
           <!-- TODO: Inhalt ergänzen -->
           <p>
             In <resources-list-compact :filter="['KoMuX']"></resources-list-compact>
-            können feste Sätze neben anderen Wort- und Ausdrucksarten als Erstglied fungieren. Sie werden über das Label ‚Phrase‘ erfasst. Im Gegensatz zu allen anderen Wort- und Ausdrucksarten wurde das Label ‚Phrase‘ aber nicht automatisch zugewiesen, sondern manuell nachannotiert. 
+            können feste Sätze neben anderen Wort- und Ausdrucksarten als Erstglied fungieren. Sie werden über das Label
+            ‚Phrase‘ erfasst. Im Gegensatz zu allen anderen Wort- und Ausdrucksarten wurde das Label ‚Phrase‘ aber nicht
+            automatisch zugewiesen, sondern manuell nachannotiert.
           </p>
 
           <template #explain>
             <div>
-            <ul>
-              <li><span class="pos_highlight">Do-it-yourself</span>-Kur</li>
-              <li><span class="pos_highlight">Geiz-ist-geil</span>-Kampagne</li>
-              <li><span class="pos_highlight">Was-wäre-wenn</span>-Spekulation</li>
-            </ul>
-          </div>
+              <ul>
+                <li><span class="pos_highlight">Do-it-yourself</span>-Kur</li>
+                <li><span class="pos_highlight">Geiz-ist-geil</span>-Kampagne</li>
+                <li><span class="pos_highlight">Was-wäre-wenn</span>-Spekulation</li>
+              </ul>
+            </div>
           </template>
-          </compare-item>
+        </compare-item>
 
         <compare-item value="2" rkey="SpruchList">
 
@@ -91,18 +100,24 @@
           <!-- TODO: Inhalt ergänzen -->
           <p>
             In <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
-            können feste Sätze, neben Phrasemen, als Erstglied fungieren. Alternativ zu dieser phraseologischen Perspektive können die Erstglieder von Phrasenkomposita auch unter einer syntaktischen Perspektive, d.h. als Phrasen und Sätze, klassifiziert werden. 
+            können feste Sätze, neben Phrasemen, als Erstglied fungieren. Alternativ zu dieser phraseologischen
+            Perspektive
+            können die Erstglieder von Phrasenkomposita auch unter einer syntaktischen Perspektive, d.h. als Phrasen und
+            Sätze,
+            klassifiziert werden.
           </p>
 
           <template #explain>
             <div>
-            <ul>
-              <li>»<span class="pos_highlight">Im-fremden-Bett-schlaf-ich-immer-schlecht</span>-Sensibelchen«</li>
-              <li><span class="pos_highlight">"Wir sitzen alle in einem Boot"-</span>Gerede</li>
-              <li><span class="pos_highlight">"I have a dream"</span>-Rede</li>
-              <li><span class="pos_highlight">Ich-kann-Golf-und-Schi-und-Wandern-und-bin-schöner-als-die-andern</span>-Franz</li>
-            </ul>
-          </div>
+              <ul>
+                <li>»<span class="pos_highlight">Im-fremden-Bett-schlaf-ich-immer-schlecht</span>-Sensibelchen«</li>
+                <li><span class="pos_highlight">"Wir sitzen alle in einem Boot"-</span>Gerede</li>
+                <li><span class="pos_highlight">"I have a dream"</span>-Rede</li>
+                <li><span
+                    class="pos_highlight">Ich-kann-Golf-und-Schi-und-Wandern-und-bin-schöner-als-die-andern</span>-Franz
+                </li>
+              </ul>
+            </div>
           </template>
           <!-- <p>
             Unter den Zweitgliedern der Phrasenkomposita in <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact> sind auch feste Sätze.

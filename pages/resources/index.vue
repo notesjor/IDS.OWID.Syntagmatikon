@@ -5,23 +5,19 @@ definePageMeta({
 </script>
 
 <template>
-  <div style="max-width: 80ch; margin:auto">
-    <v-row>
-      <v-col>
-        <h1>Ressourcentypen</h1>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <div>
-          <p>Das <hi>Syntagmatikon</hi> vereint sehr unterschiedliche Ressourcentypen. Die Zuordnungen basieren auf Kriterien wie Menge der aufbereiteten Daten, Grad der Vollständigkeit sowie Verhältnis von automatischer Datenaufbereitung; händischer Bearbeitung und linguistisch-lexikografischer Beschreibung.</p>
-          <p>Die aufgeführten Beispielressourcen sind jeweils die prototypischen Vertreter. Gleichzeitig gibt es zahlreiche Überschneidungen zwischen den Ressourcen: Eine Datenbank kann z.B. gleichzeitig als Inventar verstanden werden wie <resources-list-compact :filter="['PREPCON_ex']"></resources-list-compact> oder <resources-list-compact :filter="['KoMuX']"></resources-list-compact>.</p>
-          <p>Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur Charakteristik der einzelnen Ressourcen.</p>
-        </div>
-      </v-col>
-    </v-row>
+  <div style="max-width: var(--TXT-WIDTH); margin:auto">
+    <h1>Ressourcentypen</h1>
+    <p>Das <hi>Syntagmatikon</hi> vereint sehr unterschiedliche Ressourcentypen. Die Zuordnungen basieren auf Kriterien
+      wie Menge der aufbereiteten Daten, Grad der Vollständigkeit sowie Verhältnis von automatischer Datenaufbereitung;
+      händischer Bearbeitung und linguistisch-lexikografischer Beschreibung.</p>
+    <p>Die aufgeführten Beispielressourcen sind jeweils die prototypischen Vertreter. Gleichzeitig gibt es zahlreiche
+      Überschneidungen zwischen den Ressourcen: Eine Datenbank kann z.B. gleichzeitig als Inventar verstanden werden wie
+      <resources-list-compact :filter="['PREPCON_ex']"></resources-list-compact> oder <resources-list-compact
+        :filter="['KoMuX']"></resources-list-compact>.</p>
+    <p>Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur Charakteristik der
+      einzelnen Ressourcen.</p>
   </div>
-  <div style="max-width: 100ch;">
+  <div>
     <v-row>
       <v-col cols="12">
         <div class="container nolink">
@@ -48,7 +44,8 @@ definePageMeta({
             Korpusbasierte Wörterbuchartikel im Hypertextformat
           </info-box>
 
-          <info-box title="Pilotstudien" link="/resources/prototypes" :filter="['PREPCON_kon', 'WVBF']" :color1="color1">
+          <info-box title="Pilotstudien" link="/resources/prototypes" :filter="['PREPCON_kon', 'WVBF']"
+            :color1="color1">
             Linguistische Studien bzw. lexikografische Beschreibungen zu ausgewählten Phänomen
           </info-box>
 

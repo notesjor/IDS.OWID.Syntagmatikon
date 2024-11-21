@@ -25,7 +25,7 @@
 
     <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
       <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
-        <div style="max-width: 60ch;">
+        <div style="max-width: var(--TXT-WIDTH);">
           <div class="nolink" style="margin:0px 0px 10px -15px">
             <v-btn variant="text" class="nocaps" @click="goToParentPage"><v-icon icon="mdi-step-backward"></v-icon>Zurück zu: "{{ layoutVars?.parent }}"</v-btn>          
           </div>
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
-        <div style="max-width: 60ch;">
+        <div style="max-width: var(--TXT-WIDTH);">
           <slot />
         </div>
       </div>

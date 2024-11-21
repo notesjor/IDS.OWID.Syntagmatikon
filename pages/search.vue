@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div style="max-width: 100%; margin:auto">
+  <div style="max-width: 100%;">
     <v-row>
       <!-- Linke Spalte -->
       <v-col cols="6">

@@ -1,37 +1,31 @@
 <template>
-  <div>
-    <v-row>
-      <v-col>
-        <h1>Syntagmatikon</h1>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <div>
-          Das korpusbasierte Portal <hi>Syntagmatikon</hi> bietet Informationen zum Gebrauch von sprachlichen
-          Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten
-          geworden sind.</div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <div>
-          <Sampler :items="sample"></Sampler>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <div>
-          Aktuell werden Phraseologismen, Sprichwörter und Sprüche; Kollokationen; Komposita und andere
-          Wortbildungseinheiten; Präpositionen + Substantiv-Kombinationen; Verb + Präpositionen-Kombinationen;
-          wortgruppenartige Redeeinleiter dokumentiert und beschrieben. Des Weiteren widmet sich das Portal der Analyse
-          und Darstellung zugrunde liegender Schablonen und Schemata (Muster) und deren vielfachen Vernetzungen im
-          deutschen Wortschatz.
-        </div>
-      </v-col>
-    </v-row>
-  </div>
+  <v-row>
+    <v-col>
+      <h1>Syntagmatikon</h1>
+      <p>
+        Das korpusbasierte Portal <hi>Syntagmatikon</hi> bietet Informationen zum Gebrauch von sprachlichen
+        Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten
+        geworden sind.</p>
+    </v-col>
+  </v-row>
+  <v-row>
+    <v-col>
+      <div>
+        <Sampler :items="sample"></Sampler>
+      </div>
+    </v-col>
+  </v-row>
+  <v-row>
+    <v-col>
+      <div>
+        Aktuell werden Phraseologismen, Sprichwörter und Sprüche; Kollokationen; Komposita und andere
+        Wortbildungseinheiten; Präpositionen + Substantiv-Kombinationen; Verb + Präpositionen-Kombinationen;
+        wortgruppenartige Redeeinleiter dokumentiert und beschrieben. Des Weiteren widmet sich das Portal der Analyse
+        und Darstellung zugrunde liegender Schablonen und Schemata (Muster) und deren vielfachen Vernetzungen im
+        deutschen Wortschatz.
+      </div>
+    </v-col>
+  </v-row>
 </template>
 
 <script>

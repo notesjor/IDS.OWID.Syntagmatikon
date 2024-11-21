@@ -1,11 +1,20 @@
-<template>
-    <v-btn>
-        <NuxtLink to="/pos">
-            Zurück zu "Wort- und Ausdrucksarten"
-        </NuxtLink>
-    </v-btn>
+<script setup>
+definePageMeta({
+    layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+    mounted() {
+        const props = useLayoutStore();
+        props.title = 'Adjektive';
+        props.parent = 'Wort- und Ausdrucksarten';
+    },
+}
+</script>
 
-    <h1>Adjektive</h1>
+<template>
     <div>
         <compare title="">
 

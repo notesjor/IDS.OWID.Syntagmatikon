@@ -1,13 +1,20 @@
-<template>
-    <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
-        <div class="nolink">
-            <NuxtLink to="/pos">
-                Zurück zu "Wort- und Ausdrucksarten"
-            </NuxtLink>
-        </div>
-    </v-btn>
-    <h1>Verben</h1>
+<script setup>
+definePageMeta({
+    layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+    mounted() {
+        const props = useLayoutStore();
+        props.title = 'Verben';
+        props.parent = 'Wort- und Ausdrucksarten';
+    },
+}
+</script>
 
+<template>
     <div>
         <compare title="">
 
@@ -55,7 +62,7 @@
                     <p>
                         In <resources-list-compact :filter="['KoMuX']"></resources-list-compact> können Verben
                         neben anderen Wort- und Ausdrucksarten als Erstglieder fungieren.
-                       
+
                     </p>
 
                     <template #explain>

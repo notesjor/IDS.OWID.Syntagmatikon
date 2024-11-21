@@ -1,12 +1,20 @@
+<script setup>
+definePageMeta({
+  layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+  mounted() {
+    const props = useLayoutStore();
+    props.title = 'Nomina';
+    props.parent = 'Wort- und Ausdrucksarten';
+  },
+}
+</script>
+
 <template>
-  <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
-    <div class="nolink">
-      <NuxtLink to="/pos">
-        Zurück zu "Wort- und Ausdrucksarten"
-      </NuxtLink>
-    </div>
-  </v-btn>
-  <h1>Nomina</h1>
   <div>
     <compare title="">
 
@@ -123,10 +131,15 @@
 
           <template #explain>
             <ul>
-              <li>(am) <span class="pos_highlight">Anfang</span> - al <span class="pos_highlight">principio</span> - na <span class="pos_highlight">začiatku</span></li>
-              <li>(auf) <span class="pos_highlight">Anhieb</span> - de <span class="pos_highlight">inmediato</span> - na prvý <span class="pos_highlight">pokus</span></li>
-              <li>(mit) <span class="pos_highlight">Genugtuung</span> - con <span class="pos_highlight">satisfacción</span> - so <span class="pos_highlight">zadosťučinením</span></li>
-              <li>(nach) <span class="pos_highlight">Belieben</span> - a su <span class="pos_highlight">gusto</span> - podľa <span class="pos_highlight">ľubovôle</span></li>
+              <li>(am) <span class="pos_highlight">Anfang</span> - al <span class="pos_highlight">principio</span> - na
+                <span class="pos_highlight">začiatku</span>
+              </li>
+              <li>(auf) <span class="pos_highlight">Anhieb</span> - de <span class="pos_highlight">inmediato</span> - na
+                prvý <span class="pos_highlight">pokus</span></li>
+              <li>(mit) <span class="pos_highlight">Genugtuung</span> - con <span
+                  class="pos_highlight">satisfacción</span> - so <span class="pos_highlight">zadosťučinením</span></li>
+              <li>(nach) <span class="pos_highlight">Belieben</span> - a su <span class="pos_highlight">gusto</span> -
+                podľa <span class="pos_highlight">ľubovôle</span></li>
             </ul>
 
           </template>
@@ -143,20 +156,21 @@
             <ul>
               <li><span class="pos_highlight">Fußball</span></li>
               <ul>
-                <li> <em>Konstituenten</em>: <span class="pos_highlight">Fuß</span> + <span class="pos_highlight">ball</span></li>
-                </ul>
+                <li> <em>Konstituenten</em>: <span class="pos_highlight">Fuß</span> + <span
+                    class="pos_highlight">ball</span></li>
+              </ul>
               <li><span class="pos_highlight">Kleinkind</span></li>
               <ul>
                 <li> <em>Konstituenten</em>: Klein + <span class="pos_highlight">kind</span></li>
-                </ul>
+              </ul>
               <li><span class="pos_highlight">Fahrrad</span></li>
               <ul>
                 <li> <em>Konstituenten</em>: Fahr + <span class="pos_highlight">rad</span></li>
-                </ul>
+              </ul>
               <li><span class="pos_highlight">Ich-Erzähler</span></li>
               <ul>
                 <li> <em>Konstituenten</em>: Ich + <span class="pos_highlight">Erzähler</span></li>
-                </ul>
+              </ul>
             </ul>
           </template>
         </compare-item>
@@ -171,22 +185,22 @@
           <template #explain>
             <ul>
               <li><span class="pos_highlight">Wer-kriegt-wen-Albernheit</span></li>
-                <ul>
-                  <li> <em>Konstituenten</em>: Wer-kriegt-wen + <span class="pos_highlight">Albernheit</span></li>
-                </ul>
-               
+              <ul>
+                <li> <em>Konstituenten</em>: Wer-kriegt-wen + <span class="pos_highlight">Albernheit</span></li>
+              </ul>
+
               <li><span class="pos_highlight">"Schau'mer-mal"-Franz</span></li>
               <ul>
                 <li> <em>Konstituenten</em>: "Schau'mer-mal" + <span class="pos_highlight">Franz</span></li>
-                </ul>
+              </ul>
               <li><span class="pos_highlight">"Der tut nichts"-Hund</span></li>
-                <ul>
-                  <li> <em>Konstituenten</em>: "Der tut nichts" + <span class="pos_highlight">Hund</span></li>
-                  </ul>
+              <ul>
+                <li> <em>Konstituenten</em>: "Der tut nichts" + <span class="pos_highlight">Hund</span></li>
+              </ul>
               <li><span class="pos_highlight">Hin-und-her-Gerede</span></li>
               <ul>
                 <li> <em>Konstituenten</em>: Hin-und-her + <span class="pos_highlight">Gerede</span></li>
-                </ul>
+              </ul>
             </ul>
           </template>
         </compare-item>

@@ -209,13 +209,15 @@
   --CC-INF: #58F380;
   --CC-POS: #A24CC2;
   --CC-PAT: #F25A40;
+
+  --TXT-WIDTH: 60ch;
 }
 
 html {
   scroll-behavior: smooth;
   font-size: var(--FS-BODYTEXT);
   font-family: var(--FF-BODYTEXT);
-
+  
   hyphens: auto;
   hyphenate-character: auto 5;
   hyphenate-limit-chars: auto 5;
@@ -346,6 +348,13 @@ ul ol {
   margin-left: 15px;
 }
 
+ul.example li {
+  list-style: none;
+  margin: 10px 20px 10px 20px;
+  border-top: 1px solid #d6d6d6;
+  padding-top: 10px;
+}
+
 .nocaps {
   text-transform: none;
 }
@@ -367,4 +376,10 @@ ul ol {
 
 .v-expansion-panel{
   font-family: var(--FF-DISPLAY);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
