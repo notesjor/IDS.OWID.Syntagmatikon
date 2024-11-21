@@ -19,7 +19,9 @@ definePageMeta({
   </div>
   <div>
     <v-row>
-      <v-col cols="12">
+      <v-col>
+        <empty/>
+        <headline :h="4">Ressourcentypen im Syntagmatikon</headline>
         <div class="container nolink">
           <info-box title="Explorative Datenbanken" link="/resources/db_expl" :filter="['KoMuX', 'PREPCON_ex']"
             :color1="color1">
@@ -60,76 +62,8 @@ export default {
   theme: { dark: false },
   data() {
     return {
-      highlight: null,
       color1: "#F24162"
     };
   },
-  mounted() {
-    if (this.$route.query.highlight) {
-      this.highlight = this.$route.query.highlight;
-    }
-  },
-  methods: {
-    highlightItem(item) {
-      return this.highlight == item ?
-        "max-width: 350px; margin:10px; border: 3px solid black" :
-        "max-width: 350px; margin:10px";
-    }
-  },
 }
 </script>
-<style scoped>
-a {
-  text-decoration: none;
-}
-
-td {
-  text-align: center;
-}
-</style>
-<style scoped>
-.v-list-subheader {}
-</style>
-<style scoped>
-.containerItem {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: 100%;
-  gap: 0px 0px;
-  grid-template-areas:
-    "left middle";
-  margin: 10px 5px 10px 5px;
-  padding: 5px;
-  border-top: 1px solid #ddd;
-}
-
-.containerItem:hover {
-  background-color: #ddd;
-}
-
-.left {
-  grid-area: left;
-}
-
-.middle {
-  grid-area: middle;
-  text-align: left;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-li {
-  list-style: none;
-  margin: 10px 20px 10px 20px;
-  border-top: 1px solid #d6d6d6;
-  padding-top: 10px;
-}
-
-li:hover {
-  background-color: #d6d6d6;
-}
-</style>

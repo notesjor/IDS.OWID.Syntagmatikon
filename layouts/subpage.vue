@@ -30,12 +30,20 @@
             <v-btn variant="text" class="nocaps" @click="goToParentPage"><v-icon icon="mdi-step-backward"></v-icon>Zurück zu: "{{ layoutVars?.parent }}"</v-btn>          
           </div>
           <div style="margin-bottom: 0.6rem;"><h1><v-icon :color="color1">mdi-compass</v-icon>{{ layoutVars?.title }}</h1></div>
-          <slot />
+          <v-row>
+            <v-col>
+              <slot />
+            </v-col>
+          </v-row>
         </div>
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
         <div style="max-width: var(--TXT-WIDTH);">
-          <slot />
+          <v-row>
+            <v-col>
+              <slot />
+            </v-col>
+          </v-row>
         </div>
       </div>
     </div>

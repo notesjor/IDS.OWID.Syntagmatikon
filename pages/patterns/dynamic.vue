@@ -1,12 +1,20 @@
+<script setup>
+definePageMeta({
+  layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+  mounted() {
+    const props = useLayoutStore();
+    props.title = 'Dynamische Erschließung';
+    props.parent = 'Mustertypen';
+  },
+}
+</script>
+
 <template>
-     <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
-        <div class="nolink">
-        <NuxtLink to="/patterns">
-            Zurück zu "Mustertypen"
-        </NuxtLink>
-        </div> 
-    </v-btn>
-    <h1>Dynamische Erschließung von Mustern</h1>
     <p>In vielen Ressourcen kann man sich selbst Muster erschließen, zum einen durch automatische Suchen und Sortierungen auf der Basis von vorgegebenen Kategorien; zum anderen durch eigene analytische Gruppierungen.</p>
     <resources-list :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp', 'Redeeinleiter', 'Verlaufsformen']"/>
     <h2>Beispiele</h2>

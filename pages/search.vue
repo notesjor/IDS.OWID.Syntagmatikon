@@ -40,6 +40,7 @@ definePageMeta({
         </div>
 
         <!-- Genauigkeit der Suche -->
+      <!--
         <div style="margin: -75px 0px 50px 0px;">
           <span style="position: relative; top: 0px">Genauigkeit der Suche:</span>
           <span>
@@ -57,6 +58,7 @@ definePageMeta({
             </v-btn>
           </span>
         </div>
+      -->
 
         <!-- SUCH-Ergebnis -->
         <v-tabs-window v-model="search_header" style="margin-top: -40px;">

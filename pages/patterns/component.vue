@@ -1,12 +1,20 @@
+<script setup>
+definePageMeta({
+    layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+    mounted() {
+        const props = useLayoutStore();
+        props.title = 'Lexikografische Angaben';
+        props.parent = 'Musterzugänge';
+    },
+}
+</script>
+
 <template>
-       <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
-        <div class="nolink">
-        <NuxtLink to="/patterns">
-            Zurück zu "Mustertypen"
-        </NuxtLink>
-        </div> 
-    </v-btn>
-    <h1>Musterangaben als Komponente lexikografischer Beschreibungen</h1>
     <p>In einigen Ressourcen werden von Hand aufbereitete Musterangaben und -visualisierungen als eine Komponente von Wörterbuchartikeln angeboten, und zwar in „PREPCON<sup>kontrastiv</sup> und „Feste Wortverbindungen“.</p>
     <resources-list :filter="['PREPCON_kon', 'SPRW', 'FesteWV']"/>
     <h2>Beispiele</h2>

@@ -18,38 +18,7 @@ definePageMeta({
   </div>
   <div>
     <v-row>
-      <v-col cols="2"></v-col>
-      <v-col cols="8">
-        <empty/>
-        <headline :h="4">Automatische Informationstypen</headline>
-
-        <div class="container">
-
-          <info-box title="Frequenzen" link="/datatypes/frequency" :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'KoMuX', 'PhrasKomp',
-            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']" :color1="color1">
-            Häufigkeit des Vorkommens eines sprachlichen Ausdrucks im Korpus, ermittelt mithilfe von Zählungen
-            und/oder Suchanfragen (queries)
-          </info-box>
-
-          <info-box title="KWICs <span style='font-size:0.8em'>(KeyWord In Context)</span>" link="/datatypes/kwic"
-            :filter="['WVBF', 'SpruchList',
-              'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'SPRW']" :color1="color1">
-            Zeilen (Konkordanzen), in denen das Suchobjekt vorkommt (Textschnipsel)
-          </info-box>
-
-          <info-box title="Kookkurrenzprofile" link="/datatypes/cooccurrence" :filter="['WVBF',
-            'PREPCON_temp', 'PREPCON_kon']" :color1="color1">
-            Durch statistische Berechnungen (sog. Kookkurrenzanalysen) ermittelte Partnerwort-Profile
-            (überproportional häufiges Miteinandervorkommen von Wörtern und Wortgruppen)
-          </info-box>
-
-          <info-box title="Lückenfüllertabellen" link="/datatypes/patterntable" :filter="['WVBF',
-            'PREPCON_temp', 'PREPCON_kon']" :color1="color1">
-            Durch automatische Auswertung ermittelte Füllerhäufigkeiten innerhalb eines Musterslots
-          </info-box>
-
-        </div>
-
+      <v-col>
         <empty/>
         <headline :h="4">Bearbeitete Informationstypen</headline>
 
@@ -86,8 +55,35 @@ definePageMeta({
             :filter="['PREPCON_kon', 'DTWW']">
             Angabe von Entsprechungen in anderen Sprachen
           </info-box>
+        </div>
 
+        <empty/>
+        <headline :h="4">Automatische Informationstypen</headline>
 
+        <div class="container">
+
+          <info-box title="Frequenzen" link="/datatypes/frequency" :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'KoMuX', 'PhrasKomp',
+            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon']" :color1="color1">
+            Häufigkeit des Vorkommens eines sprachlichen Ausdrucks im Korpus, ermittelt mithilfe von Zählungen
+            und/oder Suchanfragen (queries)
+          </info-box>
+
+          <info-box title="KWICs <span style='font-size:0.8em'>(KeyWord In Context)</span>" link="/datatypes/kwic"
+            :filter="['WVBF', 'SpruchList',
+              'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'SPRW']" :color1="color1">
+            Zeilen (Konkordanzen), in denen das Suchobjekt vorkommt (Textschnipsel)
+          </info-box>
+
+          <info-box title="Kookkurrenzprofile" link="/datatypes/cooccurrence" :filter="['WVBF',
+            'PREPCON_temp', 'PREPCON_kon']" :color1="color1">
+            Durch statistische Berechnungen (sog. Kookkurrenzanalysen) ermittelte Partnerwort-Profile
+            (überproportional häufiges Miteinandervorkommen von Wörtern und Wortgruppen)
+          </info-box>
+
+          <info-box title="Lückenfüllertabellen" link="/datatypes/patterntable" :filter="['WVBF',
+            'PREPCON_temp', 'PREPCON_kon']" :color1="color1">
+            Durch automatische Auswertung ermittelte Füllerhäufigkeiten innerhalb eines Musterslots
+          </info-box>
 
         </div>
       </v-col>
