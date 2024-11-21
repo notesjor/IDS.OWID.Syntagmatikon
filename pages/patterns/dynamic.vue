@@ -9,7 +9,7 @@ export default {
   mounted() {
     const props = useLayoutStore();
     props.title = 'Dynamische Erschließung';
-    props.parent = 'Mustertypen';
+    props.parent = 'Musterzugänge';
   },
 }
 </script>

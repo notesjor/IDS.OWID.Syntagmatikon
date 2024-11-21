@@ -1,12 +1,20 @@
+<script setup>
+definePageMeta({
+  layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+  mounted() {
+    const props = useLayoutStore();
+    props.title = 'Kookkurrenzprofile: Beispiel <em>am Ende</em>';
+    props.parent = 'Fallbeispiele';
+  },
+}
+</script>
+
 <template>
-    <v-btn density="comfortable" prepend-icon="mdi-step-backward" variant="plain">
-        <div class="nolink">
-            <NuxtLink to="/examples">
-                Zurück zu "Fallbeispiele"
-            </NuxtLink>
-        </div>
-    </v-btn>
-    <h1>Kookkurrenzprofile: Beispiel <em>am Ende</em></h1>
     <div class="caption">Beispiel aus <resources-list-compact :filter="['PREPCON_temp']"></resources-list-compact></div>
     <v-carousel>
         <v-carousel-item><img src="/img/datatypes/kook/amEnde_kookzeilen.png" /></v-carousel-item>
@@ -38,9 +46,8 @@
         In-Aussichtstellens eines finalen Resultats wird besonders bei verbalen
         Partnerwörtern wie <span class="pos_highlight">reichte</span> (<em>reichte es am Ende nicht</em>)
         oder <span class="pos_highlight">heraus</span> (<em>was am Ende herausspringt</em>)
-        angezeigt.  <v-btn density="compact" size="small" variant=tonal icon="mdi-plus" @click="toggleDiv"></v-btn></p>
-        <div class="more" v-show="isVisible">
-    <p>Kookkurrenzlisten bieten immer nur erste Anhaltspunkte. Für die
+        angezeigt.  <expand-me>
+            <p>Kookkurrenzlisten bieten immer nur erste Anhaltspunkte. Für die
         eigentliche Interpretation sind die „dahinter liegenden“ geclusterten
         Kontexte (KWICs, Volltextstellen) unabdingbar.</p>
     <p>Es kann es darüber hinaus Resultate geben, die falsch oder gar
@@ -49,21 +56,5 @@
         blind jedwede statistische Auffälligkeit. Die Beurteilung der
         Aussagekraft von Daten muss der Mensch treffen.
     </p>
-    </div>
-
+        </expand-me></p>
 </template>
-
-<script>
-export default {
-    data() {
-      return {
-        isVisible: false, // initial state of the div (visible)
-      };
-    },
-    methods: {
-      toggleDiv() {
-        this.isVisible = !this.isVisible; // toggle visibility
-      },
-    },
-  };
-  </script>

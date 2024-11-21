@@ -29,7 +29,7 @@
           <div class="nolink" style="margin:0px 0px 10px -15px">
             <v-btn variant="text" class="nocaps" @click="goToParentPage"><v-icon icon="mdi-step-backward"></v-icon>Zurück zu: "{{ layoutVars?.parent }}"</v-btn>          
           </div>
-          <div style="margin-bottom: 0.6rem;"><h1><v-icon :color="color1">mdi-compass</v-icon>{{ layoutVars?.title }}</h1></div>
+          <div style="margin-bottom: 0.6rem;"><h1><v-icon :color="color1">mdi-compass</v-icon><span v-html="layoutVars?.title"/></h1></div>
           <v-row>
             <v-col>
               <slot />

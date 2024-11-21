@@ -1,7 +1,21 @@
+<script setup>
+definePageMeta({
+  layout: "subpage",
+})
+</script>
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+  mounted() {
+    const props = useLayoutStore();
+    props.title = 'Anfrage Frankfurter Rundschau zu "frech wie Oskar"';
+    props.parent = 'Fallbeispiele';
+  },
+}
+</script>
+
 <template>
-    <div style="max-width: 80ch;">
-        <h1>Anfrage Frankfurter Rundschau zu<br/>"frech wie
-                Oskar"</h1><br/>&nbsp;<br/>
+    <div>
         <p>Der Kommentar auf der GfdS-Seite zu <em>frech wie Oskar</em> und die
             Erwähnung der diffusen Quellenlage macht das Problem einer seriösen
             Herkunftsbestimmung mehr als deutlich.</p>
