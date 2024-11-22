@@ -26,13 +26,13 @@ export default {
 
       <template #headers>
         <v-tab value="ALL" class="nocaps">alle Ressourcen</v-tab>
-        <v-tab value="1" class="nocaps"><resources-list-compact :filter="['KoMuX']"></resources-list-compact>
+        <v-tab value="1" class="nocaps"><tag rkey="KoMuX"/>
         </v-tab>
-        <v-tab value="2" class="nocaps"><resources-list-compact :filter="['SpruchList']"></resources-list-compact>
+        <v-tab value="2" class="nocaps"><tag rkey="SpruchList"/>
         </v-tab>
         <v-tab value="3" class="nocaps"><resources-list-compact
             :filter="['PhrasKomp']"></resources-list-compact></v-tab>
-        <v-tab value="4" class="nocaps"><resources-list-compact :filter="['SPRW']"></resources-list-compact></v-tab>
+        <v-tab value="4" class="nocaps"><tag rkey="SPRW"/></v-tab>
       </template>
       <template #tabs>
 
@@ -58,7 +58,7 @@ export default {
         <compare-item value="1" rkey="KoMuX">
           <!-- TODO: Inhalt ergänzen -->
           <p>
-            In <resources-list-compact :filter="['KoMuX']"></resources-list-compact>
+            In <tag rkey="KoMuX"/>
             können feste Sätze neben anderen Wort- und Ausdrucksarten als Erstglied fungieren. Sie werden über das Label
             ‚Phrase‘ erfasst. Im Gegensatz zu allen anderen Wort- und Ausdrucksarten wurde das Label ‚Phrase‘ aber nicht
             automatisch zugewiesen, sondern manuell nachannotiert.
@@ -67,9 +67,9 @@ export default {
           <template #explain>
             <div>
               <ul>
-                <li><span class="pos_highlight">Do-it-yourself</span>-Kur</li>
-                <li><span class="pos_highlight">Geiz-ist-geil</span>-Kampagne</li>
-                <li><span class="pos_highlight">Was-wäre-wenn</span>-Spekulation</li>
+                <li><m>Do-it-yourself</m>-Kur</li>
+                <li><m>Geiz-ist-geil</m>-Kampagne</li>
+                <li><m>Was-wäre-wenn</m>-Spekulation</li>
               </ul>
             </div>
           </template>
@@ -78,7 +78,7 @@ export default {
         <compare-item value="2" rkey="SpruchList">
 
           <p>
-            <resources-list-compact :filter="['SpruchList']"></resources-list-compact> bietet eine Liste von
+            <tag rkey="SpruchList"/> bietet eine Liste von
             Sprichwörtern, Sprüchen und festen Gebrauchssätzen des Deutschen.
           </p>
           <!-- <div class="exampleImg">
@@ -88,10 +88,10 @@ export default {
 
           <template #explain>
             <ul>
-              <li><span class="pos_highlight">Aus die Maus</span></li>
-              <li><span class="pos_highlight">Wer A sagt, muss auch B sagen</span></li>
-              <li><span class="pos_highlight">Quadratisch, praktisch, gut</span></li>
-              <li><span class="pos_highlight">Hätte, hätte, Fahrradkette</span></li>
+              <li><m>Aus die Maus</m></li>
+              <li><m>Wer A sagt, muss auch B sagen</m></li>
+              <li><m>Quadratisch, praktisch, gut</m></li>
+              <li><m>Hätte, hätte, Fahrradkette</m></li>
             </ul>
           </template>
         </compare-item>
@@ -99,7 +99,7 @@ export default {
         <compare-item value="3" rkey="PhrasKomp">
           <!-- TODO: Inhalt ergänzen -->
           <p>
-            In <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
+            In <tag rkey="PhrasKomp"/>
             können feste Sätze, neben Phrasemen, als Erstglied fungieren. Alternativ zu dieser phraseologischen
             Perspektive
             können die Erstglieder von Phrasenkomposita auch unter einer syntaktischen Perspektive, d.h. als Phrasen und
@@ -110,22 +110,21 @@ export default {
           <template #explain>
             <div>
               <ul>
-                <li>»<span class="pos_highlight">Im-fremden-Bett-schlaf-ich-immer-schlecht</span>-Sensibelchen«</li>
-                <li><span class="pos_highlight">"Wir sitzen alle in einem Boot"-</span>Gerede</li>
-                <li><span class="pos_highlight">"I have a dream"</span>-Rede</li>
-                <li><span
-                    class="pos_highlight">Ich-kann-Golf-und-Schi-und-Wandern-und-bin-schöner-als-die-andern</span>-Franz
+                <li>»<m>Im-fremden-Bett-schlaf-ich-immer-schlecht</m>-Sensibelchen«</li>
+                <li><m>"Wir sitzen alle in einem Boot"-</m>Gerede</li>
+                <li><m>"I have a dream"</m>-Rede</li>
+                <li><m>Ich-kann-Golf-und-Schi-und-Wandern-und-bin-schöner-als-die-andern</m>-Franz
                 </li>
               </ul>
             </div>
           </template>
           <!-- <p>
-            Unter den Zweitgliedern der Phrasenkomposita in <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact> sind auch feste Sätze.
+            Unter den Zweitgliedern der Phrasenkomposita in <tag rkey="PhrasKomp"/> sind auch feste Sätze.
           </p>
          
           <template #explain>   
             <ul>
-            <li><span class="pos_highlight">"Ich-bin-dann-mal-weg"</span>-Bedürfnis (Fester Satz: <span class="pos_highlight">Ich bin dann mal weg</span> + 
+            <li><m>"Ich-bin-dann-mal-weg"</m>-Bedürfnis (Fester Satz: <m>Ich bin dann mal weg</m> + 
                 Nomen: Bedürfnis)</li>
                 </ul>
           </template> -->
@@ -136,7 +135,7 @@ export default {
 
         <compare-item value="4" rkey="SPRW">
           <p>
-            Die Stichwortliste in <resources-list-compact :filter="['SPRW']"></resources-list-compact> enthält 351
+            Die Stichwortliste in <tag rkey="SPRW"/> enthält 351
             Sprichwörter
             (vollständige Sätze und satzwertige Einheiten). Als gesonderte Liste sind darüber hinaus die Werbeslogans,
             die im
@@ -154,10 +153,10 @@ export default {
 
           <template #explain>
             <ul>
-              <li><span class="pos_highlight">Der Klügere gibt nach</span></li>
-              <li><span class="pos_highlight">Eile mit Weile</span></li>
-              <li><span class="pos_highlight">Geiz ist geil</span></li>
-              <li><span class="pos_highlight">Wer A sagt, muss auch B sagen</span></li>
+              <li><m>Der Klügere gibt nach</m></li>
+              <li><m>Eile mit Weile</m></li>
+              <li><m>Geiz ist geil</m></li>
+              <li><m>Wer A sagt, muss auch B sagen</m></li>
             </ul>
 
           </template>

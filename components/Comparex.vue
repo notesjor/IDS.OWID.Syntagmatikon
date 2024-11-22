@@ -4,9 +4,14 @@
     style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
     <v-row style="margin-top:-20px">
       <v-col>
-        <p class="text-xl">{{ title }}</p>
         <v-tabs v-model="currentTab">
-          <slot name="headers"></slot>
+          <v-tab v-for="(item, index) in tabs" :key="index">
+            <span class="nocaps">
+              <v-chip variant="outlined" density="compact">
+                <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br /> 
+              </v-chip>
+            </span>
+          </v-tab>
         </v-tabs>
       </v-col>
     </v-row>
@@ -30,21 +35,39 @@
 </template>
 
 <script>
+import { useResourcesStore } from '~/stores/resources';
+
 export default {
   name: "Compare",
   props: {
     title: {
       type: String,
       default: "Ressourcen"
+    },
+    filter: {
+      type: Array,
+      default: () => []
     }
   },
   data() {
     return {
-      currentTab: 0
+      currentTab: 0,
+      tabs: [],
     }
   },
-  methods: {
-  },
+  mounted() {
+    this.resourcesStore = useResourcesStore();
+
+    var tabs = [];
+    tabs.push("Übersicht");
+    if (this.resourcesStore == null)
+      return tabs;
+
+    for (let i = 0; i < this.filter.length; i++) {
+      tabs.push(this.resourcesStore.getResource(this.filter[i]).nameShort);
+    }
+    this.tabs = tabs;
+  }
 }
 </script>
 

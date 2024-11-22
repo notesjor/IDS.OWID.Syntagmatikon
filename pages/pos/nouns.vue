@@ -26,21 +26,21 @@ export default {
 
       <template #headers>
         <v-tab value="ALL" class="nocaps">alle Ressourcen</v-tab>
-        <v-tab value="1" class="nocaps"><resources-list-compact :filter="['PREPCON_ex']"></resources-list-compact>
+        <v-tab value="1" class="nocaps"><tag rkey="PREPCON_ex"/>
         </v-tab>
         <v-tab value="2" class="nocaps"><resources-list-compact
             :filter="['PREPCON_temp']"></resources-list-compact></v-tab>
         <v-tab value="3" class="nocaps"><resources-list-compact
             :filter="['PREPCON_kon']"></resources-list-compact></v-tab>
-        <v-tab value="4" class="nocaps"><resources-list-compact :filter="['KoMuX']"></resources-list-compact></v-tab>
+        <v-tab value="4" class="nocaps"><tag rkey="KoMuX"/></v-tab>
         <v-tab value="5" class="nocaps"><resources-list-compact
             :filter="['PhrasKomp']"></resources-list-compact></v-tab>
         <v-tab value="6" class="nocaps"><resources-list-compact
             :filter="['Redeeinleiter']"></resources-list-compact></v-tab>
         <v-tab value="7" class="nocaps"><resources-list-compact
             :filter="['Verlaufsformen']"></resources-list-compact></v-tab>
-        <v-tab value="8" class="nocaps"><resources-list-compact :filter="['WVBF']"></resources-list-compact></v-tab>
-        <v-tab value="9" class="nocaps"><resources-list-compact :filter="['DTWW']"></resources-list-compact></v-tab>
+        <v-tab value="8" class="nocaps"><tag rkey="WVBF"/></v-tab>
+        <v-tab value="9" class="nocaps"><tag rkey="DTWW"/></v-tab>
       </template>
       <template #tabs>
 
@@ -67,7 +67,7 @@ export default {
 
           <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
           <p>
-            <resources-list-compact :filter="['PREPCON_ex']"></resources-list-compact> bietet einen gesonderten Zugang
+            <tag rkey="PREPCON_ex"/> bietet einen gesonderten Zugang
             über Nomen-Tabellen an.
           </p>
 
@@ -83,10 +83,10 @@ export default {
 
             <div style="margin-bottom: 20px; width: 100%;">
               <ul>
-                <li> (an) <span class="pos_highlight">Bord</span></li>
-                <li> (in) <span class="pos_highlight">Ruhe</span></li>
-                <li> (auf) <span class="pos_highlight">Nachfrage</span></li>
-                <li> (ohne) <span class="pos_highlight">Zweifel</span></li>
+                <li> (an) <m>Bord</m></li>
+                <li> (in) <m>Ruhe</m></li>
+                <li> (auf) <m>Nachfrage</m></li>
+                <li> (ohne) <m>Zweifel</m></li>
               </ul>
             </div>
           </template>
@@ -98,7 +98,7 @@ export default {
         <compare-item value="2" rkey="PREPCON_temp"
           description="Feste Wortverbindungen des Deutschen - Modul: Wortverbindungen mit Adjektiv">
           <p>
-            In <resources-list-compact :filter="['PREPCON_temp']"></resources-list-compact> kann man ein Inventar von
+            In <tag rkey="PREPCON_temp"/> kann man ein Inventar von
             Präposition-Nomen-Verbindungen mit Zeit-Nomina abrufen.
           </p>
 
@@ -106,10 +106,10 @@ export default {
             <div>
 
               <ul>
-                <li>(am) <span class="pos_highlight">Anfang</span></li>
-                <li>(vor) <span class="pos_highlight">Sonnenaufgang</span></li>
-                <li>(über) <span class="pos_highlight">Nacht</span></li>
-                <li>(ohne) <span class="pos_highlight">Unterlass</span></li>
+                <li>(am) <m>Anfang</m></li>
+                <li>(vor) <m>Sonnenaufgang</m></li>
+                <li>(über) <m>Nacht</m></li>
+                <li>(ohne) <m>Unterlass</m></li>
               </ul>
             </div>
 
@@ -124,22 +124,21 @@ export default {
         <compare-item value="3" rkey="PREPCON_kon"
           description="Musterbank argumentmarkierender Präpositionen - Information: Prädikate (Verbalprädikate und Prädikatsgefüge)">
           <p>
-            In <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> bilden vier Nomina in
+            In <tag rkey="PREPCON_kon"/> bilden vier Nomina in
             Verbindung mit
             einer Präposition den Ausgangspunkt für die kontrastive Beschreibung deutsch – spanisch; deutsch-slowakisch.
           </p>
 
           <template #explain>
             <ul>
-              <li>(am) <span class="pos_highlight">Anfang</span> - al <span class="pos_highlight">principio</span> - na
-                <span class="pos_highlight">začiatku</span>
+              <li>(am) <m>Anfang</m> - al <m>principio</m> - na
+                <m>začiatku</m>
               </li>
-              <li>(auf) <span class="pos_highlight">Anhieb</span> - de <span class="pos_highlight">inmediato</span> - na
-                prvý <span class="pos_highlight">pokus</span></li>
-              <li>(mit) <span class="pos_highlight">Genugtuung</span> - con <span
-                  class="pos_highlight">satisfacción</span> - so <span class="pos_highlight">zadosťučinením</span></li>
-              <li>(nach) <span class="pos_highlight">Belieben</span> - a su <span class="pos_highlight">gusto</span> -
-                podľa <span class="pos_highlight">ľubovôle</span></li>
+              <li>(auf) <m>Anhieb</m> - de <m>inmediato</m> - na
+                prvý <m>pokus</m></li>
+              <li>(mit) <m>Genugtuung</m> - con <m>satisfacción</m> - so <m>zadosťučinením</m></li>
+              <li>(nach) <m>Belieben</m> - a su <m>gusto</m> -
+                podľa <m>ľubovôle</m></li>
             </ul>
 
           </template>
@@ -147,29 +146,28 @@ export default {
 
         <compare-item value="4" rkey="KoMuX" description="">
           <p>
-            In <resources-list-compact :filter="['KoMuX']"></resources-list-compact> bilden Nomina die Gruppe der
+            In <tag rkey="KoMuX"/> bilden Nomina die Gruppe der
             Zweitglieder.
             Zum anderen können sie neben anderen Wort- und Ausdrucksarten auch als Erstglieder fungieren.
           </p>
 
           <template #explain>
             <ul>
-              <li><span class="pos_highlight">Fußball</span></li>
+              <li><m>Fußball</m></li>
               <ul>
-                <li> <em>Konstituenten</em>: <span class="pos_highlight">Fuß</span> + <span
-                    class="pos_highlight">ball</span></li>
+                <li> <em>Konstituenten</em>: <m>Fuß</m> + <m>ball</m></li>
               </ul>
-              <li><span class="pos_highlight">Kleinkind</span></li>
+              <li><m>Kleinkind</m></li>
               <ul>
-                <li> <em>Konstituenten</em>: Klein + <span class="pos_highlight">kind</span></li>
+                <li> <em>Konstituenten</em>: Klein + <m>kind</m></li>
               </ul>
-              <li><span class="pos_highlight">Fahrrad</span></li>
+              <li><m>Fahrrad</m></li>
               <ul>
-                <li> <em>Konstituenten</em>: Fahr + <span class="pos_highlight">rad</span></li>
+                <li> <em>Konstituenten</em>: Fahr + <m>rad</m></li>
               </ul>
-              <li><span class="pos_highlight">Ich-Erzähler</span></li>
+              <li><m>Ich-Erzähler</m></li>
               <ul>
-                <li> <em>Konstituenten</em>: Ich + <span class="pos_highlight">Erzähler</span></li>
+                <li> <em>Konstituenten</em>: Ich + <m>Erzähler</m></li>
               </ul>
             </ul>
           </template>
@@ -178,28 +176,28 @@ export default {
         <compare-item value="5" rkey="PhrasKomp">
           <!-- TODO: Inhalt ergänzen -->
           <p>
-            In <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
+            In <tag rkey="PhrasKomp"/>
             bilden Nomina die Gruppe der Zweitglieder. Auch bei den Gesamtbildungen handelt es sich somit um Nomina.
           </p>
 
           <template #explain>
             <ul>
-              <li><span class="pos_highlight">Wer-kriegt-wen-Albernheit</span></li>
+              <li><m>Wer-kriegt-wen-Albernheit</m></li>
               <ul>
-                <li> <em>Konstituenten</em>: Wer-kriegt-wen + <span class="pos_highlight">Albernheit</span></li>
+                <li> <em>Konstituenten</em>: Wer-kriegt-wen + <m>Albernheit</m></li>
               </ul>
 
-              <li><span class="pos_highlight">"Schau'mer-mal"-Franz</span></li>
+              <li><m>"Schau'mer-mal"-Franz</m></li>
               <ul>
-                <li> <em>Konstituenten</em>: "Schau'mer-mal" + <span class="pos_highlight">Franz</span></li>
+                <li> <em>Konstituenten</em>: "Schau'mer-mal" + <m>Franz</m></li>
               </ul>
-              <li><span class="pos_highlight">"Der tut nichts"-Hund</span></li>
+              <li><m>"Der tut nichts"-Hund</m></li>
               <ul>
-                <li> <em>Konstituenten</em>: "Der tut nichts" + <span class="pos_highlight">Hund</span></li>
+                <li> <em>Konstituenten</em>: "Der tut nichts" + <m>Hund</m></li>
               </ul>
-              <li><span class="pos_highlight">Hin-und-her-Gerede</span></li>
+              <li><m>Hin-und-her-Gerede</m></li>
               <ul>
-                <li> <em>Konstituenten</em>: Hin-und-her + <span class="pos_highlight">Gerede</span></li>
+                <li> <em>Konstituenten</em>: Hin-und-her + <m>Gerede</m></li>
               </ul>
             </ul>
           </template>
@@ -207,17 +205,17 @@ export default {
 
         <compare-item value="6" rkey="Redeeinleiter">
           <p>
-            In <resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact> kann man alle Nomen aus dem
+            In <tag rkey="Redeeinleiter"/> kann man alle Nomen aus dem
             Redewiedergabe-Korpus abrufen, die als Rede- oder Gedankeneinleiter genutzt werden.
           </p>
 
           <template #explain>
             <ul>
-              <li><span class="pos_highlight">Absicht</span>, sie zu beleidigen...</li>
-              <li><span class="pos_highlight">Ahnung</span>, es werde ihm vielleicht nicht gegönnt sein...</li>
-              <li>Aber er hält das dem Vater gegebne <span class="pos_highlight">Wort</span>, seine Traute nicht mehr zu
+              <li><m>Absicht</m>, sie zu beleidigen...</li>
+              <li><m>Ahnung</m>, es werde ihm vielleicht nicht gegönnt sein...</li>
+              <li>Aber er hält das dem Vater gegebne <m>Wort</m>, seine Traute nicht mehr zu
                 besuchen.</li>
-              <li>Eine dumpfe <span class="pos_highlight">Angst</span>: Sie mißgönnen mir die Erlösung, sind hinter mir,
+              <li>Eine dumpfe <m>Angst</m>: Sie mißgönnen mir die Erlösung, sind hinter mir,
                 verfolgen mich, jagte ihn vorwärts.</li>
             </ul>
           </template>
@@ -225,35 +223,35 @@ export default {
 
         <compare-item value="7" rkey="Verlaufsformen">
           <p>
-            In <resources-list-compact :filter="['Verlaufsformen']"></resources-list-compact> wird der Gebrauch
+            In <tag rkey="Verlaufsformen"/> wird der Gebrauch
             nominalisierter
             deutscher Verben hinsichtlich ihres Vorkommens in drei Verlaufsformen dokumentiert.
           </p>
 
           <template #explain>
             <ul>
-              <li>(am) <span class="pos_highlight">Anrollen</span></li>
-              <li>(am) <span class="pos_highlight">Verfallen</span></li>
-              <li>(beim) <span class="pos_highlight">Pflücken</span></li>
-              <li>(beim) <span class="pos_highlight">Testen</span></li>
+              <li>(am) <m>Anrollen</m></li>
+              <li>(am) <m>Verfallen</m></li>
+              <li>(beim) <m>Pflücken</m></li>
+              <li>(beim) <m>Testen</m></li>
             </ul>
           </template>
         </compare-item>
 
         <compare-item value="8" rkey="WVBF">
           <p>
-            In <resources-list-compact :filter="['WVBF']"></resources-list-compact> ist das Nomen <em>Grund</em> der
+            In <tag rkey="WVBF"/> ist das Nomen <em>Grund</em> der
             zentrale
             Knoten für das Netz präpositionaler Verbindungen.
           </p>
 
           <template #explain>
             <ul>
-              <li>(aus) <span class="pos_highlight">Grund</span></li>
-              <li>(auf) <span class="pos_highlight">Grund</span></li>
-              <li>(im) <span class="pos_highlight">Grund</span></li>
-              <li>(mit) <span class="pos_highlight">Grund</span></li>
-              <li>(ohne) <span class="pos_highlight">Grund</span></li>
+              <li>(aus) <m>Grund</m></li>
+              <li>(auf) <m>Grund</m></li>
+              <li>(im) <m>Grund</m></li>
+              <li>(mit) <m>Grund</m></li>
+              <li>(ohne) <m>Grund</m></li>
             </ul>
           </template>
         </compare-item>
@@ -261,17 +259,17 @@ export default {
 
         <compare-item value="9" rkey="DTWW">
           <p>
-            In <resources-list-compact :filter="['DTWW']"></resources-list-compact> sind Nomina sowohl Basiskomponenten
+            In <tag rkey="DTWW"/> sind Nomina sowohl Basiskomponenten
             von
             Kollokationen als auch eigene Einträge verzeichnet.
           </p>
 
           <template #explain>
             <ul>
-              <li>(abnehmende) <span class="pos_highlight">Nachfrage</span></li>
-              <li>(anziehende) <span class="pos_highlight">Kurse</span></li>
-              <li><span class="pos_highlight">Barausschüttung</span></li>
-              <li><span class="pos_highlight">Deckungsschutz</span></li>
+              <li>(abnehmende) <m>Nachfrage</m></li>
+              <li>(anziehende) <m>Kurse</m></li>
+              <li><m>Barausschüttung</m></li>
+              <li><m>Deckungsschutz</m></li>
             </ul>
           </template>
         </compare-item>

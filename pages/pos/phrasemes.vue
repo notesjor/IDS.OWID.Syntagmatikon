@@ -25,9 +25,9 @@ export default {
 
             <template #headers>
                 <v-tab value="ALL" class="nocaps">alle Ressourcen</v-tab>
-                <v-tab value="1" class="nocaps"><resources-list-compact :filter="['KoMuX']"></resources-list-compact>
+                <v-tab value="1" class="nocaps"><tag rkey="KoMuX"/>
                 </v-tab>
-                <v-tab value="2" class="nocaps"><resources-list-compact :filter="['MAP']"></resources-list-compact>
+                <v-tab value="2" class="nocaps"><tag rkey="MAP"/>
                 </v-tab>
                 <v-tab value="3" class="nocaps"><resources-list-compact
                         :filter="['PhrasKomp']"></resources-list-compact></v-tab>
@@ -65,7 +65,7 @@ export default {
 
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        In <resources-list-compact :filter="['KoMuX']"></resources-list-compact> können Phraseme neben
+                        In <tag rkey="KoMuX"/> können Phraseme neben
                         anderen Wort- und Ausdrucksarten als Erstglied fungieren. Sie werden in dieser Ressource über
                         das Label ‚Phrase‘ erfasst, das auf ein syntaktisches Phrasenmodell in Hein 2015 zurückgeht. Im
                         Gegensatz zu allen anderen Wort- und Ausdrucksarten wurde das Label ‚Phrase‘ aber nicht
@@ -75,10 +75,10 @@ export default {
                     <template #explain>
                         <div>
                             <ul>
-                                <li><span class="pos_highlight">Friede-Freude-Eierkuchen</span>-Stimmung</li>
-                                <li><span class="pos_highlight">Erste-Hilfe</span>-Lehrgang</li>
-                                <li><span class="pos_highlight">Zwischen-den-Jahren</span>-Feier</li>
-                                <li><span class="pos_highlight">Last-Minute</span>-Tipp</li>
+                                <li><m>Friede-Freude-Eierkuchen</m>-Stimmung</li>
+                                <li><m>Erste-Hilfe</m>-Lehrgang</li>
+                                <li><m>Zwischen-den-Jahren</m>-Feier</li>
+                                <li><m>Last-Minute</m>-Tipp</li>
                             </ul>
                         </div>
                     </template>
@@ -89,7 +89,7 @@ export default {
 
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        Informationen zu <resources-list-compact :filter="['MAP']"></resources-list-compact>
+                        Informationen zu <tag rkey="MAP"/>
                         sind noch in Vorbereitung.
                     </p>
 
@@ -100,7 +100,7 @@ export default {
                 <compare-item value="3" rkey="PhrasKomp">
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        In <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
+                        In <tag rkey="PhrasKomp"/>
                         können Phraseme, neben festen Sätzen, als Erstglied fungieren. Alternativ zu dieser
                         phraseologischen Perspektive
                         können die Erstglieder von Phrasenkomposita auch unter einer syntaktischen Perspektive, d.h. als
@@ -111,10 +111,10 @@ export default {
                     <template #explain>
                         <div>
                             <ul>
-                                <li><span class="pos_highlight">Pleiten-Pech-und-Pannen</span>-Woche</li>
-                                <li><span class="pos_highlight">Working-Class</span>-Junge</li>
-                                <li><span class="pos_highlight">"Sex and the City"</span>-Mädchen</li>
-                                <li><span class="pos_highlight">"Zu mir oder zu dir"</span>-Gequatsche</li>
+                                <li><m>Pleiten-Pech-und-Pannen</m>-Woche</li>
+                                <li><m>Working-Class</m>-Junge</li>
+                                <li><m>"Sex and the City"</m>-Mädchen</li>
+                                <li><m>"Zu mir oder zu dir"</m>-Gequatsche</li>
                             </ul>
                         </div>
                     </template>
@@ -124,7 +124,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact> kann man alle
+                        In <tag rkey="Redeeinleiter"/> kann man alle
                         Phraseme aus dem
                         Redewiedergabe-Korpus abrufen, die als Rede- oder Gedankeneinleiter genutzt werden.
                     </p>
@@ -133,14 +133,11 @@ export default {
                     <template #explain>
                         <div>
                             <ul>
-                                <li>...insbesondere was davon seine eigene Person betrifft, <span
-                                        class="pos_highlight">macht</span> der Prinz <span class="pos_highlight">kein
-                                        Hehl daraus</span>, daß er die frohe Hoffnung hege...</li>
-                                <li>»Erlauben Sie!« <span class="pos_highlight">fiel</span> ihm Salmeyer <span
-                                        class="pos_highlight">ins Wort</span>.</li>
-                                <li>...plötzlich <span class="pos_highlight">kommt</span> mir <span
-                                        class="pos_highlight">in den Sinn</span>: »Wenn er selbst der Engel war...</li>
-                                <li>Es läßt sich gar nicht <span class="pos_highlight">in Abrede stellen</span>, daß
+                                <li>...insbesondere was davon seine eigene Person betrifft, <m>macht</m> der Prinz <m>kein
+                                        Hehl daraus</m>, daß er die frohe Hoffnung hege...</li>
+                                <li>»Erlauben Sie!« <m>fiel</m> ihm Salmeyer <m>ins Wort</m>.</li>
+                                <li>...plötzlich <m>kommt</m> mir <m>in den Sinn</m>: »Wenn er selbst der Engel war...</li>
+                                <li>Es läßt sich gar nicht <m>in Abrede stellen</m>, daß
                                     dieses Uebereinkommen aus zwei Gesichtspuncten bedenklich erscheinen muß.</li>
 
                             </ul>
@@ -153,7 +150,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['WVBF']"></resources-list-compact> haben lexikalisierte
+                        In <tag rkey="WVBF"/> haben lexikalisierte
                         Wortverbindungen
                         mit PRÄPOSITION + GRUND den Status von Phrasem-Knoten.
                     </p>
@@ -166,10 +163,10 @@ export default {
                     <template #explain>
                         <div>
                             <ul>
-                                <li> <span class="pos_highlight">aus welchen Gründen auch immer</span></li>
-                                <li> <span class="pos_highlight">im Grunde genommen</span></li>
-                                <li> <span class="pos_highlight">mit gutem Grund</span></li>
-                                <li> <span class="pos_highlight">nicht ohne Grund</span></li>
+                                <li> <m>aus welchen Gründen auch immer</m></li>
+                                <li> <m>im Grunde genommen</m></li>
+                                <li> <m>mit gutem Grund</m></li>
+                                <li> <m>nicht ohne Grund</m></li>
                             </ul>
                         </div>
                     </template>
@@ -180,7 +177,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        <resources-list-compact :filter="['FesteWV']"></resources-list-compact> bilden in der Rubrik
+                        <tag rkey="FesteWV"/> bilden in der Rubrik
                         ‚Musterartikel‘
                         Phraseme die Stichwortliste.
                     </p>
@@ -209,19 +206,19 @@ export default {
                         <div class="exampleHeadline">Rubrik „Musterartikel“</div>
                         <div style="width: 100%; margin-bottom: 20px;">
                             <ul>
-                                <li> <span class="pos_highlight">billiger Jakob</span></li>
-                                <li> <span class="pos_highlight">eigen Fleisch und Blut</span></li>
-                                <li> <span class="pos_highlight">im eigenen Saft schmoren</span></li>
-                                <li> <span class="pos_highlight">recht und billig</span></li>
+                                <li> <m>billiger Jakob</m></li>
+                                <li> <m>eigen Fleisch und Blut</m></li>
+                                <li> <m>im eigenen Saft schmoren</m></li>
+                                <li> <m>recht und billig</m></li>
                             </ul>
                         </div>
                         <div class="exampleHeadline">Rubrik „Wortverbindungen mit Adjektiven“</div>
                         <div style="width: 100%;">
                             <ul>
-                                <li> <span class="pos_highlight">sich blind verstehen</span></li>
-                                <li> <span class="pos_highlight">im Vollbesitz seiner geistigen Kräfte</span></li>
-                                <li> <span class="pos_highlight">gesund und munter</span></li>
-                                <li> <span class="pos_highlight">jeder halbwegs normale Mensch</span></li>
+                                <li> <m>sich blind verstehen</m></li>
+                                <li> <m>im Vollbesitz seiner geistigen Kräfte</m></li>
+                                <li> <m>gesund und munter</m></li>
+                                <li> <m>jeder halbwegs normale Mensch</m></li>
                             </ul>
                         </div>
                     </template>
@@ -231,7 +228,7 @@ export default {
                 <compare-item value="7" rkey="DTWW">
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['DTWW']"></resources-list-compact> sind neben Nomina und
+                        In <tag rkey="DTWW"/> sind neben Nomina und
                         Komposita auch
                         deutsche Phraseme in der Domäne Wirtschaft und ihre türkischen Entsprechungen aufgeführt.
                     </p>
@@ -240,10 +237,10 @@ export default {
                     <template #explain>
                         <div>
                             <ul>
-                                <li> <span class="pos_highlight">ab Werk</span></li>
-                                <li> <span class="pos_highlight">Elastizität der Nachfrage</span></li>
-                                <li> <span class="pos_highlight">schwarze Zahlen schreiben</span></li>
-                                <li> <span class="pos_highlight">Sparen am falschen Ende</span></li>
+                                <li> <m>ab Werk</m></li>
+                                <li> <m>Elastizität der Nachfrage</m></li>
+                                <li> <m>schwarze Zahlen schreiben</m></li>
+                                <li> <m>Sparen am falschen Ende</m></li>
                             </ul>
                         </div>
                     </template>

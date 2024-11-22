@@ -62,7 +62,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> beinhaltet eine
+                        <tag rkey="PREPCON_kon"/> beinhaltet eine
                         korpusgesteuerte Vergleichstudie von quantitativen Daten, Bedeutungs- und Gebrauchsaspekten
                         sowie semi-abstrakten Mustern für die Sprachenpaare Deutsch – Spanisch und Deutsch – Slowakisch;
                         ausgehend vom Deutschen. Beschrieben werden die Präposition-Nomen-Verbindungen <em>am Anfang;
@@ -93,7 +93,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        <resources-list-compact :filter="['DTWW']"></resources-list-compact> ist eine Sammlung fester
+                        <tag rkey="DTWW"/> ist eine Sammlung fester
                         deutsch-türkischer
                         Wortverbindungen und Einwortphraseologismen aus der Domäne Wirtschaft. Sie enthält ca. 900
                         deutsche Einträge und

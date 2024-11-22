@@ -42,12 +42,12 @@ export default {
 
       <template #headers>
         <v-tab value="ALL" class="nocaps">alle Ressourcen</v-tab>
-        <v-tab value="1" class="nocaps"><resources-list-compact :filter="['PREPCON_temp']"></resources-list-compact>
+        <v-tab value="1" class="nocaps"><tag rkey="PREPCON_temp"/>
         </v-tab>
         <v-tab value="2" class="nocaps"><resources-list-compact
             :filter="['PREPCON_kon']"></resources-list-compact></v-tab>
-        <v-tab value="3" class="nocaps"><resources-list-compact :filter="['FesteWV']"></resources-list-compact></v-tab>
-        <v-tab value="4" class="nocaps"><resources-list-compact :filter="['SPRW']"></resources-list-compact></v-tab>
+        <v-tab value="3" class="nocaps"><tag rkey="FesteWV"/></v-tab>
+        <v-tab value="4" class="nocaps"><tag rkey="SPRW"/></v-tab>
       </template>
       <template #tabs>
 
@@ -74,7 +74,7 @@ export default {
 
           <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
           <p>
-            In <resources-list-compact :filter="['PREPCON_temp']"></resources-list-compact> werden die Präpositionen und
+            In <tag rkey="PREPCON_temp"/> werden die Präpositionen und
             die Nomina als Komponenten ausgezeichnet und mit den Artikeln in <NuxtLink
               to="https://www.owid.de/docs/elex/start.jsp">elexiko</NuxtLink> verlinkt.
           </p>
@@ -96,7 +96,7 @@ export default {
 
           <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
           <p>
-            In <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> werden die Präpositionen und
+            In <tag rkey="PREPCON_kon"/> werden die Präpositionen und
             Nomen in
             den drei Kontrastsprachen ausgezeichnet. Für die deutschen PNs erfolgt die Verlinkung zu <NuxtLink
               to="https://www.owid.de/docs/elex/start.jsp">elexiko</NuxtLink>, für die spanischen zum Online-Wörterbuch
@@ -140,7 +140,7 @@ export default {
 
           <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
           <p>
-            In <resources-list-compact :filter="['FesteWV']"></resources-list-compact> werden die autosemantischen
+            In <tag rkey="FesteWV"/> werden die autosemantischen
             Komponenten
             der Stichwörter einzeln ausgezeichnet und mit den Artikeln in <NuxtLink
               to="https://www.owid.de/docs/elex/start.jsp">elexiko</NuxtLink> verlinkt.
@@ -175,7 +175,7 @@ export default {
 
           <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
           <p>
-            Im <resources-list-compact :filter="['SPRW']"></resources-list-compact> sind alle Komponenten der
+            Im <tag rkey="SPRW"/> sind alle Komponenten der
             Stichwörter
             ausgezeichnet mit Ausnahmen der unbestimmten und bestimmten Artikel. Beim Anklicken einer Komponente
             erscheint zum

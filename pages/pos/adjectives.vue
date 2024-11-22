@@ -26,7 +26,7 @@ export default {
 
             <template #headers>
                 <v-tab value="ALL" class="nocaps">alle Ressourcen</v-tab>
-                <v-tab value="1" class="nocaps"><resources-list-compact :filter="['KoMuX']"></resources-list-compact>
+                <v-tab value="1" class="nocaps"><tag rkey="KoMuX"/>
                 </v-tab>
                 <v-tab value="2" class="nocaps"><resources-list-compact
                         :filter="['FesteWV']"></resources-list-compact></v-tab>
@@ -55,17 +55,17 @@ export default {
                 <compare-item value="1" rkey="KoMuX">
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        In <resources-list-compact :filter="['KoMuX']"></resources-list-compact> können Adjektive
+                        In <tag rkey="KoMuX"/> können Adjektive
                         neben anderen Wort- und Ausdrucksarten als Erstglieder fungieren.
                     </p>
 
                     <template #explain>
                         <div>
                             <ul>
-                                <li><span class="pos_highlight">Klein</span>kind</li>
-                                <li><span class="pos_highlight">Blau</span>licht</li>
-                                <li><span class="pos_highlight">Top</span>-spiel</li>
-                                <li><span class="pos_highlight">Billig</span>kraft</li>
+                                <li><m>Klein</m>kind</li>
+                                <li><m>Blau</m>licht</li>
+                                <li><m>Top</m>-spiel</li>
+                                <li><m>Billig</m>kraft</li>
                             </ul>
                         </div>
                     </template>
@@ -75,7 +75,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['FesteWV']"></resources-list-compact> bilden folgende
+                        In <tag rkey="FesteWV"/> bilden folgende
                         Adjektive die
                         Kernkomponente für die Stichwortliste: <em>blind; geistig; gesund; normal; sanft</em>.
                     </p>
@@ -89,11 +89,11 @@ export default {
                     <template #explain>
                         <div>
                             <ul>
-                                <li> (sich) <span class="pos_highlight">blind</span> (und taub stellen)</li>
-                                <li> <span class="pos_highlight">geistiger</span> (Vater)</li>
-                                <li> (auf) <span class="pos_highlight">gesunden</span> (Beinen stehen)</li>
-                                <li> (der ganz) <span class="pos_highlight">normale</span> (Wahnsinn)</li>
-                                <li> (Ruhe) <span class="pos_highlight">sanft</span></li>
+                                <li> (sich) <m>blind</m> (und taub stellen)</li>
+                                <li> <m>geistiger</m> (Vater)</li>
+                                <li> (auf) <m>gesunden</m> (Beinen stehen)</li>
+                                <li> (der ganz) <m>normale</m> (Wahnsinn)</li>
+                                <li> (Ruhe) <m>sanft</m></li>
                             </ul>
                         </div>
                     </template>

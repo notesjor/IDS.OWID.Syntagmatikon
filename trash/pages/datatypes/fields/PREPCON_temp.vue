@@ -7,6 +7,6 @@
         </div> 
     </v-btn>
     <h1>Verwandte Wörter und Wortgruppen - Beispiel: <em>ohne Unterlass</em></h1>
-    <div class="caption"> Fallbeispiel aus <resources-list-compact :filter="['PREPCON_temp']"></resources-list-compact></div>
+    <div class="caption"> Fallbeispiel aus <tag rkey="PREPCON_temp"/></div>
 
 </template>

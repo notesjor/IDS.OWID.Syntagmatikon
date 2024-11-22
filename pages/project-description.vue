@@ -45,7 +45,7 @@
               :filter="['Verlaufsformen', 'SPRW']"></resources-list-compact>) bis
             hin zu Datenbanken (<resources-list-compact
               :filter="['KoMuX', 'MAP', 'Redeeinleiter']"></resources-list-compact>);
-            neuartigen Präsentationsformaten (<resources-list-compact :filter="['PREPCON']"></resources-list-compact>)
+            neuartigen Präsentationsformaten (<tag rkey="PREPCON"/>)
             und Inventaren (<resources-list-compact :filter="['Spruchlist', 'PhrasKomp']"></resources-list-compact>)
             in
             der

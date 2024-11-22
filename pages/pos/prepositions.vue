@@ -67,7 +67,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        <resources-list-compact :filter="['PREPCON_ex']"></resources-list-compact> bietet einen
+                        <tag rkey="PREPCON_ex"/> bietet einen
                         gesonderten Zugang über Präpositionen-Tabellen (insgesamt 80 Präpositionen).
                     </p>
                     <!-- <div class="exampleImg">
@@ -80,10 +80,10 @@ export default {
                     <template #explain>
                         <div>
                             <ul>
-                                <li> <span class="pos_highlight">vor</span> (Ort)</li>
-                                <li> <span class="pos_highlight">hinter</span> (Glas)</li>
-                                <li> <span class="pos_highlight">durch</span> (Zufall)</li>
-                                <li> <span class="pos_highlight">auf</span> (Anfrage)</li>
+                                <li> <m>vor</m> (Ort)</li>
+                                <li> <m>hinter</m> (Glas)</li>
+                                <li> <m>durch</m> (Zufall)</li>
+                                <li> <m>auf</m> (Anfrage)</li>
                             </ul>
                         </div>
                     </template>
@@ -93,7 +93,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['PREPCON_temp']"></resources-list-compact> kann man ein
+                        In <tag rkey="PREPCON_temp"/> kann man ein
                         Inventar von
                         Präposition-Nomen-Verbindungen anhand einer Präpositionen-Stichwortliste abrufen.
                     </p>
@@ -106,10 +106,10 @@ export default {
                     <template #explain>
                         <div>
                             <ul>
-                                <li> <span class="pos_highlight">am</span> (Ende)</li>
-                                <li> <span class="pos_highlight">für</span> (Jahre)</li>
-                                <li> <span class="pos_highlight">im</span> (Augenblick)</li>
-                                <li> <span class="pos_highlight">vor</span> (Urzeiten)</li>
+                                <li> <m>am</m> (Ende)</li>
+                                <li> <m>für</m> (Jahre)</li>
+                                <li> <m>im</m> (Augenblick)</li>
+                                <li> <m>vor</m> (Urzeiten)</li>
                             </ul>
                         </div>
                     </template>
@@ -119,7 +119,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> bilden vier
+                        In <tag rkey="PREPCON_kon"/> bilden vier
                         Präpositionen in
                         Verbindung mit Nomina den Ausgangspunkt für die kontrastive Beschreibung deutsch – spanisch;
                         deutsch –
@@ -130,21 +130,13 @@ export default {
                     <template #explain>
                         <div>
                             <ul>
-                                <li> <span class="pos_highlight">am</span> (Anfang) - <span
-                                        class="pos_highlight">al</span> (principio) - <span
-                                        class="pos_highlight">na</span> (začiatku)</li>
-                                <li> <span class="pos_highlight">auf</span> (Anhieb) - <span
-                                        class="pos_highlight">de</span> (inmediato) - <span
-                                        class="pos_highlight">na</span> (prvý pokus)</li>
+                                <li> <m>am</m> (Anfang) - <m>al</m> (principio) - <m>na</m> (začiatku)</li>
+                                <li> <m>auf</m> (Anhieb) - <m>de</m> (inmediato) - <m>na</m> (prvý pokus)</li>
                                 <li>
-                                    <span class="pos_highlight">mit</span> (Genugtuung) - <span
-                                        class="pos_highlight">con</span> (satisfacción) - <span
-                                        class="pos_highlight">so</span> (zadosťučinením)
+                                    <m>mit</m> (Genugtuung) - <m>con</m> (satisfacción) - <m>so</m> (zadosťučinením)
                                 </li>
                                 <li>
-                                    <span class="pos_highlight">nach</span> (Belieben) - <span
-                                        class="pos_highlight">a</span> (su gusto) - <span
-                                        class="pos_highlight">podľa</span> (ľubovôle)
+                                    <m>nach</m> (Belieben) - <m>a</m> (su gusto) - <m>podľa</m> (ľubovôle)
                                 </li>
                             </ul>
                         </div>
@@ -154,7 +146,7 @@ export default {
 
                 <compare-item value="4" rkey="KoMuX">
                     <p>
-                        In <resources-list-compact :filter="['KoMuX']"></resources-list-compact>
+                        In <tag rkey="KoMuX"/>
                         können Präpositionen
                         neben anderen Wort- und Ausdrucksarten als Erstglieder fungieren.
                     </p>
@@ -162,8 +154,8 @@ export default {
                     <template #explain>
                         <div>
                             <ul>
-                                <li><span class="pos_highlight">Mit</span>-Juror</li>
-                                <li><span class="pos_highlight">Mit</span>Drehbuchautor</li>
+                                <li><m>Mit</m>-Juror</li>
+                                <li><m>Mit</m>Drehbuchautor</li>
                             </ul>
                         </div>
                     </template>
@@ -173,7 +165,7 @@ export default {
                 <compare-item value="5" rkey="MAP">
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        Informationen zu <resources-list-compact :filter="['MAP']"></resources-list-compact>
+                        Informationen zu <tag rkey="MAP"/>
                         sind noch in Vorbereitung.
                     </p>
 
@@ -186,7 +178,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['Verlaufsformen']"></resources-list-compact> werden
+                        In <tag rkey="Verlaufsformen"/> werden
                         deutsche Verben neben
                         dem Absentiv hinsichtlich ihres Vorkommens in zwei Verlaufsformen mit Präpositionen dargestellt:
                         am-Progressiv
@@ -199,10 +191,10 @@ export default {
                     <template #explain>
                         <div>
                             <ul>
-                                <li> <span class="pos_highlight">am</span> (Feiern)</li>
-                                <li> <span class="pos_highlight">am</span> (Kippen)</li>
-                                <li> <span class="pos_highlight">beim</span> (Abbauen)</li>
-                                <li> <span class="pos_highlight">beim</span> (Jäten)</li>
+                                <li> <m>am</m> (Feiern)</li>
+                                <li> <m>am</m> (Kippen)</li>
+                                <li> <m>beim</m> (Abbauen)</li>
+                                <li> <m>beim</m> (Jäten)</li>
                             </ul>
                         </div>
                     </template>
@@ -212,7 +204,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['WVBF']"></resources-list-compact> entfaltet sich ein
+                        In <tag rkey="WVBF"/> entfaltet sich ein
                         WV-Netz um das
                         Bezugslemma GRUND anhand der Präpositionen <em>aus; auf; im; mit; ohne</em>.
                     </p>
@@ -221,10 +213,10 @@ export default {
                     <template #explain>
                         <div>
                             <ul>
-                                <li> <span class="pos_highlight">aus</span> (welchen Gründen auch immer)</li>
-                                <li> <span class="pos_highlight">mit</span> (Grund)</li>
-                                <li> <span class="pos_highlight">im</span> (Grunde PRON SUB)</li>
-                                <li> <span class="pos_highlight">ohne</span> (SUB von Gründen)</li>
+                                <li> <m>aus</m> (welchen Gründen auch immer)</li>
+                                <li> <m>mit</m> (Grund)</li>
+                                <li> <m>im</m> (Grunde PRON SUB)</li>
+                                <li> <m>ohne</m> (SUB von Gründen)</li>
                             </ul>
                         </div>
                     </template>

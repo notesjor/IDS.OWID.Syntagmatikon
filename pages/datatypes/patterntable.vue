@@ -72,7 +72,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['PREPCON_temp']"></resources-list-compact> werden
+                        In <tag rkey="PREPCON_temp"/> werden
                         automatisch erstellte Lückenfüllertabellen für die temporalen Zweiworteinheiten in der Rubrik
                         „Kurzartikel“ angeboten. Diese illustrieren drei Mustertypen: X-Präposition-Nomen;
                         Präposition-X-Nomen (beide X jeweils eine Leerstelle); Präposition-Nomen-X (X zwei Leerstellen).
@@ -102,7 +102,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> werden
+                        In <tag rkey="PREPCON_kon"/> werden
                         automatisch erstellte
                         Lückenfüllertabellen für das Sprachenpaar deutsch-spanisch und deutsch-slowakisch dargestellt.
                         Da die Tabellen
@@ -138,7 +138,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        Im <resources-list-compact :filter="['WVBF']"></resources-list-compact> werden
+                        Im <tag rkey="WVBF"/> werden
                         Lückenfüllertabellen für die
                         Musterknoten mit klassifizierten Platzhaltern angeboten, z.B. <em>aus</em> ADJ <em>Gründen</em>;
                         <em>auf Grund

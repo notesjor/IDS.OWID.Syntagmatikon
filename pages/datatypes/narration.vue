@@ -75,7 +75,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> werden in der
+                        In <tag rkey="PREPCON_kon"/> werden in der
                         Ausgangssprache Deutsch und den Kontrastsprachen Spanisch und Slowakisch Gebrauchsaspekte und
                         lexikalische Erweiterungen narrativ kommentiert (auf Deutsch).
                     </p>
@@ -121,7 +121,7 @@ export default {
 
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        Informationen zu <resources-list-compact :filter="['MAP']"></resources-list-compact>
+                        Informationen zu <tag rkey="MAP"/>
                         sind noch in Vorbereitung.
                     </p>
 
@@ -133,7 +133,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['SPRW']"></resources-list-compact> werden narrative Texte
+                        In <tag rkey="SPRW"/> werden narrative Texte
                         und Kommentare zu
                         folgenden Aspekten angezeigt:</p>
                     <ul>
@@ -191,7 +191,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['WVBF']"></resources-list-compact> werden narrative Text in
+                        In <tag rkey="WVBF"/> werden narrative Text in
                         unterschiedlicher Form in den einzelnen Knoten angeboten:
                     </p>
                     <ul>
@@ -227,7 +227,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        <resources-list-compact :filter="['FesteWV']"></resources-list-compact> wurde als experimentelle
+                        <tag rkey="FesteWV"/> wurde als experimentelle
                         Ressource für
                         die korpusbasierte Beschreibung von Wortverbindungen in den Anfangsjahren der
                         Online-Lexikografie am IDS

@@ -80,7 +80,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['PREPCON_temp']"></resources-list-compact> werden Belege in
+                        In <tag rkey="PREPCON_temp"/> werden Belege in
                         zwei Formen angeboten:
                     </p>
                     <ul>
@@ -113,7 +113,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> illustrieren die
+                        In <tag rkey="PREPCON_kon"/> illustrieren die
                         Belege in der
                         Ausgangssprache Deutsch und den Kontrastsprachen Spanisch und Slowakisch Gebrauchsaspekte. Bei
                         den
@@ -152,7 +152,7 @@ export default {
                 <compare-item value="3" rkey="PhrasKomp">
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        In <resources-list-compact :filter="['PhrasKomp']"></resources-list-compact>
+                        In <tag rkey="PhrasKomp"/>
                         wird zu jedem der 1.576 Phrasenkomposita des Inventars ein manuell ausgewählter Beleg angeführt,
                         der die
                         Verwendung und Bedeutung der jeweiligen Bildung prototypisch illustriert. Die Belege enthalten
@@ -177,7 +177,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['Redeeinleiter']"></resources-list-compact> ist in der
+                        In <tag rkey="Redeeinleiter"/> ist in der
                         Spalte „Beleg“ je
                         Redeeinleiter jeweils ein Beleg pro Attributekombination hinterlegt. Der Beleg besteht aus dem
                         Satz, der den
@@ -205,7 +205,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['Verlaufsformen']"></resources-list-compact> werden manuell
+                        In <tag rkey="Verlaufsformen"/> werden manuell
                         ausgewählte
                         Belege zum Vorkommen eines Verbs in einer, zwei oder alle drei Verlaufsformen angegeben –
                         ergänzt um den engen
@@ -229,7 +229,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['FesteWV']"></resources-list-compact> illustrieren die
+                        In <tag rkey="FesteWV"/> illustrieren die
                         ausgewählten Belege
                         unterschiedliche Aspekte des Gebrauchs.</p>
                     <p>Rubrik „Musterartikel“</p>
@@ -293,7 +293,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        Im <resources-list-compact :filter="['SPRW']"></resources-list-compact> werden Volltextbelege zu
+                        Im <tag rkey="SPRW"/> werden Volltextbelege zu
                         folgenden
                         Aspekten angezeigt:</p>
                     <ul>
@@ -339,7 +339,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['SPRW']"></resources-list-compact> illustrieren bis zu drei
+                        In <tag rkey="SPRW"/> illustrieren bis zu drei
                         ausgewählte
                         Belege den Gebrauch der deutschen Wortverbindungen in der Domäne Wirtschaft.
                     </p>
@@ -362,7 +362,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <resources-list-compact :filter="['WVBF']"></resources-list-compact>werden Volltextbelege in
+                        In <tag rkey="WVBF"/>werden Volltextbelege in
                         folgenden Knoten
                         und Subangaben angezeigt:</p>
                     <ul>
