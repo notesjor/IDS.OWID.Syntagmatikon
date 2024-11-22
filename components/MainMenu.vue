@@ -1,6 +1,6 @@
 <template>
     <v-navigation-drawer :permanent="!useMobileView" :rail="useMobileView"
-        style="z-index:1; transform: none; font-family: 'Fira Sans';" expand-on-hover>
+        style="z-index:1; transform: none; font-family: 'Fira Sans';">
         <!-- LOGO START -->
         <div class="text-xl" style="margin: 20px 0px 5px 30px; opacity: 1" v-show="!useMobileView">
             <div style="margin-left: 50px; margin-bottom: 40px;">
@@ -11,7 +11,7 @@
 
         <!-- HOME START -->
         <v-list density="compact" nav :style="menuStyleMobileFix" style="font-family: var(--FF-DISPLAY);">
-            <v-list-subheader>Übersicht</v-list-subheader>
+            <v-list-subheader v-if="!useMobileView">Übersicht</v-list-subheader>
             <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-home" to="/">
                 Startseite
             </main-menu-item>
@@ -33,7 +33,7 @@
 
         <!-- ADDITIONAL INFORMATION START -->
         <v-list density="compact" nav style="font-family: var(--FF-DISPLAY); margin-top:0.7rem">
-            <v-list-subheader>Suche</v-list-subheader>
+            <v-list-subheader v-if="!useMobileView">Suche</v-list-subheader>
             <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-magnify" to="/search">
                 Suche
             </main-menu-item>
@@ -45,7 +45,7 @@
         <!-- ADDITIONAL INFORMATION START -->
         <!-- altes icon: mdi-book-open-variant-->
         <v-list density="compact" nav>
-            <v-list-subheader>Ressourcenkompass</v-list-subheader>
+            <v-list-subheader v-if="!useMobileView">Ressourcenkompass</v-list-subheader>
             <main-menu-item :useMobileView="useMobileView" color2="#F24162" icon="mdi-compass" to="/resources">
                 Ressourcentypen
             </main-menu-item>
@@ -69,7 +69,7 @@
 
         <!-- GENERAL INFORMATION START -->
         <v-list density="compact" nav style="font-family: var(--FF-DISPLAY); margin-top:0.7rem">
-            <v-list-subheader>Hintergrund</v-list-subheader>
+            <v-list-subheader v-if="!useMobileView">Hintergrund</v-list-subheader>
             <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-account-group" to="/team">
                 Beteiligte Projekte
             </main-menu-item>

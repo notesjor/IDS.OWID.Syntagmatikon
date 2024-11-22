@@ -22,17 +22,19 @@
     </div>
 
     <main-menu :useMobileView="useMobileView" />
+    <main-menu-sub :useMobileView="useMobileView" />
 
     <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
       <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
         <div style="max-width: var(--TXT-WIDTH);">
           <div class="nolink" style="margin:0px 0px 10px -15px">
-            <v-btn variant="text" class="nocaps" @click="goToParentPage"><v-icon icon="mdi-step-backward"></v-icon>Zurück zu: "{{ layoutVars?.parent }}"</v-btn>          
+            <v-btn variant="text" class="nocaps" @click="goToParentPage"><v-icon
+                icon="mdi-step-backward"></v-icon>Zurück zu: "{{ parent }}"</v-btn>
           </div>
           <div style="margin-bottom: 0.6rem;">
             <div style="display: grid; grid-template-columns: auto 1fr; align-items: center;">
               <v-icon :color="color1" style="font-size: 2.5rem; margin-right: 10px;">{{ icon }}</v-icon>
-              <h1><span v-html="layoutVars?.title"/></h1>
+              <h1><span v-html="title" /></h1>
             </div>
           </div>
           <v-row>
@@ -123,11 +125,17 @@ export default {
       footerImpressum: null,
       footerDsgvo: null,
 
-      layoutVars: null
+      layoutVars: null,
+      title: null,
+      parent: null,
+      color1: null,
+      icon: null
     }
   },
 
   mounted() {
+    this.layoutVars = useLayoutStore();
+
     this.appName = this.$config.public.appName;
     this.appDescription = this.$config.public.appDescription;
 
@@ -140,8 +148,6 @@ export default {
 
     this.windowResize();
     window.addEventListener('resize', this.windowResize);
-
-    this.layoutVars = useLayoutStore();
   },
 
   beforeDestroy() {
@@ -156,7 +162,7 @@ export default {
       let path = this.$route.path.split("/");
       path.pop();
       this.$router.push(path.join("/"));
-    }    
+    }
   },
 
   computed: {
@@ -167,14 +173,16 @@ export default {
         return ""
       }
     },
+    title() {
+      return this.layoutVars?.title;
+    },
+    parent() {
+      return this.layoutVars?.parent;
+    },
     color1() {
-      if(this.layoutVars == null)
-        return "#000";
       return this.layoutVars?.getParentColor;
     },
     icon() {
-      if(this.layoutVars == null)
-        return "";
       return this.layoutVars?.getParentIcon;
     }
   },

@@ -4,23 +4,144 @@ export const useLayoutStore = defineStore("layoutStore", {
   state: () => {
     return {
       title: "",
-      parent: "",      
+      parent: "",
 
       colors: {
-        "Ressourcentypen": "#f24162",
-        "Informationstypen": "#58f380",
+        Ressourcentypen: "#f24162",
+        Informationstypen: "#58f380",
         "Wort- und Ausdrucksarten": "#a24cc2",
-        "Musterzugänge": "#f25a40",
-        "Fallbeispiele": "#2962ff",
+        Musterzugänge: "#f25a40",
+        Fallbeispiele: "#2962ff",
       },
 
       icons: {
-        "Ressourcentypen": "mdi-compass",
-        "Informationstypen": "mdi-compass",
+        Ressourcentypen: "mdi-compass",
+        Informationstypen: "mdi-compass",
         "Wort- und Ausdrucksarten": "mdi-compass",
-        "Musterzugänge": "mdi-compass",
-        "Fallbeispiele": "mdi-lightbulb-on",
-      }
+        Musterzugänge: "mdi-compass",
+        Fallbeispiele: "mdi-lightbulb-on",
+      },
+
+      paths: {
+        Ressourcentypen: [
+          {
+            name: "Explorative Datenbanken",
+            url: "/resources/db_expl",
+          },
+          {
+            name: "Deskriptive Datenbanken",
+            url: "/resources/db_desc",
+          },
+          {
+            name: "Inventare und Sammlungen",
+            url: "/resources/inventory",
+          },
+          {
+            name: "Online-Wörterbücher",
+            url: "/resources/dictionaries",
+          },
+          {
+            name: "Pilot- und Einzelstudien",
+            url: "/resources/prototypes",
+          },
+        ],
+        Informationstypen: [
+          {
+            name: "Kategoriale Label",
+            url: "/datatypes/category",
+          },
+          {
+            name: "Belege",
+            url: "/datatypes/matches",
+          },
+          {
+            name: "Narrative Beschreibungen",
+            url: "/datatypes/narration",
+          },
+          {
+            name: "Komponenten",
+            url: "/datatypes/elements",
+          },
+          {
+            name: "Felder",
+            url: "/datatypes/fields",
+          },
+          {
+            name: "Fremdsprachige Äquivalenzen",
+            url: "/datatypes/equivalence",
+          },
+          {
+            name: "Frequenzangaben",
+            url: "/datatypes/frequency",
+          },
+          {
+            name: "KWICs",
+            url: "/datatypes/kwic",
+          },
+          {
+            name: "Kookkurrenzprofile",
+            url: "/datatypes/cooccurrence",
+          },
+          {
+            name: "Lückenfüllertabellen",
+            url: "/datatypes/patterntable",
+          },
+        ],
+        "Wort- und Ausdrucksarten": [
+          {
+            name: "Nomina",
+            url: "/pos/nouns",
+          },
+          {
+            name: "Verben",
+            url: "/pos/verbs",
+          },
+          {
+            name: "Präpositionen",
+            url: "/pos/prepositions",
+          },
+          {
+            name: "Adjektive",
+            url: "/pos/adjectives",
+          },
+          {
+            name: "Phraseme",
+            url: "/pos/phrasemes",
+          },
+          {
+            name: "Feste Sätze",
+            url: "/pos/sentences",
+          },
+        ],
+        Musterzugänge: [
+          {
+            name: "Direkter Zugang",
+            url: "/patterns/direct",
+          },
+          {
+            name: "Lexikografische Angaben",
+            url: "/patterns/component",
+          },
+          {
+            name: "Dynamische Erschließung",
+            url: "/patterns/dynamic",
+          },
+        ],
+        Fallbeispiele: [
+          {
+            name: "Kookkurrenzprofile - Beispiel: am Ende",
+            url: "/examples/kook-am-Ende",
+          },
+          {
+            name: "Verwandte Wörter und Wortgruppen - Beispiel: ohne Unterlass",
+            url: "/examples/PREPCON_temp",
+          },
+          {
+            name: 'Anfrage Frankfurter Rundschau zu "frech wie Oskar"',
+            url: "/examples/stolz-wie-oskar",
+          },
+        ],
+      },
     };
   },
   getters: {
@@ -29,6 +150,9 @@ export const useLayoutStore = defineStore("layoutStore", {
     },
     getParentIcon() {
       return this.icons[this.parent] || "mdi-compass";
-    }
+    },
+    getPaths() {
+      return this.paths[this.parent] || [];
+    },
   },
 });

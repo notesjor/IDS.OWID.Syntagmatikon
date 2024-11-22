@@ -1,9 +1,11 @@
 <template>
     <NuxtLink :to="to" class="sim_listItem" @mouseenter="mouseEnter" @mouseleave="mouseLeave">
-        <gradient style="margin:0px 10px 0px 5px; display: inline-block;" :color1="color1" :icon="icon" />
-        <span class="compass" v-if="!useMobileView">
-            <slot />
-        </span>
+        <div class="grid-container">
+            <gradient style="margin:0px 10px 0px 5px; display: inline-block;" :color1="color1" :icon="icon" />
+            <span class="compass" v-if="!useMobileView">
+                <slot style="text-align: left;" />
+            </span>
+        </div>
     </NuxtLink>
 </template>
 
@@ -42,11 +44,11 @@ export default {
     },
     computed: {
         color1() {
-            if(this.focused)
+            if (this.focused)
                 return this.color2;
-            
+
             const route = useRoute();
-            if(this.to === "/")
+            if (this.to === "/")
                 return route.path === "/" ? this.color2 : "#666";
             return route.path.includes(this.to) ? this.color2 : "#666";
         }
@@ -62,10 +64,17 @@ export default {
     color: rgba(0, 0, 0, 0.8);
     font-size: 0.8125rem;
     display: inline-block;
+    text-align: left;
 }
 
 .sim_listItem {
     display: block;
     margin: 0px 0px 7.5px 0px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 90%;
+    align-items: center;
 }
 </style>
