@@ -1,38 +1,27 @@
 <template>
     <v-tabs-window-item :value="value">
-        <!-- <v-row v-if="!simple" style="margin:-5px 0px 0px 10px">
-            <v-col>
-                <v-row>
-                    <div class="relink">
-                        <a :href="resource.url">
-                            <h3 style="display: inline-block;" v-html="resource.nameShort"></h3>
-                        </a>
-                    </div>
-                </v-row>
-                <v-row>
-                    <p v-if="description == null" style="color:darkgray; font-size: 0.8em; font-style: italic; margin: -10px 0px 0px 0px;" v-html="resource.nameLong" />
-                    <p v-else style="color:darkgray; font-size: 0.8em; font-style: italic; margin: -10px 0px 0px 0px;" v-html="description" />
-                </v-row>
-            </v-col>
-
-        </v-row> -->
         <v-row style="margin:20px 20px 20px 20px">
-        <v-row>
-            <div class="relink"><slot></slot></div>
+            <v-row>
+                <div class="relink">
+                    <slot></slot>
+                </div>
 
-            <resource-explain v-if="!simple" :webpage="correctedWebPage">
-                <slot name="explain"></slot>
-                <template v-if="$slots.webpagetext" #webpagetext><slot name="webpagetext"></slot></template>
-            </resource-explain>
-        </v-row>
+                <resource-explain v-if="!simple" :webpage="correctedWebPage">
+                    <slot name="explain"></slot>
+                    <template v-if="$slots.webpagetext" #webpagetext>
+                        <slot name="webpagetext"></slot>
+                    </template>
+                </resource-explain>
+            </v-row>
 
-        <v-row>
-            
-            <nuxt-link v-if="buttonUrl != null" :to="buttonUrl"><v-btn prepend-icon="mdi-lightbulb-on" class="nocaps" variant="elevated" color="">Fallbeispiel</v-btn></nuxt-link>
-          <v-spacer></v-spacer>
-            <nuxt-link v-if="!simple" :to="resource.url"><v-btn prepend-icon="mdi-arrow-right-bold-box-outline" class="nocaps" variant="elevated" color="">zur Ressource</v-btn></nuxt-link>
+            <v-row>
+                <nuxt-link v-if="buttonUrl != null" :to="buttonUrl"><v-btn prepend-icon="mdi-lightbulb-on"
+                        class="nocaps" variant="elevated" color="">Fallbeispiel</v-btn></nuxt-link>
+                <v-spacer></v-spacer>
+                <nuxt-link v-if="!simple" :to="resource.url"><v-btn prepend-icon="mdi-arrow-right-bold-box-outline"
+                        class="nocaps" variant="elevated" color="">zur Ressource</v-btn></nuxt-link>
+            </v-row>
         </v-row>
-        </v-row>        
     </v-tabs-window-item>
 </template>
 
@@ -76,7 +65,7 @@ export default {
         this.$data.router = useRouter();
         this.$data.resourcesStore = useResourcesStore();
         this.$data.resource = this.$data.resourcesStore.getResource(this.$props.rkey);
-        
+
         var current = useRoute().path;
         var matches = this.$data.router.getRoutes().filter(r => r.path.startsWith(`${current}/${this.$props.rkey}`));
 

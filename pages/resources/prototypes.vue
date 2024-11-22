@@ -20,12 +20,12 @@ export default {
     <div>
         <p>Bei den Pilotstudien im <hi>Syntagmatikon</hi> handelt es sich um exemplarische Fallstudien zu ausgewählten
             syntagmatischen Aspekten, bei denen neue datennahe Präsentationsformate entwickelt und ausgetestet wurden.
-            Im Zentrum stehen Kookkurrenzprofile, Lückenfüllertabellen und KWICs.</p>
-        <resources-list-compact :filter="['WVBF']"></resources-list-compact> ist eine netzartige, hierarchische
-        Visualisierung, bei der die Knoten mit Korpusdaten und Kommentaren angereichert werden.
-        In <resources-list-compact :filter="['PREPCON_kon']"></resources-list-compact> wird ein Vorgehensmodell für die
-        manuelle Aufbereitung von Korpusdaten im Sprachkontrast präsentiert.
-
+            Im Zentrum stehen Kookkurrenzprofile, Lückenfüllertabellen und KWICs.
+            <tag rkey="WVBF" /> ist eine netzartige, hierarchische Visualisierung, bei der die Knoten mit Korpusdaten
+            und Kommentaren angereichert werden. In
+            <tag rkey="PREPCON_kon" /> wird ein Vorgehensmodell für die manuelle Aufbereitung von Korpusdaten im
+            Sprachkontrast präsentiert.
+        </p>
     </div>
     <resources-list :filter="['PREPCON_kon', 'WVBF']"></resources-list>
 </template>

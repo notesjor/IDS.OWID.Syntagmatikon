@@ -15,6 +15,10 @@ export default defineNuxtConfig({
     '~/assets/css/main.css'
   ],
 
+  linkChecker: {
+    showLiveInspections: true,
+  },
+
   build: {
     transpile: ['vuetify'],        
   },
@@ -31,7 +35,7 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['@pinia/nuxt'],
+  modules: ['@pinia/nuxt', "nuxt-link-checker"],
 
   runtimeConfig: {
     public: {

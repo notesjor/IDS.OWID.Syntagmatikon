@@ -12,8 +12,7 @@ definePageMeta({
       händischer Bearbeitung und linguistisch-lexikografischer Beschreibung.</p>
     <p>Die aufgeführten Beispielressourcen sind jeweils die prototypischen Vertreter. Gleichzeitig gibt es zahlreiche
       Überschneidungen zwischen den Ressourcen: Eine Datenbank kann z.B. gleichzeitig als Inventar verstanden werden wie
-      <resources-list-compact :filter="['PREPCON_ex']"></resources-list-compact> oder <resources-list-compact
-        :filter="['KoMuX']"></resources-list-compact>.</p>
+      <tag rkey='PREPCON_ex' /> oder <tag rkey='KoMuX' />.</p>
     <p>Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur Charakteristik der
       einzelnen Ressourcen.</p>
   </div>

@@ -15,10 +15,11 @@ export default {
 </script>
 
 <template>
-    <p>In einigen Ressourcen werden von Hand aufbereitete Musterangaben und -visualisierungen als eine Komponente von Wörterbuchartikeln angeboten, und zwar in „PREPCON<sup>kontrastiv</sup> und „Feste Wortverbindungen“.</p>
-    <resources-list :filter="['PREPCON_kon', 'SPRW', 'FesteWV']"/>
+    <p>In einigen Ressourcen werden von Hand aufbereitete Musterangaben und -visualisierungen als eine Komponente von
+        Wörterbuchartikeln angeboten, und zwar in <tag rkey="PREPCON_kon"/> und <tag rkey="FesteWV"/>.</p>
+    <resources-list :filter="['PREPCON_kon', 'SPRW', 'FesteWV']" />
     <h2>Beispiele</h2>
-    <v-carousel>           
+    <v-carousel>
         <v-carousel-item><img src="/img/patterns/component/component01.png" /></v-carousel-item>
         <v-carousel-item><img src="/img/patterns/component/component02.png" /></v-carousel-item>
         <v-carousel-item><img src="/img/patterns/component/component03.png" /></v-carousel-item>

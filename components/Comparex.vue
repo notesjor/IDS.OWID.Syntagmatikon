@@ -15,7 +15,7 @@
       <v-col>
         <v-tabs-window v-model="currentTab"
           style="border: 1px white solid; border-radius: 5px; padding: 10px; background-color: white; margin:0px -10px 0px -10px">
-          <slot name="tabs"></slot>
+          <slot />
         </v-tabs-window>
       </v-col>
     </v-row>

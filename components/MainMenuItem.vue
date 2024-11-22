@@ -46,7 +46,9 @@ export default {
                 return this.color2;
             
             const route = useRoute();
-            return route.path == this.to ? this.color2 : "#666";
+            if(this.to === "/")
+                return route.path === "/" ? this.color2 : "#666";
+            return route.path.includes(this.to) ? this.color2 : "#666";
         }
     }
 }

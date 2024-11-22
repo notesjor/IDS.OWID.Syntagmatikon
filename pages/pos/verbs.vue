@@ -16,7 +16,7 @@ export default {
 
 <template>
     <div>
-        <compare title="">
+        <comparex :filter="['KoMuX', 'MAP', 'Redeeinleiter', 'Verlaufsformen']">
 
             <!-- NOTE: Zuerst muss ein <template #headers> erstellt werden -->
             <!-- NOTE: dieses sollte mehrerer Tabs: <v-tab value="ALL" class="nocaps"> enthalten -->
@@ -25,7 +25,7 @@ export default {
             <!-- NOTE: Der Tab kann belieibig benannt werden -->
 
             <template #headers>
-                <v-tab value="ALL" class="nocaps">alle Ressourcen</v-tab>
+                <v-tab value="ALL" class="nocaps">alle x Ressourcen</v-tab>
                 <v-tab value="1" class="nocaps"><resources-list-compact :filter="['KoMuX']"></resources-list-compact>
                 </v-tab>
                 <v-tab value="2" class="nocaps"><resources-list-compact
@@ -40,7 +40,7 @@ export default {
                 <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit v-tab übereinstimmen -->
                 <!-- NOTE: Das compare-item für "alle Ressourcen" sollte immer auf :simple="true" gesetzt sein - damit wird nur einfacher Inhalt angezeigt -->
 
-                <compare-item value="ALL" :simple="true">
+                <compare-item value="0" :simple="true">
 
                     <!-- NOTE: Bitte das Bild manuell erstellen - Größe: 720x480 Pixel - 300dpi -->
 
@@ -164,6 +164,6 @@ export default {
                     </template>
                 </compare-item>
             </template>
-        </compare>
+        </comparex>
     </div>
 </template>
