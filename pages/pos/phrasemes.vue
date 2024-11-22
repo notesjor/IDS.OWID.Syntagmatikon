@@ -25,9 +25,9 @@ export default {
 
             <template #headers>
                 <v-tab value="ALL" class="nocaps">alle Ressourcen</v-tab>
-                <v-tab value="1" class="nocaps"><tag rkey="KoMuX"/>
+                <v-tab value="1" class="nocaps"><r rkey="KoMuX"/>
                 </v-tab>
-                <v-tab value="2" class="nocaps"><tag rkey="MAP"/>
+                <v-tab value="2" class="nocaps"><r rkey="MAP"/>
                 </v-tab>
                 <v-tab value="3" class="nocaps"><resources-list-compact
                         :filter="['PhrasKomp']"></resources-list-compact></v-tab>
@@ -65,7 +65,7 @@ export default {
 
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        In <tag rkey="KoMuX"/> können Phraseme neben
+                        In <r rkey="KoMuX"/> können Phraseme neben
                         anderen Wort- und Ausdrucksarten als Erstglied fungieren. Sie werden in dieser Ressource über
                         das Label ‚Phrase‘ erfasst, das auf ein syntaktisches Phrasenmodell in Hein 2015 zurückgeht. Im
                         Gegensatz zu allen anderen Wort- und Ausdrucksarten wurde das Label ‚Phrase‘ aber nicht
@@ -89,7 +89,7 @@ export default {
 
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        Informationen zu <tag rkey="MAP"/>
+                        Informationen zu <r rkey="MAP"/>
                         sind noch in Vorbereitung.
                     </p>
 
@@ -100,7 +100,7 @@ export default {
                 <compare-item value="3" rkey="PhrasKomp">
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        In <tag rkey="PhrasKomp"/>
+                        In <r rkey="PhrasKomp"/>
                         können Phraseme, neben festen Sätzen, als Erstglied fungieren. Alternativ zu dieser
                         phraseologischen Perspektive
                         können die Erstglieder von Phrasenkomposita auch unter einer syntaktischen Perspektive, d.h. als
@@ -124,7 +124,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="Redeeinleiter"/> kann man alle
+                        In <r rkey="Redeeinleiter"/> kann man alle
                         Phraseme aus dem
                         Redewiedergabe-Korpus abrufen, die als Rede- oder Gedankeneinleiter genutzt werden.
                     </p>
@@ -150,7 +150,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="WVBF"/> haben lexikalisierte
+                        In <r rkey="WVBF"/> haben lexikalisierte
                         Wortverbindungen
                         mit PRÄPOSITION + GRUND den Status von Phrasem-Knoten.
                     </p>
@@ -177,7 +177,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        <tag rkey="FesteWV"/> bilden in der Rubrik
+                        <r rkey="FesteWV"/> bilden in der Rubrik
                         ‚Musterartikel‘
                         Phraseme die Stichwortliste.
                     </p>
@@ -228,7 +228,7 @@ export default {
                 <compare-item value="7" rkey="DTWW">
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="DTWW"/> sind neben Nomina und
+                        In <r rkey="DTWW"/> sind neben Nomina und
                         Komposita auch
                         deutsche Phraseme in der Domäne Wirtschaft und ihre türkischen Entsprechungen aufgeführt.
                     </p>

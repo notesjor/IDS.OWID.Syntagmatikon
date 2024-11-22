@@ -26,13 +26,13 @@ export default {
 
       <template #headers>
         <v-tab value="ALL" class="nocaps">alle Ressourcen</v-tab>
-        <v-tab value="1" class="nocaps"><tag rkey="KoMuX"/>
+        <v-tab value="1" class="nocaps"><r rkey="KoMuX"/>
         </v-tab>
-        <v-tab value="2" class="nocaps"><tag rkey="SpruchList"/>
+        <v-tab value="2" class="nocaps"><r rkey="SpruchList"/>
         </v-tab>
         <v-tab value="3" class="nocaps"><resources-list-compact
             :filter="['PhrasKomp']"></resources-list-compact></v-tab>
-        <v-tab value="4" class="nocaps"><tag rkey="SPRW"/></v-tab>
+        <v-tab value="4" class="nocaps"><r rkey="SPRW"/></v-tab>
       </template>
       <template #tabs>
 
@@ -58,7 +58,7 @@ export default {
         <compare-item value="1" rkey="KoMuX">
           <!-- TODO: Inhalt ergänzen -->
           <p>
-            In <tag rkey="KoMuX"/>
+            In <r rkey="KoMuX"/>
             können feste Sätze neben anderen Wort- und Ausdrucksarten als Erstglied fungieren. Sie werden über das Label
             ‚Phrase‘ erfasst. Im Gegensatz zu allen anderen Wort- und Ausdrucksarten wurde das Label ‚Phrase‘ aber nicht
             automatisch zugewiesen, sondern manuell nachannotiert.
@@ -78,7 +78,7 @@ export default {
         <compare-item value="2" rkey="SpruchList">
 
           <p>
-            <tag rkey="SpruchList"/> bietet eine Liste von
+            <r rkey="SpruchList"/> bietet eine Liste von
             Sprichwörtern, Sprüchen und festen Gebrauchssätzen des Deutschen.
           </p>
           <!-- <div class="exampleImg">
@@ -99,7 +99,7 @@ export default {
         <compare-item value="3" rkey="PhrasKomp">
           <!-- TODO: Inhalt ergänzen -->
           <p>
-            In <tag rkey="PhrasKomp"/>
+            In <r rkey="PhrasKomp"/>
             können feste Sätze, neben Phrasemen, als Erstglied fungieren. Alternativ zu dieser phraseologischen
             Perspektive
             können die Erstglieder von Phrasenkomposita auch unter einer syntaktischen Perspektive, d.h. als Phrasen und
@@ -119,7 +119,7 @@ export default {
             </div>
           </template>
           <!-- <p>
-            Unter den Zweitgliedern der Phrasenkomposita in <tag rkey="PhrasKomp"/> sind auch feste Sätze.
+            Unter den Zweitgliedern der Phrasenkomposita in <r rkey="PhrasKomp"/> sind auch feste Sätze.
           </p>
          
           <template #explain>   
@@ -135,7 +135,7 @@ export default {
 
         <compare-item value="4" rkey="SPRW">
           <p>
-            Die Stichwortliste in <tag rkey="SPRW"/> enthält 351
+            Die Stichwortliste in <r rkey="SPRW"/> enthält 351
             Sprichwörter
             (vollständige Sätze und satzwertige Einheiten). Als gesonderte Liste sind darüber hinaus die Werbeslogans,
             die im

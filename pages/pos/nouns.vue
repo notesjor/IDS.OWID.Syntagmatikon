@@ -26,21 +26,21 @@ export default {
 
       <template #headers>
         <v-tab value="ALL" class="nocaps">alle Ressourcen</v-tab>
-        <v-tab value="1" class="nocaps"><tag rkey="PREPCON_ex"/>
+        <v-tab value="1" class="nocaps"><r rkey="PREPCON_ex"/>
         </v-tab>
         <v-tab value="2" class="nocaps"><resources-list-compact
             :filter="['PREPCON_temp']"></resources-list-compact></v-tab>
         <v-tab value="3" class="nocaps"><resources-list-compact
             :filter="['PREPCON_kon']"></resources-list-compact></v-tab>
-        <v-tab value="4" class="nocaps"><tag rkey="KoMuX"/></v-tab>
+        <v-tab value="4" class="nocaps"><r rkey="KoMuX"/></v-tab>
         <v-tab value="5" class="nocaps"><resources-list-compact
             :filter="['PhrasKomp']"></resources-list-compact></v-tab>
         <v-tab value="6" class="nocaps"><resources-list-compact
             :filter="['Redeeinleiter']"></resources-list-compact></v-tab>
         <v-tab value="7" class="nocaps"><resources-list-compact
             :filter="['Verlaufsformen']"></resources-list-compact></v-tab>
-        <v-tab value="8" class="nocaps"><tag rkey="WVBF"/></v-tab>
-        <v-tab value="9" class="nocaps"><tag rkey="DTWW"/></v-tab>
+        <v-tab value="8" class="nocaps"><r rkey="WVBF"/></v-tab>
+        <v-tab value="9" class="nocaps"><r rkey="DTWW"/></v-tab>
       </template>
       <template #tabs>
 
@@ -67,7 +67,7 @@ export default {
 
           <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
           <p>
-            <tag rkey="PREPCON_ex"/> bietet einen gesonderten Zugang
+            <r rkey="PREPCON_ex"/> bietet einen gesonderten Zugang
             über Nomen-Tabellen an.
           </p>
 
@@ -98,7 +98,7 @@ export default {
         <compare-item value="2" rkey="PREPCON_temp"
           description="Feste Wortverbindungen des Deutschen - Modul: Wortverbindungen mit Adjektiv">
           <p>
-            In <tag rkey="PREPCON_temp"/> kann man ein Inventar von
+            In <r rkey="PREPCON_temp"/> kann man ein Inventar von
             Präposition-Nomen-Verbindungen mit Zeit-Nomina abrufen.
           </p>
 
@@ -124,7 +124,7 @@ export default {
         <compare-item value="3" rkey="PREPCON_kon"
           description="Musterbank argumentmarkierender Präpositionen - Information: Prädikate (Verbalprädikate und Prädikatsgefüge)">
           <p>
-            In <tag rkey="PREPCON_kon"/> bilden vier Nomina in
+            In <r rkey="PREPCON_kon"/> bilden vier Nomina in
             Verbindung mit
             einer Präposition den Ausgangspunkt für die kontrastive Beschreibung deutsch – spanisch; deutsch-slowakisch.
           </p>
@@ -146,7 +146,7 @@ export default {
 
         <compare-item value="4" rkey="KoMuX" description="">
           <p>
-            In <tag rkey="KoMuX"/> bilden Nomina die Gruppe der
+            In <r rkey="KoMuX"/> bilden Nomina die Gruppe der
             Zweitglieder.
             Zum anderen können sie neben anderen Wort- und Ausdrucksarten auch als Erstglieder fungieren.
           </p>
@@ -176,7 +176,7 @@ export default {
         <compare-item value="5" rkey="PhrasKomp">
           <!-- TODO: Inhalt ergänzen -->
           <p>
-            In <tag rkey="PhrasKomp"/>
+            In <r rkey="PhrasKomp"/>
             bilden Nomina die Gruppe der Zweitglieder. Auch bei den Gesamtbildungen handelt es sich somit um Nomina.
           </p>
 
@@ -205,7 +205,7 @@ export default {
 
         <compare-item value="6" rkey="Redeeinleiter">
           <p>
-            In <tag rkey="Redeeinleiter"/> kann man alle Nomen aus dem
+            In <r rkey="Redeeinleiter"/> kann man alle Nomen aus dem
             Redewiedergabe-Korpus abrufen, die als Rede- oder Gedankeneinleiter genutzt werden.
           </p>
 
@@ -223,7 +223,7 @@ export default {
 
         <compare-item value="7" rkey="Verlaufsformen">
           <p>
-            In <tag rkey="Verlaufsformen"/> wird der Gebrauch
+            In <r rkey="Verlaufsformen"/> wird der Gebrauch
             nominalisierter
             deutscher Verben hinsichtlich ihres Vorkommens in drei Verlaufsformen dokumentiert.
           </p>
@@ -240,7 +240,7 @@ export default {
 
         <compare-item value="8" rkey="WVBF">
           <p>
-            In <tag rkey="WVBF"/> ist das Nomen <em>Grund</em> der
+            In <r rkey="WVBF"/> ist das Nomen <em>Grund</em> der
             zentrale
             Knoten für das Netz präpositionaler Verbindungen.
           </p>
@@ -259,7 +259,7 @@ export default {
 
         <compare-item value="9" rkey="DTWW">
           <p>
-            In <tag rkey="DTWW"/> sind Nomina sowohl Basiskomponenten
+            In <r rkey="DTWW"/> sind Nomina sowohl Basiskomponenten
             von
             Kollokationen als auch eigene Einträge verzeichnet.
           </p>

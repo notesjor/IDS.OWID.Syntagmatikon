@@ -67,7 +67,7 @@ export default {
                 <compare-item value="1" rkey="PREPCON_kon" webpage="">
 
                     <p>
-                        In <tag rkey="PREPCON_kon"/> gibt es zum einen
+                        In <r rkey="PREPCON_kon"/> gibt es zum einen
                         Label für die Kernbedeutung einer Präposition-Nomen-Verbindung. Zum anderen werden Lückenfüller
                         in den Musterangaben (Angabe: „Lexikalische Erweiterungen“) nach Wortarten und in einigen Fällen
                         zusätzlich nach semantisch-funktionalen Merkmalen klassifiziert.
@@ -107,7 +107,7 @@ export default {
 
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        In <tag rkey="KoMuX"/>
+                        In <r rkey="KoMuX"/>
                         lassen sich Suchmuster definieren, indem bestimmte formale und/oder lexikalisch-semantische
                         Eigenschaften der
                         Komposita-Konstituenten festgelegt werden.</p>
@@ -149,7 +149,7 @@ export default {
                 <compare-item value="3" rkey="PhrasKomp" webpage="">
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        In <tag rkey="PhrasKomp"/>
+                        In <r rkey="PhrasKomp"/>
                         können die Phrasenkomposita des Inventars gruppiert werden, und zwar in Abhängigkeit ihres
                         Zweitglied-Lexems
                         bzw. in Abhängigkeit der abstrakten Eigenschaften des Zweitglieds. </p>
@@ -193,7 +193,7 @@ export default {
                 <compare-item value="4" rkey="Redeeinleiter" webpage="">
 
                     <p>
-                        In <tag rkey="Redeeinleiter"/> ist, basierend
+                        In <r rkey="Redeeinleiter"/> ist, basierend
                         auf den
                         manuellen Annotationen des Redewiedergabe-Korpus, für jeden Redeeinleiter angegeben, ob dieser
                         eine Rede- oder
@@ -220,7 +220,7 @@ export default {
                 <compare-item value="5" rkey="Verlaufsformen" webpage="">
 
                     <p>
-                        In <tag rkey="Verlaufsformen"/> werden
+                        In <r rkey="Verlaufsformen"/> werden
                         folgende, manuell
                         zugeordnete, kategoriale Label angezeigt:
                     </p>
@@ -268,7 +268,7 @@ export default {
                 <compare-item value="6" rkey="FesteWV" webpage="">
 
                     <p>
-                        In <tag rkey="FesteWV"/> in OWID, Rubrik „25
+                        In <r rkey="FesteWV"/> in OWID, Rubrik „25
                         Musterartikel“,
                         werden die Stichwörter nach Phrasenkategorie und Mehrwortkategorie (nach Fleischer 1997; Burger
                         2015)
@@ -293,7 +293,7 @@ export default {
                 <compare-item value="7" rkey="WVBF" webpage="">
 
                     <p>
-                        Im <tag rkey="WVBF"/> werden Lückenfüller für
+                        Im <r rkey="WVBF"/> werden Lückenfüller für
                         Slots in den
                         GRUND-Mustern klassifiziert, sowohl nach Wortarten u/o Phrasen als auch nach semantischen
                         und/oder funktionalen

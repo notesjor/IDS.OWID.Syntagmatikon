@@ -26,7 +26,7 @@ export default {
 
             <template #headers>
                 <v-tab value="ALL" class="nocaps">alle Ressourcen</v-tab>
-                <v-tab value="1" class="nocaps"><tag rkey="KoMuX"/>
+                <v-tab value="1" class="nocaps"><r rkey="KoMuX"/>
                 </v-tab>
                 <v-tab value="2" class="nocaps"><resources-list-compact
                         :filter="['FesteWV']"></resources-list-compact></v-tab>
@@ -55,7 +55,7 @@ export default {
                 <compare-item value="1" rkey="KoMuX">
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        In <tag rkey="KoMuX"/> können Adjektive
+                        In <r rkey="KoMuX"/> können Adjektive
                         neben anderen Wort- und Ausdrucksarten als Erstglieder fungieren.
                     </p>
 
@@ -75,7 +75,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="FesteWV"/> bilden folgende
+                        In <r rkey="FesteWV"/> bilden folgende
                         Adjektive die
                         Kernkomponente für die Stichwortliste: <em>blind; geistig; gesund; normal; sanft</em>.
                     </p>

@@ -75,7 +75,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="PREPCON_kon"/> werden in der
+                        In <r rkey="PREPCON_kon"/> werden in der
                         Ausgangssprache Deutsch und den Kontrastsprachen Spanisch und Slowakisch Gebrauchsaspekte und
                         lexikalische Erweiterungen narrativ kommentiert (auf Deutsch).
                     </p>
@@ -121,7 +121,7 @@ export default {
 
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        Informationen zu <tag rkey="MAP"/>
+                        Informationen zu <r rkey="MAP"/>
                         sind noch in Vorbereitung.
                     </p>
 
@@ -133,7 +133,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="SPRW"/> werden narrative Texte
+                        In <r rkey="SPRW"/> werden narrative Texte
                         und Kommentare zu
                         folgenden Aspekten angezeigt:</p>
                     <ul>
@@ -191,7 +191,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="WVBF"/> werden narrative Text in
+                        In <r rkey="WVBF"/> werden narrative Text in
                         unterschiedlicher Form in den einzelnen Knoten angeboten:
                     </p>
                     <ul>
@@ -227,7 +227,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        <tag rkey="FesteWV"/> wurde als experimentelle
+                        <r rkey="FesteWV"/> wurde als experimentelle
                         Ressource für
                         die korpusbasierte Beschreibung von Wortverbindungen in den Anfangsjahren der
                         Online-Lexikografie am IDS

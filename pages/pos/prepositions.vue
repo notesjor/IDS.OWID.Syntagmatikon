@@ -67,7 +67,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        <tag rkey="PREPCON_ex"/> bietet einen
+                        <r rkey="PREPCON_ex"/> bietet einen
                         gesonderten Zugang über Präpositionen-Tabellen (insgesamt 80 Präpositionen).
                     </p>
                     <!-- <div class="exampleImg">
@@ -93,7 +93,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="PREPCON_temp"/> kann man ein
+                        In <r rkey="PREPCON_temp"/> kann man ein
                         Inventar von
                         Präposition-Nomen-Verbindungen anhand einer Präpositionen-Stichwortliste abrufen.
                     </p>
@@ -119,7 +119,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="PREPCON_kon"/> bilden vier
+                        In <r rkey="PREPCON_kon"/> bilden vier
                         Präpositionen in
                         Verbindung mit Nomina den Ausgangspunkt für die kontrastive Beschreibung deutsch – spanisch;
                         deutsch –
@@ -146,7 +146,7 @@ export default {
 
                 <compare-item value="4" rkey="KoMuX">
                     <p>
-                        In <tag rkey="KoMuX"/>
+                        In <r rkey="KoMuX"/>
                         können Präpositionen
                         neben anderen Wort- und Ausdrucksarten als Erstglieder fungieren.
                     </p>
@@ -165,7 +165,7 @@ export default {
                 <compare-item value="5" rkey="MAP">
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        Informationen zu <tag rkey="MAP"/>
+                        Informationen zu <r rkey="MAP"/>
                         sind noch in Vorbereitung.
                     </p>
 
@@ -178,7 +178,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="Verlaufsformen"/> werden
+                        In <r rkey="Verlaufsformen"/> werden
                         deutsche Verben neben
                         dem Absentiv hinsichtlich ihres Vorkommens in zwei Verlaufsformen mit Präpositionen dargestellt:
                         am-Progressiv
@@ -204,7 +204,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="WVBF"/> entfaltet sich ein
+                        In <r rkey="WVBF"/> entfaltet sich ein
                         WV-Netz um das
                         Bezugslemma GRUND anhand der Präpositionen <em>aus; auf; im; mit; ohne</em>.
                     </p>

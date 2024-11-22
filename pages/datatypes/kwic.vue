@@ -40,7 +40,7 @@ export default {
 
       <template #headers>
         <v-tab value="ALL" class="nocaps">alle Ressourcen</v-tab>
-        <v-tab value="1" class="nocaps"><tag rkey="PREPCON_ex"/>
+        <v-tab value="1" class="nocaps"><r rkey="PREPCON_ex"/>
         </v-tab>
         <v-tab value="2" class="nocaps"><resources-list-compact
             :filter="['PREPCON_temp']"></resources-list-compact></v-tab>
@@ -48,8 +48,8 @@ export default {
             :filter="['PREPCON_kon']"></resources-list-compact></v-tab>
         <v-tab value="4" class="nocaps"><resources-list-compact
             :filter="['SpruchList']"></resources-list-compact></v-tab>
-        <v-tab value="5" class="nocaps"><tag rkey="SPRW"/></v-tab>
-        <v-tab value="6" class="nocaps"><tag rkey="WVBF"/></v-tab>
+        <v-tab value="5" class="nocaps"><r rkey="SPRW"/></v-tab>
+        <v-tab value="6" class="nocaps"><r rkey="WVBF"/></v-tab>
       </template>
       <template #tabs>
 
@@ -76,7 +76,7 @@ export default {
 
           <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
           <p>
-            In <tag rkey="PREPCON_ex"/> werden zu jeder
+            In <r rkey="PREPCON_ex"/> werden zu jeder
             Präposition-Nomen-Verbindung automatisch ausgewählte KWICs angezeigt (5-25 Zeilen beim Anklicken).
           </p>
 
@@ -97,7 +97,7 @@ export default {
 
           <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
           <p>
-            In <tag rkey="PREPCON_temp"/> kann man automatisch
+            In <r rkey="PREPCON_temp"/> kann man automatisch
             selektierte
             KWICs an unterschiedlichen Stellen mit einer Zufallsauswahl abrufen:</p>
 
@@ -111,7 +111,7 @@ export default {
           </ul>
           <p>Rubrik „Inventar“</p>
           <ul>
-            <li>Verlinkung zu KWICs in <tag rkey="PREPCON_ex"/></li>
+            <li>Verlinkung zu KWICs in <r rkey="PREPCON_ex"/></li>
           </ul>
 
           <!-- NOTE: Dieses Template ist der Inhalt für "Beispiele und Interpretation?" -->
@@ -156,7 +156,7 @@ export default {
 
           <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
           <p>
-            In <tag rkey="PREPCON_kon"/> kann man automatisch
+            In <r rkey="PREPCON_kon"/> kann man automatisch
             selektierte
             KWICs an unterschiedlichen Stellen für die Ausgangssprache Deutsch und die Kontrastsprachen Spanisch und
             Slowakisch
@@ -228,7 +228,7 @@ export default {
 
           <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
           <p>
-            In <tag rkey="SpruchList"/> werden für die weite
+            In <r rkey="SpruchList"/> werden für die weite
             Suchanfrage eines
             Eintrags automatisch selektierte KWICs angezeigt (bis 1000 Zufallsauswahl).
           </p>
@@ -250,7 +250,7 @@ export default {
 
           <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
           <p>
-            <tag rkey="SPRW"/> bietet einen dynamischen Zugang zu
+            <r rkey="SPRW"/> bietet einen dynamischen Zugang zu
             automatisch
             ermittetelten KWICs und Volltextstellen auf dem aktuellen Stand des DeReKo-W-Archivs. Dazu wurden
             Suchanfragen
@@ -275,7 +275,7 @@ export default {
 
           <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
           <p>
-            In <tag rkey="WVBF"/> werden automatisch selektierte KWICs
+            In <r rkey="WVBF"/> werden automatisch selektierte KWICs
             für die
             jeweiligen Knoten angezeigt, sowohl für lexikalisierte Wortverbindungen als auch für Muster (bis zu 2000
             Zufallsauswahl).

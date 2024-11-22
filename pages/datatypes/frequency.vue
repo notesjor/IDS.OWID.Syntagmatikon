@@ -41,7 +41,7 @@ export default {
     <compare title="">
       <template #headers>
         <v-tab value="ALL" class="nocaps">alle Ressourcen</v-tab>
-        <v-tab value="1" class="nocaps"><tag rkey="KoMuX"/></v-tab>
+        <v-tab value="1" class="nocaps"><r rkey="KoMuX"/></v-tab>
         <v-tab value="2" class="nocaps"><resources-list-compact
             :filter="['PhrasKomp']"></resources-list-compact></v-tab>
         <v-tab value="3" class="nocaps"><resources-list-compact
@@ -52,7 +52,7 @@ export default {
             :filter="['PREPCON_kon']"></resources-list-compact></v-tab>
         <v-tab value="6" class="nocaps"><resources-list-compact
             :filter="['SpruchList']"></resources-list-compact></v-tab>
-        <v-tab value="7" class="nocaps"><tag rkey="WVBF"/></v-tab>
+        <v-tab value="7" class="nocaps"><r rkey="WVBF"/></v-tab>
         <v-tab value="8" class="nocaps"><resources-list-compact
             :filter="['Redeeinleiter']"></resources-list-compact></v-tab>
       </template>
@@ -70,7 +70,7 @@ export default {
           webpage="/img/datatypes/frequency/komux_fullscreen_01_annotated.png">
 
           <p>
-            In <tag rkey="KoMuX"/> werden zum einen Gesamtfrequenzen
+            In <r rkey="KoMuX"/> werden zum einen Gesamtfrequenzen
             für abstrakte oder lexikalisch teil-spezifizierte Komposita-Muster angezeigt. Solche Muster sind über
             formale und/oder lexikalisch-semantische Eigenschaften der Konstituenten definiert und dienen als
             Suchmuster.</p>
@@ -118,7 +118,7 @@ export default {
         <compare-item value="2" rkey="PhrasKomp" description="Frequenzangaben in PhrasKomp">
           <!-- TODO: Inhalt ergänzen -->
           <p>
-            In <tag rkey="PhrasKomp"/>
+            In <r rkey="PhrasKomp"/>
             werden zum einen Einzelfrequenzen für jedes Phrasenkompositum des Inventars angezeigt. Zum anderen kann man
             sich
             Frequenzen für bestimmte Gruppen von Phrasenkomposita anzeigen lassen, die jeweils über formale und/oder
@@ -149,7 +149,7 @@ export default {
 
         <compare-item value="3" rkey="PREPCON_ex" webpage="/img/datatypes/frequency/prepe_fullscreen_01_annotated.png">
           <p>
-            In <tag rkey="PREPCON_ex"/> werden die absoluten und
+            In <r rkey="PREPCON_ex"/> werden die absoluten und
             relativen
             Frequenzen der
             Präposition-Nomen-Verbindungen in zwei Formaten aufgeführt: Präpositionstabellen und Nomentabellen.
@@ -179,7 +179,7 @@ export default {
         <compare-item value="4" rkey="PREPCON_temp"
           webpage="/img/datatypes/frequency/prept_fullscreen_01_annotated.png">
           <p>
-            <tag rkey="PREPCON_temp"/> bietet zwei Typen von
+            <r rkey="PREPCON_temp"/> bietet zwei Typen von
             Frequenzangaben
             an:
           </p>
@@ -231,7 +231,7 @@ export default {
           description="Kontrastive Darstellung von Präposition-Nomen-Verbindungen im Kontext - Rubrik: „Quantitative Angaben“"
           webpage="/img/datatypes/frequency/prepk_fullscreen_01_annotated.png">
           <p>
-            In <tag rkey="PREPCON_kon"/> lassen sich die
+            In <r rkey="PREPCON_kon"/> lassen sich die
             Frequenzangaben
             sowohl für die deutsche PN als auch
             für die Sprachenpaare deutsch – spanisch und deutsch-slowakisch abrufen. Da die Frequenzerhebungen in den
@@ -262,7 +262,7 @@ export default {
           webpage="/img/datatypes/frequency/spruchlist_fullscreen_01_annotated.png">
 
           <p>
-            Die Frequenzangaben in <tag rkey="SpruchList"/> basieren
+            Die Frequenzangaben in <r rkey="SpruchList"/> basieren
             auf engen
             und weiten Suchanfragen, die ebenfalls abrufbar sind.
             Enge Suchanfragen umfassen die Wortformen des Spruchnamens in unmittelbarer Abfolge im Satz (ohne Lücken).
@@ -285,7 +285,7 @@ export default {
           webpage="/img/datatypes/frequency/wvg_fullscreen_01_annotated.png">
 
           <p>
-            In <tag rkey="WVBF"/> werden zwei Suchanfragen angegeben:
+            In <r rkey="WVBF"/> werden zwei Suchanfragen angegeben:
             Präposition in Klein- sowie Großschreibung plus eine
             Wortform des Lemma GRUND in unmittelbarer Folge. In bestimmten Fällen kann die Suchanfrage weitere Elemente
             enthalten, z.B. um nicht zutreffende Belege auszuschließen, die andere Wortverbindungen oder Muster
@@ -319,7 +319,7 @@ export default {
           webpage="/img/datatypes/frequency/rede_fullscreen_annotated.png">
 
           <p>
-            In <tag rkey="Redeeinleiter"/> ist in der Spalte
+            In <r rkey="Redeeinleiter"/> ist in der Spalte
             „Redeeinleiter“
             in Klammern nachfolgend auf den jeweiligen Redeeinleiter hinterlegt, wie häufig dieser im
             Redewiedergabe-Korpus

@@ -64,7 +64,7 @@ export default {
                 <compare-item value="1" rkey="PREPCON_temp" webpage="" buttonUrl="">
 
                     <p>
-                        In <tag rkey="PREPCON_temp"/> sind in der
+                        In <r rkey="PREPCON_temp"/> sind in der
                         Rubrik „Kurzartikel“ Kookkurrenzprofile einschließlich der KWIC-Cluster der jeweiligen
                         Präposition-Nomen-Verbindung unter der Überschrift „Typische Partnerwörter“ hinterlegt. Beim
                         Anklicken der Wolkenvisualisierung erhält man die Kookkurrenzliste einschließlich bis zu 50 KWIC
@@ -103,7 +103,7 @@ export default {
                 <compare-item value="2" rkey="PREPCON_kon" webpage="">
 
                     <p>
-                        In <tag rkey="PREPCON_kon"/> werden
+                        In <r rkey="PREPCON_kon"/> werden
                         Kookkurrenzprofile für das
                         Sprachenpaar deutsch-spanisch und deutsch-slowakisch dargestellt. Da die Profile auf
                         unterschiedlichen Korpora
@@ -144,7 +144,7 @@ export default {
 
                 <compare-item value="3" rkey="WVBF" webpage="">
                     <p>
-                        Im <tag rkey="WVBF"/> werden in ausgewählten
+                        Im <r rkey="WVBF"/> werden in ausgewählten
                         Knoten
                         Kookkurrenzprofile von Einwort-Kontrasteinheiten angezeigt, z.B. bei <em>aus gutem Grund</em>;
                         <em>mit

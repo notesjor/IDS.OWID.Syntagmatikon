@@ -10,7 +10,7 @@
   import { useResourcesStore } from '~/stores/resources';
   
   export default {
-    name: "ResourcesList",
+    name: "R",
     props: {
         rkey: {
             type: String,

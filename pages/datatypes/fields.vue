@@ -30,9 +30,9 @@ export default {
 
       <template #headers>
         <v-tab value="ALL" class="nocaps">alle Ressourcen</v-tab>
-        <v-tab value="1" class="nocaps"><tag rkey="SPRW"/> </v-tab>
-        <v-tab value="2" class="nocaps"><tag rkey="FesteWV"/></v-tab>
-        <v-tab value="3" class="nocaps"><tag rkey="MAP"/></v-tab>
+        <v-tab value="1" class="nocaps"><r rkey="SPRW"/> </v-tab>
+        <v-tab value="2" class="nocaps"><r rkey="FesteWV"/></v-tab>
+        <v-tab value="3" class="nocaps"><r rkey="MAP"/></v-tab>
         <v-tab value="4" class="nocaps"><resources-list-compact
             :filter="['PREPCON_kon']"></resources-list-compact></v-tab>
         <v-tab value="5" class="nocaps"><resources-list-compact
@@ -92,7 +92,7 @@ export default {
           description="Feste Wortverbindungen des Deutschen - Modul: Wortverbindungen mit Adjektiv"
           webpage="/img/datatypes/fields/fwv_fullscreen_01_annotated.png">
           <p>
-            Die Feldangaben in <tag rkey="FesteWV"/> (Untergruppe
+            Die Feldangaben in <r rkey="FesteWV"/> (Untergruppe
             "Adjektive")
             fassen Einträge dieses OWID-Moduls zusammen, die eine
             verwandte Bedeutung haben, entweder mit einer gemeinsamen Komponente (z.B. <i>blind</i>) oder mit gänzlich
@@ -116,7 +116,7 @@ export default {
           description="Musterbank argumentmarkierender Präpositionen - Information: Prädikate (Verbalprädikate und Prädikatsgefüge)"
           webpage="/img/datatypes/fields/map_fullscreen_01_annotated.png">
           <p>
-            Die verbalen Prädikatsfelder in <tag rkey="MAP"/> sind
+            Die verbalen Prädikatsfelder in <r rkey="MAP"/> sind
             geordnet
             nach Prädikatstyp (V: Verb, V-m: mediales Verb, PG:
             Prädikatsgefüge, PG-m: mediales Prädikatsgefüge). Alle gelisteten Prädikate sind mit jeweils einem
@@ -138,7 +138,7 @@ export default {
           description="Kontrastive Darstellung von Präposition-Nomen-Verbindungen im Kontext - Rubrik: „Gebrauchsaspekte“"
           webpage="/img/datatypes/fields/prepk_joined_01_annotated.png">
           <p>
-            In <tag rkey="PREPCON_kon"/> werden Satellitenfelder im
+            In <r rkey="PREPCON_kon"/> werden Satellitenfelder im
             Sprachkontrast (Deutsch-Spanisch;
             Deutsch-Slowakisch) dargestellt. Hierbei handelt es sich um qualitativ zusammengefasste Gruppen von
             statistisch ermitteltem Kookkurrenzpartnern einer PN, die bestimmten Gebrauchsaspekten zugeordnet
@@ -180,7 +180,7 @@ export default {
 
         <compare-item value="5" rkey="PREPCON_temp" webpage="/img/datatypes/fields/prept_fullscreen_01_annotated.png">
           <p>
-            Die Wortfelder in <tag rkey="PREPCON_temp"/> (Kurzartikel)
+            Die Wortfelder in <r rkey="PREPCON_temp"/> (Kurzartikel)
             beinhalten semantisch verwandte Wörter der PN,
             die jeweils mit den entsprechenden Einträgen in <i>elexiko</i> verlinkt sind. Im elexiko-Artikel findet man
             entweder die lexikografische Beschreibung des (Quasi-)Synonyms oder einen Link zum entsprechenden Profil in

@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <div class="caption">Beispiel aus <tag rkey="PREPCON_temp"/></div>
+    <div class="caption">Beispiel aus <r rkey="PREPCON_temp"/></div>
     <v-carousel>
         <v-carousel-item><img src="/img/datatypes/kook/amEnde_kookzeilen.png" /></v-carousel-item>
         <v-carousel-item><img src="/img/datatypes/kook/Clusters_amEnde_1_1_KA_oFW_3.png" /></v-carousel-item>

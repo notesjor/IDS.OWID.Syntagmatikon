@@ -80,7 +80,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="PREPCON_temp"/> werden Belege in
+                        In <r rkey="PREPCON_temp"/> werden Belege in
                         zwei Formen angeboten:
                     </p>
                     <ul>
@@ -113,7 +113,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="PREPCON_kon"/> illustrieren die
+                        In <r rkey="PREPCON_kon"/> illustrieren die
                         Belege in der
                         Ausgangssprache Deutsch und den Kontrastsprachen Spanisch und Slowakisch Gebrauchsaspekte. Bei
                         den
@@ -152,7 +152,7 @@ export default {
                 <compare-item value="3" rkey="PhrasKomp">
                     <!-- TODO: Inhalt ergänzen -->
                     <p>
-                        In <tag rkey="PhrasKomp"/>
+                        In <r rkey="PhrasKomp"/>
                         wird zu jedem der 1.576 Phrasenkomposita des Inventars ein manuell ausgewählter Beleg angeführt,
                         der die
                         Verwendung und Bedeutung der jeweiligen Bildung prototypisch illustriert. Die Belege enthalten
@@ -177,7 +177,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="Redeeinleiter"/> ist in der
+                        In <r rkey="Redeeinleiter"/> ist in der
                         Spalte „Beleg“ je
                         Redeeinleiter jeweils ein Beleg pro Attributekombination hinterlegt. Der Beleg besteht aus dem
                         Satz, der den
@@ -205,7 +205,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="Verlaufsformen"/> werden manuell
+                        In <r rkey="Verlaufsformen"/> werden manuell
                         ausgewählte
                         Belege zum Vorkommen eines Verbs in einer, zwei oder alle drei Verlaufsformen angegeben –
                         ergänzt um den engen
@@ -229,7 +229,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="FesteWV"/> illustrieren die
+                        In <r rkey="FesteWV"/> illustrieren die
                         ausgewählten Belege
                         unterschiedliche Aspekte des Gebrauchs.</p>
                     <p>Rubrik „Musterartikel“</p>
@@ -293,7 +293,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        Im <tag rkey="SPRW"/> werden Volltextbelege zu
+                        Im <r rkey="SPRW"/> werden Volltextbelege zu
                         folgenden
                         Aspekten angezeigt:</p>
                     <ul>
@@ -339,7 +339,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="SPRW"/> illustrieren bis zu drei
+                        In <r rkey="SPRW"/> illustrieren bis zu drei
                         ausgewählte
                         Belege den Gebrauch der deutschen Wortverbindungen in der Domäne Wirtschaft.
                     </p>
@@ -362,7 +362,7 @@ export default {
 
                     <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                     <p>
-                        In <tag rkey="WVBF"/>werden Volltextbelege in
+                        In <r rkey="WVBF"/>werden Volltextbelege in
                         folgenden Knoten
                         und Subangaben angezeigt:</p>
                     <ul>

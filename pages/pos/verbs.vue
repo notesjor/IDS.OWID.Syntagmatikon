@@ -41,7 +41,7 @@ export default {
                 <!-- TODO: Inhalt ergänzen -->
                 <p>
                     In
-                    <tag rkey="KoMuX" /> können Verben
+                    <r rkey="KoMuX" /> können Verben
                     neben anderen Wort- und Ausdrucksarten als Erstglieder fungieren.
 
                 </p>
@@ -71,7 +71,7 @@ export default {
                 <!-- TODO: Inhalt ergänzen -->
                 <p>
                     Informationen zu
-                    <tag rkey="MAP" />
+                    <r rkey="MAP" />
                     sind noch in Vorbereitung.
                 </p>
 
@@ -84,7 +84,7 @@ export default {
                 <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                 <p>
                     In
-                    <tag rkey="Redeeinleiter" /> kann man alle
+                    <r rkey="Redeeinleiter" /> kann man alle
                     Verben aus dem
                     Redewiedergabe-Korpus abrufen, die als Rede- oder Gedankeneinleiter genutzt werden.
                 </p>
@@ -119,7 +119,7 @@ export default {
                 <!-- NOTE: Der Inhalt des compare-items kann beliebig befüllt werden. -->
                 <p>
                     In
-                    <tag rkey="Verlaufsformen" /> stellt eine
+                    <r rkey="Verlaufsformen" /> stellt eine
                     Stichwortliste mit
                     über 900 deutschen Verben die primäre Zugriffsstruktur dar. Diese Verben werden in den Einträgen
                     und Belegen
