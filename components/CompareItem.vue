@@ -19,7 +19,7 @@
                         class="nocaps" variant="elevated" color="">Fallbeispiel</v-btn></nuxt-link>
                 <v-spacer></v-spacer>
                 <nuxt-link v-if="!simple" :to="resource.url"><v-btn prepend-icon="mdi-arrow-right-bold-box-outline"
-                        class="nocaps" variant="elevated" color="">zur Ressource</v-btn></nuxt-link>
+                        variant="elevated" color=""><span class="nocaps">zur Ressource</span></v-btn></nuxt-link>
             </v-row>
         </v-row>
     </v-tabs-window-item>
