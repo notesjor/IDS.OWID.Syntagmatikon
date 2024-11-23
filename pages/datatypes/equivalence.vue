@@ -23,9 +23,9 @@ export default {
   <div>
     <!-- NOTE: in Filter werden die Ressourcen angegeben -->
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
-    <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit v-tab übereinstimmen -->
+    <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
     <compare :filter="['PREPCON_kon', 'DTWW']">
-      <compare-item value="ALL" :simple="true">
+      <compare-item value="ALL">
         <div style="text-align: center; width:100%">
           <img src="/img/datatypes/equivalence/equivalence_all.png" style="text-align: center;" />
         </div>

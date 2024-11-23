@@ -40,10 +40,10 @@ export default {
   <div>
     <!-- NOTE: in Filter werden die Ressourcen angegeben -->
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
-    <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit v-tab übereinstimmen -->
+    <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
     <compare
       :filter="['KoMuX', 'PhrasKomp', 'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'SpruchList', 'WVBF', 'Redeeinleiter']">
-      <compare-item value="0" :simple="true">
+      <compare-item value="0">
         <div style="text-align: center; width:100%">
           <img src="/img/datatypes/frequency/frequencies_all.png" style="text-align: center;" />
         </div>
@@ -161,7 +161,8 @@ export default {
             ihren zugrunde liegenden Suchanfragen Präposition in (Groß- und Kleinschreibung zusammen/einzeln plus
             Nomen in unmittelbarer Folge)</li>
           <li>Frequenzliste in „Inventar temporaler Präposition-Nomen-Verbindungen“ mit Häufigkeitsangaben, die aus
-            PREPCON<sup>explorativ</sup> übernommen wurden und mit den Einträgen dort verlinkt sind.</li>
+            <r rkey="PREPCON_ex" /> übernommen wurden und mit den Einträgen dort verlinkt sind.
+          </li>
         </ul>
 
         <template #explain>
@@ -186,13 +187,14 @@ export default {
           </div>
           <div class="caption">
             Ausschnitt aus den Frequenzangaben der Kategorie FEIERTAGE. Die Einträge sind mit
-            PREPCON<sup>explorativ</sup> verlinkt.
+            <r rkey="PREPCON_ex" /> verlinkt.
           </div>
           <div class="exampleImg">
             <img src="/img/datatypes/frequency/prept_part_04.png" alt="" />
           </div>
           <div class="caption">
-            Verlinkter Eintrag „Heiligabend“ in PREPCON<sup>explorativ</sup>
+            Verlinkter Eintrag „Heiligabend“ in
+            <r rkey="PREPCON_ex" />
           </div>
         </template>
       </compare-item>

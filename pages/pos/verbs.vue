@@ -18,9 +18,9 @@ export default {
     <div>
         <!-- NOTE: in Filter werden die Ressourcen angegeben -->
         <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
-        <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit v-tab übereinstimmen -->
-        <compare :filter="['KoMuX', 'MAP', 'Redeeinleiter', 'Verlaufsformen']">            
-            <compare-item value="0" :simple="true">
+        <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
+        <compare :filter="['KoMuX', 'MAP', 'Redeeinleiter', 'Verlaufsformen']">
+            <compare-item value="0">
                 <div style="text-align: center; width:100%">
                     <img src="/img/pos/verbs/verbs_all.png" style="text-align: center;" />
                 </div>
