@@ -234,8 +234,23 @@ export default {
               color: '#c5049b'
             }
             ]
-          }
-            , {
+          },
+          {
+            ranges: [{
+              from: 11,
+              to: 12
+            }
+            ],
+            references: [{
+              source: 'Kompositamuster-Explorer',
+              article: 'Montagabend',
+              type: 'Kompositum',
+              href: 'https://www.owid.de/plus/komux/?lem=Montagabend',
+              color: '#0d65c2'
+            },
+            ]
+          },
+          {
             ranges: [{
               from: 10,
               to: 12
@@ -254,20 +269,6 @@ export default {
               href: 'http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=Montagabend',
               color: '#c5049b'
             }
-            ]
-          }, {
-            ranges: [{
-              from: 11,
-              to: 12
-            }
-            ],
-            references: [{
-              source: 'Kompositamuster-Explorer',
-              article: 'Montagabend',
-              type: 'Kompositum',
-              href: 'https://www.owid.de/plus/komux/?lem=Montagabend',
-              color: '#0d65c2'
-            },
             ]
           },
           {

@@ -73,6 +73,7 @@ export default {
     return {
       cycle: true,
       tab: 0,
+      max: 1,
     }
   },
   methods: {
@@ -119,6 +120,8 @@ export default {
 
         baseIndex += max;
       }
+
+      this.max = res.length;
       return res;
     },
     makeStyle(color) {
@@ -138,7 +141,7 @@ export default {
         this.tab = this.tab - 1;
     },
     tabNext() {
-      if (this.tab < this.$props.items.length - 1)
+      if (this.tab < this.max - 1)
         this.tab = this.tab + 1;
     }
   },
