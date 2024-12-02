@@ -8,24 +8,8 @@
                     Kookkurrenzprofile - Beispiel: <em>am Ende</em>
                 </NuxtLink>
             </li>
-            <li>
-                <NuxtLink to="/examples/PREPCON_temp">
-                    Verwandte Wörter und Wortgruppen - Beispiel: <em>ohne Unterlass</em>
-                </NuxtLink>
-            </li>
-            <li>
-                <NuxtLink to="/examples/stolz-wie-oskar">
-                    Anfrage Frankfurter Rundschau zu "frech wie Oskar"
-                </NuxtLink>
-            </li>
         </ul>
-        <p>Geplante Fallbeispiele:</p>
-        <ul>
-            <li>Belege, Bedeutung und Gebrauch bei Sprichwörtern</li>
-            <li>Lückenfüllertabellen - Beispiel: <em>aus ADJ Gründen</em></li>
-            <li>Lückenfüllertabellen kontrastiv Beispiel:<br/><em style="margin-left:25px;">mit X Genugtuung / con satisfacción</em></li>
-            <li>Partnerwörter kontrastiv - Beispiel: <em>nach Belieben</em></li>
-        </ul>
+        <p>Weitere Fallbeispiele sind in Vorbereitung.</p>
     </div>
 </template>
 

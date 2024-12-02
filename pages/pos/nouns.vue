@@ -21,7 +21,7 @@ export default {
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
     <compare
       :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'WVBF', 'DTWW']">
-      <compare-item value="ALL">
+      <compare-item value="0">
         <div style="text-align: center; width:100%">
           <img src="/img/pos/nouns/nouns_all.png" style="text-align: center;" />
         </div>

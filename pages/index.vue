@@ -204,9 +204,11 @@ export default {
             ]
           }
           ],
-        }, {
+        }, 
+        {
           tokens: ["BMW-Einkaufsvorstand", "Markus", "Duesmann", "hat", "überraschend", "gekündigt.", "Vorstandschef", "Harald", "Krüger", "sagte", "am", "Montagabend", "vor", "leitenden", "Mitarbeitern", "in", "München,", "Duesmann", "verlasse", "das", "Unternehmen", "«aus", "persönlichen", "Gründen»."],
-          annotations: [{
+          annotations: [
+          {
             ranges: [{
               from: 6,
               to: 7
@@ -234,8 +236,7 @@ export default {
               color: '#c5049b'
             }
             ]
-          }
-            , {
+          }, {
             ranges: [{
               from: 10,
               to: 12
@@ -345,7 +346,7 @@ export default {
           ],
         },
       ],
-      list_public: ["ZUWV", "DRIO", "WVBF", "PAROWB", "KWViD", "SPRW", "DTWW", "SpruchList", "Redeeinleiter", "PREPCON", "KoMuX"],
+      list_public: ["ZUWV", "WVBF", "PAROWB", "KWViD", "SPRW", "DTWW", "SpruchList", "Redeeinleiter", "PREPCON", "KoMuX"],
       list_todo: ["MAP", "PhrasKomp"],
     }
   }
