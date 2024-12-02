@@ -25,7 +25,7 @@ definePageMeta({
   <div>
     <v-row>
       <v-col cols="12">
-        <empty/>
+        <empty />
         <headline :h="4">Wort- und Ausdrucksarten im Syntagmatikon</headline>
         <div class="container">
           <info-box title="Nomina" :color1="color1" link="pos/nouns" :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'WVBF',
@@ -62,7 +62,7 @@ export default {
   theme: { dark: false },
   data() {
     return {
-      color1: "#A24CC2"
+      color1: "#9716CA"
     };
   },
 }

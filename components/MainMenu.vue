@@ -46,16 +46,16 @@
         <!-- altes icon: mdi-book-open-variant-->
         <v-list density="compact" nav>
             <v-list-subheader v-if="!useMobileView">Ressourcenkompass</v-list-subheader>
-            <main-menu-item :useMobileView="useMobileView" color2="#F24162" icon="mdi-compass" to="/resources">
+            <main-menu-item :useMobileView="useMobileView" color2="#DF0C2F" icon="mdi-compass" to="/resources">
                 Ressourcentypen
             </main-menu-item>
-            <main-menu-item :useMobileView="useMobileView" color2="#58F380" icon="mdi-compass" to="/datatypes">
+            <main-menu-item :useMobileView="useMobileView" color2="#0DC513" icon="mdi-compass" to="/datatypes">
                 Informationstypen
             </main-menu-item>
-            <main-menu-item :useMobileView="useMobileView" color2="#A24CC2" icon="mdi-compass" to="/pos">
+            <main-menu-item :useMobileView="useMobileView" color2="#9716CA" icon="mdi-compass" to="/pos">
                 Wort- und Ausdrucksarten
             </main-menu-item>
-            <main-menu-item :useMobileView="useMobileView" color2="#F25A40" icon="mdi-compass" to="/patterns">
+            <main-menu-item :useMobileView="useMobileView" color2="#DB6900" icon="mdi-compass" to="/patterns">
                 Musterzugänge
             </main-menu-item>
 

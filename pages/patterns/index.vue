@@ -59,7 +59,7 @@ export default {
   theme: { dark: false },
   data() {
     return {
-      color1: "#F25A40"
+      color1: "#DB6900"
     };
   },
 }

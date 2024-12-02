@@ -19,7 +19,7 @@ definePageMeta({
   <div>
     <v-row>
       <v-col>
-        <empty/>
+        <empty />
         <headline :h="4">Bearbeitete Informationstypen</headline>
 
         <div class="container">
@@ -57,7 +57,7 @@ definePageMeta({
           </info-box>
         </div>
 
-        <empty/>
+        <empty />
         <headline :h="4">Automatische Informationstypen</headline>
 
         <div class="container">
@@ -97,7 +97,7 @@ export default {
   data() {
     return {
       highlight: null,
-      color1: "#58f380"
+      color1: "#0DC513"
     };
   },
   mounted() {
