@@ -1,7 +1,7 @@
 <template>
   <span class="nolink" style="letter-spacing: normal;">
     <v-chip variant="outlined" density="compact" v-for="item in resources">
-      <span v-html="item.nameShort" style="font-family: var(--FF-DISPLAY);" /><br /> 
+      <span v-html="item.nameShort" style="font-family: var(--FF-DISPLAY);" /><br />
     </v-chip>
   </span>
 
@@ -14,7 +14,7 @@ export default {
   name: "ResourcesList",
   props: {
     filter: { // wenn filter nicht gesetzt, werden alle Ressourcen angezeigt.
-      type: Array, 
+      type: Array,
     },
     showDesc: { // wenn showDesc gesetzt, wird die Beschreibung anstelle des nameLong (Standard) angezeigt.
       type: Boolean,
@@ -51,7 +51,7 @@ export default {
   background-color: #ddd;
 }
 
-.v-chip{
+.v-chip {
   margin: 0px 2px 2px 0px;
 }
 
