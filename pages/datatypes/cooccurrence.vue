@@ -40,7 +40,7 @@ export default {
         </div>
       </compare-item>
 
-      <compare-item value="1" rkey="PREPCON_temp" webpage="" buttonUrl="">
+      <compare-item value="1" rkey="PREPCON_temp" buttonUrl="">
         <p>
           In
           <r rkey="PREPCON_temp" /> sind in der
@@ -71,7 +71,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="2" rkey="PREPCON_kon" webpage="">
+      <compare-item value="2" rkey="PREPCON_kon">
         <p>
           In
           <r rkey="PREPCON_kon" /> werden
@@ -106,7 +106,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="3" rkey="WVBF" webpage="">
+      <compare-item value="3" rkey="WVBF">
         <p>
           Im
           <r rkey="WVBF" /> werden in ausgewählten

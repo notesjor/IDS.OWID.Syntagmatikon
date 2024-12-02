@@ -35,7 +35,7 @@ export default {
         </div>
       </compare-item>
 
-      <compare-item value="1" rkey="PREPCON_kon" webpage="">
+      <compare-item value="1" rkey="PREPCON_kon">
         <p>
           In
           <r rkey="PREPCON_kon" /> gibt es zum einen
@@ -67,7 +67,7 @@ export default {
 
       </compare-item>
 
-      <compare-item value="2" rkey="KoMuX" webpage="">
+      <compare-item value="2" rkey="KoMuX">
         <p>
           In
           <r rkey="KoMuX" />
@@ -108,7 +108,7 @@ export default {
 
       </compare-item>
 
-      <compare-item value="3" rkey="PhrasKomp" webpage="">
+      <compare-item value="3" rkey="PhrasKomp">
         <p>
           In
           <r rkey="PhrasKomp" />
@@ -152,7 +152,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="4" rkey="Redeeinleiter" webpage="">
+      <compare-item value="4" rkey="Redeeinleiter">
         <p>
           In
           <r rkey="Redeeinleiter" /> ist, basierend
@@ -175,7 +175,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="5" rkey="Verlaufsformen" webpage="">
+      <compare-item value="5" rkey="Verlaufsformen">
         <p>
           In
           <r rkey="Verlaufsformen" /> werden
@@ -219,7 +219,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="6" rkey="FesteWV" webpage="">
+      <compare-item value="6" rkey="FesteWV">
         <p>
           In
           <r rkey="FesteWV" /> in OWID, Rubrik „25
@@ -239,7 +239,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="7" rkey="WVBF" webpage="">
+      <compare-item value="7" rkey="WVBF">
         <p>
           Im
           <r rkey="WVBF" /> werden Lückenfüller für

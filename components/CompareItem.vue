@@ -6,11 +6,8 @@
                     <slot></slot>
                 </div>
 
-                <resource-explain v-if="!simple" :webpage="correctedWebPage">
+                <resource-explain v-if="!simple">
                     <slot name="explain"></slot>
-                    <template v-if="$slots.webpagetext" #webpagetext>
-                        <slot name="webpagetext"></slot>
-                    </template>
                 </resource-explain>
             </v-row>
 
@@ -37,10 +34,6 @@ export default {
             type: String,
             default: null
         },
-        webpage: {
-            type: String,
-            default: null
-        },
         rkey: {
             type: String,
             default: null,
@@ -55,14 +48,6 @@ export default {
         this.resourcesStore = useResourcesStore();
     },
     computed: {
-        correctedWebPage() {
-            if (this.$props.webpage != null) {
-                return ".." + this.$props.webpage;
-            }
-            else {
-                return this.$props.webpage;
-            }
-        },
         simple() {
             return this.$props.value == "0";
         },

@@ -30,8 +30,7 @@ export default {
         </div>
       </compare-item>
 
-      <compare-item value="1" rkey="SPRW" description="Feldangaben im OWID-Sprichwörterbuch"
-        webpage="/img/datatypes/fields/swb_fullscreen_01_annotated.png">
+      <compare-item value="1" rkey="SPRW" description="Feldangaben im OWID-Sprichwörterbuch">
         <p>
           Die Feldangaben fassen verwandte Sprichwörter im <resources-list-compact
             :filter="['SPRW']"></resources-list-compact> zusammen. Diese
@@ -51,8 +50,7 @@ export default {
       </compare-item>
 
       <compare-item value="2" rkey="FesteWV"
-        description="Feste Wortverbindungen des Deutschen - Modul: Wortverbindungen mit Adjektiv"
-        webpage="/img/datatypes/fields/fwv_fullscreen_01_annotated.png">
+        description="Feste Wortverbindungen des Deutschen - Modul: Wortverbindungen mit Adjektiv">
         <p>
           Die Feldangaben in
           <r rkey="FesteWV" /> (Untergruppe
@@ -72,8 +70,7 @@ export default {
       </compare-item>
 
       <compare-item value="3" rkey="MAP"
-        description="Musterbank argumentmarkierender Präpositionen - Information: Prädikate (Verbalprädikate und Prädikatsgefüge)"
-        webpage="/img/datatypes/fields/map_fullscreen_01_annotated.png">
+        description="Musterbank argumentmarkierender Präpositionen - Information: Prädikate (Verbalprädikate und Prädikatsgefüge)">
         <p>
           Die verbalen Prädikatsfelder in
           <r rkey="MAP" /> sind
@@ -94,8 +91,7 @@ export default {
       </compare-item>
 
       <compare-item value="4" rkey="PREPCON_kon"
-        description="Kontrastive Darstellung von Präposition-Nomen-Verbindungen im Kontext - Rubrik: „Gebrauchsaspekte“"
-        webpage="/img/datatypes/fields/prepk_joined_01_annotated.png">
+        description="Kontrastive Darstellung von Präposition-Nomen-Verbindungen im Kontext - Rubrik: „Gebrauchsaspekte“">
         <p>
           In
           <r rkey="PREPCON_kon" /> werden Satellitenfelder im
@@ -106,15 +102,6 @@ export default {
           Wortartenunterscheidung vorgenommen wurde. Es werden zwei Formate angezeigt: als Partnerwort-Wolke und
           als Kookkurrenzliste.
         </p>
-        <template #webpagetext>
-          <p style="margin: 10px 0px">
-            Jeder Artikel enthält eine Wolkendarstellung adjektivischer Satellitenfelder des Gebrauchsaspekts
-            (siehe
-            <enum v="1" />).
-            Mit einem Klick auf diese Darstellung gelangen Sie zu einer vollständigen Kookkurrenzliste (siehe
-            <enum v="2" />).
-          </p>
-        </template>
 
         <template #explain>
 
@@ -134,7 +121,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="5" rkey="PREPCON_temp" webpage="/img/datatypes/fields/prept_fullscreen_01_annotated.png">
+      <compare-item value="5" rkey="PREPCON_temp">
         <p>
           Die Wortfelder in
           <r rkey="PREPCON_temp" /> (Kurzartikel)
