@@ -1,30 +1,16 @@
 <template>
     <v-tabs-window-item :value="value">
-        <v-row style="margin:20px 20px 20px 20px">
-            <v-row>
-                <v-col cols="12">
-                    <div class="relink">
-                        <slot></slot>
-                    </div>
-                </v-col>
-            </v-row>
+        <div class="relink">
+            <slot></slot>
+        </div>
 
-            <v-row v-if="!simple">
-                <v-col cols="12">
-                    <resource-explain>
-                        <slot name="explain"></slot>
-                    </resource-explain>
-                </v-col>
-            </v-row>
+        <resource-explain v-if="!simple">
+            <slot name="explain"></slot>
+        </resource-explain>
 
-            <v-row>
-                <v-col cols="12">
-                    <v-spacer></v-spacer>
-                    <nuxt-link v-if="!simple" :to="resource?.url"><v-btn prepend-icon="mdi-arrow-right-bold-box-outline"
-                            variant="elevated" color=""><span class="nocaps">zur Ressource</span></v-btn></nuxt-link>
-                </v-col>
-            </v-row>
-        </v-row>
+        <v-spacer></v-spacer>
+        <nuxt-link v-if="!simple" :to="resource?.url"><v-btn prepend-icon="mdi-arrow-right-bold-box-outline"
+                variant="elevated" color=""><span class="nocaps">zur Ressource</span></v-btn></nuxt-link>
     </v-tabs-window-item>
 </template>
 
