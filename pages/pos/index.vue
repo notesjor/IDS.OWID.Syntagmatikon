@@ -63,7 +63,7 @@ export default {
   theme: { dark: false },
   data() {
     return {
-      color1: "#9716CA"
+      color1: "#0DC513"
     };
   },
 }

@@ -98,7 +98,7 @@ export default {
   data() {
     return {
       highlight: null,
-      color1: "#0DC513"
+      color1: "#9716CA"
     };
   },
   mounted() {

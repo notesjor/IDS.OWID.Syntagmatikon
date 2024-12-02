@@ -50,7 +50,7 @@
                 Ressourcentypen
             </main-menu-item>
             <main-menu-child parent="Ressourcentypen" />
-            <main-menu-item :useMobileView="useMobileView" color2="#0DC513" icon="mdi-compass" to="/datatypes">
+            <main-menu-item :useMobileView="useMobileView" color2="#9716CA" icon="mdi-compass" to="/datatypes">
                 Informationstypen
             </main-menu-item>
             <main-menu-child parent="Informationstypen" />
@@ -58,7 +58,7 @@
                 :to="p.url" class="subMenuItem">
                 <span v-html="p.name" />
             </main-menu-item>
-            <main-menu-item :useMobileView="useMobileView" color2="#9716CA" icon="mdi-compass" to="/pos">
+            <main-menu-item :useMobileView="useMobileView" color2="#0DC513" icon="mdi-compass" to="/pos">
                 Wort- und Ausdrucksarten
             </main-menu-item>
             <main-menu-child parent="Wort- und Ausdrucksarten" />

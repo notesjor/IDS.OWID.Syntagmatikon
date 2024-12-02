@@ -187,8 +187,8 @@ definePageMeta({
                 <search-box title="Ressourcentypen (Zugang)" rkey="search_subtype" color1="#a0ac67"
                   color2="#6fc2ab"></search-box> -->
                 <search-box title="Ressourcentypen" rkey="search_type" color1="#DF0C2F"></search-box>
-                <search-box title="Informationstypen" rkey="search_functions" color1="#0DC513"></search-box>
-                <search-box title="Wort- und Ausdrucksarten" rkey="search_parts" color1="#9716CA"></search-box>
+                <search-box title="Informationstypen" rkey="search_functions" color1="#9716CA"></search-box>
+                <search-box title="Wort- und Ausdrucksarten" rkey="search_parts" color1="#0DC513"></search-box>
                 <search-box title="Musterzugänge" rkey="search_patterns" color1="#DB6900"></search-box>
               </v-expansion-panels>
             </v-expansion-panel-text>

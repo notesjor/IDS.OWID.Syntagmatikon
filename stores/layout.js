@@ -8,8 +8,8 @@ export const useLayoutStore = defineStore("layoutStore", {
 
       colors: {
         Ressourcentypen: "#DF0C2F",
-        Informationstypen: "#0DC513",
-        "Wort- und Ausdrucksarten": "#9716CA",
+        Informationstypen: "#9716CA",
+        "Wort- und Ausdrucksarten": "#0DC513",
         Musterzugänge: "#DB6900",
         Fallbeispiele: "#2962ff",
       },
