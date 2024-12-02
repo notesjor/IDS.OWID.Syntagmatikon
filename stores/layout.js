@@ -22,6 +22,14 @@ export const useLayoutStore = defineStore("layoutStore", {
         Fallbeispiele: "mdi-lightbulb-on",
       },
 
+      validate: {
+        Ressourcentypen: "/resources/",
+        Informationstypen: "/datatypes/",
+        "Wort- und Ausdrucksarten": "/pos/",
+        Musterzugänge: "/patterns/",
+        Fallbeispiele: "/examples/",
+      },
+
       paths: {
         Ressourcentypen: [
           {
