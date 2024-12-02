@@ -124,11 +124,7 @@ export default {
       footerImpressum: null,
       footerDsgvo: null,
 
-      layoutVars: null,
-      title: null,
-      parent: null,
-      color1: null,
-      icon: null
+      layoutVars: null
     }
   },
 
