@@ -11,9 +11,11 @@
         <gradient :color1="color1" class="gradient" />
         <slot />
     </h3>
-    <h2 style="margin:0px 0px 10px 10px; border-bottom: 3px lightgray solid;" v-if="h == 4"><slot /></h2>
+    <h2 style="margin:0px 0px 10px 10px; border-bottom: 3px lightgray solid; font-weight: 200;" v-if="h == 4">
+        <slot />
+    </h2>
     <div v-if="h == 0">
-        <gradient :color1="color1" class="gradient"/>
+        <gradient :color1="color1" class="gradient" />
         <span style="font-weight: 300; font-size: 1.25rem;">
             <slot />
         </span>
@@ -21,8 +23,8 @@
 </template>
 
 <style>
-.gradient{
-    margin:-3px 10px 0px -5px
+.gradient {
+    margin: -3px 10px 0px -5px
 }
 </style>
 
