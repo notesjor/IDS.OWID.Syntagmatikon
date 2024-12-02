@@ -1,23 +1,13 @@
 <template>
-  <div style="width: auto;">
-    <h3
-      style="margin-left: auto; margin-right: auto; text-decoration: underline; text-decoration-color: black; text-decoration-thickness: 2px; display: block;">
-      Beispiele</h3>
-    <v-row style="margin: 10px 0px;">
+  <div>
+    <div style="padding: 0px 20px;">
+      <h3
+        style="border-bottom: 2px solid black; width: 7rem; text-align: center; margin-left: auto; margin-right: auto;">
+        Beispiele
+      </h3>
+    </div>
+    <div style="margin:20px 0px">
       <slot></slot>
-    </v-row>
+    </div>
   </div>
 </template>
-
-<script>
-
-export default {
-  name: "ResourceExplain",
-  data() {
-    return {
-      tab: "2"
-    }
-  }
-}
-
-</script>

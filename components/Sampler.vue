@@ -27,7 +27,8 @@
                     <hr style="width: 75%; margin-left: auto; margin-right: auto;" />
                     <div style="font-weight: 200;" v-html="r.source"></div>
                     <div>
-                      <v-icon :style="`color:${r.color}; margin-right: 5px;display:inline-block;margin:-7px 5px 0px 0px`"
+                      <v-icon
+                        :style="`color:${r.color}; margin-right: 5px;display:inline-block;margin:-7px 5px 0px 0px`"
                         class="animated">mdi-arrow-right-circle-outline</v-icon>
                       <div :style="`color:${r.color};display:inline-block;`">{{ r.article }}</div>
                     </div>
@@ -124,7 +125,7 @@ export default {
       if (color == unselectedColor)
         return `color:${unselectedColor}; background-color:${unselectedColor}0A; border-radius: 3px; border: 2px dotted ${unselectedColor}; padding: 0 3px`;
       else
-        return `color:${color}; background-color:${color}0A; border-radius: 3px; border: 2px dotted ${color}; padding: 3px 5px;`;
+        return `color:${color}; background-color:${color}0A; border-radius: 3px; border: 2px dotted ${color}; padding: 0 3px;`;
     },
     carouselStop() {
       this.cycle = false;

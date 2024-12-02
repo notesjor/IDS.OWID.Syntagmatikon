@@ -114,7 +114,7 @@ export default {
 
     computed: {
         allSameValue() {
-            return this.items.every(x => x.checked === true) || this.items.every(x => x.checked === false);
+            return this.items.every(x => x.checked === true);
         },
         styleGradient() {
             return this.allSameValue ? "margin: -17px 5px -17px -25px; max-width:10px" : "margin: -17px 10px -17px -25px; max-width: 50px "

@@ -15,7 +15,7 @@
           <v-card-subtitle>{{ info.type }}</v-card-subtitle>
           <v-card-text>
             <v-btn prepend-icon="mdi-arrow-right" style="text-transform: none;" :href="info.href">{{ info.article
-            }}</v-btn>
+              }}</v-btn>
           </v-card-text>
         </v-card>
       </div>
@@ -59,22 +59,22 @@ export default {
     for (const t of text) {
       if (t.color == "black")
         continue;
-      
-      setTimeout((obj)=>{
+
+      setTimeout((obj) => {
         if (obj.last != null)
           obj.last.unpublish();
         obj.t.publish();
-      }, count * 5000, {last: last, t: t});
+      }, count * 5000, { last: last, t: t });
 
       last = t;
       count++;
     }
 
-    setTimeout((obj)=>{
+    setTimeout((obj) => {
       if (obj.last != null)
         obj.last.unpublish();
       this.$emit("next");
-    }, count * 5000, {last: last});
+    }, count * 5000, { last: last });
   },
 
   methods: {
