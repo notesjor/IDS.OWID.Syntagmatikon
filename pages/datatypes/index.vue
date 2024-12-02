@@ -13,8 +13,9 @@ definePageMeta({
       selbst zur lexikografischen Einträgen. Die manuell-qualitativ erarbeiteten Informationstypen basieren ebenso auf
       Korpusanalysen. Hier finden sich unterschiedliche Kombinationen von systematisierten und interpretierten
       Korpusdaten mit verschiedenen Formen der narrativen Beschreibung.</p>
-    <p>Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur Aussagekraft der
-      Informationstypen in den jeweiligen Ressourcen.</p>
+    <div class="caption">Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur
+      Aussagekraft der
+      Informationstypen in den jeweiligen Ressourcen.</div>
   </div>
   <div>
     <v-row>

@@ -15,8 +15,9 @@ definePageMeta({
       <r rkey='PREPCON_ex' /> oder
       <r rkey='KoMuX' />.
     </p>
-    <p>Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur Charakteristik der
-      einzelnen Ressourcen.</p>
+    <div class="caption">Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur
+      Charakteristik der
+      einzelnen Ressourcen.</div>
   </div>
   <div>
     <v-row>

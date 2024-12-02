@@ -20,7 +20,8 @@ definePageMeta({
     <p>Unter Phrasemen werden Phraseologismen, Idiome, Kollokationen (auch nicht-idiomatische) sowie Funktionsverbgefüge
       subsumiert. Nicht gesondert markiert werden Komponenten von Phrasemen und feste Sätzen, da diese Mehrworteinheiten
       potenziell alle Wortarten umfassen können. Hier liegt der Fokus auf der gesamten Einheit.</p>
-    <p>Jedes Kästchen linkt zu einer Hintergrundseite mit Beispielen für Wort- und Ausdrucksarten in den Ressourcen.</p>
+    <div class="caption">Jedes Kästchen linkt zu einer Hintergrundseite mit Beispielen für Wort- und Ausdrucksarten in
+      den Ressourcen.</div>
   </div>
   <div>
     <v-row>

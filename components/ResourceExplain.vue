@@ -1,6 +1,6 @@
 <template>
   <h3
-    style="margin-left: auto; margin-right: auto; text-decoration: underline; text-decoration-color: black; text-decoration-thickness: 2px;">
+    style="margin-left: auto; margin-right: auto; text-decoration: underline; text-decoration-color: black; text-decoration-thickness: 2px; display: block;">
     Beispiele</h3>
   <v-row style="margin: 10px 0px;">
     <slot></slot>
