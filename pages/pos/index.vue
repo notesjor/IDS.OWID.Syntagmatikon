@@ -20,12 +20,13 @@ definePageMeta({
     <p>Unter Phrasemen werden Phraseologismen, Idiome, Kollokationen (auch nicht-idiomatische) sowie Funktionsverbgefüge
       subsumiert. Nicht gesondert markiert werden Komponenten von Phrasemen und feste Sätzen, da diese Mehrworteinheiten
       potenziell alle Wortarten umfassen können. Hier liegt der Fokus auf der gesamten Einheit.</p>
-    <p>Jedes Kästchen linkt zu einer Hintergrundseite mit Beispielen für Wort- und Ausdrucksarten in den Ressourcen.</p>
+    <div class="caption">Jedes Kästchen linkt zu einer Hintergrundseite mit Beispielen für Wort- und Ausdrucksarten in
+      den Ressourcen.</div>
   </div>
   <div>
     <v-row>
       <v-col cols="12">
-        <empty/>
+        <empty />
         <headline :h="4">Wort- und Ausdrucksarten im Syntagmatikon</headline>
         <div class="container">
           <info-box title="Nomina" :color1="color1" link="pos/nouns" :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'WVBF',
@@ -62,7 +63,7 @@ export default {
   theme: { dark: false },
   data() {
     return {
-      color1: "#A24CC2"
+      color1: "#0DC513"
     };
   },
 }

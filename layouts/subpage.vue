@@ -22,7 +22,6 @@
     </div>
 
     <main-menu :useMobileView="useMobileView" />
-    <main-menu-sub :useMobileView="useMobileView" />
 
     <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
       <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
@@ -125,11 +124,7 @@ export default {
       footerImpressum: null,
       footerDsgvo: null,
 
-      layoutVars: null,
-      title: null,
-      parent: null,
-      color1: null,
-      icon: null
+      layoutVars: null
     }
   },
 

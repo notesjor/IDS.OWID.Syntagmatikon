@@ -13,13 +13,14 @@ definePageMeta({
       selbst zur lexikografischen Einträgen. Die manuell-qualitativ erarbeiteten Informationstypen basieren ebenso auf
       Korpusanalysen. Hier finden sich unterschiedliche Kombinationen von systematisierten und interpretierten
       Korpusdaten mit verschiedenen Formen der narrativen Beschreibung.</p>
-    <p>Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur Aussagekraft der
-      Informationstypen in den jeweiligen Ressourcen.</p>
+    <div class="caption">Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur
+      Aussagekraft der
+      Informationstypen in den jeweiligen Ressourcen.</div>
   </div>
   <div>
     <v-row>
       <v-col>
-        <empty/>
+        <empty />
         <headline :h="4">Bearbeitete Informationstypen</headline>
 
         <div class="container">
@@ -57,7 +58,7 @@ definePageMeta({
           </info-box>
         </div>
 
-        <empty/>
+        <empty />
         <headline :h="4">Automatische Informationstypen</headline>
 
         <div class="container">
@@ -97,7 +98,7 @@ export default {
   data() {
     return {
       highlight: null,
-      color1: "#58f380"
+      color1: "#9716CA"
     };
   },
   mounted() {

@@ -40,7 +40,7 @@ definePageMeta({
         </div>
 
         <!-- Genauigkeit der Suche -->
-      <!--
+        <!--
         <div style="margin: -75px 0px 50px 0px;">
           <span style="position: relative; top: 0px">Genauigkeit der Suche:</span>
           <span>
@@ -186,10 +186,10 @@ definePageMeta({
                 <!-- <search-box title="Zugänge" rkey="search_display" color1="#c79b31" color2="#a0ac67"></search-box>
                 <search-box title="Ressourcentypen (Zugang)" rkey="search_subtype" color1="#a0ac67"
                   color2="#6fc2ab"></search-box> -->
-                <search-box title="Ressourcentypen" rkey="search_type" color1="#F24162"></search-box>
-                <search-box title="Informationstypen" rkey="search_functions" color1="#58F380"></search-box>
-                <search-box title="Wort- und Ausdrucksarten" rkey="search_parts" color1="#A24CC2"></search-box>
-                <search-box title="Musterzugänge" rkey="search_patterns" color1="#F25A40"></search-box>
+                <search-box title="Ressourcentypen" rkey="search_type" color1="#DF0C2F"></search-box>
+                <search-box title="Informationstypen" rkey="search_functions" color1="#9716CA"></search-box>
+                <search-box title="Wort- und Ausdrucksarten" rkey="search_parts" color1="#0DC513"></search-box>
+                <search-box title="Musterzugänge" rkey="search_patterns" color1="#DB6900"></search-box>
               </v-expansion-panels>
             </v-expansion-panel-text>
           </v-expansion-panel>

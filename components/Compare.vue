@@ -6,9 +6,9 @@
       <v-col>
         <v-tabs v-model="currentTab">
           <v-tab v-for="(item, index) in tabs" :key="index">
-            <span class="nocaps">
+            <span class="nocaps" style="letter-spacing: normal;">
               <v-chip variant="outlined" density="compact">
-                <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br /> 
+                <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br />
               </v-chip>
             </span>
           </v-tab>

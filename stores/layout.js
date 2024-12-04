@@ -7,10 +7,10 @@ export const useLayoutStore = defineStore("layoutStore", {
       parent: "",
 
       colors: {
-        Ressourcentypen: "#f24162",
-        Informationstypen: "#58f380",
-        "Wort- und Ausdrucksarten": "#a24cc2",
-        Musterzugänge: "#f25a40",
+        Ressourcentypen: "#DF0C2F",
+        Informationstypen: "#9716CA",
+        "Wort- und Ausdrucksarten": "#0DC513",
+        Musterzugänge: "#DB6900",
         Fallbeispiele: "#2962ff",
       },
 
@@ -20,6 +20,14 @@ export const useLayoutStore = defineStore("layoutStore", {
         "Wort- und Ausdrucksarten": "mdi-compass",
         Musterzugänge: "mdi-compass",
         Fallbeispiele: "mdi-lightbulb-on",
+      },
+
+      validate: {
+        Ressourcentypen: "/resources/",
+        Informationstypen: "/datatypes/",
+        "Wort- und Ausdrucksarten": "/pos/",
+        Musterzugänge: "/patterns/",
+        Fallbeispiele: "/examples/",
       },
 
       paths: {

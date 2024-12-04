@@ -12,14 +12,17 @@ definePageMeta({
       händischer Bearbeitung und linguistisch-lexikografischer Beschreibung.</p>
     <p>Die aufgeführten Beispielressourcen sind jeweils die prototypischen Vertreter. Gleichzeitig gibt es zahlreiche
       Überschneidungen zwischen den Ressourcen: Eine Datenbank kann z.B. gleichzeitig als Inventar verstanden werden wie
-      <r rkey='PREPCON_ex' /> oder <r rkey='KoMuX' />.</p>
-    <p>Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur Charakteristik der
-      einzelnen Ressourcen.</p>
+      <r rkey='PREPCON_ex' /> oder
+      <r rkey='KoMuX' />.
+    </p>
+    <div class="caption">Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur
+      Charakteristik der
+      einzelnen Ressourcen.</div>
   </div>
   <div>
     <v-row>
       <v-col>
-        <empty/>
+        <empty />
         <headline :h="4">Ressourcentypen im Syntagmatikon</headline>
         <div class="container nolink">
           <info-box title="Explorative Datenbanken" link="/resources/db_expl" :filter="['KoMuX', 'PREPCON_ex']"
@@ -61,7 +64,7 @@ export default {
   theme: { dark: false },
   data() {
     return {
-      color1: "#F24162"
+      color1: "#DF0C2F"
     };
   },
 }

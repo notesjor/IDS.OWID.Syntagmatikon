@@ -49,8 +49,7 @@ export default {
         </div>
       </compare-item>
 
-      <compare-item value="1" rkey="KoMuX" description="Frequenzangaben in KoMuX"
-        webpage="/img/datatypes/frequency/komux_fullscreen_01_annotated.png">
+      <compare-item value="1" rkey="KoMuX" description="Frequenzangaben in KoMuX">
         <p>
           In
           <r rkey="KoMuX" /> werden zum einen Gesamtfrequenzen
@@ -124,7 +123,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="3" rkey="PREPCON_ex" webpage="/img/datatypes/frequency/prepe_fullscreen_01_annotated.png">
+      <compare-item value="3" rkey="PREPCON_ex">
         <p>
           In
           <r rkey="PREPCON_ex" /> werden die absoluten und
@@ -150,7 +149,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="4" rkey="PREPCON_temp" webpage="/img/datatypes/frequency/prept_fullscreen_01_annotated.png">
+      <compare-item value="4" rkey="PREPCON_temp">
         <p>
           <r rkey="PREPCON_temp" /> bietet zwei Typen von
           Frequenzangaben
@@ -200,8 +199,7 @@ export default {
       </compare-item>
 
       <compare-item value="5" rkey="PREPCON_kon"
-        description="Kontrastive Darstellung von Präposition-Nomen-Verbindungen im Kontext - Rubrik: „Quantitative Angaben“"
-        webpage="/img/datatypes/frequency/prepk_fullscreen_01_annotated.png">
+        description="Kontrastive Darstellung von Präposition-Nomen-Verbindungen im Kontext - Rubrik: „Quantitative Angaben“">
         <p>
           In
           <r rkey="PREPCON_kon" /> lassen sich die
@@ -230,8 +228,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="6" rkey="SpruchList" description="Frequenzangaben in SpruchList"
-        webpage="/img/datatypes/frequency/spruchlist_fullscreen_01_annotated.png">
+      <compare-item value="6" rkey="SpruchList" description="Frequenzangaben in SpruchList">
 
         <p>
           Die Frequenzangaben in
@@ -254,8 +251,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="7" rkey="WVBF" description="Frequenzangaben im Wortverbindungsfeld GRUND"
-        webpage="/img/datatypes/frequency/wvg_fullscreen_01_annotated.png">
+      <compare-item value="7" rkey="WVBF" description="Frequenzangaben im Wortverbindungsfeld GRUND">
 
         <p>
           In
@@ -287,8 +283,7 @@ export default {
       </compare-item>
 
       <compare-item value="8" rkey="Redeeinleiter"
-        description="Frequenzangaben im 'Kleinen Wörterbuch der Redeeinleiter'"
-        webpage="/img/datatypes/frequency/rede_fullscreen_annotated.png">
+        description="Frequenzangaben im 'Kleinen Wörterbuch der Redeeinleiter'">
 
         <p>
           In

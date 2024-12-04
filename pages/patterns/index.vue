@@ -21,7 +21,7 @@ definePageMeta({
       <li><strong>w-x-ist-ist-auch-y-Muster</strong>: <br /> {Licht – Schatten; Rauch – Feuer; Arbeit – Brot} </li>
     </ul>
     <br />
-    Im Syntagmatikon kommt die Musterperspektive auf dreifache Weise ins Spiel:
+    <div class="caption">Im Syntagmatikon kommt die Musterperspektive auf dreifache Weise ins Spiel:</div>
   </div>
   <div>
     <v-row>
@@ -59,7 +59,7 @@ export default {
   theme: { dark: false },
   data() {
     return {
-      color1: "#F25A40"
+      color1: "#DB6900"
     };
   },
 }

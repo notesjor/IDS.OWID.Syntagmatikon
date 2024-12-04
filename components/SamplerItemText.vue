@@ -1,5 +1,6 @@
 <!-- HINWEIS: Dies ist eine Sub-Kompoente und gehört zu SamplerItem.vue -->
 <template>
+  hello
   <span :style="style" v-html="text.text.trim()" @mouseover="hover()" @mouseleave="unpublish()"></span>
 </template>
 
@@ -27,17 +28,17 @@ export default {
     var t = this.text;
     t.publish = this.publish;
     t.unpublish = this.unpublish;
-    
+
     if (t.color == "black")
-      this.$data.style = `line-height: 32px; :${t.color}; margin-left:${this.num > 0 ? 5 : 0}px;`;
+      this.$data.style = `line-height: 32px; :${t.color}; margin-left:0px;`;
     else
-      this.$data.style = `line-height: 32px; color:${t.color}; background-color:${t.color}0A; margin-left:${this.num > 0 ? 5 : 0}px; border-radius: 3px; border: 2px dotted ${t.color}; padding: 0 3px`;
+      this.$data.style = `line-height: 32px; color:${t.color}; background-color:${t.color}0A; margin-left:0px; border-radius: 3px; border: 2px dotted ${t.color}; padding: 0 3px`;
   },
 
   methods: {
-    hover(){
+    hover() {
       // delete all Timeouts
-      var id = window.setTimeout(function() {}, 0);
+      var id = window.setTimeout(function () { }, 0);
       while (id--) {
         window.clearTimeout(id);
       }
@@ -47,16 +48,16 @@ export default {
       let t = this.text;
       if (t.color == "black")
         return;
-            
-      this.$data.style = `line-height: 32px; color:${t.color}; background-color:${t.color}0A; margin-left:${this.num > 0 ? 5 : 0}px; border-radius: 3px; border: 2px solid ${t.color}; padding: 0 3px`;
+
+      this.$data.style = `line-height: 32px; color:${t.color}; background-color:${t.color}0A; margin-left:0px; border-radius: 3px; border: 2px solid ${t.color}; padding: 0 3px`;
       this.$emit("publish", this.text);
     },
-    unpublish(){
+    unpublish() {
       let t = this.text;
       if (t.color == "black")
         return;
-      
-      this.$data.style = `line-height: 32px; color:${t.color}; background-color:${t.color}0A; margin-left:${this.num > 0 ? 5 : 0}px; border-radius: 3px; border: 2px dotted ${t.color}; padding: 0 3px`;
+
+      this.$data.style = `line-height: 32px; color:${t.color}; background-color:${t.color}0A; margin-left:0px; border-radius: 3px; border: 2px dotted ${t.color}; padding: 0 3px`;
     }
   }
 }

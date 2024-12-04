@@ -1,8 +1,8 @@
 <template>
     <v-expansion-panel v-if="resourceStore != null">
         <v-expansion-panel-title>
-            <gradient :style="styleGradient" :color1="color1" style="min-width: 35px; min-height: 50px; margin: -20px 5px -20px -15px">                
-            </gradient>
+            <gradient :style="styleGradient" :color1="color1" v-if="allSameValue"
+                style="min-width: 35px; min-height: 50px; margin: -20px 5px -20px -15px" />
             <v-icon :style="styleIcon" v-if="!allSameValue" @click="selectAll">mdi-filter-remove</v-icon>
             {{ title }}
         </v-expansion-panel-title>
@@ -42,7 +42,7 @@
                 </v-row>
             </div>
         </v-expansion-panel-text>
-    </v-expansion-panel>    
+    </v-expansion-panel>
 </template>
 
 <style scoped>
@@ -64,11 +64,11 @@ export default {
             type: String,
             required: true
         },
-        color1:{
+        color1: {
             type: String,
             default: "white"
         },
-        color2:{
+        color2: {
             type: String,
             default: "white"
         },
@@ -101,10 +101,10 @@ export default {
     watch: {
         items: {
             handler: function (val) {
-                try{
+                try {
                     var values = val.filter(x => x.checked).map(x => x.item);
                     this.resourceStore.setValue(this.rkey, values);
-                }catch{
+                } catch {
                     // ignore
                 }
             },
@@ -114,13 +114,13 @@ export default {
 
     computed: {
         allSameValue() {
-            return this.items.every(x => x.checked === true) || this.items.every(x => x.checked === false);
+            return this.items.every(x => x.checked === true);
         },
-        styleGradient(){
-            return this.allSameValue ? "margin: -17px 5px -17px -25px; max-width:10px": "margin: -17px 10px -17px -25px; max-width: 50px "
+        styleGradient() {
+            return this.allSameValue ? "margin: -17px 5px -17px -25px; max-width:10px" : "margin: -17px 10px -17px -25px; max-width: 50px "
         },
         styleIcon() {
-            return `margin: 0px 15px 0px -48px; color: ${this.$props.color != "white" ? "white" : "black"};`;
+            return `margin: 0px 15px 0px -10px; color: ${this.$props.color1};`;
         }
     }
 }

@@ -1,55 +1,13 @@
 <template>
-  <v-tabs fixed-tabs style="width: 100%; margin-top:20px" v-model="tab">
-    <v-tab value="2">
-      <v-tab-title class="nocaps"><v-icon v-show="tab == 1"
-        style="margin-right: 5px;">mdi-arrow-right-bold-box-outline</v-icon>Beispiele</v-tab-title>
-    </v-tab>
-    <v-tab v-if="webpage != null" value="1">
-      <v-tab-title class="nocaps"><v-icon v-show="tab == 2" 
-        style="margin-right: 5px;">mdi-arrow-right-bold-box-outline</v-icon>Wo
-        finde ich diese Angabe?</v-tab-title>
-    </v-tab>    
-  </v-tabs>
-
-  <v-tabs-window  v-model="tab"
-    style="border: 1px white solid; border-radius: 5px; padding: 10px; background-color: white; margin:0px -10px 0px -10px">
-    <v-tabs-window-item v-if="webpage != null" value="1" style="padding:0px 0px 0px 0px">
-      <v-row style="margin: 10px 0px;">
-        <p style="margin: 10px 0px">
-          <slot name="webpagetext">
-            Die beschriebene Information ist im Artikel an folgender Position zu finden (rote Markierung):
-          </slot>
-        </p>
-        <div style="width: 100%;">
-          <img :src="webpage" alt="Artikel mit Annotation" style="margin: auto;">
-        </div>
-      </v-row>
-    </v-tabs-window-item>
-
-    <v-tabs-window-item value="2" style="padding:0px 0px 0px 0px">
-      <v-row style="margin: 10px 0px;">
-        <slot></slot>
-      </v-row>
-    </v-tabs-window-item>
-  </v-tabs-window>
+  <div>
+    <div style="padding: 0px 20px;">
+      <h3
+        style="border-bottom: 2px solid black; width: 7rem; text-align: center; margin-left: auto; margin-right: auto;">
+        Beispiele
+      </h3>
+    </div>
+    <div style="margin:20px 0px">
+      <slot></slot>
+    </div>
+  </div>
 </template>
-
-<script>
-
-export default {
-  name: "ResourceExplain",
-  props: {
-    webpage: {
-            type: String,
-            default: null
-        },
-  }
-  ,
-  data() {
-    return {
-      tab: "2"
-    }
-  }
-}
-
-</script>

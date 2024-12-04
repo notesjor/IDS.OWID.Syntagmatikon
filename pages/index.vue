@@ -26,44 +26,6 @@
       </div>
     </v-col>
   </v-row>
-
-  <v-row>
-    
-      <v-col cols="4">
-        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
-          <div style="text-align: center;">
-            <v-icon style="font-size: 60px;">
-              mdi-cube-outline
-            </v-icon>
-            <div><strong>11</strong> Lexikalische Ressourcen</div>
-          </div>
-        </div>
-
-      </v-col>
-      <v-col cols="4">
-        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
-          <div style="text-align: center;">
-            <v-icon style="font-size: 60px;">
-              mdi-text-box-outline
-            </v-icon>
-            <div><strong>85792</strong> Stichwörter</div>
-          </div>
-        </div>
-      </v-col>
-
-      <v-col cols="4">
-        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
-          <div style="text-align: center;">
-            <v-icon style="font-size: 60px;">
-              mdi-database-search-outline
-            </v-icon>
-            <div><strong>4</strong> Facetten in der Suche</div>
-          </div>
-        </div>
-      </v-col>  
-      
-    </v-row>
-
 </template>
 
 <script>
@@ -242,11 +204,9 @@ export default {
             ]
           }
           ],
-        }, 
-        {
+        }, {
           tokens: ["BMW-Einkaufsvorstand", "Markus", "Duesmann", "hat", "überraschend", "gekündigt.", "Vorstandschef", "Harald", "Krüger", "sagte", "am", "Montagabend", "vor", "leitenden", "Mitarbeitern", "in", "München,", "Duesmann", "verlasse", "das", "Unternehmen", "«aus", "persönlichen", "Gründen»."],
-          annotations: [
-          {
+          annotations: [{
             ranges: [{
               from: 6,
               to: 7
@@ -274,7 +234,23 @@ export default {
               color: '#c5049b'
             }
             ]
-          }, {
+          },
+          {
+            ranges: [{
+              from: 11,
+              to: 12
+            }
+            ],
+            references: [{
+              source: 'Kompositamuster-Explorer',
+              article: 'Montagabend',
+              type: 'Kompositum',
+              href: 'https://www.owid.de/plus/komux/?lem=Montagabend',
+              color: '#0d65c2'
+            },
+            ]
+          },
+          {
             ranges: [{
               from: 10,
               to: 12
@@ -293,20 +269,6 @@ export default {
               href: 'http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=Montagabend',
               color: '#c5049b'
             }
-            ]
-          }, {
-            ranges: [{
-              from: 11,
-              to: 12
-            }
-            ],
-            references: [{
-              source: 'Kompositamuster-Explorer',
-              article: 'Montagabend',
-              type: 'Kompositum',
-              href: 'https://www.owid.de/plus/komux/?lem=Montagabend',
-              color: '#0d65c2'
-            },
             ]
           },
           {
@@ -384,7 +346,7 @@ export default {
           ],
         },
       ],
-      list_public: ["ZUWV", "WVBF", "PAROWB", "KWViD", "SPRW", "DTWW", "SpruchList", "Redeeinleiter", "PREPCON", "KoMuX"],
+      list_public: ["ZUWV", "DRIO", "WVBF", "PAROWB", "KWViD", "SPRW", "DTWW", "SpruchList", "Redeeinleiter", "PREPCON", "KoMuX"],
       list_todo: ["MAP", "PhrasKomp"],
     }
   }
