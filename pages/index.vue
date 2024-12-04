@@ -26,6 +26,44 @@
       </div>
     </v-col>
   </v-row>
+
+  <v-row>
+    
+      <v-col cols="4">
+        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
+          <div style="text-align: center;">
+            <v-icon style="font-size: 60px;">
+              mdi-cube-outline
+            </v-icon>
+            <div><strong>11</strong> Lexikalische Ressourcen</div>
+          </div>
+        </div>
+
+      </v-col>
+      <v-col cols="4">
+        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
+          <div style="text-align: center;">
+            <v-icon style="font-size: 60px;">
+              mdi-text-box-outline
+            </v-icon>
+            <div><strong>85792</strong> Stichwörter</div>
+          </div>
+        </div>
+      </v-col>
+
+      <v-col cols="4">
+        <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
+          <div style="text-align: center;">
+            <v-icon style="font-size: 60px;">
+              mdi-database-search-outline
+            </v-icon>
+            <div><strong>4</strong> Facetten in der Suche</div>
+          </div>
+        </div>
+      </v-col>  
+      
+    </v-row>
+
 </template>
 
 <script>
