@@ -40,7 +40,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       appName: "Syntagmatikon",
-      appDescription: "Eine korpusbasierte Plattform verfestigter Wortkombinationen und lexikalischer Muster im Deutschen.",
+      appDescription: "Eine korpusbasierte Plattform verfestigter Wortkombinationen und lexikalischer Muster im Deutschen",
 
       leftIconHref: "https://www.owid.de/plus/index.html",
       rightIconHref: "https://www.ids-mannheim.de/",

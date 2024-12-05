@@ -222,8 +222,7 @@ export default {
       <compare-item value="6" rkey="FesteWV">
         <p>
           In
-          <r rkey="FesteWV" /> in OWID, Rubrik „25
-          Musterartikel“,
+          <r rkey="FesteWV" /> in OWID, Rubrik „Musterartikel“,
           werden die Stichwörter nach Phrasenkategorie und Mehrwortkategorie (nach Fleischer 1997; Burger
           2015)
           klassifiziert.

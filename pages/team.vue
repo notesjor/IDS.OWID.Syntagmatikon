@@ -124,7 +124,8 @@
         <h3>Projekte und Arbeitsbereiche</h3>
 
         <p>Informationen zu beteiligten Projekten und Arbeitsbereichen finden Sie auf folgenden Webseiten:</p>
-        <p style="border-top: solid #C0C0C0 1px; padding-top: 10px">
+        <!-- <p style="border-top: solid #C0C0C0 1px; padding-top: 10px"> -->
+            <p style="padding-top: 10px">
             <NuxtLink to="https://www.ids-mannheim.de/lexik/syntagmatik-im-lexikon/">Projekt „Syntagmatik im
                 Lexikon“</NuxtLink>
                 <p style="margin-left:40px">
@@ -136,12 +137,12 @@
             <NuxtLink to="https://www.ids-mannheim.de/lexik/syntagmatik-im-lexikon/wortbildungsmuster/">
                 Argumentstrukturen</NuxtLink></p>
         </p>
-        <p style="border-top: solid #C0C0C0 1px; padding-top: 10px">
+        <p style="padding-top: 10px">
             <NuxtLink
                 to="https://www.ids-mannheim.de/lexik/pb-lexik-empirisch-digital/lexikologische-informationssysteme/">
                 Projekt „Lexikologische Informationssysteme“</NuxtLink>
         </p>
-        <p style="border-top: solid #C0C0C0 1px; padding-top: 10px">
+        <p style="padding-top: 10px">
             <NuxtLink to="https://www.ids-mannheim.de/lexik/redewiedergabe/">Projekt „Redewiedergabe“</NuxtLink>
             (abgeschlossen)
         </p>

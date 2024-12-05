@@ -6,11 +6,11 @@
       <p>Das am IDS beheimatete <a href="https://www.ids-mannheim.de/digspra/kl/projekte/korpora/">Deutsche
           Referenzkorpus (DeReKo)</a> ist die empirische Grundlage für nahezu alle
         Ressourcen des Syntagmatikons. Bei DeReKo handelt es sich um die
-        „weltweit größte Sammlung deutschsprachiger Korpora als empirische Basis
+        „[...] weltweit größte Sammlung deutschsprachiger Korpora als empirische Basis
         für die linguistische Forschung“ (57,6 Mrd. Wörter; Stand 09.01.2024).
         Den einzelnen Ressourcen liegen unterschiedliche nicht-annotierte und
         annotierte Teilkorpora zugrunde:</p>
-      <p>
+      <!-- <p>
         <r rkey="KoMuX" /> : <a href="https://grammis.ids-mannheim.de/korpusgrammatik/6615">KoGra
           Untersuchungskorpus</a> (Ausschnitt aus <a
           href="https://www.ids-mannheim.de/digspra/kl/projekte/korpora/">DeReKo)</a>
@@ -20,7 +20,8 @@
         <r rkey="Redeeinleiter" />: <a href="https://github.com/redewiedergabe/corpus">Redewiedergabe-Korpus</a>
       </p>
       <p>
-        <r rkey="PREPCON_ex" />: Tagged-T (DeReKo-Teilkorpus)
+        <r rkey="PREPCON_ex" />: <a
+          href="https://www2.ids-mannheim.de/cosmas2/projekt/referenz/archive.html">Tagged-T</a> (DeReKo-Teilkorpus)
       </p>
 
       <p>
@@ -28,10 +29,48 @@
           href="https://www.sketchengine.eu/estenten-spanish-corpus/">esTenTen18</a>;
         <a href="https://www.sketchengine.eu/sktenten-slovak-corpus/">skTenTen
           11</a>; Slowakisches Nationalkorpus <a href="https://korpus.sk/index_en.html">SNK</a>
-      </p>
+      </p> -->
+
+      <v-row>
+        <v-col cols="4">
+          <r rkey="KoMuX" />
+        </v-col>
+        <v-col><a href="https://grammis.ids-mannheim.de/korpusgrammatik/6615">KoGra
+            Untersuchungskorpus</a> (Ausschnitt aus <a
+            href="https://www.ids-mannheim.de/digspra/kl/projekte/korpora/">DeReKo)</a>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col cols="4">
+          <r rkey="Redeeinleiter" />
+        </v-col>
+        <v-col><a href="https://github.com/redewiedergabe/corpus">Redewiedergabe-Korpus</a></v-col>
+      </v-row>
+
+      <v-row>
+        <v-col cols="4">
+          <r rkey="PREPCON_ex" />
+        </v-col>
+        <v-col> <a href="https://www2.ids-mannheim.de/cosmas2/projekt/referenz/archive.html">Tagged-T</a>
+          (DeReKo-Teilkorpus)
+        </v-col>
+      </v-row>
+
+
+      <v-row>
+        <v-col cols="4">
+          <r rkey="PREPCON_kon" />
+        </v-col>
+        <v-col>Webkorpora <a href="https://www.sketchengine.eu/estenten-spanish-corpus/">esTenTen18</a> und
+          <a href="https://www.sketchengine.eu/sktenten-slovak-corpus/">skTenTen11</a>; Slowakisches Nationalkorpus <a href="https://korpus.sk/index_en.html">SNK</a></v-col>
+      </v-row>
+
+
 
       <p>Alle anderen Ressourcen basieren unterschiedlichen Ausgaben der
-        DeReKo-W-Archive.</p>
+        <a href="https://www.ids-mannheim.de/digspra/kl/projekte/korpora/releases">DeReKo-W-Archive</a>.
+      </p>
       <p>Für die Auswertung kamen quantitative Methoden wie Frequenzzählungen,
         iterative Suchen nach Textbelegen, statistische Kookkurrenzanalysen
         sowie Slot-Füller-Analysen zum Einsatz.
@@ -45,8 +84,7 @@
             wir aber auch die Ressourcen im Internet, seien es elektronische
             Wörterbücher wie Duden online oder dict.cc, automatische
             Übersetzungshilfen wie Google Übersetzer und DeepL oder Datenbanken mit
-            übersetzten Texten wie Linguee immer mehr mit Unterstützung der KI,
-            sondern ChatGPT.</p>
+            übersetzten Texten wie Linguee immer mehr mit Unterstützung der KI.</p>
           <p>Alle diese Quellen sind - vor allem, wenn man sie kombiniert -
             durchaus sehr nützlich. Was sie aber nicht befriedigend leisten, sind
             gesicherte Aussagen über Typikalität auf der einen Seite und über die

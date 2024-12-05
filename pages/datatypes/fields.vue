@@ -53,8 +53,7 @@ export default {
         description="Feste Wortverbindungen des Deutschen - Modul: Wortverbindungen mit Adjektiv">
         <p>
           Die Feldangaben in
-          <r rkey="FesteWV" /> (Untergruppe
-          "Adjektive")
+          <r rkey="FesteWV" /> (Rubrik "Wortverbindungen mit Adjektiven")
           fassen Einträge dieses OWID-Moduls zusammen, die eine
           verwandte Bedeutung haben, entweder mit einer gemeinsamen Komponente (z.B. <i>blind</i>) oder mit gänzlich
           unterschiedlichen Komponenten (z.B. <i>sich blind verstehen</i> – <i>geistige Verwandtschaft</i>).

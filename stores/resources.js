@@ -134,7 +134,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameLong:
             "SpruchList - Referenzinventar deutscher Sprichwörter und Sprüche",
           description:
-            "<b>SpruchList</b> ist eine korpusbasierte, durchsuch- und sortierbare Häufigkeitsliste von 650 Sprichwörtern, Sprüchen und festen Gebrauchssätzen des Deutschen – angereichert mit hinterlegten Suchanfragen, Kontextzeilen, Verlinkungen und Visualisierungen. Das  Referenzinventar enthält Sprichwörter wie <em>wer A sagt, muss auch B sagen</em> und andere feste Sätze, die Eingang in die Allgemeinsprache gefunden haben wie <em>klein, aber fein</em> oder <em>aus die Maus</em>.",
+            "<b>SpruchList</b> ist eine korpusbasierte, durchsuch- und sortierbare Häufigkeitsliste von 650 Sprichwörtern, Sprüchen und festen Gebrauchssätzen des Deutschen. Sie ist angereichert mit hinterlegten Suchanfragen, Kontextzeilen, Verlinkungen und Visualisierungen. Das  Referenzinventar enthält Sprichwörter wie <em>wer A sagt, muss auch B sagen</em> und andere feste Sätze, die Eingang in die Allgemeinsprache gefunden haben wie <em>klein, aber fein</em> oder <em>aus die Maus</em>.",
           img: "./img/sources/spruchlist.png",
           url: "http://uwv.ids-mannheim.de/spruchlist/",
           tags: [],
