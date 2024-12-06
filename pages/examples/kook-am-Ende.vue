@@ -8,7 +8,7 @@ import { useLayoutStore } from '~/stores/layout';
 export default {
     mounted() {
         const props = useLayoutStore();
-        props.title = 'Kookkurrenzprofile: Beispiel <em>am Ende</em>';
+        props.title = 'Kookkurrenzprofile: <em>am Ende</em>';
         props.parent = 'Fallbeispiele';
     },
 }
@@ -16,7 +16,7 @@ export default {
 
 <template>
     <div class="caption">Beispiel aus <r rkey="PREPCON_temp"/></div>
-    <v-carousel>
+    <v-carousel style="height:450px">
         <v-carousel-item><img src="/img/datatypes/kook/amEnde_kookzeilen.png" /></v-carousel-item>
         <v-carousel-item><img src="/img/datatypes/kook/Clusters_amEnde_1_1_KA_oFW_3.png" /></v-carousel-item>
     </v-carousel>

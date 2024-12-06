@@ -8,14 +8,14 @@ definePageMeta({
   <div style="max-width: var(--TXT-WIDTH); margin:auto">
     <h1>Ressourcentypen</h1>
     <p>Das <hi>Syntagmatikon</hi> vereint sehr unterschiedliche Ressourcentypen. Die Zuordnungen basieren auf Kriterien
-      wie Menge der aufbereiteten Daten, Grad der Vollständigkeit sowie Verhältnis von automatischer Datenaufbereitung;
-      händischer Bearbeitung und linguistisch-lexikografischer Beschreibung.</p>
+      wie Menge an aufbereiteten Daten, Grad der Vollständigkeit sowie Verhältnis von automatischer Datenaufbereitung;
+      manueller Bearbeitung und linguistisch-lexikografischer Beschreibung.</p>
     <p>Die aufgeführten Beispielressourcen sind jeweils die prototypischen Vertreter. Gleichzeitig gibt es zahlreiche
       Überschneidungen zwischen den Ressourcen: Eine Datenbank kann z.B. gleichzeitig als Inventar verstanden werden wie
       <r rkey='PREPCON_ex' /> oder
       <r rkey='KoMuX' />.
     </p>
-    <div class="caption">Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur
+    <div class="caption">Jedes Kästchen führt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur
       Charakteristik der
       einzelnen Ressourcen.</div>
   </div>
@@ -23,7 +23,7 @@ definePageMeta({
     <v-row>
       <v-col>
         <empty />
-        <headline :h="4">Ressourcentypen im Syntagmatikon</headline>
+        <headline :h="4">Ressourcentypen im <hi>Syntagmatikon</hi></headline>
         <div class="container nolink">
           <info-box title="Explorative Datenbanken" link="/resources/db_expl" :filter="['KoMuX', 'PREPCON_ex']"
             :color1="color1">

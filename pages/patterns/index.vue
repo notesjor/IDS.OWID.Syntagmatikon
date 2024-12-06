@@ -27,7 +27,7 @@ definePageMeta({
     <v-row>
       <v-col cols="12">
         <empty />
-        <headline :h="4">Muster im Syntagmatikon</headline>
+        <headline :h="4">Muster im <hi>Syntagmatikon</hi></headline>
 
         <div class="container">
           <info-box title="Direkter Zugang" :color1="color1" link="/patterns/direct" :filter="['MAP', 'WVBF']">

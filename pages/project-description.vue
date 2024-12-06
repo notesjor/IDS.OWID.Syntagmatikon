@@ -53,7 +53,7 @@
           </expand-me>
         </p>
 
-        <p>Eine Besonderheit des <span class="smallcaps">Syntagmatikons</span>
+        <p>Eine Besonderheit des <hi>Syntagmatikons</hi>
           stellen erklärende Texte mit unterschiedlichen Informationstiefen dar,
           die als Leitfaden eine Navigationsfunktion für das gesamte Portal
           erfüllen (Ressourcenkompass). Ergebnisse und Datenformate unserer

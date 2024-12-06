@@ -27,9 +27,9 @@ export default {
         Korpusbasis immer nur eine Stichprobe der Sprache darstellt. Aber diejenigen Kandidaten, die z.B. eine große
         Häufigkeit aufweisen, sind von gesicherter Gebräuchlichkeit.</p>
     <p>Bezüglich der Kandidatenauswahl sind zwei Wege zu unterscheiden:</p>
-    <p>Listeneinträge wurde aus dem Korpus
+    <p>Listeneinträge wurden aus dem Korpus
         ex&shy;tra&shy;hiert:</p>
-    <resources-list :filter="['PhrasKomp']" :showDesc="false"></resources-list>
+    <resources-list :filter="['PhrasKomp', 'PREPCON_temp']" :showDesc="false"></resources-list>
     <p>Existierende Listen wurden im Korpus überprüft:</p>
-    <resources-list :filter="['SpruchList', 'PREPCON_temp', 'DTWW']" :showDesc="false"></resources-list>
+    <resources-list :filter="['SpruchList',  'DTWW']" :showDesc="false"></resources-list>
 </template>

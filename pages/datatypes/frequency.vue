@@ -28,7 +28,7 @@ export default {
       -proportionen.
     </expand-me>
   </p>
-  <p>Im Syntagmatikon dienen Frequenzen nicht nur als empirische Basis, sondern werden selbst als
+  <p>Im <hi>Syntagmatikon</hi> dienen Frequenzen nicht nur als empirische Basis, sondern werden selbst als
     lexikografische Informationseinheiten angeboten:</p>
   <ul>
     <li>in Form von Frequenzlisten.</li>

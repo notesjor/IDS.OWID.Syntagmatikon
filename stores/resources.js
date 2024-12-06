@@ -154,7 +154,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           description:
             "<b>PhrasKomp</b> ist ein korpusbasiertes, durchsuchbares Inventar von 1.576 nominalen Phrasenkomposita des Deutschen.  Es hat den Anspruch, die Bildungsmöglichkeiten der Phrasenkomposition im Deutschen repräsentativ abzubilden. Aufgrund der enthaltenen manuellen Annotationen kann das Inventar zudem gezielt nach lexikalisch teilspezifizierten oder abstrakten Submustern der Phrasenkomposition durchsucht werden, und zwar in Abhängigkeit des Zweitgliedtyps.",
           img: "./img/sources/phraskomp.png",
-          url: "http://uwv.ids-mannheim.de/plus/phraskomp/",
+          url: "http://uwv.ids-mannheim.de/phraskomp/",
           tags: [],
           search_type: "Inventare und Sammlungen",
           search_functions: [
@@ -220,7 +220,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           description:
             "Das <b>Verlaufsformenwörterbuch</b> dokumentiert das Auftreten der drei Verlaufsformen <em>am</em>-Progressiv (<em>sie ist am Arbeiten</em>), Absentiv (<em>sie ist arbeiten</em>) und <em>beim</em>-Verlaufsform (<em>sie ist beim Arbeiten</em>). Dabei werden Verlaufsformen zu über 900 Verben mit mehr als 5000 Belegen dokumentiert, die nach verschiedenen Parametern gefiltert werden können, u.a. nach der Region des Belegs, nach dem Vorkommen eines direkten Objekts, eines inkorporierten Objekts oder eines Reflexivums.",
           img: "./img/sources/verlaufsformen.png",
-          url: "https://www.owid.de/service/stichwortlisten/progdb",
+          url: "https://www.owid.de/wb/progdb/start.html",
           tags: [],
           quest: "https://www.owid.de/artikel/{q}",
           search_type: "Deskriptive Datenbanken",
