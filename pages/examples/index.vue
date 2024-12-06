@@ -2,21 +2,14 @@
     <h1>Fallbeispiele</h1>
     <div class="nolink">
         <p>Fallbeispiele zur Ansicht:</p>
-        <ul class="bulb">
+        <ul class="bulb">            
             <li>
                 <NuxtLink to="/examples/kook-am-Ende">
                     Kookkurrenzprofile - Beispiel: <em>am Ende</em>
                 </NuxtLink>
             </li>
         </ul>
-        <p>Geplante Fallbeispiele:</p>
-        <ul>
-            <li>Belege, Bedeutung und Gebrauch bei Sprichwörtern</li>
-            <li>Lückenfüllertabellen - Beispiel: <em>aus ADJ Gründen</em></li>
-            <li>Lückenfüllertabellen kontrastiv Beispiel:<br /><em style="margin-left:25px;">mit X Genugtuung / con
-                    satisfacción</em></li>
-            <li>Partnerwörter kontrastiv - Beispiel: <em>nach Belieben</em></li>
-        </ul>
+        <p>Weitere Fallbeispiele sind in Vorbereitung.</p>
     </div>
 </template>
 

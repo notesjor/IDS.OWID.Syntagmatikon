@@ -317,7 +317,8 @@ div.relink a::before {
 
 div.caption {
   font-size: 0.8em;
-  color: #666666;
+  /*color: #666666;*/
+  color: black;
   margin-bottom: 20px;
   display: block;
 }

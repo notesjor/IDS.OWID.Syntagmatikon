@@ -26,6 +26,41 @@
       </div>
     </v-col>
   </v-row>
+
+  <v-row>
+      <v-col cols="4">
+      <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
+        <div style="text-align: center;">
+          <v-icon style="font-size: 60px;">
+            mdi-database-search-outline
+          </v-icon>
+          <div><strong>über 85.000</strong><br> Einträge</div>
+        </div>
+      </div>
+    </v-col>
+    <v-col cols="4">
+      <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
+        <div style="text-align: center;">
+          <v-icon style="font-size: 60px;">
+            mdi-text-box-multiple-outline
+          </v-icon>
+          <div><strong>über 100</strong><br> erkärende Texte und Screenshots</div>
+        </div>
+      </div>
+    </v-col>
+    <v-col cols="4">
+      <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
+        <div style="text-align: center;">
+          <v-icon style="font-size: 60px;">
+            mdi-filter-outline
+          </v-icon>
+          <div><strong>über 30</strong><br> Suchfilter</div>
+        </div>
+      </div>
+    </v-col>
+  </v-row> 
+
+
 </template>
 
 <script>

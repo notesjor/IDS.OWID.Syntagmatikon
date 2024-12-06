@@ -10,8 +10,7 @@ definePageMeta({
       Wort- und Ausdrucksarten
     </h1>
     <p>Die Beschreibungskandidaten bzw. Stichwörter im SYNTAGMATIKON sowie deren Komponenten basieren auf
-      unterschiedlichen Wort- und Ausdrucksarten. In dieser Rubrik werden jene näher beschrieben, die in mehr als einer
-      Ressource relevant sind.</p>
+      unterschiedlichen Wort- und Ausdrucksarten. In dieser Rubrik werden Beispiele für jene aufgeführt, die in mehr als einer Ressource relevant sind.</p>
     <p>Die Zuordnung der Ressourcen zu Wort- und Ausdrucksarten erfolgt gemäß folgender Kriterien:</p>
     <ul>
       <li>Hauptkomponenten, die diesen Eintrag zentral konstituieren</li>

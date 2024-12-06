@@ -162,16 +162,16 @@ export default {
                     <div style="width: 100%; margin-bottom: 20px;">
                         <ul>
                             <li>
-                                <m>billiger Jakob</m>
+                                <m>an die große Glocke hängen</m>
                             </li>
                             <li>
-                                <m>eigen Fleisch und Blut</m>
+                                <m>Dienst nach Vorschrift</m>
                             </li>
                             <li>
-                                <m>im eigenen Saft schmoren</m>
+                                <m>das Rad neu erfinden</m>
                             </li>
                             <li>
-                                <m>recht und billig</m>
+                                <m>Stich ins Wespennest</m>
                             </li>
                         </ul>
                     </div>
@@ -179,16 +179,16 @@ export default {
                     <div style="width: 100%;">
                         <ul>
                             <li>
-                                <m>sich blind verstehen</m>
+                                <m>blinder Alarm</m>
                             </li>
                             <li>
-                                <m>im Vollbesitz seiner geistigen Kräfte</m>
+                                <m>geistiger Vater</m>
                             </li>
                             <li>
-                                <m>gesund und munter</m>
+                                <m>gesunder Menschenverstand</m>
                             </li>
                             <li>
-                                <m>jeder halbwegs normale Mensch</m>
+                                <m>sanfter Druck</m>
                             </li>
                         </ul>
                     </div>

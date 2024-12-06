@@ -31,7 +31,7 @@
         <p>Je nach Zielsetzung und Vorgehen unterscheiden sich Daten- und
           Angabetypen in den Ressourcen. Es handelt sich um ein modulares
           Onlineformat, bei dem verfestigte Wortgruppen und lexikalisch geprägte
-          Mustern nicht nach einem einheitlichen Raster dargestellt werden,
+          Muster nicht nach einem einheitlichen Raster dargestellt werden,
           sondern dynamisch-flexibel in unterschiedlichen Beschreibungstiefen.
           <expand-me>Die Heterogenität der Formate spiegelt ebenso die
             wissenschaftshistorische Entwicklung des korpuslinguistischen Paradigmas
