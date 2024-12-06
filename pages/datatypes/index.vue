@@ -10,7 +10,7 @@ definePageMeta({
     <p>
       Die Rubrik dient dazu, Ressourcen im <hi>Syntagmatikon</hi> entsprechend der Charakteristik ihrer
       Informationstypen zu bündeln. Bei den primär automatisch-quantitativ erstellten Angaben werden die Korpusdaten
-      selbst zur lexikografischen Einträgen. Die manuell-qualitativ erarbeiteten Informationstypen basieren ebenso auf
+      selbst zu lexikografischen Einträgen. Die manuell-qualitativ erarbeiteten Informationstypen basieren ebenso auf
       Korpusanalysen. Hier finden sich unterschiedliche Kombinationen von systematisierten und interpretierten
       Korpusdaten mit verschiedenen Formen der narrativen Beschreibung.</p>
     <div class="caption">Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur

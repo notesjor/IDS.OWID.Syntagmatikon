@@ -5,7 +5,7 @@
       </h1>
       <p>Das am IDS beheimatete <a href="https://www.ids-mannheim.de/digspra/kl/projekte/korpora/">Deutsche
           Referenzkorpus (DeReKo)</a> ist die empirische Grundlage für nahezu alle
-        Ressourcen des Syntagmatikons. Bei DeReKo handelt es sich um die
+        Ressourcen des <hi>Syntagmatikons</hi>. Bei DeReKo handelt es sich um die
         „[...] weltweit größte Sammlung deutschsprachiger Korpora als empirische Basis
         für die linguistische Forschung“ (57,6 Mrd. Wörter; Stand 09.01.2024).
         Den einzelnen Ressourcen liegen unterschiedliche nicht-annotierte und
@@ -84,7 +84,7 @@
             wir aber auch die Ressourcen im Internet, seien es elektronische
             Wörterbücher wie Duden online oder dict.cc, automatische
             Übersetzungshilfen wie Google Übersetzer und DeepL oder Datenbanken mit
-            übersetzten Texten wie Linguee immer mehr mit Unterstützung der KI.</p>
+            übersetzten Texten wie Linguee. Eine immer zentralere Rolle spielt natürlich die KI.</p>
           <p>Alle diese Quellen sind - vor allem, wenn man sie kombiniert -
             durchaus sehr nützlich. Was sie aber nicht befriedigend leisten, sind
             gesicherte Aussagen über Typikalität auf der einen Seite und über die

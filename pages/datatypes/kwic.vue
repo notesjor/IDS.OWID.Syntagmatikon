@@ -25,7 +25,7 @@ export default {
       oder Negationswörtern verbunden. Bei Wortgruppen kann man bspw. erkennen, wie fest oder variabel sie
       sind.</expand-me>
   </p>
-  <p>Im Syntagmatikon dienen automatisch ermittelte KWICs nicht nur als empirische Basis, sondern werden in einigen
+  <p>Im <hi>Syntagmatikon</hi> dienen automatisch ermittelte KWICs nicht nur als empirische Basis, sondern werden in einigen
     Ressourcen selbst als lexikografische Informationseinheiten angeboten.
   </p>
 

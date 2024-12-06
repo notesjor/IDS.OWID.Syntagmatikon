@@ -19,7 +19,7 @@ export default {
         Wörterbuchartikeln angeboten, und zwar in <r rkey="PREPCON_kon"/> und <r rkey="FesteWV"/>.</p>
     <resources-list :filter="['PREPCON_kon', 'SPRW', 'FesteWV']" />
     <h2>Beispiele</h2>
-    <v-carousel>
+    <v-carousel style="height:400px">
         <v-carousel-item><img src="/img/patterns/component/component01.png" /></v-carousel-item>
         <v-carousel-item><img src="/img/patterns/component/component02.png" /></v-carousel-item>
         <v-carousel-item><img src="/img/patterns/component/component03.png" /></v-carousel-item>

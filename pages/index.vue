@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col>
-      <h1>Syntagmatikon</h1>
+      <h1><hi>Syntagmatikon</hi></h1>
       <p>
         Das korpusbasierte Portal <hi>Syntagmatikon</hi> bietet Informationen zum Gebrauch von sprachlichen
         Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten

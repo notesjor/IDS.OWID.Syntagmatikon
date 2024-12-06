@@ -27,7 +27,7 @@ export default {
     <li>Sortierung der Wortgruppen nach einer Komponente</li>
     <li>Verlinkung zu Einträgen der Komponenten in anderen Ressourcen</li>
   </ul>
-  <p>Im Syntagmatikon sind die Komponenten in der Regel mit den Einträgen im Online-Wörterbuch <NuxtLink
+  <p>Im <hi>Syntagmatikon</hi> sind die Komponenten in der Regel mit den Einträgen im Online-Wörterbuch <NuxtLink
       to="https://www.owid.de/docs/elex/start.jsp">elexiko</NuxtLink> bzw. mit externen Quellen verlinkt. </p>
 
 

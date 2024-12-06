@@ -12,7 +12,7 @@ definePageMeta({
           <h1>
             Ressourcenüberblick
           </h1>
-          <p>Das Syntagmatikon enthält aktuell 11 Ressourcen, die hier kurz vorgestellt werden. Klicken Sie auf eine
+          <p>Das <hi>Syntagmatikon</hi> enthält aktuell 11 Ressourcen, die hier kurz vorgestellt werden. Klicken Sie auf eine
             der Ressourcen, um diese direkt aufzurufen.</p>
         </div>
         <v-row>

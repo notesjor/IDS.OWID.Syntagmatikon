@@ -22,7 +22,7 @@ export default {
           <img src="/img/resources/01.png" alt="Explorative Datenbanken"
             style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
 
-          Die explorativen Datenbanken im Syntagmatikon bieten Informationen zu umfassenden Sprachausschnitten auf
+          Die explorativen Datenbanken im <hi>Syntagmatikon</hi> bieten Informationen zu umfassenden Sprachausschnitten auf
           der Basis von Korpusdaten (aktuell: Komposita und Präposition-Nomen-Verbindungen). Solche Datenbanken
           zeichnen sich dadurch aus, dass sie primär automatisch erstellt wurden und keine qualitativen Angaben
           enthalten (z.B. Bedeutungsbeschreibungen). Sie bieten einen strukturierten Zugang zu sprachlichen

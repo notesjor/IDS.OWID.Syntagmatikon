@@ -14,7 +14,7 @@ export default {
 }
 </script>
 <template>
-  <p>Die im Syntagmatikon verzeichneten Felder sind manuell zusammengestellte Gruppen von Syntagmen und/oder Monolexemen
+  <p>Die im <hi>Syntagmatikon</hi> verzeichneten Felder sind manuell zusammengestellte Gruppen von Syntagmen und/oder Monolexemen
     mit verwandten Gebrauchsmerkmalen. Gebrauchsverwandtschaften können sich u.a. beziehen auf: synonyme oder
     quasisynonyme (Teil-)Bedeutungen bzw. semantische Konzepte; pragmatische Merkmale wie ähnliche kommunikative
     Funktionen, Domänen oder Textsorten usw.</p>
