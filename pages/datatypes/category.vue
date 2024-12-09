@@ -120,7 +120,7 @@ export default {
           mit kategorialen
           Labels verstehen ist, die sowohl formale Eigenschaften (Ableitungstyp) als auch semantische
           Eigenschaften
-          (semantische Gruppe) abdecken. Diese Label wurden den insgesamt 1.576 Phrasenkomposita des
+          (semantische Gruppe) abdecken. Diese Label wurden den insgesamt 1.575 Phrasenkomposita des
           Inventars händisch
           zugeordnet:
         </p>
