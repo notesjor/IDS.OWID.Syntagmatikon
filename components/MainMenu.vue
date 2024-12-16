@@ -54,27 +54,14 @@
                 Informationstypen
             </main-menu-item>
             <main-menu-child parent="Informationstypen" />
-            <main-menu-item v-for="p in paths" :key="p" :useMobileView="useMobileView" :color2="color" :icon="icon"
-                :to="p.url" class="subMenuItem">
-                <span v-html="p.name" />
-            </main-menu-item>
             <main-menu-item :useMobileView="useMobileView" color2="#0DC513" icon="mdi-compass" to="/pos">
                 Wort- und Ausdrucksarten
             </main-menu-item>
             <main-menu-child parent="Wort- und Ausdrucksarten" />
-            <main-menu-item v-for="p in pos" :key="p" :useMobileView="useMobileView" :color2="color" :icon="icon"
-                :to="p.url" class="subMenuItem">
-                <span v-html="p.name" />
-            </main-menu-item>
             <main-menu-item :useMobileView="useMobileView" color2="#DB6900" icon="mdi-compass" to="/patterns">
                 Musterzugänge
             </main-menu-item>
             <main-menu-child parent="Musterzugänge" />
-            <main-menu-item v-for="p in paths" :key="p" :useMobileView="useMobileView" :color2="color" :icon="icon"
-                :to="p.url" class="subMenuItem">
-                <span v-html="p.name" />
-            </main-menu-item>
-
             <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-lightbulb-on" to="/examples">
                 Fallbeispiele
             </main-menu-item>
