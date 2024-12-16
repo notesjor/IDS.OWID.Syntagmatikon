@@ -152,7 +152,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameLong:
             "PhrasKomp - Korpusbasiertes Inventar nominaler Phrasenkomposita(muster) im Deutschen",
           description:
-            "<b>PhrasKomp</b> ist ein korpusbasiertes, durchsuchbares Inventar von 1.576 nominalen Phrasenkomposita des Deutschen.  Es hat den Anspruch, die Bildungsmöglichkeiten der Phrasenkomposition im Deutschen repräsentativ abzubilden. Aufgrund der enthaltenen manuellen Annotationen kann das Inventar zudem gezielt nach lexikalisch teilspezifizierten oder abstrakten Submustern der Phrasenkomposition durchsucht werden, und zwar in Abhängigkeit des Zweitgliedtyps.",
+            "<b>PhrasKomp</b> ist ein korpusbasiertes, durchsuchbares Inventar von 1.575 nominalen Phrasenkomposita des Deutschen.  Es hat den Anspruch, die Bildungsmöglichkeiten der Phrasenkomposition im Deutschen repräsentativ abzubilden. Aufgrund der enthaltenen manuellen Annotationen kann das Inventar zudem gezielt nach lexikalisch teilspezifizierten oder abstrakten Submustern der Phrasenkomposition durchsucht werden, und zwar in Abhängigkeit des Zweitgliedtyps.",
           img: "./img/sources/phraskomp.png",
           url: "http://uwv.ids-mannheim.de/phraskomp/",
           tags: [],

@@ -106,7 +106,7 @@ export default {
         <p>
           In
           <r rkey="PhrasKomp" />
-          wird zu jedem der 1.576 Phrasenkomposita des Inventars ein manuell ausgewählter Beleg angeführt,
+          wird zu jedem der 1.575 Phrasenkomposita des Inventars ein manuell ausgewählter Beleg angeführt,
           der die
           Verwendung und Bedeutung der jeweiligen Bildung prototypisch illustriert. Die Belege enthalten
           das jeweilige
