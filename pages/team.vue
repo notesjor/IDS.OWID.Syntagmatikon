@@ -97,10 +97,24 @@
             <NuxtLink to="https://www.ids-mannheim.de/lexik/redewiedergabe/">Projekt „Redewiedergabe“</NuxtLink>
             (abgeschlossen)
         </p>
-
-
-
     </div>
-
-
 </template>
+
+<script>
+export default {
+    setup() {
+        useHead({
+            htmlAttrs: {
+                lang: 'de'
+            },
+            title: 'Syntagmatikon - Beteiligte Projekte',
+            meta: [
+                {
+                    name: 'description',
+                    content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
+                }
+            ]
+        });
+    },
+}
+</script>

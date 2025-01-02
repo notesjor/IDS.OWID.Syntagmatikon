@@ -23,6 +23,10 @@ export default defineNuxtConfig({
     transpile: ['vuetify'],
   },
 
+  nitro: {
+    compressPublicAssets: true,
+  },
+
   vite: {
     define: {
       'process.env.DEBUG': false,

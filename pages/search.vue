@@ -2,6 +2,18 @@
 definePageMeta({
   layout: "full",
 })
+useHead({
+  htmlAttrs: {
+    lang: 'de'
+  },
+  title: 'Syntagmatikon - Stichwortsuche',
+  meta: [
+    {
+      name: 'description',
+      content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
+    }
+  ]
+});
 </script>
 
 <template>
@@ -40,7 +52,7 @@ definePageMeta({
         </div>
 
         <!-- Genauigkeit der Suche -->
-  
+
         <div style="margin: -75px 0px 50px 0px;">
           <span style="position: relative; top: 0px">Genauigkeit der Suche:</span>
           <span>
@@ -58,7 +70,7 @@ definePageMeta({
             </v-btn>
           </span>
         </div>
-  
+
 
         <!-- SUCH-Ergebnis -->
         <v-tabs-window v-model="search_header" style="margin-top: -40px;">
@@ -110,7 +122,8 @@ definePageMeta({
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <p style="font-size: 0.9em; margin-bottom: 10px; word-wrap: break-word;">Mit einer Eingabe im Suchfeld
-                ("Stichwort hier eingeben...") können alle Ressourcen im <hi>Syntagmatikon</hi> gleichzeitig durchsucht werden.
+                ("Stichwort hier eingeben...") können alle Ressourcen im <hi>Syntagmatikon</hi> gleichzeitig durchsucht
+                werden.
                 Wird kein Stichwort eingegeben, sieht man die Gesamtstichwortlisten. Der Klick auf einen Treffer führt
                 direkt zur entsprechenden Ressource.
               </p>
@@ -120,9 +133,10 @@ definePageMeta({
                 "alphabetisch" zeigt alle Treffer in alphabetischer Reihenfolge.
               </p>
               <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <b>Genauigkeit der Suche:</b> 
+                <b>Genauigkeit der Suche:</b>
                 Hier kann gesteuert werden, ob Treffer die eingegebene Zeichenfolge exakt
-                enthalten müssen oder eine gewisse Varianz erlaubt ist. <b>Achtung: Diese Funktion ist experimentell. "Unscharf" kann zu unerwarteten Treffern führen.</b>
+                enthalten müssen oder eine gewisse Varianz erlaubt ist. <b>Achtung: Diese Funktion ist experimentell.
+                  "Unscharf" kann zu unerwarteten Treffern führen.</b>
               </p>
               <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
                 <b>Ressourcen:</b> Hier können einzelne Ressourcen direkt aktiviert

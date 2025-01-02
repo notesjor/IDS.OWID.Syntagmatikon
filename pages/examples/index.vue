@@ -2,7 +2,7 @@
     <h1>Fallbeispiele</h1>
     <div class="nolink">
         <p>Fallbeispiele zur Ansicht:</p>
-        <ul class="bulb">            
+        <ul class="bulb">
             <li>
                 <NuxtLink to="/examples/kook-am-Ende">
                     Kookkurrenzprofile - Beispiel: <em>am Ende</em>
@@ -12,6 +12,25 @@
         <p>Weitere Fallbeispiele sind in Vorbereitung.</p>
     </div>
 </template>
+
+<script>
+export default {
+    setup() {
+        useHead({
+            htmlAttrs: {
+                lang: 'de'
+            },
+            title: 'Syntagmatikon - Fallbeispiele',
+            meta: [
+                {
+                    name: 'description',
+                    content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
+                }
+            ]
+        });
+    },
+}
+</script>
 
 <style scoped>
 ul.bulb li {

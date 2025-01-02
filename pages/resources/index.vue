@@ -2,6 +2,18 @@
 definePageMeta({
   layout: "full"
 })
+useHead({
+  htmlAttrs: {
+    lang: 'de'
+  },
+  title: 'Syntagmatikon - Ressourcentypen im Syntagmatikon',
+  meta: [
+    {
+      name: 'description',
+      content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
+    }
+  ]
+});
 </script>
 
 <template>
@@ -23,7 +35,8 @@ definePageMeta({
     <v-row>
       <v-col>
         <empty />
-        <headline :h="4">Ressourcentypen im <hi>Syntagmatikon</hi></headline>
+        <headline :h="4">Ressourcentypen im <hi>Syntagmatikon</hi>
+        </headline>
         <div class="container nolink">
           <info-box title="Explorative Datenbanken" link="/resources/db_expl" :filter="['KoMuX', 'PREPCON_ex']"
             :color1="color1">

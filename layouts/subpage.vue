@@ -84,15 +84,8 @@
   </v-app>
 </template>
 
-<script setup>
-useHead({
-  htmlAttrs: {
-    lang: 'de',
-  }
-})
-</script>
-
 <script>
+import { de } from 'vuetify/locale';
 import cache from '~/api/cache.js';
 
 import { useLayoutStore } from '~/stores/layout';
@@ -115,6 +108,22 @@ export default {
 
       layoutVars: null
     }
+  },
+
+  setup() {
+    const props = useLayoutStore();
+    useHead({
+      htmlAttrs: {
+        lang: 'de'
+      },
+      title: `Syntagmatikon - ${props.parent} - ${props.title}`,
+      meta: [
+        {
+          name: 'description',
+          content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
+        }
+      ]
+    });
   },
 
   mounted() {
