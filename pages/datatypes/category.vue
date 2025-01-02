@@ -31,7 +31,7 @@ export default {
     <compare :filter="['PREPCON_kon', 'KoMuX', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'WVBF']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
-          <img src="/img/datatypes/categories/categories_all.png" style="text-align: center;" />
+          <NuxtImg src="/img/datatypes/categories/categories_all.png" style="text-align: center;" />
         </div>
       </compare-item>
 
@@ -45,19 +45,19 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/categories/prepcon_kernbedeutung.png" alt="" />
+            <NuxtImg src="/img/datatypes/categories/prepcon_kernbedeutung.png" alt="" />
           </div>
           <div class="caption">
             Label für Kernbedeutung im Eintrag „mit Genugtuung – con satisfacción“
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/categories/prepcon_wortarten_nachBelieben.png" alt="" />
+            <NuxtImg src="/img/datatypes/categories/prepcon_wortarten_nachBelieben.png" alt="" />
           </div>
           <div class="caption">
             Label für Wortarten im Eintrag „nach Belieben X – a su gusto X“
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/categories/prepcon_wortarten_mitGenugtuung.png" alt="" />
+            <NuxtImg src="/img/datatypes/categories/prepcon_wortarten_mitGenugtuung.png" alt="" />
           </div>
           <div class="caption">
             Label für Wortarten und funktionale Merkmale im Eintrag „mit X Genugtuung – con X
@@ -90,7 +90,7 @@ export default {
           abdecken.</p>
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/categories/komux_thematische_cutout.png" alt="" />
+            <NuxtImg src="/img/datatypes/categories/komux_thematische_cutout.png" alt="" />
           </div>
           <div class="caption">
             Komposita, deren Erst- und Zweitglied auf der Ebene „thematischen Kategorie“ mit dem Label
@@ -98,7 +98,7 @@ export default {
           </div>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/categories/komux_thematische.png" alt="" />
+            <NuxtImg src="/img/datatypes/categories/komux_thematische.png" alt="" />
           </div>
           <div class="caption">
             Übersicht über alle kategorialen Label in KoMuX (am Beispiel eines Ausschnitts aus der
@@ -137,13 +137,13 @@ export default {
 
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/categories/phraskomp_deadj.png" alt="" />
+            <NuxtImg src="/img/datatypes/categories/phraskomp_deadj.png" alt="" />
           </div>
           <div class="caption">
             Ausschnitt aus der Treffermenge für Phrasenkomposita mit deadjektivischem Zweitglied
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/categories/phraskomp_personen.png" alt="" />
+            <NuxtImg src="/img/datatypes/categories/phraskomp_personen.png" alt="" />
           </div>
           <div class="caption">
             Ausschnitt aus der Treffermenge für Phrasenkomposita mit einer Personenbezeichnung im
@@ -167,7 +167,7 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/categories/rede_freq.png" width="70%" alt="" />
+            <NuxtImg src="/img/datatypes/categories/rede_freq.png" width="70%" alt="" />
           </div>
           <div class="caption">
             Die Attribute der Belege, in denen der Redeeinleiter „sagen“ belegt ist.
@@ -202,7 +202,7 @@ export default {
         </ul>
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/categories/verlaufsformen.png" alt="" />
+            <NuxtImg src="/img/datatypes/categories/verlaufsformen.png" alt="" />
           </div>
           <div class="caption">
             Kategoriale Zuordnung mit inkorporierten Objekt <em>Unkraut</em> (beim Unkrautjäten) im
@@ -210,7 +210,7 @@ export default {
           </div>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/categories/verlaufsformen_tabelle.png" alt="" />
+            <NuxtImg src="/img/datatypes/categories/verlaufsformen_tabelle.png" alt="" />
           </div>
           <div class="caption">
             Kategoriale Label mit Einstellung ‚Inkorporiertes Objekt (INK): ja‘ in durchsuch- und
@@ -230,7 +230,7 @@ export default {
         <template #explain>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/categories/festeWV_klassif.png" alt="" />
+            <NuxtImg src="/img/datatypes/categories/festeWV_klassif.png" alt="" />
           </div>
           <div class="caption">
             Kategoriale Label für den Mehrworteintrag „frank und frei“
@@ -249,13 +249,13 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/categories/wvGrund_Netz.png" alt="" />
+            <NuxtImg src="/img/datatypes/categories/wvGrund_Netz.png" alt="" />
           </div>
           <div class="caption">
             Label für Wortarten der X-Füller im Hauptknoten „aus GRUND“
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/categories/wvGrund_Fueller.png" alt="" />
+            <NuxtImg src="/img/datatypes/categories/wvGrund_Fueller.png" alt="" />
           </div>
           <div class="caption">
             Semantische Kategorisierung für Adjektiv-Füller im Subknoten „aus ADJ Gründen“

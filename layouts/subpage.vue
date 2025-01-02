@@ -1,5 +1,5 @@
 <template>
-  <img alt="Logo" src="/logo3.svg" style="max-height:65px; position:fixed; top:5px; left: 10px; z-index: 1000;" />
+  <NuxtImg alt="Logo" src="/logo3.svg" style="max-height:65px; position:fixed; top:5px; left: 10px; z-index: 1000;" />
   <v-app>
     <div class="d-print-none"
       style="z-index:100; max-height: 75px; min-height:75px; background-color: black; padding:7px 10px 5px 10px; display: grid; grid-template-columns: 1fr auto 250px; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right'; ">
@@ -15,7 +15,7 @@
 
       <div class="inline" style="grid-area: right;">
         <a :href="leftIconHref" target="_blank">
-          <img alt="Logo" src="/ids-logo.svg"
+          <NuxtImg alt="Logo" src="/ids-logo.svg"
             style="margin-left: auto; max-height:50px; margin-right:10px; margin-top:5px" />
         </a>
       </div>
@@ -57,7 +57,8 @@
     <v-footer
       style="z-index: 100; max-height: 80px; position: absolute; bottom: 0; width: 100%; background-color: black; padding-left:25px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right';">
       <div style="color:white; grid-area: left; margin-top: 20px; font-size: 12px;" v-if="!useMobileView">
-        <img alt="Logo" src="/owid-logo-dunkel.svg" style="max-height:15px; margin:-10px 0px 3px 0px" float="left" />
+        <NuxtImg alt="Logo" src="/owid-logo-dunkel.svg" style="max-height:15px; margin:-10px 0px 3px 0px"
+          float="left" />
         <div>
           <a style="color: #fff" :href="footerContact">Kontakt</a>
           &middot;
@@ -74,7 +75,7 @@
 
       <div style="text-align: right; grid-area: right">
         <a :href="rightIconHref" target="_blank">
-          <img alt="Logo" src="/logo_right.svg"
+          <NuxtImg alt="Logo" src="/logo_right.svg"
             style="max-height:65px; min-height: 45px; min-width: 200px; margin-left: auto; " />
         </a>
       </div>

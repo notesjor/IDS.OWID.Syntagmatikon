@@ -36,7 +36,28 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['@pinia/nuxt', "nuxt-link-checker"],
+  modules: ['@nuxtjs/robots', '@nuxtjs/sitemap', 'nuxt-schema-org', 'nuxt-og-image', '@pinia/nuxt', 'nuxt-link-checker', 'nuxt-vitalizer', '@nuxt/image'],
+
+  image: {
+    format: ['webp', 'jpg', 'png', 'jpeg'],
+    provider: 'ipx',
+    screens: {
+      xs: 320,
+      sm: 576,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    },
+    presets: {
+      default: {
+        modifiers: {
+          format: 'webp',
+          quality: 80,
+        },
+      },
+    },
+  },
 
   runtimeConfig: {
     public: {
@@ -52,14 +73,24 @@ export default defineNuxtConfig({
     }
   },
 
+  vitalizer: {
+    // Remove the render-blocking entry CSS
+    disableStylesheets: 'entry'
+  },
+
   app: {
-    baseURL: "/", //baseURL: "/syntagmatikon_2024-03/"
+    baseURL: "/",
     head: {
       htmlAttrs: {
         lang: 'de',
         dir: 'ltr'
       }
     }
+  },
+
+  site: {
+    url: "https://syntagmatikon.ids-mannheim.de",
+    name: "Syntagmatikon"
   },
 
   compatibilityDate: "2024-08-12",

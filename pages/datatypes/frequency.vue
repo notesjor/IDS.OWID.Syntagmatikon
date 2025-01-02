@@ -45,7 +45,7 @@ export default {
       :filter="['KoMuX', 'PhrasKomp', 'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'SpruchList', 'WVBF', 'Redeeinleiter']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
-          <img src="/img/datatypes/frequency/frequencies_all.png" style="text-align: center;" />
+          <NuxtImg src="/img/datatypes/frequency/frequencies_all.png" style="text-align: center;" />
         </div>
       </compare-item>
 
@@ -68,13 +68,13 @@ export default {
           Verteilung der Wortarten innerhalb eines bestimmten Suchmusters?)</p>
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/frequency/komux_hauptsuche.png" alt="" />
+            <NuxtImg src="/img/datatypes/frequency/komux_hauptsuche.png" alt="" />
           </div>
           <div class="caption">
             Ausschnitt aus der Treffermenge zum Suchmuster [[KOMPOSTIUM][KOMPOSITUM]]<sub>Kompositum</sub>
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/frequency/komux_konstituenten.png" alt="" />
+            <NuxtImg src="/img/datatypes/frequency/komux_konstituenten.png" alt="" />
           </div>
           <div class="caption">
             Ausschnitt aus der Konstituenten-Ansicht für das Suchmuster
@@ -82,7 +82,7 @@ export default {
           </div>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/frequency/komux_wortarten.png" alt="" />
+            <NuxtImg src="/img/datatypes/frequency/komux_wortarten.png" alt="" />
           </div>
           <div class="caption">
             Grafische Darstellung der Wortartenverteilung innerhalb des Suchmusters
@@ -108,14 +108,14 @@ export default {
         </ul>
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/frequency/phraskomp_part_01.png" alt="" />
+            <NuxtImg src="/img/datatypes/frequency/phraskomp_part_01.png" alt="" />
           </div>
           <div class="caption">
             Ausschnitt aus der Liste der Phrasenkomposita mit Frequenzangaben
           </div>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/frequency/phraskomp_gerede.png" alt="" />
+            <NuxtImg src="/img/datatypes/frequency/phraskomp_gerede.png" alt="" />
           </div>
           <div class="caption">
             Ausschnitt aus der Treffermenge für Phrasenkomposita mit dem Zweitglied <em>Gerede</em>
@@ -133,14 +133,14 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/frequency/prepe_part_01.png" alt="" />
+            <NuxtImg src="/img/datatypes/frequency/prepe_part_01.png" alt="" />
           </div>
           <div class="caption">
             Ausschnitt aus der Frequenzliste für Verbindungen mit Präposition <em>über</em> und nachgestellten Nomen
           </div>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/frequency/prepe_part_02.png" alt="" />
+            <NuxtImg src="/img/datatypes/frequency/prepe_part_02.png" alt="" />
           </div>
           <div class="caption">
             Ausschnitt aus der Frequenzliste für Verbindungen mit Nomen <em>Nacht</em> und vorangestellten
@@ -166,13 +166,13 @@ export default {
 
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/frequency/prept_part_01.png" alt="" />
+            <NuxtImg src="/img/datatypes/frequency/prept_part_01.png" alt="" />
           </div>
           <div class="caption">
             Frequenzangaben zu Suchanfragen im Artikel „über Nacht“:
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/frequency/prept_part_02.png" alt="" />
+            <NuxtImg src="/img/datatypes/frequency/prept_part_02.png" alt="" />
           </div>
           <div class="caption">
             Durch Klick auf die Frequenzen wird die dazugehörige Suchanfrage und Korpusinformation gezeigt.
@@ -182,14 +182,14 @@ export default {
 
           </p>
           <div class="exampleImg">
-            <img src="/img/datatypes/frequency/prept_part_03.png" alt="" />
+            <NuxtImg src="/img/datatypes/frequency/prept_part_03.png" alt="" />
           </div>
           <div class="caption">
             Ausschnitt aus den Frequenzangaben der Kategorie FEIERTAGE. Die Einträge sind mit
             <r rkey="PREPCON_ex" /> verlinkt.
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/frequency/prept_part_04.png" alt="" />
+            <NuxtImg src="/img/datatypes/frequency/prept_part_04.png" alt="" />
           </div>
           <div class="caption">
             Verlinkter Eintrag „Heiligabend“ in
@@ -212,14 +212,14 @@ export default {
 
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/frequency/prepk_part_01.png" alt="" />
+            <NuxtImg src="/img/datatypes/frequency/prepk_part_01.png" alt="" />
           </div>
           <div class="caption">
             Darstellung von Frequenzen und Suchanfragen für die Präposition-Nomen-Kombination "am Anfang" – "al
             principio" (Deutsch-Spanisch).
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/frequency/prepk_part_02.png" alt="" />
+            <NuxtImg src="/img/datatypes/frequency/prepk_part_02.png" alt="" />
           </div>
           <div class="caption">
             Durch Anklicken der Frequenzen wird die dazugehörige Suchanfrage und Korpusinformation gezeigt.
@@ -242,7 +242,7 @@ export default {
 
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/frequency/spruchlist_part_01.png" alt="" />
+            <NuxtImg src="/img/datatypes/frequency/spruchlist_part_01.png" alt="" />
           </div>
           <div class="caption">
             Ausschnitt aus der Frequenzliste von SpruchList mit eingeblendeten Suchanfragen für den Eintrag <em>Ende
@@ -265,7 +265,7 @@ export default {
         <template #explain>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/frequency/wvg_part_01.png" alt="" />
+            <NuxtImg src="/img/datatypes/frequency/wvg_part_01.png" alt="" />
           </div>
           <div class="caption">
             Frequenzangaben zum PN-Knoten "mit Grund" und zugrunde liegende Suchanfragen
@@ -275,7 +275,7 @@ export default {
 
           </p>
           <div class="exampleImg">
-            <img src="/img/datatypes/frequency/wvg_part_02.png" alt="" />
+            <NuxtImg src="/img/datatypes/frequency/wvg_part_02.png" alt="" />
           </div>
           <div class=caption>Frequenzangaben zum PN-Knoten "im Grunde" und zugrunde liegende Suchanfragen</div>
 
@@ -297,7 +297,7 @@ export default {
 
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/frequency/rede_freq.png" width="70%" alt="" />
+            <NuxtImg src="/img/datatypes/frequency/rede_freq.png" width="70%" alt="" />
           </div>
           <div class="caption">
             Die Frequenz des Redeeinleiters „sagen“ im Redewiedergabe-Korpus insgesamt und aufgespaltet nach

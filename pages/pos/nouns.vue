@@ -23,7 +23,7 @@ export default {
       :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'WVBF', 'DTWW']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
-          <img src="/img/pos/nouns/nouns_all.png" style="text-align: center;" />
+          <NuxtImg src="/img/pos/nouns/nouns_all.png" style="text-align: center;" />
         </div>
       </compare-item>
 

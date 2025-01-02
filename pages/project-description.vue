@@ -5,10 +5,18 @@
         Was ist das <hi>Syntagmatikon</hi>?
       </h1>
       <v-carousel style="height:400px; margin-top:30px">
-        <v-carousel-item> <img src="/img/project-description/pd_01.png"/></v-carousel-item>
-        <v-carousel-item> <img  src="/img/project-description/pd_02.png"/></v-carousel-item>
-        <v-carousel-item> <img  src="/img/project-description/pd_03.png"/></v-carousel-item>
-        <v-carousel-item> <img  src="/img/project-description/pd_04.png"/></v-carousel-item>
+        <v-carousel-item>
+          <NuxtImg src="/img/project-description/pd_01.png" />
+        </v-carousel-item>
+        <v-carousel-item>
+          <NuxtImg src="/img/project-description/pd_02.png" />
+        </v-carousel-item>
+        <v-carousel-item>
+          <NuxtImg src="/img/project-description/pd_03.png" />
+        </v-carousel-item>
+        <v-carousel-item>
+          <NuxtImg src="/img/project-description/pd_04.png" />
+        </v-carousel-item>
       </v-carousel>
     </v-col>
   </v-row>
@@ -45,7 +53,8 @@
               :filter="['Verlaufsformen', 'SPRW']"></resources-list-compact>) bis
             hin zu Datenbanken (<resources-list-compact
               :filter="['KoMuX', 'MAP', 'Redeeinleiter']"></resources-list-compact>);
-            neuartigen Präsentationsformaten (<r rkey="PREPCON"/>)
+            neuartigen Präsentationsformaten (
+            <r rkey="PREPCON" />)
             und Inventaren (<resources-list-compact :filter="['Spruchlist', 'PhrasKomp']"></resources-list-compact>)
             in
             der

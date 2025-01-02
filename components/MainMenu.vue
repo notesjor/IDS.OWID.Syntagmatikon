@@ -11,7 +11,7 @@
 
         <!-- HOME START -->
         <v-list density="compact" nav :style="menuStyleMobileFix" style="font-family: var(--FF-DISPLAY);">
-            <v-list-subheader v-if="!useMobileView">Übersicht</v-list-subheader>
+            <v-list-subheader v-if="!useMobileView" style="margin-top: 0px;">Übersicht</v-list-subheader>
             <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-home" to="/">
                 Startseite
             </main-menu-item>

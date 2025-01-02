@@ -22,7 +22,7 @@ export default {
         <compare :filter="['KoMuX', 'MAP', 'Redeeinleiter', 'Verlaufsformen']">
             <compare-item value="0">
                 <div style="text-align: center; width:100%">
-                    <img src="/img/pos/verbs/verbs_all.png" style="text-align: center;" />
+                    <NuxtImg src="/img/pos/verbs/verbs_all.png" style="text-align: center;" />
                 </div>
             </compare-item>
             <compare-item value="1" rkey="KoMuX">

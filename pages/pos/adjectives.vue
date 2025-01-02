@@ -22,7 +22,7 @@ export default {
     <compare :filter="['KoMuX', 'FesteWV']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
-          <img src="/img/pos/adjectives/adjectives_all.png" style="text-align: center;" />
+          <NuxtImg src="/img/pos/adjectives/adjectives_all.png" style="text-align: center;" />
         </div>
       </compare-item>
 

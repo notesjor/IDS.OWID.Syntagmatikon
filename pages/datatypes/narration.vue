@@ -34,7 +34,7 @@ export default {
     <compare :filter="['PREPCON_kon', 'MAP', 'SPRW', 'WVBF', 'FesteWV']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
-          <img src="/img/datatypes/narration/narration_all.png" style="text-align: center;" />
+          <NuxtImg src="/img/datatypes/narration/narration_all.png" style="text-align: center;" />
         </div>
       </compare-item>
 
@@ -48,14 +48,14 @@ export default {
         <template #explain>
           <div class="exampleHeadline">Rubrik: „Gebrauchsaspekte“</div>
           <div class="exampleImg">
-            <img src="/img/datatypes/narration/prepcon_kon_gebrauch.png" alt="" />
+            <NuxtImg src="/img/datatypes/narration/prepcon_kon_gebrauch.png" alt="" />
           </div>
           <div class="caption">
             Beschreibungstext zum Gebrauchsaspekt ‚Thematisierung von Schwierigkeiten‘ im Artikel „am
             Anfang – al principio“ (Konvergenz)
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/narration/prepcon_kon_gebrauch_div.png" alt="" />
+            <NuxtImg src="/img/datatypes/narration/prepcon_kon_gebrauch_div.png" alt="" />
           </div>
           <div class="caption">
             Beschreibungstext zum Gebrauchsaspekt ‚Rückblicke‘ im Artikel „am Anfang – al principio“
@@ -64,14 +64,14 @@ export default {
 
           <div class="exampleHeadline">Rubrik: „Lexikalische Erweiterungen“</div>
           <div class="exampleImg">
-            <img src="/img/datatypes/narration/prepcon_kon_muster_div.png" alt="" />
+            <NuxtImg src="/img/datatypes/narration/prepcon_kon_muster_div.png" alt="" />
           </div>
           <div class="caption">
             Kommentar zu lexikalischen Erweiterung <em>mit einer gewissen Genugtuung</em> des Muster
             <em>mit X Genugtuung</em> im Artikel „mit Genugtuung – con satisfacción“ (Divergenz)
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/narration/prepcon_kon_muster_konv.png" alt="" />
+            <NuxtImg src="/img/datatypes/narration/prepcon_kon_muster_konv.png" alt="" />
           </div>
           <div class="caption">
             Kommentar zu lexikalischen Erweiterung zum Muster <em>mit [(...) ADJ] Genugtuung - con
@@ -108,25 +108,25 @@ export default {
         <p>Des Weiteren gibt es Hintergrund- und Fachkommentare. </p><template #explain>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/narration/sprw_bedeutung.png" alt="" />
+            <NuxtImg src="/img/datatypes/narration/sprw_bedeutung.png" alt="" />
           </div>
           <div class="caption">
             Bedeutungsbeschreibung im Artikel „Alles hat ein Ende“
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/narration/sprw_gebrauch.png" alt="" />
+            <NuxtImg src="/img/datatypes/narration/sprw_gebrauch.png" alt="" />
           </div>
           <div class="caption">
             Beschreibungstext für ‚Gebrauchsbesonderheiten‘ im Artikel „Alles hat ein Ende“
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/narration/sprw_verwendung.png" alt="" />
+            <NuxtImg src="/img/datatypes/narration/sprw_verwendung.png" alt="" />
           </div>
           <div class="caption">
             Beschreibungstext für ‚Typische Verwendung im Text‘ im Artikel „Alles hat ein Ende“
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/narration/sprw_varianten.png" alt="" />
+            <NuxtImg src="/img/datatypes/narration/sprw_varianten.png" alt="" />
           </div>
           <div class="caption">
             Kommentartext für Formvariante <em>Alles hat ein Ende, nur die Wurst hat zwei</em> im
@@ -138,7 +138,7 @@ export default {
             hinterlegt.
           </p>
           <div class="exampleImg">
-            <img src="/img/datatypes/narration/sprw_geschichte.png" alt="" />
+            <NuxtImg src="/img/datatypes/narration/sprw_geschichte.png" alt="" />
           </div>
           <div class="caption">
             Beschreibungstext in ‚Geschichte‘ im Artikel „Geiz ist geil“
@@ -162,16 +162,16 @@ export default {
         </ul>
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/narration/wvGrund_bedeutung.png" alt="" />
+            <NuxtImg src="/img/datatypes/narration/wvGrund_bedeutung.png" alt="" />
           </div>
           <div class="caption">
             Allgemeine Beschreibung im Knoten „aus welchen Gründen auch immer“
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/narration/wvGrund_fueller1.png" alt="" />
+            <NuxtImg src="/img/datatypes/narration/wvGrund_fueller1.png" alt="" />
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/narration/wvGrund_fueller2.png" alt="" />
+            <NuxtImg src="/img/datatypes/narration/wvGrund_fueller2.png" alt="" />
           </div>
           <div class="caption">
             Ausgewählte Kommentare zu Lückenfüllern im Knoten „aus ADJ Gründen“
@@ -205,26 +205,26 @@ export default {
         <template #explain>
           <div class="exampleHeadline">Rubrik „Musterartikel“</div>
           <div class="exampleImg">
-            <img src="/img/datatypes/narration/festeWV_bedeutung.png" alt="" />
+            <NuxtImg src="/img/datatypes/narration/festeWV_bedeutung.png" alt="" />
           </div>
           <div class="caption">
             Bedeutungsbeschreibung im Artikel „reden, wie einem der Schnabel gewachsen ist“
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/narration/festeWV_wertung.png" alt="" />
+            <NuxtImg src="/img/datatypes/narration/festeWV_wertung.png" alt="" />
           </div>
           <div class="caption">
             Beschreibungstext für ‚Wertungsaspekt‘ im Artikel „billiger Jakob“
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/narration/festeWV_funktion.png" alt="" />
+            <NuxtImg src="/img/datatypes/narration/festeWV_funktion.png" alt="" />
           </div>
           <div class="caption">
             Beschreibungstext für ‚Funktion in der Kommunikation‘ im Artikel „an die große Glocke
             hängen“
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/narration/festeWV_grammatik.png" alt="" />
+            <NuxtImg src="/img/datatypes/narration/festeWV_grammatik.png" alt="" />
           </div>
           <div class="caption">
             Beschreibungstext für ‚Grammatische Besonderheiten‘
@@ -232,7 +232,7 @@ export default {
 
           <div class="exampleHeadline">Rubrik „Wortverbindungen mit Adjektiven“</div>
           <div class="exampleImg">
-            <img src="/img/datatypes/narration/festeWV_mitAdj_bedeutung.png" alt="" />
+            <NuxtImg src="/img/datatypes/narration/festeWV_mitAdj_bedeutung.png" alt="" />
           </div>
           <div class="caption">
             Gebrauchsbeschreibung im Artikel „jeder halbwegs normale Mensch“
