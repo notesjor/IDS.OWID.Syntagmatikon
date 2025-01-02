@@ -24,16 +24,16 @@ export default {
     <h2>Beispiele</h2>
     <v-carousel style="height:400px">
         <v-carousel-item>
-            <NuxtImg src="/img/patterns/component/component01.png" />
+            <img src="/img/patterns/component/component01.png" />
         </v-carousel-item>
         <v-carousel-item>
-            <NuxtImg src="/img/patterns/component/component02.png" />
+            <img src="/img/patterns/component/component02.png" />
         </v-carousel-item>
         <v-carousel-item>
-            <NuxtImg src="/img/patterns/component/component03.png" />
+            <img src="/img/patterns/component/component03.png" />
         </v-carousel-item>
         <v-carousel-item>
-            <NuxtImg src="/img/patterns/component/component04.png" />
+            <img src="/img/patterns/component/component04.png" />
         </v-carousel-item>
     </v-carousel>
 </template>

@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <NuxtImg src="/img/resources/05.png" alt="Pilot- und Einzelstudien"
+    <NuxtImage src="/img/resources/05.png" alt="Pilot- und Einzelstudien"
         style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
     <div>
         <p>Bei den Pilotstudien im <hi>Syntagmatikon</hi> handelt es sich um exemplarische Fallstudien zu ausgewählten

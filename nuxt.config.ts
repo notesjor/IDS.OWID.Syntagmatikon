@@ -39,24 +39,28 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/robots', '@nuxtjs/sitemap', 'nuxt-schema-org', 'nuxt-og-image', '@pinia/nuxt', 'nuxt-link-checker', 'nuxt-vitalizer', '@nuxt/image'],
 
   image: {
-    format: ['webp', 'jpg', 'png', 'jpeg'],
     provider: 'ipx',
     screens: {
-      xs: 320,
-      sm: 576,
-      md: 768,
-      lg: 1024,
-      xl: 1280,
-      xxl: 1536,
+      'xs': 320,
+      'sm': 640,
+      'md': 768,
+      'lg': 1024,
+      'xl': 1280,
+      'xxl': 1536,
+      '2xl': 1536
     },
     presets: {
-      default: {
+      ipxwebp: {
         modifiers: {
           format: 'webp',
-          quality: 80,
+          quality: 80
         },
       },
     },
+  },
+
+  routeRules: {
+    "/project-description": { prerender: true },
   },
 
   runtimeConfig: {

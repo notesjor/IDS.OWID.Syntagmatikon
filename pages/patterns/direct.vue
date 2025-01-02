@@ -22,13 +22,13 @@ export default {
 
   <v-carousel style="height:400px">
     <v-carousel-item>
-      <NuxtImg src="/img/patterns/direct/direct02.png" />
+      <img src="/img/patterns/direct/direct02.png" />
     </v-carousel-item>
     <v-carousel-item>
-      <NuxtImg src="/img/patterns/direct/direct03.png" />
+      <img src="/img/patterns/direct/direct03.png" />
     </v-carousel-item>
     <v-carousel-item>
-      <NuxtImg src="/img/patterns/direct/direct01.png" />
+      <img src="/img/patterns/direct/direct01.png" />
     </v-carousel-item>
   </v-carousel>
 

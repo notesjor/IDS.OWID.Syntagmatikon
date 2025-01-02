@@ -10,7 +10,7 @@
   - Hier liegen alle Assets, die 1-zu-1 in die Ausgabe kopiert werden.
   - Im Wurzelverzeichnis /public sollten nur allgemeine Assets liegen, z. B. ids-logo / favicon
   - In Unterordnern können Bilder abgelegt werden.
-  - Der Ordner public dient als Wurzelverzeichnis. Wenn also ein Bild im Ordner /public/img/picture.png liegt, dann kann dieses Bild mit /img/picture.png referenziert werden. <NuxtImg src="/img/picture.png"/>
+  - Der Ordner public dient als Wurzelverzeichnis. Wenn also ein Bild im Ordner /public/img/picture.png liegt, dann kann dieses Bild mit /img/picture.png referenziert werden. <NuxtImage src="/img/picture.png"/>
 - pages
   - Hier liegen alle Seiten.
   - Der Ordner pages dient als Wurzelverzeichnis. Wenn als eine Seite im Ordner /pages/guide/mypage.vue liegt, dann kann diese Seite mit /guide/mypage referenziert werden. <NuxtLink to="/guide/mypage">Klick mich</NuxtLink>

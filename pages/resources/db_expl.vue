@@ -19,7 +19,7 @@ export default {
     <v-col>
       <div>
         <p>
-          <NuxtImg src="/img/resources/01.png" alt="Explorative Datenbanken"
+          <NuxtImage src="/img/resources/01.png" alt="Explorative Datenbanken"
             style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
 
           Die explorativen Datenbanken im <hi>Syntagmatikon</hi> bieten Informationen zu umfassenden Sprachausschnitten

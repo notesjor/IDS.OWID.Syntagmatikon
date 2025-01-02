@@ -22,7 +22,7 @@ export default {
     <compare :filter="['KoMuX', 'SpruchList', 'PhrasKomp', 'SPRW']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
-          <NuxtImg src="/img/pos/sentences/sentences_all.png" style="text-align: center;" />
+          <NuxtImage src="/img/pos/sentences/sentences_all.png" style="text-align: center;" />
         </div>
       </compare-item>
 

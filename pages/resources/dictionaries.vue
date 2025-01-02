@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <NuxtImg src="/img/resources/04.png" alt="Wörterbücher" style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
+    <NuxtImage src="/img/resources/04.png" alt="Wörterbücher" style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
     <p>Online-Wörterbücher im <hi>Syntagmatikon</hi> beinhalten korpusbasierte Einträge im Hypertextformat mit
         lexikografisch verfassten Texten zu Bedeutungen, typischen Gebrauchsmerkmalen, Kontexten, Varianten und
         Abwandlungen, semantischen und pragmatischen Feldern und Verlinkungen angereichert mit Korpusbelegen und anderen

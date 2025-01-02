@@ -6,16 +6,16 @@
       </h1>
       <v-carousel style="height:400px; margin-top:30px">
         <v-carousel-item>
-          <NuxtImg src="/img/project-description/pd_01.png" />
+          <img src="/img/project-description/pd_01.png" />
         </v-carousel-item>
         <v-carousel-item>
-          <NuxtImg src="/img/project-description/pd_02.png" />
+          <img src="/img/project-description/pd_02.png" />
         </v-carousel-item>
         <v-carousel-item>
-          <NuxtImg src="/img/project-description/pd_03.png" />
+          <img src="/img/project-description/pd_03.png" />
         </v-carousel-item>
         <v-carousel-item>
-          <NuxtImg src="/img/project-description/pd_04.png" />
+          <img src="/img/project-description/pd_04.png" />
         </v-carousel-item>
       </v-carousel>
     </v-col>

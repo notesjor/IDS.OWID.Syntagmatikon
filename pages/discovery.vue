@@ -34,9 +34,7 @@ definePageMeta({
                 </v-card-title>
                 <v-card-text>
                   <a :href="x.url" target="_blank">
-                    <NuxtImg v-if="x.img != undefined" :src="x.img"
-                      style="width: 100%; height: auto; margin-bottom: 10px;" />
-                    <NuxtImg v-else src="/dummy/resource.png" style="width: 100%; height: auto; margin-bottom: 10px;" />
+                    <img :src="x.img" style="width: 100%; height: auto; margin-bottom: 10px;" />
                     <div style="text-align: justify; font-weight: 400" v-html="x.description">
                     </div>
                   </a>

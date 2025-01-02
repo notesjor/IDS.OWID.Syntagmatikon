@@ -27,7 +27,7 @@ export default {
     <compare :filter="['PREPCON_kon', 'DTWW']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
-          <NuxtImg src="/img/datatypes/equivalence/equivalence_all.png" style="text-align: center;" />
+          <NuxtImage src="/img/datatypes/equivalence/equivalence_all.png" style="text-align: center;" />
         </div>
       </compare-item>
 
@@ -43,13 +43,13 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImg src="/img/datatypes/equivalence/prepcon_kon_spanisch.png" alt="" />
+            <NuxtImage src="/img/datatypes/equivalence/prepcon_kon_spanisch.png" alt="" />
           </div>
           <div class="caption">
             Äquivalenzpaar Deutsch – Spanisch im Artikel „am Anfang – al principio“
           </div>
           <div class="exampleImg">
-            <NuxtImg src="/img/datatypes/equivalence/prepcon_kon_slowakisch.png" alt="" />
+            <NuxtImage src="/img/datatypes/equivalence/prepcon_kon_slowakisch.png" alt="" />
           </div>
           <div class="caption">
             Äquivalenzpaar Deutsch – Slowakisch im Artikel „am Anfang – na začiatku“
@@ -67,7 +67,7 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImg src="/img/datatypes/equivalence/dtww.png" alt="" />
+            <NuxtImage src="/img/datatypes/equivalence/dtww.png" alt="" />
           </div>
           <div class="caption">
             Ausschnitt aus der Buchstabenstrecke A
