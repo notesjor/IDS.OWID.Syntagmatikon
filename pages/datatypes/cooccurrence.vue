@@ -36,7 +36,8 @@ export default {
     <compare :filter="['PREPCON_temp', 'PREPCON_kon', 'WVBF']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
-          <NuxtImage src="/img/datatypes/cooccurrence/cooccurrence_all.png" style="text-align: center;" />
+          <NuxtImage src="/img/datatypes/cooccurrence/cooccurrence_all.png" style="text-align: center;"
+            alt="Beispielgrafik 1" />
         </div>
       </compare-item>
 
@@ -51,19 +52,19 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/cooccurrence/prepcon_temp_wordcloud.png" alt="" />
+            <NuxtImage src="/img/datatypes/cooccurrence/prepcon_temp_wordcloud.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Wolkendarstellung von Kookkurrenzen im Artikel „am Ende“
           </div>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/cooccurrence/prepcon_temp_kook.png" alt="" />
+            <NuxtImage src="/img/datatypes/cooccurrence/prepcon_temp_kook.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
             Ausschnitt aus Kookkurrenzliste im Artikel „am Ende“
           </div>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/cooccurrence/prepcon_temp_kwics.png" alt="" />
+            <NuxtImage src="/img/datatypes/cooccurrence/prepcon_temp_kwics.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
             KWIC-Cluster im Artikel „am Ende“
@@ -86,19 +87,19 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/cooccurrence/prepcon_kon_wolken.png" alt="" />
+            <NuxtImage src="/img/datatypes/cooccurrence/prepcon_kon_wolken.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Wolkendarstellung von Kookkurrenzen in den Artikeln „nach Belieben“ und „a su gusto“
           </div>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/cooccurrence/prepcon_kon_kook_deutsch.png" alt="" />
+            <NuxtImage src="/img/datatypes/cooccurrence/prepcon_kon_kook_deutsch.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
             Ausschnitt aus Kookkurrenzliste im Artikel „nach Belieben“
           </div>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/cooccurrence/prepcon_kon_kook_spanisch.png" alt="" />
+            <NuxtImage src="/img/datatypes/cooccurrence/prepcon_kon_kook_spanisch.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
             Ausschnitt aus Kookkurrenzliste im Artikel „a su gusto“
@@ -120,7 +121,7 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/cooccurrence/wvfeld_eigentlich.png" alt="" />
+            <NuxtImage src="/img/datatypes/cooccurrence/wvfeld_eigentlich.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Ausschitt aus dem Kookkurrenzprofil von <em>eigentlich</em> im WV-Feld-Knoten „im tiefsten

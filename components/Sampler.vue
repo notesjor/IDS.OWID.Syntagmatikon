@@ -39,9 +39,9 @@
             </v-tabs-window-item>
           </v-tabs-window>
           <v-btn density="compact" variant="text" @click="tabPrev" icon="mdi-arrow-left-bold-box-outline"
-            class="myBtnPrev"></v-btn>
+            class="myBtnPrev" aria-label="Vorheriges Beispiel"></v-btn>
           <v-btn density="compact" variant="text" @click="tabNext" icon="mdi-arrow-right-bold-box-outline"
-            class="myBtnNext"></v-btn>
+            class="myBtnNext" aria-label="Nächstes Beispiel"></v-btn>
         </div>
       </v-col>
     </v-row>

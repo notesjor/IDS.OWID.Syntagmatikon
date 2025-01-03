@@ -24,16 +24,16 @@ export default {
     <h2>Beispiele</h2>
     <v-carousel style="height:400px">
         <v-carousel-item>
-            <img src="/img/patterns/component/component01.png" />
+            <img src="/img/patterns/component/component01.png" alt="Beispiel 1 für Lexikografische Angaben" />
         </v-carousel-item>
         <v-carousel-item>
-            <img src="/img/patterns/component/component02.png" />
+            <img src="/img/patterns/component/component02.png" alt="Beispiel 2 für Lexikografische Angaben" />
         </v-carousel-item>
         <v-carousel-item>
-            <img src="/img/patterns/component/component03.png" />
+            <img src="/img/patterns/component/component03.png" alt="Beispiel 3 für Lexikografische Angaben" />
         </v-carousel-item>
         <v-carousel-item>
-            <img src="/img/patterns/component/component04.png" />
+            <img src="/img/patterns/component/component04.png" alt="Beispiel 4 für Lexikografische Angaben" />
         </v-carousel-item>
     </v-carousel>
 </template>

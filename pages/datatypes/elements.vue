@@ -38,7 +38,8 @@ export default {
     <compare :filter="['PREPCON_temp', 'PREPCON_kon', 'FesteWV', 'SPRW']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
-          <NuxtImage src="/img/datatypes/elements/elements_all.png" style="text-align: center;" />
+          <NuxtImage src="/img/datatypes/elements/elements_all.png" style="text-align: center;"
+            alt="Beispielgrafik 1" />
         </div>
       </compare-item>
 
@@ -51,7 +52,7 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/prepcon_temp_combi.png" alt="" />
+            <NuxtImage src="/img/datatypes/elements/prepcon_temp_combi.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Komponentenangabe im Eintrag „am Ende“ (Rubrik: „Kurzartikel“) mit Verlinkung zu elexiko-Artikel „Ende“
@@ -73,20 +74,20 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/prepcon_kon_deutsch_combi.png" alt="" />
+            <NuxtImage src="/img/datatypes/elements/prepcon_kon_deutsch_combi.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Komponentenangabe im Eintrag „am Anfang“ mit Verlinkung zum elexiko-Artikel „Anfang“
           </div>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/prepcon_kon_spanisch_combi.png" alt="" />
+            <NuxtImage src="/img/datatypes/elements/prepcon_kon_spanisch_combi.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
             Komponentenangabe im Eintrag „al principio“ mit Verlinkung zum Eintrag „principio“ im <em>Diccionario de
               la lengua española</em>
           </div>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/prepcon_kon_slowakisch_combi.png" alt="" />
+            <NuxtImage src="/img/datatypes/elements/prepcon_kon_slowakisch_combi.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
             Komponentenangabe im Eintrag „na začiatku“ mit Verlinkung zu den Einträgen für „začiatok“ im
@@ -106,14 +107,14 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/festeWV_Angst_combi.png" alt="" />
+            <NuxtImage src="/img/datatypes/elements/festeWV_Angst_combi.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Komponentenangabe im Artikel „Angst vor der eigenen Courage“ (Rubrik „Musterartikel“) mit Verlinkung zum
             <em>elexiko</em>-Artikel „Angst“
           </div>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/festeWV_normal_combi.png" alt="" />
+            <NuxtImage src="/img/datatypes/elements/festeWV_normal_combi.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
             Komponentenangabe im Artikel „der ganz normale Wahnsinn“ (Rubrik „Wortverbindungen mit Adjektiven“) mit
@@ -136,7 +137,7 @@ export default {
         <template #explain>
 
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/SPRW_machen_fenster.png" alt="" />
+            <NuxtImage src="/img/datatypes/elements/SPRW_machen_fenster.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Komponentenangabe im Artikel „Der Ton macht die Musik“ mit Liste der Komponente <em>machen</em>

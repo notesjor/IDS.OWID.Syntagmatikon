@@ -4,7 +4,7 @@
             <v-card-title>
                 <NuxtLink :to="link">
                     <div style="position: relative; justify-content: center;">
-                        <NuxtImage :src="img"
+                        <NuxtImage :src="img" alt="Darstellung der Ressource"
                             style="margin: -10px -15px 0px -15px; flex-shrink: 0; min-width: 350px;" />
                         <div
                             style="position: absolute; bottom: 0; left: 0px; background-color: rgba(255, 255, 255, 0.85); width: 110%; padding: 5px">

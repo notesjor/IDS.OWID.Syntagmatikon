@@ -1,7 +1,7 @@
 <template>
     <span>
         <v-btn density="compact" size="small" variant=tonal icon="mdi-plus" @click="toggleDiv"
-            style="display: inline-block;"></v-btn>
+            style="display: inline-block;" aria-label="Zeige zusätzlichen Text an"></v-btn>
     </span>
     <div class="more" v-show="isVisible">
         <slot></slot>

@@ -46,7 +46,8 @@ useHead({
                 </v-card-title>
                 <v-card-text>
                   <a :href="x.url" target="_blank">
-                    <img :src="x.img" style="width: 100%; height: auto; margin-bottom: 10px;" />
+                    <img :src="x.img" style="width: 100%; height: auto; margin-bottom: 10px;"
+                      alt="Abbildung der Ressource" />
                     <div style="text-align: justify; font-weight: 400" v-html="x.description">
                     </div>
                   </a>

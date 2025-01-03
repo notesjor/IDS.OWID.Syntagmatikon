@@ -35,7 +35,8 @@ export default {
     <compare :filter="['PREPCON_temp', 'PREPCON_kon', 'WVBF']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
-          <NuxtImage src="/img/datatypes/patterntables/patterntables_all.png" style="text-align: center;" />
+          <NuxtImage src="/img/datatypes/patterntables/patterntables_all.png" style="text-align: center;"
+            alt="Beispielgrafik 1" />
         </div>
       </compare-item>
 
@@ -49,7 +50,7 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/patterntables/prepcon_temp_amXEnde_window.png" alt="" />
+            <NuxtImage src="/img/datatypes/patterntables/prepcon_temp_amXEnde_window.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Ausschnitt aus der Lückenfüllertabelle <em>am</em> X <em>Ende</em> im Artikel „am Ende“
@@ -57,7 +58,7 @@ export default {
           </div>
 
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/patterntables/prepcon_temp_amEndeX_window.png" alt="" />
+            <NuxtImage src="/img/datatypes/patterntables/prepcon_temp_amEndeX_window.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
             Ausschnitt aus der Lückenfüllertabelle <em>am Ende</em> X im Artikel „am Ende“ (Rubrik
@@ -82,7 +83,7 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/patterntables/prepcon_kon_deutsch.png" alt="" />
+            <NuxtImage src="/img/datatypes/patterntables/prepcon_kon_deutsch.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Ausschnitt aus der Lückenfüllertabelle des Musters <em>mit</em> X <em>Genugtuung</em> im
@@ -90,7 +91,7 @@ export default {
           </div>
 
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/patterntables/prepcon_kon_spanisch.png" alt="" />
+            <NuxtImage src="/img/datatypes/patterntables/prepcon_kon_spanisch.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
             Ausschnitt aus der Lückenfüllertabelle des Musters <em>con</em> X <em>satisfacción</em> im
@@ -110,7 +111,7 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/patterntables/wvGrund_kontext.png" alt="" />
+            <NuxtImage src="/img/datatypes/patterntables/wvGrund_kontext.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Ausschnitt aus der Lückenfüllertabelle des Musters <em>auf Grund von</em> SUB im Knoten „auf

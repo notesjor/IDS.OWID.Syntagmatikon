@@ -21,19 +21,19 @@ export default {
   <h2>Beispiele</h2>
   <v-carousel style="height:400px">
     <v-carousel-item>
-      <img src="/img/patterns/dynamic/dynamic01.png" />
+      <img src="/img/patterns/dynamic/dynamic01.png" alt="Beispiel 1 für dynamische Erschließung" />
     </v-carousel-item>
     <v-carousel-item>
-      <img src="/img/patterns/dynamic/dynamic02.png" />
+      <img src="/img/patterns/dynamic/dynamic02.png" alt="Beispiel 2 für dynamische Erschließung" />
     </v-carousel-item>
     <v-carousel-item>
-      <img src="/img/patterns/dynamic/dynamic03.png" />
+      <img src="/img/patterns/dynamic/dynamic03.png" alt="Beispiel 3 für dynamische Erschließung" />
     </v-carousel-item>
     <v-carousel-item>
-      <img src="/img/patterns/dynamic/dynamic04.png" />
+      <img src="/img/patterns/dynamic/dynamic04.png" alt="Beispiel 4 für dynamische Erschließung" />
     </v-carousel-item>
     <v-carousel-item>
-      <img src="/img/patterns/dynamic/dynamic05.png" />
+      <img src="/img/patterns/dynamic/dynamic05.png" alt="Beispiel 5 für dynamische Erschließung" />
     </v-carousel-item>
   </v-carousel>
 </template>

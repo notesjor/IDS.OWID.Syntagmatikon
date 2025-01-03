@@ -20,10 +20,10 @@ export default {
     </div>
     <v-carousel style="height:450px">
         <v-carousel-item>
-            <img src="/img/datatypes/kook/amEnde_kookzeilen.png" />
+            <img src="/img/datatypes/kook/amEnde_kookzeilen.png" alt="Beispiel 1 für Kookkurrenzprofile" />
         </v-carousel-item>
         <v-carousel-item>
-            <img src="/img/datatypes/kook/Clusters_amEnde_1_1_KA_oFW_3.png" />
+            <img src="/img/datatypes/kook/Clusters_amEnde_1_1_KA_oFW_3.png" alt="Beispiel 2 für Kookkurrenzprofile" />
         </v-carousel-item>
     </v-carousel>
 

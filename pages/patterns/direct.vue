@@ -22,13 +22,13 @@ export default {
 
   <v-carousel style="height:400px">
     <v-carousel-item>
-      <img src="/img/patterns/direct/direct02.png" />
+      <img src="/img/patterns/direct/direct02.png" alt="Beispiel 1 für direkten Musterzugang" />
     </v-carousel-item>
     <v-carousel-item>
-      <img src="/img/patterns/direct/direct03.png" />
+      <img src="/img/patterns/direct/direct03.png" alt="Beispiel 2 für direkten Musterzugang" />
     </v-carousel-item>
     <v-carousel-item>
-      <img src="/img/patterns/direct/direct01.png" />
+      <img src="/img/patterns/direct/direct01.png" alt="Beispiel 3 für direkten Musterzugang" />
     </v-carousel-item>
   </v-carousel>
 
