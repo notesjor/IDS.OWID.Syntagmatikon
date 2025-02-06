@@ -116,7 +116,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           description:
             "<b>MAP</b> ist eine empirisch fundierte Onlineressource, die sich als Gegenstück zu traditionellen Valenzlexika versteht („Musterbank“). Behandelt werden Verbindungen von Verben mit vermeintlich bedeutungsleeren Präpositionen. MAP rekonstruiert die verblasste semantische Motivation dieser Muster und dokumentiert ihre produktive Ausstrahlung sowie ihre Relationen zu anderen Mustern in textlichen Beschreibungen und Visualisierungen.",
           img: "./img/sources/map.png",
-          url: "http://lexik02.ids-mannheim.de/vas-v7/",
+          url: "https://www.owid.de/plus/map/",
           tags: [],
           search_type: "Deskriptive Datenbanken",
           search_functions: [
