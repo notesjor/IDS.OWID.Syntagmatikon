@@ -1,7 +1,9 @@
 <template>
   <v-row>
     <v-col>
-      <h1><hi>Syntagmatikon</hi></h1>
+      <h1>
+        <hi>Syntagmatikon</hi>
+      </h1>
       <p>
         Das korpusbasierte Portal <hi>Syntagmatikon</hi> bietet Informationen zum Gebrauch von sprachlichen
         Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten
@@ -28,8 +30,9 @@
   </v-row>
 
   <v-row>
-      <v-col cols="4">
-      <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
+    <v-col cols="4">
+      <div
+        style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
         <div style="text-align: center;">
           <v-icon style="font-size: 60px;">
             mdi-database-search-outline
@@ -39,7 +42,8 @@
       </div>
     </v-col>
     <v-col cols="4">
-      <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
+      <div
+        style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
         <div style="text-align: center;">
           <v-icon style="font-size: 60px;">
             mdi-text-box-multiple-outline
@@ -49,7 +53,8 @@
       </div>
     </v-col>
     <v-col cols="4">
-      <div style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
+      <div
+        style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); margin-top:10px">
         <div style="text-align: center;">
           <v-icon style="font-size: 60px;">
             mdi-filter-outline
@@ -58,7 +63,7 @@
         </div>
       </div>
     </v-col>
-  </v-row> 
+  </v-row>
 
 
 </template>
@@ -384,6 +389,21 @@ export default {
       list_public: ["ZUWV", "DRIO", "WVBF", "PAROWB", "KWViD", "SPRW", "DTWW", "SpruchList", "Redeeinleiter", "PREPCON", "KoMuX"],
       list_todo: ["MAP", "PhrasKomp"],
     }
-  }
+  },
+
+  setup() {
+    useHead({
+      htmlAttrs: {
+        lang: 'de'
+      },
+      title: 'Syntagmatikon',
+      meta: [
+        {
+          name: 'description',
+          content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
+        }
+      ]
+    });
+  },
 }
 </script>

@@ -25,7 +25,8 @@ export default {
       oder Negationswörtern verbunden. Bei Wortgruppen kann man bspw. erkennen, wie fest oder variabel sie
       sind.</expand-me>
   </p>
-  <p>Im <hi>Syntagmatikon</hi> dienen automatisch ermittelte KWICs nicht nur als empirische Basis, sondern werden in einigen
+  <p>Im <hi>Syntagmatikon</hi> dienen automatisch ermittelte KWICs nicht nur als empirische Basis, sondern werden in
+    einigen
     Ressourcen selbst als lexikografische Informationseinheiten angeboten.
   </p>
 
@@ -36,7 +37,7 @@ export default {
     <compare :filter="['PREPCON_ex', 'PREPCON_temp', 'SpruchList', 'SPRW', 'WVBF']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
-          <img src="/img/datatypes/kwics/kwics_all.png" style="text-align: center;" />
+          <NuxtImage src="/img/datatypes/kwics/kwics_all.png" style="text-align: center;" alt="Beispielgrafik 1" />
         </div>
       </compare-item>
 
@@ -49,7 +50,7 @@ export default {
         <template #explain>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/kwics/prepcon_ex_amEnde.png" alt="" />
+            <NuxtImage src="/img/datatypes/kwics/prepcon_ex_amEnde.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Ausschnitt aus KWIC-Anzeige in Präpositionentabelle „am“ (nominaler Partner <em>Ende</em>)
@@ -82,7 +83,7 @@ export default {
         <template #explain>
           <div class="exampleHeadline">Rubrik „Kurzartikel“</div>
           <div class="exampleImg">
-            <img src="/img/datatypes/kwics/prepcon_temp_ohneUnterlass.png" alt="" />
+            <NuxtImage src="/img/datatypes/kwics/prepcon_temp_ohneUnterlass.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Ausschnitt aus KWIC-Anzeige (Kleinschreibung) im Artikel „ohne Unterlass“ (Rubrik „Kurzartikel“:
@@ -90,7 +91,7 @@ export default {
           </div>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/kwics/prepcon_temp_ohneUnterlass_redet.png" alt="" />
+            <NuxtImage src="/img/datatypes/kwics/prepcon_temp_ohneUnterlass_redet.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
             Ausschnitt aus KWIC-Anzeige des Kookkurrenz-Clusters <em>ohne Unterlass – redet</em> im Artikel „ohne
@@ -98,7 +99,7 @@ export default {
           </div>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/kwics/prepcon_temp_ohneUnterlass_an_der.png" alt="" />
+            <NuxtImage src="/img/datatypes/kwics/prepcon_temp_ohneUnterlass_an_der.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
             Ausschnitt aus KWIC-Anzeige des Bigram-Füllers <em>an … der</em> (Muster: <em>ohne Unterlass</em> X) im
@@ -107,7 +108,7 @@ export default {
 
           <div class="exampleHeadline">Rubrik „Inventar“</div>
           <div class="exampleImg">
-            <img src="/img/datatypes/kwics/prepcon_temp_amHeiligabend.png" alt="" />
+            <NuxtImage src="/img/datatypes/kwics/prepcon_temp_amHeiligabend.png" alt="Beispielgrafik 4" />
           </div>
           <div class="caption">
             Ausschnitt aus der KWIC-Verlinkung im Eintrag „am Heiligabend“ (Rubrik „Inventar“: ‚Feiertage‘)
@@ -143,13 +144,13 @@ export default {
         <template #explain>
           <div class="exampleHeadline">Rubrik „Quantitative Angaben“: ‚Häufigkeit im Korpus‘</div>
           <div class="exampleImg">
-            <img src="/img/datatypes/kwics/prepcon_kon_quantSuche.png" alt="" />
+            <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantSuche.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Ausschnitt aus KWIC-Anzeige (Großschreibung) im Artikel „mit Genugtuung“
           </div>
           <div class="exampleImg">
-            <img src="/img/datatypes/kwics/prepcon_kon_quantSucheSpanisch.png" alt="" />
+            <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantSucheSpanisch.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
             Ausschnitt aus KWIC-Anzeige (Kleinschreibung) im Artikel „mit Genugtuung - con satisfacción“
@@ -157,7 +158,7 @@ export default {
 
           <div class="exampleHeadline">Rubrik „Quantitative Angaben“: ‚Typische Partnerwörter‘)</div>
           <div class="exampleImg">
-            <img src="/img/datatypes/kwics/prepcon_kon_quantPartner.png" alt="" />
+            <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantPartner.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
             Ausschnitt aus KWIC-Anzeige des Kookkurrenz-Clusters <em>mit Genugtuung – erfüllt</em> im Artikel „mit
@@ -166,7 +167,7 @@ export default {
 
           <div class="exampleHeadline">Rubrik „Quantitative Angaben“: ‚Muster‘)</div>
           <div class="exampleImg">
-            <img src="/img/datatypes/kwics/prepcon_kon_quantMuster.png" alt="" />
+            <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantMuster.png" alt="Beispielgrafik 4" />
           </div>
           <div class="caption">
             Ausschnitt aus KWIC-Anzeige des Füllers <em>sichtlicher</em> (Muster: <em>mit</em> X <em>Genugtuung</em>)
@@ -174,7 +175,7 @@ export default {
           </div>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/kwics/prepcon_kon_quantMusterSpanisch.png" alt="" />
+            <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantMusterSpanisch.png" alt="Beispielgrafik 5" />
           </div>
           <div class="caption">
             Ausschnitt aus KWIC-Anzeige des Füllers <em>gran</em> (Muster: <em>con</em> X <em>satisfacción</em>) im
@@ -193,7 +194,7 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/kwics/spruchList.png" alt="" />
+            <NuxtImage src="/img/datatypes/kwics/spruchList.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Ausschnitt aus KWIC-Anzeige im Eintrag „Ausnahmen bestätigen die Regel“
@@ -212,7 +213,7 @@ export default {
         <template #explain>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/kwics/sprw_cosmas.png" alt="" />
+            <NuxtImage src="/img/datatypes/kwics/sprw_cosmas.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Ausschnitt aus KWIC-Anzeige im Artikel „Not macht erfinderisch“
@@ -230,7 +231,7 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/kwics/wvGrund.png" alt="" />
+            <NuxtImage src="/img/datatypes/kwics/wvGrund.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Ausschnitt aus KWIC-Anzeige des Knotens „aus ADJ Gründen“

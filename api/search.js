@@ -43,18 +43,11 @@ export default class search {
     this.__ensureSearch();
     var res = [];
     var nmax = 0;
-    
+
     if (this.count == null) this.count = {};
     this.hits = [];
 
     for (var i = 0; i < this.sources.length; i++) {
-      var myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
-      myHeaders.append(
-        "Authorization",
-        "Bearer 8jRAqq_GbtjdjveIOCxIlnztXjwFbcaMYp-e50HtbrQ"
-      );
-
       var request = {
         q: this.preparedQuery,
         limit: this.pageSize,
@@ -69,13 +62,12 @@ export default class search {
 
       var requestOptions = {
         method: "POST",
-        headers: myHeaders,
         body: JSON.stringify(request),
         redirect: "follow",
       };
       try {
         var response = await fetch(
-          "http://lexik08.ids-mannheim.de/meilisearch/indexes/syntagmatikon/search",
+          "https://syntagmatikon.ids-mannheim.de/api/",
           requestOptions
         );
         var result = await response.json();
@@ -98,13 +90,6 @@ export default class search {
   async __sendRequestMerge() {
     this.__ensureSearch();
 
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-    myHeaders.append(
-      "Authorization",
-      "Bearer 8jRAqq_GbtjdjveIOCxIlnztXjwFbcaMYp-e50HtbrQ"
-    );
-
     var request = {
       q: this.preparedQuery,
       limit: this.pageSize,
@@ -121,14 +106,13 @@ export default class search {
 
     var requestOptions = {
       method: "POST",
-      headers: myHeaders,
       body: JSON.stringify(request),
       redirect: "follow",
     };
 
     try {
       var response = await fetch(
-        "http://lexik08.ids-mannheim.de/meilisearch/indexes/syntagmatikon/search",
+        "https://syntagmatikon.ids-mannheim.de/api/",
         requestOptions
       );
       var result = await response.json();

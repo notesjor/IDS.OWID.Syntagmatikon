@@ -2,6 +2,18 @@
 definePageMeta({
   layout: "full",
 })
+useHead({
+  htmlAttrs: {
+    lang: 'de'
+  },
+  title: 'Syntagmatikon - Ressourcenüberblick',
+  meta: [
+    {
+      name: 'description',
+      content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
+    }
+  ]
+});
 </script>
 
 <template>
@@ -12,7 +24,8 @@ definePageMeta({
           <h1>
             Ressourcenüberblick
           </h1>
-          <p>Das <hi>Syntagmatikon</hi> enthält aktuell 11 Ressourcen, die hier kurz vorgestellt werden. Klicken Sie auf eine
+          <p>Das <hi>Syntagmatikon</hi> enthält aktuell 11 Ressourcen, die hier kurz vorgestellt werden. Klicken Sie auf
+            eine
             der Ressourcen, um diese direkt aufzurufen.</p>
         </div>
         <v-row>
@@ -33,9 +46,8 @@ definePageMeta({
                 </v-card-title>
                 <v-card-text>
                   <a :href="x.url" target="_blank">
-                    <img v-if="x.img != undefined" :src="x.img"
-                      style="width: 100%; height: auto; margin-bottom: 10px;" />
-                    <img v-else src="/dummy/resource.png" style="width: 100%; height: auto; margin-bottom: 10px;" />
+                    <img :src="x.img" style="width: 100%; height: auto; margin-bottom: 10px;"
+                      alt="Abbildung der Ressource" />
                     <div style="text-align: justify; font-weight: 400" v-html="x.description">
                     </div>
                   </a>
@@ -62,7 +74,6 @@ export default {
   theme: { dark: false },
   data() {
     return {
-      query: '',
       items: [],
       selected_tags: [],
       resourcesStore: null,
@@ -74,7 +85,6 @@ export default {
   },
   mounted() {
     this.resourcesStore = useResourcesStore();
-    //this.resources = this.resourcesStore.getResources(null);
     this.resources = this.resourcesStore.getResources(this.filter);
   },
   methods: {
@@ -107,43 +117,7 @@ export default {
 
         this.resources[i].rank = rank == 0 ? 1 : ~~(rank / entry.tags.length * 20.0);
       }
-
-      //this.resources.sort((a, b) => b.rank - a.rank);
     }
-  },
-  /*
-  computed: {
-    resources_filtered() {
-      let resources_filtered = this.resources.filter(x => x.key in ['PREPCON_komp']);
-      return resources_filtered;
-    }
-  },*/
-  watch: {
-    query: function (val) {
-      /*
-            var self = this;
-      
-            var myHeaders = new Headers();
-            myHeaders.append("Content-Type", "application/json");
-            myHeaders.append("Authorization", "Bearer 8jRAqq_GbtjdjveIOCxIlnztXjwFbcaMYp-e50HtbrQ");
-      
-            var raw = JSON.stringify({
-              "q": val
-            });
-      
-            var requestOptions = {
-              method: 'POST',
-              headers: myHeaders,
-              body: raw,
-              redirect: 'follow'
-            };
-      
-            fetch("http://lexik08.ids-mannheim.de:7700/indexes/syntagmatikon/search", requestOptions)
-              .then(response => response.json())
-              .then(result => self.items = result.hits)
-              .catch(error => console.log('error', error));
-              */
-    },
   }
 }
 </script>

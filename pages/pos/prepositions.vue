@@ -22,7 +22,8 @@ export default {
         <compare :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'MAP', 'Verlaufsformen', 'WVBF']">
             <compare-item value="0">
                 <div style="text-align: center; width:100%">
-                    <img src="/img/pos/prepositions/prepositions_all.png" style="text-align: center;" />
+                    <NuxtImage src="/img/pos/prepositions/prepositions_all.png" style="text-align: center;"
+                        alt="Beispielgrafik" />
                 </div>
             </compare-item>
 

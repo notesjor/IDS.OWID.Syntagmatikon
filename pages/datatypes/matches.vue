@@ -33,7 +33,7 @@ export default {
       :filter="['PREPCON_temp', 'PREPCON_kon', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'SPRW', 'DTWW', 'WVBF']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
-          <img src="/img/datatypes/matches/matches_all.png" style="text-align: center;" />
+          <NuxtImage src="/img/datatypes/matches/matches_all.png" style="text-align: center;" alt="Beispielgrafik 1" />
         </div>
       </compare-item>
 
@@ -51,14 +51,14 @@ export default {
         <template #explain>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/matches/prepcon_temp_amEnde.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/prepcon_temp_amEnde.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             KWIC-Belege im Artikel „am Ende“ (Rubrik „Kurzartikel“)
           </div>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/matches/prepcon_temp_amEnde_volltext.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/prepcon_temp_amEnde_volltext.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
             Volltextbelege im Artikel „am Ende“ (Rubrik „Kurzartikel“)
@@ -78,22 +78,23 @@ export default {
         <template #explain>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/matches/prepcon_kon_kochrezepte_header.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/prepcon_kon_kochrezepte_header.png" alt="Beispielgrafik 1" />
 
-            <img src="/img/datatypes/matches/prepcon_kon_kochrezepte_deutsch.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/prepcon_kon_kochrezepte_deutsch.png" alt="Beispielgrafik 2" />
 
-            <img src="/img/datatypes/matches/prepcon_kon_kochrezepte_spanisch.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/prepcon_kon_kochrezepte_spanisch.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
             Belege zum Gebrauchsaspekt ‚Kochrezept‘ im Artikel „nach Belieben – a su gusto“
           </div>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_header.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_header.png" alt="Beispielgrafik 1" />
 
-            <img src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_deutsch.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_deutsch.png" alt="Beispielgrafik 2" />
 
-            <img src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_slowakisch.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_slowakisch.png"
+              alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
             Belege für den Gebrauchsaspekt ‚Dominantes Handeln ohne Korrektiv‘ im Artikel „nach Belieben
@@ -117,7 +118,7 @@ export default {
 
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/matches/phraskomp_gerede.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/phraskomp_gerede.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Ausschnitt aus der Treffermenge zu Phrasenkomposita mit dem Zweitglied <em>Gerede</em> (mit
@@ -141,7 +142,7 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/matches/rede_beleg.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/rede_beleg.png" alt="" />
           </div>
           <div class="caption">
             Ausschnitt aus der Belegliste des Redeeinleiters „sagen“
@@ -161,7 +162,7 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/matches/verlaufsformen_beleg_eng.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/verlaufsformen_beleg_eng.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Beleg für eine <em>am</em>-Progressiv-Verwendung im Eintrag „staunen“
@@ -194,14 +195,14 @@ export default {
         <template #explain>
           <div class="exampleHeadline">Rubrik „Musterartikel“</div>
           <div class="exampleImg">
-            <img src="/img/datatypes/matches/festeWV_bedeutung.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/festeWV_bedeutung.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Beleg zur Bedeutung im Stichwort „Angst vor der eigenen Courage“ (Rubrik „Musterartikel“)
           </div>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/matches/festeWV_wertungsaspekt.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/festeWV_wertungsaspekt.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
             Beleg zum negativen Wertungsaspekt im Stichwort „Angst vor der eigenen Courage“ (Rubrik
@@ -211,7 +212,7 @@ export default {
           <div class="exampleHeadline">Rubrik „Wortverbindungen mit
             Adjektiven“</div>
           <div class="exampleImg">
-            <img src="/img/datatypes/matches/festeWV_gebrauchsbeschreibung.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/festeWV_gebrauchsbeschreibung.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
             Beleg zur Gebrauchsbeschreibung im Artikel „blinder Alarm“ (Rubrik: „Wortverbindungen mit
@@ -219,7 +220,7 @@ export default {
           </div>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/matches/festeWV_kontextmuster.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/festeWV_kontextmuster.png" alt="Beispielgrafik 4" />
           </div>
           <div class="caption">
             Beleg zum typischen Kontextmuster <em>sich als blinder Alarm entpuppen</em> im Artikel
@@ -250,14 +251,14 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/matches/sprw_bedeutung.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/sprw_bedeutung.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Belege zur Bedeutung im Artikel „Der Ton macht die Musik“
           </div>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/matches/sprw_ersetzung.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/sprw_ersetzung.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
             Belege zum Muster <em>Der/Die X macht/machen die Musik</em> (‚Ersetzung von Komponenten‘) im
@@ -265,7 +266,7 @@ export default {
           </div>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/matches/sprw_geschichte_gap.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/sprw_geschichte_gap.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
             Beleg zur Angabe ‚Geschichte‘ im Artikel „Geiz ist geil“
@@ -284,7 +285,7 @@ export default {
         <template #explain>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/matches/dtww_belege.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/dtww_belege.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Belege zum Eintrag „durchlaufender Posten“
@@ -307,7 +308,7 @@ export default {
         <template #explain>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/matches/wvGrund.png" alt="" />
+            <NuxtImage src="/img/datatypes/matches/wvGrund.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Belege für die allgemeine Beschreibung des Knoten „mit Grund“

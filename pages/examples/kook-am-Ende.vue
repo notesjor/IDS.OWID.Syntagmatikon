@@ -15,10 +15,16 @@ export default {
 </script>
 
 <template>
-    <div class="caption">Beispiel aus <r rkey="PREPCON_temp"/></div>
+    <div class="caption">Beispiel aus
+        <r rkey="PREPCON_temp" />
+    </div>
     <v-carousel style="height:450px">
-        <v-carousel-item><img src="/img/datatypes/kook/amEnde_kookzeilen.png" /></v-carousel-item>
-        <v-carousel-item><img src="/img/datatypes/kook/Clusters_amEnde_1_1_KA_oFW_3.png" /></v-carousel-item>
+        <v-carousel-item>
+            <img src="/img/datatypes/kook/amEnde_kookzeilen.png" alt="Beispiel 1 für Kookkurrenzprofile" />
+        </v-carousel-item>
+        <v-carousel-item>
+            <img src="/img/datatypes/kook/Clusters_amEnde_1_1_KA_oFW_3.png" alt="Beispiel 2 für Kookkurrenzprofile" />
+        </v-carousel-item>
     </v-carousel>
 
     <p>Das <u><em>am Ende</em>-Profil</u> zeigt u.a. folgendes:</p>

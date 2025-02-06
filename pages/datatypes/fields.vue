@@ -14,7 +14,8 @@ export default {
 }
 </script>
 <template>
-  <p>Die im <hi>Syntagmatikon</hi> verzeichneten Felder sind manuell zusammengestellte Gruppen von Syntagmen und/oder Monolexemen
+  <p>Die im <hi>Syntagmatikon</hi> verzeichneten Felder sind manuell zusammengestellte Gruppen von Syntagmen und/oder
+    Monolexemen
     mit verwandten Gebrauchsmerkmalen. Gebrauchsverwandtschaften können sich u.a. beziehen auf: synonyme oder
     quasisynonyme (Teil-)Bedeutungen bzw. semantische Konzepte; pragmatische Merkmale wie ähnliche kommunikative
     Funktionen, Domänen oder Textsorten usw.</p>
@@ -26,7 +27,7 @@ export default {
     <compare :filter="['SPRW', 'FesteWV', 'MAP', 'PREPCON_kon', 'PREPCON_temp']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
-          <img src="/img/datatypes/fields/fields_all.png" style="text-align: center;" />
+          <NuxtImage src="/img/datatypes/fields/fields_all.png" style="text-align: center;" alt="Beispielgrafik 1" />
         </div>
       </compare-item>
 
@@ -40,7 +41,7 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/fields/swbu_part_01.png" alt="" />
+            <NuxtImage src="/img/datatypes/fields/swbu_part_01.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘ im Artikel: „Man soll
@@ -61,7 +62,7 @@ export default {
 
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/fields/fwv_part_01.png" alt="" />
+            <NuxtImage src="/img/datatypes/fields/fwv_part_01.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">Semantisches Feld mit der Bedeutung ‚unkritisch‘; ‚die Realität nicht wahrhaben wollen‘
             im Artikel: „sich blind und taub stellen“</div>
@@ -83,7 +84,7 @@ export default {
 
         <template #explain>
           <div class="exampleImg">
-            <img src="/img/datatypes/fields/map_part_01.png" alt="" />
+            <NuxtImage src="/img/datatypes/fields/map_part_01.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">Ausschnitt aus Prädikatsfeldern im Artikel "Furcht": JMD fürchtet JMDN/ETW.</div>
         </template>
@@ -105,14 +106,14 @@ export default {
         <template #explain>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/fields/prepk_part_03.png" alt="" />
+            <NuxtImage src="/img/datatypes/fields/prepk_part_03.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption"> Wolkendarstellung adjektivischer Satellitenfelder des Gebrauchsaspekts „Thematisierung
             von
             Schwierigkeiten“ von <em>am Anfang</em> und des spanischen Äquivalents <em>al principio</em></div>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/fields/prepk_part_04.png" alt="" />
+            <NuxtImage src="/img/datatypes/fields/prepk_part_04.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption"> Ausschnitt aus der Kookkurrenzliste adjektivischer Satellitenfelder des
             Gebrauchsaspekts
@@ -132,7 +133,7 @@ export default {
         <template #explain>
 
           <div class="exampleImg">
-            <img src="/img/datatypes/fields/prept_part_01.png" alt="" />
+            <NuxtImage src="/img/datatypes/fields/prept_part_01.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption"> Verwandte Wörter mit der Grundbedeutung ‚pausenlos‘ im Artikel "ohne Unterlass"</div>
         </template>

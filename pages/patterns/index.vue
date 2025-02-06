@@ -2,6 +2,18 @@
 definePageMeta({
   layout: "full",
 })
+useHead({
+  htmlAttrs: {
+    lang: 'de'
+  },
+  title: 'Syntagmatikon - Musterzugänge',
+  meta: [
+    {
+      name: 'description',
+      content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
+    }
+  ]
+});
 </script>
 
 <template>
@@ -21,13 +33,15 @@ definePageMeta({
       <li><strong>w-x-ist-ist-auch-y-Muster</strong>: <br /> {Licht – Schatten; Rauch – Feuer; Arbeit – Brot} </li>
     </ul>
     <br />
-    <div class="caption">Jedes Kästchen linkt zu einer Hintergrundseite mit kurzen Erklärungen und Beispielen zu den unterschiedlichen Musterzugängen.</div>
+    <div class="caption">Jedes Kästchen linkt zu einer Hintergrundseite mit kurzen Erklärungen und Beispielen zu den
+      unterschiedlichen Musterzugängen.</div>
   </div>
   <div>
     <v-row>
       <v-col cols="12">
         <empty />
-        <headline :h="4">Muster im <hi>Syntagmatikon</hi></headline>
+        <headline :h="4">Muster im <hi>Syntagmatikon</hi>
+        </headline>
 
         <div class="container">
           <info-box title="Direkter Zugang" :color1="color1" link="/patterns/direct" :filter="['MAP', 'WVBF']">

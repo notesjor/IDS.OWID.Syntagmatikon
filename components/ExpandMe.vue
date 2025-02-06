@@ -1,6 +1,7 @@
 <template>
     <span>
-        <v-btn density="compact" size="small" variant=tonal icon="mdi-plus" @click="toggleDiv" style="display: inline-block;"></v-btn>
+        <v-btn density="compact" size="small" variant=tonal icon="mdi-plus" @click="toggleDiv"
+            style="display: inline-block;" aria-label="Zeige zusätzlichen Text an"></v-btn>
     </span>
     <div class="more" v-show="isVisible">
         <slot></slot>
@@ -8,6 +9,8 @@
 </template>
 
 <script>
+import cache from '~/api/cache.js';
+
 export default {
     name: "ExpandMe",
     data() {
@@ -22,6 +25,10 @@ export default {
     methods: {
         toggleDiv() {
             this.isVisible = !this.isVisible;
+
+            if (this.isVisible) {
+                new cache().callCache(this.$route.path, "EXP");
+            }
         },
     }
 }

@@ -2,6 +2,18 @@
 definePageMeta({
   layout: "full",
 })
+useHead({
+  htmlAttrs: {
+    lang: 'de'
+  },
+  title: 'Syntagmatikon - Wort- und Ausdrucksarten',
+  meta: [
+    {
+      name: 'description',
+      content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
+    }
+  ]
+});
 </script>
 
 <template>
@@ -10,14 +22,16 @@ definePageMeta({
       Wort- und Ausdrucksarten
     </h1>
     <p>Die Beschreibungskandidaten bzw. Stichwörter im <hi>Syntagmatikon</hi> sowie deren Komponenten basieren auf
-      unterschiedlichen Wort- und Ausdrucksarten. In dieser Rubrik werden Beispiele für jene aufgeführt, die in mehr als einer Ressource relevant sind.</p>
+      unterschiedlichen Wort- und Ausdrucksarten. In dieser Rubrik werden Beispiele für jene aufgeführt, die in mehr als
+      einer Ressource relevant sind.</p>
     <p>Die Zuordnung der Ressourcen zu Wort- und Ausdrucksarten erfolgt gemäß folgender Kriterien:</p>
     <ul>
       <li>Hauptkomponenten, die diesen Eintrag zentral konstituieren</li>
       <li>sprachliche Einheit als Ganzes (Phraseme; feste Sätze)</li>
     </ul>
     <p>Unter Phrasemen werden Phraseologismen, Idiome, Kollokationen (auch nicht-idiomatische) sowie Funktionsverbgefüge
-      subsumiert. Nicht gesondert markiert werden Komponenten von Phrasemen und festen Sätzen, da diese Mehrworteinheiten
+      subsumiert. Nicht gesondert markiert werden Komponenten von Phrasemen und festen Sätzen, da diese
+      Mehrworteinheiten
       potenziell alle Wortarten umfassen können. Hier liegt der Fokus auf der gesamten Einheit.</p>
     <div class="caption">Jedes Kästchen linkt zu einer Hintergrundseite mit Beispielen für Wort- und Ausdrucksarten in
       den Ressourcen.</div>
@@ -26,7 +40,8 @@ definePageMeta({
     <v-row>
       <v-col cols="12">
         <empty />
-        <headline :h="4">Wort- und Ausdrucksarten im <hi>Syntagmatikon</hi></headline>
+        <headline :h="4">Wort- und Ausdrucksarten im <hi>Syntagmatikon</hi>
+        </headline>
         <div class="container">
           <info-box title="Nomina" :color1="color1" link="pos/nouns" :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'WVBF',
             'PhrasKomp', 'DTWW', 'Redeeinleiter', 'Verlaufsformen']">

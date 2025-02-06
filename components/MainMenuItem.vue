@@ -1,10 +1,11 @@
 <template>
-    <NuxtLink :to="to" class="sim_listItem" @mouseenter="mouseEnter" @mouseleave="mouseLeave">
+    <NuxtLink :to="to" class="sim_listItem" @mouseenter="mouseEnter" @mouseleave="mouseLeave" :aria-label="alabel">
         <div class="grid-container">
             <gradient style="margin:0px 10px 0px 5px; display: inline-block;" :color1="color1" :icon="icon" />
             <span class="compass" v-if="!useMobileView">
                 <slot style="text-align: left;" />
             </span>
+            {{ slotContent }}
         </div>
     </NuxtLink>
 </template>
@@ -27,11 +28,15 @@ export default {
         to: {
             type: String,
             default: ""
+        },
+        alabel: {
+            type: String,
+            default: ""
         }
     },
     data() {
         return {
-            focused: false
+            focused: false,
         }
     },
     methods: {

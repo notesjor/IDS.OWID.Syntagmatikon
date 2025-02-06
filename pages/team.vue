@@ -1,7 +1,8 @@
 <template>
     <h1>Beteiligte Projekte</h1>
     <div>
-        <h2>Entwicklungsteam für das <hi>Syntagmatikon</hi></h2>
+        <h2>Entwicklungsteam für das <hi>Syntagmatikon</hi>
+        </h2>
         <v-list>
             <v-list-item>
                 <NuxtLink to="https://www.ids-mannheim.de/lexik/personal/steyer">Dr. Kathrin Steyer</NuxtLink>
@@ -72,17 +73,20 @@
 
         <p>Informationen zu beteiligten Projekten und Arbeitsbereichen finden Sie auf folgenden Webseiten:</p>
         <!-- <p style="border-top: solid #C0C0C0 1px; padding-top: 10px"> -->
-            <p style="padding-top: 10px">
+        <p style="padding-top: 10px">
             <NuxtLink to="https://www.ids-mannheim.de/lexik/syntagmatik-im-lexikon/">Projekt „Syntagmatik im
                 Lexikon“</NuxtLink>
-                <p style="margin-left:40px">
-            <NuxtLink to="https://www.ids-mannheim.de/lexik/uwv/">Usuelle Wortverbindungen</NuxtLink></p>
-            <p style="margin-left:40px">
+        </p>
+        <p style="margin-left:40px">
+            <NuxtLink to="https://www.ids-mannheim.de/lexik/uwv/">Usuelle Wortverbindungen</NuxtLink>
+        </p>
+        <p style="margin-left:40px">
             <NuxtLink to="https://www.ids-mannheim.de/lexik/verben-und-argumentstrukturen/">Argumentstrukturen
-            </NuxtLink></p>
-            <p style="margin-left:40px">
+            </NuxtLink>
+        </p>
+        <p style="margin-left:40px">
             <NuxtLink to="https://www.ids-mannheim.de/lexik/syntagmatik-im-lexikon/wortbildungsmuster/">
-                Wortbildungsmuster  </NuxtLink></p>
+                Wortbildungsmuster </NuxtLink>
         </p>
         <p style="padding-top: 10px">
             <NuxtLink
@@ -93,10 +97,24 @@
             <NuxtLink to="https://www.ids-mannheim.de/lexik/redewiedergabe/">Projekt „Redewiedergabe“</NuxtLink>
             (abgeschlossen)
         </p>
-
-
-
     </div>
-
-
 </template>
+
+<script>
+export default {
+    setup() {
+        useHead({
+            htmlAttrs: {
+                lang: 'de'
+            },
+            title: 'Syntagmatikon - Beteiligte Projekte',
+            meta: [
+                {
+                    name: 'description',
+                    content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
+                }
+            ]
+        });
+    },
+}
+</script>

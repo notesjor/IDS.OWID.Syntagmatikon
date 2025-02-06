@@ -20,7 +20,11 @@ export default defineNuxtConfig({
   },
 
   build: {
-    transpile: ['vuetify'],        
+    transpile: ['vuetify'],
+  },
+
+  nitro: {
+    compressPublicAssets: true,
   },
 
   vite: {
@@ -28,6 +32,7 @@ export default defineNuxtConfig({
       'process.env.DEBUG': false,
     },
     plugins: [svgLoader()],
+
     server: {
       fs: {
         strict: false
@@ -35,7 +40,32 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['@pinia/nuxt', "nuxt-link-checker"],
+  modules: ['@nuxtjs/robots', '@nuxtjs/sitemap', 'nuxt-schema-org', 'nuxt-og-image', '@pinia/nuxt', 'nuxt-link-checker', 'nuxt-vitalizer', '@nuxt/image'],
+
+  image: {
+    provider: 'ipx',
+    screens: {
+      'xs': 320,
+      'sm': 640,
+      'md': 768,
+      'lg': 1024,
+      'xl': 1280,
+      'xxl': 1536,
+      '2xl': 1536
+    },
+    presets: {
+      ipxwebp: {
+        modifiers: {
+          format: 'webp',
+          quality: 80
+        },
+      },
+    },
+  },
+
+  routeRules: {
+    "/project-description": { prerender: true },
+  },
 
   runtimeConfig: {
     public: {
@@ -51,6 +81,11 @@ export default defineNuxtConfig({
     }
   },
 
+  vitalizer: {
+    // Remove the render-blocking entry CSS
+    disableStylesheets: 'entry'
+  },
+
   app: {
     baseURL: "/",
     head: {
@@ -59,6 +94,11 @@ export default defineNuxtConfig({
         dir: 'ltr'
       }
     }
+  },
+
+  site: {
+    url: "https://syntagmatikon.ids-mannheim.de",
+    name: "Syntagmatikon"
   },
 
   compatibilityDate: "2024-08-12",

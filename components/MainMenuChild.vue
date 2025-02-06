@@ -1,7 +1,7 @@
 <template>
     <span v-show="visible">
         <main-menu-item v-for="p in paths" :key="p" :useMobileView="useMobileView" :color2="color" :icon="icon"
-            :to="p.url" style="margin-left: 10px;">
+            :to="p.url" style="margin-left: 10px;" :alabel="p.name">
             <span v-html="p.name" />
         </main-menu-item>
     </span>

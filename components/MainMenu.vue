@@ -11,18 +11,20 @@
 
         <!-- HOME START -->
         <v-list density="compact" nav :style="menuStyleMobileFix" style="font-family: var(--FF-DISPLAY);">
-            <v-list-subheader v-if="!useMobileView">Übersicht</v-list-subheader>
-            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-home" to="/">
+            <v-list-subheader v-if="!useMobileView" style="margin-top: 0px;">Übersicht</v-list-subheader>
+            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-home" to="/" alabel="Startseite">
                 Startseite
             </main-menu-item>
             <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-information"
-                to="/project-description">
+                to="/project-description" alabel="Projektbeschreibung">
                 Was ist das Syntagmatikon?
             </main-menu-item>
-            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-book-open" to="/corpora">
+            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-book-open" to="/corpora"
+                alabel="Korpora">
                 Korpora
             </main-menu-item>
-            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-web" to="/discovery">
+            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-web" to="/discovery"
+                alabel="Ressourcenüberblick">
                 Ressourcenüberblick
             </main-menu-item>
         </v-list>
@@ -34,7 +36,8 @@
         <!-- ADDITIONAL INFORMATION START -->
         <v-list density="compact" nav style="font-family: var(--FF-DISPLAY); margin-top:0.7rem">
             <v-list-subheader v-if="!useMobileView">Suche</v-list-subheader>
-            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-magnify" to="/search">
+            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-magnify" to="/search"
+                alabel="Stichwortsuche">
                 Suche
             </main-menu-item>
         </v-list>
@@ -46,36 +49,28 @@
         <!-- altes icon: mdi-book-open-variant-->
         <v-list density="compact" nav>
             <v-list-subheader v-if="!useMobileView">Ressourcenkompass</v-list-subheader>
-            <main-menu-item :useMobileView="useMobileView" color2="#DF0C2F" icon="mdi-compass" to="/resources">
+            <main-menu-item :useMobileView="useMobileView" color2="#DF0C2F" icon="mdi-compass" to="/resources"
+                alabel="Ressourcentypen">
                 Ressourcentypen
             </main-menu-item>
             <main-menu-child parent="Ressourcentypen" />
-            <main-menu-item :useMobileView="useMobileView" color2="#9716CA" icon="mdi-compass" to="/datatypes">
+            <main-menu-item :useMobileView="useMobileView" color2="#9716CA" icon="mdi-compass" to="/datatypes"
+                alabel="Informationstypen">
                 Informationstypen
             </main-menu-item>
             <main-menu-child parent="Informationstypen" />
-            <main-menu-item v-for="p in paths" :key="p" :useMobileView="useMobileView" :color2="color" :icon="icon"
-                :to="p.url" class="subMenuItem">
-                <span v-html="p.name" />
-            </main-menu-item>
-            <main-menu-item :useMobileView="useMobileView" color2="#0DC513" icon="mdi-compass" to="/pos">
+            <main-menu-item :useMobileView="useMobileView" color2="#0DC513" icon="mdi-compass" to="/pos"
+                alabel="Wort und Ausdrucksarten">
                 Wort- und Ausdrucksarten
             </main-menu-item>
             <main-menu-child parent="Wort- und Ausdrucksarten" />
-            <main-menu-item v-for="p in pos" :key="p" :useMobileView="useMobileView" :color2="color" :icon="icon"
-                :to="p.url" class="subMenuItem">
-                <span v-html="p.name" />
-            </main-menu-item>
-            <main-menu-item :useMobileView="useMobileView" color2="#DB6900" icon="mdi-compass" to="/patterns">
+            <main-menu-item :useMobileView="useMobileView" color2="#DB6900" icon="mdi-compass" to="/patterns"
+                alabel="Musterzugänge">
                 Musterzugänge
             </main-menu-item>
             <main-menu-child parent="Musterzugänge" />
-            <main-menu-item v-for="p in paths" :key="p" :useMobileView="useMobileView" :color2="color" :icon="icon"
-                :to="p.url" class="subMenuItem">
-                <span v-html="p.name" />
-            </main-menu-item>
-
-            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-lightbulb-on" to="/examples">
+            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-lightbulb-on" to="/examples"
+                alabel="Fallbeispiele">
                 Fallbeispiele
             </main-menu-item>
         </v-list>
@@ -86,7 +81,8 @@
         <!-- GENERAL INFORMATION START -->
         <v-list density="compact" nav style="font-family: var(--FF-DISPLAY); margin-top:0.7rem">
             <v-list-subheader v-if="!useMobileView">Hintergrund</v-list-subheader>
-            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-account-group" to="/team">
+            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-account-group" to="/team"
+                alabel="Beteiligte Projekte und Personen">
                 Beteiligte Projekte
             </main-menu-item>
         </v-list>
