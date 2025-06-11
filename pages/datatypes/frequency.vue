@@ -134,17 +134,22 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/frequency/prepe_part_01.png" alt="Beispielgrafik 1" />
+            <NuxtImage src="/img/datatypes/frequency/prepe_part_01.png" alt="Beispielgrafik 1" />            
           </div>
+
           <div class="caption">
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?prep=%C3%BCber" />
             Ausschnitt aus der Frequenzliste für Verbindungen mit Präposition <em>über</em> und nachgestellten Nomen
+            
           </div>
 
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/frequency/prepe_part_02.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            Ausschnitt aus der Frequenzliste für Verbindungen mit Nomen <em>Nacht</em> und vorangestellten
+            <div style="text-align:right" class="ScreenshotLinkPlaceholder"><NuxtLink to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=Nacht">zu diesem Beispiel</NuxtLink>
+           </div>
+              Ausschnitt aus der Frequenzliste für Verbindungen mit Nomen <em>Nacht</em> und vorangestellten
             Präpositionen
           </div>
         </template>
