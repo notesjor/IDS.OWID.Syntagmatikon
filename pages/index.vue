@@ -5,7 +5,7 @@
         <hi>Syntagmatikon</hi>
       </h1>
       <p>
-        Das TOLLE TOLLE korpusbasierte Portal <hi>Syntagmatikon</hi> bietet Informationen zum Gebrauch von sprachlichen
+        Das TOLLE TOLLE TOLLE korpusbasierte Portal <hi>Syntagmatikon</hi> bietet Informationen zum Gebrauch von sprachlichen
         Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten
         geworden sind.</p>
     </v-col>
