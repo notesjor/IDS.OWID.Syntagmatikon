@@ -24,7 +24,7 @@ export default {
     <!-- NOTE: in Filter werden die Ressourcen angegeben -->
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
-    <compare :filter="['SPRW', 'FesteWV', 'MAP', 'PREPCON_kon', 'PREPCON_temp']">
+    <compare :filter="['SPRW', 'FesteWV', 'MAP', 'PREPCON_kon', 'PREPCON_temp_art']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/datatypes/fields/fields_all.png" style="text-align: center;" alt="Beispielgrafik 1" />
@@ -121,10 +121,10 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="5" rkey="PREPCON_temp">
+      <compare-item value="5" rkey="PREPCON_temp_art">
         <p>
           Die Wortfelder in
-          <r rkey="PREPCON_temp" /> (Kurzartikel)
+          <r rkey="PREPCON_temp_art" />
           beinhalten semantisch verwandte Wörter der PN,
           die jeweils mit den entsprechenden Einträgen in <i>elexiko</i> verlinkt sind. Im elexiko-Artikel findet man
           entweder die lexikografische Beschreibung des (Quasi-)Synonyms oder einen Link zum entsprechenden Profil in

@@ -49,13 +49,13 @@ useHead({
           </info-box>
 
           <info-box title="Kookkurrenzprofile" link="/datatypes/cooccurrence" :filter="['WVBF',
-            'PREPCON_temp', 'PREPCON_kon']" :color1="color1">
+            'PREPCON_temp_art', 'PREPCON_kon']" :color1="color1">
             Durch statistische Berechnungen (sog. Kookkurrenzanalysen) ermittelte Partnerwort-Profile
             (überproportional häufiges Miteinandervorkommen von Wörtern und Wortgruppen)
           </info-box>
 
           <info-box title="Lückenfüllertabellen" link="/datatypes/patterntable" :filter="['WVBF',
-            'PREPCON_temp', 'PREPCON_kon']" :color1="color1">
+            'PREPCON_temp_art', 'PREPCON_kon']" :color1="color1">
             Durch automatische Auswertung ermittelte Füllerhäufigkeiten innerhalb eines Musterslots
           </info-box>
 
@@ -72,7 +72,7 @@ useHead({
           </info-box>
 
           <info-box :color1="color1" title="Belege" link="/datatypes/matches" :filter="['WVBF', 'Redeeinleiter', 'PhrasKomp',
-            'PREPCON_temp', 'PREPCON_kon', 'Verlaufsformen', 'FesteWV', 'DTWW', 'SPRW']">
+            'PREPCON_temp_art', 'PREPCON_kon', 'Verlaufsformen', 'FesteWV', 'DTWW', 'SPRW']">
             Manuell ausgewählte KWICs und größere Volltextstellen
           </info-box>
 
@@ -82,13 +82,13 @@ useHead({
           </info-box>
 
           <info-box :color1="color1" title="Komponenten" link="/datatypes/elements"
-            :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW', 'FesteWV']">
+            :filter="['PREPCON_kon', 'PREPCON_temp_art', 'SPRW', 'FesteWV']">
             Auszeichnung der einzelnen Komponenten einer Wortverbindung und Verlinkung mit anderen Einträgen.
           </info-box>
 
 
           <info-box :color1="color1" title="Felder" link="/datatypes/fields"
-            :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW', 'FesteWV', 'MAP']">
+            :filter="['PREPCON_kon', 'PREPCON_temp_art', 'SPRW', 'FesteWV', 'MAP']">
             Nach inhaltlichen Kriterien manuell zusammengestellte Gruppen von sprachlichen Einheiten mit verwandten
             Gebrauchsmerkmalen
           </info-box>

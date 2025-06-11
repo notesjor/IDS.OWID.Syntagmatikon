@@ -33,7 +33,7 @@ export default {
     <!-- NOTE: in Filter werden die Ressourcen angegeben -->
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
-    <compare :filter="['PREPCON_temp', 'PREPCON_kon', 'WVBF']">
+    <compare :filter="['PREPCON_temp_art', 'PREPCON_kon', 'WVBF']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/datatypes/cooccurrence/cooccurrence_all.png" style="text-align: center;"
@@ -41,11 +41,10 @@ export default {
         </div>
       </compare-item>
 
-      <compare-item value="1" rkey="PREPCON_temp" buttonUrl="">
+      <compare-item value="1" rkey="PREPCON_temp_art" buttonUrl="">
         <p>
           In
-          <r rkey="PREPCON_temp" /> sind in der
-          Rubrik „Kurzartikel“ Kookkurrenzprofile einschließlich der KWIC-Cluster der jeweiligen
+          <r rkey="PREPCON_temp_art" /> sind Kookkurrenzprofile einschließlich der KWIC-Cluster der jeweiligen
           Präposition-Nomen-Verbindung unter der Überschrift „Typische Partnerwörter“ hinterlegt. Beim
           Anklicken der Wolkenvisualisierung erhält man die Kookkurrenzliste einschließlich bis zu 50 KWIC
           zu jedem Cluster (statistische Zufallsauswahl).

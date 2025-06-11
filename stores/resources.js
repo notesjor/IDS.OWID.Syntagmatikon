@@ -40,13 +40,57 @@ export const useResourcesStore = defineStore("resourcesStore", {
           key: "PREPCON_temp",
           nameShort: "PREPCON<sup>temporal</sup>",
           nameLong:
+            "PREPCON<sup>temporal</sup> - Kurzartikel und Inventar zu temporalen Präposition-Nomen-Verbindungen im Kontext",
+          description:
+            "",
+          img: "./img/sources/prepcon_temp.png",
+          url: "http://uwv.ids-mannheim.de/prepcon/modul2",
+          tags: [],
+          quest: "",
+          search_type: "Inventare und Sammlungen",
+          search_functions: [
+            "Frequenzen",
+            "KWICs",
+            "Kookkurrenzprofile",
+            "Lückenfüllertabellen", 
+            "Komponenten",
+            "Felder",
+            "Belege"
+          ],
+          search_patterns: ["Dynamische Erschließung"],
+          search_parts: ["Nomina", "Präpositionen"],
+        },
+        {
+          key: "PREPCON_temp_inv",
+          nameShort: "PREPCON<sup>temporal</sup> Inventar",
+          nameLong:
+            "PREPCON<sup>temporal</sup> - Inventar zu temporalen Präposition-Nomen-Verbindungen im Kontext",
+          description:
+            "",
+          img: "./img/sources/prepcon_temp.png",
+          url: "http://uwv.ids-mannheim.de/prepcon/modul2/inventar/temporalangaben.html",
+          tags: [],
+          quest: "",
+          search_type: "Inventare und Sammlungen",
+          search_functions: [
+            "Frequenzen",
+            "KWICs",
+            "Kategoriale Label",
+          ],
+          search_patterns: ["Dynamische Erschließung"],
+          search_parts: ["Nomina", "Präpositionen"],
+        },
+           {
+          key: "PREPCON_temp_art",
+          nameShort: "PREPCON<sup>temporal</sup> Artikel",
+          nameLong:
             "PREPCON<sup>temporal</sup> - Kurzartikel zu temporalen Präposition-Nomen-Verbindungen im Kontext",
           description:
             "",
           img: "./img/sources/prepcon_temp.png",
-          url: "http://uwv.ids-mannheim.de/prepcon/modul2/",
+          url: "http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Anfang/index.html",
           tags: [],
-          quest: "http://uwv.ids-mannheim.de/prepcon/modul2/inventar/{q}",
+          quest: "",
           search_type: "Inventare und Sammlungen",
           search_functions: [
             "Frequenzen",

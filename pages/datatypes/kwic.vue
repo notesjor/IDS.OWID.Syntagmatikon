@@ -66,7 +66,7 @@ export default {
           KWICs an unterschiedlichen Stellen mit einer Zufallsauswahl abrufen:
         </p>
 
-        <p>Rubrik „Kurzartikel“</p>
+        <p> Rubrik „Kurzartikel“</p>
         <ul>
           <li>in ‚Häufigkeit im Korpus‘ für die jeweilige Suchen/Frequenzen (Groß- und Kleinschreibung;
             Großschreibung;
@@ -74,7 +74,7 @@ export default {
           <li>in ‚Typische Partnerwörter‘ für die jeweiligen Kookkurrenzcluster</li>
           <li>in ‚Muster‘ für die jeweiligen Lückenfüllertabellen</li>
         </ul>
-        <p>Rubrik „Inventar“</p>
+        <p>  Rubrik „Inventar“</p>
         <ul>
           <li>Verlinkung zu KWICs in
             <r rkey="PREPCON_ex" />

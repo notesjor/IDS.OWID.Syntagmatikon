@@ -30,17 +30,17 @@ export default {
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
     <compare
-      :filter="['PREPCON_temp', 'PREPCON_kon', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'SPRW', 'DTWW', 'WVBF']">
+      :filter="['PREPCON_temp_art', 'PREPCON_kon', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'SPRW', 'DTWW', 'WVBF']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/datatypes/matches/matches_all.png" style="text-align: center;" alt="Beispielgrafik 1" />
         </div>
       </compare-item>
 
-      <compare-item value="1" rkey="PREPCON_temp">
+      <compare-item value="1" rkey="PREPCON_temp_art">
         <p>
           In
-          <r rkey="PREPCON_temp" /> werden Belege in
+          <r rkey="PREPCON_temp_art" /> werden Belege in
           zwei Formen angeboten:
         </p>
         <ul>
