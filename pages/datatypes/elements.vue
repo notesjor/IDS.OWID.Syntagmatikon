@@ -132,7 +132,7 @@ export default {
           erscheint zum
           einen eine Liste mit Links zu allen Einträgen im Sprichwörterbuch, die diese Komponente enthalten, zum
           anderen ein
-          Link zum <NuxtLink to="https://www.owid.de/docs/elex/start.jsp">elexiko</NuxtLink>-Eintrag.
+          Link zu einem Eintrag in <NuxtLink to="https://www.owid.de/docs/elex/start.jsp">elexiko</NuxtLink>. Des Weiteren kann eine Liste aller Komponenten mit den dazugehörigen Sprichwörtern abgerufen werden.
         </p>
         <template #explain>
 
@@ -141,6 +141,20 @@ export default {
           </div>
           <div class="caption">
             Komponentenangabe im Artikel „Der Ton macht die Musik“ mit Liste der Komponente <em>machen</em>
+          </div>
+
+           <div class="exampleImg">
+            <NuxtImage src="/img/datatypes/elements/bla.png" alt="Beispielgrafik 2" />
+          </div>
+          <div class="caption">
+            Liste von Sprichworteinträgen mit der Komponente <em>machen</em> und Verlinkung zum elexiko-Eintrag „machen“ <em>machen</em>
+          </div>
+
+           <div class="exampleImg">
+            <NuxtImage src="/img/datatypes/elements/bla.png" alt="Beispielgrafik 3" />
+          </div>
+          <div class="caption">
+            Ausschnitt aus der Liste aller Komponenten im Sprichwörterbuch
           </div>
         </template>
       </compare-item>

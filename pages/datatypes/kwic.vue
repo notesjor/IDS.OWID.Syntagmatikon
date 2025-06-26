@@ -34,7 +34,7 @@ export default {
     <!-- NOTE: in Filter werden die Ressourcen angegeben -->
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
-    <compare :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'SpruchList', 'SPRW', 'WVBF']">
+    <compare :filter="['PREPCON_ex', 'PREPCON_temp_art', 'PREPCON_temp_inv', 'PREPCON_kon', 'SpruchList', 'SPRW', 'WVBF']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/datatypes/kwics/kwics_all.png" style="text-align: center;" alt="Beispielgrafik 1" />
@@ -58,30 +58,18 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="2" rkey="PREPCON_temp">
+      <compare-item value="2" rkey="PREPCON_temp_art">
         <p>
           In
-          <r rkey="PREPCON_temp" /> kann man automatisch
-          selektierte
-          KWICs an unterschiedlichen Stellen mit einer Zufallsauswahl abrufen:
+          <r rkey="PREPCON_temp_art" /> sind KWICs in folgenden Angaben abrufbar:
         </p>
-
-        <p> Rubrik „Kurzartikel“</p>
         <ul>
-          <li>in ‚Häufigkeit im Korpus‘ für die jeweilige Suchen/Frequenzen (Groß- und Kleinschreibung;
-            Großschreibung;
-            Kleinschreibung)</li>
-          <li>in ‚Typische Partnerwörter‘ für die jeweiligen Kookkurrenzcluster</li>
-          <li>in ‚Muster‘ für die jeweiligen Lückenfüllertabellen</li>
+          <li>in ‚Häufigkeit im Korpus‘ (für die jeweilige Suchanfragen)</li>
+          <li>in ‚Typische Partnerwörter‘ f(ür die jeweiligen Kookkurrenzcluster)</li>
+          <li>in ‚Muster‘ (für die jeweiligen Lückenfüllertabellen)</li>
         </ul>
-        <p>  Rubrik „Inventar“</p>
-        <ul>
-          <li>Verlinkung zu KWICs in
-            <r rkey="PREPCON_ex" />
-          </li>
-        </ul>
-        <template #explain>
-          <div class="exampleHeadline">Rubrik „Kurzartikel“</div>
+        
+         <template #explain>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/kwics/prepcon_temp_ohneUnterlass.png" alt="Beispielgrafik 1" />
           </div>
@@ -106,7 +94,17 @@ export default {
             Artikel „ohne Unterlass“ (Rubrik „Kurzartikel“: ‚Muster‘)
           </div>
 
-          <div class="exampleHeadline">Rubrik „Inventar“</div>
+          
+        </template>
+      </compare-item>
+
+      <compare-item value="3" rkey="PREPCON_temp_inv">
+        <p>
+          In
+          <r rkey="PREPCON_temp_inv" /> linken die Einträge auf die KWICs von <r rkey="PREPCON_ex" />.
+        </p>
+
+        <template #explain>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/kwics/prepcon_temp_amHeiligabend.png" alt="Beispielgrafik 4" />
           </div>
@@ -116,7 +114,8 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="3" rkey="PREPCON_kon">
+
+      <compare-item value="4" rkey="PREPCON_kon">
         <p>
           In
           <r rkey="PREPCON_kon" /> kann man automatisch
@@ -185,7 +184,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="4" rkey="SpruchList">
+      <compare-item value="5" rkey="SpruchList">
         <p>
           In
           <r rkey="SpruchList" /> werden für die weite
@@ -202,7 +201,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="5" rkey="SPRW">
+      <compare-item value="6" rkey="SPRW">
         <p>
           <r rkey="SPRW" /> bietet einen dynamischen Zugang zu
           automatisch
@@ -221,7 +220,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="6" rkey="WVBF">
+      <compare-item value="7" rkey="WVBF">
         <p>
           In
           <r rkey="WVBF" /> werden automatisch selektierte KWICs

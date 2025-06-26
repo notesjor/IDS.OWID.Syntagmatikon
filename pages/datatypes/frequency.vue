@@ -42,7 +42,7 @@ export default {
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
     <compare
-      :filter="['KoMuX', 'PhrasKomp', 'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'SpruchList', 'WVBF', 'Redeeinleiter']">
+      :filter="['KoMuX', 'PhrasKomp', 'PREPCON_ex', 'PREPCON_temp_art', 'PREPCON_temp_inv', 'PREPCON_kon', 'SpruchList', 'WVBF', 'Redeeinleiter']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/datatypes/frequency/frequencies_all.png" style="text-align: center;"
@@ -139,7 +139,7 @@ export default {
 
           <div class="caption">
             <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?prep=%C3%BCber" />
-            Ausschnitt aus der Frequenzliste für Verbindungen mit Präposition <em>über</em> und nachgestellten Nomen
+            Ausschnitt aus der Frequenzliste für Verbindungen mit Präposition <em>über</em> und nachgestellten Nomina
             
           </div>
 
@@ -155,27 +155,16 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="4" rkey="PREPCON_temp">
+      <compare-item value="4" rkey="PREPCON_temp_art">
         <p>
-          <r rkey="PREPCON_temp" /> bietet zwei Typen von
-          Frequenzangaben
-          an:
-        </p>
-        <ul>
-          <li>Häufigkeitsangaben für eine PN in „Kurzartikel zu temporalen Zweiworteinheiten“ mit drei Frequenzen und
-            ihren zugrunde liegenden Suchanfragen Präposition in (Groß- und Kleinschreibung zusammen/einzeln plus
-            Nomen in unmittelbarer Folge)</li>
-          <li>Frequenzliste in „Inventar temporaler Präposition-Nomen-Verbindungen“ mit Häufigkeitsangaben, die aus
-            <r rkey="PREPCON_ex" /> übernommen wurden und mit den Einträgen dort verlinkt sind.
-          </li>
-        </ul>
+          In <r rkey="PREPCON_temp_art" /> sind jeweils drei Häufigkeitsangaben für eine Präposition-Nomen-Verbindung sowie die ihnen zugrunde liegenden Suchanfragen (Groß- und Kleinschreibung getrennt; alle Schreibungen) abrufbar. Für die Groß- und die Kleinscheibung ist jeweils eine KWIC-Zufallsauswahl hinterlegt.</p>
 
         <template #explain>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/frequency/prept_part_01.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Frequenzangaben zu Suchanfragen im Artikel „über Nacht“:
+            Frequenzangaben zu Suchanfragen im Eintrag „über Nacht“:
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/frequency/prept_part_02.png" alt="Beispielgrafik 2" />
@@ -183,10 +172,16 @@ export default {
           <div class="caption">
             Durch Klick auf die Frequenzen wird die dazugehörige Suchanfrage und Korpusinformation gezeigt.
           </div>
+        </template>
+      </compare-item>
 
-          <p style="margin-top: 10px;">
+      <compare-item value="5" rkey="PREPCON_temp_inv">
+        <p>
+          In <r rkey="PREPCON_temp_inv" /> sind Listen mit Häufigkeitsangaben abrufbar. Diese wurden aus <r rkey="PREPCON_ex" /> übernommen und mit den Einträgen dort verlinkt.
+        </p>
 
-          </p>
+        <template #explain>
+         
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/frequency/prept_part_03.png" alt="Beispielgrafik 1" />
           </div>
@@ -204,7 +199,8 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="5" rkey="PREPCON_kon"
+
+      <compare-item value="6" rkey="PREPCON_kon"
         description="Kontrastive Darstellung von Präposition-Nomen-Verbindungen im Kontext - Rubrik: „Quantitative Angaben“">
         <p>
           In
@@ -234,7 +230,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="6" rkey="SpruchList" description="Frequenzangaben in SpruchList">
+      <compare-item value="7" rkey="SpruchList" description="Frequenzangaben in SpruchList">
 
         <p>
           Die Frequenzangaben in
@@ -257,7 +253,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="7" rkey="WVBF" description="Frequenzangaben im Wortverbindungsfeld GRUND">
+      <compare-item value="8" rkey="WVBF" description="Frequenzangaben im Wortverbindungsfeld GRUND">
 
         <p>
           In
@@ -288,7 +284,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="8" rkey="Redeeinleiter"
+      <compare-item value="9" rkey="Redeeinleiter"
         description="Frequenzangaben im 'Kleinen Wörterbuch der Redeeinleiter'">
 
         <p>

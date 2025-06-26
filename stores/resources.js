@@ -33,7 +33,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "KWICs", 
             "Belege"
           ],
-          search_patterns: ["Dynamische Erschließung"],
+          search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Präpositionen"],
         },
         {
@@ -57,7 +57,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Felder",
             "Belege"
           ],
-          search_patterns: ["Dynamische Erschließung"],
+          search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Präpositionen"],
         },
         {
@@ -77,7 +77,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "KWICs",
             "Kategoriale Label",
           ],
-          search_patterns: ["Dynamische Erschließung"],
+          search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Präpositionen"],
         },
            {
@@ -101,7 +101,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Felder",
             "Belege"
           ],
-          search_patterns: ["Dynamische Erschließung"],
+          search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Präpositionen"],
         },
         {
@@ -148,7 +148,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Kategoriale Label",
           ],
           search_patterns: [
-            "Dynamische Erschließung",
+            "dynamische Erschließung",
           ],
           search_parts: ["Nomina", "Verben", "Präpositionen", "Adjektive"],
         },
@@ -187,7 +187,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Frequenzen",
             "KWICs",
             "Belege"],
-          search_patterns: ["Dynamische Erschließung"],
+          search_patterns: ["dynamische Erschließung"],
           search_parts: ["Feste Sätze"],
         },
         {
@@ -208,7 +208,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Belege"
           ],
           search_patterns: [
-            "Dynamische Erschließung",
+            "dynamische Erschließung",
           ],
           search_parts: [
             "Nomina",
@@ -231,7 +231,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Belege",
             "Kategoriale Label"
           ],
-          search_patterns: ["Dynamische Erschließung"],
+          search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Verben", "Phraseme"],
         },
         {
@@ -273,7 +273,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Belege"
           ],
           search_patterns: [
-            "Dynamische Erschließung",
+            "dynamische Erschließung",
           ],
           search_parts: [
             "Verben",
@@ -282,7 +282,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
         },
         {
           key: "WVBF",
-          nameShort: "WV-Feld GRUND",
+          nameShort: "WV-Feld Prep+GRUND",
           nameLong: "Wortverbindungsfeld zu Präposition+GRUND",
           description:
             "Das <b>Wortverbindungsfeld GRUND</b> visualisiert die Vernetzung von Wortverbindungen und semiabstrakten Mustern des Bezugslexems GRUND in Kombination mit den Präpositionen <em>aus; auf; in; mit</em> und <em>ohne</em> (basierend auf Steyer 2013). Die hierarchisch angeordneten 50 Knoten bündeln jeweils automatisch ermittelte Angaben wie Frequenz; KWIC; Kookkurrenz; Slot-Füller und inhaltliche Beschreibungen. Bei diesem Präsentationsformat rücken die systematisierten Korpusdaten selbst ins Zentrum der Einträge.",
@@ -324,7 +324,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Belege", 
             "Narrative Beschreibungen",
             "Komponenten",
-            "Felder"
           ],
           search_patterns: [
             "Lexikografische Angabe",

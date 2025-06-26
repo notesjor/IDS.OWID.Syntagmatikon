@@ -278,7 +278,7 @@ export default {
       <compare-item value="8" rkey="DTWW">
         <p>
           In
-          <r rkey="SPRW" /> illustrieren bis zu drei
+          <r rkey="DTWW" /> illustrieren bis zu drei
           ausgewählte
           Belege den Gebrauch der deutschen Wortverbindungen in der Domäne Wirtschaft.
         </p>

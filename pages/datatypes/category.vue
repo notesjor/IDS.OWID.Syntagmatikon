@@ -28,14 +28,30 @@ export default {
     <!-- NOTE: in Filter werden die Ressourcen angegeben -->
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
-    <compare :filter="['PREPCON_kon', 'KoMuX', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'WVBF']">
+    <compare :filter="['PREPCON_temp_inv', 'PREPCON_kon', 'KoMuX', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'WVBF']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/datatypes/categories/categories_all.png" style="text-align: center;" />
         </div>
       </compare-item>
 
-      <compare-item value="1" rkey="PREPCON_kon">
+       <compare-item value="1" rkey="PREPCON_temp_inv">
+        <p>
+          In <r rkey="PREPCON_temp_inv" /> werden die Einträge gemäß folgender Hauptktegorien geordnet: reine TEMPORALANGABEN; TEMPORALANGABEN MIT EIGENNAMEN (WOCHENTAGE, MONATE; FEIERTAGE; WOCHENTAGE ALS ZWEITGLIED, TAGESZEITEN ALS ZWEITGLIED).
+        </p>
+        <template #explain>
+          <div class="exampleImg">    
+            <NuxtImage src="/img/datatypes/categories/bla.png" alt="Sortierung temporaler PNs" />
+          </div>
+          <div class="caption">
+             <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/inventar/inventar_feier.html" />  
+            Sortierung temporaler PNs nach der NOMEN-Kategorie FEIERTAGE in der Teilressource „Inventar temporaler Präposition-Nomen-Verbindungen“
+          </div>
+        </template>
+
+      </compare-item>
+
+      <compare-item value="2" rkey="PREPCON_kon">
         <p>
           In
           <r rkey="PREPCON_kon" /> gibt es zum einen
@@ -69,7 +85,7 @@ export default {
 
       </compare-item>
 
-      <compare-item value="2" rkey="KoMuX">
+      <compare-item value="3" rkey="KoMuX">
         <p>
           In
           <r rkey="KoMuX" />
@@ -110,7 +126,7 @@ export default {
 
       </compare-item>
 
-      <compare-item value="3" rkey="PhrasKomp">
+      <compare-item value="4" rkey="PhrasKomp">
         <p>
           In
           <r rkey="PhrasKomp" />
@@ -154,7 +170,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="4" rkey="Redeeinleiter">
+      <compare-item value="5" rkey="Redeeinleiter">
         <p>
           In
           <r rkey="Redeeinleiter" /> ist, basierend
@@ -177,7 +193,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="5" rkey="Verlaufsformen">
+      <compare-item value="6" rkey="Verlaufsformen">
         <p>
           In
           <r rkey="Verlaufsformen" /> werden
@@ -221,12 +237,11 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="6" rkey="FesteWV">
+      <compare-item value="7" rkey="FesteWV">
         <p>
           In
-          <r rkey="FesteWV" /> in OWID, Rubrik „Musterartikel“,
-          werden die Stichwörter nach Phrasenkategorie und Mehrwortkategorie (nach Fleischer 1997; Burger
-          2015)
+          <r rkey="FesteWV" /> in der Teilressource „Musterartikel“,
+          werden die Stichwörter nach Phrasenkategorie und Mehrwortkategorie
           klassifiziert.
         </p>
         <template #explain>
@@ -240,14 +255,14 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="7" rkey="WVBF">
+      <compare-item value="8" rkey="WVBF">
         <p>
           Im
           <r rkey="WVBF" /> werden Lückenfüller für
           Slots in den
           GRUND-Mustern klassifiziert, sowohl nach Wortarten u/o Phrasen als auch nach semantischen
           und/oder funktionalen
-          Merkmalen (s. Steyer 2013).
+          Merkmalen.
         </p>
         <template #explain>
           <div class="exampleImg">
