@@ -122,9 +122,9 @@ export default {
           selektierte
           KWICs an unterschiedlichen Stellen für die Ausgangssprache Deutsch und die Kontrastsprachen Spanisch und
           Slowakisch
-          mit Zufallsauswahl abrufen:
+          mit Zufallsauswahl abrufen.
         </p>
-        <p>Rubrik „Quantitative Angaben“</p>
+        <p>In „Quantitative Angaben“</p>
         <ul>
           <li>in ‚Häufigkeit im Korpus‘ für die jeweilige Suchen/Frequenzen (Groß- und Kleinschreibung;
             Großschreibung;
@@ -132,16 +132,16 @@ export default {
           <li>in ‚Typische Partnerwörter‘ für die jeweiligen Kookkurrenzcluster</li>
           <li>in ‚Muster‘ für die jeweiligen Lückenfüllertabellen</li>
         </ul>
-        <p>Rubrik „Gebrauchsaspekte“</p>
+        <p>In „Gebrauchsaspekte“</p>
         <ul>
           <li>für die manuell zusammengestellten Satelliten-Felder</li>
         </ul>
-        <p>Rubrik „Gebrauchsaspekte“</p>
+        <p>In „Gebrauchsaspekte“</p>
         <ul>
           <li>für die manuell systematisierten Lückenfüller</li>
         </ul>
         <template #explain>
-          <div class="exampleHeadline">Rubrik „Quantitative Angaben“: ‚Häufigkeit im Korpus‘</div>
+          <div class="exampleHeadline">„Quantitative Angaben“: ‚Häufigkeit im Korpus‘</div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantSuche.png" alt="Beispielgrafik 1" />
           </div>
@@ -155,7 +155,7 @@ export default {
             Ausschnitt aus KWIC-Anzeige (Kleinschreibung) im Artikel „mit Genugtuung - con satisfacción“
           </div>
 
-          <div class="exampleHeadline">Rubrik „Quantitative Angaben“: ‚Typische Partnerwörter‘)</div>
+          <div class="exampleHeadline">„Quantitative Angaben“: ‚Typische Partnerwörter‘</div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantPartner.png" alt="Beispielgrafik 3" />
           </div>
@@ -164,7 +164,7 @@ export default {
             Genugtuung“ (KWIC-Angaben nur für deutsche Daten verfügbar)
           </div>
 
-          <div class="exampleHeadline">Rubrik „Quantitative Angaben“: ‚Muster‘)</div>
+          <div class="exampleHeadline">„Quantitative Angaben“: ‚Muster‘</div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantMuster.png" alt="Beispielgrafik 4" />
           </div>
@@ -187,27 +187,21 @@ export default {
       <compare-item value="5" rkey="SpruchList">
         <p>
           In
-          <r rkey="SpruchList" /> werden für die weite
-          Suchanfrage eines
-          Eintrags automatisch selektierte KWICs angezeigt (bis 1000 Zufallsauswahl).
+          <r rkey="SpruchList" /> lassen sich zu jedem Eintrag automatisch selektierte KWICs (Zufallswahl 1000) für die weite Suchanfrage abrufen.
         </p>
         <template #explain>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/kwics/spruchList.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Ausschnitt aus KWIC-Anzeige im Eintrag „Ausnahmen bestätigen die Regel“
+            KWIC-Ausschnitt für die weite Suchanfrage im Eintrag „Ausnahmen bestätigen die Regel“
           </div>
         </template>
       </compare-item>
 
       <compare-item value="6" rkey="SPRW">
         <p>
-          <r rkey="SPRW" /> bietet einen dynamischen Zugang zu
-          automatisch
-          ermittetelten KWICs und Volltextstellen auf dem aktuellen Stand des DeReKo-W-Archivs. Dazu wurden
-          Suchanfragen
-          hinterlegt, die bei Aktivierung die COSMAS-II-Suche starten.
+          <r rkey="SPRW" /> bietet einen direkten Zugang zur Korpussuche. Als Ergebnis werden alle automatisch selektierten KWICs und Volltextstellen im W-Archiv angezeigt.
         </p>
         <template #explain>
 
