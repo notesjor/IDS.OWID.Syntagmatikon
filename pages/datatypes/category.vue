@@ -41,7 +41,7 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">    
-            <NuxtImage src="/img/datatypes/categories/bla.png" alt="Sortierung temporaler PNs" />
+            <NuxtImage src="/img/datatypes/categories/prepcon_temp_inv_feiertage.png" alt="Sortierung temporaler PNs" />
           </div>
           <div class="caption">
              <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/inventar/inventar_feier.html" />  

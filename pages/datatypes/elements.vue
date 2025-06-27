@@ -140,20 +140,23 @@ export default {
             <NuxtImage src="/img/datatypes/elements/SPRW_machen_fenster.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
+             <ScreenshotLink to="https://www.owid.de/artikel/401837" />
             Komponentenangabe im Artikel „Der Ton macht die Musik“ mit Liste der Komponente <em>machen</em>
           </div>
 
            <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/bla.png" alt="Beispielgrafik 2" />
+            <NuxtImage src="/img/datatypes/elements/SPRW_elexiko.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
+             <ScreenshotLink to="https://www.owid.de/artikel/280009" />
             Liste von Sprichworteinträgen mit der Komponente <em>machen</em> und Verlinkung zum elexiko-Eintrag „machen“ <em>machen</em>
           </div>
 
            <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/bla.png" alt="Beispielgrafik 3" />
+            <NuxtImage src="/img/datatypes/elements/SPRW_basiskomp.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
+            <ScreenshotLink to="https://www.owid.de/service/stichwortlisten/sprw_b" />
             Ausschnitt aus der Liste aller Komponenten im Sprichwörterbuch
           </div>
         </template>
