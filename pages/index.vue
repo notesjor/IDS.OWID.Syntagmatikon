@@ -146,7 +146,7 @@ export default {
               source: 'Phrasenkomposita-Inventar',
               article: 'Im-fremden-Bett-schlaf-ich-immer-schlecht-Sensibelchen',
               type: 'Phrasenkompositum',
-              href: 'http://uwv.ids-mannheim.de/plus/phraskomp/?search=Im-fremden-Bett-schlaf-ich-immer-schlecht-Sensibelchen',
+              href: 'http://uwv.ids-mannheim.de/phraskomp/?search=Im-fremden-Bett-schlaf-ich-immer-schlecht-Sensibelchen',
               color: '#0d65c2'
             }
             ]
@@ -238,7 +238,7 @@ export default {
               source: 'Feste Wortverbindungen in OWID',
               article: 'im eigenen Saft schmoren',
               type: 'Verbales Phrasem',
-              href: 'https://www.owid.de/artikel/309167',
+              href: 'https://www.owid.de/artikel/309167/ohne%20%C3%A4u%C3%9Fere%20Anregung',
               color: '#0d65c2'
             }
             ]
