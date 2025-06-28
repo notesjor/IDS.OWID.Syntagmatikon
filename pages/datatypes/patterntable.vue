@@ -53,16 +53,14 @@ export default {
             <NuxtImage src="/img/datatypes/patterntables/prepcon_temp_amXEnde_window.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Ausschnitt aus der Lückenfüllertabelle <em>am</em> X <em>Ende</em> im Artikel „am Ende“
-            (Rubrik „Kurzartikel“; ‚Muster‘)
+             <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/htmlfiles/fillerfiles/Filler_Am_o_am_Xx_Ende_1_Field1.html"/> Ausschnitt aus der Lückenfüllertabelle <em>am</em> X <em>Ende</em> im Artikel „am Ende“ (Rubrik „Kurzartikel“; ‚Muster‘)
           </div>
-
+ <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/htmlfiles/fillerfiles/Filler_am_o_Am_Ende_X_X_8_Field2_3.html"/>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/patterntables/prepcon_temp_amEndeX_window.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            Ausschnitt aus der Lückenfüllertabelle <em>am Ende</em> X im Artikel „am Ende“ (Rubrik
-            „Kurzartikel“; ‚Muster‘)
+            Ausschnitt aus der Lückenfüllertabelle <em>am Ende</em> X im Artikel „am Ende“ (Rubrik „Kurzartikel“; ‚Muster‘)
           </div>
         </template>
       </compare-item>
@@ -86,7 +84,7 @@ export default {
             <NuxtImage src="/img/datatypes/patterntables/prepcon_kon_deutsch.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Ausschnitt aus der Lückenfüllertabelle des Musters <em>mit</em> X <em>Genugtuung</em> im
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/de/Filler_mit_o_Mit_Xx_Genugtuung_24_Field1.html"/> Ausschnitt aus der Lückenfüllertabelle des Musters <em>mit</em> X <em>Genugtuung</em> im
             Artikel „mit Genugtuung – con satisfacción“ (Rubrik „Quantitative Angaben: ‚Muster‘)
           </div>
 
@@ -94,7 +92,7 @@ export default {
             <NuxtImage src="/img/datatypes/patterntables/prepcon_kon_spanisch.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            Ausschnitt aus der Lückenfüllertabelle des Musters <em>con</em> X <em>satisfacción</em> im
+             <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/es/Filler_con_o_Con_Xx_satisfaccin_35_Field1.html"/> Ausschnitt aus der Lückenfüllertabelle des Musters <em>con</em> X <em>satisfacción</em> im
             Artikel „mit Genugtuung – con satisfacción“ (Rubrik „Quantitative Angaben: ‚Muster‘)
           </div>
         </template>
@@ -114,7 +112,7 @@ export default {
             <NuxtImage src="/img/datatypes/patterntables/wvGrund_kontext.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Ausschnitt aus der Lückenfüllertabelle des Musters <em>auf Grund von</em> SUB im Knoten „auf
+             <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/extrafiles/auf_GRUND/auf_Grund_von_SUB/Fillers_Auf_o_auf_Grund_von_X.xml.html"/> Ausschnitt aus der Lückenfüllertabelle des Musters <em>auf Grund von</em> SUB im Knoten „auf
             Grund X“
           </div>
         </template>

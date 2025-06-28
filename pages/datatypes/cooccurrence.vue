@@ -60,13 +60,13 @@ export default {
             <NuxtImage src="/img/datatypes/cooccurrence/prepcon_temp_kook.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            Ausschnitt aus Kookkurrenzliste im Artikel „am Ende“
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/htmlfiles/clusterfiles/Clusters_amEnde_1_1_KA_oFW_3.html" />Ausschnitt aus Kookkurrenzliste im Artikel „am Ende“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/cooccurrence/prepcon_temp_kwics.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-            KWIC-Cluster im Artikel „am Ende“
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/htmlfiles/clusterfiles/Clusters_amEnde_1_1_KA_oFW_3_XML/Kwics_Tunnels_Licht_erkennbar_5210.html" />KWIC-Cluster im Artikel „am Ende“
           </div>
         </template>
       </compare-item>
@@ -95,13 +95,13 @@ export default {
             <NuxtImage src="/img/datatypes/cooccurrence/prepcon_kon_kook_deutsch.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            Ausschnitt aus Kookkurrenzliste im Artikel „nach Belieben“
+           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/nach_Belieben/de/Clusters_nachBeliebenKA_1.html" /> Ausschnitt aus Kookkurrenzliste im Artikel „nach Belieben“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/cooccurrence/prepcon_kon_kook_spanisch.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-            Ausschnitt aus Kookkurrenzliste im Artikel „a su gusto“
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/nach_Belieben/es/Clusters_AllTags_A_a_su_gusto_coll_5.html" />Ausschnitt aus Kookkurrenzliste im Artikel „a su gusto“
           </div>
         </template>
       </compare-item>
@@ -123,7 +123,7 @@ export default {
             <NuxtImage src="/img/datatypes/cooccurrence/wvfeld_eigentlich.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Ausschitt aus dem Kookkurrenzprofil von <em>eigentlich</em> im WV-Feld-Knoten „im tiefsten
+             <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/extrafiles/im_GRUND/im_tiefsten_Grunde/Kook_eigentlich.txt.xml.html" /> Ausschitt aus dem Kookkurrenzprofil von <em>eigentlich</em> im WV-Feld-Knoten „im tiefsten
             Grunde“
           </div>
         </template>
