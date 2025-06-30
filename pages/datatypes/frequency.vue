@@ -147,8 +147,7 @@ export default {
             <NuxtImage src="/img/datatypes/frequency/prepe_part_02.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            <div style="text-align:right" class="ScreenshotLinkPlaceholder"><NuxtLink to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=Nacht">zu diesem Beispiel</NuxtLink>
-           </div>
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=Nacht" />
               Ausschnitt aus der Frequenzliste für Verbindungen mit Nomen <em>Nacht</em> und vorangestellten
             Präpositionen
           </div>
@@ -164,12 +163,14 @@ export default {
             <NuxtImage src="/img/datatypes/frequency/prept_part_01.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Frequenzangaben zu Suchanfragen im Eintrag „über Nacht“:
+           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ueber_Nacht/index.html" />
+           Frequenzangaben zu Suchanfragen im Eintrag „über Nacht“:
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/frequency/prept_part_02.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ueber_Nacht/index.html" />
             Durch Klick auf die Frequenzen wird die dazugehörige Suchanfrage und Korpusinformation gezeigt.
           </div>
         </template>
@@ -186,14 +187,14 @@ export default {
             <NuxtImage src="/img/datatypes/frequency/prept_part_03.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Ausschnitt aus den Frequenzangaben der Kategorie FEIERTAGE. Die Einträge sind mit
+           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/inventar/inventar_feier.html" /> Ausschnitt aus den Frequenzangaben der Kategorie FEIERTAGE. Die Einträge sind mit
             <r rkey="PREPCON_ex" /> verlinkt.
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/frequency/prept_part_04.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            Verlinkter Eintrag „Heiligabend“ in
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=Heiligabend" />Verlinkter Eintrag „Heiligabend“ in
             <r rkey="PREPCON_ex" />
           </div>
         </template>
@@ -217,14 +218,14 @@ export default {
             <NuxtImage src="/img/datatypes/frequency/prepk_part_01.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Darstellung von Frequenzen und Suchanfragen für die Präposition-Nomen-Kombination "am Anfang" – "al
+           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html" />Darstellung von Frequenzen und Suchanfragen für die Präposition-Nomen-Kombination "am Anfang" – "al
             principio" (Deutsch-Spanisch).
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/frequency/prepk_part_02.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            Durch Anklicken der Frequenzen wird die dazugehörige Suchanfrage und Korpusinformation gezeigt.
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html" /> Durch Anklicken der Frequenzen wird die dazugehörige Suchanfrage und Korpusinformation gezeigt.
           </div>
 
         </template>
@@ -270,7 +271,7 @@ export default {
             <NuxtImage src="/img/datatypes/frequency/wvg_part_01.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Frequenzangaben zum PN-Knoten "mit Grund" und zugrunde liegende Suchanfragen
+            <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/mit_Grund_ID1364235183644.html" />Frequenzangaben zum PN-Knoten "mit Grund" und zugrunde liegende Suchanfragen
           </div>
 
           <p style="margin-top: 10px;">
@@ -279,7 +280,8 @@ export default {
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/frequency/wvg_part_02.png" alt="Beispielgrafik 2" />
           </div>
-          <div class=caption>Frequenzangaben zum PN-Knoten "im Grunde" und zugrunde liegende Suchanfragen</div>
+          <div class=caption> <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/im_Grunde_ID1364235183656.html" />
+            Frequenzangaben zum PN-Knoten "im Grunde" und zugrunde liegende Suchanfragen</div>
 
         </template>
       </compare-item>
