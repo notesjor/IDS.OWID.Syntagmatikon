@@ -55,11 +55,12 @@ export default {
           <div class="caption">
              <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/htmlfiles/fillerfiles/Filler_Am_o_am_Xx_Ende_1_Field1.html"/> Ausschnitt aus der Lückenfüllertabelle <em>am</em> X <em>Ende</em> im Artikel „am Ende“ (Rubrik „Kurzartikel“; ‚Muster‘)
           </div>
- <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/htmlfiles/fillerfiles/Filler_am_o_Am_Ende_X_X_8_Field2_3.html"/>
+
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/patterntables/prepcon_temp_amEndeX_window.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
+             <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/htmlfiles/fillerfiles/Filler_am_o_Am_Ende_X_X_8_Field2_3.html"/>
             Ausschnitt aus der Lückenfüllertabelle <em>am Ende</em> X im Artikel „am Ende“ (Rubrik „Kurzartikel“; ‚Muster‘)
           </div>
         </template>

@@ -227,7 +227,7 @@ export default {
             <NuxtImage src="/img/datatypes/kwics/wvGrund.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-/uwvnodes_html/aus_ADJ_Gruenden_ID1364235183677.html" /> Ausschnitt aus KWIC-Anzeige des Knotens „aus ADJ Gründen“
+            <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/aus_ADJ_Gruenden_ID1364235183677.html" /> Ausschnitt aus KWIC-Anzeige des Knotens „aus ADJ Gründen“
           </div>
         </template>
       </compare-item>
