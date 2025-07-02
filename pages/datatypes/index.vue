@@ -66,13 +66,13 @@ useHead({
 
         <div class="container">
 
-          <info-box :color1="color1" title="Kategoriale Label" link="/datatypes/category" :filter="['KoMuX', 'PhrasKomp',
+          <info-box :color1="color1" title="Kategoriale Label" link="/datatypes/category" :filter="['PREPCON_temp_inv', 'KoMuX', 'PhrasKomp',
             'PREPCON_kon', 'MAP', 'WVBF', 'Verlaufsformen', 'FesteWV', 'Redeeinleiter']">
             Linguistische Etikettierung von Merkmalen sprachlicher Einheiten
           </info-box>
 
           <info-box :color1="color1" title="Belege" link="/datatypes/matches" :filter="['WVBF', 'Redeeinleiter', 'PhrasKomp',
-            'PREPCON_temp_art', 'PREPCON_kon', 'Verlaufsformen', 'FesteWV', 'DTWW', 'SPRW']">
+            'PREPCON_temp_art', 'PREPCON_kon', 'Verlaufsformen', 'FesteWV', 'DTWW', 'SPRW', 'MAP']">
             Manuell ausgewählte KWICs und größere Volltextstellen
           </info-box>
 

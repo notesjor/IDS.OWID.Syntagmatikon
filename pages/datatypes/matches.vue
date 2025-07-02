@@ -30,7 +30,7 @@ export default {
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
     <compare
-      :filter="['PREPCON_temp_art', 'PREPCON_kon', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'SPRW', 'DTWW', 'WVBF']">
+      :filter="['PREPCON_temp_art', 'PREPCON_kon', 'MAP', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'SPRW', 'DTWW', 'WVBF']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/datatypes/matches/matches_all.png" style="text-align: center;" alt="Beispielgrafik 1" />
@@ -103,7 +103,17 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="3" rkey="PhrasKomp">
+       <compare-item value="3" rkey="MAP">
+        <p>
+          Informationen zu
+          <r rkey="MAP" />
+          sind noch in Vorbereitung.
+        </p>
+
+        <!-- TODO: MAP -->
+      </compare-item>
+
+      <compare-item value="4" rkey="PhrasKomp">
         <p>
           In
           <r rkey="PhrasKomp" />
@@ -127,7 +137,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="4" rkey="Redeeinleiter">
+      <compare-item value="5" rkey="Redeeinleiter">
         <p>
           In
           <r rkey="Redeeinleiter" /> ist in der
@@ -151,7 +161,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="5" rkey="Verlaufsformen">
+      <compare-item value="6" rkey="Verlaufsformen">
         <p>
           In
           <r rkey="Verlaufsformen" /> werden manuell
@@ -170,7 +180,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="6" rkey="FesteWV">
+      <compare-item value="7" rkey="FesteWV">
         <p>
           In
           <r rkey="FesteWV" /> illustrieren die
@@ -233,7 +243,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="7" rkey="SPRW">
+      <compare-item value="8" rkey="SPRW">
         <p>
           Im
           <r rkey="SPRW" /> werden Volltextbelege zu
@@ -275,7 +285,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="8" rkey="DTWW">
+      <compare-item value="9" rkey="DTWW">
         <p>
           In
           <r rkey="DTWW" /> illustrieren bis zu drei
@@ -294,7 +304,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="9" rkey="WVBF">
+      <compare-item value="10" rkey="WVBF">
         <p>
           In
           <r rkey="WVBF" />werden Volltextbelege in

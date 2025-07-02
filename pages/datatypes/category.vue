@@ -28,7 +28,7 @@ export default {
     <!-- NOTE: in Filter werden die Ressourcen angegeben -->
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
-    <compare :filter="['PREPCON_temp_inv', 'PREPCON_kon', 'KoMuX', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'WVBF']">
+    <compare :filter="['PREPCON_temp_inv', 'PREPCON_kon', 'KoMuX', 'MAP', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'WVBF']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/datatypes/categories/categories_all.png" style="text-align: center;" />
@@ -126,7 +126,18 @@ export default {
 
       </compare-item>
 
-      <compare-item value="4" rkey="PhrasKomp">
+        <compare-item value="4" rkey="MAP">
+        <p>
+          Informationen zu
+          <r rkey="MAP" />
+          sind noch in Vorbereitung.
+        </p>
+
+        <!-- TODO: MAP -->
+      </compare-item>
+
+
+      <compare-item value="5" rkey="PhrasKomp">
         <p>
           In
           <r rkey="PhrasKomp" />
@@ -170,7 +181,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="5" rkey="Redeeinleiter">
+      <compare-item value="6" rkey="Redeeinleiter">
         <p>
           In
           <r rkey="Redeeinleiter" /> ist, basierend
@@ -193,7 +204,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="6" rkey="Verlaufsformen">
+      <compare-item value="7" rkey="Verlaufsformen">
         <p>
           In
           <r rkey="Verlaufsformen" /> werden
@@ -237,7 +248,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="7" rkey="FesteWV">
+      <compare-item value="8" rkey="FesteWV">
         <p>
           In
           <r rkey="FesteWV" /> in der Teilressource „Musterartikel“,
@@ -255,7 +266,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="8" rkey="WVBF">
+      <compare-item value="9" rkey="WVBF">
         <p>
           Im
           <r rkey="WVBF" /> werden Lückenfüller für
