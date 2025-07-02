@@ -72,21 +72,20 @@ export default {
       <compare-item value="3" rkey="MAP"
         description="Musterbank argumentmarkierender Präpositionen - Information: Prädikate (Verbalprädikate und Prädikatsgefüge)">
         <p>
-          Die verbalen Prädikatsfelder in
-          <r rkey="MAP" /> sind
-          geordnet
-          nach Prädikatstyp (V: Verb, V-m: mediales Verb, PG:
-          Prädikatsgefüge, PG-m: mediales Prädikatsgefüge). Alle gelisteten Prädikate sind mit jeweils einem
-          Korpusbeleg illustriert. Bei instanziierenden Verben, die auch in der elektronischen Fassung des
-          Valenzwörterbuchs <a href="https://grammis.ids-mannheim.de/verbvalenz">VALBU</a> behandelt werden,
-          ist der relevante Eintrag verlinkt.
+          In <r rkey="MAP" /> werden Gruppierungen der Daten auf verschiedenen semantischen, grammatischen und lexikalischen Ebenen vorgenommen. Auf der Ebene individueller Muster werden semantische Relationen zwischen deren einzelnen Komponenten sowie zwischen der schematischen Musterbedeutung im Ganzen und der Semantik spezifischer eingesetzter Prädikate beschrieben. Syntaktisch werden Gruppen zugehöriger Belege mit identischer grammatischer Markierung ausgewiesen, lexikalisch Klassen von Prädikaten verschiedener struktureller Typen (z.B. einfache Verben vs. komplexe Prädikatsgefüge). Auf einer höheren Ebene werden semantisch verwandte Muster zu übergeordneten Familien zusammengefasst, die in eigenständigen Beschreibungen behandelt werden.
         </p>
 
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/fields/map_part_01.png" alt="Beispielgrafik 1" />
+            <NuxtImage src="" alt="Beispielgrafik 1" />
           </div>
-          <div class="caption">Ausschnitt aus Prädikatsfeldern im Artikel "Furcht": JMD fürchtet JMDN/ETW.</div>
+          <div class="caption">
+            <ScreenshotLink to="https://www.owid.de/plus/map/article/nach/entsprechen/assoziation" />Einteilung musterinstanziierender Prädikate nach strukturellem Typ</div>
+             <div class="exampleImg">
+            <NuxtImage src="" alt="Beispielgrafik 2" />
+          </div>
+          <div class="caption">
+            <ScreenshotLink to="https://www.owid.de/plus/map/article/vor/bedrohen" />Feldangabe zur Muster-Familie BEDROHEN</div>
         </template>
       </compare-item>
 
