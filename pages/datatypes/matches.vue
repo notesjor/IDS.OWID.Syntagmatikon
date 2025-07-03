@@ -79,26 +79,26 @@ export default {
 
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/matches/prepcon_kon_kochrezepte_header.png" alt="Beispielgrafik 1" /> 
-<ScreenshotLink to="https://www.owid.de/plus/map/article/nach/entsprechen/assoziation" />
+<ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />
             <NuxtImage src="/img/datatypes/matches/prepcon_kon_kochrezepte_deutsch.png" alt="Beispielgrafik 2" />
-<ScreenshotLink to="https://www.owid.de/plus/map/article/nach/entsprechen/assoziation" />
+<ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />
             <NuxtImage src="/img/datatypes/matches/prepcon_kon_kochrezepte_spanisch.png" alt="Beispielgrafik 3" />
             
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/plus/map/article/nach/entsprechen/assoziation" /> Belege zum Gebrauchsaspekt ‚Kochrezept‘ im Artikel „nach Belieben – a su gusto“
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" /> Belege zum Gebrauchsaspekt ‚Kochrezept‘ im Artikel „nach Belieben – a su gusto“
           </div>
 
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_header.png" alt="Beispielgrafik 1" /> <ScreenshotLink to="https://www.owid.de/plus/map/article/nach/entsprechen/assoziation" />
+            <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_header.png" alt="Beispielgrafik 1" /> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />
 
-            <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_deutsch.png" alt="Beispielgrafik 2" /> <ScreenshotLink to="https://www.owid.de/plus/map/article/nach/entsprechen/assoziation" />
+            <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_deutsch.png" alt="Beispielgrafik 2" /> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />
 
             <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_slowakisch.png"
               alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/plus/map/article/nach/entsprechen/assoziation" />Belege für den Gebrauchsaspekt ‚Dominantes Handeln ohne Korrektiv‘ im Artikel „nach Belieben
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />Belege für den Gebrauchsaspekt ‚Dominantes Handeln ohne Korrektiv‘ im Artikel „nach Belieben
             - podľa ľubovôle“
           </div>
         </template>

@@ -68,7 +68,7 @@ export default {
             <NuxtImage src="/img/datatypes/narration/prepcon_kon_muster_div.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-            c Kommentar zu lexikalischen Erweiterung <em>mit einer gewissen Genugtuung</em> des Muster
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/muster/mitGenugtuung.html" /> c Kommentar zu lexikalischen Erweiterung <em>mit einer gewissen Genugtuung</em> des Muster
             <em>mit X Genugtuung</em> im Artikel „mit Genugtuung – con satisfacción“ (Divergenz)
           </div>
           <div class="exampleImg">
@@ -85,7 +85,6 @@ export default {
       <compare-item value="2" rkey="MAP">
         <p>
           Narrative Beschreibungen bilden den Kern von <r rkey="MAP" />. Der Fokus liegt dabei auf den Bedeutungsmerkmalen der beschriebenen Muster. Ausführlich kommentiert werden etwa der Zusammenhang der Musterbedeutung mit der räumlichen Quellbedeutung der jeweiligen Präposition sowie der Zusammenhang mit (und zwischen) verschiedenen Klassen von lexikalischen Füllern, die in einem Muster auftreten. Daneben werden auch etwaige syntaktische, verwendungskontextuelle und phraseologische Besonderheiten illustriert und erläutert.
-          sind noch in Vorbereitung.
         </p>
 <template #explain>
           <div class="exampleImg">
@@ -181,7 +180,7 @@ export default {
             <NuxtImage src="/img/datatypes/narration/wvGrund_fueller2.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-             <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/aus_ADJ_Gruenden_ID1364235183677.htm" /> Ausgewählte Kommentare zu Lückenfüllern im Knoten „aus ADJ Gründen“
+             <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/aus_ADJ_Gruenden_ID1364235183677.html" /> Ausgewählte Kommentare zu Lückenfüllern im Knoten „aus ADJ Gründen“
           </div>
         </template>
       </compare-item>
