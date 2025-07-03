@@ -71,6 +71,7 @@ export default {
               alt="Beispiel nach Belieben" />
           </div>
           <div class="caption">
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/nach_Belieben/kontrastiv/nach_Belieben_VERBADVERB_und_VERBADVERB.html" />
             Label für Wortarten im Eintrag „nach Belieben X – a su gusto X“
           </div>
           <div class="exampleImg">
@@ -78,7 +79,7 @@ export default {
               alt="Beispiel mit Genugtuung" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/muster/mitGenugtuung.html" />Label für Wortarten und funktionale Merkmale im Eintrag „mit X Genugtuung – con X
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/kontrastiv/mit_ADJ_konnot_negativ_Genugtuung.html" />Label für Wortarten und funktionale Merkmale im Eintrag „mit X Genugtuung – con X
             satisfacción“
           </div>
         </template>

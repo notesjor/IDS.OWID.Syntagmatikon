@@ -92,7 +92,7 @@ export default {
            <NuxtImage src="" alt="Beispielgrafik 1" /> 
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/plus/map/article/vor/respekt" />Narrative Beschreibungen für das Muster <hi>Respekt</hi>
+            <ScreenshotLink to="https://www.owid.de/plus/map/article/vor/respekt" />Narrative Beschreibungen für das Muster RESPEKT
           </div>
         </template>
         <!-- TODO: MAP -->

@@ -110,16 +110,16 @@ export default {
         </p>
 <template #explain>
           <div class="exampleImg">
-           <NuxtImage src="" alt="Beispielgrafik 1" /> 
+           <NuxtImage src="/img/datatypes/matches/map_belege_medial.png" alt="Beispielgrafik 1" /> 
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/plus/map/kwic" />Belege_mit erweiterter Annotation für Medialkonstruktionen (MAP1)
+            <ScreenshotLink to="https://www.owid.de/plus/map/kwic" />Belege mit erweiterter Annotation für Medialkonstruktionen
           </div>
           <div class="exampleImg">
-           <NuxtImage src="" alt="Beispielgrafik 2" /> 
+           <NuxtImage src="/img/datatypes/matches/map_belege_schutz.png" alt="Beispielgrafik 2" /> 
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/plus/map/article/vor/bedrohen/schutz#predicates" />Belege für Prädikate des Musters SCHUTZ (MAP2)
+            <ScreenshotLink to="https://www.owid.de/plus/map/article/vor/bedrohen/schutz#predicates" />Belege für Prädikate des Musters SCHUTZ
           </div>
         </template>
         <!-- TODO: MAP -->
