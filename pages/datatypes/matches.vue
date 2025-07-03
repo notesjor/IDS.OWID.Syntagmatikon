@@ -54,14 +54,14 @@ export default {
             <NuxtImage src="/img/datatypes/matches/prepcon_temp_amEnde.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/index.html" />KWIC-Belege im Artikel „am Ende“ (Rubrik „Kurzartikel“)
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/index.html" />KWIC-Belege im Eintrag „am Ende“ 
           </div>
 
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/matches/prepcon_temp_amEnde_volltext.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/index.html" />Volltextbelege im Artikel „am Ende“ (Rubrik „Kurzartikel“)
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/index.html" />Volltextbelege im Eintrag „am Ende“ 
           </div>
         </template>
       </compare-item>
@@ -86,7 +86,7 @@ export default {
             
           </div>
           <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" /> Belege zum Gebrauchsaspekt ‚Kochrezept‘ im Artikel „nach Belieben – a su gusto“
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" /> Belege zum Gebrauchsaspekt ‚Kochrezept‘ im Eintrag „nach Belieben – a su gusto“
           </div>
 
           <div class="exampleImg">
@@ -98,7 +98,7 @@ export default {
               alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />Belege für den Gebrauchsaspekt ‚Dominantes Handeln ohne Korrektiv‘ im Artikel „nach Belieben
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />Belege für den Gebrauchsaspekt ‚Dominantes Handeln ohne Korrektiv‘ im Eintrag „nach Belieben
             - podľa ľubovôle“
           </div>
         </template>
@@ -198,14 +198,14 @@ export default {
           ausgewählten Belege
           unterschiedliche Aspekte des Gebrauchs.
         </p>
-        <p>Rubrik „Musterartikel“</p>
+        <p>Teilressource „Musterartikel“</p>
         <ul>
           <li>Bedeutung</li>
           <li>Typische Kontextmuster</li>
           <li>Wertungsaspekt </li>
           <li>Funktion in der Kommunikation</li>
         </ul>
-        <p>Rubrik „Wortverbindungen mit Adjektiven“</p>
+        <p>Teilressource „Wortverbindungen mit Adjektiven“</p>
         <ul>
           <li>Gebrauchsbeschreibung</li>
           <li>Typische Kontextmuster</li>
@@ -275,7 +275,7 @@ export default {
             <NuxtImage src="/img/datatypes/matches/sprw_bedeutung.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/401837" />Belege zur Bedeutung im Artikel „Der Ton macht die Musik“
+            <ScreenshotLink to="https://www.owid.de/artikel/401837" />Belege zur Bedeutung im Eintrag „Der Ton macht die Musik“
           </div>
 
           <div class="exampleImg">
@@ -283,14 +283,14 @@ export default {
           </div>
           <div class="caption">
              <ScreenshotLink to="https://www.owid.de/artikel/401837" />Belege zum Muster <em>Der/Die X macht/machen die Musik</em> (‚Ersetzung von Komponenten‘) im
-            Artikel „Der Ton macht die Musik“
+            Eintrag „Der Ton macht die Musik“
           </div>
 
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/matches/sprw_geschichte_gap.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/404075" />Beleg zur Angabe ‚Geschichte‘ im Artikel „Geiz ist geil“
+            <ScreenshotLink to="https://www.owid.de/artikel/404075" />Beleg zur Angabe ‚Geschichte‘ im Eintrag „Geiz ist geil“
           </div>
 
         </template>
@@ -309,7 +309,7 @@ export default {
             <NuxtImage src="/img/datatypes/matches/dtww_belege.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-           <ScreenshotLink to="http://wvonline.ids-mannheim.de/dtww/dtww_komplett.htm#d" /> Belege zum Eintrag „durchlaufender Posten“
+           <ScreenshotLink to="http://wvonline.ids-mannheim.de/dtww/dtww_komplett.htm#d" /> Belege im Eintrag „durchlaufender Posten“
           </div>
 
         </template>
@@ -332,7 +332,7 @@ export default {
             <NuxtImage src="/img/datatypes/matches/wvGrund.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/mit_Grund_ID1364235183644.html" />Belege für die allgemeine Beschreibung des Knoten „mit Grund“
+            <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/mit_Grund_ID1364235183644.html" />Belege für die allgemeine Beschreibung des Knotens „mit Grund“
           </div>
 
         </template>

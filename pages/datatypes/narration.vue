@@ -117,26 +117,26 @@ export default {
             <NuxtImage src="/img/datatypes/narration/sprw_bedeutung.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/404227" /> Bedeutungsbeschreibung im Artikel „Alles hat ein Ende“
+            <ScreenshotLink to="https://www.owid.de/artikel/404227" /> Bedeutungsbeschreibung im Eintrag „Alles hat ein Ende“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/narration/sprw_gebrauch.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/404227" /> Beschreibungstext für ‚Gebrauchsbesonderheiten‘ im Artikel „Alles hat ein Ende“
+            <ScreenshotLink to="https://www.owid.de/artikel/404227" /> Beschreibungstext für ‚Gebrauchsbesonderheiten‘ im Eintrag „Alles hat ein Ende“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/narration/sprw_verwendung.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-           <ScreenshotLink to="https://www.owid.de/artikel/404227" /> Beschreibungstext für ‚Typische Verwendung im Text‘ im Artikel „Alles hat ein Ende“
+           <ScreenshotLink to="https://www.owid.de/artikel/404227" /> Beschreibungstext für ‚Typische Verwendung im Text‘ im Eintrag „Alles hat ein Ende“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/narration/sprw_varianten.png" alt="Beispielgrafik 4" />
           </div>
           <div class="caption">
            <ScreenshotLink to="https://www.owid.de/artikel/404227" /> Kommentartext für Formvariante <em>Alles hat ein Ende, nur die Wurst hat zwei</em> im
-            Artikel „Alles hat ein Ende“
+            Eintrag „Alles hat ein Ende“
           </div>
 
           <p>
@@ -147,7 +147,7 @@ export default {
             <NuxtImage src="/img/datatypes/narration/sprw_geschichte.png" alt="" />
           </div>
           <div class="caption">
-           <ScreenshotLink to="https://www.owid.de/artikel/404075" /> Beschreibungstext in ‚Geschichte‘ im Artikel „Geiz ist geil“
+           <ScreenshotLink to="https://www.owid.de/artikel/404075" /> Beschreibungstext in ‚Geschichte‘ im Eintrag „Geiz ist geil“
           </div>
         </template>
       </compare-item>
@@ -191,17 +191,17 @@ export default {
           Ressource für
           die korpusbasierte Beschreibung von Wortverbindungen in den Anfangsjahren der
           Online-Lexikografie am IDS
-          erarbeitet. Deshalb finden sich in den zwei Rubriken unterschiedliche Formen von narrativen
+          erarbeitet. Deshalb finden sich in den zwei Teilressourcen unterschiedliche Formen von narrativen
           Gebrauchsbeschreibungen.
         </p>
         <ul>
-          <li>In der Rubrik „Musterartikel“ wurden Artikel für unterschiedliche Phrasemtypen erarbeitet,
+          <li>In der Teilressource „Musterartikel“ wurden Artikel für unterschiedliche Phrasemtypen erarbeitet,
             mit
             Bedeutungsparaphrasen und Texten zu den Angaben ‚Wertungsaspekt‘‚ ‚Funktion in der
             Kommunikation‘ sowie
             ‘grammatische Besonderheiten‘.</li>
           <li>
-            In der Rubrik „Wortverbindungen mit Adjektiven“ wurde getestet, wie man mit einer
+            In der Teilressource „Wortverbindungen mit Adjektiven“ wurde getestet, wie man mit einer
             reduzierten
             Artikelstruktur eine größere Lemmastrecke bearbeiten könnte. Hier wurden umfangreichere
             narrative Texte zum
@@ -209,39 +209,39 @@ export default {
           </li>
         </ul>
         <template #explain>
-          <div class="exampleHeadline">Rubrik „Musterartikel“</div>
+          <div class="exampleHeadline">Teilressource „Musterartikel“</div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/narration/festeWV_bedeutung.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-             <ScreenshotLink to="https://www.owid.de/artikel/315656/sich%20frei%20%C3%A4u%C3%9Fern/0" />Bedeutungsbeschreibung im Artikel „reden, wie einem der Schnabel gewachsen ist“
+             <ScreenshotLink to="https://www.owid.de/artikel/315656/sich%20frei%20%C3%A4u%C3%9Fern/0" />Bedeutungsbeschreibung im Eintrag „reden, wie einem der Schnabel gewachsen ist“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/narration/festeWV_wertung.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/309157/unter%20Wert/0" />Beschreibungstext für ‚Wertungsaspekt‘ im Artikel „billiger Jakob“
+            <ScreenshotLink to="https://www.owid.de/artikel/309157/unter%20Wert/0" />Beschreibungstext für ‚Wertungsaspekt‘ im Eintrag „billiger Jakob“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/narration/festeWV_funktion.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/309154/publikmachen/0" />Beschreibungstext für ‚Funktion in der Kommunikation‘ im Artikel „an die große Glocke
+            <ScreenshotLink to="https://www.owid.de/artikel/309154/publikmachen/0" />Beschreibungstext für ‚Funktion in der Kommunikation‘ im Eintrag „an die große Glocke
             hängen“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/narration/festeWV_grammatik.png" alt="Beispielgrafik 4" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/309165/Bewertung%20einer%20(Sprach-)Handlung/0" /> Beschreibungstext für ‚Grammatische Besonderheiten‘
+            <ScreenshotLink to="https://www.owid.de/artikel/309165/Bewertung%20einer%20(Sprach-)Handlung/0" /> Beschreibungstext für ‚Grammatische Besonderheiten‘ im Artikel „Gut gebrüllt, Löwe“
           </div>
 
-          <div class="exampleHeadline">Rubrik „Wortverbindungen mit Adjektiven“</div>
+          <div class="exampleHeadline">Teilressource „Wortverbindungen mit Adjektiven“</div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/narration/festeWV_mitAdj_bedeutung.png" alt="Beispielgrafik 5" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/309123" /> Gebrauchsbeschreibung im Artikel „jeder halbwegs normale Mensch“
+            <ScreenshotLink to="https://www.owid.de/artikel/309123" /> Gebrauchsbeschreibung im Eintrag „jeder halbwegs normale Mensch“
           </div>
 
         </template>
