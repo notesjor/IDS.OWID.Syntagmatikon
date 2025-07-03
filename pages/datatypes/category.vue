@@ -133,7 +133,7 @@ export default {
         </p>
 <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="" alt="Beispielgrafik 1" />
+            <NuxtImage src="/img/datatypes/matches/map_belege_medial.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
             <ScreenshotLink to="https://www.owid.de/plus/map/kwic" />Belegangabe zu Kategorie Medialkonstruktion</div>
@@ -248,7 +248,7 @@ export default {
             <NuxtImage src="/img/datatypes/categories/verlaufsformen_tabelle.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/402991" />Kategoriale Label mit Einstellung ‚Inkorporiertes Objekt (INK): ja‘ in durchsuch- und
+            <ScreenshotLink to="https://www.owid.de/progdb?scrollToVerb=j%C3%A4ten" />Kategoriale Label mit Einstellung ‚Inkorporiertes Objekt (INK): ja‘ in durchsuch- und
             sortierbarer Tabelle (Rubrik „Erweiterte Suche“)
           </div>
         </template>

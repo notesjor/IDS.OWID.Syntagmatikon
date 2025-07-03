@@ -77,12 +77,12 @@ export default {
 
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="" alt="Beispielgrafik 1" />
+            <NuxtImage src="/img/datatypes/fields/map_respekt_predicates.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/plus/map/article/nach/entsprechen/assoziation" />Einteilung musterinstanziierender Prädikate nach strukturellem Typ</div>
+            <ScreenshotLink to="https://www.owid.de/plus/map/article/vor/respekt#predicates" />Einteilung musterinstanziierender Prädikate nach strukturellem Typ</div>
              <div class="exampleImg">
-            <NuxtImage src="" alt="Beispielgrafik 2" />
+            <NuxtImage src="/img/datatypes/fields/map_visualisierung.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
             <ScreenshotLink to="https://www.owid.de/plus/map/article/vor/bedrohen" />Feldangabe zur Muster-Familie BEDROHEN</div>

@@ -68,7 +68,7 @@ export default {
             <NuxtImage src="/img/datatypes/narration/prepcon_kon_muster_div.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/muster/mitGenugtuung.html" /> c Kommentar zu lexikalischen Erweiterung <em>mit einer gewissen Genugtuung</em> des Muster
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/muster/mitGenugtuung.html" />Kommentar zur lexikalischen Erweiterung <em>mit einer gewissen Genugtuung</em> des Muster
             <em>mit X Genugtuung</em> im Artikel „mit Genugtuung – con satisfacción“ (Divergenz)
           </div>
           <div class="exampleImg">
@@ -88,13 +88,12 @@ export default {
         </p>
 <template #explain>
           <div class="exampleImg">
-           <NuxtImage src="" alt="Beispielgrafik 1" /> 
+           <NuxtImage src="/img/datatypes/narration/map_respekt.png" alt="Beispielgrafik 1" /> 
           </div>
           <div class="caption">
             <ScreenshotLink to="https://www.owid.de/plus/map/article/vor/respekt" />Narrative Beschreibungen für das Muster RESPEKT
           </div>
         </template>
-        <!-- TODO: MAP -->
       </compare-item>
 
       <compare-item value="3" rkey="SPRW">
