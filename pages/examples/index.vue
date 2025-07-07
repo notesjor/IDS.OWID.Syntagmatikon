@@ -1,6 +1,7 @@
 <template>
     <h1>Fallbeispiele</h1>
     <div class="nolink">
+        <p>In dieser <hi>Syntagmatikon</hi>-Rubrik werden kurze linguistische Fallbeispiele zu den unterschiedlichen Rubriken veröffentlicht.</p>
         <p>Fallbeispiele zur Ansicht:</p>
         <ul class="bulb">
             <li>
@@ -9,7 +10,6 @@
                 </NuxtLink>
             </li>
         </ul>
-        <p>Weitere Fallbeispiele sind in Vorbereitung.</p>
     </div>
 </template>
 
