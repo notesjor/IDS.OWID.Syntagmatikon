@@ -166,6 +166,7 @@ export default {
             <NuxtImage src="/img/datatypes/matches/rede_beleg.png" alt="" />
           </div>
           <div class="caption">
+            <ScreenshotLink to="https://www.owid.de/plus/redeeinleiter/?search=sagen" />
             Ausschnitt aus der Belegliste des Redeeinleiters „sagen“
           </div>
 

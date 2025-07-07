@@ -202,9 +202,10 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/categories/rede_freq.png" width="70%" alt="Beispielgrafik 2" />
+            <NuxtImage src="/img/datatypes/categories/rede_freq.png" width="70%" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
+            <ScreenshotLink to="https://www.owid.de/plus/redeeinleiter/?search=sagen" />
             Die Attribute der Belege, in denen der Redeeinleiter „sagen“ belegt ist.
           </div>
         </template>

@@ -42,7 +42,7 @@ export default {
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
     <compare
-      :filter="['KoMuX', 'PhrasKomp', 'PREPCON_ex', 'PREPCON_temp_art', 'PREPCON_temp_inv', 'PREPCON_kon', 'SpruchList', 'WVBF', 'Redeeinleiter']">
+      :filter="['KoMuX', 'PhrasKomp', 'PREPCON_ex', 'PREPCON_temp_art', 'PREPCON_temp_inv', 'PREPCON_kon', 'SpruchList', 'WVBF', 'Redeeinleiter', 'MAP']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/datatypes/frequency/frequencies_all.png" style="text-align: center;"
@@ -304,8 +304,30 @@ export default {
             <NuxtImage src="/img/datatypes/frequency/rede_freq.png" width="70%" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
+             <ScreenshotLink to="https://www.owid.de/plus/redeeinleiter/?search=sagen" />
             Die Frequenz des Redeeinleiters „sagen“ im Redewiedergabe-Korpus insgesamt und aufgespaltet nach
             Attributen.
+          </div>
+        </template>
+      </compare-item>
+
+        <compare-item value="10" rkey="MAP"
+        description="">
+
+        <p>
+          In
+          <r rkey="MAP" /> werden die Frequenzen der Prädikate, die in den Daten für ein gegebenes Argumentstrukturmuster auftreten, 
+          in interaktiven Visualisierungen dargestellt. Angezeigt werden sowohl die Anteile einzelner Lemmata als auch unterschiedlicher 
+          Typen von Prädikatsausdrücken (z.B. einfache Verben vs. komplexe Prädikatsgefüge). 
+        </p>
+
+        <template #explain>
+          <div class="exampleImg">
+            <NuxtImage src="/img/datatypes/frequency/map_vorgabe_grafik.png"  alt="Beispielgrafik 1" />
+          </div>
+          <div class="caption">
+            <ScreenshotLink to="https://www.owid.de/plus/map/article/nach/entsprechen/vorgabe" />
+            Frequenzangaben für das Muster VORGABE
           </div>
         </template>
       </compare-item>

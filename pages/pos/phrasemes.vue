@@ -58,12 +58,25 @@ export default {
 
             <compare-item value="2" rkey="MAP">
                 <p>
-                    Informationen zu
-                    <r rkey="MAP" />
-                    sind noch in Vorbereitung.
+                    In
+                    <r rkey="MAP" /> werden Phraseme, die sich als verfestigte Spezialfälle eines schematischen Musters beschreiben lassen,  in einem gesonderten Abschnitt „Idiomatik“ des jeweiligen Musterartikels behandelt. Individuelle Idiome, die ein präpositional markiertes Argument mit einer der behandelten Präpositionen umfassen, aber keinem hinreichend schematischen Muster entsprechender Ausdrücke angehören, werden nicht behandelt, sondern im Überblicksartikel der entsprechenden Präposition als unberücksichtigte Verwendungen vermerkt.
                 </p>
 
-                <!-- TODO: MAP -->
+                <template #explain>
+                    <div>
+                        <ul>
+                            <li>
+                                <m>Qualität geht vor Quantität</m>, was immer das heißt.
+                            </li>
+                            <li>
+                                Die Herren der Ringe <m>ließen Gnade vor Recht ergehen</m>.
+                            </li>
+                            <li>
+                                Erste Regel: <m>Alter geht vor Schönheit</m>.
+                            </li>
+                        </ul>
+                    </div>
+                </template>
             </compare-item>
 
             <compare-item value="3" rkey="PhrasKomp">
