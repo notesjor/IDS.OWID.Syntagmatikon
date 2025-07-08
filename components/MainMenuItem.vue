@@ -5,7 +5,6 @@
             <span class="compass" v-if="!useMobileView">
                 <slot style="text-align: left;" />
             </span>
-            {{ slotContent }}
         </div>
     </NuxtLink>
 </template>

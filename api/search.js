@@ -47,37 +47,62 @@ export default class search {
     if (this.count == null) this.count = {};
     this.hits = [];
 
-    for (var i = 0; i < this.sources.length; i++) {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    for (var i = 0; i < this.sources.length; i++) {      
       var request = {
-        q: this.preparedQuery,
-        limit: this.pageSize,
-        sort: ["key:asc"],
-        filter: `dic = ${this.sources[i]}`,
-        offset: this.offset,
-        matchingStrategy: "all",
-        attributesToHighlight: ["lbl"],
-        highlightPreTag: "<span class='highlight'>",
-        highlightPostTag: "</span>",
+        query: {
+          bool: {
+            must: [
+              {
+                match: {
+                  key: this.preparedQuery,
+                },
+              },
+              {
+                term: {
+                  dic: this.sources[i],
+                },
+              },
+            ],
+          },
+        },
+        size: this.pageSize,
+        from: this.offset,
+        sort: [{ lbl: "asc" }],
+        highlight: {
+          fields: {
+            lbl: {
+              pre_tags: ["<span class='highlight'>"],
+              post_tags: ["</span>"],
+            },
+          },
+        },
       };
 
       var requestOptions = {
         method: "POST",
+        headers: myHeaders,
         body: JSON.stringify(request),
         redirect: "follow",
       };
       try {
         var response = await fetch(
-          "https://syntagmatikon.ids-mannheim.de/api/",
+          //TODO: "https://syntagmatikon.ids-mannheim.de/api/",
+          "http://localhost:9200/syntagmatikon/_search",
           requestOptions
         );
+
         var result = await response.json();
+console.log(result);
 
         if (this.count != null)
-          this.count[this.sources[i]] = result.estimatedTotalHits;
-        if (result.estimatedTotalHits > nmax) nmax = result.estimatedTotalHits;
-        this.hits[this.sources[i]] = result.estimatedTotalHits;
+          this.count[this.sources[i]] = result.hits.total.value;
+        if (result.estimatedTotalHits > nmax) nmax = result.hits.total.value;
+        this.hits[this.sources[i]] = result.hits.total.value;
 
-        res.push(...result.hits);
+        res.push(...result.hits.hits);
       } catch (error) {
         console.log("error", error);
       }
