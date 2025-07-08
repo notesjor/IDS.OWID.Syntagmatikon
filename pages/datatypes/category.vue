@@ -28,14 +28,30 @@ export default {
     <!-- NOTE: in Filter werden die Ressourcen angegeben -->
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
-    <compare :filter="['PREPCON_kon', 'KoMuX', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'WVBF']">
+    <compare :filter="['PREPCON_temp_inv', 'PREPCON_kon', 'KoMuX', 'MAP', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'WVBF']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/datatypes/categories/categories_all.png" style="text-align: center;" />
         </div>
       </compare-item>
 
-      <compare-item value="1" rkey="PREPCON_kon">
+       <compare-item value="1" rkey="PREPCON_temp_inv">
+        <p>
+          In <r rkey="PREPCON_temp_inv" /> werden die Einträge gemäß folgender Hauptktegorien geordnet: reine TEMPORALANGABEN; TEMPORALANGABEN MIT EIGENNAMEN (WOCHENTAGE, MONATE; FEIERTAGE; WOCHENTAGE ALS ZWEITGLIED, TAGESZEITEN ALS ZWEITGLIED).
+        </p>
+        <template #explain>
+          <div class="exampleImg">    
+            <NuxtImage src="/img/datatypes/categories/prepcon_temp_inv_feiertage.png" alt="Sortierung temporaler PNs" />
+          </div>
+          <div class="caption">
+             <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/inventar/inventar_feier.html" />  
+            Sortierung temporaler PNs nach der NOMEN-Kategorie FEIERTAGE in der Teilressource „Inventar temporaler Präposition-Nomen-Verbindungen“
+          </div>
+        </template>
+
+      </compare-item>
+
+      <compare-item value="2" rkey="PREPCON_kon">
         <p>
           In
           <r rkey="PREPCON_kon" /> gibt es zum einen
@@ -48,13 +64,14 @@ export default {
             <NuxtImage src="/img/datatypes/categories/prepcon_kernbedeutung.png" alt="Beispiel Kernbedeutung" />
           </div>
           <div class="caption">
-            Label für Kernbedeutung im Eintrag „mit Genugtuung – con satisfacción“
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/mitGenugtuung.html" />Label für Kernbedeutung im Eintrag „mit Genugtuung – con satisfacción“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/categories/prepcon_wortarten_nachBelieben.png"
               alt="Beispiel nach Belieben" />
           </div>
           <div class="caption">
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/nach_Belieben/kontrastiv/nach_Belieben_VERBADVERB_und_VERBADVERB.html" />
             Label für Wortarten im Eintrag „nach Belieben X – a su gusto X“
           </div>
           <div class="exampleImg">
@@ -62,14 +79,14 @@ export default {
               alt="Beispiel mit Genugtuung" />
           </div>
           <div class="caption">
-            Label für Wortarten und funktionale Merkmale im Eintrag „mit X Genugtuung – con X
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/kontrastiv/mit_ADJ_konnot_negativ_Genugtuung.html" />Label für Wortarten und funktionale Merkmale im Eintrag „mit X Genugtuung – con X
             satisfacción“
           </div>
         </template>
 
       </compare-item>
 
-      <compare-item value="2" rkey="KoMuX">
+      <compare-item value="3" rkey="KoMuX">
         <p>
           In
           <r rkey="KoMuX" />
@@ -110,7 +127,23 @@ export default {
 
       </compare-item>
 
-      <compare-item value="3" rkey="PhrasKomp">
+        <compare-item value="4" rkey="MAP">
+        <p>
+          In der „Suche nach Belegen“ werden verschiedene Labels genutzt, mit denen nach bestimmten Eigenschaften der Muster gesucht werden kann. Die analysierten Muster können nach verschiedenen semantischen, lexikalischen und grammatischen Eigenschaften gefiltert werden. Dazu zählen z.B. semantische „Schlagworte“ (Merkmale wie etwa „adversativ“, „kausal“ etc.), Verblemmata, Argumentkasus und Diathesen. 
+        </p>
+<template #explain>
+          <div class="exampleImg">
+            <NuxtImage src="/img/datatypes/matches/map_belege_medial.png" alt="Beispielgrafik 1" />
+          </div>
+          <div class="caption">
+            <ScreenshotLink to="https://www.owid.de/plus/map/kwic" />Belegangabe zu Kategorie Medialkonstruktion</div>
+      
+        </template>
+        <!-- TODO: MAP -->
+      </compare-item>
+
+
+      <compare-item value="5" rkey="PhrasKomp">
         <p>
           In
           <r rkey="PhrasKomp" />
@@ -154,7 +187,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="4" rkey="Redeeinleiter">
+      <compare-item value="6" rkey="Redeeinleiter">
         <p>
           In
           <r rkey="Redeeinleiter" /> ist, basierend
@@ -169,15 +202,16 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/categories/rede_freq.png" width="70%" alt="Beispielgrafik 2" />
+            <NuxtImage src="/img/datatypes/categories/rede_freq.png" width="70%" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
+            <ScreenshotLink to="https://www.owid.de/plus/redeeinleiter/?search=sagen" />
             Die Attribute der Belege, in denen der Redeeinleiter „sagen“ belegt ist.
           </div>
         </template>
       </compare-item>
 
-      <compare-item value="5" rkey="Verlaufsformen">
+      <compare-item value="7" rkey="Verlaufsformen">
         <p>
           In
           <r rkey="Verlaufsformen" /> werden
@@ -207,7 +241,7 @@ export default {
             <NuxtImage src="/img/datatypes/categories/verlaufsformen.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Kategoriale Zuordnung mit inkorporierten Objekt <em>Unkraut</em> (beim Unkrautjäten) im
+            <ScreenshotLink to="https://www.owid.de/artikel/402991" /> Kategoriale Zuordnung mit inkorporierten Objekt <em>Unkraut</em> (beim Unkrautjäten) im
             Eintrag „jäten“
           </div>
 
@@ -215,18 +249,17 @@ export default {
             <NuxtImage src="/img/datatypes/categories/verlaufsformen_tabelle.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Kategoriale Label mit Einstellung ‚Inkorporiertes Objekt (INK): ja‘ in durchsuch- und
+            <ScreenshotLink to="https://www.owid.de/progdb?scrollToVerb=j%C3%A4ten" />Kategoriale Label mit Einstellung ‚Inkorporiertes Objekt (INK): ja‘ in durchsuch- und
             sortierbarer Tabelle (Rubrik „Erweiterte Suche“)
           </div>
         </template>
       </compare-item>
 
-      <compare-item value="6" rkey="FesteWV">
+      <compare-item value="8" rkey="FesteWV">
         <p>
           In
-          <r rkey="FesteWV" /> in OWID, Rubrik „Musterartikel“,
-          werden die Stichwörter nach Phrasenkategorie und Mehrwortkategorie (nach Fleischer 1997; Burger
-          2015)
+          <r rkey="FesteWV" /> in der Teilressource „Musterartikel“,
+          werden die Stichwörter nach Phrasenkategorie und Mehrwortkategorie
           klassifiziert.
         </p>
         <template #explain>
@@ -235,32 +268,32 @@ export default {
             <NuxtImage src="/img/datatypes/categories/festeWV_klassif.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Kategoriale Label für den Mehrworteintrag „frank und frei“
+            <ScreenshotLink to="https://www.owid.de/artikel/309163/offene%20Art%20einer%20Sprachhandlung/0" />Kategoriale Label für den Mehrworteintrag „frank und frei“
           </div>
         </template>
       </compare-item>
 
-      <compare-item value="7" rkey="WVBF">
+      <compare-item value="9" rkey="WVBF">
         <p>
           Im
           <r rkey="WVBF" /> werden Lückenfüller für
           Slots in den
           GRUND-Mustern klassifiziert, sowohl nach Wortarten u/o Phrasen als auch nach semantischen
           und/oder funktionalen
-          Merkmalen (s. Steyer 2013).
+          Merkmalen.
         </p>
         <template #explain>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/categories/wvGrund_Netz.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Label für Wortarten der X-Füller im Hauptknoten „aus GRUND“
+             <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/grund-graphik.html" />Label für Wortarten der X-Füller im Hauptknoten „aus GRUND“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/categories/wvGrund_Fueller.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            Semantische Kategorisierung für Adjektiv-Füller im Subknoten „aus ADJ Gründen“
+             <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/aus_ADJ_Gruenden_ID1364235183677.html" />Semantische Kategorisierung für Adjektiv-Füller im Subknoten „aus ADJ Gründen“
           </div>
         </template>
       </compare-item>

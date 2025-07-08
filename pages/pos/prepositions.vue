@@ -129,16 +129,24 @@ export default {
                     </div>
                 </template>
             </compare-item>
-
             <compare-item value="5" rkey="MAP">
-                <!-- TODO: Inhalt ergänzen -->
-                <p>
-                    Informationen zu
-                    <r rkey="MAP" />
-                    sind noch in Vorbereitung.
-                </p>
-
-                <!-- TODO: MAP -->
+            <p>
+            Beschreibungsgegenstand von <r rkey="MAP" /> sind Konstruktionen mit ursprünglich räumlichen Präpositionen in abstrakter Verwendung. Für jede 
+            behandelte Präposition gibt es einen Überblicksartikel, der das gesamte Spektrum ihrer abstrakten, „grammatischen“ Verwendungen zusammenfasst und einen Überblick über alle zugehörigen Muster und Musterfamilien bietet.
+            </p>
+            <template #explain>
+                    <div>
+                        <ul>
+                            <li> Immer mehr Menschen leiden <m>an</m> Allergien. </li>
+                            <li>
+                               Der Zeuge beharrt <m>auf</m> seiner Aussage. 
+                            </li>
+                            <li>
+                                Die Kandidaten kämpfen <m>um</m> jede Stimme.
+                            </li>
+                        </ul>
+                    </div>
+                    </template>
             </compare-item>
 
             <compare-item value="6" rkey="Verlaufsformen">

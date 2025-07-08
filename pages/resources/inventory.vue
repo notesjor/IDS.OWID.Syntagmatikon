@@ -17,7 +17,7 @@ export default {
 <template>
     <NuxtImage src="/img/resources/03.png" alt="Inventare und Sammlungen"
         style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
-    <p>Inventare im <hi>Syntagmatikon</hi> sind aus dem Korpus extrahierte oder im Korpus überprüfte große Sammlungen
+    <p>Die Inventare im <hi>Syntagmatikon</hi> sind aus dem Korpus extrahierte oder im Korpus überprüfte große Sammlungen
         sprachlicher Ausdrücke ähnlichen Typs.</p>
     <p>In der Zeit vor den Korpora basierten Sammlungen zumeist auf früheren Sammlungen und Listen. Es gab ein
         historisch gewachsenes Beispielgedächtnis. Dies führte u.a. zu oft beklagten veralteten Beispielen in

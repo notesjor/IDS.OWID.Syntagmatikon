@@ -53,11 +53,23 @@ export default {
             </compare-item>
             <compare-item value="2" rkey="MAP">
                 <p>
-                    Informationen zu
+                    In 
                     <r rkey="MAP" />
-                    sind noch in Vorbereitung.
+                    werden die Füller der verbalen Prädikatsposition eines Musters in einem eigenen Abschnitt "Prädikate" innerhalb des Musterartikels behandelt. Nach Prädikaten, die in Argumentstrukturmustern belegt sind, kann zudem über eine Lemmaliste gesucht werden.
                 </p>
-                <!-- TODO: MAP -->
+                <template #explain>
+                    <div>
+                        <ul>
+                            <li> Immer mehr Menschen <m>leiden</m> an Allergien. </li>
+                            <li>
+                               Der Zeuge <m>beharrt</m> auf seiner Aussage. 
+                            </li>
+                            <li>
+                                Die Kandidaten <m>kämpfen</m> um jede Stimme.
+                            </li>
+                        </ul>
+                    </div>
+                    </template>
             </compare-item>
             <compare-item value="3" rkey="Redeeinleiter">
                 <p>

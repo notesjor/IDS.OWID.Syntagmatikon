@@ -6,7 +6,8 @@
       </h1>
       <v-carousel style="height:400px; margin-top:30px">
         <v-carousel-item>
-          <img src="/img/project-description/pd_01.png" alt="Beispiel 1 für das Syntagmatikon" />
+           <NuxtImage src="/img/project-description/pd_01.png" alt="Beispielgrafik 1" />
+          <!-- <img src="/img/project-description/pd_01.png" alt="Beispiel 1 für das Syntagmatikon" /> -->
         </v-carousel-item>
         <v-carousel-item>
           <img src="/img/project-description/pd_02.png" alt="Beispiel 2 für das Syntagmatikon" />

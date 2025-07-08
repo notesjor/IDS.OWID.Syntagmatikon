@@ -11,7 +11,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameShort: "PREPCON<sup>online</sup>",
           nameLong: "PREPCON - Präposition-Nomen-Verbindungen im Kontext",
           description:
-            "<b>PREPCON<sup>online</sup></b> bietet Informationen zum Gebrauch von ca. 80.000 Präposition-Nomen-Verbindungen des Deutschen (z.B. <em>über Jahre; nach Belieben</em>). Abrufbar sind systematisierte Korpusdaten (Frequenzen, KWICs, Volltextstellen, Kookkurrenzprofile, <em>lexpan</em>-Mustertabellen) und narrative Kommentare. Diese verfestigten Ausdrücke und ihnen zugrunde liegende Muster werden in drei Modulen dokumentiert: PREPCON<sup>explorativ</sup>; PREPCON<sup>temporal</sup>; PREPCON<sup>kontrastiv</sup>.",
+            "<b>PREPCON<sup>online</sup></b> ist ein neuartiges korpusgesteuertes Präsentationsformat. Es bietet Informationen zum Gebrauch von ca. 80.000 Präposition-Nomen-Verbindungen des Deutschen (z.B. <em>über Jahre; nach Belieben</em>). Abrufbar sind systematisierte Korpusdaten (Frequenzen, KWICs, Volltextstellen, Kookkurrenzprofile, <em>lexpan</em>-Mustertabellen) und narrative Kommentare. Diese verfestigten Ausdrücke und ihnen zugrunde liegende Muster werden in drei Modulen dokumentiert: PREPCON<sup>explorativ</sup>; PREPCON<sup>temporal</sup>; PREPCON<sup>kontrastiv</sup>.",
           img: "./img/sources/prepcon.png",
           url: "http://uwv.ids-mannheim.de/prepcon/prepcon_online.html",
           hideInSearch: true,
@@ -33,20 +33,20 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "KWICs", 
             "Belege"
           ],
-          search_patterns: ["Dynamische Erschließung"],
+          search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Präpositionen"],
         },
         {
           key: "PREPCON_temp",
           nameShort: "PREPCON<sup>temporal</sup>",
           nameLong:
-            "PREPCON<sup>temporal</sup> - Kurzartikel zu temporalen Präposition-Nomen-Verbindungen im Kontext",
+            "PREPCON<sup>temporal</sup> - Kurzartikel und Inventar zu temporalen Präposition-Nomen-Verbindungen im Kontext",
           description:
             "",
           img: "./img/sources/prepcon_temp.png",
-          url: "http://uwv.ids-mannheim.de/prepcon/modul2/",
+          url: "http://uwv.ids-mannheim.de/prepcon/modul2",
           tags: [],
-          quest: "http://uwv.ids-mannheim.de/prepcon/modul2/inventar/{q}",
+          quest: "",
           search_type: "Inventare und Sammlungen",
           search_functions: [
             "Frequenzen",
@@ -57,7 +57,51 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Felder",
             "Belege"
           ],
-          search_patterns: ["Dynamische Erschließung"],
+          search_patterns: ["dynamische Erschließung"],
+          search_parts: ["Nomina", "Präpositionen"],
+        },
+        {
+          key: "PREPCON_temp_inv",
+          nameShort: "PREPCON<sup>temporal</sup> Inventar",
+          nameLong:
+            "PREPCON<sup>temporal</sup> - Inventar zu temporalen Präposition-Nomen-Verbindungen im Kontext",
+          description:
+            "",
+          img: "./img/sources/prepcon_temp.png",
+          url: "http://uwv.ids-mannheim.de/prepcon/modul2/inventar/temporalangaben.html",
+          tags: [],
+          quest: "",
+          search_type: "Inventare und Sammlungen",
+          search_functions: [
+            "Frequenzen",
+            "KWICs",
+            "Kategoriale Label",
+          ],
+          search_patterns: ["dynamische Erschließung"],
+          search_parts: ["Nomina", "Präpositionen"],
+        },
+           {
+          key: "PREPCON_temp_art",
+          nameShort: "PREPCON<sup>temporal</sup> Artikel",
+          nameLong:
+            "PREPCON<sup>temporal</sup> - Kurzartikel zu temporalen Präposition-Nomen-Verbindungen im Kontext",
+          description:
+            "",
+          img: "./img/sources/prepcon_temp.png",
+          url: "http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Anfang/index.html",
+          tags: [],
+          quest: "",
+          search_type: "Inventare und Sammlungen",
+          search_functions: [
+            "Frequenzen",
+            "KWICs",
+            "Kookkurrenzprofile",
+            "Lückenfüllertabellen", 
+            "Komponenten",
+            "Felder",
+            "Belege"
+          ],
+          search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Präpositionen"],
         },
         {
@@ -93,7 +137,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameShort: "KoMuX",
           nameLong: "KoMuX - Kompositamuster-Explorer",
           description:
-            "Der <b>Kompositamuster-Explorer</b> bietet die Möglichkeit, ein Inventar von ca. 50.000 nominalen Komposita gezielt nach abstrakten oder lexikalisch-teilspezifizierten Mustern zu durchsuchen. Gruppen von Komposita lassen sich über grammatische (Wortbildungstyp oder Wortart), (semantisch-)thematische (GermaNet-Wortfelder) oder lexikalische Eigenschaften (konkretes Lemma) ihrer Erst- und Zweitglieder definieren. KoMuX beruht auf automatischen Annotationen, die manuell bereinigt wurden.",
+            "<b>Kompositamuster-Explorer</b> ist eine explorative Datenbank. Sie bietet die Möglichkeit, ein Inventar von ca. 50.000 nominalen Komposita gezielt nach abstrakten oder lexikalisch-teilspezifizierten Mustern zu durchsuchen. Gruppen von Komposita lassen sich über grammatische (Wortbildungstyp oder Wortart), (semantisch-)thematische (GermaNet-Wortfelder) oder lexikalische Eigenschaften (konkretes Lemma) ihrer Erst- und Zweitglieder definieren. KoMuX beruht auf automatischen Annotationen, die manuell bereinigt wurden.",
           img: "./img/sources/komux.png",
           url: "https://www.owid.de/plus/komux/",
           tags: [],
@@ -104,7 +148,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Kategoriale Label",
           ],
           search_patterns: [
-            "Dynamische Erschließung",
+            "dynamische Erschließung",
           ],
           search_parts: ["Nomina", "Verben", "Präpositionen", "Adjektive"],
         },
@@ -143,7 +187,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Frequenzen",
             "KWICs",
             "Belege"],
-          search_patterns: ["Dynamische Erschließung"],
+          search_patterns: ["dynamische Erschließung"],
           search_parts: ["Feste Sätze"],
         },
         {
@@ -164,7 +208,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Belege"
           ],
           search_patterns: [
-            "Dynamische Erschließung",
+            "dynamische Erschließung",
           ],
           search_parts: [
             "Nomina",
@@ -187,7 +231,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Belege",
             "Kategoriale Label"
           ],
-          search_patterns: ["Dynamische Erschließung"],
+          search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Verben", "Phraseme"],
         },
         {
@@ -195,7 +239,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameShort: "Sprichwörterbuch",
           nameLong: "Sprichwörterbuch",
           description:
-            "Das <b>Sprichwörterbuch</b> ist das erste empirisch abgesicherte und nach Kriterien der wissenschaftlichen Lexikografie erarbeitete Online-Wörterbuch zum aktuellen Gebrauch fester Sätze der deutschen Sprache – im Kern Sprichwörter. Es wurde mithilfe systematischer Korpusanalysen neu erarbeitet und stellt somit keine Fortschreibung tradierter Wörterbücher dar. SWB umfasst drei Teilbereiche: 300 Einträge aus dem EU-Projekt „Sprichwort“, häufige Sprichwörter und Werbeslogans.",
+            "<b>Sprichwörterbuch</b> ist das erste empirisch abgesicherte und nach Kriterien der wissenschaftlichen Lexikografie erarbeitete Online-Wörterbuch zum aktuellen Gebrauch fester Sätze der deutschen Sprache – im Kern Sprichwörter. Es wurde mithilfe systematischer Korpusanalysen neu erarbeitet und stellt somit keine Fortschreibung tradierter Wörterbücher dar. SWB umfasst drei Teilbereiche: 300 Einträge aus dem EU-Projekt „Sprichwort“, häufige Sprichwörter und Werbeslogans.",
           img: "./img/sources/sprw.png",
           url: "https://www.owid.de/wb/sprw/start.html",
           tags: [],
@@ -218,7 +262,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameShort: "Verlaufsformen",
           nameLong: "Kleines Wörterbuch der Verlaufsformen im Deutschen",
           description:
-            "Das <b>Verlaufsformenwörterbuch</b> dokumentiert das Auftreten der drei Verlaufsformen <em>am</em>-Progressiv (<em>sie ist am Arbeiten</em>), Absentiv (<em>sie ist arbeiten</em>) und <em>beim</em>-Verlaufsform (<em>sie ist beim Arbeiten</em>). Dabei werden Verlaufsformen zu über 900 Verben mit mehr als 5000 Belegen dokumentiert, die nach verschiedenen Parametern gefiltert werden können, u.a. nach der Region des Belegs, nach dem Vorkommen eines direkten Objekts, eines inkorporierten Objekts oder eines Reflexivums.",
+            "<b>Verlaufsformenwörterbuch</b> ist eine deskriptive Datenbank. Sie dokumentiert das Auftreten der drei Verlaufsformen <em>am</em>-Progressiv (<em>sie ist am Arbeiten</em>), Absentiv (<em>sie ist arbeiten</em>) und <em>beim</em>-Verlaufsform (<em>sie ist beim Arbeiten</em>). Dabei werden Verlaufsformen zu über 900 Verben mit mehr als 5000 Belegen dokumentiert, die nach verschiedenen Parametern gefiltert werden können, u.a. nach der Region des Belegs, nach dem Vorkommen eines direkten Objekts, eines inkorporierten Objekts oder eines Reflexivums.",
           img: "./img/sources/verlaufsformen.png",
           url: "https://www.owid.de/wb/progdb/start.html",
           tags: [],
@@ -229,7 +273,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Belege"
           ],
           search_patterns: [
-            "Dynamische Erschließung",
+            "dynamische Erschließung",
           ],
           search_parts: [
             "Verben",
@@ -238,10 +282,10 @@ export const useResourcesStore = defineStore("resourcesStore", {
         },
         {
           key: "WVBF",
-          nameShort: "WV-Feld GRUND",
+          nameShort: "WV-Feld Prep+GRUND",
           nameLong: "Wortverbindungsfeld zu Präposition+GRUND",
           description:
-            "Das <b>Wortverbindungsfeld GRUND</b> visualisiert die Vernetzung von Wortverbindungen und semiabstrakten Mustern des Bezugslexems GRUND in Kombination mit den Präpositionen <em>aus; auf; in; mit</em> und <em>ohne</em> (basierend auf Steyer 2013). Die hierarchisch angeordneten 50 Knoten bündeln jeweils automatisch ermittelte Angaben wie Frequenz; KWIC; Kookkurrenz; Slot-Füller und inhaltliche Beschreibungen. Bei diesem Präsentationsformat rücken die systematisierten Korpusdaten selbst ins Zentrum der Einträge.",
+            "<b>Wortverbindungsfeld Prep+GRUND</b> ist eine Online-Pilotstudie. Sie visualisiert die Vernetzung von Wortverbindungen und semiabstrakten Mustern des Bezugslexems GRUND in Kombination mit den Präpositionen <em>aus; auf; in; mit</em> und <em>ohne</em> (basierend auf Steyer 2013). Die hierarchisch angeordneten 50 Knoten bündeln jeweils automatisch ermittelte Angaben wie Frequenz; KWIC; Kookkurrenz; Slot-Füller und inhaltliche Beschreibungen. Bei diesem Präsentationsformat rücken die systematisierten Korpusdaten selbst ins Zentrum der Einträge.",
           img: "./img/sources/wvfeld.png",
           url: "http://wvonline.ids-mannheim.de/wvfelder-v3/grund-graphik.html",
           tags: [],
@@ -269,7 +313,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameShort: "Feste Wortverbindungen",
           nameLong: "Feste Wortverbindungen des Deutschen",
           description:
-            "<b>Feste Wortverbindungen</b> wurde in der frühen Entwicklungsphase von OWID als neuer, korpusbasierter Zugang zu Bedeutung und Gebrauch in der Mehrwortlexikografie erarbeitet. Diese Rubrik enthält 25 Musterartikel (Phraseologismen, z. B. etw. <em>an die große Glocke hängen</em>) sowie 100 Kurzartikel (Wortverbindungen mit den adjektivischen Komponenten <em>blind; geistig; gesund; normal</em> und <em>sanft</em>). Die Beschreibungen fußen auf typischen Kookkurrenz- und Kontextmustern in Korpora.",
+            "<b>Feste Wortverbindungen</b> ist ein Online-Wörterbuch. Es wurde in der frühen Entwicklungsphase von OWID als neuer, korpusbasierter Zugang zu Bedeutung und Gebrauch in der Mehrwortlexikografie erarbeitet. Diese Rubrik enthält 25 Musterartikel (Phraseologismen, z. B. etw. <em>an die große Glocke hängen</em>) sowie 100 Kurzartikel (Wortverbindungen mit den adjektivischen Komponenten <em>blind; geistig; gesund; normal</em> und <em>sanft</em>). Die Beschreibungen fußen auf typischen Kookkurrenz- und Kontextmustern in Korpora.",
           img: "./img/sources/festeWV.png",
           url: "https://www.owid.de/wb/uwv/start.html",
           tags: [],
@@ -280,7 +324,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
             "Belege", 
             "Narrative Beschreibungen",
             "Komponenten",
-            "Felder"
           ],
           search_patterns: [
             "Lexikografische Angabe",

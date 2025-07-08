@@ -35,7 +35,7 @@ export default {
     <!-- NOTE: in Filter werden die Ressourcen angegeben -->
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
-    <compare :filter="['PREPCON_temp', 'PREPCON_kon', 'FesteWV', 'SPRW']">
+    <compare :filter="['PREPCON_temp_art', 'PREPCON_kon', 'FesteWV', 'SPRW']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/datatypes/elements/elements_all.png" style="text-align: center;"
@@ -43,11 +43,11 @@ export default {
         </div>
       </compare-item>
 
-      <compare-item value="1" rkey="PREPCON_temp">
+      <compare-item value="1" rkey="PREPCON_temp_art">
         <p>
           In
-          <r rkey="PREPCON_temp" /> werden die Präpositionen und
-          die Nomina als Komponenten ausgezeichnet und mit den Artikeln in <NuxtLink
+          <r rkey="PREPCON_temp_art" /> werden die Präpositionen und
+          die Nomina als Komponenten ausgezeichnet und mit den Einträgen in <NuxtLink
             to="https://www.owid.de/docs/elex/start.jsp">elexiko</NuxtLink> verlinkt.
         </p>
         <template #explain>
@@ -55,7 +55,7 @@ export default {
             <NuxtImage src="/img/datatypes/elements/prepcon_temp_combi.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Komponentenangabe im Eintrag „am Ende“ (Rubrik: „Kurzartikel“) mit Verlinkung zu elexiko-Artikel „Ende“
+            Komponentenangabe im Eintrag „am Ende“ mit Verlinkung zu elexiko-Eintrag „Ende“
           </div>
         </template>
       </compare-item>
@@ -77,7 +77,7 @@ export default {
             <NuxtImage src="/img/datatypes/elements/prepcon_kon_deutsch_combi.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Komponentenangabe im Eintrag „am Anfang“ mit Verlinkung zum elexiko-Artikel „Anfang“
+            Komponentenangabe im Eintrag „am Anfang“ mit Verlinkung zum elexiko-Eintrag „Anfang“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/elements/prepcon_kon_spanisch_combi.png" alt="Beispielgrafik 2" />
@@ -102,7 +102,7 @@ export default {
           In
           <r rkey="FesteWV" /> werden die autosemantischen
           Komponenten
-          der Stichwörter einzeln ausgezeichnet und mit den Artikeln in <NuxtLink
+          der Stichwörter einzeln ausgezeichnet und mit den Einträgen in <NuxtLink
             to="https://www.owid.de/docs/elex/start.jsp">elexiko</NuxtLink> verlinkt.
         </p>
         <template #explain>
@@ -110,15 +110,15 @@ export default {
             <NuxtImage src="/img/datatypes/elements/festeWV_Angst_combi.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Komponentenangabe im Artikel „Angst vor der eigenen Courage“ (Rubrik „Musterartikel“) mit Verlinkung zum
-            <em>elexiko</em>-Artikel „Angst“
+            Komponentenangabe im Eintrag „Angst vor der eigenen Courage“ mit Verlinkung zum
+            <em>elexiko</em>-Eintrag „Angst“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/elements/festeWV_normal_combi.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            Komponentenangabe im Artikel „der ganz normale Wahnsinn“ (Rubrik „Wortverbindungen mit Adjektiven“) mit
-            Verlinkung zum <em>elexiko</em>-Artikel „normal“
+            Komponentenangabe im Eintrag „der ganz normale Wahnsinn“ mit
+            Verlinkung zum <em>elexiko</em>-Eintrag „normal“
           </div>
         </template>
       </compare-item>
@@ -132,7 +132,7 @@ export default {
           erscheint zum
           einen eine Liste mit Links zu allen Einträgen im Sprichwörterbuch, die diese Komponente enthalten, zum
           anderen ein
-          Link zum <NuxtLink to="https://www.owid.de/docs/elex/start.jsp">elexiko</NuxtLink>-Eintrag.
+          Link zu einem Eintrag in <NuxtLink to="https://www.owid.de/docs/elex/start.jsp">elexiko</NuxtLink>. Des Weiteren kann eine Liste aller Komponenten mit den dazugehörigen Sprichwörtern abgerufen werden.
         </p>
         <template #explain>
 
@@ -140,7 +140,24 @@ export default {
             <NuxtImage src="/img/datatypes/elements/SPRW_machen_fenster.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
+             <ScreenshotLink to="https://www.owid.de/artikel/401837" />
             Komponentenangabe im Artikel „Der Ton macht die Musik“ mit Liste der Komponente <em>machen</em>
+          </div>
+
+           <div class="exampleImg">
+            <NuxtImage src="/img/datatypes/elements/SPRW_elexiko.png" alt="Beispielgrafik 2" />
+          </div>
+          <div class="caption">
+             <ScreenshotLink to="https://www.owid.de/artikel/280009" />
+            Liste von Sprichworteinträgen mit der Komponente <em>machen</em> und Verlinkung zum elexiko-Eintrag „machen“ <em>machen</em>
+          </div>
+
+           <div class="exampleImg">
+            <NuxtImage src="/img/datatypes/elements/SPRW_basiskomp.png" alt="Beispielgrafik 3" />
+          </div>
+          <div class="caption">
+            <ScreenshotLink to="https://www.owid.de/service/stichwortlisten/sprw_b" />
+            Ausschnitt aus der Liste aller Komponenten im Sprichwörterbuch
           </div>
         </template>
       </compare-item>

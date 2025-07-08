@@ -42,7 +42,7 @@ export default {
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
     <compare
-      :filter="['KoMuX', 'PhrasKomp', 'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'SpruchList', 'WVBF', 'Redeeinleiter']">
+      :filter="['KoMuX', 'PhrasKomp', 'PREPCON_ex', 'PREPCON_temp_art', 'PREPCON_temp_inv', 'PREPCON_kon', 'SpruchList', 'WVBF', 'Redeeinleiter', 'MAP']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/datatypes/frequency/frequencies_all.png" style="text-align: center;"
@@ -134,72 +134,74 @@ export default {
         </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/frequency/prepe_part_01.png" alt="Beispielgrafik 1" />
+            <NuxtImage src="/img/datatypes/frequency/prepe_part_01.png" alt="Beispielgrafik 1" />            
           </div>
+
           <div class="caption">
-            Ausschnitt aus der Frequenzliste für Verbindungen mit Präposition <em>über</em> und nachgestellten Nomen
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?prep=%C3%BCber" />
+            Ausschnitt aus der Frequenzliste für Verbindungen mit Präposition <em>über</em> und nachgestellten Nomina
+            
           </div>
 
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/frequency/prepe_part_02.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            Ausschnitt aus der Frequenzliste für Verbindungen mit Nomen <em>Nacht</em> und vorangestellten
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=Nacht" />
+              Ausschnitt aus der Frequenzliste für Verbindungen mit Nomen <em>Nacht</em> und vorangestellten
             Präpositionen
           </div>
         </template>
       </compare-item>
 
-      <compare-item value="4" rkey="PREPCON_temp">
+      <compare-item value="4" rkey="PREPCON_temp_art">
         <p>
-          <r rkey="PREPCON_temp" /> bietet zwei Typen von
-          Frequenzangaben
-          an:
-        </p>
-        <ul>
-          <li>Häufigkeitsangaben für eine PN in „Kurzartikel zu temporalen Zweiworteinheiten“ mit drei Frequenzen und
-            ihren zugrunde liegenden Suchanfragen Präposition in (Groß- und Kleinschreibung zusammen/einzeln plus
-            Nomen in unmittelbarer Folge)</li>
-          <li>Frequenzliste in „Inventar temporaler Präposition-Nomen-Verbindungen“ mit Häufigkeitsangaben, die aus
-            <r rkey="PREPCON_ex" /> übernommen wurden und mit den Einträgen dort verlinkt sind.
-          </li>
-        </ul>
+          In <r rkey="PREPCON_temp_art" /> sind jeweils drei Häufigkeitsangaben für eine Präposition-Nomen-Verbindung sowie die ihnen zugrunde liegenden Suchanfragen (Groß- und Kleinschreibung getrennt; alle Schreibungen) abrufbar. Für die Groß- und die Kleinscheibung ist jeweils eine KWIC-Zufallsauswahl hinterlegt.</p>
 
         <template #explain>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/frequency/prept_part_01.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Frequenzangaben zu Suchanfragen im Artikel „über Nacht“:
+           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ueber_Nacht/index.html" />
+           Frequenzangaben zu Suchanfragen im Eintrag „über Nacht“:
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/frequency/prept_part_02.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ueber_Nacht/index.html" />
             Durch Klick auf die Frequenzen wird die dazugehörige Suchanfrage und Korpusinformation gezeigt.
           </div>
+        </template>
+      </compare-item>
 
-          <p style="margin-top: 10px;">
+      <compare-item value="5" rkey="PREPCON_temp_inv">
+        <p>
+          In <r rkey="PREPCON_temp_inv" /> sind Listen mit Häufigkeitsangaben abrufbar. Diese wurden aus <r rkey="PREPCON_ex" /> übernommen und mit den Einträgen dort verlinkt.
+        </p>
 
-          </p>
+        <template #explain>
+         
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/frequency/prept_part_03.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Ausschnitt aus den Frequenzangaben der Kategorie FEIERTAGE. Die Einträge sind mit
+           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/inventar/inventar_feier.html" /> Ausschnitt aus den Frequenzangaben der Kategorie FEIERTAGE. Die Einträge sind mit
             <r rkey="PREPCON_ex" /> verlinkt.
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/frequency/prept_part_04.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            Verlinkter Eintrag „Heiligabend“ in
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=Heiligabend" />Verlinkter Eintrag „Heiligabend“ in
             <r rkey="PREPCON_ex" />
           </div>
         </template>
       </compare-item>
 
-      <compare-item value="5" rkey="PREPCON_kon"
+
+      <compare-item value="6" rkey="PREPCON_kon"
         description="Kontrastive Darstellung von Präposition-Nomen-Verbindungen im Kontext - Rubrik: „Quantitative Angaben“">
         <p>
           In
@@ -216,20 +218,20 @@ export default {
             <NuxtImage src="/img/datatypes/frequency/prepk_part_01.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Darstellung von Frequenzen und Suchanfragen für die Präposition-Nomen-Kombination "am Anfang" – "al
+           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html" />Darstellung von Frequenzen und Suchanfragen für die Präposition-Nomen-Kombination "am Anfang" – "al
             principio" (Deutsch-Spanisch).
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/frequency/prepk_part_02.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            Durch Anklicken der Frequenzen wird die dazugehörige Suchanfrage und Korpusinformation gezeigt.
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html" /> Durch Anklicken der Frequenzen wird die dazugehörige Suchanfrage und Korpusinformation gezeigt.
           </div>
 
         </template>
       </compare-item>
 
-      <compare-item value="6" rkey="SpruchList" description="Frequenzangaben in SpruchList">
+      <compare-item value="7" rkey="SpruchList" description="Frequenzangaben in SpruchList">
 
         <p>
           Die Frequenzangaben in
@@ -252,7 +254,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="7" rkey="WVBF" description="Frequenzangaben im Wortverbindungsfeld GRUND">
+      <compare-item value="8" rkey="WVBF" description="Frequenzangaben im Wortverbindungsfeld GRUND">
 
         <p>
           In
@@ -269,7 +271,7 @@ export default {
             <NuxtImage src="/img/datatypes/frequency/wvg_part_01.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Frequenzangaben zum PN-Knoten "mit Grund" und zugrunde liegende Suchanfragen
+            <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/mit_Grund_ID1364235183644.html" />Frequenzangaben zum PN-Knoten "mit Grund" und zugrunde liegende Suchanfragen
           </div>
 
           <p style="margin-top: 10px;">
@@ -278,12 +280,13 @@ export default {
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/frequency/wvg_part_02.png" alt="Beispielgrafik 2" />
           </div>
-          <div class=caption>Frequenzangaben zum PN-Knoten "im Grunde" und zugrunde liegende Suchanfragen</div>
+          <div class=caption> <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/im_Grunde_ID1364235183656.html" />
+            Frequenzangaben zum PN-Knoten "im Grunde" und zugrunde liegende Suchanfragen</div>
 
         </template>
       </compare-item>
 
-      <compare-item value="8" rkey="Redeeinleiter"
+      <compare-item value="9" rkey="Redeeinleiter"
         description="Frequenzangaben im 'Kleinen Wörterbuch der Redeeinleiter'">
 
         <p>
@@ -301,8 +304,30 @@ export default {
             <NuxtImage src="/img/datatypes/frequency/rede_freq.png" width="70%" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
+             <ScreenshotLink to="https://www.owid.de/plus/redeeinleiter/?search=sagen" />
             Die Frequenz des Redeeinleiters „sagen“ im Redewiedergabe-Korpus insgesamt und aufgespaltet nach
             Attributen.
+          </div>
+        </template>
+      </compare-item>
+
+        <compare-item value="10" rkey="MAP"
+        description="">
+
+        <p>
+          In
+          <r rkey="MAP" /> werden die Frequenzen der Prädikate, die in den Daten für ein gegebenes Argumentstrukturmuster auftreten, 
+          in interaktiven Visualisierungen dargestellt. Angezeigt werden sowohl die Anteile einzelner Lemmata als auch unterschiedlicher 
+          Typen von Prädikatsausdrücken (z.B. einfache Verben vs. komplexe Prädikatsgefüge). 
+        </p>
+
+        <template #explain>
+          <div class="exampleImg">
+            <NuxtImage src="/img/datatypes/frequency/map_vorgabe_grafik.png"  alt="Beispielgrafik 1" />
+          </div>
+          <div class="caption">
+            <ScreenshotLink to="https://www.owid.de/plus/map/article/nach/entsprechen/vorgabe" />
+            Frequenzangaben für das Muster VORGABE
           </div>
         </template>
       </compare-item>

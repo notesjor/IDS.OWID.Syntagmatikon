@@ -30,17 +30,17 @@ export default {
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
     <compare
-      :filter="['PREPCON_temp', 'PREPCON_kon', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'SPRW', 'DTWW', 'WVBF']">
+      :filter="['PREPCON_temp_art', 'PREPCON_kon', 'MAP', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'SPRW', 'DTWW', 'WVBF']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/datatypes/matches/matches_all.png" style="text-align: center;" alt="Beispielgrafik 1" />
         </div>
       </compare-item>
 
-      <compare-item value="1" rkey="PREPCON_temp">
+      <compare-item value="1" rkey="PREPCON_temp_art">
         <p>
           In
-          <r rkey="PREPCON_temp" /> werden Belege in
+          <r rkey="PREPCON_temp_art" /> werden Belege in
           zwei Formen angeboten:
         </p>
         <ul>
@@ -54,14 +54,14 @@ export default {
             <NuxtImage src="/img/datatypes/matches/prepcon_temp_amEnde.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            KWIC-Belege im Artikel „am Ende“ (Rubrik „Kurzartikel“)
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/index.html" />KWIC-Belege im Eintrag „am Ende“ 
           </div>
 
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/matches/prepcon_temp_amEnde_volltext.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            Volltextbelege im Artikel „am Ende“ (Rubrik „Kurzartikel“)
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/index.html" />Volltextbelege im Eintrag „am Ende“ 
           </div>
         </template>
       </compare-item>
@@ -78,32 +78,54 @@ export default {
         <template #explain>
 
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/prepcon_kon_kochrezepte_header.png" alt="Beispielgrafik 1" />
-
+            <NuxtImage src="/img/datatypes/matches/prepcon_kon_kochrezepte_header.png" alt="Beispielgrafik 1" /> 
+<ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />
             <NuxtImage src="/img/datatypes/matches/prepcon_kon_kochrezepte_deutsch.png" alt="Beispielgrafik 2" />
-
+<ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />
             <NuxtImage src="/img/datatypes/matches/prepcon_kon_kochrezepte_spanisch.png" alt="Beispielgrafik 3" />
+            
           </div>
           <div class="caption">
-            Belege zum Gebrauchsaspekt ‚Kochrezept‘ im Artikel „nach Belieben – a su gusto“
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" /> Belege zum Gebrauchsaspekt ‚Kochrezept‘ im Eintrag „nach Belieben – a su gusto“
           </div>
 
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_header.png" alt="Beispielgrafik 1" />
+            <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_header.png" alt="Beispielgrafik 1" /> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />
 
-            <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_deutsch.png" alt="Beispielgrafik 2" />
+            <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_deutsch.png" alt="Beispielgrafik 2" /> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />
 
             <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_slowakisch.png"
               alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-            Belege für den Gebrauchsaspekt ‚Dominantes Handeln ohne Korrektiv‘ im Artikel „nach Belieben
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />Belege für den Gebrauchsaspekt ‚Dominantes Handeln ohne Korrektiv‘ im Eintrag „nach Belieben
             - podľa ľubovôle“
           </div>
         </template>
       </compare-item>
 
-      <compare-item value="3" rkey="PhrasKomp">
+       <compare-item value="3" rkey="MAP">
+        <p>
+         Die Belege zu den einzelnen Mustern erscheinen in den einzelnen Artikeln der Musterbank als Beispiele, sie können aber auch mittels der Suche direkt gefunden werden. Textbelege erscheinen in den <r rkey="MAP" />-Artikeln als illustrierende Beispiele mit farbiger Hervorhebung der Musterelemente. Zudem kann am Ende eines Artikels für jedes Prädikat, das in dem behandelten Muster auftritt, ein exemplarischer Korpusbeleg eingeblendet werden. In der Suche kann die komplette Datenbasis eingesehen werden.
+        </p>
+<template #explain>
+          <div class="exampleImg">
+           <NuxtImage src="/img/datatypes/matches/map_belege_medial.png" alt="Beispielgrafik 1" /> 
+          </div>
+          <div class="caption">
+            <ScreenshotLink to="https://www.owid.de/plus/map/kwic" />Belege mit erweiterter Annotation für Medialkonstruktionen
+          </div>
+          <div class="exampleImg">
+           <NuxtImage src="/img/datatypes/matches/map_belege_schutz.png" alt="Beispielgrafik 2" /> 
+          </div>
+          <div class="caption">
+            <ScreenshotLink to="https://www.owid.de/plus/map/article/vor/bedrohen/schutz#predicates" />Belege für Prädikate des Musters SCHUTZ
+          </div>
+        </template>
+        <!-- TODO: MAP -->
+      </compare-item>
+
+      <compare-item value="4" rkey="PhrasKomp">
         <p>
           In
           <r rkey="PhrasKomp" />
@@ -115,7 +137,6 @@ export default {
           Ergebnistabellen
           standardmäßig ausgeblendet und lassen sich für jedes Phrasenkompositum separat aufklappen.
         </p>
-
         <template #explain>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/matches/phraskomp_gerede.png" alt="Beispielgrafik 1" />
@@ -127,7 +148,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="4" rkey="Redeeinleiter">
+      <compare-item value="5" rkey="Redeeinleiter">
         <p>
           In
           <r rkey="Redeeinleiter" /> ist in der
@@ -145,13 +166,14 @@ export default {
             <NuxtImage src="/img/datatypes/matches/rede_beleg.png" alt="" />
           </div>
           <div class="caption">
+            <ScreenshotLink to="https://www.owid.de/plus/redeeinleiter/?search=sagen" />
             Ausschnitt aus der Belegliste des Redeeinleiters „sagen“
           </div>
 
         </template>
       </compare-item>
 
-      <compare-item value="5" rkey="Verlaufsformen">
+      <compare-item value="6" rkey="Verlaufsformen">
         <p>
           In
           <r rkey="Verlaufsformen" /> werden manuell
@@ -165,26 +187,26 @@ export default {
             <NuxtImage src="/img/datatypes/matches/verlaufsformen_beleg_eng.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Beleg für eine <em>am</em>-Progressiv-Verwendung im Eintrag „staunen“
+             <ScreenshotLink to="https://www.owid.de/artikel/403302?pos=25" />Beleg für eine <em>am</em>-Progressiv-Verwendung im Eintrag „staunen“
           </div>
         </template>
       </compare-item>
 
-      <compare-item value="6" rkey="FesteWV">
+      <compare-item value="7" rkey="FesteWV">
         <p>
           In
           <r rkey="FesteWV" /> illustrieren die
           ausgewählten Belege
           unterschiedliche Aspekte des Gebrauchs.
         </p>
-        <p>Rubrik „Musterartikel“</p>
+        <p>Teilressource „Musterartikel“</p>
         <ul>
           <li>Bedeutung</li>
           <li>Typische Kontextmuster</li>
           <li>Wertungsaspekt </li>
           <li>Funktion in der Kommunikation</li>
         </ul>
-        <p>Rubrik „Wortverbindungen mit Adjektiven“</p>
+        <p>Teilressource „Wortverbindungen mit Adjektiven“</p>
         <ul>
           <li>Gebrauchsbeschreibung</li>
           <li>Typische Kontextmuster</li>
@@ -198,14 +220,14 @@ export default {
             <NuxtImage src="/img/datatypes/matches/festeWV_bedeutung.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Beleg zur Bedeutung im Stichwort „Angst vor der eigenen Courage“ (Rubrik „Musterartikel“)
+            <ScreenshotLink to="https://www.owid.de/artikel/309155/Bef%C3%BCrchtung/0"/>Beleg zur Bedeutung im Stichwort „Angst vor der eigenen Courage“ (Rubrik „Musterartikel“)
           </div>
 
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/matches/festeWV_wertungsaspekt.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            Beleg zum negativen Wertungsaspekt im Stichwort „Angst vor der eigenen Courage“ (Rubrik
+            <ScreenshotLink to="https://www.owid.de/artikel/309155/Bef%C3%BCrchtung/0" />Beleg zum negativen Wertungsaspekt im Stichwort „Angst vor der eigenen Courage“ (Rubrik
             „Musterartikel“)
           </div>
 
@@ -215,7 +237,7 @@ export default {
             <NuxtImage src="/img/datatypes/matches/festeWV_gebrauchsbeschreibung.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-            Beleg zur Gebrauchsbeschreibung im Artikel „blinder Alarm“ (Rubrik: „Wortverbindungen mit
+             <ScreenshotLink to="https://www.owid.de/artikel/309051" />Beleg zur Gebrauchsbeschreibung im Artikel „blinder Alarm“ (Rubrik: „Wortverbindungen mit
             Adjektiven“)
           </div>
 
@@ -223,7 +245,7 @@ export default {
             <NuxtImage src="/img/datatypes/matches/festeWV_kontextmuster.png" alt="Beispielgrafik 4" />
           </div>
           <div class="caption">
-            Beleg zum typischen Kontextmuster <em>sich als blinder Alarm entpuppen</em> im Artikel
+           <ScreenshotLink to="https://www.owid.de/artikel/309051" />Beleg zum typischen Kontextmuster <em>sich als blinder Alarm entpuppen</em> im Artikel
             „blinder Alarm“ (Rubrik: „Wortverbindungen mit Adjektiven)
 
 
@@ -233,7 +255,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="7" rkey="SPRW">
+      <compare-item value="8" rkey="SPRW">
         <p>
           Im
           <r rkey="SPRW" /> werden Volltextbelege zu
@@ -254,31 +276,31 @@ export default {
             <NuxtImage src="/img/datatypes/matches/sprw_bedeutung.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Belege zur Bedeutung im Artikel „Der Ton macht die Musik“
+            <ScreenshotLink to="https://www.owid.de/artikel/401837" />Belege zur Bedeutung im Eintrag „Der Ton macht die Musik“
           </div>
 
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/matches/sprw_ersetzung.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            Belege zum Muster <em>Der/Die X macht/machen die Musik</em> (‚Ersetzung von Komponenten‘) im
-            Artikel „Der Ton macht die Musik“
+             <ScreenshotLink to="https://www.owid.de/artikel/401837" />Belege zum Muster <em>Der/Die X macht/machen die Musik</em> (‚Ersetzung von Komponenten‘) im
+            Eintrag „Der Ton macht die Musik“
           </div>
 
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/matches/sprw_geschichte_gap.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-            Beleg zur Angabe ‚Geschichte‘ im Artikel „Geiz ist geil“
+            <ScreenshotLink to="https://www.owid.de/artikel/404075" />Beleg zur Angabe ‚Geschichte‘ im Eintrag „Geiz ist geil“
           </div>
 
         </template>
       </compare-item>
 
-      <compare-item value="8" rkey="DTWW">
+      <compare-item value="9" rkey="DTWW">
         <p>
           In
-          <r rkey="SPRW" /> illustrieren bis zu drei
+          <r rkey="DTWW" /> illustrieren bis zu drei
           ausgewählte
           Belege den Gebrauch der deutschen Wortverbindungen in der Domäne Wirtschaft.
         </p>
@@ -288,13 +310,13 @@ export default {
             <NuxtImage src="/img/datatypes/matches/dtww_belege.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Belege zum Eintrag „durchlaufender Posten“
+           <ScreenshotLink to="http://wvonline.ids-mannheim.de/dtww/dtww_komplett.htm#d" /> Belege im Eintrag „durchlaufender Posten“
           </div>
 
         </template>
       </compare-item>
 
-      <compare-item value="9" rkey="WVBF">
+      <compare-item value="10" rkey="WVBF">
         <p>
           In
           <r rkey="WVBF" />werden Volltextbelege in
@@ -311,7 +333,7 @@ export default {
             <NuxtImage src="/img/datatypes/matches/wvGrund.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Belege für die allgemeine Beschreibung des Knoten „mit Grund“
+            <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/mit_Grund_ID1364235183644.html" />Belege für die allgemeine Beschreibung des Knotens „mit Grund“
           </div>
 
         </template>
