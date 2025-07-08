@@ -20,8 +20,7 @@ useHead({
   <div style="max-width: var(--TXT-WIDTH); margin:auto">
     <h1>Musterzugänge</h1>
     <p>
-      Eines der folgenreichsten Resultate korpusempirischer Forschungen ist die Einsicht, dass linear verfestigte
-      Wortfolgen systematisch auf schematischen Vorprägungen, auf Schablonen fußen, die wir Muster nennen. Muster
+      In dieser <hi>Syntagmatikon</hi>-Rubrik werden die Ressourcen entsprechend der Art ihrer Zugänge zu semiabstrakten und abstrakten Mustern bzw. Konstruktionen gebündelt. Muster
       werden als semiabstrakte Konstruktionen aufgefasst, bei denen die Slots nicht beliebig, sondern basierend auf
       Merkmalen ähnlicher Art gefüllt werden.
       <br />&nbsp;<br />

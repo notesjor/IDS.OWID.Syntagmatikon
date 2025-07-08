@@ -47,7 +47,7 @@ export default {
         <p>
           In
           <r rkey="PREPCON_temp_art" /> werden die Präpositionen und
-          die Nomina als Komponenten ausgezeichnet und mit den Artikeln in <NuxtLink
+          die Nomina als Komponenten ausgezeichnet und mit den Einträgen in <NuxtLink
             to="https://www.owid.de/docs/elex/start.jsp">elexiko</NuxtLink> verlinkt.
         </p>
         <template #explain>
@@ -55,7 +55,7 @@ export default {
             <NuxtImage src="/img/datatypes/elements/prepcon_temp_combi.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Komponentenangabe im Eintrag „am Ende“ (Rubrik: „Kurzartikel“) mit Verlinkung zu elexiko-Artikel „Ende“
+            Komponentenangabe im Eintrag „am Ende“ mit Verlinkung zu elexiko-Eintrag „Ende“
           </div>
         </template>
       </compare-item>
@@ -77,7 +77,7 @@ export default {
             <NuxtImage src="/img/datatypes/elements/prepcon_kon_deutsch_combi.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Komponentenangabe im Eintrag „am Anfang“ mit Verlinkung zum elexiko-Artikel „Anfang“
+            Komponentenangabe im Eintrag „am Anfang“ mit Verlinkung zum elexiko-Eintrag „Anfang“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/elements/prepcon_kon_spanisch_combi.png" alt="Beispielgrafik 2" />
@@ -102,7 +102,7 @@ export default {
           In
           <r rkey="FesteWV" /> werden die autosemantischen
           Komponenten
-          der Stichwörter einzeln ausgezeichnet und mit den Artikeln in <NuxtLink
+          der Stichwörter einzeln ausgezeichnet und mit den Einträgen in <NuxtLink
             to="https://www.owid.de/docs/elex/start.jsp">elexiko</NuxtLink> verlinkt.
         </p>
         <template #explain>
@@ -110,15 +110,15 @@ export default {
             <NuxtImage src="/img/datatypes/elements/festeWV_Angst_combi.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Komponentenangabe im Artikel „Angst vor der eigenen Courage“ (Rubrik „Musterartikel“) mit Verlinkung zum
-            <em>elexiko</em>-Artikel „Angst“
+            Komponentenangabe im Eintrag „Angst vor der eigenen Courage“ mit Verlinkung zum
+            <em>elexiko</em>-Eintrag „Angst“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/elements/festeWV_normal_combi.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            Komponentenangabe im Artikel „der ganz normale Wahnsinn“ (Rubrik „Wortverbindungen mit Adjektiven“) mit
-            Verlinkung zum <em>elexiko</em>-Artikel „normal“
+            Komponentenangabe im Eintrag „der ganz normale Wahnsinn“ mit
+            Verlinkung zum <em>elexiko</em>-Eintrag „normal“
           </div>
         </template>
       </compare-item>

@@ -44,7 +44,7 @@ export default {
             <NuxtImage src="/img/datatypes/fields/swbu_part_01.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘ im Artikel: „Man soll
+            Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘ im Eintrag: „Man soll
             den Tag nicht vor dem Abend loben“
           </div>
         </template>
@@ -53,11 +53,8 @@ export default {
       <compare-item value="2" rkey="FesteWV"
         description="Feste Wortverbindungen des Deutschen - Modul: Wortverbindungen mit Adjektiv">
         <p>
-          Die Feldangaben in
-          <r rkey="FesteWV" /> (Rubrik "Wortverbindungen mit Adjektiven")
-          fassen Einträge dieses OWID-Moduls zusammen, die eine
-          verwandte Bedeutung haben, entweder mit einer gemeinsamen Komponente (z.B. <i>blind</i>) oder mit gänzlich
-          unterschiedlichen Komponenten (z.B. <i>sich blind verstehen</i> – <i>geistige Verwandtschaft</i>).
+         Feldangaben umfassen Wortverbindungen mit einer verwandten Bedeutung, entweder mit einer gemeinsamen Komponente (z.B. blind) oder mit gänzlich unterschiedlichen Komponenten (z.B. sich blind verstehen – geistige Verwandtschaft). Diese Angaben werden in
+          <r rkey="FesteWV" /> in der Teilressource „Wortverbindungen mit Adjektiven“ nur für ausgewählte Einträge aufgeführt.
         </p>
 
         <template #explain>
@@ -65,7 +62,7 @@ export default {
             <NuxtImage src="/img/datatypes/fields/fwv_part_01.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">Semantisches Feld mit der Bedeutung ‚unkritisch‘; ‚die Realität nicht wahrhaben wollen‘
-            im Artikel: „sich blind und taub stellen“</div>
+            im Eintrag: „sich blind und taub stellen“</div>
         </template>
       </compare-item>
 
@@ -125,7 +122,7 @@ export default {
           Die Wortfelder in
           <r rkey="PREPCON_temp_art" />
           beinhalten semantisch verwandte Wörter der PN,
-          die jeweils mit den entsprechenden Einträgen in <i>elexiko</i> verlinkt sind. Im elexiko-Artikel findet man
+          die jeweils mit den entsprechenden Einträgen in <i>elexiko</i> verlinkt sind. Dort findet man
           entweder die lexikografische Beschreibung des (Quasi-)Synonyms oder einen Link zum entsprechenden Profil in
           der CCDB.
         </p>
