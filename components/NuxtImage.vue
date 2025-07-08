@@ -2,11 +2,11 @@
     <div class="image-zoom-container">
         <details>
             <summary>
-                <img :src="src" :alt="alt" :style="style" />
+                <img :src="src" :alt="alt" :style="style" @click="openZoom" />
             </summary>
-            <div class="overlay">
+            <div class="overlay" @click="closeZoom" v-if="isZoomed">
                 <img :src="src" :alt="alt" class="zoomed" />
-                <button class="close" @click.prevent="closeZoom">×</button>
+                <button class="close">×</button>
             </div>
         </details>
     </div>
@@ -28,19 +28,21 @@ export default {
             type: String,
         }
     },
+    data() {
+        return {
+            isZoomed: false
+        }
+    },
     methods: {
+        openZoom() {
+          console.log('Image clicked for zoom');
+            this.isZoomed = true;
+        },
         closeZoom() {
-            const details = document.querySelector('.image-zoom-container details')
-            details?.removeAttribute('open')
+          console.log('Zoom closed');
+            this.isZoomed = false;
         }
     }
-}
-</script>
-
-<script setup>
-const closeZoom = () => {
-  const details = document.querySelector('.image-zoom-container details')
-  details?.removeAttribute('open')
 }
 </script>
 
