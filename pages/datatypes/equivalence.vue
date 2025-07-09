@@ -46,14 +46,14 @@ export default {
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/equivalence/prepcon_kon_spanisch.png" alt="Beispielgrafik 1" />
           </div>
-          <div class="caption">
-            Äquivalenzpaar Deutsch – Spanisch im Artikel „am Anfang – al principio“
+          <div class="caption"> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html"/>
+            Äquivalenzpaar Deutsch – Spanisch im Eintrag „am Anfang – al principio“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/equivalence/prepcon_kon_slowakisch.png" alt="Beispielgrafik 2" />
           </div>
-          <div class="caption">
-            Äquivalenzpaar Deutsch – Slowakisch im Artikel „am Anfang – na začiatku“
+          <div class="caption"> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html"/>
+            Äquivalenzpaar Deutsch – Slowakisch im Eintrag „am Anfang – na začiatku“
           </div>
         </template>
       </compare-item>
@@ -71,7 +71,7 @@ export default {
             <NuxtImage src="/img/datatypes/equivalence/dtww.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Ausschnitt aus der Buchstabenstrecke A
+             <ScreenshotLink to="http://wvonline.ids-mannheim.de/dtww/dtww_komplett.htm"/>Ausschnitt aus der Buchstabenstrecke A
           </div>
         </template>
       </compare-item>
