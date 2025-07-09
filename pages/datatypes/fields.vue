@@ -43,7 +43,7 @@ export default {
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/fields/swbu_part_01.png" alt="Beispielgrafik 1" />
           </div>
-          <div class="caption">
+          <div class="caption"> <ScreenshotLink to="https://www.owid.de/artikel/401814?pos=15" />
             Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘ im Eintrag: „Man soll
             den Tag nicht vor dem Abend loben“
           </div>
@@ -61,7 +61,7 @@ export default {
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/fields/fwv_part_01.png" alt="Beispielgrafik 1" />
           </div>
-          <div class="caption">Semantisches Feld mit der Bedeutung ‚unkritisch‘; ‚die Realität nicht wahrhaben wollen‘
+          <div class="caption"><ScreenshotLink to="https://www.owid.de/artikel/309065" /> Semantisches Feld mit der Bedeutung ‚unkritisch‘; ‚die Realität nicht wahrhaben wollen‘
             im Eintrag: „sich blind und taub stellen“</div>
         </template>
       </compare-item>
@@ -104,14 +104,14 @@ export default {
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/fields/prepk_part_03.png" alt="Beispielgrafik 1" />
           </div>
-          <div class="caption"> Wolkendarstellung adjektivischer Satellitenfelder des Gebrauchsaspekts „Thematisierung
+          <div class="caption">  <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/amAnfang.html" /> Wolkendarstellung adjektivischer Satellitenfelder des Gebrauchsaspekts „Thematisierung
             von
             Schwierigkeiten“ von <em>am Anfang</em> und des spanischen Äquivalents <em>al principio</em></div>
 
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/fields/prepk_part_04.png" alt="Beispielgrafik 1" />
           </div>
-          <div class="caption"> Ausschnitt aus der Kookkurrenzliste adjektivischer Satellitenfelder des
+          <div class="caption"> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/am_Anfang/de/Clusters_TagsComb_ANDADJ_GA4_AmAnfang_KA_241016_NEU_6.html" /> Ausschnitt aus der Kookkurrenzliste adjektivischer Satellitenfelder des
             Gebrauchsaspekts
             „Thematisierung von Schwierigkeiten“ von <em>am Anfang</em></div>
         </template>
@@ -131,7 +131,7 @@ export default {
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/fields/prept_part_01.png" alt="Beispielgrafik 1" />
           </div>
-          <div class="caption"> Verwandte Wörter mit der Grundbedeutung ‚pausenlos‘ im Artikel "ohne Unterlass"</div>
+          <div class="caption"> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Unterlass/index.html"/> Verwandte Wörter mit der Grundbedeutung ‚pausenlos‘ im Eintrag "ohne Unterlass"</div>
         </template>
       </compare-item>
     </compare>

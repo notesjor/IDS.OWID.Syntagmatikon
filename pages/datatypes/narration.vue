@@ -52,14 +52,14 @@ export default {
             <NuxtImage src="/img/datatypes/narration/prepcon_kon_gebrauch.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/amAnfang.html" /> Beschreibungstext zum Gebrauchsaspekt ‚Thematisierung von Schwierigkeiten‘ im Artikel „am
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/amAnfang.html" /> Beschreibungstext zum Gebrauchsaspekt ‚Thematisierung von Schwierigkeiten‘ im Eintrag „am
             Anfang – al principio“ (Konvergenz)
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/narration/prepcon_kon_gebrauch_div.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/amAnfang.html" /> Beschreibungstext zum Gebrauchsaspekt ‚Rückblicke‘ im Artikel „am Anfang – al principio“
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/amAnfang.html" /> Beschreibungstext zum Gebrauchsaspekt ‚Rückblicke‘ im Eintrag „am Anfang – al principio“
             (Divergenz)
           </div>
 
@@ -69,14 +69,14 @@ export default {
           </div>
           <div class="caption">
             <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/muster/mitGenugtuung.html" />Kommentar zur lexikalischen Erweiterung <em>mit einer gewissen Genugtuung</em> des Muster
-            <em>mit X Genugtuung</em> im Artikel „mit Genugtuung – con satisfacción“ (Divergenz)
+            <em>mit X Genugtuung</em> im Eintrag „mit Genugtuung – con satisfacción“ (Divergenz)
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/narration/prepcon_kon_muster_konv.png" alt="Beispielgrafik 4" />
           </div>
           <div class="caption">
             <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/muster/mitGenugtuung.html" /> Kommentar zu lexikalischen Erweiterung zum Muster <em>mit [(...) ADJ] Genugtuung - con
-              [(...) ADJ] satisfacción</em> im Artikel „mit Genugtuung – con satisfacción“
+              [(...) ADJ] satisfacción</em> im Eintrag „mit Genugtuung – con satisfacción“
             (Konvergenz)
           </div>
         </template>
@@ -232,7 +232,7 @@ export default {
             <NuxtImage src="/img/datatypes/narration/festeWV_grammatik.png" alt="Beispielgrafik 4" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/309165/Bewertung%20einer%20(Sprach-)Handlung/0" /> Beschreibungstext für ‚Grammatische Besonderheiten‘ im Artikel „Gut gebrüllt, Löwe“
+            <ScreenshotLink to="https://www.owid.de/artikel/309165/Bewertung%20einer%20(Sprach-)Handlung/0" /> Beschreibungstext für ‚Grammatische Besonderheiten‘ im Eintrag „Gut gebrüllt, Löwe“
           </div>
 
           <div class="exampleHeadline">Teilressource „Wortverbindungen mit Adjektiven“</div>

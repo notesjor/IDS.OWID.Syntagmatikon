@@ -106,7 +106,7 @@ export default {
 
        <compare-item value="3" rkey="MAP">
         <p>
-         Die Belege zu den einzelnen Mustern erscheinen in den einzelnen Artikeln der Musterbank als Beispiele, sie können aber auch mittels der Suche direkt gefunden werden. Textbelege erscheinen in den <r rkey="MAP" />-Artikeln als illustrierende Beispiele mit farbiger Hervorhebung der Musterelemente. Zudem kann am Ende eines Artikels für jedes Prädikat, das in dem behandelten Muster auftritt, ein exemplarischer Korpusbeleg eingeblendet werden. In der Suche kann die komplette Datenbasis eingesehen werden.
+         Die Belege zu den einzelnen Mustern erscheinen in den einzelnen Einträgen der Musterbank als Beispiele, sie können aber auch mittels der Suche direkt gefunden werden. Textbelege erscheinen in den <r rkey="MAP" />-Einträgen als illustrierende Beispiele mit farbiger Hervorhebung der Musterelemente. Zudem kann am Ende eines Eintrags für jedes Prädikat, das in dem behandelten Muster auftritt, ein exemplarischer Korpusbeleg eingeblendet werden. In der Suche kann die komplette Datenbasis eingesehen werden.
         </p>
 <template #explain>
           <div class="exampleImg">
@@ -237,7 +237,7 @@ export default {
             <NuxtImage src="/img/datatypes/matches/festeWV_gebrauchsbeschreibung.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-             <ScreenshotLink to="https://www.owid.de/artikel/309051" />Beleg zur Gebrauchsbeschreibung im Artikel „blinder Alarm“ (Rubrik: „Wortverbindungen mit
+             <ScreenshotLink to="https://www.owid.de/artikel/309051" />Beleg zur Gebrauchsbeschreibung im Eintrag „blinder Alarm“ (Rubrik: „Wortverbindungen mit
             Adjektiven“)
           </div>
 
@@ -245,7 +245,7 @@ export default {
             <NuxtImage src="/img/datatypes/matches/festeWV_kontextmuster.png" alt="Beispielgrafik 4" />
           </div>
           <div class="caption">
-           <ScreenshotLink to="https://www.owid.de/artikel/309051" />Beleg zum typischen Kontextmuster <em>sich als blinder Alarm entpuppen</em> im Artikel
+           <ScreenshotLink to="https://www.owid.de/artikel/309051" />Beleg zum typischen Kontextmuster <em>sich als blinder Alarm entpuppen</em> im Eintrag
             „blinder Alarm“ (Rubrik: „Wortverbindungen mit Adjektiven)
 
 
