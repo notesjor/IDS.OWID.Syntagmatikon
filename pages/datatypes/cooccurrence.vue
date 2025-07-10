@@ -54,19 +54,19 @@ export default {
             <NuxtImage src="/img/datatypes/cooccurrence/prepcon_temp_wordcloud.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Wolkendarstellung von Kookkurrenzen im Artikel „am Ende“
+            Wolkendarstellung von Kookkurrenzen im Eintrag „am Ende“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/cooccurrence/prepcon_temp_kook.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/htmlfiles/clusterfiles/Clusters_amEnde_1_1_KA_oFW_3.html" />Ausschnitt aus Kookkurrenzliste im Artikel „am Ende“
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/htmlfiles/clusterfiles/Clusters_amEnde_1_1_KA_oFW_3.html" />Ausschnitt aus Kookkurrenzliste im Eintrag „am Ende“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/cooccurrence/prepcon_temp_kwics.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/htmlfiles/clusterfiles/Clusters_amEnde_1_1_KA_oFW_3_XML/Kwics_Tunnels_Licht_erkennbar_5210.html" />KWIC-Cluster im Artikel „am Ende“
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/htmlfiles/clusterfiles/Clusters_amEnde_1_1_KA_oFW_3_XML/Kwics_Tunnels_Licht_erkennbar_5210.html" />KWIC-Cluster im Eintrag „am Ende“
           </div>
         </template>
       </compare-item>
@@ -89,19 +89,19 @@ export default {
             <NuxtImage src="/img/datatypes/cooccurrence/prepcon_kon_wolken.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Wolkendarstellung von Kookkurrenzen in den Artikeln „nach Belieben“ und „a su gusto“
+            Wolkendarstellung von Kookkurrenzen in den Einträgen „nach Belieben“ und „a su gusto“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/cooccurrence/prepcon_kon_kook_deutsch.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/nach_Belieben/de/Clusters_nachBeliebenKA_1.html" /> Ausschnitt aus Kookkurrenzliste im Artikel „nach Belieben“
+           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/nach_Belieben/de/Clusters_nachBeliebenKA_1.html" /> Ausschnitt aus Kookkurrenzliste im Eintrag „nach Belieben“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/cooccurrence/prepcon_kon_kook_spanisch.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/nach_Belieben/es/Clusters_AllTags_A_a_su_gusto_coll_5.html" />Ausschnitt aus Kookkurrenzliste im Artikel „a su gusto“
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/nach_Belieben/es/Clusters_AllTags_A_a_su_gusto_coll_5.html" />Ausschnitt aus Kookkurrenzliste im Eintrag „a su gusto“
           </div>
         </template>
       </compare-item>

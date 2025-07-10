@@ -74,7 +74,7 @@ export default {
             <NuxtImage src="/img/datatypes/kwics/prepcon_temp_ohneUnterlass.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Unterlass/htmlfiles/fillerfiles/Kwics_ohne_1.html" /> Ausschnitt aus KWIC-Anzeige (Kleinschreibung) im Artikel „ohne Unterlass“ (Rubrik „Kurzartikel“:
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Unterlass/htmlfiles/fillerfiles/Kwics_ohne_1.html" /> Ausschnitt aus KWIC-Anzeige (Kleinschreibung) im Eintrag „ohne Unterlass“ (Rubrik „Kurzartikel“:
             ‚Häufigkeit im Korpus‘)
           </div>
 
@@ -82,7 +82,7 @@ export default {
             <NuxtImage src="/img/datatypes/kwics/prepcon_temp_ohneUnterlass_redet.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Unterlass/htmlfiles/clusterfiles/Clusters_ohneUnterlass_1_1_KA_oFW_1_XML/Kwics_redet_267.html" />Ausschnitt aus KWIC-Anzeige des Kookkurrenz-Clusters <em>ohne Unterlass – redet</em> im Artikel „ohne
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Unterlass/htmlfiles/clusterfiles/Clusters_ohneUnterlass_1_1_KA_oFW_1_XML/Kwics_redet_267.html" />Ausschnitt aus KWIC-Anzeige des Kookkurrenz-Clusters <em>ohne Unterlass – redet</em> im Eintrag „ohne
             Unterlass“ (Rubrik „Kurzartikel“: ‚Typische Partnerwörter‘)
           </div>
 
@@ -91,7 +91,7 @@ export default {
           </div>
           <div class="caption">
             <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Unterlass/htmlfiles/fillerfiles/Filler_ohne_o_Ohne_Unterlass_X_X_9_Field2_3_XML/Kwics_an__der_2989.html" />Ausschnitt aus KWIC-Anzeige des Bigram-Füllers <em>an … der</em> (Muster: <em>ohne Unterlass</em> X) im
-            Artikel „ohne Unterlass“ (Rubrik „Kurzartikel“: ‚Muster‘)
+            Eintrag „ohne Unterlass“ (Rubrik „Kurzartikel“: ‚Muster‘)
           </div>
 
           
@@ -146,13 +146,13 @@ export default {
             <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantSuche.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/de/Kwics_Mit_Genugtuung_25.html" />  Ausschnitt aus KWIC-Anzeige (Großschreibung) im Artikel „mit Genugtuung“
+           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/de/Kwics_Mit_Genugtuung_25.html" />  Ausschnitt aus KWIC-Anzeige (Großschreibung) im Eintrag „mit Genugtuung“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantSucheSpanisch.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/es/Overview_2020_11_25_17h03m10s.html" /> Ausschnitt aus KWIC-Anzeige (Kleinschreibung) im Artikel „mit Genugtuung - con satisfacción“
+           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/es/Overview_2020_11_25_17h03m10s.html" /> Ausschnitt aus KWIC-Anzeige (Kleinschreibung) im Eintrag „mit Genugtuung - con satisfacción“
           </div>
 
           <div class="exampleHeadline">„Quantitative Angaben“: ‚Typische Partnerwörter‘</div>
@@ -160,7 +160,7 @@ export default {
             <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantPartner.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/de/Clusters_mitGenugtuungKA_4_XML/Kwics_erfuellt_265.html" /> Ausschnitt aus KWIC-Anzeige des Kookkurrenz-Clusters <em>mit Genugtuung – erfüllt</em> im Artikel „mit
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/de/Clusters_mitGenugtuungKA_4_XML/Kwics_erfuellt_265.html" /> Ausschnitt aus KWIC-Anzeige des Kookkurrenz-Clusters <em>mit Genugtuung – erfüllt</em> im Eintrag „mit
             Genugtuung“ (KWIC-Angaben nur für deutsche Daten verfügbar)
           </div>
 
@@ -170,7 +170,7 @@ export default {
           </div>
           <div class="caption">
             <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/de/Filler_mit_o_Mit_Xx_Genugtuung_24_Field1_XML/Kwics_sichtlicher_7810.html" /> Ausschnitt aus KWIC-Anzeige des Füllers <em>sichtlicher</em> (Muster: <em>mit</em> X <em>Genugtuung</em>)
-            im Artikel „mit Genugtuung“
+            im Eintrag „mit Genugtuung“
           </div>
 
           <div class="exampleImg">
@@ -178,7 +178,7 @@ export default {
           </div>
           <div class="caption">
             <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/es/Filler_con_o_Con_Xx_satisfaccin_35_Field1_XML/Kwics_gran_1192.html" /> Ausschnitt aus KWIC-Anzeige des Füllers <em>gran</em> (Muster: <em>con</em> X <em>satisfacción</em>) im
-            Artikel „mit Genugtuung – con satisfacción“
+            Eintrag „mit Genugtuung – con satisfacción“
           </div>
 
         </template>
@@ -209,7 +209,7 @@ export default {
             <NuxtImage src="/img/datatypes/kwics/sprw_cosmas.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/401775" />Ausschnitt aus KWIC-Anzeige im Artikel „Not macht erfinderisch“
+            <ScreenshotLink to="https://www.owid.de/artikel/401775" />Ausschnitt aus KWIC-Anzeige im Eintrag „Not macht erfinderisch“
           </div>
         </template>
       </compare-item>
