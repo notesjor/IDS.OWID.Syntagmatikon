@@ -50,14 +50,14 @@ export default class search {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    for (var i = 0; i < this.sources.length; i++) {      
+    for (var i = 0; i < this.sources.length; i++) {
       var request = {
         query: {
           bool: {
             must: [
               {
                 match: {
-                  key: this.preparedQuery,
+                  key: this.query,
                 },
               },
               {
@@ -80,6 +80,8 @@ export default class search {
           },
         },
       };
+      if (!this.query || this.query.trim() === "")
+      request.query = { match_all: {} };
 
       var requestOptions = {
         method: "POST",
@@ -95,14 +97,14 @@ export default class search {
         );
 
         var result = await response.json();
-console.log(result);
 
         if (this.count != null)
           this.count[this.sources[i]] = result.hits.total.value;
         if (result.estimatedTotalHits > nmax) nmax = result.hits.total.value;
         this.hits[this.sources[i]] = result.hits.total.value;
 
-        res.push(...result.hits.hits);
+        for (var j = 0; j < result.hits.hits.length; j++)
+          res.push(result.hits.hits[j]._source);
       } catch (error) {
         console.log("error", error);
       }
@@ -116,35 +118,60 @@ console.log(result);
     this.__ensureSearch();
 
     var request = {
-      q: this.preparedQuery,
-      limit: this.pageSize,
-      sort: ["key:asc"],
-      offset: this.offset,
-      matchingStrategy: "all",
-      attributesToHighlight: ["lbl"],
-      highlightPreTag: "<span class='highlight'>",
-      highlightPostTag: "</span>",
+      query: {
+        bool: {
+          must: [
+            {
+              match: {
+                key: this.query,
+              },
+            },
+          ],
+        },
+      },
+      size: this.pageSize,
+      from: this.offset,
+      sort: [{ lbl: "asc" }],
+      highlight: {
+        fields: {
+          lbl: {
+            pre_tags: ["<span class='highlight'>"],
+            post_tags: ["</span>"],
+          },
+        },
+      },
     };
+
+    if (!this.query || this.query.trim() === "")
+      request.query = { match_all: {} };
+
+    /* TODO: Filter nach ressourcen
     if (this.sources.length > 0) {
       request.filter = this.sources;
-    }
+    }*/
+
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
 
     var requestOptions = {
       method: "POST",
+      headers: myHeaders,
       body: JSON.stringify(request),
       redirect: "follow",
     };
 
     try {
       var response = await fetch(
-        "https://syntagmatikon.ids-mannheim.de/api/",
+        // TODO: "https://syntagmatikon.ids-mannheim.de/api/",
+        "http://localhost:9200/syntagmatikon/_search",
         requestOptions
       );
+
       var result = await response.json();
 
-      if (this.count == null) this.count = result.estimatedTotalHits;
-      this.max = result.estimatedTotalHits;
-      return result.hits;
+      if (this.count == null) this.count = result.hits.total.value;
+      this.max = result.hits.total.value;
+      return result.hits.hits.map((x) => x._source);
     } catch (error) {
       console.log("error", error);
 
@@ -158,12 +185,9 @@ console.log(result);
   }
 
   get countTotal() {
+    console.log("count", this.count);
     return typeof this.count === "number"
       ? this.count
       : Object.values(this.count).reduce((a, b) => a + b, 0);
-  }
-
-  get preparedQuery() {
-    return this.exact ? `"${this.query}"` : this.query;
   }
 }

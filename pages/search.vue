@@ -20,7 +20,7 @@ useHead({
   <div style="max-width: 100%;">
     <v-row>
       <!-- Linke Spalte -->
-      <v-col cols="6">
+      <v-col cols="7">
         <h1>
           Stichwortsuche <span style="font-size: 0.8em; color:#999; margin-top:10px">(insgesamt: {{
             searchApi?.countTotal }} Einträge)</span>
@@ -76,19 +76,19 @@ useHead({
         <v-tabs-window v-model="search_header" style="margin-top: -40px;">
           <v-tabs-window-item value="byAZ">
             <div v-for="x in results">
-              <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl"></span> <span
+              <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x.lbl"></span> <span
                   style="font-size: 0.8em; color:#999">(<span v-html="getResourcesShortName(x.dic)"></span>)</span></a>
             </div>
           </v-tabs-window-item>
           <v-tabs-window-item value="byGroup">
             <div v-for="g in resultGroups">
               <div style="font-size: 0.8em; color:#999; margin-top:10px">
-                <span v-html="getResourcesShortName(g)"></span>
-                <span> ({{ searchApi.count[g] }} Einträge)</span>
+                <span v-html="getResourcesShortNameGroup(g)"></span>
+                <span> ({{ searchApi.count[g[0].dic] }} Einträge)</span>
               </div>
-              <div v-for="x in resultsByGroup(g)">
-                <span style="font-size: 0.8em; color:#999">{{ String(x.index).padStart(2, "0") }}. </span>
-                <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x._formatted.lbl" /></a>
+              <div v-for="x in g">
+                <!--<span style="font-size: 0.8em; color:#999">{{ String(x.index).padStart(2, "0") }}. </span>-->
+                <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x.lbl" /></a>
               </div>
             </div>
           </v-tabs-window-item>
@@ -113,7 +113,7 @@ useHead({
         </div>
       </v-col>
       <!-- Rechte Spalte -->
-      <v-col cols="6">
+      <v-col cols="5">
         <v-expansion-panels v-model="searchOptions" multiple>
           <!-- Anleitung Suche -->
           <v-expansion-panel elevation="0" value="help">
@@ -308,6 +308,9 @@ export default {
     },
     getResourcesShortName(key) {
       return this.resourcesStore?.getResource(key)?.nameShort;
+    },
+    getResourcesShortNameGroup(key) {
+      return this.resourcesStore?.getResource(key[0].dic)?.nameShort;
     }
   },
   watch: {
@@ -356,9 +359,10 @@ export default {
       });
     },
     resultGroups: function () {
-      var res = new Set();
+      var res = {};
       this.results.forEach(x => {
-        res.add(x.dic);
+        if (res[x.dic] == null) res[x.dic] = [];
+        res[x.dic].push(x);
       });
       return res;
     }
