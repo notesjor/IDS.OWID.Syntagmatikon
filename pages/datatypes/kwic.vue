@@ -50,10 +50,18 @@ export default {
         <template #explain>
 
           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/kwics/prepcon_ex_amEnde.png" alt="Beispielgrafik 1" />
+            <NuxtImage src="/img/datatypes/kwics/prepcon_ex_amEnde_kwics_Praeppers.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?prep=am" /> Ausschnitt aus KWIC-Anzeige in Präpositionentabelle „am“ (nominaler Partner <em>Ende</em>)
+          </div>
+
+          
+          <div class="exampleImg">
+            <NuxtImage src="/img/datatypes/kwics/prepcon_ex_amEnde_kwics_Nomenpers.png" alt="Beispielgrafik 2" />
+          </div>
+          <div class="caption">
+           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=Ende" /> Ausschnitt aus KWIC-Anzeige in Nomentabelle „Ende“ (präpositionaler Partner <em>Ende</em>)
           </div>
         </template>
       </compare-item>

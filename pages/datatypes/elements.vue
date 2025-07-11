@@ -77,20 +77,20 @@ export default {
             <NuxtImage src="/img/datatypes/elements/prepcon_kon_deutsch_combi.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/165090" />Komponentenangabe im Eintrag „am Anfang“ mit Verlinkung zum elexiko-Eintrag „Anfang“
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html" />Komponentenangabe im Eintrag „am Anfang“ mit Verlinkung zum elexiko-Eintrag „Anfang“
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/elements/prepcon_kon_spanisch_combi.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://dle.rae.es/principio" /> Komponentenangabe im Eintrag „al principio“ mit Verlinkung zum Eintrag „principio“ im <em>Diccionario de
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html" /> Komponentenangabe im Eintrag „al principio“ mit Verlinkung zum Eintrag „principio“ im <em>Diccionario de
               la lengua española</em>
           </div>
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/elements/prepcon_kon_slowakisch_combi.png" alt="Beispielgrafik 3" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="https://slovnik.juls.savba.sk/?w=za%C4%8Diatok&s=exact&c=f7d5&d=kssj4&d=psp&d=sssj&d=sssj2&d=scs&d=sss&d=peciar&d=hssjV&d=bernolak&d=obce&d=priezviska&d=un&ie=utf-8&oe=utf-8#" /> Komponentenangabe im Eintrag „na začiatku“ mit Verlinkung zu den Einträgen für „začiatok“ im
+            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html" /> Komponentenangabe im Eintrag „na začiatku“ mit Verlinkung zu den Einträgen für „začiatok“ im
             <em>Slovníkový portál Jazykovedného ústavu Ľ. Štúra SAV</em>
           </div>
         </template>
@@ -110,7 +110,7 @@ export default {
             <NuxtImage src="/img/datatypes/elements/festeWV_Angst_combi.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="" /> Komponentenangabe im Eintrag „Angst vor der eigenen Courage“ mit Verlinkung zum
+            <ScreenshotLink to="https://www.owid.de/artikel/309155"/> Komponentenangabe im Eintrag „Angst vor der eigenen Courage“ mit Verlinkung zum
             <em>elexiko</em>-Eintrag „Angst“
           </div>
           
@@ -118,7 +118,7 @@ export default {
             <NuxtImage src="/img/datatypes/elements/festeWV_normal_combi.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
-            <ScreenshotLink to="" /> Komponentenangabe im Eintrag „der ganz normale Wahnsinn“ mit
+            <ScreenshotLink to="https://www.owid.de/artikel/309121" /> Komponentenangabe im Eintrag „der ganz normale Wahnsinn“ mit
             Verlinkung zum <em>elexiko</em>-Eintrag „normal“
           </div>
         </template>
