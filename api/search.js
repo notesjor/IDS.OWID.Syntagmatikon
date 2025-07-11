@@ -21,7 +21,7 @@ export default class search {
       this.sources = sources;
       this.callSearch = this.__sendRequestMix;
     } else {
-      this.sources = [sources.map((x) => `dic = ${x}`)];
+      this.sources = sources;
       this.callSearch = this.__sendRequestMerge;
     }
 
@@ -52,12 +52,13 @@ export default class search {
 
     for (var i = 0; i < this.sources.length; i++) {
       var request = {
+        track_total_hits: true,
         query: {
           bool: {
             must: [
               {
                 match: {
-                  key: this.query,
+                  lbl: this.query,
                 },
               },
               {
@@ -70,7 +71,7 @@ export default class search {
         },
         size: this.pageSize,
         from: this.offset,
-        sort: [{ lbl: "asc" }],
+        sort: [{ key: "asc" }],
         highlight: {
           fields: {
             lbl: {
@@ -81,7 +82,20 @@ export default class search {
         },
       };
       if (!this.query || this.query.trim() === "")
-      request.query = { match_all: {} };
+        request.query = {
+          bool: {
+            must: [
+              {
+                match_all: {},
+              },
+              {
+                term: {
+                  dic: this.sources[i],
+                },
+              },
+            ],
+          },
+        };
 
       var requestOptions = {
         method: "POST",
@@ -100,11 +114,15 @@ export default class search {
 
         if (this.count != null)
           this.count[this.sources[i]] = result.hits.total.value;
-        if (result.estimatedTotalHits > nmax) nmax = result.hits.total.value;
+        if (result.hits.total.value > nmax) nmax = result.hits.total.value;
         this.hits[this.sources[i]] = result.hits.total.value;
 
+        var tmp = [];
         for (var j = 0; j < result.hits.hits.length; j++)
-          res.push(result.hits.hits[j]._source);
+          tmp.push(this.__esHighlightToSourceSingle(result, j));
+
+        console.log("tmp", tmp);
+        res = res.concat(tmp);
       } catch (error) {
         console.log("error", error);
       }
@@ -118,12 +136,13 @@ export default class search {
     this.__ensureSearch();
 
     var request = {
+      track_total_hits: true,
       query: {
         bool: {
           must: [
             {
               match: {
-                key: this.query,
+                lbl: this.query,
               },
             },
           ],
@@ -131,7 +150,7 @@ export default class search {
       },
       size: this.pageSize,
       from: this.offset,
-      sort: [{ lbl: "asc" }],
+      sort: [{ key: "asc" }],
       highlight: {
         fields: {
           lbl: {
@@ -142,13 +161,21 @@ export default class search {
       },
     };
 
+    var fix = 0;
     if (!this.query || this.query.trim() === "")
-      request.query = { match_all: {} };
+    {
+      request.query = { bool: { must: [{ match_all: {} }] } };
+      fix = 66;
+    }
 
-    /* TODO: Filter nach ressourcen
+    console.log("sources", this.sources);
     if (this.sources.length > 0) {
-      request.filter = this.sources;
-    }*/
+      request.query.bool.must.push({
+        terms: {
+          dic: this.sources,
+        },
+      });
+    }
 
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -169,9 +196,10 @@ export default class search {
 
       var result = await response.json();
 
-      if (this.count == null) this.count = result.hits.total.value;
-      this.max = result.hits.total.value;
-      return result.hits.hits.map((x) => x._source);
+      if (this.count == null) this.count = result.hits.total.value - fix; // TODO: Fix for total hits
+      this.max = result.hits.total.value - fix; // TODO: Fix for total hits
+
+      return this.__esHighlightToSource(result);
     } catch (error) {
       console.log("error", error);
 
@@ -180,12 +208,37 @@ export default class search {
     }
   }
 
+  __esHighlightToSource(result) {
+    var res = result.hits.hits.map((x) => x._source);
+    for (var i = 0; i < res.length; i++) {
+      if (
+        res[i].lbl &&
+        result.hits.hits[i].highlight &&
+        result.hits.hits[i].highlight.lbl
+      ) {
+        res[i].lbl = result.hits.hits[i].highlight.lbl[0];
+      }
+    }
+    return res;
+  }
+
+  __esHighlightToSourceSingle(result, i) {
+    var res = result.hits.hits[i]._source;
+    if (
+      res.lbl &&
+      result.hits.hits[i].highlight &&
+      result.hits.hits[i].highlight.lbl
+    ) {
+      res.lbl = result.hits.hits[i].highlight.lbl[0];
+    }
+    return res;
+  }
+
   get pageMax() {
     return Math.ceil(this.max / this.pageSize);
   }
 
   get countTotal() {
-    console.log("count", this.count);
     return typeof this.count === "number"
       ? this.count
       : Object.values(this.count).reduce((a, b) => a + b, 0);
