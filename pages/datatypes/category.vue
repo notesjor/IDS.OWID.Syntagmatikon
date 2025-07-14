@@ -129,7 +129,7 @@ export default {
 
         <compare-item value="4" rkey="MAP">
         <p>
-          In der „Suche nach Belegen“ werden verschiedene Labels genutzt, mit denen nach bestimmten Eigenschaften der Muster gesucht werden kann. Die analysierten Muster können nach verschiedenen semantischen, lexikalischen und grammatischen Eigenschaften gefiltert werden. Dazu zählen z.B. semantische „Schlagworte“ (Merkmale wie etwa „adversativ“, „kausal“ etc.), Verblemmata, Argumentkasus und Diathesen. 
+          In <r rkey="MAP" /> werden in der „Suche nach Belegen“ verschiedene Labels genutzt, mit denen nach bestimmten Eigenschaften der Muster gesucht werden kann. Die analysierten Muster können nach verschiedenen semantischen, lexikalischen und grammatischen Eigenschaften gefiltert werden. Dazu zählen z.B. semantische „Schlagworte“ (Merkmale wie etwa „adversativ“, „kausal“ etc.), Verblemmata, Argumentkasus und Diathesen. 
         </p>
 <template #explain>
           <div class="exampleImg">

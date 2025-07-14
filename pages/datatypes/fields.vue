@@ -43,9 +43,16 @@ export default {
           <div class="exampleImg">
             <NuxtImage src="/img/datatypes/fields/swbu_part_01.png" alt="Beispielgrafik 1" />
           </div>
-          <div class="caption"> <ScreenshotLink to="https://www.owid.de/artikel/401814?pos=15" />
+          <div class="caption"> <ScreenshotLink to="https://www.owid.de/artikel/401814" />
             Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘ im Eintrag: „Man soll
             den Tag nicht vor dem Abend loben“
+          </div>
+
+           <div class="exampleImg">
+            <NuxtImage src="/img/datatypes/fields/swbu_part_02.png" alt="Beispielgrafik 2" />
+          </div>
+          <div class="caption"> <ScreenshotLink to="https://www.owid.de/artikel/401904" />
+            Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘ im Eintrag „Man sollte sich nicht zu früh freuen“
           </div>
         </template>
       </compare-item>
@@ -63,6 +70,12 @@ export default {
           </div>
           <div class="caption"><ScreenshotLink to="https://www.owid.de/artikel/309065" /> Semantisches Feld mit der Bedeutung ‚unkritisch‘; ‚die Realität nicht wahrhaben wollen‘
             im Eintrag: „sich blind und taub stellen“</div>
+
+             <div class="exampleImg">
+            <NuxtImage src="/img/datatypes/fields/fwv_part_02.png" alt="Beispielgrafik 2" />
+          </div>
+          <div class="caption"><ScreenshotLink to="https://www.owid.de/artikel/309057" /> Semantisches Feld mit der Bedeutung ‚unkritisch‘; ‚die Realität nicht wahrhaben wollen‘ im Eintrag „blind gegenüber“</div>
+
         </template>
       </compare-item>
 
@@ -114,6 +127,13 @@ export default {
           <div class="caption"> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/am_Anfang/de/Clusters_TagsComb_ANDADJ_GA4_AmAnfang_KA_241016_NEU_6.html" /> Ausschnitt aus der Kookkurrenzliste adjektivischer Satellitenfelder des
             Gebrauchsaspekts
             „Thematisierung von Schwierigkeiten“ von <em>am Anfang</em></div>
+
+            <div class="exampleImg">
+            <NuxtImage src="/img/datatypes/fields/prepk_part_spanisch.png" alt="Beispielgrafik 1" />
+          </div>
+          <div class="caption"> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/am_Anfang/es/Clusters_TagsComb_ANDAdj_Kookkurrenz_Tabelle_Negative_Adjetive_14.html" /> Ausschnitt aus der Kookkurrenzliste adjektivischer Satellitenfelder des
+            Gebrauchsaspekts
+            „Thematisierung von Schwierigkeiten“ von <em>al principio</em></div>
         </template>
       </compare-item>
 
@@ -132,6 +152,8 @@ export default {
             <NuxtImage src="/img/datatypes/fields/prept_part_01.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption"> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Unterlass/index.html"/> Verwandte Wörter mit der Grundbedeutung ‚pausenlos‘ im Eintrag "ohne Unterlass"</div>
+
+          
         </template>
       </compare-item>
     </compare>
