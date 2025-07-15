@@ -32,6 +32,34 @@ useHead({
             append-inner-icon="mdi-magnify"></v-text-field>
         </div>
 
+        <!-- Genauigkeit der Suche -->
+        <!--<div style="margin: -50px 0px 50px 0px;">
+          <span style="position: relative; top: 0px">Genauigkeit der Suche:</span>
+          <span>
+            <v-btn variant="text" density="compact" class="nocaps"
+              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
+              @click="search_exact = false">
+              unscharf
+            </v-btn>
+            <v-switch v-model="search_exact" style="display: inline-block; position: relative; top: 35px"
+              density="compact"></v-switch>
+            <v-btn variant="text" density="compact" class="nocaps"
+              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
+              @click="search_exact = true">
+              exakte Zeichenfolge
+            </v-btn>
+          </span>
+        </div>-->
+        <div style="margin: -20px 0px 50px 0px;">
+          <v-slider v-model="search_exactness" :min="1" :max="5" :step="1" :ticks="search_exactness_labels"
+            show-ticks="always" label="Genauigkeit:" style="max-width: 100%;" tick-size="4"></v-slider>
+            <v-btn-toggle>
+              <v-btn>
+          <v-icon icon="mdi-format-italic"></v-icon>
+        </v-btn>
+            </v-btn-toggle>
+        </div>
+
         <!-- Anzeige-Optionen -->
         <div style="margin: -60px 0px 40px 0px;">
           <span style="position: relative; top: 0px">Anzeige-Optionen:</span>
@@ -50,27 +78,6 @@ useHead({
             </v-btn>
           </span>
         </div>
-
-        <!-- Genauigkeit der Suche -->
-
-        <div style="margin: -75px 0px 50px 0px;">
-          <span style="position: relative; top: 0px">Genauigkeit der Suche:</span>
-          <span>
-            <v-btn variant="text" density="compact" class="nocaps"
-              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
-              @click="search_exact = false">
-              unscharf
-            </v-btn>
-            <v-switch v-model="search_exact" style="display: inline-block; position: relative; top: 35px"
-              density="compact"></v-switch>
-            <v-btn variant="text" density="compact" class="nocaps"
-              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
-              @click="search_exact = true">
-              exakte Zeichenfolge
-            </v-btn>
-          </span>
-        </div>
-
 
         <!-- SUCH-Ergebnis -->
         <v-tabs-window v-model="search_header" style="margin-top: -40px;">
@@ -257,7 +264,16 @@ export default {
       search_header_switch: true,
       search_header: "byGroup",
 
-      search_exact: true
+      search_exact: true,
+
+      search_exactness: 3,
+      search_exactness_labels: {
+        1: 'Exakt',
+        2: 'Eng',
+        3: 'Flexibel',
+        4: 'Vage',
+        5: 'Kreativ'
+      }
     }
   },
   mounted() {
