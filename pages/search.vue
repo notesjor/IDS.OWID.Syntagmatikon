@@ -51,17 +51,41 @@ useHead({
           </span>
         </div>-->
         <div style="margin: -20px 0px 50px 0px;">
-          <v-slider v-model="search_exactness" :min="1" :max="5" :step="1" :ticks="search_exactness_labels"
-            show-ticks="always" label="Genauigkeit:" style="max-width: 100%;" tick-size="4"></v-slider>
-            <v-btn-toggle>
-              <v-btn>
-          <v-icon icon="mdi-format-italic"></v-icon>
-        </v-btn>
-            </v-btn-toggle>
+          <div style="display: flex; align-items: center;">
+            <div style="flex: 1;">
+              <v-slider v-model="search_exactness" :min="1" :max="5" :step="1" :ticks="search_exactness_labels"
+                show-ticks="always" label="Genauigkeit:" style="max-width: 100%;" :color="search_exactness_custom" tick-size="4"></v-slider>
+            </div>
+            <div style="flex: 0 0 auto; margin-left: 12px;">
+              <v-btn rounded="true" elevation="1" :icon="search_exactness_panel.length > 0 ? 'mdi-menu-up' : 'mdi-menu-down'"
+                :color="search_exactness_panel.length > 0 ? 'blue' : 'white'" @click="search_exactness_panel = search_exactness_panel.length > 0 ? [] : [0]"></v-btn>
+            </div>
+          </div>
         </div>
+        <v-expansion-panels v-model="search_exactness_panel" elevation="0" v-if="search_exactness_panel.length > 0">
+          <v-expansion-panel style="margin-top: -50px; padding-bottom: -10px;">
+            <v-expansion-panel-text>
+              <v-row>
+                <v-col cols="4">
+                  <v-combobox label="Mehrwortsuche"
+                    :items="['Beliebiges Wort', 'Beliebige Reihenfolge', 'Exakte Wortfolge']"
+                    variant="outlined" density="compact"></v-combobox>
+                </v-col>
+                <v-col cols="4">
+                  <v-combobox label="Suchebene" :items="['Reduziertes Lemma', 'Einfaches Lemma', 'Exakte Wortform']"
+                    variant="outlined" density="compact"></v-combobox>
+                </v-col>
+                <v-col cols="4">
+                  <v-combobox label="Unscharfe Suche" :items="['Unscharf', 'Dynamisch', 'Aus']"
+                    variant="outlined" density="compact"></v-combobox>
+                </v-col>
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+        </v-expansion-panels>
 
         <!-- Anzeige-Optionen -->
-        <div style="margin: -60px 0px 40px 0px;">
+        <div :style="search_exactness_panel.length === 1 ? 'margin: -40px 0px 50px 0px; text-align: center;' : 'margin: -80px 0px 50px 0px; text-align: center;'">
           <span style="position: relative; top: 0px">Anzeige-Optionen:</span>
           <span>
             <v-btn variant="text" density="compact" class="nocaps"
@@ -91,7 +115,7 @@ useHead({
             <div v-for="g in resultGroups">
               <div style="font-size: 0.8em; color:#999; margin-top:10px">
                 <span v-html="getResourcesShortNameGroup(g)"></span>
-                <span> ({{ searchApi.count[g[0].dic] }} Einträge)</span>
+                <span v-if="search_header === 'byGroup'"> ({{ searchApi.count[g[0].dic] }} Einträge)</span>
               </div>
               <div v-for="x in g">
                 <!--<span style="font-size: 0.8em; color:#999">{{ String(x.index).padStart(2, "0") }}. </span>-->
@@ -266,6 +290,8 @@ export default {
 
       search_exact: true,
 
+      search_exactness_panel: [0],
+      search_exactness_custom: "black",
       search_exactness: 3,
       search_exactness_labels: {
         1: 'Exakt',
