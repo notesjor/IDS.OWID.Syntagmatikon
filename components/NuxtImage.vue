@@ -1,23 +1,32 @@
 <template>
-  <div class="image-zoom-container relink">
-    <details>
-      <summary>
-        <div class="imgBorder"><img :src="src" :alt="alt" :style="style" @click="openZoom" class="imgText" /></div>
-        <span class="captionText">
-          <slot></slot>
-          <div v-if="href != null">
-            <a :href="href" target="_blank" class="captionLink">
-              <span style="margin-left: 5px;">zu diesem Beispiel</span>
-            </a>
-          </div>
-        </span>
-      </summary>
-      <div class="overlay" @click="closeZoom" v-if="isZoomed">
-        <img :src="src" :alt="alt" class="zoomed" />
-        <button class="close">×</button>
+  <div>
+    <div class="imgBorder"><img :src="src" :alt="alt" :style="style" @click="isZoomed = true" class="imgText" /></div>
+    <span class="captionText">
+      <div @click="isZoomed = true" style="cursor: zoom-in;">
+        <slot></slot>
       </div>
-    </details>
+      <div v-if="href != null" class="relink" style="margin-bottom: 1.85rem;">
+        <a :href="href" target="_blank" class="captionLink">
+          <span style="margin-left: 5px;">zu diesem Beispiel</span>
+        </a>
+      </div>
+    </span>
   </div>
+  <v-dialog v-model="isZoomed">
+    <v-card @click="isZoomed = false" v-if="isZoomed">
+      <div class="imgBorder"><img :src="src" :alt="alt" class="zoomed" style="margin-left: auto; margin-right: auto;" /></div>
+      <span class="captionZoom">
+        <div @click="isZoomed = true" style="cursor: zoom-in;">
+          <slot></slot>
+        </div>
+        <div v-if="href != null" class="relink">
+          <a :href="href" target="_blank" class="captionLink">
+            <span style="margin-left: 5px;">zu diesem Beispiel</span>
+          </a>
+        </div>
+      </span>
+    </v-card>
+  </v-dialog>
 </template>
 
 <script>
@@ -44,23 +53,11 @@ export default {
     return {
       isZoomed: false
     }
-  },
-  methods: {
-    openZoom() {
-      this.isZoomed = true;
-    },
-    closeZoom() {
-      this.isZoomed = false;
-    }
   }
 }
 </script>
 
 <style scoped>
-.image-zoom-container {
-  position: relative;
-}
-
 .imgBorder {
   width: 100%;
   border-width: 2px;
@@ -69,19 +66,7 @@ export default {
 .imgText {
   margin: auto;
   display: block;
-}
-
-summary {
-  margin-bottom: 1.75rem;
-}
-
-details summary {
-  list-style: none;
   cursor: zoom-in;
-}
-
-details[open] summary {
-  cursor: default;
 }
 
 .captionText {
@@ -90,23 +75,14 @@ details[open] summary {
   margin-bottom: 20px;
 }
 
+.captionZoom {
+  font-size: 1em;
+  color: #333;
+  padding: 10px;
+}
+
 .captionLink {
   font-weight: 500;
-}
-
-.thumbnail {
-  width: 300px;
-  transition: 0.3s;
-  border-radius: 8px;
-}
-
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.8);
-  display: grid;
-  place-items: center;
-  z-index: 1000;
 }
 
 .zoomed {
