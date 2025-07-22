@@ -311,16 +311,12 @@ div.nolink a::before {
   content: none !important;
 }
 
-div.relink a::before {
-  content: "\F0CE0  " !important;
+span.nolink a::before {
+  content: none !important;
 }
 
-div.caption {
-  font-size: 0.8em;
-  /*color: #666666;*/
-  color: black;
-  margin-bottom: 20px;
-  display: block;
+div.relink a::before {
+  content: "\F0CE0  " !important;
 }
 
 div.more {
@@ -331,21 +327,9 @@ div.more {
   background-color: rgb(238, 238, 238);
   padding: 10px;
 }
-
-div.exampleImg {
-  width: 100%;
-  border-width: 2px;
-  padding: 2px;
-}
-
 div.exampleHeadline {
   margin-bottom: 10px;
   font-weight: bold;
-}
-
-div.exampleImg img {
-  margin: auto;
-  display: block;
 }
 
 .pos_highlight {

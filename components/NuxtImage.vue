@@ -1,8 +1,16 @@
 <template>
-  <div class="image-zoom-container">
+  <div class="image-zoom-container relink">
     <details>
       <summary>
-        <img :src="src" :alt="alt" :style="style" @click="openZoom" />
+        <div class="imgBorder"><img :src="src" :alt="alt" :style="style" @click="openZoom" class="imgText" /></div>
+        <span class="captionText">
+          <slot></slot>
+          <div v-if="href != null">
+            <a :href="href" target="_blank" class="captionLink">
+              <span style="margin-left: 5px;">zu diesem Beispiel</span>
+            </a>
+          </div>
+        </span>
       </summary>
       <div class="overlay" @click="closeZoom" v-if="isZoomed">
         <img :src="src" :alt="alt" class="zoomed" />
@@ -26,6 +34,10 @@ export default {
     },
     style: {
       type: String,
+    },
+    href: {
+      type: String,
+      default: null
     }
   },
   data() {
@@ -49,6 +61,20 @@ export default {
   position: relative;
 }
 
+.imgBorder {
+  width: 100%;
+  border-width: 2px;
+}
+
+.imgText {
+  margin: auto;
+  display: block;
+}
+
+summary {
+  margin-bottom: 1.75rem;
+}
+
 details summary {
   list-style: none;
   cursor: zoom-in;
@@ -56,6 +82,16 @@ details summary {
 
 details[open] summary {
   cursor: default;
+}
+
+.captionText {
+  font-size: 0.85em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.captionLink {
+  font-weight: 500;
 }
 
 .thumbnail {
