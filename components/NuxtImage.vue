@@ -1,46 +1,46 @@
 <template>
-    <div class="image-zoom-container">
-        <details>
-            <summary>
-                <img :src="src" :alt="alt" :style="style" />
-            </summary>
-            <div class="overlay">
-                <img :src="src" :alt="alt" class="zoomed" />
-                <button class="close" @click.prevent="closeZoom">×</button>
-            </div>
-        </details>
-    </div>
+  <div class="image-zoom-container">
+    <details>
+      <summary>
+        <img :src="src" :alt="alt" :style="style" @click="openZoom" />
+      </summary>
+      <div class="overlay" @click="closeZoom" v-if="isZoomed">
+        <img :src="src" :alt="alt" class="zoomed" />
+        <button class="close">×</button>
+      </div>
+    </details>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'NuxtImg',
-    props: {
-        src: {
-            type: String,
-            required: true
-        },
-        alt: {
-            type: String,
-            default: 'Abbildung'
-        },
-        style: {
-            type: String,
-        }
+  name: 'NuxtImg',
+  props: {
+    src: {
+      type: String,
+      required: true
     },
-    methods: {
-        closeZoom() {
-            const details = document.querySelector('.image-zoom-container details')
-            details?.removeAttribute('open')
-        }
+    alt: {
+      type: String,
+      default: 'Abbildung'
+    },
+    style: {
+      type: String,
     }
-}
-</script>
-
-<script setup>
-const closeZoom = () => {
-  const details = document.querySelector('.image-zoom-container details')
-  details?.removeAttribute('open')
+  },
+  data() {
+    return {
+      isZoomed: false
+    }
+  },
+  methods: {
+    openZoom() {
+      this.isZoomed = true;
+    },
+    closeZoom() {
+      this.isZoomed = false;
+    }
+  }
 }
 </script>
 
