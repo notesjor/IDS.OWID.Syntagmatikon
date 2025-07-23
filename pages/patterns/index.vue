@@ -49,7 +49,7 @@ useHead({
             Beschreibungen. Das heißt, alle Informationen sind über das Netzwerk semiabstrakter Schablonen herleitbar.
           </info-box>
 
-          <info-box title="Lexikografische Angabe" :color1="color1" link="/patterns/component"
+          <info-box title="Lexikografische Angaben" :color1="color1" link="/patterns/component"
             :filter="['PREPCON_kon', 'SPRW', 'FesteWV']">
             In einigen Ressourcen werden von Hand aufbereitete Musterangaben und -visualisierungen als eine Komponente
             von
