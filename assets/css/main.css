@@ -317,6 +317,7 @@ span.nolink a::before {
 
 div.relink a::before {
   content: "\F0CE0  " !important;
+  font: normal normal normal 18px/1 "Material Design Icons";
 }
 
 div.more {

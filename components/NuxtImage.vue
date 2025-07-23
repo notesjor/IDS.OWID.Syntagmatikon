@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="imgBorder"><img :src="src" :alt="alt" :style="style" @click="isZoomed = true" class="imgText" /></div>
-    <span class="captionText">
+    <div class="container"><img :src="src" :alt="alt" @click="isZoomed = true" class="normalImg" /></div>
+    <span class="normalText">
       <div @click="isZoomed = true" style="cursor: zoom-in;">
         <slot></slot>
       </div>
@@ -14,8 +14,8 @@
   </div>
   <v-dialog v-model="isZoomed">
     <v-card @click="isZoomed = false" v-if="isZoomed">
-      <div class="imgBorder"><img :src="src" :alt="alt" class="zoomed" style="margin-left: auto; margin-right: auto;" /></div>
-      <span class="captionZoom">
+      <div class="container"><img :src="src" :alt="alt" class="zoomedImg" /></div>
+      <span class="zoomedText">
         <div @click="isZoomed = true" style="cursor: zoom-in;">
           <slot></slot>
         </div>
@@ -41,9 +41,6 @@ export default {
       type: String,
       default: 'Abbildung'
     },
-    style: {
-      type: String,
-    },
     href: {
       type: String,
       default: null
@@ -58,49 +55,39 @@ export default {
 </script>
 
 <style scoped>
-.imgBorder {
+.container {
   width: 100%;
   border-width: 2px;
 }
 
-.imgText {
+.normalImg {
   margin: auto;
   display: block;
   cursor: zoom-in;
 }
 
-.captionText {
+.normalText {
   font-size: 0.85em;
   color: #333;
   margin-bottom: 20px;
 }
 
-.captionZoom {
+.zoomedText {
   font-size: 1em;
   color: #333;
   padding: 10px;
 }
 
-.captionLink {
-  font-weight: 500;
-}
-
-.zoomed {
+.zoomedImg {
   max-width: 90vw;
   max-height: 90vh;
   border-radius: 8px;
-  transition: transform 0.3s;
   cursor: zoom-out;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.close {
-  position: fixed;
-  top: 2rem;
-  right: 2rem;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
+.captionLink {
+  font-weight: 500;
 }
 </style>
