@@ -14,12 +14,33 @@
       <v-col cols="4">
         <div style="position: sticky; top: 10px; max-height: calc(100vh - 40px); overflow-y: auto;">
           <v-tabs v-model="currentTab" direction="vertical">
-            <v-tab v-for="(item, index) in tabs" :key="index" class="denseMe">
-              <span class="nocaps" style="letter-spacing: normal;">
-                <v-chip variant="outlined" density="compact">
-                  <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br />
-                </v-chip>
-              </span>
+            <v-tab v-for="(item, index) in tabs" :key="index"
+              :class="index !== 0 && currentTab === index ? 'expandMe' : 'denseMe'">
+
+              <div v-if="index !== 0 && currentTab === index">
+                <v-row>
+                  <div class="nocaps" style="letter-spacing: normal; margin: -10px 0px 0px 13px;">
+                    <v-chip variant="outlined" density="compact">
+                      <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br />
+                    </v-chip>
+                  </div>
+                </v-row>
+                <v-row>
+                  <div style="margin: 5px 0px -10px 13px" class="relink">
+                    <a :href="resourcesStore.getResource(filter[index - 1]).url" target="_blank"
+                      style="font-size: 0.9em; text-transform: none;">
+                      zur Ressource
+                    </a>
+                  </div>
+                </v-row>
+              </div>
+              <div v-else>
+                <div class="nocaps" style="letter-spacing: normal;">
+                  <v-chip variant="outlined" density="compact">
+                    <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br />
+                  </v-chip>
+                </div>
+              </div>
             </v-tab>
           </v-tabs>
         </div>
@@ -143,6 +164,12 @@ export default {
   font-size: 0.8rem;
   padding: 0px 0px 0px 10px;
   height: 40px !important;
+}
+
+.expandMe {
+  font-size: 0.8rem;
+  padding: 0px 0px 0px 10px;
+  height: 75px !important;
 }
 
 div.v-tabs-window-item {
