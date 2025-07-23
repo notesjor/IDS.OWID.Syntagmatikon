@@ -68,15 +68,15 @@ useHead({
               <v-row>
                 <v-col cols="4">
                   <v-combobox label="Mehrwortsuche"
-                    :items="['Beliebiges Wort', 'Beliebige Reihenfolge', 'Exakte Wortfolge']"
+                    :items="['Exakte Abfolge', 'Beliebige Reihenfolge', 'Beliebiges Wort']"
                     variant="outlined" density="compact"></v-combobox>
                 </v-col>
                 <v-col cols="4">
-                  <v-combobox label="Suchebene" :items="['Reduziertes Lemma', 'Einfaches Lemma', 'Exakte Wortform']"
+                  <v-combobox label="Suchebene" :items="['Exakte Wortform', 'Lemmatisiert', 'Reduziertes Lemma']"
                     variant="outlined" density="compact"></v-combobox>
                 </v-col>
                 <v-col cols="4">
-                  <v-combobox label="Unscharfe Suche" :items="['Unscharf', 'Dynamisch', 'Aus']"
+                  <v-combobox label="Unscharfe Suche" :items="['Deaktiviert', 'Dynamisch', 'Experimentell']"
                     variant="outlined" density="compact"></v-combobox>
                 </v-col>
               </v-row>
