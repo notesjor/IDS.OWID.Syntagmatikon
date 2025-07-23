@@ -54,11 +54,14 @@ useHead({
           <div style="display: flex; align-items: center;">
             <div style="flex: 1;">
               <v-slider v-model="search_exactness" :min="1" :max="5" :step="1" :ticks="search_exactness_labels"
-                show-ticks="always" label="Genauigkeit:" style="max-width: 100%;" :color="search_exactness_custom" tick-size="4"></v-slider>
+                show-ticks="always" label="Genauigkeit:" style="max-width: 100%;" :color="search_exactness_custom"
+                tick-size="4"></v-slider>
             </div>
             <div style="flex: 0 0 auto; margin-left: 12px;">
-              <v-btn rounded="true" elevation="1" :icon="search_exactness_panel.length > 0 ? 'mdi-menu-up' : 'mdi-menu-down'"
-                :color="search_exactness_panel.length > 0 ? 'blue' : 'white'" @click="search_exactness_panel = search_exactness_panel.length > 0 ? [] : [0]"></v-btn>
+              <v-btn rounded="true" elevation="1"
+                :icon="search_exactness_panel.length > 0 ? 'mdi-menu-up' : 'mdi-menu-down'"
+                :color="search_exactness_panel.length > 0 ? 'blue' : 'white'"
+                @click="search_exactness_panel = search_exactness_panel.length > 0 ? [] : [0]"></v-btn>
             </div>
           </div>
         </div>
@@ -66,18 +69,18 @@ useHead({
           <v-expansion-panel style="margin-top: -50px; padding-bottom: -10px;">
             <v-expansion-panel-text>
               <v-row>
-                <v-col cols="4">
-                  <v-combobox label="Mehrwortsuche"
-                    :items="['Exakte Abfolge', 'Beliebige Reihenfolge', 'Beliebiges Wort']"
-                    variant="outlined" density="compact"></v-combobox>
+                <v-col cols="4" style="padding: 15px 0px;">
+                  <v-combobox label="Mehrwortsuche" :items="search_detail_multiword_labels" item-title="text"
+                    item-value="value" variant="outlined" density="compact"
+                    v-model="search_detail_multiword"></v-combobox>
                 </v-col>
-                <v-col cols="4">
-                  <v-combobox label="Suchebene" :items="['Exakte Wortform', 'Lemmatisiert', 'Reduziertes Lemma']"
-                    variant="outlined" density="compact"></v-combobox>
+                <v-col cols="4" style="padding: 15px 5px;">
+                  <v-combobox label="Suchebene" :items="search_detail_layer_labels" item-title="text" item-value="value"
+                    variant="outlined" density="compact" v-model="search_detail_layer"></v-combobox>
                 </v-col>
-                <v-col cols="4">
-                  <v-combobox label="Unscharfe Suche" :items="['Deaktiviert', 'Dynamisch', 'Experimentell']"
-                    variant="outlined" density="compact"></v-combobox>
+                <v-col cols="4" style="padding: 15px 0px;">
+                  <v-combobox label="Unscharfe Suche" :items="search_detail_fuzzy_labels" item-title="text"
+                    item-value="value" variant="outlined" density="compact" v-model="search_detail_fuzzy"></v-combobox>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
@@ -85,7 +88,8 @@ useHead({
         </v-expansion-panels>
 
         <!-- Anzeige-Optionen -->
-        <div :style="search_exactness_panel.length === 1 ? 'margin: -40px 0px 50px 0px; text-align: center;' : 'margin: -80px 0px 50px 0px; text-align: center;'">
+        <div
+          :style="search_exactness_panel.length === 1 ? 'margin: -45px 0px 50px 0px; text-align: center;' : 'margin: -60px 0px 50px 0px; text-align: center;'">
           <span style="position: relative; top: 0px">Anzeige-Optionen:</span>
           <span>
             <v-btn variant="text" density="compact" class="nocaps"
@@ -159,17 +163,6 @@ useHead({
                 direkt zur entsprechenden Ressource.
               </p>
               <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <b>Anzeige-Optionen:</b> Die Anzeige "sortiert nach Ressourcen" zeigt jeweils drei Treffer pro Ressource
-                pro Seite und erlaubt so einen Überblick über die Treffermengen der jeweiligen Ressourcen. Die Anzeige
-                "alphabetisch" zeigt alle Treffer in alphabetischer Reihenfolge.
-              </p>
-              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <b>Genauigkeit der Suche:</b>
-                Hier kann gesteuert werden, ob Treffer die eingegebene Zeichenfolge exakt
-                enthalten müssen oder eine gewisse Varianz erlaubt ist. <b>Achtung: Diese Funktion ist experimentell.
-                  "Unscharf" kann zu unerwarteten Treffern führen.</b>
-              </p>
-              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
                 <b>Ressourcen:</b> Hier können einzelne Ressourcen direkt aktiviert
                 <v-icon>mdi-check-circle</v-icon> oder deaktiviert <v-icon>mdi-circle-outline</v-icon> werden. Treffer
                 in deaktivierten Ressourcen werden ausgeblendet.
@@ -179,6 +172,47 @@ useHead({
                 Beschreibungen der Facetten findet man im Ressourcenkompass. Ist eine Ressource aufgrund des
                 Facetten-Filters deaktiviert, wird sie mit dem folgenden Symbol markiert:
                 <v-icon>mdi-circle-off-outline</v-icon>
+              </p>
+              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
+                <b>Anzeige-Optionen:</b> Die Anzeige "sortiert nach Ressourcen" zeigt jeweils drei Treffer pro Ressource
+                pro Seite und erlaubt so einen Überblick über die Treffermengen der jeweiligen Ressourcen. Die Anzeige
+                "alphabetisch" zeigt alle Treffer in alphabetischer Reihenfolge.
+              </p>
+              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
+                <span><b>Genauigkeit:</b> Über den Parameter Genauigkeit kann bestimmt werden, wie genau sich die Suche
+                  an die Eingaben hält. Es gibt fünf <strong>Suchprofile</strong> (<em>Exakt, Eng, Flexibel, Vage</em> 
+                  oder <em>Kreativ</em>) die unterschiedliche Voreinstellungen bereithalten.&nbsp;
+                </span>
+                <span>Über den Button rechts neben dem Schieberegler öffnen Sie die
+                  <strong>Detaileinstellungen</strong> zur manuellen Einstellung der Suche.<br/><br/></span>
+                <span>Drei Einstellungsebenen stehen zur Verfügung:</span>
+
+              <ul style="word-break: break-word; overflow-wrap: anywhere; hyphens: auto; text-align: left; margin-left: 5px;">
+                <li style="margin-left: 0;">
+                  <em>Mehrwortsuche:</em>
+                  <ul style="margin-left: 15px;">
+                    <li style="margin-left: 0;"><strong>Exakte Abfolge:</strong> sucht genau die eingegebene Wortfolge.</li>
+                    <li style="margin-left: 0;"><strong>Beliebige Reihenfolge:</strong> alle Wörter müssen vorkommen, Reihenfolge egal.</li>
+                    <li style="margin-left: 0;"><strong>Beliebiges Wort:</strong> es genügt, wenn ein Wort gefunden wird (mehr ist besser).</li>
+                  </ul>
+                </li>
+                <li style="margin-left: 0;">
+                  <em>Suchebene:</em>
+                  <ul style="margin-left: 15px">
+                    <li style="margin-left: 0;"><strong>Exakte Wortform:</strong> sucht nach der eingegebenen Schreibweise.</li>
+                    <li style="margin-left: 0;"><strong>Lemmatisiert:</strong> berücksichtigt Grundformen.</li>
+                    <li style="margin-left: 0;"><strong>Reduziertes Lemma:</strong> sucht noch allgemeiner.</li>
+                  </ul>
+                </li>
+                <li style="margin-left: 0;">
+                  <em>Unscharfe Suche:</em>
+                  <ul style="margin-left: 15px;">
+                    <li style="margin-left: 0;"><strong>Deaktiviert:</strong> nur genaue Treffer.</li>
+                    <li style="margin-left: 0;"><strong>Dynamisch:</strong> erlaubt leichte Abweichungen, abhängig von der Wortlänge.</li>
+                    <li style="margin-left: 0;"><strong>Experimentell:</strong> sehr weite Suche, Ergebnisse oft ungenau.</li>
+                  </ul>
+                </li>
+              </ul>
               </p>
             </v-expansion-panel-text>
           </v-expansion-panel>
@@ -293,13 +327,22 @@ export default {
       search_exactness_panel: [0],
       search_exactness_custom: "black",
       search_exactness: 3,
+      search_exactness_sync: true,
       search_exactness_labels: {
         1: 'Exakt',
         2: 'Eng',
         3: 'Flexibel',
         4: 'Vage',
         5: 'Kreativ'
-      }
+      },
+
+      search_detail_multiword_labels: [{ text: 'Exakte Abfolge', value: 0 }, { text: 'Beliebige Reihenfolge', value: 1 }, { text: 'Beliebiges Wort', value: 2 }],
+      search_detail_layer_labels: [{ text: 'Exakte Wortform', value: 0 }, { text: 'Lemmatisiert', value: 1 }, { text: 'Reduziertes Lemma', value: 2 }],
+      search_detail_fuzzy_labels: [{ text: 'Deaktiviert', value: 0 }, { text: 'Dynamisch', value: 1 }, { text: 'Experimentell', value: 2 }],
+
+      search_detail_multiword: 1,
+      search_detail_layer: 1,
+      search_detail_fuzzy: 1,
     }
   },
   mounted() {
@@ -384,7 +427,31 @@ export default {
     search_exact: function (val) {
       this.searchApi.exact = val;
       this.newSearch();
-    }
+    },
+    search_exactness: function (val) {
+      if (!this.search_exactness_sync)
+        return;
+
+      switch (val) {
+        case 1:
+          this.search_detail_multiword = this.search_detail_layer = this.search_detail_fuzzy = 0;
+          break;
+        case 2:
+          this.search_detail_multiword = this.search_detail_layer = 1;
+          this.search_detail_fuzzy = 0;
+          break;
+        case 3:
+          this.search_detail_multiword = this.search_detail_layer = this.search_detail_fuzzy = 1;
+          break;
+        case 4:
+          this.search_detail_multiword = this.search_detail_layer = 2;
+          this.search_detail_fuzzy = 1;
+          break;
+        case 5:
+          this.search_detail_multiword = this.search_detail_layer = this.search_detail_fuzzy = 2;
+          break;
+      }
+    },
   },
   computed: {
     resourcesList: function () {
