@@ -25,20 +25,20 @@ export default {
       :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp_art', 'Redeeinleiter', 'Verlaufsformen']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
-          <NuxtImage src="/img/patterns/all_dummy.png" style="text-align: center;"
+          <NuxtImage src="/img/patterns/dynamic/all_dynamic.png" style="text-align: center;"
         />
         </div>
       </compare-item>
 
        <compare-item value="1" rkey="KoMuX">
-        <p>
+        <p>Die musterbasierte Suche in <r rkey="KoMuX" /> beruht darauf, dass grammatische Merkmale (Wortbildungstyp oder Wortart), (semantisch-)thematische (Wortfelder) und/oder lexikalische Eigenschaften (konkretes Lemma) für das Erst- und Zweitglied spezifiziert werden. Dies ermöglicht es beispielsweise, gezielt nach allen Komposita, deren Zweitglied <em>Mann</em> ist (z.B. <em>Lederjacken-Mann</em>), nach ADJEKTIV-NOMEN-Komposita (z.B. <em>Kleinkind</em>) oder auch nach SUBSTANZ-ARTEFAKT-Komposita (z.B. <em>Betonmauer</em>) zu recherchieren. 
           </p>
         <template #explain>
           <div class="exampleImg">
             <NuxtImage src="/img/patterns/dynamic/dynamic01.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Beispiel aus Komux
+            Suchmaske mit Spezifikationsmöglichkeiten für das Erst- und Zweitglied
           </div>
 
         </template>
@@ -82,15 +82,15 @@ export default {
         </compare-item>
 
          <compare-item value="4" rkey="Redeeinleiter">
-        <p>
+        <p>In <r rkey="Redeeinleiter"/> können die Redeeinleiter u.a. nach ihrer Position relativ zum Inhalt der Wiedergabe (initial, final oder medial) gefiltert werden, um syntagmatische Muster zu erschließen. 
           </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/patterns/dynamic/dynamic05.png" alt="Beispielgrafik 1" />
+            <NuxtImage src="/img/patterns/dynamic/dynamic05_tight.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
              <ScreenshotLink to="https://www.owid.de/plus/redeeinleiter/?search=sagen" /> 
-            Beispiel aus Redeeinleiter
+            Ausschnitt aus der Ergebnisliste für die Suche nach Redeeinleitern mit <em>sagen</em>, die in initialer Position stehen
           </div>
 
         </template>
