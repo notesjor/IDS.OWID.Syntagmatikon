@@ -1,22 +1,21 @@
 <!-- HINWEIS: Dies ist eine Kompoente, mit mehreren Sub-Komponenten: SamplerItem +> SamplerItemText -->
 <template>
   <div v-if="extraLarge" class="nolink"
-    style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); position: relative; left: -10px; width: calc(100% + 330px);">
+    style="border:3px #ccc solid; border-radius: 10px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); position: relative; left: -20px; width: calc(100% + 330px);">
     <v-row style="margin-top:-20px">
       <v-col cols="8">
         <div style="background: #fff; border-radius: 5px; margin-left: 4px;">
           <v-tabs-window v-model="currentTab"
-            style="border: 1px white solid; border-radius: 5px; padding: 10px; background-color: #fff; margin:0px -10px 0px -10px">
+            style="border: 5px white solid; border-radius: 5px; padding: 10px; background-color: #fff; margin:7px -10px 0px -5px">
             <slot />
           </v-tabs-window>
         </div>
       </v-col>
-      <v-col cols="4">
-        <div style="position: sticky; top: 10px; max-height: calc(100vh - 40px); overflow-y: auto;">
+      <v-col cols="4" style="padding:0px">
+        <div style="position: sticky; top: 10px; max-height: calc(100vh - 40px); overflow-y: auto; margin-top:25px">
           <v-tabs v-model="currentTab" direction="vertical">
             <v-tab v-for="(item, index) in tabs" :key="index"
-              :class="index !== 0 && currentTab === index ? 'expandMe' : 'denseMe'">
-
+              :class="currentTab === index ? (index === 0 ? 'expandZero' : 'expandMe') : 'denseMe'">
               <div v-if="index !== 0 && currentTab === index">
                 <v-row>
                   <div class="nocaps" style="letter-spacing: normal; margin: -10px 0px 0px 13px;">
@@ -48,7 +47,7 @@
     </v-row>
   </div>
   <div v-else class="nolink"
-    style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
+    style="border:3px #ccc solid; border-radius: 10px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
     <v-row style="margin-top:-20px">
       <v-col>
         <v-tabs v-model="currentTab">
@@ -163,13 +162,25 @@ export default {
 .denseMe {
   font-size: 0.8rem;
   padding: 0px 0px 0px 10px;
+  margin-left: -3px;
   height: 40px !important;
+  background-color: #f2f2f2;
+}
+
+.expandZero {
+  font-size: 0.8rem;
+  padding: 0px 0px 0px 10px;
+  margin-left: -3px;
+  height: 40px !important;
+  background-color: white;
 }
 
 .expandMe {
   font-size: 0.8rem;
   padding: 0px 0px 0px 10px;
+  margin-left: -3px;
   height: 75px !important;
+  background-color: white;
 }
 
 div.v-tabs-window-item {
