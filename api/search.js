@@ -1,5 +1,6 @@
 export default class search {
   query = "*";
+  queryName = "match";
   sources = [];
 
   offset = 0;
@@ -11,11 +12,16 @@ export default class search {
   hits = [];
 
   exact = true;
+  fuzziness = 0;
+  transpositions = true;
 
-  async search(query, sources, searchAll) {
+  async search(query, sources, searchAll, searchMw, searchLayer, searchFuzzy) {
     this.query = query;
     this.offset = 0;
     this.count = null;
+
+    this.fuzziness = searchFuzzy == 0 ? 0 : searchFuzzy == 1 ? "AUTO" : "2";
+    this.transpositions = searchFuzzy < 2;
 
     if (searchAll) {
       this.sources = sources;
@@ -57,11 +63,6 @@ export default class search {
           bool: {
             must: [
               {
-                match: {
-                  lbl: this.query,
-                },
-              },
-              {
                 term: {
                   dic: this.sources[i],
                 },
@@ -81,6 +82,16 @@ export default class search {
           },
         },
       };
+
+      var q = {};
+      q[this.queryName] = {
+        lbl: this.query,
+        fuzzy_transpositions: this.transpositions,
+        fuzziness: this.fuzziness
+      };
+      console.log("query", q);
+      request.query.bool.must.push(q);
+
       if (!this.query || this.query.trim() === "")
         request.query = {
           bool: {
@@ -234,7 +245,9 @@ export default class search {
 
   get countTotal() {
     return typeof this.count === "number"
-      ? (this.count === null ? 0 : this.count)
+      ? this.count === null
+        ? 0
+        : this.count
       : Object.values(this.count).reduce((a, b) => a + b, 0);
   }
 }

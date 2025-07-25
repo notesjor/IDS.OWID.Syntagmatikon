@@ -26,6 +26,8 @@ useHead({
             searchApi?.countTotal }} Einträge)</span>
         </h1>
 
+        {{ search_exactness_custom }}
+
         <!-- SUCH-Eingabemaske -->
         <div style="margin-top:0px">
           <v-text-field label="Stichwort hier eingeben..." v-model="query"
@@ -33,23 +35,6 @@ useHead({
         </div>
 
         <!-- Genauigkeit der Suche -->
-        <!--<div style="margin: -50px 0px 50px 0px;">
-          <span style="position: relative; top: 0px">Genauigkeit der Suche:</span>
-          <span>
-            <v-btn variant="text" density="compact" class="nocaps"
-              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
-              @click="search_exact = false">
-              unscharf
-            </v-btn>
-            <v-switch v-model="search_exact" style="display: inline-block; position: relative; top: 35px"
-              density="compact"></v-switch>
-            <v-btn variant="text" density="compact" class="nocaps"
-              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
-              @click="search_exact = true">
-              exakte Zeichenfolge
-            </v-btn>
-          </span>
-        </div>-->
         <div style="margin: -20px 0px 50px 0px;">
           <div style="display: flex; align-items: center;">
             <div style="flex: 1;">
@@ -180,26 +165,31 @@ useHead({
               </p>
               <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
                 <span><b>Genauigkeit:</b> Über den Parameter Genauigkeit kann bestimmt werden, wie genau sich die Suche
-                  an die Eingaben hält. Es gibt fünf <strong>Suchprofile</strong> (<em>Exakt, Eng, Flexibel, Vage</em> 
+                  an die Eingaben hält. Es gibt fünf <strong>Suchprofile</strong> (<em>Exakt, Eng, Flexibel, Vage</em>
                   oder <em>Kreativ</em>) die unterschiedliche Voreinstellungen bereithalten.&nbsp;
                 </span>
                 <span>Über den Button rechts neben dem Schieberegler öffnen Sie die
-                  <strong>Detaileinstellungen</strong> zur manuellen Einstellung der Suche.<br/><br/></span>
+                  <strong>Detaileinstellungen</strong> zur manuellen Einstellung der Suche.<br /><br /></span>
                 <span>Drei Einstellungsebenen stehen zur Verfügung:</span>
 
-              <ul style="word-break: break-word; overflow-wrap: anywhere; hyphens: auto; text-align: left; margin-left: 5px;">
+              <ul
+                style="word-break: break-word; overflow-wrap: anywhere; hyphens: auto; text-align: left; margin-left: 5px;">
                 <li style="margin-left: 0;">
                   <em>Mehrwortsuche:</em>
                   <ul style="margin-left: 15px;">
-                    <li style="margin-left: 0;"><strong>Exakte Abfolge:</strong> sucht genau die eingegebene Wortfolge.</li>
-                    <li style="margin-left: 0;"><strong>Beliebige Reihenfolge:</strong> alle Wörter müssen vorkommen, Reihenfolge egal.</li>
-                    <li style="margin-left: 0;"><strong>Beliebiges Wort:</strong> es genügt, wenn ein Wort gefunden wird (mehr ist besser).</li>
+                    <li style="margin-left: 0;"><strong>Exakte Abfolge:</strong> sucht genau die eingegebene Wortfolge.
+                    </li>
+                    <li style="margin-left: 0;"><strong>Beliebige Reihenfolge:</strong> alle Wörter müssen vorkommen,
+                      Reihenfolge egal.</li>
+                    <li style="margin-left: 0;"><strong>Beliebiges Wort:</strong> es genügt, wenn ein Wort gefunden wird
+                      (mehr ist besser).</li>
                   </ul>
                 </li>
                 <li style="margin-left: 0;">
                   <em>Suchebene:</em>
                   <ul style="margin-left: 15px">
-                    <li style="margin-left: 0;"><strong>Exakte Wortform:</strong> sucht nach der eingegebenen Schreibweise.</li>
+                    <li style="margin-left: 0;"><strong>Exakte Wortform:</strong> sucht nach der eingegebenen
+                      Schreibweise.</li>
                     <li style="margin-left: 0;"><strong>Lemmatisiert:</strong> berücksichtigt Grundformen.</li>
                     <li style="margin-left: 0;"><strong>Reduziertes Lemma:</strong> sucht noch allgemeiner.</li>
                   </ul>
@@ -208,8 +198,10 @@ useHead({
                   <em>Unscharfe Suche:</em>
                   <ul style="margin-left: 15px;">
                     <li style="margin-left: 0;"><strong>Deaktiviert:</strong> nur genaue Treffer.</li>
-                    <li style="margin-left: 0;"><strong>Dynamisch:</strong> erlaubt leichte Abweichungen, abhängig von der Wortlänge.</li>
-                    <li style="margin-left: 0;"><strong>Experimentell:</strong> sehr weite Suche, Ergebnisse oft ungenau.</li>
+                    <li style="margin-left: 0;"><strong>Dynamisch:</strong> erlaubt leichte Abweichungen, abhängig von
+                      der Wortlänge.</li>
+                    <li style="margin-left: 0;"><strong>Experimentell:</strong> sehr weite Suche, Ergebnisse oft
+                      ungenau.</li>
                   </ul>
                 </li>
               </ul>
@@ -327,7 +319,7 @@ export default {
       search_exactness_panel: [0],
       search_exactness_custom: "black",
       search_exactness: 3,
-      search_exactness_sync: true,
+      search_exactness_syncLock: false,
       search_exactness_labels: {
         1: 'Exakt',
         2: 'Eng',
@@ -357,7 +349,12 @@ export default {
       try {
         this.page = 1;
         var self = this;
-        self.searchApi.search(self.query, self.resourcesStore.resourceUsedForSearch, self.search_header_switch).then(x => {
+        self.searchApi.search(self.query, 
+        self.resourcesStore.resourceUsedForSearch, 
+        self.search_header_switch,
+        self.search_detail_multiword, 
+        self.search_detail_layer,
+        self.search_detail_fuzzy).then(x => {
           self.results = x;
         });
       } catch {
@@ -396,7 +393,33 @@ export default {
     },
     getResourcesShortNameGroup(key) {
       return this.resourcesStore?.getResource(key[0].dic)?.nameShort;
-    }
+    },
+    /*TODO calcSearchExactness() {           
+      this.search_exactness_syncLock = true;
+      this.search_exactness_custom = "grey";
+
+      var val = this.search_detail_multiword + this.search_detail_layer + this.search_detail_fuzzy;
+
+      switch (val) {
+        case 0:
+          this.search_exactness = 1;
+          break;
+        case 1:
+        case 2:
+          this.search_exactness = 2;
+          break;
+        case 3:
+          this.search_exactness = 3;
+          break;
+        case 4:
+        case 5:
+          this.search_exactness = 4;
+          break;
+        case 6:
+          this.search_exactness = 5;
+          break;
+      }
+    }*/
   },
   watch: {
     query: function (val) {
@@ -429,8 +452,10 @@ export default {
       this.newSearch();
     },
     search_exactness: function (val) {
-      if (!this.search_exactness_sync)
+      if (this.search_exactness_syncLock)
         return;
+      this.search_exactness_syncLock = true;
+      this.search_exactness_custom = "black";
 
       switch (val) {
         case 1:
@@ -451,7 +476,39 @@ export default {
           this.search_detail_multiword = this.search_detail_layer = this.search_detail_fuzzy = 2;
           break;
       }
+
+      this.newSearch();
+      this.search_exactness_syncLock = false;
     },
+    // TODO
+    /*
+    search_detail_multiword: function (val) {
+      if (val !== null && typeof val === 'object' && 'value' in val)
+        this.search_detail_multiword = val.value;
+      if (this.search_exactness_syncLock)
+        return;
+console.log(this.search_exactness_syncLock);
+      this.calcSearchExactness();
+      this.newSearch();
+    },
+    search_detail_layer: function (val) {
+      if (val !== null && typeof val === 'object' && 'value' in val)
+        this.search_detail_layer = val.value;
+      if (this.search_exactness_syncLock)
+        return;
+console.log(this.search_exactness_syncLock);
+      this.calcSearchExactness();
+      this.newSearch();
+    },
+    search_detail_fuzzy: function (val) {
+      if (val !== null && typeof val === 'object' && 'value' in val)
+        this.search_detail_fuzzy = val.value;
+      if (this.search_exactness_syncLock)
+        return;
+console.log(this.search_exactness_syncLock);
+      this.calcSearchExactness();
+      this.newSearch();
+    }*/
   },
   computed: {
     resourcesList: function () {
