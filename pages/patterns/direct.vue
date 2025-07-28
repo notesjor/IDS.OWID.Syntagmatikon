@@ -31,7 +31,8 @@ export default {
       </compare-item>
 
       <compare-item value="1" rkey="WVBF">
-        <p><r rkey="WVBF" /> visualisiert die Vernetzung von Wortverbindungen und semiabstrakten Mustern des Bezugslexems GRUND in Kombination mit den Präpositionen <em>aus; auf; in; mit</em> und <em>ohne</em>. Die primäre Zugriffsstruktur ist eine Netzwerkgrafik, bei der jeder Knoten mit einer Beschreibung eines syntagmatischen Musters verknüpft ist.
+        <p><r rkey="WVBF" /> visualisiert die Vernetzung von Wortverbindungen und semiabstrakten Mustern des Bezugslexems GRUND in Kombination mit den Präpositionen <em>aus, auf, in, mit</em> und <em>ohne</em>. Jeder Knoten bündelt automatische Korpusdaten (KWICs, Belege, Slotfüller, Kookkurrenzen u.a.) und qualitative Interpretation dieser Daten für die jeweilige Wortverbindung bzw. das semiabstrakte Muster.</p>
+        <p>So wird im Muster-Knoten [<em>aus</em> ADJ <em>Gründen</em>] beschrieben, welcher semantisch-pragmatischen Natur die unterschiedliche Füllergruppen sind: z. B.  Adjektive, die sich auf konkrete Ursachen oder Motiven beziehen oder Adjektive, die die Nachvollziehbarkeit von Ursachen und Motiven thematisieren.
           </p>
         <template #explain>
           <div class="exampleImg">
@@ -40,7 +41,7 @@ export default {
           </div>
           <div class="caption">
              <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/grund-graphik.html" /> 
-            Ausschnitt aus dem Netzwerk des Wortverbindungsfeldes Präp+GRUND mit Mustern in unterschiedlichen Abstraktionsgraden
+            Ausschnitt aus dem Netzwerk des Wortverbindungsfeldes Präp+GRUND mit Mustern auf unterschiedlichen Abstraktionsebenen
           </div>
           <div class="exampleImg">
               
@@ -62,7 +63,7 @@ export default {
             <NuxtImage src="/img/patterns/direct/direct01.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Eintrag zum Muster  „Bewährung“ in MAP -- TODO: Austauschen, da muster nicht mehr vorhanden
+            Eintrag zum Muster  „Bewährung“ in MAP -- TODO: Screenshot austauschen, da Muster nicht mehr vorhanden
           </div>
 
         </template>

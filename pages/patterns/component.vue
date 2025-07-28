@@ -30,7 +30,7 @@ export default {
       </compare-item>
 
       <compare-item value="1" rkey="PREPCON_kon">
-        <p>In <r rkey="PREPCON_kon" /> gibt es für jeden Eintrag den Bereich „Lexikalische Erweiterungen“. Hier werden nicht nur typische Verwendungsmuster zu der beschriebenen Präposition-Nomen-Verbindung dargestellt, sondern diese können auch mit den Mustern der äquivalenten Präposition-Nomen-Verbindung in den Kontrastsprachen Spanisch und Slowakisch verglichen werden.</p>
+        <p>In <r rkey="PREPCON_kon" /> sind Musterangaben („Lexikalische Erweiterungen“) zu Präposition-Nomen-Verbindungen sowohl einsprachig Deutsch als auch im Sprachvergleich mit Spanisch oder Slowakisch abrufbar (mit ausgewählten Belegen). Es wird zwischen lexikalischen Varianten und semiabstrakten Mustern (feste lexikalische Einheiten und variable Slots) unterschieden. Die Slotfüllungen werden qualitativ beschrieben. Im Sprachkontrast lassen sich Musterkonvergenz und -divergenz erkennen.</p>
 
         <template #explain>
           <div class="exampleImg">
@@ -52,14 +52,14 @@ export default {
         </compare-item>
 
          <compare-item value="2" rkey="SPRW">
-        <p> In <r rkey="SPRW" /> ...
+        <p> In <r rkey="SPRW" /> werden die Musterangaben auf zweifache Weise angezeigt: a) als häufige Varianten in Schreibung, Wortstellung usw. („Formvarianten“) und b) in Form von kommentierten Füllerangaben („Ersetzung von Komponenten“).
           </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="" alt="Beispielgrafik 1" />
+            <NuxtImage src="/img/patterns/component/sprw_uebung_fenster.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Beispiel fehlt
+            Musterangaben im Eintrag „Übung macht den Meister“: [<em>Übung macht den</em> NOMEN<sup>KOMPOSITA</sup>]
           </div>
 
         </template>
@@ -67,7 +67,7 @@ export default {
 
           <compare-item value="2" rkey="FesteWV">
         <p>
-            In <r rkey="FesteWV" /> findet man unter der Angabe „Typische Kontextmuster“ ausgewählte Verwendungsmuster der festen Wortverbindung.
+            In <r rkey="FesteWV" /> werden typische Umgebungsmuster eines Eintrags nach inhaltlichen Kriterien gruppiert bzw. angeordnet (z.B. typische Nomina oder bewertende lexikalische Einheiten im Vor- oder Nachfeld einer Wortverbindung mit Adjektiven oder eines Phrasems).
           </p>
         <template #explain>
         <div class="exampleImg">

@@ -45,7 +45,8 @@ export default {
         </compare-item>
 
       <compare-item value="2" rkey="PREPCON_ex">
-        <p>
+        <p>In <r rkey="PREPCON_ex"/> lassen sich in den Präpositionen- oder Nomentabellen bestimmte wiederkehrende Muster auf der einen Seite und Einschränkungen des Gebrauchs auf der anderen Seiten identifizieren. So zeigt die Nomentabelle der Präposition <em>über</em> eine auffällige Häufung von Zeitnomina in den hohen Frequenzrängen (<em>Jahre; Jahrzehnte; Monate; Wochen</em> usw.), was auf ein Muster [<em>über</em> NOMEN<sub>TEMPORAL</sub>] mit der Bedeutung „ein gefühlt längerer Zeitraum“ hindeutet. Die dazu abrufbaren KWICs untermauern diese Bedeutung, weil dort eine Häufung von Adverbien wie <em>hinweg, hinaus</em> und des Verbs <em>hinziehen</em> zu beobachten ist.</p>
+        <p> Ein Beispiel für starke Beschränkung ist das Nomen <em>Belieben</em>, das in unmittelbarer Voranstellung nur die Präpositionen <em>nach</em> (<em>nach Belieben</em>) und <em>ins</em> (<em>ins Belieben stellen</em>) aufweist.
           </p>
         <template #explain>
           <div class="exampleImg">
@@ -56,27 +57,38 @@ export default {
             Muster mit temporaler Bedeutung in der Liste der Verbindungen mit Präposition <em>über</em> und nachgestellten Nomina
           </div>
 
+          <div class="exampleImg">
+            <NuxtImage src="/img/patterns/dynamic/prepcon_ex_belieben.png" alt="Beispielgrafik 2" />
+          </div>
+          <div class="caption">
+             <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=Belieben" /> 
+            Ausschließliche Verbindungen mit nur zwei Präpositionen (<em>nach</em> und <em>ins</em>) in der Liste der Verbindungen mit dem Nomen „Belieben“
+          </div>
+
         </template>
         </compare-item>
 
          <compare-item value="3" rkey="PREPCON_temp_art">
-        <p>
+        <p>In <r rkey="PREPCON_temp_art"/> lassen sich anhand der hinterlegten automatisch erstellen Lückenfüllertabellen Muster erschließen und zwar sowohl im Vor- und Nachfeld einer Präposition-Nomen-Verbindungen als auch intern zwischen diesen beiden Komponenten.
           </p>
+          <p>Im Eintrag „am Ende“ erkennt man bspw. eine Füllergruppe, die ein lokales Muster generiert: [<em>am</em> ADJ<sub>LOKAL</sub> (<em>unteren; oberen; südlichen; nördlichen</em> ...) <em>Ende</em>]. 
+Die Nachfeldergänzungen zeigen z.B. das Muster, bei dem <em>am Ende</em> als Kopf einer Genitivkonstruktion für den Abschluss eines Events oder Zeitintervalls (<em>Saison; Tages; Jahres</em> ...) verwendet wird. 
+</p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/patterns/dynamic/dynamic04.png" alt="Beispielgrafik 1" />
+            <NuxtImage src="/img/patterns/dynamic/prepcon_temp_amXEnde.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
               <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/index.html" /> 
-            Beispiel aus Prepcon_temp_art
+            Interne Füllergruppe mit lokalen Adjektiven im Eintrag „am Ende“: Muster [<em>am</em> ADJEKTIV<sub>LOKAL</sub> <em>Ende</em>]
           </div>
 
            <div class="exampleImg">
-            <NuxtImage src="/img/patterns/dynamic/dynamic04_anderenKwics.png" alt="Beispielgrafik 1" />
+            <NuxtImage src="/img/patterns/dynamic/prepcon_temp_amEndeX.png" alt="Beispielgrafik 2" />
           </div>
           <div class="caption">
               <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/htmlfiles/fillerfiles/Filler_Am_o_am_Xx_Ende_1_Field1_XML/Kwics_anderen_125.html" />
-            Beispiel aus Prepcon_temp_art
+            Füllergruppe im Nachfeld mit Zeit- oder Eventnomina im Eintrag „am Ende“: Muster [<em>am Ende</em> NOMEN<sub>TEMPORAL_GENITIV</sub>]
           </div>
         </template>
         </compare-item>
