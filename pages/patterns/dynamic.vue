@@ -62,7 +62,7 @@ export default {
           </div>
           <div class="caption">
              <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=Belieben" /> 
-            Ausschließliche Verbindungen mit nur zwei Präpositionen (<em>nach</em> und <em>ins</em>) in der Liste der Verbindungen mit dem Nomen „Belieben“
+            Ausschließliche Verbindungen mit nur zwei Präpositionen (<em>nach</em> und <em>ins</em>) im Eintrag „Belieben“
           </div>
 
         </template>
