@@ -25,7 +25,7 @@ export default {
       :filter="['WVBF', 'MAP']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
-          <NuxtImage src="/img/patterns/all_dummy.png" style="text-align: center;"
+          <NuxtImage src="/img/patterns/direct/all_direct.png" style="text-align: center;"
         />
         </div>
       </compare-item>
@@ -56,14 +56,22 @@ export default {
         </compare-item>
 
          <compare-item value="2" rkey="MAP">
-        <p>
+        <p>Die primären Beschreibungsobjekte in <r rkey="MAP" /> sind Muster bestehend aus einem (meist verbalen) Prädikat und einer Präposition in abstrakter Verwendung. Durch die musterbasierte Perspektive unterscheidet  <r rkey="MAP" /> sich von traditionellen valenzlexikografischen Beschreibungen, bei denen Valenzmuster ausgehend von Valenzträgern (meist Verben) dargestellt werden.</p>
+        <p>Direkt zugänglich sind die <r rkey="MAP" />-Muster über die Musterübersicht und über die Schaltfläche „Muster“ in der Belegsuche. Darüber hinaus sind die <r rkey="MAP" />-Muster in der Belegsuche über ihre semantischen Merkmale (Schaltfläche „Schlagworte“) und ihre instanziierenden Prädikate (Schaltfläche „Lemma“) zugänglich.
           </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/patterns/direct/direct01.png" alt="Beispielgrafik 1" />
+            <NuxtImage src="/img/patterns/direct/direct_map1.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-            Eintrag zum Muster  „Bewährung“ in MAP -- TODO: Screenshot austauschen, da Muster nicht mehr vorhanden
+            Primärer Zugriff über die Musterübersicht
+          </div>
+
+          <div class="exampleImg">
+            <NuxtImage src="/img/patterns/direct/direct_map_suche.png" alt="Beispielgrafik 2" />
+          </div>
+          <div class="caption">
+            Belegsuche - ausgeklappt ist der Zugriff über die Prädikate der Muster („Lemma“)
           </div>
 
         </template>
@@ -74,21 +82,4 @@ export default {
 </div>
 </template>
 
-  <!-- <p>In diesen Ressourcen bilden Muster den primären Zugriff auf die aufbereiteten Daten und die lexikografischen
-    Beschreibungen. Das heißt, alle Informationen sind über das Netzwerk semiabstrakter Schablonen herleitbar.</p>
-  <resources-list :filter="['MAP', 'WVBF']" />
-  <h2>Beispiele</h2>
-
-  <v-carousel style="height:400px">
-    <v-carousel-item>
-      <img src="/img/patterns/direct/direct02.png" alt="Beispiel 1 für direkten Musterzugang" />
-    </v-carousel-item>
-    <v-carousel-item>
-      <img src="/img/patterns/direct/direct03.png" alt="Beispiel 2 für direkten Musterzugang" />
-    </v-carousel-item>
-    <v-carousel-item>
-      <img src="/img/patterns/direct/direct01.png" alt="Beispiel 3 für direkten Musterzugang" />
-    </v-carousel-item>
-  </v-carousel> -->
-
-
+ 

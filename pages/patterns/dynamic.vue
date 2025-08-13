@@ -22,7 +22,7 @@ export default {
     auf der Basis von vorgegebenen Kategorien; zum anderen durch eigene analytische Gruppierungen.</p>
    <div>
     <compare
-      :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp_art', 'Redeeinleiter', 'Verlaufsformen']">
+      :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp_art', 'Redeeinleiter']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/patterns/dynamic/all_dynamic.png" style="text-align: center;"
@@ -31,7 +31,8 @@ export default {
       </compare-item>
 
        <compare-item value="1" rkey="KoMuX">
-        <p>Die musterbasierte Suche in <r rkey="KoMuX" /> beruht darauf, dass grammatische Merkmale (Wortbildungstyp oder Wortart), (semantisch-)thematische (Wortfelder) und/oder lexikalische Eigenschaften (konkretes Lemma) für das Erst- und Zweitglied spezifiziert werden. Dies ermöglicht es beispielsweise, gezielt nach allen Komposita, deren Zweitglied <em>Mann</em> ist (z.B. <em>Lederjacken-Mann</em>), nach ADJEKTIV-NOMEN-Komposita (z.B. <em>Kleinkind</em>) oder auch nach SUBSTANZ-ARTEFAKT-Komposita (z.B. <em>Betonmauer</em>) zu recherchieren. 
+        <p>Komposita können als Realisierungen abstrakter und semiabstrakter Muster verstanden werden. Über die <r rkey="KoMuX" />-Suche kann das Komposita-Inventar gezielt nach beiden Typen von Mustern durchsucht werden, indem grammatische Merkmale (Wortbildungstyp oder Wortart), semantisch-thematische und/oder lexikalische Eigenschaften (konkretes Lemma) für das Erst- und Zweitglied spezifiziert werden.</p>
+        <p>Dies ermöglicht z.B. das Herausfiltern aller ADJEKTIV-NOMEN-Komposita (z.B. <em>Kleinkind</em>) oder solcher Komposita, in denen eine Konstituente wiederum ein Kompositum ist (z.B. <em>Frauenfußballweltmeister</em>). Zudem können auch Muster mit einem konkreten lexikalischen Anker definiert werden, z.B. Komposita mit dem Zweitglied <em>Mann</em> (z.B. <em>Lederjacken-Mann</em>, <em>Museumsmann</em>, …). Die Konstituenten eines Kompositums lassen sich durch die Auswahl bestimmter semantisch-thematischer Kategorien (basierend auf GermaNet-Wortfeldern) auch abstrakter definieren, indem nach Mustern wie SUBSTANZ-ARTEFAKT (z.B. <em>Betonmauer</em>) gesucht wird. 
           </p>
         <template #explain>
           <div class="exampleImg">
@@ -94,60 +95,21 @@ Die Nachfeldergänzungen zeigen z.B. das Muster, bei dem <em>am Ende</em> als Ko
         </compare-item>
 
          <compare-item value="4" rkey="Redeeinleiter">
-        <p>In <r rkey="Redeeinleiter"/> können die Redeeinleiter u.a. nach ihrer Position relativ zum Inhalt der Wiedergabe (initial, final oder medial) gefiltert werden, um syntagmatische Muster zu erschließen. 
+        <p>In <r rkey="Redeeinleiter"/> können die Redeeinleiter bspw. nach ihrer Position relativ zum Inhalt der Wiedergabe (initial, final oder medial) und dem Wiedergabetyp (direkt, indirekt) gefiltert werden, um syntagmatische Muster zu erschließen.</p> 
+        <p>Hinweis: Die Spalte "Beleg" enthält immer eine Liste mit jeweils einem Beleg pro Attributkombination, in der ein Redeeinleiter belegt ist. Die jeweilige Attributkombination ist unter dem Beleg aufgeführt.
           </p>
         <template #explain>
           <div class="exampleImg">
-            <NuxtImage src="/img/patterns/dynamic/dynamic05_tight.png" alt="Beispielgrafik 1" />
+            <NuxtImage src="/img/patterns/dynamic/redeeinleiter.png" alt="Beispielgrafik 1" />
           </div>
           <div class="caption">
-             <ScreenshotLink to="https://www.owid.de/plus/redeeinleiter/?search=sagen" /> 
-            Ausschnitt aus der Ergebnisliste für die Suche nach Redeeinleitern mit <em>sagen</em>, die in initialer Position stehen
+              
+            Beispiele für Einleiter von direkter Rede, die in finaler Position stehen
           </div>
 
         </template>
         </compare-item>
-
-         <compare-item value="5" rkey="Verlaufsformen">
-        <p>
-          </p>
-        <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/patterns/dynamic/dynamic02.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/progdb?scrollToVerb=abbauen" /> 
-            Beispiel aus Verlaufsformen
-          </div>
-
-        </template>
-        </compare-item>
-      
       </compare>
     </div>
 </div>
 </template>
-
-<!-- <template>
-  <p>In vielen Ressourcen kann man sich selbst Muster erschließen, zum einen durch automatische Suchen und Sortierungen
-    auf der Basis von vorgegebenen Kategorien; zum anderen durch eigene analytische Gruppierungen.</p>
-  <resources-list :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp', 'Redeeinleiter', 'Verlaufsformen']" />
-  <h2>Beispiele</h2>
-  <v-carousel style="height:400px">
-    <v-carousel-item>
-      <img src="/img/patterns/dynamic/dynamic01.png" alt="Beispiel 1 für dynamische Erschließung" />
-    </v-carousel-item>
-    <v-carousel-item>
-      <img src="/img/patterns/dynamic/dynamic02.png" alt="Beispiel 2 für dynamische Erschließung" />
-    </v-carousel-item>
-    <v-carousel-item>
-      <img src="/img/patterns/dynamic/dynamic03.png" alt="Beispiel 3 für dynamische Erschließung" />
-    </v-carousel-item>
-    <v-carousel-item>
-      <img src="/img/patterns/dynamic/dynamic04.png" alt="Beispiel 4 für dynamische Erschließung" />
-    </v-carousel-item>
-    <v-carousel-item>
-      <img src="/img/patterns/dynamic/dynamic05.png" alt="Beispiel 5 für dynamische Erschließung" />
-    </v-carousel-item>
-  </v-carousel>
-</template> -->
