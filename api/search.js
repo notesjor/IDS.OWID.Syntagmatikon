@@ -111,6 +111,7 @@ export default class search {
         );
 
         var result = await response.json();
+
         if (this.count != null)
           this.count[this.sources[i]] = result.hits.total.value;
         if (result.hits.total.value > nmax) nmax = result.hits.total.value;
@@ -120,6 +121,7 @@ export default class search {
         for (var j = 0; j < result.hits.hits.length; j++)
           tmp.push(this.__esHighlightToSourceSingle(result, j));
 
+        console.log("tmp", tmp);
         res = res.concat(tmp);
       } catch (error) {
         console.log("error", error);
@@ -159,10 +161,14 @@ export default class search {
       },
     };
 
-    if (!this.query || this.query.trim() === "") {
+    var fix = 0;
+    if (!this.query || this.query.trim() === "")
+    {
       request.query = { bool: { must: [{ match_all: {} }] } };
+      fix = 66;
     }
 
+    console.log("sources", this.sources);
     if (this.sources.length > 0) {
       request.query.bool.must.push({
         terms: {
@@ -190,8 +196,8 @@ export default class search {
 
       var result = await response.json();
 
-      if (this.count == null) this.count = result.hits.total.value;
-      this.max = result.hits.total.value;
+      if (this.count == null) this.count = result.hits.total.value - fix; // TODO: Fix for total hits
+      this.max = result.hits.total.value - fix; // TODO: Fix for total hits
 
       return this.__esHighlightToSource(result);
     } catch (error) {
@@ -234,7 +240,7 @@ export default class search {
 
   get countTotal() {
     return typeof this.count === "number"
-      ? (this.count === null ? 0 : this.count)
+      ? this.count
       : Object.values(this.count).reduce((a, b) => a + b, 0);
   }
 }
