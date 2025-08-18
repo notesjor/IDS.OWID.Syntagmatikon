@@ -292,6 +292,14 @@ h3 {
   text-align: left;
 }
 
+h4 {
+  @apply text-lg;
+  margin: 10px 0 10px 0;
+  font-family: var(--FF-DISPLAY);
+  text-align: left;
+  font-weight: 500;
+}
+
 div.main {
   font-family: var(--FF-BODYTEXT);
   font-weight: 400;

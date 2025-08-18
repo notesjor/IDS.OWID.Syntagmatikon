@@ -51,12 +51,10 @@ export default {
             to="https://www.owid.de/docs/elex/start.jsp">elexiko</NuxtLink> verlinkt.
         </p>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/prepcon_temp_combi.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-             <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/index.html" />Komponentenangabe im Eintrag „am Ende“ mit Verlinkung zu elexiko-Eintrag „Ende“
-          </div>
+          <NuxtImage src="/img/datatypes/elements/prepcon_temp_combi.png" alt="Beispielgrafik 1"
+            to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/index.html">
+            Komponentenangabe im Eintrag „am Ende“ mit Verlinkung zu elexiko-Eintrag „Ende“
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -73,26 +71,20 @@ export default {
           </NuxtLink>.
         </p>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/prepcon_kon_deutsch_combi.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html" />Komponentenangabe im Eintrag „am Anfang“ mit Verlinkung zum elexiko-Eintrag „Anfang“
-          </div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/prepcon_kon_spanisch_combi.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html" /> Komponentenangabe im Eintrag „al principio“ mit Verlinkung zum Eintrag „principio“ im <em>Diccionario de
+          <NuxtImage src="/img/datatypes/elements/prepcon_kon_deutsch_combi.png" alt="Beispielgrafik 1"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html">
+            Komponentenangabe im Eintrag „am Anfang“ mit Verlinkung zum elexiko-Eintrag „Anfang“
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/elements/prepcon_kon_spanisch_combi.png" alt="Beispielgrafik 2"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html">
+            Komponentenangabe im Eintrag „al principio“ mit Verlinkung zum Eintrag „principio“ im <em>Diccionario de
               la lengua española</em>
-          </div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/prepcon_kon_slowakisch_combi.png" alt="Beispielgrafik 3" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html" /> Komponentenangabe im Eintrag „na začiatku“ mit Verlinkung zu den Einträgen für „začiatok“ im
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/elements/prepcon_kon_slowakisch_combi.png" alt="Beispielgrafik 3"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html">
+            Komponentenangabe im Eintrag „na začiatku“ mit Verlinkung zu den Einträgen für „začiatok“ im
             <em>Slovníkový portál Jazykovedného ústavu Ľ. Štúra SAV</em>
-          </div>
+          </NuxtImage>
         </template>
 
       </compare-item>
@@ -106,21 +98,17 @@ export default {
             to="https://www.owid.de/docs/elex/start.jsp">elexiko</NuxtLink> verlinkt.
         </p>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/festeWV_Angst_combi.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/309155"/> Komponentenangabe im Eintrag „Angst vor der eigenen Courage“ mit Verlinkung zum
+          <NuxtImage src="/img/datatypes/elements/festeWV_Angst_combi.png" alt="Beispielgrafik 1"
+            to="https://www.owid.de/artikel/309155">
+            Komponentenangabe im Eintrag „Angst vor der
+            eigenen Courage“ mit Verlinkung zum
             <em>elexiko</em>-Eintrag „Angst“
-          </div>
-          
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/festeWV_normal_combi.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/309121" /> Komponentenangabe im Eintrag „der ganz normale Wahnsinn“ mit
-            Verlinkung zum <em>elexiko</em>-Eintrag „normal“
-          </div>
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/elements/festeWV_normal_combi.png" alt="Beispielgrafik 2"
+            to="https://www.owid.de/artikel/309121">
+            Komponentenangabe im Eintrag „der ganz normale
+            Wahnsinn“ mit Verlinkung zum <em>elexiko</em>-Eintrag „normal“
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -128,38 +116,28 @@ export default {
         <p>
           Im
           <r rkey="SPRW" /> sind alle Komponenten der
-          Stichwörter
-          ausgezeichnet mit Ausnahmen der unbestimmten und bestimmten Artikel. Beim Anklicken einer Komponente
-          erscheint zum
-          einen eine Liste mit Links zu allen Einträgen im Sprichwörterbuch, die diese Komponente enthalten, zum
-          anderen ein
-          Link zu einem Eintrag in <NuxtLink to="https://www.owid.de/docs/elex/start.jsp">elexiko</NuxtLink>. Des Weiteren kann eine Liste aller Komponenten mit den dazugehörigen Sprichwörtern abgerufen werden.
+          Stichwörter ausgezeichnet mit Ausnahmen der unbestimmten und bestimmten Artikel. Beim Anklicken einer
+          Komponente
+          erscheint zum einen eine Liste mit Links zu allen Einträgen im Sprichwörterbuch, die diese Komponente
+          enthalten, zum
+          anderen ein Link zu einem Eintrag in <NuxtLink to="https://www.owid.de/docs/elex/start.jsp">elexiko</NuxtLink>
+          . Des
+          Weiteren kann eine Liste aller Komponenten mit den dazugehörigen Sprichwörtern abgerufen werden.
         </p>
         <template #explain>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/SPRW_machen_fenster.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-             <ScreenshotLink to="https://www.owid.de/artikel/401837" />
+          <NuxtImage src="/img/datatypes/elements/SPRW_machen_fenster.png" alt="Beispielgrafik 1"
+            to="https://www.owid.de/artikel/401837">
             Komponentenangabe im Eintrag „Der Ton macht die Musik“ mit Liste der Komponente <em>machen</em>
-          </div>
-
-           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/SPRW_elexiko.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption">
-             <ScreenshotLink to="https://www.owid.de/artikel/280009" />
-            Liste von Sprichworteinträgen mit der Komponente <em>machen</em> und Verlinkung zum elexiko-Eintrag „machen“ <em>machen</em>
-          </div>
-
-           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/elements/SPRW_basiskomp.png" alt="Beispielgrafik 3" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/service/stichwortlisten/sprw_b" />
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/elements/SPRW_elexiko.png" alt="Beispielgrafik 2"
+            to="https://www.owid.de/artikel/280009">
+            Liste von Sprichworteinträgen mit der Komponente <em>machen</em> und Verlinkung zum elexiko-Eintrag „machen“
+            <em>machen</em>
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/elements/SPRW_basiskomp.png" alt="Beispielgrafik 3"
+            to="https://www.owid.de/service/stichwortlisten/sprw_b">
             Ausschnitt aus der Liste aller Komponenten im Sprichwörterbuch
-          </div>
+          </NuxtImage>
         </template>
       </compare-item>
     </compare>

@@ -48,51 +48,46 @@ export default {
         </p>
         <template #explain>
           <div class="exampleHeadline">Rubrik: „Gebrauchsaspekte“</div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/narration/prepcon_kon_gebrauch.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/amAnfang.html" /> Beschreibungstext zum Gebrauchsaspekt ‚Thematisierung von Schwierigkeiten‘ im Eintrag „am
-            Anfang – al principio“ (Konvergenz)
-          </div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/narration/prepcon_kon_gebrauch_div.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/amAnfang.html" /> Beschreibungstext zum Gebrauchsaspekt ‚Rückblicke‘ im Eintrag „am Anfang – al principio“
+          <NuxtImage src="/img/datatypes/narration/prepcon_kon_gebrauch.png" alt="Beispielgrafik 1"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/amAnfang.html">
+            Beschreibungstext zum Gebrauchsaspekt ‚Thematisierung von Schwierigkeiten‘ im Eintrag „am
+            Anfang – al principio“ (Konvergenz)</NuxtImage>
+          <NuxtImage src="/img/datatypes/narration/prepcon_kon_gebrauch_div.png" alt="Beispielgrafik 2"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/amAnfang.html">
+            Beschreibungstext zum Gebrauchsaspekt ‚Rückblicke‘ im Eintrag „am Anfang – al principio“
             (Divergenz)
-          </div>
-
+          </NuxtImage>
           <div class="exampleHeadline">Rubrik: „Lexikalische Erweiterungen“</div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/narration/prepcon_kon_muster_div.png" alt="Beispielgrafik 3" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/muster/mitGenugtuung.html" />Kommentar zur lexikalischen Erweiterung <em>mit einer gewissen Genugtuung</em> des Muster
+          <NuxtImage src="/img/datatypes/narration/prepcon_kon_muster_div.png" alt="Beispielgrafik 3"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/muster/mitGenugtuung.html">
+            Kommentar zur lexikalischen Erweiterung <em>mit einer gewissen Genugtuung</em> des Muster
             <em>mit X Genugtuung</em> im Eintrag „mit Genugtuung – con satisfacción“ (Divergenz)
-          </div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/narration/prepcon_kon_muster_konv.png" alt="Beispielgrafik 4" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/muster/mitGenugtuung.html" /> Kommentar zu lexikalischen Erweiterung zum Muster <em>mit [(...) ADJ] Genugtuung - con
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/narration/prepcon_kon_muster_konv.png" alt="Beispielgrafik 4"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/muster/mitGenugtuung.html">
+            Kommentar zu lexikalischen Erweiterung zum Muster <em>mit [(...) ADJ] Genugtuung - con
               [(...) ADJ] satisfacción</em> im Eintrag „mit Genugtuung – con satisfacción“
             (Konvergenz)
-          </div>
+          </NuxtImage>
         </template>
       </compare-item>
 
       <compare-item value="2" rkey="MAP">
         <p>
-          Narrative Beschreibungen bilden den Kern von <r rkey="MAP" />. Der Fokus liegt dabei auf den Bedeutungsmerkmalen der beschriebenen Muster. Ausführlich kommentiert werden etwa der Zusammenhang der Musterbedeutung mit der räumlichen Quellbedeutung der jeweiligen Präposition sowie der Zusammenhang mit (und zwischen) verschiedenen Klassen von lexikalischen Füllern, die in einem Muster auftreten. Daneben werden auch etwaige syntaktische, verwendungskontextuelle und phraseologische Besonderheiten illustriert und erläutert.
+          Narrative Beschreibungen bilden den Kern von
+          <r rkey="MAP" />. Der Fokus liegt dabei auf den Bedeutungsmerkmalen der beschriebenen Muster. Ausführlich
+          kommentiert werden etwa der Zusammenhang der Musterbedeutung mit der räumlichen Quellbedeutung der jeweiligen
+          Präposition sowie der Zusammenhang mit (und zwischen) verschiedenen Klassen von lexikalischen Füllern, die in
+          einem
+          Muster auftreten. Daneben werden auch etwaige syntaktische, verwendungskontextuelle und phraseologische
+          Besonderheiten illustriert und erläutert.
         </p>
-<template #explain>
-          <div class="exampleImg">
-           <NuxtImage src="/img/datatypes/narration/map_respekt.png" alt="Beispielgrafik 1" /> 
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/plus/map/article/vor/respekt" />Narrative Beschreibungen für das Muster RESPEKT
-          </div>
+        <template #explain>
+          <NuxtImage src="/img/datatypes/narration/map_respekt.png" alt="Beispielgrafik 1"
+            to="https://www.owid.de/plus/map/article/vor/respekt">
+            Narrative Beschreibungen für das
+            Muster RESPEKT
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -112,42 +107,35 @@ export default {
         </ul>
         <p>Des Weiteren gibt es Hintergrund- und Fachkommentare. </p><template #explain>
 
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/narration/sprw_bedeutung.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/404227" /> Bedeutungsbeschreibung im Eintrag „Alles hat ein Ende“
-          </div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/narration/sprw_gebrauch.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/404227" /> Beschreibungstext für ‚Gebrauchsbesonderheiten‘ im Eintrag „Alles hat ein Ende“
-          </div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/narration/sprw_verwendung.png" alt="Beispielgrafik 3" />
-          </div>
-          <div class="caption">
-           <ScreenshotLink to="https://www.owid.de/artikel/404227" /> Beschreibungstext für ‚Typische Verwendung im Text‘ im Eintrag „Alles hat ein Ende“
-          </div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/narration/sprw_varianten.png" alt="Beispielgrafik 4" />
-          </div>
-          <div class="caption">
-           <ScreenshotLink to="https://www.owid.de/artikel/404227" /> Kommentartext für Formvariante <em>Alles hat ein Ende, nur die Wurst hat zwei</em> im
+          <NuxtImage src="/img/datatypes/narration/sprw_bedeutung.png" alt="Beispielgrafik 1"
+            to="https://www.owid.de/artikel/404227">
+            Bedeutungsbeschreibung im Eintrag „Alles hat ein
+            Ende“
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/narration/sprw_gebrauch.png" alt="Beispielgrafik 2"
+            to="https://www.owid.de/artikel/404227">
+            Beschreibungstext für ‚Gebrauchsbesonderheiten‘
+            im Eintrag „Alles hat ein Ende“
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/narration/sprw_verwendung.png" alt="Beispielgrafik 3"
+            to="https://www.owid.de/artikel/404227">
+            Beschreibungstext für ‚Typische Verwendung im
+            Text‘ im Eintrag „Alles hat ein Ende“
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/narration/sprw_varianten.png" alt="Beispielgrafik 4"
+            to="https://www.owid.de/artikel/404227">
+            Kommentartext für Formvariante <em>Alles hat ein
+              Ende, nur die Wurst hat zwei</em> im
             Eintrag „Alles hat ein Ende“
-          </div>
-
+          </NuxtImage>
           <p>
             Im Modul „Werbeslogans“ sind zusätzlich narrative Beschreibungen zur Entstehungsgeschichte
             hinterlegt.
           </p>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/narration/sprw_geschichte.png" alt="" />
-          </div>
-          <div class="caption">
-           <ScreenshotLink to="https://www.owid.de/artikel/404075" /> Beschreibungstext in ‚Geschichte‘ im Eintrag „Geiz ist geil“
-          </div>
+          <NuxtImage src="/img/datatypes/narration/sprw_geschichte.png" alt="" to="https://www.owid.de/artikel/404075">
+            Beschreibungstext in ‚Geschichte‘ im Eintrag
+            „Geiz ist geil“
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -166,21 +154,15 @@ export default {
           <li>ausführliche Fachkommentare, die die Beziehung zu Kontrasteinheiten thematisieren</li>
         </ul>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/narration/wvGrund_bedeutung.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-             <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/aus_welchen_Gruenden_auch_immer_ID1364235183666.html" /> Allgemeine Beschreibung im Knoten „aus welchen Gründen auch immer“
-          </div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/narration/wvGrund_fueller1.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/narration/wvGrund_fueller2.png" alt="Beispielgrafik 3" />
-          </div>
-          <div class="caption">
-             <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/aus_ADJ_Gruenden_ID1364235183677.html" /> Ausgewählte Kommentare zu Lückenfüllern im Knoten „aus ADJ Gründen“
-          </div>
+          <NuxtImage src="/img/datatypes/narration/wvGrund_bedeutung.png" alt="Beispielgrafik 1"
+            to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/aus_welchen_Gruenden_auch_immer_ID1364235183666.html">
+            Allgemeine Beschreibung im Knoten „aus welchen Gründen auch immer“
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/narration/wvGrund_fueller1.png" alt="Beispielgrafik 2" />
+          <NuxtImage src="/img/datatypes/narration/wvGrund_fueller2.png" alt="Beispielgrafik 3"
+            to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/aus_ADJ_Gruenden_ID1364235183677.html">
+            Ausgewählte Kommentare zu Lückenfüllern im Knoten „aus ADJ Gründen“
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -209,40 +191,30 @@ export default {
         </ul>
         <template #explain>
           <div class="exampleHeadline">Teilressource „Musterartikel“</div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/narration/festeWV_bedeutung.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-             <ScreenshotLink to="https://www.owid.de/artikel/315656/sich%20frei%20%C3%A4u%C3%9Fern/0" />Bedeutungsbeschreibung im Eintrag „reden, wie einem der Schnabel gewachsen ist“
-          </div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/narration/festeWV_wertung.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/309157/unter%20Wert/0" />Beschreibungstext für ‚Wertungsaspekt‘ im Eintrag „billiger Jakob“
-          </div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/narration/festeWV_funktion.png" alt="Beispielgrafik 3" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/309154/publikmachen/0" />Beschreibungstext für ‚Funktion in der Kommunikation‘ im Eintrag „an die große Glocke
+          <NuxtImage src="/img/datatypes/narration/festeWV_bedeutung.png" alt="Beispielgrafik 1"
+            to="https://www.owid.de/artikel/315656/sich%20frei%20%C3%A4u%C3%9Fern/0">
+            Bedeutungsbeschreibung im Eintrag „reden, wie einem der Schnabel gewachsen ist“
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/narration/festeWV_wertung.png" alt="Beispielgrafik 2"
+            to="https://www.owid.de/artikel/309157/unter%20Wert/0">
+            Beschreibungstext für
+            ‚Wertungsaspekt‘ im Eintrag „billiger Jakob“</NuxtImage>
+          <NuxtImage src="/img/datatypes/narration/festeWV_funktion.png" alt="Beispielgrafik 3"
+            to="https://www.owid.de/artikel/309154/publikmachen/0">
+            Beschreibungstext für ‚Funktion in
+            der Kommunikation‘ im Eintrag „an die große Glocke
             hängen“
-          </div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/narration/festeWV_grammatik.png" alt="Beispielgrafik 4" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/309165/Bewertung%20einer%20(Sprach-)Handlung/0" /> Beschreibungstext für ‚Grammatische Besonderheiten‘ im Eintrag „Gut gebrüllt, Löwe“
-          </div>
-
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/narration/festeWV_grammatik.png" alt="Beispielgrafik 4"
+            to="https://www.owid.de/artikel/309165/Bewertung%20einer%20(Sprach-)Handlung/0">
+            Beschreibungstext für ‚Grammatische Besonderheiten‘ im Eintrag „Gut gebrüllt, Löwe“
+          </NuxtImage>
           <div class="exampleHeadline">Teilressource „Wortverbindungen mit Adjektiven“</div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/narration/festeWV_mitAdj_bedeutung.png" alt="Beispielgrafik 5" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/309123" /> Gebrauchsbeschreibung im Eintrag „jeder halbwegs normale Mensch“
-          </div>
-
+          <NuxtImage src="/img/datatypes/narration/festeWV_mitAdj_bedeutung.png" alt="Beispielgrafik 5"
+            to="https://www.owid.de/artikel/309123">
+            Gebrauchsbeschreibung im Eintrag „jeder halbwegs
+            normale Mensch“
+          </NuxtImage>
         </template>
       </compare-item>
     </compare>

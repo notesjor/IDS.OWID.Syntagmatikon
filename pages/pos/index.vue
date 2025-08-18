@@ -31,7 +31,7 @@ useHead({
       subsumiert. Nicht gesondert markiert werden Komponenten von Phrasemen und festen Sätzen, da diese
       Mehrworteinheiten
       potenziell alle Wortarten umfassen können. Hier liegt der Fokus auf der gesamten Einheit.</p>
-    <div class="caption">Jedes Kästchen linkt zu einer Hintergrundseite mit Beispielen für Wort- und Ausdrucksarten in
+    <div>Jedes Kästchen linkt zu einer Hintergrundseite mit Beispielen für Wort- und Ausdrucksarten in
       den Ressourcen.</div>
   </div>
   <div>

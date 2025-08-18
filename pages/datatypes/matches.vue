@@ -49,20 +49,12 @@ export default {
           <li>ausgewählte Volltextbelege, die den typischen Gebrauch illustrieren</li>
         </ul>
         <template #explain>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/prepcon_temp_amEnde.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/index.html" />KWIC-Belege im Eintrag „am Ende“ 
-          </div>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/prepcon_temp_amEnde_volltext.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/index.html" />Volltextbelege im Eintrag „am Ende“ 
-          </div>
+          <NuxtImage src="/img/datatypes/matches/prepcon_temp_amEnde.png" alt="Beispielgrafik 1"
+            to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/index.html">KWIC-Belege im
+            Eintrag „am Ende“</NuxtImage>
+          <NuxtImage src="/img/datatypes/matches/prepcon_temp_amEnde_volltext.png" alt="Beispielgrafik 2"
+            to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/index.html">Volltextbelege
+            im Eintrag „am Ende“</NuxtImage>
         </template>
       </compare-item>
 
@@ -76,51 +68,47 @@ export default {
           fremdsprachigen Äquivalenten wird zusätzlich eine wörtliche Übersetzung der Belege angegeben.
         </p>
         <template #explain>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/prepcon_kon_kochrezepte_header.png" alt="Beispielgrafik 1" /> 
-<ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />
-            <NuxtImage src="/img/datatypes/matches/prepcon_kon_kochrezepte_deutsch.png" alt="Beispielgrafik 2" />
-<ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />
-            <NuxtImage src="/img/datatypes/matches/prepcon_kon_kochrezepte_spanisch.png" alt="Beispielgrafik 3" />
-            
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" /> Belege zum Gebrauchsaspekt ‚Kochrezept‘ im Eintrag „nach Belieben – a su gusto“
-          </div>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_header.png" alt="Beispielgrafik 1" /> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />
-
-            <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_deutsch.png" alt="Beispielgrafik 2" /> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />
-
-            <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_slowakisch.png"
-              alt="Beispielgrafik 3" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />Belege für den Gebrauchsaspekt ‚Dominantes Handeln ohne Korrektiv‘ im Eintrag „nach Belieben
+          <NuxtImage src="/img/datatypes/matches/prepcon_kon_kochrezepte_header.png" alt="Beispielgrafik 1"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />
+          <NuxtImage src="/img/datatypes/matches/prepcon_kon_kochrezepte_deutsch.png" alt="Beispielgrafik 2"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />
+          <NuxtImage src="/img/datatypes/matches/prepcon_kon_kochrezepte_spanisch.png" alt="Beispielgrafik 3"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html">
+            Belege zum Gebrauchsaspekt ‚Kochrezept‘ im Eintrag „nach Belieben – a su gusto“
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_header.png" alt="Beispielgrafik 1"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />
+          <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_deutsch.png" alt="Beispielgrafik 2"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html" />
+          <NuxtImage src="/img/datatypes/matches/prepcon_kon_dominantesHandeln_slowakisch.png" alt="Beispielgrafik 3"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html">
+            Belege für den Gebrauchsaspekt ‚Dominantes Handeln ohne Korrektiv‘ im Eintrag „nach Belieben
             - podľa ľubovôle“
-          </div>
+          </NuxtImage>
         </template>
       </compare-item>
 
-       <compare-item value="3" rkey="MAP">
+      <compare-item value="3" rkey="MAP">
         <p>
-         Die Belege zu den einzelnen Mustern erscheinen in den einzelnen Einträgen der Musterbank als Beispiele, sie können aber auch mittels der Suche direkt gefunden werden. Textbelege erscheinen in den <r rkey="MAP" />-Einträgen als illustrierende Beispiele mit farbiger Hervorhebung der Musterelemente. Zudem kann am Ende eines Eintrags für jedes Prädikat, das in dem behandelten Muster auftritt, ein exemplarischer Korpusbeleg eingeblendet werden. In der Suche kann die komplette Datenbasis eingesehen werden.
+          Die Belege zu den einzelnen Mustern erscheinen in den einzelnen Einträgen der Musterbank als Beispiele, sie
+          können
+          aber auch mittels der Suche direkt gefunden werden. Textbelege erscheinen in den
+          <r rkey="MAP" />-Einträgen als illustrierende Beispiele mit farbiger Hervorhebung der Musterelemente. Zudem
+          kann am
+          Ende eines Eintrags für jedes Prädikat, das in dem behandelten Muster auftritt, ein exemplarischer Korpusbeleg
+          eingeblendet werden. In der Suche kann die komplette Datenbasis eingesehen werden.
         </p>
-<template #explain>
-          <div class="exampleImg">
-           <NuxtImage src="/img/datatypes/matches/map_belege_medial.png" alt="Beispielgrafik 1" /> 
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/plus/map/kwic" />Belege mit erweiterter Annotation für Medialkonstruktionen
-          </div>
-          <div class="exampleImg">
-           <NuxtImage src="/img/datatypes/matches/map_belege_schutz.png" alt="Beispielgrafik 2" /> 
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/plus/map/article/vor/bedrohen/schutz#predicates" />Belege für Prädikate des Musters SCHUTZ
-          </div>
+        <template #explain>
+          <NuxtImage src="/img/datatypes/matches/map_belege_medial.png" alt="Beispielgrafik 1"
+            to="https://www.owid.de/plus/map/kwic">
+            Belege mit erweiterter Annotation für
+            Medialkonstruktionen
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/matches/map_belege_schutz.png" alt="Beispielgrafik 2"
+            to="https://www.owid.de/plus/map/article/vor/bedrohen/schutz#predicates">
+            Belege für
+            Prädikate des Musters SCHUTZ
+          </NuxtImage>
         </template>
         <!-- TODO: MAP -->
       </compare-item>
@@ -138,13 +126,10 @@ export default {
           standardmäßig ausgeblendet und lassen sich für jedes Phrasenkompositum separat aufklappen.
         </p>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/phraskomp_gerede.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
+          <NuxtImage src="/img/datatypes/matches/phraskomp_gerede.png" alt="Beispielgrafik 1">
             Ausschnitt aus der Treffermenge zu Phrasenkomposita mit dem Zweitglied <em>Gerede</em> (mit
             ausgeklappten Belegen)
-          </div>
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -162,14 +147,10 @@ export default {
           anklickbarer Link zu der Datei aus dem Redewiedergabe-Korpus, aus dem der Beleg entnommen ist.
         </p>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/rede_beleg.png" alt="" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/plus/redeeinleiter/?search=sagen" />
+          <NuxtImage src="/img/datatypes/matches/rede_beleg.png" alt=""
+            to="https://www.owid.de/plus/redeeinleiter/?search=sagen">
             Ausschnitt aus der Belegliste des Redeeinleiters „sagen“
-          </div>
-
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -183,12 +164,11 @@ export default {
           Kontext des Belegs.
         </p>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/verlaufsformen_beleg_eng.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-             <ScreenshotLink to="https://www.owid.de/artikel/403302?pos=25" />Beleg für eine <em>am</em>-Progressiv-Verwendung im Eintrag „staunen“
-          </div>
+          <NuxtImage src="/img/datatypes/matches/verlaufsformen_beleg_eng.png" alt="Beispielgrafik 1"
+            to="https://www.owid.de/artikel/403302?pos=25">
+            Beleg für eine
+            <em>am</em>-Progressiv-Verwendung im Eintrag „staunen“
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -216,42 +196,29 @@ export default {
 
         <template #explain>
           <div class="exampleHeadline">Rubrik „Musterartikel“</div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/festeWV_bedeutung.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/309155/Bef%C3%BCrchtung/0"/>Beleg zur Bedeutung im Stichwort „Angst vor der eigenen Courage“ (Rubrik „Musterartikel“)
-          </div>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/festeWV_wertungsaspekt.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/309155/Bef%C3%BCrchtung/0" />Beleg zum negativen Wertungsaspekt im Stichwort „Angst vor der eigenen Courage“ (Rubrik
+          <NuxtImage src="/img/datatypes/matches/festeWV_bedeutung.png" alt="Beispielgrafik 1"
+            to="https://www.owid.de/artikel/309155/Bef%C3%BCrchtung/0">Beleg zur Bedeutung im
+            Stichwort „Angst vor der eigenen Courage“ (Rubrik „Musterartikel“)</NuxtImage>
+          <NuxtImage src="/img/datatypes/matches/festeWV_wertungsaspekt.png" alt="Beispielgrafik 2"
+            to="https://www.owid.de/artikel/309155/Bef%C3%BCrchtung/0">
+            Beleg zum negativen
+            Wertungsaspekt im Stichwort „Angst vor der eigenen Courage“ (Rubrik
             „Musterartikel“)
-          </div>
-
+          </NuxtImage>
           <div class="exampleHeadline">Rubrik „Wortverbindungen mit
             Adjektiven“</div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/festeWV_gebrauchsbeschreibung.png" alt="Beispielgrafik 3" />
-          </div>
-          <div class="caption">
-             <ScreenshotLink to="https://www.owid.de/artikel/309051" />Beleg zur Gebrauchsbeschreibung im Eintrag „blinder Alarm“ (Rubrik: „Wortverbindungen mit
+          <NuxtImage src="/img/datatypes/matches/festeWV_gebrauchsbeschreibung.png" alt="Beispielgrafik 3"
+            to="https://www.owid.de/artikel/309051">
+            Beleg zur Gebrauchsbeschreibung im Eintrag
+            „blinder Alarm“ (Rubrik: „Wortverbindungen mit
             Adjektiven“)
-          </div>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/festeWV_kontextmuster.png" alt="Beispielgrafik 4" />
-          </div>
-          <div class="caption">
-           <ScreenshotLink to="https://www.owid.de/artikel/309051" />Beleg zum typischen Kontextmuster <em>sich als blinder Alarm entpuppen</em> im Eintrag
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/matches/festeWV_kontextmuster.png" alt="Beispielgrafik 4"
+            to="https://www.owid.de/artikel/309051">
+            Beleg zum typischen Kontextmuster <em>sich als
+              blinder Alarm entpuppen</em> im Eintrag
             „blinder Alarm“ (Rubrik: „Wortverbindungen mit Adjektiven)
-
-
-          </div>
-
-
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -272,28 +239,22 @@ export default {
         <p>Im Modul „Werbeslogans“ sind zusätzlich Volltext-Belege zur Entstehungsgeschichte hinterlegt.
         </p>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/sprw_bedeutung.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/401837" />Belege zur Bedeutung im Eintrag „Der Ton macht die Musik“
-          </div>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/sprw_ersetzung.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption">
-             <ScreenshotLink to="https://www.owid.de/artikel/401837" />Belege zum Muster <em>Der/Die X macht/machen die Musik</em> (‚Ersetzung von Komponenten‘) im
+          <NuxtImage src="/img/datatypes/matches/sprw_bedeutung.png" alt="Beispielgrafik 1"
+            to="https://www.owid.de/artikel/401837">
+            Belege zur Bedeutung im Eintrag „Der Ton macht die
+            Musik“
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/matches/sprw_ersetzung.png" alt="Beispielgrafik 2"
+            to="https://www.owid.de/artikel/401837">
+            Belege zum Muster <em>Der/Die X macht/machen die
+              Musik</em> (‚Ersetzung von Komponenten‘) im
             Eintrag „Der Ton macht die Musik“
-          </div>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/sprw_geschichte_gap.png" alt="Beispielgrafik 3" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/404075" />Beleg zur Angabe ‚Geschichte‘ im Eintrag „Geiz ist geil“
-          </div>
-
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/matches/sprw_geschichte_gap.png" alt="Beispielgrafik 3"
+            to="https://www.owid.de/artikel/404075">
+            Beleg zur Angabe ‚Geschichte‘ im Eintrag „Geiz ist
+            geil“
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -305,14 +266,11 @@ export default {
           Belege den Gebrauch der deutschen Wortverbindungen in der Domäne Wirtschaft.
         </p>
         <template #explain>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/dtww_belege.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-           <ScreenshotLink to="http://wvonline.ids-mannheim.de/dtww/dtww_komplett.htm#d" /> Belege im Eintrag „durchlaufender Posten“
-          </div>
-
+          <NuxtImage src="/img/datatypes/matches/dtww_belege.png" alt="Beispielgrafik 1"
+            to="http://wvonline.ids-mannheim.de/dtww/dtww_komplett.htm#d">
+            Belege im Eintrag
+            „durchlaufender Posten“
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -328,14 +286,11 @@ export default {
           <li>Musterknoten: für die Füller der Slots</li>
         </ul>
         <template #explain>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/wvGrund.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/mit_Grund_ID1364235183644.html" />Belege für die allgemeine Beschreibung des Knotens „mit Grund“
-          </div>
-
+          <NuxtImage src="/img/datatypes/matches/wvGrund.png" alt="Beispielgrafik 1"
+            to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/mit_Grund_ID1364235183644.html">
+            Belege für
+            die allgemeine Beschreibung des Knotens „mit Grund“
+          </NuxtImage>
         </template>
       </compare-item>
     </compare>

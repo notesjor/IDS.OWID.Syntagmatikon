@@ -48,8 +48,7 @@
 
     <v-row style="margin-top:0px">
       <v-col>
-        <!-- <p class="text-xl">Interaktive Beispiele</p> -->
-        <div class="caption">
+        <div style="font-weight: 300; font-size: 0.8rem; color: #000; padding: 10px;">
           Interaktive Beispiele. Sind mehrere Beispiele in einem Beleg, können diese durch Anklicken einzeln ausgewählt
           werden.
         </div>

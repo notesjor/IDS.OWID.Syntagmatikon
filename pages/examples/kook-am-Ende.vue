@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <div class="caption">Beispiel aus
+    <div>Beispiel aus
         <r rkey="PREPCON_temp_art" />
     </div>
     <v-carousel style="height:450px">

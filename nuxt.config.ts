@@ -97,6 +97,10 @@ export default defineNuxtConfig({
     }
   },
 
+  robots: {
+    robotsTxt: false
+  },
+
   site: {
     url: "https://syntagmatikon.ids-mannheim.de",
     name: "Syntagmatikon"

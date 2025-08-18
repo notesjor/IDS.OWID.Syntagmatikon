@@ -14,7 +14,7 @@
                 <NuxtLink to="https://perso.ids-mannheim.de/seiten/ruediger.html">Dr. Jan Oliver Rüdiger</NuxtLink>
             </v-list-item>
         </v-list>
-        <div class="caption">Logo-Design von Tom Steyer <NuxtLink to="https://erit-lux.events">https://erit-lux.events
+        <div>Logo-Design von Tom Steyer <NuxtLink to="https://erit-lux.events">https://erit-lux.events
             </NuxtLink>
         </div>
 

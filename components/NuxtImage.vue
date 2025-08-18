@@ -5,11 +5,12 @@
       <div @click="isZoomed = true" style="cursor: zoom-in;">
         <slot></slot>
       </div>
-      <div v-if="href != null" class="relink" style="margin-bottom: 1.85rem;">
-        <a :href="href" target="_blank" class="captionLink">
+      <div v-if="to != null" class="relink" style="margin-bottom: 1.85rem;">
+        <a :href="to" target="_blank" class="captionLink">
           <span style="margin-left: 5px;">zu diesem Beispiel</span>
         </a>
       </div>
+      <div v-else style="margin-bottom: 1.85rem;"></div>
     </span>
   </div>
   <v-dialog v-model="isZoomed">
@@ -19,8 +20,8 @@
         <div @click="isZoomed = true" style="cursor: zoom-in;">
           <slot></slot>
         </div>
-        <div v-if="href != null" class="relink">
-          <a :href="href" target="_blank" class="captionLink">
+        <div v-if="to != null" class="relink">
+          <a :href="to" target="_blank" class="captionLink">
             <span style="margin-left: 5px;">zu diesem Beispiel</span>
           </a>
         </div>
@@ -41,7 +42,7 @@ export default {
       type: String,
       default: 'Abbildung'
     },
-    href: {
+    to: {
       type: String,
       default: null
     }

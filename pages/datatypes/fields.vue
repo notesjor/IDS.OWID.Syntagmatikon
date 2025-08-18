@@ -40,62 +40,73 @@ export default {
           verlinkt.
         </p>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/fields/swbu_part_01.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption"> <ScreenshotLink to="https://www.owid.de/artikel/401814" />
+          <NuxtImage src="/img/datatypes/fields/swbu_part_01.png" alt="Beispielgrafik 1"
+            to="https://www.owid.de/artikel/401814">
             Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘ im Eintrag: „Man soll
             den Tag nicht vor dem Abend loben“
-          </div>
-
-           <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/fields/swbu_part_02.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption"> <ScreenshotLink to="https://www.owid.de/artikel/401904" />
-            Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘ im Eintrag „Man sollte sich nicht zu früh freuen“
-          </div>
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/fields/swbu_part_02.png" alt="Beispielgrafik 2"
+            to="https://www.owid.de/artikel/401904">
+            Feldangabe zu verwandten Sprichwörtern in der Teilbedeutung ‚vorsichtiges Abwarten‘ im Eintrag „Man sollte
+            sich nicht zu früh freuen“
+          </NuxtImage>
         </template>
       </compare-item>
 
       <compare-item value="2" rkey="FesteWV"
         description="Feste Wortverbindungen des Deutschen - Modul: Wortverbindungen mit Adjektiv">
         <p>
-         Feldangaben umfassen Wortverbindungen mit einer verwandten Bedeutung, entweder mit einer gemeinsamen Komponente (z.B. blind) oder mit gänzlich unterschiedlichen Komponenten (z.B. sich blind verstehen – geistige Verwandtschaft). Diese Angaben werden in
-          <r rkey="FesteWV" /> in der Teilressource „Wortverbindungen mit Adjektiven“ nur für ausgewählte Einträge aufgeführt.
+          Feldangaben umfassen Wortverbindungen mit einer verwandten Bedeutung, entweder mit einer gemeinsamen
+          Komponente
+          (z.B. blind) oder mit gänzlich unterschiedlichen Komponenten (z.B. sich blind verstehen – geistige
+          Verwandtschaft).
+          Diese Angaben werden in
+          <r rkey="FesteWV" /> in der Teilressource „Wortverbindungen mit Adjektiven“ nur für ausgewählte Einträge
+          aufgeführt.
         </p>
 
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/fields/fwv_part_01.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption"><ScreenshotLink to="https://www.owid.de/artikel/309065" /> Semantisches Feld mit der Bedeutung ‚unkritisch‘; ‚die Realität nicht wahrhaben wollen‘
-            im Eintrag: „sich blind und taub stellen“</div>
-
-             <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/fields/fwv_part_02.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption"><ScreenshotLink to="https://www.owid.de/artikel/309057" /> Semantisches Feld mit der Bedeutung ‚unkritisch‘; ‚die Realität nicht wahrhaben wollen‘ im Eintrag „blind gegenüber“</div>
-
+          <NuxtImage src="/img/datatypes/fields/fwv_part_01.png" alt="Beispielgrafik 1"
+            to="https://www.owid.de/artikel/309065">
+            Semantisches Feld mit der Bedeutung ‚unkritisch‘;
+            ‚die Realität nicht wahrhaben wollen‘
+            im Eintrag: „sich blind und taub stellen“
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/fields/fwv_part_02.png" alt="Beispielgrafik 2"
+            to="https://www.owid.de/artikel/309057">
+            Semantisches Feld mit der Bedeutung ‚unkritisch‘;
+            ‚die Realität nicht wahrhaben wollen‘ im Eintrag „blind gegenüber“
+          </NuxtImage>
         </template>
       </compare-item>
 
       <compare-item value="3" rkey="MAP"
         description="Musterbank argumentmarkierender Präpositionen - Information: Prädikate (Verbalprädikate und Prädikatsgefüge)">
         <p>
-          In <r rkey="MAP" /> werden Gruppierungen der Daten auf verschiedenen semantischen, grammatischen und lexikalischen Ebenen vorgenommen. Auf der Ebene individueller Muster werden semantische Relationen zwischen deren einzelnen Komponenten sowie zwischen der schematischen Musterbedeutung im Ganzen und der Semantik spezifischer eingesetzter Prädikate beschrieben. Syntaktisch werden Gruppen zugehöriger Belege mit identischer grammatischer Markierung ausgewiesen, lexikalisch Klassen von Prädikaten verschiedener struktureller Typen (z.B. einfache Verben vs. komplexe Prädikatsgefüge). Auf einer höheren Ebene werden semantisch verwandte Muster zu übergeordneten Familien zusammengefasst, die in eigenständigen Beschreibungen behandelt werden.
+          In
+          <r rkey="MAP" /> werden Gruppierungen der Daten auf verschiedenen semantischen, grammatischen und
+          lexikalischen
+          Ebenen vorgenommen. Auf der Ebene individueller Muster werden semantische Relationen zwischen deren einzelnen
+          Komponenten sowie zwischen der schematischen Musterbedeutung im Ganzen und der Semantik spezifischer
+          eingesetzter
+          Prädikate beschrieben. Syntaktisch werden Gruppen zugehöriger Belege mit identischer grammatischer Markierung
+          ausgewiesen, lexikalisch Klassen von Prädikaten verschiedener struktureller Typen (z.B. einfache Verben vs.
+          komplexe
+          Prädikatsgefüge). Auf einer höheren Ebene werden semantisch verwandte Muster zu übergeordneten Familien
+          zusammengefasst, die in eigenständigen Beschreibungen behandelt werden.
         </p>
 
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/fields/map_respekt_predicates.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/plus/map/article/vor/respekt#predicates" />Einteilung musterinstanziierender Prädikate nach strukturellem Typ</div>
-             <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/fields/map_visualisierung.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/plus/map/article/vor/bedrohen" />Feldangabe zur Muster-Familie BEDROHEN</div>
+          <NuxtImage src="/img/datatypes/fields/map_respekt_predicates.png" alt="Beispielgrafik 1"
+            to="https://www.owid.de/plus/map/article/vor/respekt#predicates">
+            Einteilung
+            musterinstanziierender Prädikate nach strukturellem Typ
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/fields/map_visualisierung.png" alt="Beispielgrafik 2"
+            to="https://www.owid.de/plus/map/article/vor/bedrohen">
+            Feldangabe zur Muster-Familie
+            BEDROHEN
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -113,27 +124,25 @@ export default {
         </p>
 
         <template #explain>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/fields/prepk_part_03.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">  <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/amAnfang.html" /> Wolkendarstellung adjektivischer Satellitenfelder des Gebrauchsaspekts „Thematisierung
+          <NuxtImage src="/img/datatypes/fields/prepk_part_03.png" alt="Beispielgrafik 1"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/amAnfang.html">
+            Wolkendarstellung
+            adjektivischer Satellitenfelder des Gebrauchsaspekts „Thematisierung
             von
-            Schwierigkeiten“ von <em>am Anfang</em> und des spanischen Äquivalents <em>al principio</em></div>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/fields/prepk_part_04.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption"> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/am_Anfang/de/Clusters_TagsComb_ANDADJ_GA4_AmAnfang_KA_241016_NEU_6.html" /> Ausschnitt aus der Kookkurrenzliste adjektivischer Satellitenfelder des
+            Schwierigkeiten“ von <em>am Anfang</em> und des spanischen Äquivalents <em>al principio</em>
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/fields/prepk_part_04.png" alt="Beispielgrafik 1"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/am_Anfang/de/Clusters_TagsComb_ANDADJ_GA4_AmAnfang_KA_241016_NEU_6.html">
+            Ausschnitt aus der Kookkurrenzliste adjektivischer Satellitenfelder des
             Gebrauchsaspekts
-            „Thematisierung von Schwierigkeiten“ von <em>am Anfang</em></div>
-
-            <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/fields/prepk_part_spanisch.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption"> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/am_Anfang/es/Clusters_TagsComb_ANDAdj_Kookkurrenz_Tabelle_Negative_Adjetive_14.html" /> Ausschnitt aus der Kookkurrenzliste adjektivischer Satellitenfelder des
+            „Thematisierung von Schwierigkeiten“ von <em>am Anfang</em>
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/fields/prepk_part_spanisch.png" alt="Beispielgrafik 1"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/am_Anfang/es/Clusters_TagsComb_ANDAdj_Kookkurrenz_Tabelle_Negative_Adjetive_14.html">
+            Ausschnitt aus der Kookkurrenzliste adjektivischer Satellitenfelder des
             Gebrauchsaspekts
-            „Thematisierung von Schwierigkeiten“ von <em>al principio</em></div>
+            „Thematisierung von Schwierigkeiten“ von <em>al principio</em>
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -147,13 +156,10 @@ export default {
           der CCDB.
         </p>
         <template #explain>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/fields/prept_part_01.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption"> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Unterlass/index.html"/> Verwandte Wörter mit der Grundbedeutung ‚pausenlos‘ im Eintrag "ohne Unterlass"</div>
-
-          
+          <NuxtImage src="/img/datatypes/fields/prept_part_01.png" alt="Beispielgrafik 1"
+            to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Unterlass/index.html">
+            Verwandte Wörter mit der Grundbedeutung ‚pausenlos‘ im Eintrag "ohne Unterlass"
+          </NuxtImage>
         </template>
       </compare-item>
     </compare>

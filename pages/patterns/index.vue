@@ -17,7 +17,7 @@ useHead({
 </script>
 
 <template>
-  <div style="max-width: var(--TXT-WIDTH); margin:auto">
+  <div>
     <h1>Musterzugänge</h1>
     <p>
       In dieser <hi>Syntagmatikon</hi>-Rubrik werden die Ressourcen entsprechend der Art ihrer Zugänge zu semiabstrakten und abstrakten Mustern bzw. Konstruktionen gebündelt. Muster
@@ -30,9 +30,10 @@ useHead({
       <li><strong>Muster BEVORSTEHEN: x-VERB-vor-y</strong>: <br /> {die Firma; der Klub; der Bausektor} {steht; befindet sich} vor {einer großen Herausforderung; schwierigen Zeiten; dem Kollaps}</li>
       <li><strong>wo-x-ist-ist-auch-y-Muster</strong>: <br /> {Licht – Schatten; Rauch – Feuer; Arbeit – Brot} </li>
     </ul>
-    <br />
-    <div class="caption">Jedes Kästchen linkt zu einer Hintergrundseite mit kurzen Erklärungen und Beispielen zu den
-      unterschiedlichen Musterzugängen.</div>
+    <p>
+      Jedes Kästchen linkt zu einer Hintergrundseite mit kurzen Erklärungen und Beispielen zu den
+      unterschiedlichen Musterzugängen.
+    </p>
   </div>
   <div>
     <v-row>

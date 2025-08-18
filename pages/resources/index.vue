@@ -25,7 +25,7 @@ useHead({
       <r rkey='PREPCON_ex' /> oder
       <r rkey='KoMuX' />.
     </p>
-    <div class="caption">Jedes Kästchen führt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur
+    <div>Jedes Kästchen führt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur
       Charakteristik der
       einzelnen Ressourcen.</div>
   </div>
