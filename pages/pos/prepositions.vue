@@ -131,11 +131,10 @@ export default {
             </compare-item>
             <compare-item value="5" rkey="MAP">
             <p>
-            Beschreibungsgegenstand von <r rkey="MAP" /> sind Konstruktionen mit ursprünglich räumlichen Präpositionen in abstrakter Verwendung. Für jede 
-            behandelte Präposition gibt es einen Überblicksartikel, der das gesamte Spektrum ihrer abstrakten, „grammatischen“ Verwendungen zusammenfasst und einen Überblick über alle zugehörigen Muster und Musterfamilien bietet.
+            Beschreibungsgegenstand von <r rkey="MAP" /> sind Konstruktionen mit ursprünglich räumlichen Präpositionen in abstrakter Verwendung (<em>an etwas leiden, auf etwas beharren, um etwas kämpfen</em>; siehe unten stehende Beispiele). Für jede behandelte Präposition gibt es einen Überblicksartikel, der das gesamte Spektrum ihrer abstrakten, „grammatischen“ Verwendungen zusammenfasst und einen Überblick über alle zugehörigen Muster und Musterfamilien bietet.
             </p>
             <template #explain>
-                    <div>
+                    <div> 
                         <ul>
                             <li> Immer mehr Menschen leiden <m>an</m> Allergien. </li>
                             <li>
