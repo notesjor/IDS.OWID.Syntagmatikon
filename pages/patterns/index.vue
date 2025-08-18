@@ -27,8 +27,9 @@ useHead({
       Beispiele für Muster sind:
     </p>
     <ul class="example">
-      <li><strong>Muster BEVORSTEHEN: x-VERB-vor-y</strong>: <br /> {die Firma; der Klub; der Bausektor} {steht; befindet sich} vor {einer großen Herausforderung; schwierigen Zeiten; dem Kollaps}</li>
-      <li><strong>wo-x-ist-ist-auch-y-Muster</strong>: <br /> {Licht – Schatten; Rauch – Feuer; Arbeit – Brot} </li>
+      <li><strong>vor-sich-hin-Muster</strong>: <br /> {das Boot dümpelt; das Brot gammelt; sie paddelt so} vor sich
+        hin</li>
+      <li><strong>w-x-ist-ist-auch-y-Muster</strong>: <br /> {Licht – Schatten; Rauch – Feuer; Arbeit – Brot} </li>
     </ul>
     <br />
     <div class="caption">Jedes Kästchen linkt zu einer Hintergrundseite mit kurzen Erklärungen und Beispielen zu den
@@ -48,7 +49,7 @@ useHead({
             Beschreibungen. Das heißt, alle Informationen sind über das Netzwerk semiabstrakter Schablonen herleitbar.
           </info-box>
 
-          <info-box title="Lexikografische Angaben" :color1="color1" link="/patterns/component"
+          <info-box title="Lexikografische Angabe" :color1="color1" link="/patterns/component"
             :filter="['PREPCON_kon', 'SPRW', 'FesteWV']">
             In einigen Ressourcen werden von Hand aufbereitete Musterangaben und -visualisierungen als eine Komponente
             von
@@ -56,7 +57,7 @@ useHead({
           </info-box>
 
           <info-box title="Dynamische Erschließung" :color1="color1" link="/patterns/dynamic"
-            :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp_art', 'Redeeinleiter']">
+            :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp', 'Redeeinleiter', 'Verlaufsformen']">
             In vielen Ressourcen kann man sich selbst Muster erschließen, zum einen durch automatische Suchen und
             Sortierungen auf der Basis von vorgegebenen Kategorien; zum anderen durch eigene analytische Gruppierungen.
           </info-box>
