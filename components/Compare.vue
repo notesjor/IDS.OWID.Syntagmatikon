@@ -4,15 +4,19 @@
     style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); position: relative; left: -10px; width: calc(100% + 330px);">
     <v-row style="margin-top:-20px">
       <v-col cols="8">
-        <div style="background: #fff; border-radius: 5px; margin-left: 4px;">
-          <v-tabs-window v-model="currentTab"
-            style="border: 1px white solid; border-radius: 5px; padding: 10px; background-color: #fff; margin:0px -10px 0px -10px">
-            <slot />
+        <div style="background: #fff; border-radius: 5px; margin-left: 4px;">          
+            <v-tabs-window v-model="currentTab" direction="vertical"
+            style="border: 1px white solid; border-radius: 5px; padding: 10px; background-color: #fff; margin:0px -10px 0px -10px;">
+            <h2 style="margin:0px 10px 5px 0px; background-color: white;" v-html="tabs[currentTab]"></h2>
+            <div>
+              <slot />
+            </div>
           </v-tabs-window>
         </div>
       </v-col>
       <v-col cols="4">
         <div style="position: sticky; top: 10px; max-height: calc(100vh - 40px); overflow-y: auto;">
+          <div style="font-weight: 300; font-size:1.2rem; padding:10px">Auswahloptionen:</div>
           <v-tabs v-model="currentTab" direction="vertical">
             <v-tab v-for="(item, index) in tabs" :key="index"
               :class="index !== 0 && currentTab === index ? 'expandMe' : 'denseMe'">
@@ -20,9 +24,7 @@
               <div v-if="index !== 0 && currentTab === index">
                 <v-row>
                   <div class="nocaps" style="letter-spacing: normal; margin: -10px 0px 0px 13px;">
-                    <v-chip variant="outlined" density="compact">
                       <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br />
-                    </v-chip>
                   </div>
                 </v-row>
                 <v-row>
@@ -36,9 +38,7 @@
               </div>
               <div v-else>
                 <div class="nocaps" style="letter-spacing: normal;">
-                  <v-chip variant="outlined" density="compact">
-                    <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br />
-                  </v-chip>
+                  <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br />
                 </div>
               </div>
             </v-tab>
@@ -54,9 +54,7 @@
         <v-tabs v-model="currentTab">
           <v-tab v-for="(item, index) in tabs" :key="index">
             <span class="nocaps" style="letter-spacing: normal;">
-              <v-chip variant="outlined" density="compact">
-                <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br />
-              </v-chip>
+              <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br />
             </span>
           </v-tab>
         </v-tabs>
@@ -124,7 +122,7 @@ export default {
 </script>
 
 <style scoped>
-.notransition div {
+.notransition {
   transition: none !important;
   transition-timing-function: none !important;
 }

@@ -1,8 +1,10 @@
 <template>
   <span class="nolink" style="letter-spacing: normal;">
-    <v-chip variant="outlined" density="compact">
-      <span v-html="item.nameShort" style="font-family: var(--FF-DISPLAY);" /><br />
-    </v-chip>
+    <a :href="item.url" style="text-decoration: none; color: inherit;">
+      <v-chip variant="outlined" density="compact">
+        <span v-html="item.nameShort" style="font-family: var(--FF-DISPLAY);" /><br />
+      </v-chip>
+    </a>
   </span>
 </template>
 
@@ -30,6 +32,10 @@ export default {
 </script>
 
 <style scoped>
+.nolink a::before {
+  content: none !important;
+}
+
 .containerItem {
   display: grid;
   grid-template-columns: auto 1fr;
