@@ -62,7 +62,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
         },
         {
           key: "PREPCON_temp_inv",
-          nameShort: "PREPCON<sup>temporal</sup> Inventar",
+          nameShort: "PREPCON<sup>temporal</sup> <span style=\"font-weight:300\">Inventar</span>",
           nameLong:
             "PREPCON<sup>temporal</sup> - Inventar zu temporalen Präposition-Nomen-Verbindungen im Kontext",
           description:
@@ -82,7 +82,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
         },
            {
           key: "PREPCON_temp_art",
-          nameShort: "PREPCON<sup>temporal</sup> Artikel",
+          nameShort: "PREPCON<sup>temporal</sup> <span style=\"font-weight:300\">Artikel</span>",
           nameLong:
             "PREPCON<sup>temporal</sup> - Kurzartikel zu temporalen Präposition-Nomen-Verbindungen im Kontext",
           description:
