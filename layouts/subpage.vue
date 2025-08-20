@@ -42,6 +42,7 @@
               <slot />
             </v-col>
           </v-row>
+          <Cite :data="cite"/>
         </div>
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
@@ -51,6 +52,7 @@
               <slot />
             </v-col>
           </v-row>
+          <Cite :data="cite"/>
         </div>
       </div>
     </div>
@@ -81,15 +83,15 @@
         </a>
       </div>
     </v-footer>
-
   </v-app>
 </template>
 
 <script>
 import { de } from 'vuetify/locale';
 import cache from '~/api/cache.js';
-
 import { useLayoutStore } from '~/stores/layout';
+import citeApi from '~/api/cite.js';
+
 export default {
   name: "Index",
   theme: { dark: false },
@@ -107,7 +109,8 @@ export default {
       footerImpressum: null,
       footerDsgvo: null,
 
-      layoutVars: null
+      layoutVars: null,
+      cite: null
     }
   },
 
@@ -128,6 +131,10 @@ export default {
   },
 
   mounted() {
+    var cite = new citeApi();
+    var props = useLayoutStore();
+    this.cite = cite.getCite(props.title);
+
     this.layoutVars = useLayoutStore();
 
     this.appName = this.$config.public.appName;

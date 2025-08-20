@@ -1,6 +1,6 @@
 <script setup>
 definePageMeta({
-  layout: "subpage",
+  layout: "subpage"
 })
 </script>
 <script>
