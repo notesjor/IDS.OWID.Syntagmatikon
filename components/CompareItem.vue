@@ -10,8 +10,9 @@
 
         <v-spacer></v-spacer>
         <div style="text-align: center;">
-            <nuxt-link v-if="!simple" :to="resource?.url"><v-btn prepend-icon="mdi-arrow-right-circle-outline"
-                variant="elevated" color=""><span class="nocaps">zur Ressource</span></v-btn></nuxt-link>
+            <nuxt-link v-if="!simple" :to="resource?.url">
+                <v-chip variant="outlined" density="compact">zur Ressource</v-chip>  
+            </nuxt-link>
         </div>
     </v-tabs-window-item>
 </template>

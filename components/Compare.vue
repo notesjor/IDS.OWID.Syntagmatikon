@@ -28,10 +28,10 @@
                   </div>
                 </v-row>
                 <v-row>
-                  <div style="margin: 5px 0px -10px 13px" class="relink">
+                  <div style="margin: 5px 0px -10px 13px">
                     <a :href="resourcesStore.getResource(filter[index - 1]).url" target="_blank"
                       style="font-size: 0.9em; text-transform: none;">
-                      zur Ressource
+                      <v-chip variant="outlined" density="compact">zur Ressource</v-chip>                      
                     </a>
                   </div>
                 </v-row>

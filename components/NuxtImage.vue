@@ -5,9 +5,9 @@
       <div @click="isZoomed = true" style="cursor: zoom-in;">
         <slot></slot>
       </div>
-      <div v-if="to != null" class="relink" style="margin-bottom: 1.85rem;">
+      <div v-if="to != null" style="margin-bottom: 1.85rem;">
         <a :href="to" target="_blank" class="captionLink">
-          <span style="margin-left: 5px;">zu diesem Beispiel</span>
+          <v-chip variant="outlined" density="compact">zu diesem Beispiel</v-chip> 
         </a>
       </div>
       <div v-else style="margin-bottom: 1.85rem;"></div>
@@ -20,9 +20,9 @@
         <div @click="isZoomed = true" style="cursor: zoom-in;">
           <slot></slot>
         </div>
-        <div v-if="to != null" class="relink">
+        <div v-if="to != null">
           <a :href="to" target="_blank" class="captionLink">
-            <span style="margin-left: 5px;">zu diesem Beispiel</span>
+            <v-chip variant="outlined" density="compact">zu diesem Beispiel</v-chip> 
           </a>
         </div>
       </span>
