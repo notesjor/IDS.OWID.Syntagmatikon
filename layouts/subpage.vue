@@ -2,7 +2,7 @@
   <v-app>
     <LayoutHeader></LayoutHeader>
 
-    <main-menu :useMobileView="useMobileView" />
+    <main-menu :useMobileView="useMobileView" :onlyTopLevel="true" />
 
     <v-main>
       <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
@@ -91,7 +91,7 @@ export default {
   mounted() {
     var cite = new citeApi();
     var props = useLayoutStore();
-    this.cite = cite.getCite(props.title);
+    this.cite = cite.getCite(props.title, this.$route.path);
 
     this.layoutVars = useLayoutStore();
 

@@ -17,7 +17,7 @@
         icon="mdi-content-copy"
         density="comfortable"
         style="margin: 0px 0px 0px 10px; font-size: 0.75rem;"        
-        @click="navigator.clipboard.writeText(data)"
+        @click="copyToClipboard"
       />
       </template>
       </v-tooltip>
@@ -34,8 +34,10 @@ export default {
       required: true
     }
   },
-  setup() {
-    // This is a placeholder for any setup logic if needed in the future
+  methods: {
+    copyToClipboard() {
+      navigator.clipboard.writeText(this.data);
+    }
   }
 }
 </script>

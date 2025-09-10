@@ -18,25 +18,8 @@
         <div style="position: sticky; top: 10px; max-height: calc(100vh - 40px); overflow-y: auto;">
           <div style="font-weight: 300; font-size:1.2rem; padding:10px">Auswahloptionen:</div>
           <v-tabs v-model="currentTab" direction="vertical">
-            <v-tab v-for="(item, index) in tabs" :key="index"
-              :class="index !== 0 && currentTab === index ? 'expandMe' : 'denseMe'">
-
-              <div v-if="index !== 0 && currentTab === index">
-                <v-row>
-                  <div class="nocaps" style="letter-spacing: normal; margin: -10px 0px 0px 13px;">
-                      <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br />
-                  </div>
-                </v-row>
-                <v-row>
-                  <div style="margin: 5px 0px -10px 13px">
-                    <a :href="resourcesStore.getResource(filter[index - 1]).url" target="_blank"
-                      style="font-size: 0.9em; text-transform: none;">
-                      <v-chip variant="outlined" density="compact">zur Ressource</v-chip>                      
-                    </a>
-                  </div>
-                </v-row>
-              </div>
-              <div v-else>
+            <v-tab v-for="(item, index) in tabs" :key="index" class="denseMe">
+              <div>
                 <div class="nocaps" style="letter-spacing: normal;">
                   <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br />
                 </div>
@@ -162,12 +145,6 @@ export default {
   font-size: 0.8rem;
   padding: 0px 0px 0px 10px;
   height: 40px !important;
-}
-
-.expandMe {
-  font-size: 0.8rem;
-  padding: 0px 0px 0px 10px;
-  height: 75px !important;
 }
 
 div.v-tabs-window-item {
