@@ -27,6 +27,7 @@ export default {
     var resourcesStore = useResourcesStore();
     this.item = resourcesStore.getResource(this.rkey);
     this.layoutVars = useLayoutStore();
+    this.layoutVars.updateParent();
   },
   computed: {
     style() {

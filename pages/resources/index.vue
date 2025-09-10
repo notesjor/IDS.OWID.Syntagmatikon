@@ -21,7 +21,7 @@ useHead({
     <h1>Ressourcentypen</h1>
     <p>In dieser <hi>Syntagmatikon</hi>-Rubrik werden die Ressourcen nach folgenden Kriterien gebündelt: Menge an aufbereiteten Daten, Grad der Vollständigkeit sowie Verhältnis von automatischer Datenaufbereitung; manueller Bearbeitung und linguistisch-lexikografischer Beschreibung</p>
     <p>Die aufgeführten Beispielressourcen sind jeweils die prototypischen Vertreter. Gleichzeitig gibt es zahlreiche
-      Überschneidungen zwischen den Ressourcen: Eine <M>Datenbank</M> kann z.B. gleichzeitig als Inventar verstanden werden wie
+      Überschneidungen zwischen den Ressourcen: Eine Datenbank kann z.B. gleichzeitig als Inventar verstanden werden wie
       <r rkey='PREPCON_ex' /> oder
       <r rkey='KoMuX' />.
     </p>
