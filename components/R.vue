@@ -1,14 +1,11 @@
 <template>
-  <span class="nolink" style="letter-spacing: normal;">
-    <a :href="item.url" style="text-decoration: none; color: inherit;">
-      <v-chip variant="outlined" density="compact">
-        <span v-html="item.nameShort" style="font-family: var(--FF-DISPLAY);" /><br />
-      </v-chip>
-    </a>
-  </span>
+  <div style="display: inline-block;" class="klammer">
+    <span v-html="item.nameShort" :style="style" />
+  </div>
 </template>
 
 <script>
+import { useLayoutStore } from '~/stores/layout';
 import { useResourcesStore } from '~/stores/resources';
 
 export default {
@@ -22,64 +19,103 @@ export default {
   data() {
     return {
       item: { nameShort: '' },
+      layoutVars: null
     }
   },
   mounted() {
     var resourcesStore = useResourcesStore();
     this.item = resourcesStore.getResource(this.rkey);
+    this.layoutVars = useLayoutStore();
   },
+  computed: {
+    style() {
+      if (this.layoutVars == null) return {};
+      var color = this.layoutVars.getParentColor;
+      var bgcolor = `${color}4D`;
+
+      if (color == "#2962ff") {
+        color = "#000";
+        bgcolor = "#eee";
+      }
+
+      return {
+        "font-family": `var(--FF-DISPLAY)`,
+        borderLeft: `2px solid ${color}`,
+        borderRight: `2px solid ${color}`,
+        backgroundColor: bgcolor,
+        margin: '0 3px',
+        padding: '2px 2px 0px 2px',
+        "--myColor": color
+      };
+    },
+    hasContent() {
+      return this.$slots.default !== undefined;
+    }
+  }
 }
 </script>
 
 <style scoped>
-.nolink a::before {
-  content: none !important;
+.klammer {
+  margin:1px 0px 1px 0px;
+  position: relative;
+  display: inline-block;
 }
 
-.containerItem {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: 100%;
-  gap: 0px 0px;
-  grid-template-areas:
-    "left middle";
-  margin: 10px 5px 10px 5px;
-  padding: 5px;
-  border-bottom: 1px solid #ddd;
+/* --- LINKE SEITE --- */
+
+/* linkes oberes Dreieck */
+.klammer::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 2px;
+  z-index: 1;
+  transform: rotate(135deg);
+  border: 3px solid transparent;
+  border-top-color: var(--myColor);
 }
 
-.containerItem:hover {
-  background-color: #ddd;
+/* linkes unteres Dreieck */
+/*.klammer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  transform: rotate(90deg);
+  border: 3px solid transparent;
+  border-bottom-color: black;
+}*/
+
+/* --- RECHTE SEITE --- */
+
+.klammer span {
+  position: relative;
+  display: inline-block;
 }
 
-.v-chip {
-  margin: 0px 2px 2px 0px;
-}
+/* rechtes oberes Dreieck */
+/*.klammer span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -42px;
+  transform: translateY(-100%);
+  width: 0;
+  height: 0;
+  border: 3px solid transparent;
+  border-top-color: red;
+}*/
 
-.left {
-  grid-area: left;
-}
-
-.middle {
-  grid-area: middle;
-  text-align: left;
-  margin-left: 10px;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-li {
-  list-style: none;
-  margin: 10px 20px 10px 20px;
-  border-top: 1px solid #d6d6d6;
-  padding-top: 10px;
-}
-
-li:hover {
-  background-color: #d6d6d6;
+/* rechtes unteres Dreieck */
+.klammer span::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  z-index: 1;
+  transform: rotate(135deg);
+  border: 3px solid transparent;
+  border-bottom-color: black;
 }
 </style>

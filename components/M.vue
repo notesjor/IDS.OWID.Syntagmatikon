@@ -1,6 +1,6 @@
 <template>
     <span :class="['klammer', { 'has-content': hasContent }]" :style="style">
-        <slot/>
+        <slot />
     </span>
 </template>
 
@@ -44,8 +44,10 @@ export default {
     position: absolute;
     width: 0;
     height: 0;
-    border-left: 3px solid transparent; /* Linkes Dreieck */
-    border-right: 3px solid transparent; /* Rechtes Dreieck */
+    border-left: 3px solid transparent;
+    /* Linkes Dreieck */
+    border-right: 3px solid transparent;
+    /* Rechtes Dreieck */
 }
 
 .klammer::before {
