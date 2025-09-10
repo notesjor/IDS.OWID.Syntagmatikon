@@ -2,15 +2,16 @@
   <div>
     <div class="container"><img :src="src" :alt="alt" @click="isZoomed = true" class="normalImg" /></div>
     <span class="normalText">
-      <div @click="isZoomed = true" style="cursor: zoom-in;">
+      <div @click="isZoomed = true" style="cursor: zoom-in; margin-bottom: 0.85rem;">
         <slot></slot>
-      </div>
-      <div v-if="to != null" style="margin-bottom: 1.85rem;">
-        <a :href="to" target="_blank" class="captionLink">
-          <v-chip variant="outlined" density="compact">zu diesem Beispiel</v-chip> 
-        </a>
-      </div>
-      <div v-else style="margin-bottom: 1.85rem;"></div>
+        <span v-if="to != null" style="margin-bottom: 1.85rem;">
+          <a :href="to" target="_blank" class="captionLink">
+            <v-icon>mdi-arrow-right-circle-outline</v-icon>
+            zu diesem Beispiel
+          </a>
+        </span>
+        <span v-else style="margin-bottom: 1.85rem;"></span>
+      </div>      
     </span>
   </div>
   <v-dialog v-model="isZoomed">
@@ -19,11 +20,12 @@
       <span class="zoomedText">
         <div @click="isZoomed = true" style="cursor: zoom-in;">
           <slot></slot>
-        </div>
-        <div v-if="to != null">
-          <a :href="to" target="_blank" class="captionLink">
-            <v-chip variant="outlined" density="compact">zu diesem Beispiel</v-chip> 
-          </a>
+          <span v-if="to != null" style="margin-bottom: 1.85rem;">
+            <a :href="to" target="_blank" class="captionLink">
+              <v-icon>mdi-arrow-right-circle-outline</v-icon>
+              zu diesem Beispiel
+            </a>
+          </span>
         </div>
       </span>
     </v-card>
