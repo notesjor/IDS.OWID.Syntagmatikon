@@ -19,7 +19,8 @@ export default {
   data() {
     return {
       item: { nameShort: '' },
-      layoutVars: null
+      layoutVars: null,
+      color: '#000'
     }
   },
   mounted() {
@@ -37,6 +38,8 @@ export default {
         color = "#000";
         bgcolor = "#eee";
       }
+
+      this.color = color;
 
       return {
         "font-family": `var(--FF-DISPLAY)`,
@@ -73,19 +76,8 @@ export default {
   z-index: 1;
   transform: rotate(135deg);
   border: 3px solid transparent;
-  border-top-color: var(--myColor);
+  border-top-color: v-bind(color);
 }
-
-/* linkes unteres Dreieck */
-/*.klammer::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 5px;
-  transform: rotate(90deg);
-  border: 3px solid transparent;
-  border-bottom-color: black;
-}*/
 
 /* --- RECHTE SEITE --- */
 
@@ -93,19 +85,6 @@ export default {
   position: relative;
   display: inline-block;
 }
-
-/* rechtes oberes Dreieck */
-/*.klammer span::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -42px;
-  transform: translateY(-100%);
-  width: 0;
-  height: 0;
-  border: 3px solid transparent;
-  border-top-color: red;
-}*/
 
 /* rechtes unteres Dreieck */
 .klammer span::after {
@@ -116,6 +95,6 @@ export default {
   z-index: 1;
   transform: rotate(135deg);
   border: 3px solid transparent;
-  border-bottom-color: black;
+  border-bottom-color: v-bind(color);
 }
 </style>

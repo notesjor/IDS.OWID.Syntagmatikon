@@ -51,14 +51,14 @@ export default {
 }
 
 .klammer::before {
-    left: -1.45px;
-    top: -1.1px;
+    left: -1px;
+    top: -1px;
     transform: rotate(-90deg);
 }
 
 .klammer::after {
-    right: -1.34px;
-    top: -1.1px;
+    right: -1px;
+    top: -1px;
     transform: rotate(90deg);
 }
 

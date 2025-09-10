@@ -53,22 +53,22 @@
                 alabel="Ressourcentypen">
                 Ressourcentypen
             </main-menu-item>
-            <main-menu-child parent="Ressourcentypen" v-if="!onlyTopLevel" />
+            <main-menu-child parent="Ressourcentypen" v-if="useMobileView ? !onlyTopLevel : true" />
             <main-menu-item :useMobileView="useMobileView" color2="#9716CA" icon="mdi-compass" to="/datatypes"
                 alabel="Informationstypen">
                 Informationstypen
             </main-menu-item>
-            <main-menu-child parent="Informationstypen" v-if="!onlyTopLevel" />
+            <main-menu-child parent="Informationstypen" v-if="useMobileView ? !onlyTopLevel : true" />
             <main-menu-item :useMobileView="useMobileView" color2="#0DC513" icon="mdi-compass" to="/pos"
                 alabel="Wort und Ausdrucksarten">
                 Wort- und Ausdrucksarten
             </main-menu-item>
-            <main-menu-child parent="Wort- und Ausdrucksarten" v-if="!onlyTopLevel" />
+            <main-menu-child parent="Wort- und Ausdrucksarten" v-if="useMobileView ? !onlyTopLevel : true" />
             <main-menu-item :useMobileView="useMobileView" color2="#DB6900" icon="mdi-compass" to="/patterns"
                 alabel="Musterzugänge">
                 Musterzugänge
             </main-menu-item>
-            <main-menu-child parent="Musterzugänge" v-if="!onlyTopLevel" />
+            <main-menu-child parent="Musterzugänge" v-if="useMobileView ? !onlyTopLevel : true" />
             <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-lightbulb-on" to="/examples"
                 alabel="Fallbeispiele">
                 Fallbeispiele
