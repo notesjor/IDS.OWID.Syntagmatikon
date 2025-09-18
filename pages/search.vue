@@ -257,7 +257,7 @@ export default {
       search_header_switch: true,
       search_header: "byGroup",
 
-      search_exact: true
+      search_exact: false
     }
   },
   mounted() {
@@ -272,7 +272,8 @@ export default {
       try {
         this.page = 1;
         var self = this;
-        self.searchApi.search(self.query, self.resourcesStore.resourceUsedForSearch, self.search_header_switch).then(x => {
+
+        self.searchApi.search(self.query, self.resourcesStore.resourceUsedForSearch, true, null, null, !self.search_exact).then(x => {
           self.results = x;
         });
       } catch {
