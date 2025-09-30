@@ -31,7 +31,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Präpositionen"],
         },
-        {
+ {
           key: "PREPCON_temp",
           nameShort: "PREPCON<sup>temporal</sup>",
           nameLong:
@@ -53,7 +53,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           ],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Präpositionen"],
-        },
+        }, 
         {
           key: "PREPCON_temp_inv",
           nameShort:

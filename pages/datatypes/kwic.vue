@@ -67,7 +67,7 @@ export default {
         </p>
         <ul>
           <li>in ‚Häufigkeit im Korpus‘ (für die jeweilige Suchanfragen)</li>
-          <li>in ‚Typische Partnerwörter‘ f(ür die jeweiligen Kookkurrenzcluster)</li>
+          <li>in ‚Typische Partnerwörter‘ (für die jeweiligen Kookkurrenzcluster)</li>
           <li>in ‚Muster‘ (für die jeweiligen Lückenfüllertabellen)</li>
         </ul>
 

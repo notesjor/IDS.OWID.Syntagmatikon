@@ -32,20 +32,15 @@ export default {
   computed: {
     style() {
       if (this.layoutVars == null) return {};
-      var color = this.layoutVars.getParentColor;
-      var bgcolor = `${color}4D`;
-
-      if (color == "#2962ff") {
-        color = "#000";
-        bgcolor = "#eee";
-      }
-
+      var color = "#000";
+      var bgcolor = "#eee";
+	  
       this.color = color;
 
       return {
         "font-family": `var(--FF-DISPLAY)`,
-        borderLeft: `2px solid ${color}`,
-        borderRight: `2px solid ${color}`,
+        //borderLeft: `2px solid ${color}`,
+        //borderRight: `2px solid ${color}`,
         backgroundColor: bgcolor,
         margin: '0 3px',
         padding: '2px 2px 0px 2px',
@@ -69,7 +64,7 @@ export default {
 /* --- LINKE SEITE --- */
 
 /* linkes oberes Dreieck */
-.klammer::before {
+/* .klammer::before {
   content: "";
   position: absolute;
   top: -3px;
@@ -78,7 +73,7 @@ export default {
   transform: rotate(135deg);
   border: 3px solid transparent;
   border-top-color: v-bind(color);
-}
+} */
 
 /* --- RECHTE SEITE --- */
 
@@ -88,7 +83,7 @@ export default {
 }
 
 /* rechtes unteres Dreieck */
-.klammer span::after {
+/* .klammer span::after {
   content: "";
   position: absolute;
   bottom: -3px;
@@ -97,5 +92,5 @@ export default {
   transform: rotate(135deg);
   border: 3px solid transparent;
   border-bottom-color: v-bind(color);
-}
+} */
 </style>
