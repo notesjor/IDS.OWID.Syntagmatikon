@@ -8,7 +8,6 @@
 
 <script>
 import { useResourcesStore } from '~/stores/resources';
-import R from './R.vue';
 
 export default {
   name: "ResourcesList",

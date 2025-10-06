@@ -63,7 +63,7 @@ export default {
         <p>Neben diesen auf ein bestimmtes Suchmuster beschränkten Frequenzangaben kann man sich außerdem anzeigen
           lassen, wie häufig
           die in einer Suchanfrage enthaltenen Komposita-Konstituenten innerhalb der Gesamtdaten vorkommen (z.B.: Wie
-          oft kommt die Konstituente Fußball insgesamt als Erstglied bzw. als Zweitglied vor?) </p>
+          oft kommt die Konstituente <em>Fußball</em> insgesamt als Erstglied bzw. als Zweitglied vor?) </p>
         <p>Ein besonderes frequenzbezogenes Feature besteht darin, dass zu jedem Suchmuster Visualisierungen
           angezeigt werden, welche die Frequenzverläufe innerhalb der Treffermenge illustrieren (z.B.: Wie ist die
           Verteilung der Wortarten innerhalb eines bestimmten Suchmusters?)</p>
