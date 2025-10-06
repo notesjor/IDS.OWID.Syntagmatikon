@@ -45,8 +45,6 @@
 </template>
 
 <script>
-import { de } from 'vuetify/locale';
-import cache from '~/api/cache.js';
 import { useLayoutStore } from '~/stores/layout';
 import citeApi from '~/api/cite.js';
 
@@ -107,8 +105,6 @@ export default {
 
     this.windowResize();
     window.addEventListener('resize', this.windowResize);
-
-    new cache().callCache(this.$route.path, "");
   },
 
   beforeDestroy() {

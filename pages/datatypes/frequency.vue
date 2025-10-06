@@ -35,7 +35,7 @@ export default {
     <li>als Häufigkeitsangaben zu einzelnen Einträgen/Stichwörtern.
     </li>
   </ul>
-  <br />
+  <p><br /></p>
 
   <div>
     <!-- NOTE: in Filter werden die Ressourcen angegeben -->
@@ -45,7 +45,7 @@ export default {
       :filter="['KoMuX', 'PhrasKomp', 'PREPCON_ex', 'PREPCON_temp_art', 'PREPCON_temp_inv', 'PREPCON_kon', 'SpruchList', 'WVBF', 'Redeeinleiter', 'MAP']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
-          <NuxtImage src="/img/datatypes/frequency/frequencies_all.png" style="text-align: center;"
+          <NuxtImage src="/img/datatypes/frequency/frequencies_all.png"
             alt="Beispielgrafik 1" />
         </div>
       </compare-item>
