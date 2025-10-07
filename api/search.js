@@ -22,7 +22,7 @@ export default class search {
     this.count = null;
 
     this.searchFuzzy = searchFuzzy;
-    this.fuzziness = searchFuzzy ? "AUTO" : "0";
+    this.fuzziness = "0"; // searchFuzzy ? "AUTO" : "0";
     this.transpositions = searchFuzzy ? true : false;
     this.queryName = searchFuzzy ? "match" : "match_phrase";
 
@@ -88,13 +88,13 @@ export default class search {
 
       var q = {};
       q[this.queryName] = {
-        lbl: {
+        key: {
           query: this.query,
         },
       };
       if(this.searchFuzzy) {
-        q[this.queryName].lbl.fuzziness = this.fuzziness;
-        q[this.queryName].lbl.fuzzy_transpositions = this.transpositions;
+        q[this.queryName].key.fuzziness = this.fuzziness;
+        q[this.queryName].key.fuzzy_transpositions = this.transpositions;
       }
       request.query.bool.must.push(q);
 
@@ -114,9 +114,6 @@ export default class search {
           },
         };
 
-        console.log(this.fuzziness)
-        console.log(request.query)
-
       var requestOptions = {
         method: "POST",
         headers: myHeaders,
@@ -130,6 +127,7 @@ export default class search {
           requestOptions
         );
 
+        console.log(requestOptions);
         var result = await response.json();
         if (this.count != null)
           this.count[this.sources[i]] = result.hits.total.value;
@@ -175,7 +173,7 @@ export default class search {
       request.query.bool["must"] = [
         {
           match: {
-            lbl: this.query,
+            key: this.query,
           },
         },
       ];
@@ -183,7 +181,7 @@ export default class search {
       request.query.bool["must"] = [
         {
           match_phrase: {
-            lbl: this.query,
+            key: this.query,
           },
         },
       ];
@@ -218,6 +216,7 @@ export default class search {
         requestOptions
       );
 
+      console.log(requestOptions);
       var result = await response.json();
 
       if (this.count == null) this.count = result.hits.total.value;
