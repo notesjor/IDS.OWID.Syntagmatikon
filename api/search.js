@@ -71,6 +71,16 @@ export default class search {
                 },
               },
             ],
+            should: [
+              {
+                match: {
+                  lbl: {
+                    query: this.query,
+                    boost: 0,
+                  },
+                },
+              },
+            ],
           },
         },
         size: this.pageSize,
@@ -92,13 +102,13 @@ export default class search {
           query: this.query,
         },
       };
-      if(this.searchFuzzy) {
+      if (this.searchFuzzy) {
         q[this.queryName].key.fuzziness = this.fuzziness;
         q[this.queryName].key.fuzzy_transpositions = this.transpositions;
       }
       request.query.bool.must.push(q);
 
-      if (!this.query || this.query.trim() === "")
+      if (!this.query || this.query.trim() === "") {
         request.query = {
           bool: {
             must: [
@@ -113,6 +123,7 @@ export default class search {
             ],
           },
         };
+      }
 
       var requestOptions = {
         method: "POST",
@@ -127,7 +138,6 @@ export default class search {
           requestOptions
         );
 
-        console.log(requestOptions);
         var result = await response.json();
         if (this.count != null)
           this.count[this.sources[i]] = result.hits.total.value;
@@ -154,17 +164,27 @@ export default class search {
     var request = {
       track_total_hits: true,
       query: {
-        bool: {},
+        bool: {
+          should: [
+            {
+              match: {
+                lbl: {
+                  query: this.query,
+                  boost: 0,
+                },
+              },
+            },
+          ],
+        },
       },
       size: this.pageSize,
       from: this.offset,
       sort: [{ "key.keyword": "asc" }],
       highlight: {
+        pre_tags: ["<span class='highlight'>"],
+        post_tags: ["</span>"],
         fields: {
-          lbl: {
-            pre_tags: ["<span class='highlight'>"],
-            post_tags: ["</span>"],
-          },
+          lbl: {},
         },
       },
     };
@@ -194,7 +214,7 @@ export default class search {
     if (this.sources.length > 0) {
       request.query.bool.must.push({
         terms: {
-          dic: this.sources,
+          "dic.keyword": this.sources,
         },
       });
     }
@@ -216,7 +236,6 @@ export default class search {
         requestOptions
       );
 
-      console.log(requestOptions);
       var result = await response.json();
 
       if (this.count == null) this.count = result.hits.total.value;

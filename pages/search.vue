@@ -76,7 +76,7 @@ useHead({
         <v-tabs-window v-model="search_header" style="margin-top: -40px;">
           <v-tabs-window-item value="byAZ">
             <div v-for="x in results">
-              <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x.lbl"></span> <span
+              <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x.lbl" style="margin-left:5px"></span> <span
                   style="font-size: 0.8em; color:#999">(<span v-html="getResourcesShortName(x.dic)"></span>)</span></a>
             </div>
           </v-tabs-window-item>
@@ -87,8 +87,7 @@ useHead({
                 <span> ({{ searchApi.count[g[0].dic] }} Einträge)</span>
               </div>
               <div v-for="x in g">
-                <!--<span style="font-size: 0.8em; color:#999">{{ String(x.index).padStart(2, "0") }}. </span>-->
-                <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x.lbl" /></a>
+                <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x.lbl" style="margin-left:5px"/></a>
               </div>
             </div>
           </v-tabs-window-item>
@@ -273,7 +272,7 @@ export default {
         this.page = 1;
         var self = this;
 
-        self.searchApi.search(self.query, self.resourcesStore.resourceUsedForSearch, true, null, null, !self.search_exact).then(x => {
+        self.searchApi.search(self.query, self.resourcesStore.resourceUsedForSearch, self.search_header_switch, null, null, !self.search_exact).then(x => { 
           self.results = x;
         });
       } catch {
