@@ -10,27 +10,7 @@
         für die linguistische Forschung“ (57,6 Mrd. Wörter; Stand 09.01.2024).
         Den einzelnen Ressourcen liegen unterschiedliche nicht-annotierte und
         annotierte Teilkorpora zugrunde:</p>
-      <!-- <p>
-        <r rkey="KoMuX" /> : <a href="https://grammis.ids-mannheim.de/korpusgrammatik/6615">KoGra
-          Untersuchungskorpus</a> (Ausschnitt aus <a
-          href="https://www.ids-mannheim.de/digspra/kl/projekte/korpora/">DeReKo)</a>
-      </p>
-
-      <p>
-        <r rkey="Redeeinleiter" />: <a href="https://github.com/redewiedergabe/corpus">Redewiedergabe-Korpus</a>
-      </p>
-      <p>
-        <r rkey="PREPCON_ex" />: <a
-          href="https://www2.ids-mannheim.de/cosmas2/projekt/referenz/archive.html">Tagged-T</a> (DeReKo-Teilkorpus)
-      </p>
-
-      <p>
-        <r rkey="PREPCON_kon" />: Webkorpora <a
-          href="https://www.sketchengine.eu/estenten-spanish-corpus/">esTenTen18</a>;
-        <a href="https://www.sketchengine.eu/sktenten-slovak-corpus/">skTenTen
-          11</a>; Slowakisches Nationalkorpus <a href="https://korpus.sk/index_en.html">SNK</a>
-      </p> -->
-
+    
       <v-row>
         <v-col cols="4">
           <r rkey="KoMuX" />
