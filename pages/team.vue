@@ -1,5 +1,5 @@
 <template>
-    <h1>Beteiligte Projekte</h1>
+    <h1>Beteiligte Personen und Projekte</h1>
     <div>
         <h2>Entwicklungsteam für das <hi>Syntagmatikon</hi>
         </h2>
@@ -32,7 +32,7 @@
         <v-row class="d-flex align-center">
             <v-col><resources-list-compact :filter="['KoMuX', 'PhrasKomp']" /></v-col>
             <v-col cols="6">
-                <NuxtLink to="https://perso.ids-mannheim.de/seiten/hein.html">Dr. Katrin Hein</NuxtLink>
+                <NuxtLink to="https://perso.ids-mannheim.de/seiten/hein.html">Dr. Katrin Hein-Antonioli</NuxtLink>
             </v-col>
 
         </v-row>
@@ -71,7 +71,7 @@
 
         <h3>Projekte und Arbeitsbereiche</h3>
 
-        <p>Informationen zu beteiligten Projekten und Arbeitsbereichen finden Sie auf folgenden Webseiten:</p>
+        <p>Informationen zu den Projekten und Arbeitsbereichen, in am <hi>Syntagmatikon</hi> beteiligt sind, finden Sie auf folgenden Webseiten:</p>
         <!-- <p style="border-top: solid #C0C0C0 1px; padding-top: 10px"> -->
         <p style="padding-top: 10px">
             <NuxtLink to="https://www.ids-mannheim.de/lexik/syntagmatik-im-lexikon/">Projekt „Syntagmatik im

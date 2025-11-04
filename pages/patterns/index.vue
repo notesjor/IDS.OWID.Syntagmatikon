@@ -17,7 +17,7 @@ useHead({
 </script>
 
 <template>
-  <div>
+  <div style="max-width: var(--TXT-WIDTH); margin:auto">
     <h1>Musterzugänge</h1>
     <p>
       In dieser <hi>Syntagmatikon</hi>-Rubrik werden die Ressourcen entsprechend der Art ihrer Zugänge zu semiabstrakten und abstrakten Mustern bzw. Konstruktionen gebündelt. Muster
