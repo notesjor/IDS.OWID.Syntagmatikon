@@ -4,7 +4,7 @@
       <v-col cols="6" style="padding: 0px;">
         <div style="color:white; margin: 35px 0px 10px 0px; font-size: 12px;">
           <NuxtImg alt="Logo OWID" src="/owid-logo-dunkel.svg" style="max-height:15px; margin:-10px 0px 3px 0px"
-            float="left" />
+            float="left" to="https://www.owid.de/" />
           <div>
             <a style="color: #fff" :href="footerContact">Kontakt</a>
             &middot;
@@ -22,7 +22,7 @@
 
       <v-col style="min-width: 210px; max-width: 210px; padding: 0px;">
         <div style="text-align: right; margin:15px 10px 0px 0px;">
-          <a :href="rightIconHref" target="_blank">
+          <a href="https://www.ids-mannheim.de/" target="_blank">
             <NuxtImg alt="Logo IDS" src="/logo_right.svg"
               style="max-height:65px; min-height: 45px; min-width: 200px; margin-left: auto; " />
           </a>

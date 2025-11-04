@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import cache from '~/api/cache.js';
 
 export default {
     name: "ExpandMe",
@@ -18,17 +17,9 @@ export default {
             isVisible: false,
         }
     },
-
-    mounted() {
-    },
-
     methods: {
         toggleDiv() {
             this.isVisible = !this.isVisible;
-
-            if (this.isVisible) {
-                new cache().callCache(this.$route.path, "EXP");
-            }
         },
     }
 }

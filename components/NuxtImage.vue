@@ -5,10 +5,10 @@
       <div @click="isZoomed = true" style="cursor: zoom-in; margin-bottom: 0.85rem;">
         <slot></slot>
         <span v-if="to != null" style="margin-bottom: 1.85rem;">
-          <a :href="to" target="_blank" class="captionLink">
+            <a :href="to" target="_blank" class="captionLink" @click="closeZoomWithDelay">
             <v-icon>mdi-arrow-right-circle-outline</v-icon>
             zu diesem Beispiel
-          </a>
+            </a>
         </span>
         <span v-else style="margin-bottom: 1.85rem;"></span>
       </div>      
@@ -52,6 +52,14 @@ export default {
   data() {
     return {
       isZoomed: false
+    }
+  },
+  methods: {
+    closeZoomWithDelay() {
+      self = this;
+      setTimeout(() => {
+        self.isZoomed = false;
+      }, 500); 
     }
   }
 }

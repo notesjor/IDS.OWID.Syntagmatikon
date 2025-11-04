@@ -30,8 +30,7 @@ export default {
   name: "Cite",
   props: {
     data: {
-      type: Object,
-      required: true
+      type: String
     }
   },
   methods: {

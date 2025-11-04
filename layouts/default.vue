@@ -40,7 +40,6 @@ useHead({
 </script>
 
 <script>
-import cache from '~/api/cache.js';
 
 export default {
   name: "Index",
@@ -74,8 +73,6 @@ export default {
 
     this.windowResize();
     window.addEventListener('resize', this.windowResize);
-
-    new cache().callCache(this.$route.path, "");
   },
 
   methods: {

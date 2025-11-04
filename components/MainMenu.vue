@@ -96,19 +96,22 @@ export default {
     props: {
         useMobileView: {
             type: Boolean,
-            required: true
+            default: true,
         },
         onlyTopLevel: {
             type: Boolean,
-            required: false,
             default: false
         }
     },
     computed: {
         menuStyleMobileFix() {
-            if (this.useMobileView) {
-                return "margin-top: 75px;"
-            } else {
+            try {
+                if (this.useMobileView) {
+                    return "margin-top: 75px;"
+                } else {
+                    return ""
+                }
+            } catch (e) {
                 return ""
             }
         }

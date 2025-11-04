@@ -22,7 +22,7 @@ export default class search {
     this.count = null;
 
     this.searchFuzzy = searchFuzzy;
-    this.fuzziness = searchFuzzy ? "AUTO" : "0";
+    this.fuzziness = "0"; // searchFuzzy ? "AUTO" : "0";
     this.transpositions = searchFuzzy ? true : false;
     this.queryName = searchFuzzy ? "match" : "match_phrase";
 
@@ -71,6 +71,16 @@ export default class search {
                 },
               },
             ],
+            should: [
+              {
+                match: {
+                  lbl: {
+                    query: this.query,
+                    boost: 0,
+                  },
+                },
+              },
+            ],
           },
         },
         size: this.pageSize,
@@ -88,17 +98,17 @@ export default class search {
 
       var q = {};
       q[this.queryName] = {
-        lbl: {
+        key: {
           query: this.query,
         },
       };
-      if(this.searchFuzzy) {
-        q[this.queryName].lbl.fuzziness = this.fuzziness;
-        q[this.queryName].lbl.fuzzy_transpositions = this.transpositions;
+      if (this.searchFuzzy) {
+        q[this.queryName].key.fuzziness = this.fuzziness;
+        q[this.queryName].key.fuzzy_transpositions = this.transpositions;
       }
       request.query.bool.must.push(q);
 
-      if (!this.query || this.query.trim() === "")
+      if (!this.query || this.query.trim() === "") {
         request.query = {
           bool: {
             must: [
@@ -113,9 +123,7 @@ export default class search {
             ],
           },
         };
-
-        console.log(this.fuzziness)
-        console.log(request.query)
+      }
 
       var requestOptions = {
         method: "POST",
@@ -156,17 +164,27 @@ export default class search {
     var request = {
       track_total_hits: true,
       query: {
-        bool: {},
+        bool: {
+          should: [
+            {
+              match: {
+                lbl: {
+                  query: this.query,
+                  boost: 0,
+                },
+              },
+            },
+          ],
+        },
       },
       size: this.pageSize,
       from: this.offset,
       sort: [{ "key.keyword": "asc" }],
       highlight: {
+        pre_tags: ["<span class='highlight'>"],
+        post_tags: ["</span>"],
         fields: {
-          lbl: {
-            pre_tags: ["<span class='highlight'>"],
-            post_tags: ["</span>"],
-          },
+          lbl: {},
         },
       },
     };
@@ -175,7 +193,7 @@ export default class search {
       request.query.bool["must"] = [
         {
           match: {
-            lbl: this.query,
+            key: this.query,
           },
         },
       ];
@@ -183,7 +201,7 @@ export default class search {
       request.query.bool["must"] = [
         {
           match_phrase: {
-            lbl: this.query,
+            key: this.query,
           },
         },
       ];
@@ -196,7 +214,7 @@ export default class search {
     if (this.sources.length > 0) {
       request.query.bool.must.push({
         terms: {
-          dic: this.sources,
+          "dic.keyword": this.sources,
         },
       });
     }

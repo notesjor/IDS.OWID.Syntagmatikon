@@ -4,8 +4,8 @@
     style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); position: relative; left: -10px; width: calc(100% + 330px);">
     <v-row style="margin-top:-20px">
       <v-col cols="8">
-        <div style="background: #fff; border-radius: 5px; margin-left: 4px;">          
-            <v-tabs-window v-model="currentTab" direction="vertical"
+        <div style="background: #fff; border-radius: 5px; margin-left: 4px;">
+          <v-tabs-window v-model="currentTab" direction="vertical"
             style="border: 1px white solid; border-radius: 5px; padding: 10px; background-color: #fff; margin:0px -10px 0px -10px;">
             <h2 style="margin:0px 10px 5px 0px; background-color: white;" v-html="tabs[currentTab]"></h2>
             <div>
@@ -74,7 +74,7 @@ export default {
     return {
       currentTab: 0,
       tabs: [],
-      extraLarge: false,
+      extraLarge: true,
     }
   },
   mounted() {
@@ -98,7 +98,12 @@ export default {
   },
   methods: {
     checkWidth() {
-      this.extraLarge = window.innerWidth >= 1460;
+      try {
+        this.extraLarge = window.innerWidth >= 1460;
+      }
+      catch (e) {
+        this.extraLarge = false;
+      }
     }
   }
 }

@@ -37,6 +37,4 @@ export default {
     position: relative;
     padding: 0px 5px;
 }
-
-
 </style>
