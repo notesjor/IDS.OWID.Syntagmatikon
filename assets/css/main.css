@@ -411,3 +411,7 @@ ul.example li {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.comment-text {
+  font-size: 0.9em;
+}

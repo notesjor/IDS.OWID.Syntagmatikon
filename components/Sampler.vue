@@ -49,8 +49,9 @@
     <v-row style="margin-top:0px">
       <v-col>
         <div style="font-weight: 300; font-size: 0.8rem; color: #000; padding: 10px;">
-          Interaktive Beispiele. Sind mehrere Beispiele in einem Beleg, können diese durch Anklicken einzeln ausgewählt
-          werden.
+          <div>
+          Interaktive Beispiele. Wenn ein Beleg mehrere Beispiele enthält, können diese durch Anklicken einzeln ausgewählt
+          werden.</div>
         </div>
       </v-col>
     </v-row>

@@ -30,10 +30,10 @@ useHead({
       <li><strong>Muster BEVORSTEHEN: x-VERB-vor-y</strong>: <br /> {die Firma; der Klub; der Bausektor} {steht; befindet sich} vor {einer großen Herausforderung; schwierigen Zeiten; dem Kollaps}</li>
       <li><strong>wo-x-ist-ist-auch-y-Muster</strong>: <br /> {Licht – Schatten; Rauch – Feuer; Arbeit – Brot} </li>
     </ul>
-    <p>
+    <div class="comment-text">
       Jedes Kästchen linkt zu einer Hintergrundseite mit kurzen Erklärungen und Beispielen zu den
       unterschiedlichen Musterzugängen.
-    </p>
+    </div>
   </div>
   <div>
     <v-row>

@@ -22,10 +22,10 @@ export default {
         <NuxtLink to="/datatypes/frequency">Frequenzen</NuxtLink> ermittelt und <NuxtLink to="/datatypes/matches">
             Korpusbelege</NuxtLink> extrahiert wurden. Diese empirische Basis wurde im weiteren Arbeitsverlauf nach
         spezifischen
-        linguistischen Modellen manuell ausgewertet und <u>annotiert</u>.
+        linguistischen Modellen manuell ausgewertet und annotiert.
     </p>
     <p>Solche Datenbanken bieten automatische Suchfunktionen an, mit denen die sprachlichen Ausdrucksgruppen
-        und -muster (<u>Muster</u>) nach unterschiedlichen linguistischen Kriterien zusammengestellt werden
+        und -muster nach unterschiedlichen linguistischen Kriterien zusammengestellt werden
         können.</p>
     <resources-list :filter="['MAP', 'Verlaufsformen', 'Redeeinleiter']" :showDesc="false"></resources-list>
 </template>

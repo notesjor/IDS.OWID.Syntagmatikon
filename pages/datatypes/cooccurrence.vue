@@ -50,7 +50,8 @@ export default {
           zu jedem Cluster (statistische Zufallsauswahl).
         </p>
         <template #explain>
-          <NuxtImage src="/img/datatypes/cooccurrence/prepcon_temp_wordcloud.png" alt="Beispielgrafik 1">
+          <NuxtImage src="/img/datatypes/cooccurrence/prepcon_temp_wordcloud.png" alt="Beispielgrafik 1"
+          to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende">
             Wolkendarstellung von Kookkurrenzen im Eintrag „am Ende“
           </NuxtImage>
           <NuxtImage src="/img/datatypes/cooccurrence/prepcon_temp_kook.png" alt="Beispielgrafik 2"
@@ -78,7 +79,8 @@ export default {
           spezielles Korpus hinausgehende Verallgemeinerbarkeit spricht (universale Beziehungen).
         </p>
         <template #explain>
-          <NuxtImage src="/img/datatypes/cooccurrence/prepcon_kon_wolken.png" alt="Beispielgrafik 1">
+          <NuxtImage src="/img/datatypes/cooccurrence/prepcon_kon_wolken.png" alt="Beispielgrafik 1"
+          to="http://uwv.ids-mannheim.de/prepcon/modul3/gebrauch/nachBelieben.html">
             Wolkendarstellung von Kookkurrenzen in den Einträgen „nach Belieben“ und „a su gusto“
           </NuxtImage>
           <NuxtImage src="/img/datatypes/cooccurrence/prepcon_kon_kook_deutsch.png" alt="Beispielgrafik 2"

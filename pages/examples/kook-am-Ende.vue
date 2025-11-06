@@ -8,7 +8,7 @@ import { useLayoutStore } from '~/stores/layout';
 export default {
     mounted() {
         const props = useLayoutStore();
-        props.title = 'Kookkurrenzprofile: <em>am Ende</em>';
+        props.title = 'Kookkurrenzprofile: Das Umgebungsprofil von <em>am Ende</em>';
         props.parent = 'Fallbeispiele';
     },
 }
@@ -20,10 +20,10 @@ export default {
     </div>
     <v-carousel style="height:450px">
         <v-carousel-item>
-            <img src="/img/datatypes/kook/amEnde_kookzeilen.png" alt="Beispiel 1 für Kookkurrenzprofile" />
+            <NuxtImage src="/img/datatypes/kook/amEnde_kookzeilen.png" alt="Beispiel 1 für Kookkurrenzprofile" />
         </v-carousel-item>
         <v-carousel-item>
-            <img src="/img/datatypes/kook/Clusters_amEnde_1_1_KA_oFW_3.png" alt="Beispiel 2 für Kookkurrenzprofile" />
+            <NuxtImage src="/img/datatypes/kook/Clusters_amEnde_1_1_KA_oFW_3.png" alt="Beispiel 2 für Kookkurrenzprofile" />
         </v-carousel-item>
     </v-carousel>
 
@@ -39,12 +39,12 @@ export default {
         (<em>es ist Licht am Ende des Tunnels erkennbar</em>).
     </p>
     <p>Typische assoziierte Nomina bilden ab, dass <em>am Ende</em> in
-        bestimmten Wortgruppen temporal <m>Tages</m>; <m>Jahrhunderts</m>;
-        <m>Wochenendes</m>; lokal <m>Augustinerstraße</m>;
+        bestimmten Wortgruppen temporal (<m>Tages</m>; <m>Jahrhunderts</m>;
+        <m>Wochenendes</m>) lokal (<m>Augustinerstraße</m>;
         <m>Linkskurve</m>;
-        <m>Strafraumgrenze</m> oder bezogen auf
-        Ereignisse <m>Gottesdienstes</m>; <m>Gesprächs</m>;
-        <m>Weltkriegs</m> verwendet wird.
+        <m>Strafraumgrenze</m>) oder bezogen auf
+        Ereignisse (<m>Gottesdienstes</m>; <m>Gesprächs</m>;
+        <m>Weltkriegs</m>) verwendet wird.
     </p>
     <p>Partnerwörter wie <m>Applaus</m> oder <m>fehlte
             Quäntchen</m>

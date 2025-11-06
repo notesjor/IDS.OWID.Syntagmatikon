@@ -170,7 +170,8 @@ export default {
           Suchanfrage abrufen.
         </p>
         <template #explain>
-          <NuxtImage src="/img/datatypes/kwics/spruchList.png" alt="Beispielgrafik 1">
+          <NuxtImage src="/img/datatypes/kwics/spruchList.png" alt="Beispielgrafik 1"
+          to="http://uwv.ids-mannheim.de/spruchlist/?search=Ausnahmen bestätigen die Regel">
             KWIC-Ausschnitt für die weite Suchanfrage im Eintrag „Ausnahmen bestätigen die Regel“
           </NuxtImage>
         </template>

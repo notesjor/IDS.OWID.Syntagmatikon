@@ -1,15 +1,34 @@
 <template>
     <h1>Fallbeispiele</h1>
     <div class="nolink">
-        <p>In dieser <hi>Syntagmatikon</hi>-Rubrik werden kurze linguistische Fallbeispiele zu den unterschiedlichen Rubriken veröffentlicht.</p>
-        <p>Fallbeispiele zur Ansicht:</p>
-        <ul class="bulb">
-            <li>
-                <NuxtLink to="/examples/kook-am-Ende">
-                    Kookkurrenzprofile - Beispiel: <em>am Ende</em>
-                </NuxtLink>
-            </li>
-        </ul>
+        <p style="margin-bottom:40px">In dieser <hi>Syntagmatikon</hi>-Rubrik werden kurze linguistische Fallbeispiele
+            zu den unterschiedlichen
+            Rubriken veröffentlicht.</p>
+
+        <div>
+            Kookkurrenzprofile
+        </div>
+        <div>
+            <NuxtLink to="/examples/kook-am-Ende"><v-icon icon="mdi-lightbulb-on" />
+                <span style="margin-left: 8px; margin-right: 8px;">Das Umgebungsprofil von <em>am Ende</em></span>
+            </NuxtLink>
+        </div>
+
+        <div class="comment-text" style="margin-top:30px; margin-bottom: 10px;">In Arbeit:</div>
+        <div style="color:grey">
+         <div>
+            Frequenzen
+        </div>
+        <div>
+           <v-icon icon="mdi-lightbulb-on" />
+                <span style="margin-left: 8px; margin-right: 8px;">Häufigkeitsverteilungen beim Präposition-Nomen-Verbindungen</span>       
+        </div>
+         <div>
+           <v-icon icon="mdi-lightbulb-on" />
+                <span style="margin-left: 8px; margin-right: 8px;">Spruchfrequenzen und Suchstrategien</span>       
+        </div>
+        </div>
+
     </div>
 </template>
 
@@ -45,5 +64,9 @@ ul.bulb li::before {
     position: absolute;
     left: 0;
     top: 0;
+}
+
+a:hover .v-icon {
+    color: rgb(41, 98, 255) !important;
 }
 </style>

@@ -19,13 +19,13 @@ useHead({
 <template>
   <div style="max-width: var(--TXT-WIDTH); margin:auto">
     <h1>Ressourcentypen</h1>
-    <p>In dieser <hi>Syntagmatikon</hi>-Rubrik werden die Ressourcen nach folgenden Kriterien gebündelt: Menge an aufbereiteten Daten, Grad der Vollständigkeit sowie Verhältnis von automatischer Datenaufbereitung; manueller Bearbeitung und linguistisch-lexikografischer Beschreibung.</p>
+    <p>In dieser <hi>Syntagmatikon</hi>-Rubrik werden die Ressourcen nach folgenden Kriterien gebündelt: Menge an aufbereiteten Daten, Grad der Vollständigkeit sowie Verhältnis von automatischer Datenaufbereitung, manueller Bearbeitung und linguistisch-lexikografischer Beschreibung.</p>
     <p>Die aufgeführten Beispielressourcen sind jeweils die prototypischen Vertreter. Gleichzeitig gibt es zahlreiche
       Überschneidungen zwischen den Ressourcen: Eine Datenbank kann z.B. gleichzeitig als Inventar verstanden werden wie
       <r rkey='PREPCON_ex' /> oder
       <r rkey='KoMuX' />.
     </p>
-    <div>Jedes Kästchen führt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur
+    <div class="comment-text">Jedes Kästchen führt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur
       Charakteristik der
       einzelnen Ressourcen.</div>
   </div>

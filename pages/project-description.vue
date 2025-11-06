@@ -10,13 +10,13 @@
           <!-- <img src="/img/project-description/pd_01.png" alt="Beispiel 1 für das Syntagmatikon" /> -->
         </v-carousel-item>
         <v-carousel-item>
-          <img src="/img/project-description/pd_02.png" alt="Beispiel 2 für das Syntagmatikon" />
+          <NuxtImage src="/img/project-description/pd_02.png" alt="Beispiel 2 für das Syntagmatikon" />
         </v-carousel-item>
         <v-carousel-item>
-          <img src="/img/project-description/pd_03.png" alt="Beispiel 3 für das Syntagmatikon" />
+         <NuxtImage src="/img/project-description/pd_03.png" alt="Beispiel 3 für das Syntagmatikon" />
         </v-carousel-item>
         <v-carousel-item>
-          <img src="/img/project-description/pd_04.png" alt="Beispiel 4 für das Syntagmatikon" />
+          <NuxtImage src="/img/project-description/pd_04.png" alt="Beispiel 4 für das Syntagmatikon" />
         </v-carousel-item>
       </v-carousel>
     </v-col>
