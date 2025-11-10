@@ -99,12 +99,12 @@ export default {
           </p>
           <template #explain>
             <NuxtImage src="/img/patterns/dynamic/prepcon_temp_amXEnde.png" alt="Beispielgrafik 1"
-              to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/index.html">
+              to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/htmlfiles/fillerfiles/Filler_Am_o_am_Xx_Ende_1_Field1.html">
               Interne Füllergruppe mit lokalen Adjektiven im Eintrag „am Ende“: Muster [<em>am</em>
               ADJEKTIV<sub>LOKAL</sub> <em>Ende</em>]
             </NuxtImage>
             <NuxtImage src="/img/patterns/dynamic/prepcon_temp_amEndeX.png" alt="Beispielgrafik 2"
-              to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/htmlfiles/fillerfiles/Filler_Am_o_am_Xx_Ende_1_Field1_XML/Kwics_anderen_125.html">
+              to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Ende/htmlfiles/fillerfiles/Filler_am_o_Am_Ende_X_X_8_Field2_3.html">
               Füllergruppe im Nachfeld mit Zeit- oder Eventnomina im Eintrag „am Ende“: Muster [<em>am Ende</em>
               NOMEN<sub>TEMPORAL_GENITIV</sub>]
             </NuxtImage>

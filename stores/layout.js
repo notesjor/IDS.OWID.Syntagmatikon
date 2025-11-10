@@ -55,6 +55,22 @@ export const useLayoutStore = defineStore("layoutStore", {
           },
         ],
         Informationstypen: [
+             {
+            name: "Frequenzangaben",
+            url: "/datatypes/frequency",
+          },
+          {
+            name: "KWICs",
+            url: "/datatypes/kwic",
+          },
+          {
+            name: "Kookkurrenzprofile",
+            url: "/datatypes/cooccurrence",
+          },
+          {
+            name: "Lückenfüllertabellen",
+            url: "/datatypes/patterntable",
+          },
           {
             name: "Kategoriale Label",
             url: "/datatypes/category",
@@ -79,22 +95,7 @@ export const useLayoutStore = defineStore("layoutStore", {
             name: "Fremdsprachige Äquivalenzen",
             url: "/datatypes/equivalence",
           },
-          {
-            name: "Frequenzangaben",
-            url: "/datatypes/frequency",
-          },
-          {
-            name: "KWICs",
-            url: "/datatypes/kwic",
-          },
-          {
-            name: "Kookkurrenzprofile",
-            url: "/datatypes/cooccurrence",
-          },
-          {
-            name: "Lückenfüllertabellen",
-            url: "/datatypes/patterntable",
-          },
+       
         ],
         "Wort- und Ausdrucksarten": [
           {
