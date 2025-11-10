@@ -15,3 +15,8 @@ png
 *.bat
 *.zip
 *.pptx
+yarn.lock
+package-lock.json
+bun.lock
+*.lock
+pnpm-*
