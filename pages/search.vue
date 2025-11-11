@@ -52,7 +52,7 @@ useHead({
         </div>
 
         <!-- Genauigkeit der Suche -->
-
+      <!--
         <div style="margin: -75px 0px 50px 0px;">
           <span style="position: relative; top: 0px">Genauigkeit der Suche:</span>
           <span>
@@ -70,7 +70,7 @@ useHead({
             </v-btn>
           </span>
         </div>
-
+      -->
 
         <!-- SUCH-Ergebnis -->
         <v-tabs-window v-model="search_header" style="margin-top: -40px;">
@@ -131,12 +131,12 @@ useHead({
                 pro Seite und erlaubt so einen Überblick über die Treffermengen der jeweiligen Ressourcen. Die Anzeige
                 "alphabetisch" zeigt alle Treffer in alphabetischer Reihenfolge.
               </p>
-              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
+              <!--<p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
                 <b>Genauigkeit der Suche:</b>
                 Hier kann gesteuert werden, ob Treffer die eingegebene Zeichenfolge exakt
                 enthalten müssen oder eine gewisse Varianz erlaubt ist. <b>Achtung: Diese Funktion ist experimentell.
                   "Unscharf" kann zu unerwarteten Treffern führen.</b>
-              </p>
+              </p>-->
               <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
                 <b>Ressourcen:</b> Hier können einzelne Ressourcen direkt aktiviert
                 <v-icon>mdi-check-circle</v-icon> oder deaktiviert <v-icon>mdi-circle-outline</v-icon> werden. Treffer
@@ -256,7 +256,7 @@ export default {
       search_header_switch: true,
       search_header: "byGroup",
 
-      search_exact: false
+      search_exact: true
     }
   },
   mounted() {

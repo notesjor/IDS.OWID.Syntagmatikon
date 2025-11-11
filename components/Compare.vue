@@ -5,13 +5,11 @@
     <v-row style="margin-top:-20px">
       <v-col cols="8">
         <div style="background: #fff; border-radius: 5px; margin-left: 4px;">
-          <v-tabs-window v-model="currentTab" direction="vertical"
+          <v-window v-model="currentTab" direction="vertical"
             style="border: 1px white solid; border-radius: 5px; padding: 10px; background-color: #fff; margin:0px -10px 0px -10px;">
-            <h2 style="margin:0px 10px 5px 0px; background-color: white;" v-html="tabs[currentTab]"></h2>
-            <div>
+              <h2 style="margin:0px 10px 5px 0px; background-color: white;" v-html="tabs[currentTab]"></h2>
               <slot />
-            </div>
-          </v-tabs-window>
+          </v-window>
         </div>
       </v-col>
       <v-col cols="4">

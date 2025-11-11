@@ -1,5 +1,5 @@
 <template>
-    <v-tabs-window-item :value="value">
+    <v-window-item>
         <div class="relink">
             <slot></slot>
         </div>
@@ -14,7 +14,7 @@
                 <v-chip variant="outlined" density="compact">zur Ressource</v-chip>  
             </nuxt-link>
         </div>
-    </v-tabs-window-item>
+    </v-window-item>
 </template>
 
 <script>

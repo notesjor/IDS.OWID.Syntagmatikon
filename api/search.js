@@ -133,8 +133,7 @@ export default class search {
       };
       try {
         var response = await fetch(
-          //TODO: "https://syntagmatikon.ids-mannheim.de/api/",
-          "http://lexik02.ids-mannheim.de/syntagmatikon/api/",
+          "https://syntagmatikon.ids-mannheim.de/api/",          
           requestOptions
         );
 
@@ -231,8 +230,7 @@ export default class search {
 
     try {
       var response = await fetch(
-        //TODO: "https://syntagmatikon.ids-mannheim.de/api/",
-        "http://lexik02.ids-mannheim.de/syntagmatikon/api/",
+        "https://syntagmatikon.ids-mannheim.de/api/",
         requestOptions
       );
 
