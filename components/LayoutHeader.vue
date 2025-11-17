@@ -1,9 +1,4 @@
 <template>
-  <NuxtImg alt="Logo Syntagmatikon" src="/logo3.svg" v-if="useMobileView"
-    style="max-height:45px; position:fixed; top:15px; left: 5px; z-index: 1000;" />
-  <NuxtImg alt="Logo Syntagmatikon" src="/logo3.svg" v-else
-    style="max-height:65px; position:fixed; top:5px; left: 10px; z-index: 1000;" />
-
   <div class="d-print-none"
     style="z-index:100; max-height: 75px; min-height:75px; background-color: black; padding:7px 10px 5px 10px;">
     <v-row>
@@ -12,6 +7,7 @@
       <v-col v-else cols="8">
         <div style="color:white; margin-left:75px">
           <div class="text-2xl">
+            <NuxtImg alt="Logo Syntagmatikon" src="/logo3.svg" style="max-height:65px; position:absolute; top:5px; left: 10px;" />
             {{ appName }}
           </div>
           <div class="" style="text-align: left;">{{ appDescription }}</div>
@@ -19,6 +15,7 @@
       </v-col>
       <v-col v-if="useMobileView" cols="6">
         <div style="width: 100%; height: 100%; text-align: center; padding-top: 10px;">
+          <NuxtImg alt="Logo Syntagmatikon" src="/logo3.svg" style="max-height:45px; position:absolute; top:15px; left: 5px;" />
           <div class="text-2xl" style="color:white;">
             <div style="text-align: center;">{{ appName }}</div>
           </div>

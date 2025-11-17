@@ -88,7 +88,7 @@ export default defineNuxtConfig({
 
   app: {
     //baseURL: "/",
-    baseURL: "/syntagmatikon_2025-09/",
+    baseURL: "/syntagmatikon_2025-11/",
     head: {
       htmlAttrs: {
         lang: 'de',
