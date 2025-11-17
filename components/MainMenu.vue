@@ -136,7 +136,6 @@ export default {
         logoStyle() {
             try {
                 const alpha = Math.min(Math.max(this.scrollY / 75, 0), 1);
-                console.log("Alpha:", alpha);
 
                 if (this.useMobileView) {
                     return `max-height:45px; position:relative; top:5px; left: 5px; opacity:${alpha};`

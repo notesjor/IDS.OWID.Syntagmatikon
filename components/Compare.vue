@@ -7,8 +7,10 @@
         <div style="background: #fff; border-radius: 5px; margin-left: 4px;">
           <v-window v-model="currentTab" direction="vertical"
             style="border: 1px white solid; border-radius: 5px; padding: 10px; background-color: #fff; margin:0px -10px 0px -10px;">
-              <h2 style="margin:0px 10px 5px 0px; background-color: white;" v-html="tabs[currentTab]"></h2>
+            <h2 style="margin:0px 10px 5px 0px; background-color: white;" v-html="tabs[currentTab]"></h2>
+            <div>
               <slot />
+            </div>
           </v-window>
         </div>
       </v-col>
@@ -44,10 +46,12 @@
 
     <v-row style="margin: -10px 0px 0px 0px;">
       <v-col>
-        <v-tabs-window v-model="currentTab"
+        <v-window v-model="currentTab"
           style="border: 1px white solid; border-radius: 5px; padding: 10px; background-color: white; margin:0px -10px 0px -10px">
-          <slot />
-        </v-tabs-window>
+          <div>
+            <slot />
+          </div>
+        </v-window>
       </v-col>
     </v-row>
   </div>
@@ -76,25 +80,29 @@ export default {
     }
   },
   mounted() {
-    this.resourcesStore = useResourcesStore();
-
-    var tabs = [];
-    tabs.push("Übersicht");
-    if (this.resourcesStore == null)
-      return tabs;
-
-    for (let i = 0; i < this.filter.length; i++) {
-      tabs.push(this.resourcesStore.getResource(this.filter[i]).nameShort);
-    }
-    this.tabs = tabs;
-
     this.checkWidth();
     window.addEventListener('resize', this.checkWidth);
+    this.myUpdate();    
+  },
+  updated() {
+    this.checkWidth();
   },
   beforeUnmount() {
     window.removeEventListener('resize', this.checkWidth);
   },
   methods: {
+    myUpdate() {
+      this.resourcesStore = useResourcesStore();
+      var tabs = [];      
+      tabs.push("Übersicht");
+      if (this.resourcesStore == null)
+        return tabs;
+
+      for (let i = 0; i < this.filter.length; i++) {
+        tabs.push(this.resourcesStore.getResource(this.filter[i]).nameShort);
+      }
+      this.tabs = tabs;
+    },
     checkWidth() {
       try {
         this.extraLarge = window.innerWidth >= 1460;

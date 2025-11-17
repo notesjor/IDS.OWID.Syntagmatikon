@@ -35,9 +35,8 @@ export default {
     <li>als Häufigkeitsangaben zu einzelnen Einträgen/Stichwörtern.
     </li>
   </ul>
-  <p><br /></p>
 
-  <div>
+  <div style="margin-top:1rem">
     <!-- NOTE: in Filter werden die Ressourcen angegeben -->
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->

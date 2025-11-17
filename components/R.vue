@@ -20,7 +20,7 @@ export default {
   },
   mounted() {
     var resourcesStore = useResourcesStore();
-    this.item = resourcesStore.getResource(this.rkey);
+    this.item = resourcesStore?.getResource(this.rkey);
   }
 }
 </script>
