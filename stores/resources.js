@@ -33,29 +33,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_parts: ["Nomina", "Präpositionen"],
         },
         {
-          key: "PREPCON_temp",
-          nameShort: "PREPCON<sup>temporal</sup>",
-          nameLong:
-            "PREPCON<sup>temporal</sup> - Kurzartikel und Inventar zu temporalen Präposition-Nomen-Verbindungen im Kontext",
-          description: "",
-          img: "./img/sources/prepcon_temp.png",
-          url: "http://uwv.ids-mannheim.de/prepcon/modul2",
-          tags: [],
-          quest: "",
-          search_type: "Inventare und Sammlungen",
-          search_functions: [
-            "Frequenzen",
-            "KWICs",
-            "Kookkurrenzprofile",
-            "Lückenfüllertabellen",
-            "Komponenten",
-            "Felder",
-            "Belege",
-          ],
-          search_patterns: ["dynamische Erschließung"],
-          search_parts: ["Nomina", "Präpositionen"],
-        }, 
-        {
           key: "PREPCON_temp_inv",
           nameShort:
             'PREPCON<sup>temporal</sup> <span style="font-weight:300">Inventar</span>',
