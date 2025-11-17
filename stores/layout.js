@@ -24,11 +24,11 @@ export const useLayoutStore = defineStore("layoutStore", {
       },
 
       validate: {
-        Ressourcentypen: "/resources/",
-        Informationstypen: "/datatypes/",
-        "Wort- und Ausdrucksarten": "/pos/",
-        Musterzugänge: "/patterns/",
-        Fallbeispiele: "/examples/",
+        Ressourcentypen: "/resources",
+        Informationstypen: "/datatypes",
+        "Wort- und Ausdrucksarten": "/pos",
+        Musterzugänge: "/patterns",
+        Fallbeispiele: "/examples",
       },
 
       paths: {
