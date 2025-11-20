@@ -113,7 +113,7 @@ export default {
 
   methods: {
     windowResize() {
-      this.useMobileView = this.$vuetify.display.width < 960;
+      this.useMobileView = this.$vuetify.display.width < 1050;
     },
     goToParentPage() {
       let path = this.$route.path.split("/");
