@@ -28,7 +28,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           tags: [],
           quest: "http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?{q}",
           search_type: ["Explorative Datenbanken"],
-          search_functions: ["Frequenzen", "KWICs", "Belege"],
+          search_functions: ["Frequenzen", "KWICs"],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Präpositionen"],
         },
