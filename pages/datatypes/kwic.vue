@@ -35,7 +35,7 @@ export default {
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
     <compare
-      :filter="['PREPCON_ex', 'PREPCON_temp_art', 'PREPCON_temp_inv', 'PREPCON_kon', 'SpruchList', 'SPRW', 'WVBF']">
+      :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'SpruchList', 'SPRW', 'WVBF']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/datatypes/kwics/kwics_all.png" style="text-align: center;" alt="Beispielgrafik 1" />
@@ -60,18 +60,23 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="2" rkey="PREPCON_temp_art">
+      <compare-item value="2" rkey="PREPCON_temp">
+        <p>KWICs sind in beiden Unter-Rubriken von <r rkey="PREPCON_temp" /> verfügbar.</p>
         <p>
-          In
-          <r rkey="PREPCON_temp_art" /> sind KWICs in folgenden Angaben abrufbar:
+          In der Rubrik <b>Kurzartikel</b> sind KWICs in folgenden Angaben abrufbar:
         </p>
         <ul>
           <li>in ‚Häufigkeit im Korpus‘ (für die jeweilige Suchanfragen)</li>
           <li>in ‚Typische Partnerwörter‘ (für die jeweiligen Kookkurrenzcluster)</li>
           <li>in ‚Muster‘ (für die jeweiligen Lückenfüllertabellen)</li>
         </ul>
+         <p>
+          In der Rubrik <b>Inventar</b> sind die Einträge mit den KWICs von
+          <r rkey="PREPCON_ex" /> verlinkt.
+        </p>
 
         <template #explain>
+          <p>Rubrik <b>Kurzartikel</b> </p>
           <NuxtImage src="/img/datatypes/kwics/prepcon_temp_ohneUnterlass.png" alt="Beispielgrafik 1"
             to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Unterlass/htmlfiles/fillerfiles/Kwics_ohne_1.html">
             Ausschnitt aus KWIC-Anzeige (Kleinschreibung) im Eintrag „ohne Unterlass“ (Rubrik „Kurzartikel“:
@@ -87,17 +92,8 @@ export default {
             Ausschnitt aus KWIC-Anzeige des Bigram-Füllers <em>an … der</em> (Muster: <em>ohne Unterlass</em> X) im
             Eintrag „ohne Unterlass“ (Rubrik „Kurzartikel“: ‚Muster‘)
           </NuxtImage>
-        </template>
-      </compare-item>
 
-      <compare-item value="3" rkey="PREPCON_temp_inv">
-        <p>
-          In
-          <r rkey="PREPCON_temp_inv" /> linken die Einträge auf die KWICs von
-          <r rkey="PREPCON_ex" />.
-        </p>
-
-        <template #explain>
+        <p>Rubrik <b>Inventar</b> </p>
           <NuxtImage src="/img/datatypes/kwics/prepcon_temp_amHeiligabend.png" alt="Beispielgrafik 4"
             to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=Heiligabend">
             Ausschnitt

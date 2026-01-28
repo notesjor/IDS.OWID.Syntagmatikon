@@ -16,7 +16,7 @@ export default {
 
 <template>
     <div>Beispiel aus
-        <r rkey="PREPCON_temp_art" />
+        <r rkey="PREPCON_temp" /> (Kurzartikel)
     </div>
     <v-carousel style="height:450px">
         <v-carousel-item>

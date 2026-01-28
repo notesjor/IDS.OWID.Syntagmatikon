@@ -22,7 +22,7 @@ export default {
       Sortierungen
       auf der Basis von vorgegebenen Kategorien; zum anderen durch eigene analytische Gruppierungen.</p>
     <div>
-      <compare :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp_art', 'Redeeinleiter']">
+      <compare :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp', 'Redeeinleiter']">
         <compare-item value="0">
           <div style="text-align: center; width:100%">
             <NuxtImage src="/img/patterns/dynamic/all_dynamic.png" style="text-align: center;" />
@@ -83,9 +83,9 @@ export default {
           </template>
         </compare-item>
 
-        <compare-item value="3" rkey="PREPCON_temp_art">
-          <p>In
-            <r rkey="PREPCON_temp_art" /> lassen sich anhand der hinterlegten automatisch erstellen Lückenfüllertabellen
+        <compare-item value="3" rkey="PREPCON_temp">
+          <p>In der Rubrik <b>Kurzartikel</b> von
+            <r rkey="PREPCON_temp" /> lassen sich anhand der hinterlegten automatisch erstellen Lückenfüllertabellen
             Muster
             erschließen und zwar sowohl im Vor- und Nachfeld einer Präposition-Nomen-Verbindungen als auch intern
             zwischen

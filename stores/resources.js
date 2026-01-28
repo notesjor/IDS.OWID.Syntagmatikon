@@ -5,7 +5,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
     return {
       valuesSelected: {},
       resourcesDeselected: [],
-      // 'PREPCON_ex', 'PREPCON_temp_inv', 'PREPCON_temp_art', 'PREPCON_kon', 'Verlaufsformen',
+      // 'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'Verlaufsformen',
       info: [
         {
           key: "PREPCON",

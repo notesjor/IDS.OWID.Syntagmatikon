@@ -43,7 +43,7 @@ export default {
       <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
       <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
       <compare
-        :filter="['KoMuX', 'PhrasKomp', 'PREPCON_ex', 'PREPCON_temp_art', 'PREPCON_temp_inv', 'PREPCON_kon', 'SpruchList', 'WVBF', 'Redeeinleiter', 'MAP']">
+        :filter="['KoMuX', 'PhrasKomp', 'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'SpruchList', 'WVBF', 'Redeeinleiter', 'MAP']">
         <compare-item value="0">
           <div style="text-align: center; width:100%">
             <NuxtImage src="/img/datatypes/frequency/frequencies_all.png" alt="Beispielgrafik 1" />
@@ -128,18 +128,25 @@ export default {
           </template>
         </compare-item>
 
-        <compare-item value="4" rkey="PREPCON_temp_art">
+        <compare-item value="4" rkey="PREPCON_temp">
+          <p>Frequenzangaben sind in beiden Unter-Rubriken von <r rkey="PREPCON_temp" /> verfügbar.</p>
           <p>
-            In
-            <r rkey="PREPCON_temp_art" /> sind jeweils drei Häufigkeitsangaben für eine Präposition-Nomen-Verbindung
+            In der Rubrik <b>Kurzartikel</b>
+           sind jeweils drei Häufigkeitsangaben für eine Präposition-Nomen-Verbindung
             sowie
             die
             ihnen zugrunde liegenden Suchanfragen (Groß- und Kleinschreibung getrennt; alle Schreibungen) abrufbar. Für
             die
             Groß- und die Kleinscheibung ist jeweils eine KWIC-Zufallsauswahl hinterlegt.
           </p>
+          <p>
+            In der Rubrik <b>Inventar</b> sind Listen mit Häufigkeitsangaben abrufbar. Diese wurden aus
+            <r rkey="PREPCON_ex" /> übernommen und mit den Einträgen dort verlinkt.
+          </p>
 
           <template #explain>
+            <p>Rubrik <b>Kurzartikel</b> </p>
+
             <NuxtImage src="/img/datatypes/frequency/prept_part_01.png" alt="Beispielgrafik 1"
               to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ueber_Nacht/index.html">
               Frequenzangaben zu Suchanfragen im Eintrag „über Nacht“:
@@ -148,17 +155,7 @@ export default {
               to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ueber_Nacht/index.html">
               Durch Klick auf die Frequenzen wird die dazugehörige Suchanfrage und Korpusinformation gezeigt.
             </NuxtImage>
-          </template>
-        </compare-item>
-
-        <compare-item value="5" rkey="PREPCON_temp_inv">
-          <p>
-            In
-            <r rkey="PREPCON_temp_inv" /> sind Listen mit Häufigkeitsangaben abrufbar. Diese wurden aus
-            <r rkey="PREPCON_ex" /> übernommen und mit den Einträgen dort verlinkt.
-          </p>
-
-          <template #explain>
+        <p>Rubrik <b>Inventar</b> </p>
             <NuxtImage src="/img/datatypes/frequency/prept_part_03.png" alt="Beispielgrafik 1"
               to="http://uwv.ids-mannheim.de/prepcon/modul2/inventar/inventar_feier.html">
               Ausschnitt
@@ -174,7 +171,7 @@ export default {
           </template>
         </compare-item>
 
-        <compare-item value="6" rkey="PREPCON_kon"
+        <compare-item value="5" rkey="PREPCON_kon"
           description="Kontrastive Darstellung von Präposition-Nomen-Verbindungen im Kontext - Rubrik: „Quantitative Angaben“">
           <p>
             In
@@ -201,7 +198,7 @@ export default {
           </template>
         </compare-item>
 
-        <compare-item value="7" rkey="SpruchList" description="Frequenzangaben in SpruchList">
+        <compare-item value="6" rkey="SpruchList" description="Frequenzangaben in SpruchList">
 
           <p>
             Die Frequenzangaben in
@@ -221,7 +218,7 @@ export default {
           </template>
         </compare-item>
 
-        <compare-item value="8" rkey="WVBF" description="Frequenzangaben im Wortverbindungsfeld GRUND">
+        <compare-item value="7" rkey="WVBF" description="Frequenzangaben im Wortverbindungsfeld GRUND">
 
           <p>
             In
@@ -244,7 +241,7 @@ export default {
           </template>
         </compare-item>
 
-        <compare-item value="9" rkey="Redeeinleiter"
+        <compare-item value="8" rkey="Redeeinleiter"
           description="Frequenzangaben im 'Kleinen Wörterbuch der Redeeinleiter'">
 
           <p>
@@ -266,7 +263,7 @@ export default {
           </template>
         </compare-item>
 
-        <compare-item value="10" rkey="MAP" description="">
+        <compare-item value="9" rkey="MAP" description="">
 
           <p>
             In
