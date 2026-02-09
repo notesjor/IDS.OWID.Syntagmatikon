@@ -50,6 +50,7 @@ const route = useRoute()
 </template>
 
 <script>
+import { useTitle } from '@vueuse/core'
 import { useLayoutStore } from '~/stores/layout';
 
 export default {
@@ -91,9 +92,6 @@ export default {
   },
 
   mounted() {
-    var props = useLayoutStore();
-    this.title = props.title;
-
     this.layoutVars = useLayoutStore();
 
     this.appName = this.$config.public.appName;
@@ -134,7 +132,7 @@ export default {
       }
     },
     title() {
-      return this.layoutVars?.title;
+      return useTitle().value?.replace('Syntagmatikon - ', '')
     },
     parent() {
       return this.layoutVars?.parent;

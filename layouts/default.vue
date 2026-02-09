@@ -71,14 +71,10 @@ export default {
       footerContact: null,
       footerImpressum: null,
       footerDsgvo: null,
-
-      title: null,
     }
   },
 
   mounted() {
-    this.title = useTitle().value.replace('Syntagmatikon - ', '');
-
     this.appName = this.$config.public.appName;
     this.appDescription = this.$config.public.appDescription;
 
@@ -99,6 +95,10 @@ export default {
     }
   },
 
-
+  computed: {
+    title() {
+      return useTitle().value?.replace('Syntagmatikon - ', '')
+    },
+  }
 }
 </script>

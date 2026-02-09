@@ -27,7 +27,7 @@
         <v-row v-show="title != null">
           <v-col>
             <Cite :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle" :cauthor="route.meta.cauthor"
-              :cdate="route.meta.cdate"  style="max-width: var(--TXT-WIDTH); margin-left: auto; margin-right: auto;"/>
+              :cdate="route.meta.cdate" style="max-width: var(--TXT-WIDTH); margin-left: auto; margin-right: auto;"/>
           </v-col>
         </v-row>
       </div>
@@ -66,15 +66,11 @@ export default {
 
       footerContact: null,
       footerImpressum: null,
-      footerDsgvo: null,
-
-      title: null,
+      footerDsgvo: null
     }
   },
 
   mounted() {
-    this.title = useTitle().value.replace('Syntagmatikon - ', '');
-
     this.appName = this.$config.public.appName;
     this.appDescription = this.$config.public.appDescription;
 
@@ -100,6 +96,9 @@ export default {
   },
 
   computed: {
+    title() {
+      return useTitle().value?.replace('Syntagmatikon - ', '')
+    },
     menuStyleMobileFix() {
       if (this.useMobileView) {
         return "margin-top: 75px;"
