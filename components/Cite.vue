@@ -2,40 +2,55 @@
   <v-row class="citeRow">
     <div class="citeHead">Zitationshilfe</div>
     <div class="citeText">
-      <span class="citeClip">
-        {{ data }}
-      </span>
-      <v-tooltip
-        location="top"
-        text="In die Zwischenablage kopieren"
-        >
-      <template v-slot:activator="{ props }">
-        <v-btn
-        v-bind="props"
-        class="citeButton"
-        variant="outlined"
-        icon="mdi-content-copy"
-        density="comfortable"
-        style="margin: 0px 0px 0px 10px; font-size: 0.75rem;"        
-        @click="copyToClipboard"
-      />
-      </template>
+      <span class="citeClip" v-html="text" />
+      <v-tooltip location="top" text="In die Zwischenablage kopieren">
+        <template v-slot:activator="{ props }">
+          <v-btn v-bind="props" class="citeButton" variant="outlined" icon="mdi-content-copy" density="comfortable"
+            style="margin: 0px 0px 0px 10px; font-size: 0.75rem;" @click="copyToClipboard" />
+        </template>
       </v-tooltip>
     </div>
   </v-row>
 </template>
 
 <script>
+import { useRoute } from 'vue-router';
+
 export default {
   name: "Cite",
   props: {
-    data: {
-      type: String
+    ctitle: {
+      type: String,
+      default: null
+    },
+    cauthor: {
+      type: String,
+      default: "Kathrin Steyer und Annelen Brunner"
+    },
+    cdate: {
+      type: String,
+      default: "2026"
     }
+  },
+  data() {
+    return {
+      url: "",
+    }
+  },
+  mounted() {
+    this.url = window.location.pathname;
   },
   methods: {
     copyToClipboard() {
       navigator.clipboard.writeText(this.data);
+    }
+  },
+  computed: {
+    text: function () {
+      return `"${this.ctitle}". In: ${this.cauthor}. ${this.cdate}. Syntagmatikon. Mannheim: Leibniz-Institut für Deutsche Sprache. https://syntagmatikon.ids-mannheim.de${this.url}, abgerufen am ${new Date().toLocaleDateString(
+        "de-DE",
+        { year: "numeric", month: "2-digit", day: "2-digit" }
+      )}`;
     }
   }
 }

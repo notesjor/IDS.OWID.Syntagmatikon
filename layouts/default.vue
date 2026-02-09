@@ -1,6 +1,6 @@
 <template>
   <v-app>
-   <LayoutHeader></LayoutHeader>
+    <LayoutHeader></LayoutHeader>
 
     <main-menu :useMobileView="useMobileView" />
 
@@ -12,6 +12,12 @@
               <slot />
             </v-col>
           </v-row>
+          <v-row>
+            <v-col>
+              <Cite :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle" :cauthor="route.meta.cauthor"
+                :cdate="route.meta.cdate" />
+            </v-col>
+          </v-row>
         </div>
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
@@ -21,16 +27,23 @@
               <slot />
             </v-col>
           </v-row>
+          <v-row>
+            <v-col>
+              <Cite :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle" :cauthor="route.meta.cauthor"
+                :cdate="route.meta.cdate" />
+            </v-col>
+          </v-row>
         </div>
       </div>
     </div>
 
-    <LayoutFooter></LayoutFooter>   
-    
-  </v-app>  
+    <LayoutFooter></LayoutFooter>
+
+  </v-app>
 </template>
 
 <script setup>
+const route = useRoute()
 useHead({
   htmlAttrs: {
     lang: 'de',
@@ -40,6 +53,7 @@ useHead({
 </script>
 
 <script>
+import { useRoute } from "vue-router";
 
 export default {
   name: "Index",
@@ -56,11 +70,17 @@ export default {
 
       footerContact: null,
       footerImpressum: null,
-      footerDsgvo: null
+      footerDsgvo: null,
+
+      title: null,
     }
   },
 
   mounted() {
+    // page title by route
+    const route = useRoute();
+    this.title = route.meta.title;
+
     this.appName = this.$config.public.appName;
     this.appDescription = this.$config.public.appDescription;
 

@@ -1,3 +1,6 @@
+<script setup>
+  const route = useRoute()
+</script>
 <template>
   <v-app>
     <LayoutHeader></LayoutHeader>
@@ -23,7 +26,7 @@
               <slot />
             </v-col>
           </v-row>
-          <Cite :data="cite" />
+          <Cite :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle" :cauthor="route.meta.cauthor" :cdate="route.meta.cdate" />
         </div>
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
@@ -33,7 +36,7 @@
               <slot />
             </v-col>
           </v-row>
-          <Cite :data="cite" />
+          <Cite :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle" :cauthor="route.meta.cauthor" :cdate="route.meta.cdate" />
         </div>
       </div>
     </div>  
@@ -46,7 +49,6 @@
 
 <script>
 import { useLayoutStore } from '~/stores/layout';
-import citeApi from '~/api/cite.js';
 
 export default {
   name: "Index",
@@ -66,7 +68,7 @@ export default {
       footerDsgvo: null,
 
       layoutVars: null,
-      cite: null
+      title: null,
     }
   },
 
@@ -87,9 +89,8 @@ export default {
   },
 
   mounted() {
-    var cite = new citeApi();
     var props = useLayoutStore();
-    this.cite = cite.getCite(props.title, this.$route.path);
+    this.title = props.title;
 
     this.layoutVars = useLayoutStore();
 
