@@ -63,7 +63,7 @@ export default {
           In
           <r rkey="PREPCON_kon" /> werden die Präpositionen und
           Nomen in
-          den drei Kontrastsprachen ausgezeichnet. Für die deutschen PNs erfolgt die Verlinkung zu <NuxtLink
+          den drei Kontrastsprachen ausgezeichnet. Für die deutschen Präposition-Nomen-Verbindungen erfolgt die Verlinkung zu <NuxtLink
             to="https://www.owid.de/docs/elex/start.jsp">elexiko</NuxtLink>, für die spanischen zum Online-Wörterbuch
           <NuxtLink to="https://dle.rae.es">Diccionario de la lengua española</NuxtLink>; für die slowakischen zum
           Wörterbuchportal <NuxtLink to="https://slovnik.juls.savba.sk">Slovníkový portál Jazykovedného ústavu Ľ.

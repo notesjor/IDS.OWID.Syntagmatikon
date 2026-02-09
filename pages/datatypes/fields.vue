@@ -117,7 +117,7 @@ export default {
           <r rkey="PREPCON_kon" /> werden Satellitenfelder im
           Sprachkontrast (Deutsch-Spanisch;
           Deutsch-Slowakisch) dargestellt. Hierbei handelt es sich um qualitativ zusammengefasste Gruppen von
-          statistisch ermitteltem Kookkurrenzpartnern einer PN, die bestimmten Gebrauchsaspekten zugeordnet
+          statistisch ermitteltem Kookkurrenzpartnern einer Präposition-Nomen-Verbindung, die bestimmten Gebrauchsaspekten zugeordnet
           wurden. Die Felder sind in der Regel nach Wortarten unterteilt. Es gibt aber auch Fälle, in denen keine
           Wortartenunterscheidung vorgenommen wurde. Es werden zwei Formate angezeigt: als Partnerwort-Wolke und
           als Kookkurrenzliste.

@@ -177,8 +177,8 @@ export default {
             In
             <r rkey="PREPCON_kon" /> lassen sich die
             Frequenzangaben
-            sowohl für die deutsche PN als auch
-            für die Sprachenpaare deutsch – spanisch und deutsch-slowakisch abrufen. Da die Frequenzerhebungen in den
+            sowohl für die deutsche Präposition-Nomen-Verbindung als auch
+            für die Sprachenpaare deutsch - spanisch und deutsch - slowakisch abrufen. Da die Frequenzerhebungen in den
             Kontrastsprachen in anderen Korpora (z.B. Webkorpora in Sketch Engine) durchgeführt wurden, sind die
             Frequenzen nicht aufeinander abbildbar, sondern nur in der jeweiligen Sprache zu interpretieren.
           </p>
@@ -232,11 +232,11 @@ export default {
           <template #explain>
             <NuxtImage src="/img/datatypes/frequency/wvg_part_01.png" alt="Beispielgrafik 1"
               to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/mit_Grund_ID1364235183644.html">
-              Frequenzangaben zum PN-Knoten "mit Grund" und zugrunde liegende Suchanfragen
+              Frequenzangaben zum Knoten "mit Grund" und zugrunde liegende Suchanfragen
             </NuxtImage>
             <NuxtImage src="/img/datatypes/frequency/wvg_part_02.png" alt="Beispielgrafik 2"
               to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/im_Grunde_ID1364235183656.html">
-              Frequenzangaben zum PN-Knoten "im Grunde" und zugrunde liegende Suchanfragen
+              Frequenzangaben zum Knoten "im Grunde" und zugrunde liegende Suchanfragen
             </NuxtImage>
           </template>
         </compare-item>

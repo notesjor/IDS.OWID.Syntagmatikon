@@ -44,10 +44,9 @@ export default {
           TAGESZEITEN ALS ZWEITGLIED).
         </p>
         <template #explain>
-          <NuxtImage src="/img/datatypes/categories/prepcon_temp_inv_feiertage.png" alt="Sortierung temporaler PNs"
-            to="http://uwv.ids-mannheim.de/prepcon/modul2/inventar/inventar_feier.html"> Sortierung temporaler PNs nach
-            der NOMEN-Kategorie FEIERTAGE in der Teilressource „Inventar temporaler
-            Präposition-Nomen-Verbindungen“
+          <NuxtImage src="/img/datatypes/categories/prepcon_temp_inv_feiertage.png" alt="Sortierung temporaler Präposition-Nomen-Verbindungen"
+            to="http://uwv.ids-mannheim.de/prepcon/modul2/inventar/inventar_feier.html"> Sortierung temporaler Präposition-Nomen-Verbindungen nach
+            der NOMEN-Kategorie FEIERTAGE (Rubrik „Inventar“)
           </NuxtImage>
         </template>
 
