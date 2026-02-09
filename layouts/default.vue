@@ -12,7 +12,7 @@
               <slot />
             </v-col>
           </v-row>
-          <v-row>
+          <v-row v-show="title != null">
             <v-col>
               <Cite :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle" :cauthor="route.meta.cauthor"
                 :cdate="route.meta.cdate" />
@@ -27,7 +27,7 @@
               <slot />
             </v-col>
           </v-row>
-          <v-row>
+          <v-row v-show="title != null">
             <v-col>
               <Cite :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle" :cauthor="route.meta.cauthor"
                 :cdate="route.meta.cdate" />
@@ -53,7 +53,7 @@ useHead({
 </script>
 
 <script>
-import { useRoute } from "vue-router";
+import { useTitle } from '@vueuse/core'
 
 export default {
   name: "Index",
@@ -77,9 +77,7 @@ export default {
   },
 
   mounted() {
-    // page title by route
-    const route = useRoute();
-    this.title = route.meta.title;
+    this.title = useTitle().value.replace('Syntagmatikon - ', '');
 
     this.appName = this.$config.public.appName;
     this.appDescription = this.$config.public.appDescription;

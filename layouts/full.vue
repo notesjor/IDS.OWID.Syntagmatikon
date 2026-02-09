@@ -11,11 +11,23 @@
             <slot />
           </v-col>
         </v-row>
+        <v-row v-show="title != null">
+          <v-col>
+            <Cite :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle" :cauthor="route.meta.cauthor"
+              :cdate="route.meta.cdate"  style="max-width: var(--TXT-WIDTH); margin-left: auto; margin-right: auto;"/>
+          </v-col>
+        </v-row>
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
         <v-row>
           <v-col>
             <slot />
+          </v-col>
+        </v-row>
+        <v-row v-show="title != null">
+          <v-col>
+            <Cite :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle" :cauthor="route.meta.cauthor"
+              :cdate="route.meta.cdate"  style="max-width: var(--TXT-WIDTH); margin-left: auto; margin-right: auto;"/>
           </v-col>
         </v-row>
       </div>
@@ -27,6 +39,7 @@
 </template>
 
 <script setup>
+const route = useRoute()
 useHead({
   htmlAttrs: {
     lang: 'de',
@@ -36,6 +49,7 @@ useHead({
 </script>
 
 <script>
+import { useTitle } from '@vueuse/core'
 
 export default {
   name: "Index",
@@ -52,11 +66,15 @@ export default {
 
       footerContact: null,
       footerImpressum: null,
-      footerDsgvo: null
+      footerDsgvo: null,
+
+      title: null,
     }
   },
 
   mounted() {
+    this.title = useTitle().value.replace('Syntagmatikon - ', '');
+
     this.appName = this.$config.public.appName;
     this.appDescription = this.$config.public.appDescription;
 

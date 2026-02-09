@@ -1,3 +1,9 @@
+<script setup>
+definePageMeta({
+  layout: "default",
+  ctitle: "Startseite",
+})
+</script>
 <template>
   <v-row>
     <v-col>
