@@ -74,6 +74,7 @@ definePageMeta({
 </template>
 
 <script>
+import { useLayoutStore } from '~/stores/layout';
 export default {
   name: "Index",
   theme: { dark: false },
@@ -394,6 +395,10 @@ export default {
       list_public: ["ZUWV", "DRIO", "WVBF", "PAROWB", "KWViD", "SPRW", "DTWW", "SpruchList", "Redeeinleiter", "PREPCON", "KoMuX"],
       list_todo: ["MAP", "PhrasKomp"],
     }
+  },
+
+  mounted() {
+    
   },
 
   setup() {
