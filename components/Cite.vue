@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import { useLayoutStore } from '~/stores/layout';
+
 export default {
   name: "Cite",
   props: {
@@ -23,20 +25,12 @@ export default {
     },
     cauthor: {
       type: String,
-      default: "Kathrin Steyer und Annelen Brunner"
+      default: undefined
     },
     cdate: {
       type: String,
       default: "2026"
     }
-  },
-  data() {
-    return {
-      url: "",
-    }
-  },
-  mounted() {
-    this.url = window.location.pathname;
   },
   methods: {
     copyToClipboard() {
@@ -45,10 +39,18 @@ export default {
   },
   computed: {
     text: function () {
-      return `"${this.ctitle}". In: ${this.cauthor}. ${this.cdate}. Syntagmatikon. Mannheim: Leibniz-Institut für Deutsche Sprache. https://syntagmatikon.ids-mannheim.de${this.url}, abgerufen am ${new Date().toLocaleDateString(
+      return `"${this.title}". In: ${this.cmpAuthor}. ${this.cmpDate}. Syntagmatikon. Mannheim: Leibniz-Institut für Deutsche Sprache. https://syntagmatikon.ids-mannheim.de${this.url}, abgerufen am ${new Date().toLocaleDateString(
         "de-DE",
         { year: "numeric", month: "2-digit", day: "2-digit" }
       )}`;
+    }, url: function () {
+      return window?.location?.pathname;
+    }, title: function () {
+      return useLayoutStore().title;
+    }, cmpAuthor: function () {
+      return this.cauthor ? this.cauthor : "Kathrin Steyer und Annelen Brunner";
+    }, cmpDate: function () {
+      return this.cdate ? this.cdate : "2026";
     }
   }
 }

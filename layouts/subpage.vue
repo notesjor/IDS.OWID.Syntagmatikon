@@ -50,7 +50,6 @@ const route = useRoute()
 </template>
 
 <script>
-import { useTitle } from '@vueuse/core'
 import { useLayoutStore } from '~/stores/layout';
 
 export default {
@@ -132,7 +131,7 @@ export default {
       }
     },
     title() {
-      return useTitle().value?.replace('Syntagmatikon - ', '')
+      return useLayoutStore().title;
     },
     parent() {
       return this.layoutVars?.parent;

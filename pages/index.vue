@@ -1,7 +1,6 @@
 <script setup>
 definePageMeta({
   layout: "default",
-  ctitle: "Startseite",
 })
 </script>
 <template>

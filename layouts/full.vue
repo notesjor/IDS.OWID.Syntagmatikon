@@ -13,7 +13,7 @@
         </v-row>
         <v-row v-show="title != null">
           <v-col>
-            <Cite :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle" :cauthor="route.meta.cauthor"
+            <Cite :ctitle="title" :cauthor="route.meta.cauthor"
               :cdate="route.meta.cdate"  style="max-width: var(--TXT-WIDTH); margin-left: auto; margin-right: auto;"/>
           </v-col>
         </v-row>
@@ -26,7 +26,7 @@
         </v-row>
         <v-row v-show="title != null">
           <v-col>
-            <Cite :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle" :cauthor="route.meta.cauthor"
+            <Cite :ctitle="title" :cauthor="route.meta.cauthor"
               :cdate="route.meta.cdate" style="max-width: var(--TXT-WIDTH); margin-left: auto; margin-right: auto;"/>
           </v-col>
         </v-row>
@@ -49,7 +49,7 @@ useHead({
 </script>
 
 <script>
-import { useTitle } from '@vueuse/core'
+import { useLayoutStore } from '~/stores/layout';
 
 export default {
   name: "Index",
@@ -97,7 +97,7 @@ export default {
 
   computed: {
     title() {
-      return useTitle().value?.replace('Syntagmatikon - ', '')
+      return useLayoutStore().title;
     },
     menuStyleMobileFix() {
       if (this.useMobileView) {
