@@ -1,6 +1,7 @@
 <script setup>
 definePageMeta({
   layout: "default",
+  ctitle: "Startseite",
 })
 </script>
 <template>
@@ -74,7 +75,6 @@ definePageMeta({
 </template>
 
 <script>
-import { useLayoutStore } from '~/stores/layout';
 export default {
   name: "Index",
   theme: { dark: false },

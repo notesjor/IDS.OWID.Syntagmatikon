@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { useTitle } from '@vueuse/core';
 import { useLayoutStore } from '~/stores/layout';
 
 export default {
@@ -37,6 +38,14 @@ export default {
       navigator.clipboard.writeText(this.data);
     }
   },
+  data() {
+    return {
+      uTitle: null,
+    }
+  },
+  mounted() {
+    this.uTitle = useTitle();
+  },
   computed: {
     text: function () {
       return `"${this.title}". In: ${this.cmpAuthor}. ${this.cmpDate}. Syntagmatikon. Mannheim: Leibniz-Institut für Deutsche Sprache. https://syntagmatikon.ids-mannheim.de${this.url}, abgerufen am ${new Date().toLocaleDateString(
@@ -46,7 +55,7 @@ export default {
     }, url: function () {
       return window?.location?.pathname;
     }, title: function () {
-      return useLayoutStore().title;
+      return this.ctitle ? this.ctitle : this.uTitle?.value;
     }, cmpAuthor: function () {
       return this.cauthor ? this.cauthor : "Kathrin Steyer und Annelen Brunner";
     }, cmpDate: function () {
