@@ -1,20 +1,35 @@
+<script setup>
+useHead({
+  htmlAttrs: {
+    lang: 'de'
+  },
+  title: `Syntagmatikon - ${useRoute()?.meta?.ctitle}`,
+  meta: [
+    {
+      name: 'description',
+      content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
+    }
+  ]
+});
+</script>
+
 <template>
   <v-app>
     <LayoutHeader></LayoutHeader>
 
     <main-menu :useMobileView="useMobileView" />
 
-    <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
+    <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">      
       <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
         <v-row>
           <v-col>
             <slot />
           </v-col>
         </v-row>
-        <v-row v-show="title != null">
+        <v-row>
           <v-col>
-            <Cite :ctitle="title" :cauthor="route.meta.cauthor"
-              :cdate="route.meta.cdate"  style="max-width: var(--TXT-WIDTH); margin-left: auto; margin-right: auto;"/>
+            <Cite :ctitle="useRoute()?.meta?.ctitle" :cauthor="useRoute()?.meta?.cauthor"
+              :cdate="useRoute()?.meta?.cdate"  style="max-width: var(--TXT-WIDTH); margin-left: auto; margin-right: auto;"/>
           </v-col>
         </v-row>
       </div>
@@ -24,10 +39,10 @@
             <slot />
           </v-col>
         </v-row>
-        <v-row v-show="title != null">
+        <v-row>
           <v-col>
-            <Cite :ctitle="title" :cauthor="route.meta.cauthor"
-              :cdate="route.meta.cdate" style="max-width: var(--TXT-WIDTH); margin-left: auto; margin-right: auto;"/>
+            <Cite :ctitle="useRoute()?.meta?.ctitle" :cauthor="useRoute()?.meta?.cauthor"
+              :cdate="useRoute()?.meta?.cdate" style="max-width: var(--TXT-WIDTH); margin-left: auto; margin-right: auto;"/>
           </v-col>
         </v-row>
       </div>
@@ -37,16 +52,6 @@
 
   </v-app>
 </template>
-
-<script setup>
-const route = useRoute()
-useHead({
-  htmlAttrs: {
-    lang: 'de',
-  }
-})
-
-</script>
 
 <script>
 import { useLayoutStore } from '~/stores/layout';
@@ -66,11 +71,14 @@ export default {
 
       footerContact: null,
       footerImpressum: null,
-      footerDsgvo: null
+      footerDsgvo: null,
+      
+      route: null,
     }
   },
 
   mounted() {
+    this.route = useRoute();
     this.appName = this.$config.public.appName;
     this.appDescription = this.$config.public.appDescription;
 
@@ -96,9 +104,6 @@ export default {
   },
 
   computed: {
-    title() {
-      return useLayoutStore().title;
-    },
     menuStyleMobileFix() {
       if (this.useMobileView) {
         return "margin-top: 75px;"

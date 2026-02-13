@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { useTitle } from '@vueuse/core';
+import { useTitle } from '@vueuse/core'
 import { useLayoutStore } from '~/stores/layout';
 
 export default {
@@ -41,9 +41,11 @@ export default {
   data() {
     return {
       uTitle: null,
+      uLayout: null
     }
   },
   mounted() {
+    this.uLayout = useLayoutStore();
     this.uTitle = useTitle();
   },
   computed: {
@@ -55,7 +57,7 @@ export default {
     }, url: function () {
       return window?.location?.pathname;
     }, title: function () {
-      return this.ctitle ? this.ctitle : this.uTitle?.value;
+      return (this.ctitle || this.uLayout?.title || this.uTitle || "Unbekannter Titel").replace("Syntagmatikon - ", "");
     }, cmpAuthor: function () {
       return this.cauthor ? this.cauthor : "Kathrin Steyer und Annelen Brunner";
     }, cmpDate: function () {

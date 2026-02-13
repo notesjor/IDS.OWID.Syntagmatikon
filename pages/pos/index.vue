@@ -1,19 +1,8 @@
 <script setup>
 definePageMeta({
   layout: "full",
+  ctitle: "Wort- und Ausdrucksarten",
 })
-useHead({
-  htmlAttrs: {
-    lang: 'de'
-  },
-  title: 'Syntagmatikon - Wort- und Ausdrucksarten',
-  meta: [
-    {
-      name: 'description',
-      content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
-    }
-  ]
-});
 </script>
 
 <template>

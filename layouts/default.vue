@@ -1,3 +1,19 @@
+<script setup>
+const route = useRoute()
+useHead({
+  htmlAttrs: {
+    lang: 'de'
+  },
+  title: `Syntagmatikon - ${route.meta.ctitle}`,
+  meta: [
+    {
+      name: 'description',
+      content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
+    }
+  ]
+});
+</script>
+
 <template>
   <v-app>
     <LayoutHeader></LayoutHeader>
@@ -12,7 +28,7 @@
               <slot />
             </v-col>
           </v-row>
-          <v-row v-show="title != null">
+          <v-row>
             <v-col>
               <Cite :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle" :cauthor="route.meta.cauthor"
                 :cdate="route.meta.cdate" />
@@ -27,7 +43,7 @@
               <slot />
             </v-col>
           </v-row>
-          <v-row v-show="title != null">
+          <v-row>
             <v-col>
               <Cite :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle" :cauthor="route.meta.cauthor"
                 :cdate="route.meta.cdate" />
@@ -42,19 +58,7 @@
   </v-app>
 </template>
 
-<script setup>
-const route = useRoute()
-useHead({
-  htmlAttrs: {
-    lang: 'de',
-  }
-})
-
-</script>
-
 <script>
-import { useTitle } from '@vueuse/core'
-
 export default {
   name: "Index",
   theme: { dark: false },
@@ -94,11 +98,5 @@ export default {
       this.useMobileView = this.$vuetify.display.width < 1050;
     }
   },
-
-  computed: {
-    title() {
-      return useTitle().value?.replace('Syntagmatikon - ', '')
-    },
-  }
 }
 </script>
