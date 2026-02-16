@@ -26,7 +26,7 @@ useHead({
             <slot />
           </v-col>
         </v-row>
-        <v-row>
+        <v-row v-if="route.meta.nocite != 'true'">
           <v-col>
             <Cite :ctitle="useRoute()?.meta?.ctitle" :cauthor="useRoute()?.meta?.cauthor"
               :cdate="useRoute()?.meta?.cdate"  style="max-width: var(--TXT-WIDTH); margin-left: auto; margin-right: auto;"/>
@@ -39,7 +39,7 @@ useHead({
             <slot />
           </v-col>
         </v-row>
-        <v-row>
+        <v-row v-if="route.meta.nocite != 'true'">
           <v-col>
             <Cite :ctitle="useRoute()?.meta?.ctitle" :cauthor="useRoute()?.meta?.cauthor"
               :cdate="useRoute()?.meta?.cdate" style="max-width: var(--TXT-WIDTH); margin-left: auto; margin-right: auto;"/>

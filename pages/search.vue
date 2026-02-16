@@ -2,6 +2,7 @@
 definePageMeta({
   layout: "full",
   ctitle: "Stichwortsuche",
+  nocite: "true"
 })
 </script>
 

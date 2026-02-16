@@ -2,6 +2,7 @@
 definePageMeta({
   layout: "default",
   ctitle: "Beteiligte Personen und Projekte",
+  nocite: "true"
 })
 </script>
 <template>

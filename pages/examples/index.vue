@@ -2,6 +2,7 @@
 definePageMeta({
   layout: "default",
   ctitle: "Fallbeispiele",
+  nocite: "true"
 })
 </script>
 <template>
