@@ -30,7 +30,7 @@ export default {
     },
     cdate: {
       type: String,
-      default: "2026"
+      default: "2025"
     }
   },
   methods: {
