@@ -42,7 +42,7 @@ export default {
         //borderLeft: `2px solid ${color}`,
         //borderRight: `2px solid ${color}`,
         backgroundColor: bgcolor,
-        margin: '0px 3px',
+        margin: '0px 3px 0px 0px',
         padding: '2px 5px 0px 5px',
         "--myColor": color
       };
