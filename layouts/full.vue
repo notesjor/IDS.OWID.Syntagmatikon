@@ -26,7 +26,7 @@ useHead({
             <slot />
           </v-col>
         </v-row>
-        <v-row v-if="route.meta.nocite != 'true'">
+        <v-row v-if="useRoute()?.meta?.nocite != 'true'">
           <v-col>
             <Cite :ctitle="useRoute()?.meta?.ctitle" :cauthor="useRoute()?.meta?.cauthor"
               :cdate="useRoute()?.meta?.cdate"  style="max-width: var(--TXT-WIDTH); margin-left: auto; margin-right: auto;"/>
@@ -39,7 +39,7 @@ useHead({
             <slot />
           </v-col>
         </v-row>
-        <v-row v-if="route.meta.nocite != 'true'">
+        <v-row v-if="useRoute()?.meta?.nocite != 'true'">
           <v-col>
             <Cite :ctitle="useRoute()?.meta?.ctitle" :cauthor="useRoute()?.meta?.cauthor"
               :cdate="useRoute()?.meta?.cdate" style="max-width: var(--TXT-WIDTH); margin-left: auto; margin-right: auto;"/>
@@ -99,7 +99,7 @@ export default {
 
   methods: {
     windowResize() {
-      this.useMobileView = this.$vuetify.display.width < 1050;
+      this.useMobileView = this.$vuetify?.display?.width < 1050;
     }
   },
 

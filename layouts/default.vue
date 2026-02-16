@@ -28,10 +28,10 @@ useHead({
               <slot />
             </v-col>
           </v-row>
-          <v-row v-if="route.meta.nocite != 'true'">
+          <v-row v-if="useRoute()?.meta?.nocite != 'true'">
             <v-col>
-              <Cite :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle" :cauthor="route.meta.cauthor"
-                :cdate="route.meta.cdate" />
+              <Cite :ctitle="useRoute()?.meta?.ctitle == null ? title : useRoute()?.meta?.ctitle" :cauthor="useRoute()?.meta?.cauthor"
+                :cdate="useRoute()?.meta?.cdate" />
             </v-col>
           </v-row>
         </div>
@@ -43,10 +43,10 @@ useHead({
               <slot />
             </v-col>
           </v-row>
-          <v-row v-if="route.meta.nocite != 'true'">
+          <v-row v-if="useRoute()?.meta?.nocite != 'true'">
             <v-col>
-              <Cite :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle" :cauthor="route.meta.cauthor"
-                :cdate="route.meta.cdate" />
+              <Cite :ctitle="useRoute()?.meta?.ctitle == null ? title : useRoute()?.meta?.ctitle" :cauthor="useRoute()?.meta?.cauthor"
+                :cdate="useRoute()?.meta?.cdate" />
             </v-col>
           </v-row>
         </div>
