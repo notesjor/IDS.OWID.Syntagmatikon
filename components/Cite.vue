@@ -2,40 +2,66 @@
   <v-row class="citeRow">
     <div class="citeHead">Zitationshilfe</div>
     <div class="citeText">
-      <span class="citeClip">
-        {{ data }}
-      </span>
-      <v-tooltip
-        location="top"
-        text="In die Zwischenablage kopieren"
-        >
-      <template v-slot:activator="{ props }">
-        <v-btn
-        v-bind="props"
-        class="citeButton"
-        variant="outlined"
-        icon="mdi-content-copy"
-        density="comfortable"
-        style="margin: 0px 0px 0px 10px; font-size: 0.75rem;"        
-        @click="copyToClipboard"
-      />
-      </template>
+      <span class="citeClip" v-html="text" />
+      <v-tooltip location="top" text="In die Zwischenablage kopieren">
+        <template v-slot:activator="{ props }">
+          <v-btn v-bind="props" class="citeButton" variant="outlined" icon="mdi-content-copy" density="comfortable"
+            style="margin: 0px 0px 0px 10px; font-size: 0.75rem;" @click="copyToClipboard" />
+        </template>
       </v-tooltip>
     </div>
   </v-row>
 </template>
 
 <script>
+import { useTitle } from '@vueuse/core'
+import { useLayoutStore } from '~/stores/layout';
+
 export default {
   name: "Cite",
   props: {
-    data: {
-      type: String
+    ctitle: {
+      type: String,
+      default: null
+    },
+    cauthor: {
+      type: String,
+      default: undefined
+    },
+    cdate: {
+      type: String,
+      default: "2026"
     }
   },
   methods: {
     copyToClipboard() {
       navigator.clipboard.writeText(this.data);
+    }
+  },
+  data() {
+    return {
+      uTitle: null,
+      uLayout: null
+    }
+  },
+  mounted() {
+    this.uLayout = useLayoutStore();
+    this.uTitle = useTitle();
+  },
+  computed: {
+    text: function () {
+      return `"${this.title}". In: ${this.cmpAuthor}. ${this.cmpDate}. Syntagmatikon. Mannheim: Leibniz-Institut für Deutsche Sprache. https://syntagmatikon.ids-mannheim.de${this.url}, abgerufen am ${new Date().toLocaleDateString(
+        "de-DE",
+        { year: "numeric", month: "2-digit", day: "2-digit" }
+      )}`;
+    }, url: function () {
+      return window?.location?.pathname;
+    }, title: function () {
+      return (this.ctitle || this.uLayout?.title || this.uTitle || "Unbekannter Titel").replace("Syntagmatikon - ", "");
+    }, cmpAuthor: function () {
+      return this.cauthor ? this.cauthor : "Kathrin Steyer und Annelen Brunner";
+    }, cmpDate: function () {
+      return this.cdate ? this.cdate : "2026";
     }
   }
 }

@@ -1,6 +1,22 @@
+<script setup>
+const route = useRoute()
+useHead({
+  htmlAttrs: {
+    lang: 'de'
+  },
+  title: `Syntagmatikon - ${route.meta.ctitle}`,
+  meta: [
+    {
+      name: 'description',
+      content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
+    }
+  ]
+});
+</script>
+
 <template>
   <v-app>
-   <LayoutHeader></LayoutHeader>
+    <LayoutHeader></LayoutHeader>
 
     <main-menu :useMobileView="useMobileView" />
 
@@ -12,6 +28,12 @@
               <slot />
             </v-col>
           </v-row>
+          <v-row>
+            <v-col>
+              <Cite :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle" :cauthor="route.meta.cauthor"
+                :cdate="route.meta.cdate" />
+            </v-col>
+          </v-row>
         </div>
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
@@ -21,26 +43,22 @@
               <slot />
             </v-col>
           </v-row>
+          <v-row>
+            <v-col>
+              <Cite :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle" :cauthor="route.meta.cauthor"
+                :cdate="route.meta.cdate" />
+            </v-col>
+          </v-row>
         </div>
       </div>
     </div>
 
-    <LayoutFooter></LayoutFooter>   
-    
-  </v-app>  
+    <LayoutFooter></LayoutFooter>
+
+  </v-app>
 </template>
 
-<script setup>
-useHead({
-  htmlAttrs: {
-    lang: 'de',
-  }
-})
-
-</script>
-
 <script>
-
 export default {
   name: "Index",
   theme: { dark: false },
@@ -56,7 +74,7 @@ export default {
 
       footerContact: null,
       footerImpressum: null,
-      footerDsgvo: null
+      footerDsgvo: null,
     }
   },
 
@@ -80,7 +98,5 @@ export default {
       this.useMobileView = this.$vuetify.display.width < 1050;
     }
   },
-
-
 }
 </script>
