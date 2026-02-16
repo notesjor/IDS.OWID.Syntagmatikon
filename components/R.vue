@@ -42,8 +42,8 @@ export default {
         //borderLeft: `2px solid ${color}`,
         //borderRight: `2px solid ${color}`,
         backgroundColor: bgcolor,
-        margin: '0 3px',
-        padding: '2px 2px 0px 2px',
+        margin: '0px 3px',
+        padding: '2px 5px 0px 5px',
         "--myColor": color
       };
     },
