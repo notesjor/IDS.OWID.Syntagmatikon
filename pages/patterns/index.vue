@@ -3,6 +3,18 @@ definePageMeta({
   layout: "full",
   ctitle: "Musterzugänge",
 })
+useHead({
+  htmlAttrs: {
+    lang: 'de'
+  },
+  title: 'Syntagmatikon - Musterzugänge',
+  meta: [
+    {
+      name: 'description',
+      content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
+    }
+  ]
+});
 </script>
 
 <template>
