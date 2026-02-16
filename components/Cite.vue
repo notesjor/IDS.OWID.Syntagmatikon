@@ -86,6 +86,7 @@ export default {
   background-color: #f0f0f0;
   color: #000;
   padding: 8px 12px;
+  text-align: left;
 }
 
 .citeClip {
