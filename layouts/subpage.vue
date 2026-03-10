@@ -1,19 +1,3 @@
-<script setup>
-const route = useRoute()
-useHead({
-  htmlAttrs: {
-    lang: 'de'
-  },
-  title: `Syntagmatikon - ${route.meta.ctitle}`,
-  meta: [
-    {
-      name: 'description',
-      content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
-    }
-  ]
-});
-</script>
-
 <template>
   <v-app>
     <LayoutHeader></LayoutHeader>
@@ -26,12 +10,12 @@ useHead({
           <div style="max-width: var(--TXT-WIDTH);">
             <div class="nolink" style="margin:0px 0px 10px -15px">
               <v-btn variant="text" class="nocaps" @click="goToParentPage"><v-icon
-                  icon="mdi-step-backward"></v-icon>Zurück zu: "{{ parent }}"</v-btn>
+                  icon="mdi-step-backward"></v-icon>Zurück zu: "{{ layoutVars?.parent }}"</v-btn>
             </div>
             <div style="margin-bottom: 0.6rem;">
               <div style="display: grid; grid-template-columns: auto 1fr; align-items: center;">
                 <v-icon :color="color1" style="font-size: 2.5rem; margin-right: 10px;">{{ icon }}</v-icon>
-                <h1><span v-html="title" /></h1>
+                <h1><span v-html="layoutVars?.title" /></h1>
               </div>
             </div>
             <v-row>
@@ -39,8 +23,8 @@ useHead({
                 <slot />
               </v-col>
             </v-row>
-            <Cite v-show="title != null" :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle"
-              :cauthor="route.meta.cauthor" :cdate="route.meta.cdate" />
+            <Cite v-show="layoutVars?.title != null" :ctitle="route?.meta?.ctitle == null ? layoutVars?.title : route?.meta?.ctitle"
+              :cauthor="route?.meta?.cauthor" :cdate="route?.meta?.cdate" />
           </div>
         </div>
         <div style="margin:10px 10px 0px 85px;" v-else>
@@ -50,8 +34,8 @@ useHead({
                 <slot />
               </v-col>
             </v-row>
-            <Cite v-show="title != null" :ctitle="route.meta.ctitle == null ? title : route.meta.ctitle"
-              :cauthor="route.meta.cauthor" :cdate="route.meta.cdate" />
+            <Cite v-show="layoutVars?.title != null" :ctitle="route?.meta?.ctitle == null ? layoutVars?.title : route?.meta?.ctitle"
+              :cauthor="route?.meta?.cauthor" :cdate="route?.meta?.cdate" />
           </div>
         </div>
       </div>
@@ -83,17 +67,18 @@ export default {
       footerDsgvo: null,
 
       layoutVars: null,
+      route: null,
       title: null,
     }
   },
 
-  setup() {
+  /*setup() {
     const props = useLayoutStore();
     useHead({
       htmlAttrs: {
         lang: 'de'
       },
-      title: `Syntagmatikon - ${props.parent} - ${props.title}`,
+      title: `Syntagmatikon - ${props?.parent} - ${props?.title}`,
       meta: [
         {
           name: 'description',
@@ -101,7 +86,7 @@ export default {
         }
       ]
     });
-  },
+  },*/
 
   mounted() {
     this.layoutVars = useLayoutStore();
@@ -116,8 +101,12 @@ export default {
     this.footerImpressum = this.$config.public.footerImpressum;
     this.footerDsgvo = this.$config.public.footerDsgvo;
 
+    this.route = useRoute()
+
     this.windowResize();
     window.addEventListener('resize', this.windowResize);
+
+    console.log(this.layoutVars);
   },
 
   beforeDestroy() {
@@ -142,12 +131,6 @@ export default {
       } else {
         return ""
       }
-    },
-    title() {
-      return useLayoutStore().title;
-    },
-    parent() {
-      return this.layoutVars?.parent;
     },
     color1() {
       return this.layoutVars?.getParentColor;
