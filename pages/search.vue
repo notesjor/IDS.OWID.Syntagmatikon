@@ -26,8 +26,6 @@ useHead({
             searchApi?.countTotal }} Einträge)</span>
         </h1>
 
-        {{ search_exactness_custom }}
-
         <!-- SUCH-Eingabemaske -->
         <div style="margin-top:0px">
           <v-text-field label="Stichwort hier eingeben..." v-model="query"
@@ -36,14 +34,20 @@ useHead({
 
         <!-- Genauigkeit der Suche -->
         <div style="margin: -20px 0px 50px 0px;">
-          <div style="display: flex; align-items: center;">
-            <div style="flex: 1;">
-              <v-slider v-model="search_exactness" :min="1" :max="5" :step="1" :ticks="search_exactness_labels"
-                show-ticks="always" label="Genauigkeit:" style="max-width: 100%;" :color="search_exactness_custom"
-                tick-size="4"></v-slider>
+          <div style="display: table; width: 100%; table-layout: fixed;">
+            <div style="display: table-cell; width: 130px; text-align: center;">
+              <div style="position: relative; top:10px"
+              >Genauigkeit:</div>
             </div>
-            <div style="flex: 0 0 auto; margin-left: 12px;">
+            <div style="display: table-cell; width: auto;">
+              <v-slider v-model="search_exactness" :min="1" :max="5" :step="1" :ticks="search_exactness_labels"
+                show-ticks="always" tick-size="4" :color="search_exactness_custom"
+                style="max-width: 100%; min-width: 0; margin: -30px 10px 0px 0px;">
+              </v-slider>
+            </div>
+            <div style="display: table-cell; width: 60px; text-align: center;">
               <v-btn rounded="true" elevation="1"
+              style="margin:10px 0px 0px 0px"
                 :icon="search_exactness_panel.length > 0 ? 'mdi-menu-up' : 'mdi-menu-down'"
                 :color="search_exactness_panel.length > 0 ? 'blue' : 'white'"
                 @click="search_exactness_panel = search_exactness_panel.length > 0 ? [] : [0]"></v-btn>
@@ -51,7 +55,7 @@ useHead({
           </div>
         </div>
         <v-expansion-panels v-model="search_exactness_panel" elevation="0" v-if="search_exactness_panel.length > 0">
-          <v-expansion-panel style="margin-top: -50px; padding-bottom: -10px;">
+          <v-expansion-panel style="margin-top: -55px; padding-bottom: -10px;">
             <v-expansion-panel-text>
               <v-row>
                 <v-col cols="4" style="padding: 15px 0px;">
@@ -74,7 +78,7 @@ useHead({
 
         <!-- Anzeige-Optionen -->
         <div
-          :style="search_exactness_panel.length === 1 ? 'margin: -45px 0px 50px 0px; text-align: center;' : 'margin: -60px 0px 50px 0px; text-align: center;'">
+          :style="search_exactness_panel.length === 1 ? 'margin: -45px 0px 50px 0px; text-align: center; z-index:9999' : 'margin: -80px 0px 50px 0px; text-align: center;'">
           <span style="position: relative; top: 0px">Anzeige-Optionen:</span>
           <span>
             <v-btn variant="text" density="compact" class="nocaps"
@@ -176,32 +180,49 @@ useHead({
                 style="word-break: break-word; overflow-wrap: anywhere; hyphens: auto; text-align: left; margin-left: 5px;">
                 <li style="margin-left: 0;">
                   <em>Mehrwortsuche:</em>
-                  <ul style="margin-left: 15px;">
-                    <li style="margin-left: 0;"><strong>Exakte Abfolge:</strong> sucht genau die eingegebene Wortfolge.
+                  <ul style="margin-left: 35px; list-style-position: outside;">
+                    <li>
+                      <strong>Exakte Abfolge:</strong> sucht genau die eingegebene Wortfolge.
                     </li>
-                    <li style="margin-left: 0;"><strong>Beliebige Reihenfolge:</strong> alle Wörter müssen vorkommen,
-                      Reihenfolge egal.</li>
-                    <li style="margin-left: 0;"><strong>Beliebiges Wort:</strong> es genügt, wenn ein Wort gefunden wird
-                      (mehr ist besser).</li>
+                    <li>
+                      <strong>Beliebige Reihenfolge:</strong> alle Wörter müssen vorkommen,
+                      Reihenfolge egal.
+                    </li>
+                    <li>
+                      <strong>Beliebiges Wort:</strong> es genügt, wenn ein Wort gefunden wird
+                      (mehr ist besser).
+                    </li>
                   </ul>
                 </li>
                 <li style="margin-left: 0;">
                   <em>Suchebene:</em>
-                  <ul style="margin-left: 15px">
-                    <li style="margin-left: 0;"><strong>Exakte Wortform:</strong> sucht nach der eingegebenen
-                      Schreibweise.</li>
-                    <li style="margin-left: 0;"><strong>Lemmatisiert:</strong> berücksichtigt Grundformen.</li>
-                    <li style="margin-left: 0;"><strong>Reduziertes Lemma:</strong> sucht noch allgemeiner.</li>
+                  <ul style="margin-left: 35px; list-style-position: outside;">
+                    <li>
+                      <strong>Exakte Wortform:</strong> sucht nach der eingegebenen
+                      Schreibweise.
+                    </li>
+                    <li>
+                      <strong>Lemmatisiert:</strong> berücksichtigt Grundformen.
+                    </li>
+                    <li>
+                      <strong>Reduziertes Lemma:</strong> sucht noch allgemeiner.
+                    </li>
                   </ul>
                 </li>
                 <li style="margin-left: 0;">
                   <em>Unscharfe Suche:</em>
-                  <ul style="margin-left: 15px;">
-                    <li style="margin-left: 0;"><strong>Deaktiviert:</strong> nur genaue Treffer.</li>
-                    <li style="margin-left: 0;"><strong>Dynamisch:</strong> erlaubt leichte Abweichungen, abhängig von
-                      der Wortlänge.</li>
-                    <li style="margin-left: 0;"><strong>Experimentell:</strong> sehr weite Suche, Ergebnisse oft
-                      ungenau.</li>
+                  <ul style="margin-left: 35px; list-style-position: outside;">
+                    <li>
+                      <strong>Deaktiviert:</strong> nur genaue Treffer.
+                    </li>
+                    <li>
+                      <strong>Dynamisch:</strong> erlaubt leichte Abweichungen, abhängig von
+                      der Wortlänge.
+                    </li>
+                    <li>
+                      <strong>Experimentell:</strong> sehr weite Suche, Ergebnisse oft
+                      ungenau.
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -349,14 +370,14 @@ export default {
       try {
         this.page = 1;
         var self = this;
-        self.searchApi.search(self.query, 
-        self.resourcesStore.resourceUsedForSearch, 
-        self.search_header_switch,
-        self.search_detail_multiword, 
-        self.search_detail_layer,
-        self.search_detail_fuzzy).then(x => {
-          self.results = x;
-        });
+        self.searchApi.search(self.query,
+          self.resourcesStore.resourceUsedForSearch,
+          self.search_header_switch,
+          self.search_detail_multiword,
+          self.search_detail_layer,
+          self.search_detail_fuzzy).then(x => {
+            self.results = x;
+          });
       } catch {
         // ignore
       }
