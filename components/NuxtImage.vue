@@ -2,27 +2,30 @@
   <div>
     <div class="container"><img :src="src" :alt="alt" @click="isZoomed = true" class="normalImg" /></div>
     <span class="normalText">
-      <div @click="isZoomed = true" style="cursor: zoom-in;">
+      <div @click="isZoomed = true" style="cursor: zoom-in; margin-bottom: 0.85rem;">
         <slot></slot>
-      </div>
-      <div v-if="href != null" class="relink" style="margin-bottom: 1.85rem;">
-        <a :href="href" target="_blank" class="captionLink">
-          <span style="margin-left: 5px;">zu diesem Beispiel</span>
-        </a>
-      </div>
+        <span v-if="to != null" style="margin-bottom: 1.85rem;">
+            <a :href="to" target="_blank" class="captionLink" @click="closeZoomWithDelay">
+            <v-icon>mdi-arrow-right-circle-outline</v-icon>
+            zu diesem Beispiel
+            </a>
+        </span>
+        <span v-else style="margin-bottom: 1.85rem;"></span>
+      </div>      
     </span>
   </div>
-  <v-dialog v-model="isZoomed">
+  <v-dialog v-model="isZoomed" max-width="75vw" max-height="85vh">
     <v-card @click="isZoomed = false" v-if="isZoomed">
-      <div class="container"><img :src="src" :alt="alt" class="zoomedImg" /></div>
+      <div class="container"><img :src="src" :alt="alt" class="zoomedImg" style="max-width: 90%;"/></div>
       <span class="zoomedText">
         <div @click="isZoomed = true" style="cursor: zoom-in;">
           <slot></slot>
-        </div>
-        <div v-if="href != null" class="relink">
-          <a :href="href" target="_blank" class="captionLink">
-            <span style="margin-left: 5px;">zu diesem Beispiel</span>
-          </a>
+          <span v-if="to != null" style="margin-bottom: 1.85rem;">
+            <a :href="to" target="_blank" class="captionLink">
+              <v-icon>mdi-arrow-right-circle-outline</v-icon>
+              zu diesem Beispiel
+            </a>
+          </span>
         </div>
       </span>
     </v-card>
@@ -41,7 +44,7 @@ export default {
       type: String,
       default: 'Abbildung'
     },
-    href: {
+    to: {
       type: String,
       default: null
     }
@@ -49,6 +52,14 @@ export default {
   data() {
     return {
       isZoomed: false
+    }
+  },
+  methods: {
+    closeZoomWithDelay() {
+      self = this;
+      setTimeout(() => {
+        self.isZoomed = false;
+      }, 500); 
     }
   }
 }

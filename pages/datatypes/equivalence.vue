@@ -43,18 +43,14 @@ export default {
           (<em>na začiatku; na prvý pokus; so zadosťučinením; podľa ľubovôle</em>).
         </p>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/equivalence/prepcon_kon_spanisch.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption"> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html"/>
+          <NuxtImage src="/img/datatypes/equivalence/prepcon_kon_spanisch.png" alt="Beispielgrafik 1"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html">
             Äquivalenzpaar Deutsch – Spanisch im Eintrag „am Anfang – al principio“
-          </div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/equivalence/prepcon_kon_slowakisch.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption"> <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html"/>
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/equivalence/prepcon_kon_slowakisch.png" alt="Beispielgrafik 2"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/amAnfang.html">
             Äquivalenzpaar Deutsch – Slowakisch im Eintrag „am Anfang – na začiatku“
-          </div>
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -67,12 +63,10 @@ export default {
           ihre türkischen Entsprechungen mit wörtlichen Übersetzungen ins Deutsche.
         </p>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/equivalence/dtww.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-             <ScreenshotLink to="http://wvonline.ids-mannheim.de/dtww/dtww_komplett.htm"/>Ausschnitt aus der Buchstabenstrecke A
-          </div>
+          <NuxtImage src="/img/datatypes/equivalence/dtww.png" alt="Beispielgrafik 1"
+            to="http://wvonline.ids-mannheim.de/dtww/dtww_komplett.htm">
+            Ausschnitt aus der Buchstabenstrecke A
+          </NuxtImage>
         </template>
       </compare-item>
     </compare>

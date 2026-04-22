@@ -49,11 +49,13 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="2" rkey="PREPCON_temp"
+    
+
+       <compare-item value="2" rkey="PREPCON_temp"
         description="Feste Wortverbindungen des Deutschen - Modul: Wortverbindungen mit Adjektiv">
         <p>
           In
-          <r rkey="PREPCON_temp" /> kann man ein Inventar von
+          <r rkey="PREPCON_temp" /> kann man 
           Präposition-Nomen-Verbindungen mit Zeit-Nomina abrufen.
         </p>
 
@@ -61,26 +63,26 @@ export default {
           <div>
 
             <ul>
-              <li>(am) <m>Anfang</m>
+              <li>(am) <m>Montag</m>
               </li>
-              <li>(vor) <m>Sonnenaufgang</m>
+              <li>(an) <m>Heiligabend</m>
               </li>
               <li>(über) <m>Nacht</m>
               </li>
-              <li>(ohne) <m>Unterlass</m>
+              <li>(vor) <m>Sonnenuntergang</m>
               </li>
             </ul>
           </div>
         </template>
       </compare-item>
 
-      <compare-item value="3" rkey="PREPCON_kon"
+      <compare-item value="4" rkey="PREPCON_kon"
         description="Musterbank argumentmarkierender Präpositionen - Information: Prädikate (Verbalprädikate und Prädikatsgefüge)">
         <p>
           In
           <r rkey="PREPCON_kon" /> bilden vier Nomina in
           Verbindung mit
-          einer Präposition den Ausgangspunkt für die kontrastive Beschreibung deutsch – spanisch; deutsch-slowakisch.
+          einer Präposition den Ausgangspunkt für die kontrastive Beschreibung deutsch - spanisch; deutsch - slowakisch.
         </p>
 
         <template #explain>
@@ -101,7 +103,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="4" rkey="KoMuX" description="">
+      <compare-item value="5" rkey="KoMuX" description="">
         <p>
           In
           <r rkey="KoMuX" /> bilden Nomina die Gruppe der
@@ -143,7 +145,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="5" rkey="PhrasKomp">
+      <compare-item value="6" rkey="PhrasKomp">
         <p>
           In
           <r rkey="PhrasKomp" />
@@ -185,7 +187,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="6" rkey="Redeeinleiter">
+      <compare-item value="7" rkey="Redeeinleiter">
         <p>
           In
           <r rkey="Redeeinleiter" /> kann man alle Nomen aus dem
@@ -208,7 +210,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="7" rkey="Verlaufsformen">
+      <compare-item value="8" rkey="Verlaufsformen">
         <p>
           In
           <r rkey="Verlaufsformen" /> wird der Gebrauch
@@ -230,7 +232,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="8" rkey="WVBF">
+      <compare-item value="9" rkey="WVBF">
         <p>
           In
           <r rkey="WVBF" /> ist das Nomen <em>Grund</em> der
@@ -254,7 +256,7 @@ export default {
         </template>
       </compare-item>
 
-      <compare-item value="9" rkey="DTWW">
+      <compare-item value="10" rkey="DTWW">
         <p>
           In
           <r rkey="DTWW" /> sind Nomina sowohl Basiskomponenten

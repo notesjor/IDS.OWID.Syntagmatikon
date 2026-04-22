@@ -1,5 +1,7 @@
 <template>
-    <span :style="style"><slot/></span>
+    <span :class="['klammer', { 'has-content': hasContent }]" :style="style">
+        <slot />
+    </span>
 </template>
 
 <script>
@@ -16,13 +18,23 @@ export default {
     },
     computed: {
         style() {
-            if(this.layoutVars == null) return {};
-            var color = this.layoutVars.getParentColor;
+            if (this.layoutVars == null) return {};
+            const color = this.layoutVars.getParentColor;
             return {
-                borderTop: `3px solid ${color}`,
+                //borderTop: `3px solid ${color}`,
                 backgroundColor: `${color}4D`
             };
+        },
+        hasContent() {
+            return this.$slots.default !== undefined;
         }
     }
 }
 </script>
+
+<style scoped>
+.klammer {
+    position: relative;
+    padding: 0px 5px;
+}
+</style>

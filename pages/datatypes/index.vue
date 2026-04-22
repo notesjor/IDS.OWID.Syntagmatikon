@@ -1,6 +1,7 @@
 <script setup>
 definePageMeta({
   layout: "full",
+  ctitle: "Informationstypen",
 })
 useHead({
   htmlAttrs: {
@@ -20,38 +21,40 @@ useHead({
   <div style="max-width: var(--TXT-WIDTH); margin:auto">
     <h1>Informationstypen</h1>
     <p>
-      In dieser <hi>Syntagmatikon</hi>-Rubrik werden die Ressourcen entsprechend der Charakteristik ihrer Informationstypen gebündelt und in zwei Gruppen eingeteilt: a) automatische und b) bearbeitete Informationstypen. Bei den primär automatisch-quantitativ erstellten Angaben werden die Korpusdaten selbst zu lexikografischen Einträgen. Die manuell-qualitativ erarbeiteten Informationstypen basieren ebenso auf Korpusanalysen. Hier finden sich unterschiedliche Kombinationen von systematisierten und interpretierten Korpusdaten mit verschiedenen Formen der narrativen Beschreibung.</p>
-    <div class="caption">Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur
+      In dieser <hi>Syntagmatikon</hi>-Rubrik werden die Ressourcen entsprechend der Charakteristik ihrer Informationstypen gebündelt und in zwei Gruppen eingeteilt: a) automatische und b) bearbeitete Informationstypen.</p>
+      <p>Bei den primär automatisch-quantitativ erstellten Angaben werden die Korpusdaten selbst zu lexikografischen Einträgen. Die manuell-qualitativ erarbeiteten Informationstypen basieren ebenso auf Korpusanalysen. Hier finden sich unterschiedliche Kombinationen von systematisierten und interpretierten Korpusdaten mit verschiedenen Formen der narrativen Beschreibung.</p>
+    <div class="comment-text">Jedes Kästchen linkt zu einer Hintergrundseite mit Screenshots und kurzen Erklärungen zur
       Aussagekraft der
       Informationstypen in den jeweiligen Ressourcen.</div>
   </div>
   <div>
     <v-row>
       <v-col>
+        <empty />
         <headline :h="4">Automatische Informationstypen</headline>
 
         <div class="container">
 
-          <info-box title="Frequenzen" link="/datatypes/frequency" :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'KoMuX', 'PhrasKomp',
-            'PREPCON_ex', 'PREPCON_temp_art', 'PREPCON_temp_inv', 'PREPCON_kon', 'MAP']" :color1="color1">
+          <info-box title="Frequenzangaben" link="/datatypes/frequency" :filter="['WVBF', 'SpruchList', 'Redeeinleiter', 'KoMuX', 'PhrasKomp',
+            'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'MAP']" :color1="color1">
             Häufigkeit des Vorkommens eines sprachlichen Ausdrucks im Korpus, ermittelt mithilfe von Zählungen
             und/oder Suchanfragen (queries)
           </info-box>
 
-          <info-box title="KWICs <span style='font-size:0.8em'>(KeyWord In Context)</span>" link="/datatypes/kwic"
+          <info-box title="KWICs <span style='font-size:0.8em'>(KeyWords In Context)</span>" link="/datatypes/kwic"
             :filter="['WVBF', 'SpruchList',
-              'PREPCON_ex', 'PREPCON_temp_art', 'PREPCON_temp_inv', 'PREPCON_kon', 'SPRW']" :color1="color1">
+              'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'SPRW']" :color1="color1">
             Zeilen (Konkordanzen), in denen das Suchobjekt vorkommt (Textschnipsel)
           </info-box>
 
           <info-box title="Kookkurrenzprofile" link="/datatypes/cooccurrence" :filter="['WVBF',
-            'PREPCON_temp_art', 'PREPCON_kon']" :color1="color1">
+            'PREPCON_temp', 'PREPCON_kon']" :color1="color1">
             Durch statistische Berechnungen (sog. Kookkurrenzanalysen) ermittelte Partnerwort-Profile
             (überproportional häufiges Miteinandervorkommen von Wörtern und Wortgruppen)
           </info-box>
 
           <info-box title="Lückenfüllertabellen" link="/datatypes/patterntable" :filter="['WVBF',
-            'PREPCON_temp_art', 'PREPCON_kon']" :color1="color1">
+            'PREPCON_temp', 'PREPCON_kon']" :color1="color1">
             Durch automatische Auswertung ermittelte Füllerhäufigkeiten innerhalb eines Musterslots
           </info-box>
 
@@ -62,13 +65,13 @@ useHead({
 
         <div class="container">
 
-          <info-box :color1="color1" title="Kategoriale Label" link="/datatypes/category" :filter="['PREPCON_temp_inv', 'KoMuX', 'PhrasKomp',
+          <info-box :color1="color1" title="Kategoriale Label" link="/datatypes/category" :filter="['PREPCON_temp', 'KoMuX', 'PhrasKomp',
             'PREPCON_kon', 'MAP', 'WVBF', 'Verlaufsformen', 'FesteWV', 'Redeeinleiter']">
             Linguistische Etikettierung von Merkmalen sprachlicher Einheiten
           </info-box>
 
           <info-box :color1="color1" title="Belege" link="/datatypes/matches" :filter="['WVBF', 'Redeeinleiter', 'PhrasKomp',
-            'PREPCON_temp_art', 'PREPCON_kon', 'Verlaufsformen', 'FesteWV', 'DTWW', 'SPRW', 'MAP']">
+            'PREPCON_temp', 'PREPCON_kon', 'Verlaufsformen', 'FesteWV', 'DTWW', 'SPRW', 'MAP']">
             Manuell ausgewählte KWICs und größere Volltextstellen
           </info-box>
 
@@ -78,18 +81,18 @@ useHead({
           </info-box>
 
           <info-box :color1="color1" title="Komponenten" link="/datatypes/elements"
-            :filter="['PREPCON_kon', 'PREPCON_temp_art', 'SPRW', 'FesteWV']">
+            :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW', 'FesteWV']">
             Auszeichnung der einzelnen Komponenten einer Wortverbindung und Verlinkung mit anderen Einträgen.
           </info-box>
 
 
           <info-box :color1="color1" title="Felder" link="/datatypes/fields"
-            :filter="['PREPCON_kon', 'PREPCON_temp_art', 'SPRW', 'FesteWV', 'MAP']">
+            :filter="['PREPCON_kon', 'PREPCON_temp', 'SPRW', 'FesteWV', 'MAP']">
             Nach inhaltlichen Kriterien manuell zusammengestellte Gruppen von sprachlichen Einheiten mit verwandten
             Gebrauchsmerkmalen
           </info-box>
 
-          <info-box :color1="color1" title="Fremdsprachige Äquivalenzen" link="/datatypes/equivalence"
+          <info-box :color1="color1" title="Fremdspr. Äquivalenzen" link="/datatypes/equivalence"
             :filter="['PREPCON_kon', 'DTWW']">
             Angabe von Entsprechungen in anderen Sprachen
           </info-box>

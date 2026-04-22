@@ -1,43 +1,27 @@
 <!-- HINWEIS: Dies ist eine Kompoente, mit mehreren Sub-Komponenten: SamplerItem +> SamplerItemText -->
 <template>
   <div v-if="extraLarge" class="nolink"
-    style="border:3px #ccc solid; border-radius: 10px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); position: relative; left: -20px; width: calc(100% + 330px);">
+    style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05); position: relative; left: -10px; width: calc(100% + 330px);">
     <v-row style="margin-top:-20px">
       <v-col cols="8">
         <div style="background: #fff; border-radius: 5px; margin-left: 4px;">
-          <v-tabs-window v-model="currentTab"
-            style="border: 5px white solid; border-radius: 5px; padding: 10px; background-color: #fff; margin:7px -10px 0px -5px">
-            <slot />
-          </v-tabs-window>
+          <v-window v-model="currentTab" direction="vertical"
+            style="border: 1px white solid; border-radius: 5px; padding: 10px; background-color: #fff; margin:0px -10px 0px -10px;">
+            <h2 style="margin:0px 10px 5px 0px; background-color: white;" v-html="tabs[currentTab]"></h2>
+            <div>
+              <slot />
+            </div>
+          </v-window>
         </div>
       </v-col>
-      <v-col cols="4" style="padding:0px">
-        <div style="position: sticky; top: 10px; max-height: calc(100vh - 40px); overflow-y: auto; margin-top:25px">
+      <v-col cols="4">
+        <div style="position: sticky; top: 10px; max-height: calc(100vh - 40px); overflow-y: auto;">
+          <div style="font-weight: 300; font-size:1.2rem; padding:10px">Auswahloptionen:</div>
           <v-tabs v-model="currentTab" direction="vertical">
-            <v-tab v-for="(item, index) in tabs" :key="index"
-              :class="currentTab === index ? (index === 0 ? 'expandZero' : 'expandMe') : 'denseMe'">
-              <div v-if="index !== 0 && currentTab === index">
-                <v-row>
-                  <div class="nocaps" style="letter-spacing: normal; margin: -10px 0px 0px 13px;">
-                    <v-chip variant="outlined" density="compact">
-                      <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br />
-                    </v-chip>
-                  </div>
-                </v-row>
-                <v-row>
-                  <div style="margin: 5px 0px -10px 13px" class="relink">
-                    <a :href="resourcesStore.getResource(filter[index - 1]).url" target="_blank"
-                      style="font-size: 0.9em; text-transform: none;">
-                      zur Ressource
-                    </a>
-                  </div>
-                </v-row>
-              </div>
-              <div v-else>
+            <v-tab v-for="(item, index) in tabs" :key="index" class="denseMe">
+              <div>
                 <div class="nocaps" style="letter-spacing: normal;">
-                  <v-chip variant="outlined" density="compact">
-                    <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br />
-                  </v-chip>
+                  <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br />
                 </div>
               </div>
             </v-tab>
@@ -47,15 +31,13 @@
     </v-row>
   </div>
   <div v-else class="nolink"
-    style="border:3px #ccc solid; border-radius: 10px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
+    style="border:1px #ccc solid; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.05);">
     <v-row style="margin-top:-20px">
       <v-col>
         <v-tabs v-model="currentTab">
           <v-tab v-for="(item, index) in tabs" :key="index">
             <span class="nocaps" style="letter-spacing: normal;">
-              <v-chip variant="outlined" density="compact">
-                <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br />
-              </v-chip>
+              <span v-html="item" style="font-family: var(--FF-DISPLAY);" /><br />
             </span>
           </v-tab>
         </v-tabs>
@@ -64,10 +46,12 @@
 
     <v-row style="margin: -10px 0px 0px 0px;">
       <v-col>
-        <v-tabs-window v-model="currentTab"
+        <v-window v-model="currentTab"
           style="border: 1px white solid; border-radius: 5px; padding: 10px; background-color: white; margin:0px -10px 0px -10px">
-          <slot />
-        </v-tabs-window>
+          <div>
+            <slot />
+          </div>
+        </v-window>
       </v-col>
     </v-row>
   </div>
@@ -92,38 +76,47 @@ export default {
     return {
       currentTab: 0,
       tabs: [],
-      extraLarge: false,
+      extraLarge: true,
     }
   },
   mounted() {
-    this.resourcesStore = useResourcesStore();
-
-    var tabs = [];
-    tabs.push("Übersicht");
-    if (this.resourcesStore == null)
-      return tabs;
-
-    for (let i = 0; i < this.filter.length; i++) {
-      tabs.push(this.resourcesStore.getResource(this.filter[i]).nameShort);
-    }
-    this.tabs = tabs;
-
     this.checkWidth();
     window.addEventListener('resize', this.checkWidth);
+    this.myUpdate();    
+  },
+  updated() {
+    this.checkWidth();
   },
   beforeUnmount() {
     window.removeEventListener('resize', this.checkWidth);
   },
   methods: {
+    myUpdate() {
+      this.resourcesStore = useResourcesStore();
+      var tabs = [];      
+      tabs.push("Übersicht");
+      if (this.resourcesStore == null)
+        return tabs;
+
+      for (let i = 0; i < this.filter.length; i++) {
+        tabs.push(this.resourcesStore.getResource(this.filter[i]).nameShort);
+      }
+      this.tabs = tabs;
+    },
     checkWidth() {
-      this.extraLarge = window.innerWidth >= 1460;
+      try {
+        this.extraLarge = window.innerWidth >= 1460;
+      }
+      catch (e) {
+        this.extraLarge = false;
+      }
     }
   }
 }
 </script>
 
 <style scoped>
-.notransition div {
+.notransition {
   transition: none !important;
   transition-timing-function: none !important;
 }
@@ -162,25 +155,7 @@ export default {
 .denseMe {
   font-size: 0.8rem;
   padding: 0px 0px 0px 10px;
-  margin-left: -3px;
   height: 40px !important;
-  background-color: #f2f2f2;
-}
-
-.expandZero {
-  font-size: 0.8rem;
-  padding: 0px 0px 0px 10px;
-  margin-left: -3px;
-  height: 40px !important;
-  background-color: white;
-}
-
-.expandMe {
-  font-size: 0.8rem;
-  padding: 0px 0px 0px 10px;
-  margin-left: -3px;
-  height: 75px !important;
-  background-color: white;
 }
 
 div.v-tabs-window-item {

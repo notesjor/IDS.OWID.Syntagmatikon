@@ -34,7 +34,8 @@ export default {
     <!-- NOTE: in Filter werden die Ressourcen angegeben -->
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
-    <compare :filter="['PREPCON_ex', 'PREPCON_temp_art', 'PREPCON_temp_inv', 'PREPCON_kon', 'SpruchList', 'SPRW', 'WVBF']">
+    <compare
+      :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'SpruchList', 'SPRW', 'WVBF']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/datatypes/kwics/kwics_all.png" style="text-align: center;" alt="Beispielgrafik 1" />
@@ -48,77 +49,56 @@ export default {
           Präposition-Nomen-Verbindung automatisch ausgewählte KWICs angezeigt (5-25 Zeilen beim Anklicken).
         </p>
         <template #explain>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/kwics/prepcon_ex_amEnde_kwics_Praeppers.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?prep=am" /> Ausschnitt aus KWIC-Anzeige in Präpositionentabelle „am“ (nominaler Partner <em>Ende</em>)
-          </div>
-
-          
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/kwics/prepcon_ex_amEnde_kwics_Nomenpers.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption">
-           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=Ende" /> Ausschnitt aus KWIC-Anzeige in Nomentabelle „Ende“ (präpositionaler Partner <em>Ende</em>)
-          </div>
+          <NuxtImage src="/img/datatypes/kwics/prepcon_ex_amEnde_kwics_Praeppers.png" alt="Beispielgrafik 1"
+            to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?prep=am">
+            Ausschnitt aus KWIC-Anzeige in Präpositionentabelle „am“ (nominaler Partner <em>Ende</em>)
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/kwics/prepcon_ex_amEnde_kwics_Nomenpers.png" alt="Beispielgrafik 2"
+            to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=Ende">
+            Ausschnitt aus KWIC-Anzeige in Nomentabelle „Ende“ (präpositionaler Partner <em>Ende</em>)
+          </NuxtImage>
         </template>
       </compare-item>
 
-      <compare-item value="2" rkey="PREPCON_temp_art">
+      <compare-item value="2" rkey="PREPCON_temp">
+        <p>KWICs sind in beiden Unter-Rubriken von <r rkey="PREPCON_temp" /> verfügbar.</p>
         <p>
-          In
-          <r rkey="PREPCON_temp_art" /> sind KWICs in folgenden Angaben abrufbar:
+          In der Rubrik <b>Kurzartikel</b> sind KWICs in folgenden Angaben abrufbar:
         </p>
         <ul>
           <li>in ‚Häufigkeit im Korpus‘ (für die jeweilige Suchanfragen)</li>
-          <li>in ‚Typische Partnerwörter‘ f(ür die jeweiligen Kookkurrenzcluster)</li>
+          <li>in ‚Typische Partnerwörter‘ (für die jeweiligen Kookkurrenzcluster)</li>
           <li>in ‚Muster‘ (für die jeweiligen Lückenfüllertabellen)</li>
         </ul>
-        
-         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/kwics/prepcon_temp_ohneUnterlass.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Unterlass/htmlfiles/fillerfiles/Kwics_ohne_1.html" /> Ausschnitt aus KWIC-Anzeige (Kleinschreibung) im Eintrag „ohne Unterlass“ (Rubrik „Kurzartikel“:
-            ‚Häufigkeit im Korpus‘)
-          </div>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/kwics/prepcon_temp_ohneUnterlass_redet.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Unterlass/htmlfiles/clusterfiles/Clusters_ohneUnterlass_1_1_KA_oFW_1_XML/Kwics_redet_267.html" />Ausschnitt aus KWIC-Anzeige des Kookkurrenz-Clusters <em>ohne Unterlass – redet</em> im Eintrag „ohne
-            Unterlass“ (Rubrik „Kurzartikel“: ‚Typische Partnerwörter‘)
-          </div>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/kwics/prepcon_temp_ohneUnterlass_an_der.png" alt="Beispielgrafik 3" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Unterlass/htmlfiles/fillerfiles/Filler_ohne_o_Ohne_Unterlass_X_X_9_Field2_3_XML/Kwics_an__der_2989.html" />Ausschnitt aus KWIC-Anzeige des Bigram-Füllers <em>an … der</em> (Muster: <em>ohne Unterlass</em> X) im
-            Eintrag „ohne Unterlass“ (Rubrik „Kurzartikel“: ‚Muster‘)
-          </div>
-
-          
-        </template>
-      </compare-item>
-
-      <compare-item value="3" rkey="PREPCON_temp_inv">
-        <p>
-          In
-          <r rkey="PREPCON_temp_inv" /> linken die Einträge auf die KWICs von <r rkey="PREPCON_ex" />.
+         <p>
+          In der Rubrik <b>Inventar</b> sind die Einträge mit den KWICs von
+          <r rkey="PREPCON_ex" /> verlinkt.
         </p>
 
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/kwics/prepcon_temp_amHeiligabend.png" alt="Beispielgrafik 4" />
-          </div>
-          <div class="caption">
-           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=Heiligabend" /> Ausschnitt aus der KWIC-Verlinkung im Eintrag „am Heiligabend“ (Rubrik „Inventar“: ‚Feiertage‘)
-          </div>
+          <p>Rubrik <b>Kurzartikel</b> </p>
+          <NuxtImage src="/img/datatypes/kwics/prepcon_temp_ohneUnterlass.png" alt="Beispielgrafik 1"
+            to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Unterlass/htmlfiles/fillerfiles/Kwics_ohne_1.html">
+            Ausschnitt aus KWIC-Anzeige (Kleinschreibung) im Eintrag „ohne Unterlass“ (Rubrik „Kurzartikel“:
+            ‚Häufigkeit im Korpus‘)
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/kwics/prepcon_temp_ohneUnterlass_redet.png" alt="Beispielgrafik 2"
+            to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Unterlass/htmlfiles/clusterfiles/Clusters_ohneUnterlass_1_1_KA_oFW_1_XML/Kwics_redet_267.html">
+            Ausschnitt aus KWIC-Anzeige des Kookkurrenz-Clusters <em>ohne Unterlass – redet</em> im Eintrag „ohne
+            Unterlass“ (Rubrik „Kurzartikel“: ‚Typische Partnerwörter‘)
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/kwics/prepcon_temp_ohneUnterlass_an_der.png" alt="Beispielgrafik 3"
+            to="http://uwv.ids-mannheim.de/prepcon/modul2/artikel/ohne_Unterlass/htmlfiles/fillerfiles/Filler_ohne_o_Ohne_Unterlass_X_X_9_Field2_3_XML/Kwics_an__der_2989.html">
+            Ausschnitt aus KWIC-Anzeige des Bigram-Füllers <em>an … der</em> (Muster: <em>ohne Unterlass</em> X) im
+            Eintrag „ohne Unterlass“ (Rubrik „Kurzartikel“: ‚Muster‘)
+          </NuxtImage>
+
+        <p>Rubrik <b>Inventar</b> </p>
+          <NuxtImage src="/img/datatypes/kwics/prepcon_temp_amHeiligabend.png" alt="Beispielgrafik 4"
+            to="http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?noun=Heiligabend">
+            Ausschnitt
+            aus der KWIC-Verlinkung im Eintrag „am Heiligabend“ (Rubrik „Inventar“: ‚Feiertage‘)
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -150,75 +130,61 @@ export default {
         </ul>
         <template #explain>
           <div class="exampleHeadline">„Quantitative Angaben“: ‚Häufigkeit im Korpus‘</div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantSuche.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/de/Kwics_Mit_Genugtuung_25.html" />  Ausschnitt aus KWIC-Anzeige (Großschreibung) im Eintrag „mit Genugtuung“
-          </div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantSucheSpanisch.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption">
-           <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/es/Overview_2020_11_25_17h03m10s.html" /> Ausschnitt aus KWIC-Anzeige (Kleinschreibung) im Eintrag „mit Genugtuung - con satisfacción“
-          </div>
-
+          <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantSuche.png" alt="Beispielgrafik 1"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/de/Kwics_Mit_Genugtuung_25.html">
+            Ausschnitt aus KWIC-Anzeige (Großschreibung) im Eintrag „mit Genugtuung“
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantSucheSpanisch.png" alt="Beispielgrafik 2"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/es/Overview_2020_11_25_17h03m10s.html">
+            Ausschnitt aus KWIC-Anzeige (Kleinschreibung) im Eintrag „mit Genugtuung - con satisfacción“
+          </NuxtImage>
           <div class="exampleHeadline">„Quantitative Angaben“: ‚Typische Partnerwörter‘</div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantPartner.png" alt="Beispielgrafik 3" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/de/Clusters_mitGenugtuungKA_4_XML/Kwics_erfuellt_265.html" /> Ausschnitt aus KWIC-Anzeige des Kookkurrenz-Clusters <em>mit Genugtuung – erfüllt</em> im Eintrag „mit
+          <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantPartner.png" alt="Beispielgrafik 3"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/de/Clusters_mitGenugtuungKA_4_XML/Kwics_erfuellt_265.html">
+            Ausschnitt aus KWIC-Anzeige des Kookkurrenz-Clusters <em>mit Genugtuung – erfüllt</em> im Eintrag „mit
             Genugtuung“ (KWIC-Angaben nur für deutsche Daten verfügbar)
-          </div>
-
+          </NuxtImage>
           <div class="exampleHeadline">„Quantitative Angaben“: ‚Muster‘</div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantMuster.png" alt="Beispielgrafik 4" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/de/Filler_mit_o_Mit_Xx_Genugtuung_24_Field1_XML/Kwics_sichtlicher_7810.html" /> Ausschnitt aus KWIC-Anzeige des Füllers <em>sichtlicher</em> (Muster: <em>mit</em> X <em>Genugtuung</em>)
+          <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantMuster.png" alt="Beispielgrafik 4"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/de/Filler_mit_o_Mit_Xx_Genugtuung_24_Field1_XML/Kwics_sichtlicher_7810.html">
+            Ausschnitt aus KWIC-Anzeige des Füllers <em>sichtlicher</em> (Muster: <em>mit</em> X <em>Genugtuung</em>)
             im Eintrag „mit Genugtuung“
-          </div>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantMusterSpanisch.png" alt="Beispielgrafik 5" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/es/Filler_con_o_Con_Xx_satisfaccin_35_Field1_XML/Kwics_gran_1192.html" /> Ausschnitt aus KWIC-Anzeige des Füllers <em>gran</em> (Muster: <em>con</em> X <em>satisfacción</em>) im
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/kwics/prepcon_kon_quantMusterSpanisch.png" alt="Beispielgrafik 5"
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/es/Filler_con_o_Con_Xx_satisfaccin_35_Field1_XML/Kwics_gran_1192.html">
+            Ausschnitt aus KWIC-Anzeige des Füllers <em>gran</em> (Muster: <em>con</em> X <em>satisfacción</em>) im
             Eintrag „mit Genugtuung – con satisfacción“
-          </div>
-
+          </NuxtImage>
         </template>
       </compare-item>
 
       <compare-item value="5" rkey="SpruchList">
         <p>
           In
-          <r rkey="SpruchList" /> lassen sich zu jedem Eintrag automatisch selektierte KWICs (Zufallswahl 1000) für die weite Suchanfrage abrufen.
+          <r rkey="SpruchList" /> lassen sich zu jedem Eintrag automatisch selektierte KWICs (Zufallswahl 1000) für die
+          weite
+          Suchanfrage abrufen.
         </p>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/kwics/spruchList.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
+          <NuxtImage src="/img/datatypes/kwics/spruchList.png" alt="Beispielgrafik 1"
+          to="http://uwv.ids-mannheim.de/spruchlist/?search=Ausnahmen bestätigen die Regel">
             KWIC-Ausschnitt für die weite Suchanfrage im Eintrag „Ausnahmen bestätigen die Regel“
-          </div>
+          </NuxtImage>
         </template>
       </compare-item>
 
       <compare-item value="6" rkey="SPRW">
         <p>
-          <r rkey="SPRW" /> bietet einen direkten Zugang zur Korpussuche. Als Ergebnis werden alle automatisch selektierten KWICs und Volltextstellen im W-Archiv angezeigt.
+          <r rkey="SPRW" /> bietet einen direkten Zugang zur Korpussuche. Als Ergebnis werden alle automatisch
+          selektierten
+          KWICs und Volltextstellen im W-Archiv angezeigt.
         </p>
         <template #explain>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/kwics/sprw_cosmas.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/401775" />Ausschnitt aus KWIC-Anzeige im Eintrag „Not macht erfinderisch“
-          </div>
+          <NuxtImage src="/img/datatypes/kwics/sprw_cosmas.png" alt="Beispielgrafik 1"
+            to="https://www.owid.de/artikel/401775">
+            Ausschnitt aus KWIC-Anzeige im Eintrag „Not macht
+            erfinderisch“
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -231,12 +197,9 @@ export default {
           Zufallsauswahl).
         </p>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/kwics/wvGrund.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/extrafiles/aus_GRUND/aus_X_Gruenden/Kwics_Aus_o_aus_X_Gruenden.xml.html" /> Ausschnitt aus KWIC-Anzeige des Knotens „aus ADJ Gründen“
-          </div>
+          <NuxtImage src="/img/datatypes/kwics/wvGrund.png" alt="Beispielgrafik 1"
+            to="http://wvonline.ids-mannheim.de/wvfelder-v3/extrafiles/aus_GRUND/aus_X_Gruenden/Kwics_Aus_o_aus_X_Gruenden.xml.html">
+            Ausschnitt aus KWIC-Anzeige des Knotens „aus ADJ Gründen“</NuxtImage>
         </template>
       </compare-item>
     </compare>

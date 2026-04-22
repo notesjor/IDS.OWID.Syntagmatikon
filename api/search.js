@@ -12,6 +12,7 @@ export default class search {
   hits = [];
 
   exact = true;
+  searchFuzzy = true;
   fuzziness = 0;
   transpositions = true;
 
@@ -20,8 +21,10 @@ export default class search {
     this.offset = 0;
     this.count = null;
 
-    this.fuzziness = searchFuzzy == 0 ? 0 : searchFuzzy == 1 ? "AUTO" : "2";
-    this.transpositions = searchFuzzy < 2;
+    this.searchFuzzy = searchFuzzy;
+    this.fuzziness = "0"; // searchFuzzy ? "AUTO" : "0";
+    this.transpositions = searchFuzzy ? true : false;
+    this.queryName = searchFuzzy ? "match" : "match_phrase";
 
     if (searchAll) {
       this.sources = sources;
@@ -64,7 +67,17 @@ export default class search {
             must: [
               {
                 term: {
-                  dic: this.sources[i],
+                  "dic.keyword": this.sources[i],
+                },
+              },
+            ],
+            should: [
+              {
+                match: {
+                  lbl: {
+                    query: this.query,
+                    boost: 0,
+                  },
                 },
               },
             ],
@@ -72,7 +85,7 @@ export default class search {
         },
         size: this.pageSize,
         from: this.offset,
-        sort: [{ key: "asc" }],
+        sort: [{ "key.keyword": "asc" }],
         highlight: {
           fields: {
             lbl: {
@@ -85,14 +98,17 @@ export default class search {
 
       var q = {};
       q[this.queryName] = {
-        lbl: this.query,
-        fuzzy_transpositions: this.transpositions,
-        fuzziness: this.fuzziness
+        key: {
+          query: this.query,
+        },
       };
-      console.log("query", q);
+      if (this.searchFuzzy) {
+        q[this.queryName].key.fuzziness = this.fuzziness;
+        q[this.queryName].key.fuzzy_transpositions = this.transpositions;
+      }
       request.query.bool.must.push(q);
 
-      if (!this.query || this.query.trim() === "")
+      if (!this.query || this.query.trim() === "") {
         request.query = {
           bool: {
             must: [
@@ -101,12 +117,13 @@ export default class search {
               },
               {
                 term: {
-                  dic: this.sources[i],
+                  "dic.keyword": this.sources[i],
                 },
               },
             ],
           },
         };
+      }
 
       var requestOptions = {
         method: "POST",
@@ -116,8 +133,7 @@ export default class search {
       };
       try {
         var response = await fetch(
-          //TODO: "https://syntagmatikon.ids-mannheim.de/api/",
-          "http://localhost:9200/syntagmatikon/_search",
+          "https://syntagmatikon.ids-mannheim.de/api/",          
           requestOptions
         );
 
@@ -148,10 +164,13 @@ export default class search {
       track_total_hits: true,
       query: {
         bool: {
-          must: [
+          should: [
             {
               match: {
-                lbl: this.query,
+                lbl: {
+                  query: this.query,
+                  boost: 0,
+                },
               },
             },
           ],
@@ -159,16 +178,33 @@ export default class search {
       },
       size: this.pageSize,
       from: this.offset,
-      sort: [{ key: "asc" }],
+      sort: [{ "key.keyword": "asc" }],
       highlight: {
+        pre_tags: ["<span class='highlight'>"],
+        post_tags: ["</span>"],
         fields: {
-          lbl: {
-            pre_tags: ["<span class='highlight'>"],
-            post_tags: ["</span>"],
-          },
+          lbl: {},
         },
       },
     };
+
+    if (this.fuzziness) {
+      request.query.bool["must"] = [
+        {
+          match: {
+            key: this.query,
+          },
+        },
+      ];
+    } else {
+      request.query.bool["must"] = [
+        {
+          match_phrase: {
+            key: this.query,
+          },
+        },
+      ];
+    }
 
     if (!this.query || this.query.trim() === "") {
       request.query = { bool: { must: [{ match_all: {} }] } };
@@ -177,7 +213,7 @@ export default class search {
     if (this.sources.length > 0) {
       request.query.bool.must.push({
         terms: {
-          dic: this.sources,
+          "dic.keyword": this.sources,
         },
       });
     }
@@ -194,8 +230,7 @@ export default class search {
 
     try {
       var response = await fetch(
-        // TODO: "https://syntagmatikon.ids-mannheim.de/api/",
-        "http://localhost:9200/syntagmatikon/_search",
+        "https://syntagmatikon.ids-mannheim.de/api/",
         requestOptions
       );
 

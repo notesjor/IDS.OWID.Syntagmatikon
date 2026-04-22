@@ -1,3 +1,9 @@
+<script setup>
+definePageMeta({
+  layout: "default",
+  ctitle: "Startseite",
+})
+</script>
 <template>
   <v-row>
     <v-col>
@@ -37,7 +43,7 @@
           <v-icon style="font-size: 60px;">
             mdi-database-search-outline
           </v-icon>
-          <div><strong>über 85.000</strong><br> Einträge</div>
+          <div><strong>ca 90.000</strong><br> Einträge</div>
         </div>
       </div>
     </v-col>
@@ -391,19 +397,8 @@ export default {
     }
   },
 
-  setup() {
-    useHead({
-      htmlAttrs: {
-        lang: 'de'
-      },
-      title: 'Syntagmatikon',
-      meta: [
-        {
-          name: 'description',
-          content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
-        }
-      ]
-    });
+  mounted() {
+    
   },
 }
 </script>

@@ -1,26 +1,22 @@
+<script setup>
+const route = useRoute()
+useHead({
+  htmlAttrs: {
+    lang: 'de'
+  },
+  title: `Syntagmatikon - ${route.meta.ctitle}`,
+  meta: [
+    {
+      name: 'description',
+      content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
+    }
+  ]
+});
+</script>
+
 <template>
-  <NuxtImg alt="Logo Syntagmatikon" src="/logo3.svg"
-    style="max-height:65px; position:fixed; top:5px; left: 10px; z-index: 1000;" />
   <v-app>
-    <div class="d-print-none"
-      style="z-index:100; max-height: 75px; min-height:75px; background-color: black; padding:7px 10px 5px 10px; display: grid; grid-template-columns: 1fr auto 250px; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right'; ">
-      <div class="inline" style="color:white; grid-area: left; margin-left:75px">
-        <div style="min-height: 10px;" v-if="useMobileView"></div>
-        <div class="text-2xl">
-          {{ appName }}
-        </div>
-        <div class="" style="text-align: left;">{{ useMobileView ? " " : appDescription }}</div>
-      </div>
-
-      <div style="grid-area: middle;"></div>
-
-      <div class="inline" style="grid-area: right;">
-        <a :href="leftIconHref" target="_blank">
-          <NuxtImg alt="Logo IDS" src="/ids-logo.svg"
-            style="margin-left: auto; max-height:50px; margin-right:10px; margin-top:5px" />
-        </a>
-      </div>
-    </div>
+    <LayoutHeader></LayoutHeader>
 
     <main-menu :useMobileView="useMobileView" />
 
@@ -32,6 +28,12 @@
               <slot />
             </v-col>
           </v-row>
+          <v-row v-if="useRoute()?.meta?.nocite != 'true'">
+            <v-col>
+              <Cite :ctitle="useRoute()?.meta?.ctitle == null ? title : useRoute()?.meta?.ctitle" :cauthor="useRoute()?.meta?.cauthor"
+                :cdate="useRoute()?.meta?.cdate" />
+            </v-col>
+          </v-row>
         </div>
       </div>
       <div style="margin:10px 10px 0px 85px;" v-else>
@@ -41,52 +43,22 @@
               <slot />
             </v-col>
           </v-row>
+          <v-row v-if="useRoute()?.meta?.nocite != 'true'">
+            <v-col>
+              <Cite :ctitle="useRoute()?.meta?.ctitle == null ? title : useRoute()?.meta?.ctitle" :cauthor="useRoute()?.meta?.cauthor"
+                :cdate="useRoute()?.meta?.cdate" />
+            </v-col>
+          </v-row>
         </div>
       </div>
     </div>
 
-    <v-footer
-      style="z-index: 100; max-height: 80px; position: absolute; bottom: 0; width: 100%; background-color: black; padding-left:25px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right';">
-      <div style="color:white; grid-area: left; margin-top: 20px; font-size: 12px;" v-if="!useMobileView">
-        <NuxtImg alt="Logo OWID" src="/owid-logo-dunkel.svg" style="max-height:15px; margin:-10px 0px 3px 0px"
-          float="left" />
-        <div>
-          <a style="color: #fff" :href="footerContact">Kontakt</a>
-          &middot;
-          <a style="color: #fff" :href="footerDsgvo">Datenschutzhinweis</a>
-          &middot;
-          <a style="color: #fff" :href="footerImpressum">Impressum</a>
-        </div>
-        <div>
-          &copy; Leibniz-Institut für Deutsche Sprache
-        </div>
-      </div>
-
-      <div style="grid-area: middle;"></div>
-
-      <div style="text-align: right; grid-area: right">
-        <a :href="rightIconHref" target="_blank">
-          <NuxtImg alt="Logo IDS" src="/logo_right.svg"
-            style="max-height:65px; min-height: 45px; min-width: 200px; margin-left: auto; " />
-        </a>
-      </div>
-    </v-footer>
+    <LayoutFooter></LayoutFooter>
 
   </v-app>
 </template>
 
-<script setup>
-useHead({
-  htmlAttrs: {
-    lang: 'de',
-  }
-})
-
-</script>
-
 <script>
-import cache from '~/api/cache.js';
-
 export default {
   name: "Index",
   theme: { dark: false },
@@ -102,7 +74,7 @@ export default {
 
       footerContact: null,
       footerImpressum: null,
-      footerDsgvo: null
+      footerDsgvo: null,
     }
   },
 
@@ -119,16 +91,12 @@ export default {
 
     this.windowResize();
     window.addEventListener('resize', this.windowResize);
-
-    new cache().callCache(this.$route.path, "");
   },
 
   methods: {
     windowResize() {
-      this.useMobileView = this.$vuetify.display.width < 960;
+      this.useMobileView = this.$vuetify.display.width < 1050;
     }
   },
-
-
 }
 </script>

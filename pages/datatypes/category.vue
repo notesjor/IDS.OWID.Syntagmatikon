@@ -29,29 +29,25 @@ export default {
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
     <compare
-      :filter="['PREPCON_temp_inv', 'PREPCON_kon', 'KoMuX', 'MAP', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'WVBF']">
+      :filter="['PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'MAP', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'WVBF']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/datatypes/categories/categories_all.png" style="text-align: center;" />
         </div>
       </compare-item>
 
-      <compare-item value="1" rkey="PREPCON_temp_inv">
+      <compare-item value="1" rkey="PREPCON_temp">
         <p>
-          In
-          <r rkey="PREPCON_temp_inv" /> werden die Einträge gemäß folgender Hauptktegorien geordnet: reine
+          In der Rubrik <b>Inventar</b> von
+          <r rkey="PREPCON_temp" /> werden die Einträge gemäß folgender Hauptktegorien geordnet: reine
           TEMPORALANGABEN; TEMPORALANGABEN MIT EIGENNAMEN (WOCHENTAGE, MONATE; FEIERTAGE; WOCHENTAGE ALS ZWEITGLIED,
           TAGESZEITEN ALS ZWEITGLIED).
         </p>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/categories/prepcon_temp_inv_feiertage.png" alt="Sortierung temporaler PNs" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://uwv.ids-mannheim.de/prepcon/modul2/inventar/inventar_feier.html" />
-            Sortierung temporaler PNs nach der NOMEN-Kategorie FEIERTAGE in der Teilressource „Inventar temporaler
-            Präposition-Nomen-Verbindungen“
-          </div>
+          <NuxtImage src="/img/datatypes/categories/prepcon_temp_inv_feiertage.png" alt="Sortierung temporaler Präposition-Nomen-Verbindungen"
+            to="http://uwv.ids-mannheim.de/prepcon/modul2/inventar/inventar_feier.html"> Sortierung temporaler Präposition-Nomen-Verbindungen nach
+            der NOMEN-Kategorie FEIERTAGE (Rubrik „Inventar“)
+          </NuxtImage>
         </template>
 
       </compare-item>
@@ -66,15 +62,15 @@ export default {
         </p>
         <template #explain>
           <NuxtImage src="/img/datatypes/categories/prepcon_kernbedeutung.png" alt="Beispiel Kernbedeutung"
-            href="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/mitGenugtuung.html">
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/mitGenugtuung.html">
             Label für Kernbedeutung im Eintrag „mit Genugtuung – con satisfacción“
           </NuxtImage>
           <NuxtImage src="/img/datatypes/categories/prepcon_wortarten_nachBelieben.png" alt="Beispiel nach Belieben"
-            href="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/nach_Belieben/kontrastiv/nach_Belieben_VERBADVERB_und_VERBADVERB.html">
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/nach_Belieben/kontrastiv/nach_Belieben_VERBADVERB_und_VERBADVERB.html">
             Label für Wortarten im Eintrag „nach Belieben X – a su gusto X“
           </NuxtImage>
           <NuxtImage src="/img/datatypes/categories/prepcon_wortarten_mitGenugtuung.png" alt="Beispiel mit Genugtuung"
-            href="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/kontrastiv/mit_ADJ_konnot_negativ_Genugtuung.html">
+            to="http://uwv.ids-mannheim.de/prepcon/modul3/zusatzdateien/mit_Genugtuung/kontrastiv/mit_ADJ_konnot_negativ_Genugtuung.html">
             Label für Wortarten und funktionale Merkmale im Eintrag „mit X Genugtuung – con X
             satisfacción“
           </NuxtImage>
@@ -103,21 +99,14 @@ export default {
           NAHRUNG; FORM; NATGEGENSTAND; RELATION; TIER; PFLANZE; GEFUEHL; MOTIV) der Konstituenten
           abdecken.</p>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/categories/komux_thematische_cutout.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
+          <NuxtImage src="/img/datatypes/categories/komux_thematische_cutout.png" alt="Beispielgrafik 1">
             Komposita, deren Erst- und Zweitglied auf der Ebene „thematischen Kategorie“ mit dem Label
             KOMMUNIKATION versehen sind
-          </div>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/categories/komux_thematische.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption">
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/categories/komux_thematische.png" alt="Beispielgrafik 2">
             Übersicht über alle kategorialen Label in KoMuX (am Beispiel eines Ausschnitts aus der
             Treffermenge zu KOMMUNIKATION|KOMMUNIKATION)
-          </div>
+          </NuxtImage>
         </template>
 
       </compare-item>
@@ -132,13 +121,10 @@ export default {
           wie etwa „adversativ“, „kausal“ etc.), Verblemmata, Argumentkasus und Diathesen.
         </p>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/matches/map_belege_medial.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/plus/map/kwic" />Belegangabe zu Kategorie Medialkonstruktion
-          </div>
-
+          <NuxtImage src="/img/datatypes/matches/map_belege_medial.png" alt="Beispielgrafik 1"
+            to="https://www.owid.de/plus/map/kwic">
+            Belegangabe zu Kategorie Medialkonstruktion
+          </NuxtImage>
         </template>
         <!-- TODO: MAP -->
       </compare-item>
@@ -172,19 +158,13 @@ export default {
         </ul>
 
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/categories/phraskomp_deadj.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
+          <NuxtImage src="/img/datatypes/categories/phraskomp_deadj.png" alt="Beispielgrafik 1">
             Ausschnitt aus der Treffermenge für Phrasenkomposita mit deadjektivischem Zweitglied
-          </div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/categories/phraskomp_personen.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption">
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/categories/phraskomp_personen.png" alt="Beispielgrafik 2">
             Ausschnitt aus der Treffermenge für Phrasenkomposita mit einer Personenbezeichnung im
             Zweitglied
-          </div>
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -202,13 +182,10 @@ export default {
           belegt ist.
         </p>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/categories/rede_freq.png" width="70%" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/plus/redeeinleiter/?search=sagen" />
+          <NuxtImage src="/img/datatypes/categories/rede_freq.png" width="70%" alt="Beispielgrafik 1"
+            to="https://www.owid.de/plus/redeeinleiter/?search=sagen">
             Die Attribute der Belege, in denen der Redeeinleiter „sagen“ belegt ist.
-          </div>
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -238,23 +215,18 @@ export default {
             entstammt.</li>
         </ul>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/categories/verlaufsformen.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/402991" /> Kategoriale Zuordnung mit inkorporierten Objekt
+          <NuxtImage src="/img/datatypes/categories/verlaufsformen.png" alt="Beispielgrafik 1"
+            to="https://www.owid.de/artikel/402991">
+            Kategoriale Zuordnung mit inkorporierten Objekt
             <em>Unkraut</em> (beim Unkrautjäten) im
             Eintrag „jäten“
-          </div>
-
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/categories/verlaufsformen_tabelle.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/progdb?scrollToVerb=j%C3%A4ten" />Kategoriale Label mit Einstellung
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/categories/verlaufsformen_tabelle.png" alt="Beispielgrafik 1"
+            to="https://www.owid.de/progdb?scrollToVerb=j%C3%A4ten">
+            Kategoriale Label mit Einstellung
             ‚Inkorporiertes Objekt (INK): ja‘ in durchsuch- und
             sortierbarer Tabelle (Rubrik „Erweiterte Suche“)
-          </div>
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -267,13 +239,10 @@ export default {
         </p>
         <template #explain>
 
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/categories/festeWV_klassif.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="https://www.owid.de/artikel/309163/offene%20Art%20einer%20Sprachhandlung/0" />
+          <NuxtImage src="/img/datatypes/categories/festeWV_klassif.png" alt="Beispielgrafik 1"
+            to="https://www.owid.de/artikel/309163/offene%20Art%20einer%20Sprachhandlung/0">
             Kategoriale Label für den Mehrworteintrag „frank und frei“
-          </div>
+          </NuxtImage>
         </template>
       </compare-item>
 
@@ -287,21 +256,15 @@ export default {
           Merkmalen.
         </p>
         <template #explain>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/categories/wvGrund_Netz.png" alt="Beispielgrafik 1" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink to="http://wvonline.ids-mannheim.de/wvfelder-v3/grund-graphik.html" />Label für Wortarten
+          <NuxtImage src="/img/datatypes/categories/wvGrund_Netz.png" alt="Beispielgrafik 1"
+            to="http://wvonline.ids-mannheim.de/wvfelder-v3/grund-graphik.html">
+            Label für Wortarten
             der X-Füller im Hauptknoten „aus GRUND“
-          </div>
-          <div class="exampleImg">
-            <NuxtImage src="/img/datatypes/categories/wvGrund_Fueller.png" alt="Beispielgrafik 2" />
-          </div>
-          <div class="caption">
-            <ScreenshotLink
-              to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/aus_ADJ_Gruenden_ID1364235183677.html" />
+          </NuxtImage>
+          <NuxtImage src="/img/datatypes/categories/wvGrund_Fueller.png" alt="Beispielgrafik 2"
+            to="http://wvonline.ids-mannheim.de/wvfelder-v3/uwvnodes_html/aus_ADJ_Gruenden_ID1364235183677.html">
             Semantische Kategorisierung für Adjektiv-Füller im Subknoten „aus ADJ Gründen“
-          </div>
+          </NuxtImage>
         </template>
       </compare-item>
     </compare>

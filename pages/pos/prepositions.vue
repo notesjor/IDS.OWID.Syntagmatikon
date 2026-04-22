@@ -52,24 +52,23 @@ export default {
                 </template>
             </compare-item>
 
-            <compare-item value="2" rkey="PREPCON_temp">
+             <compare-item value="2" rkey="PREPCON_temp">
                 <p>
-                    In
-                    <r rkey="PREPCON_temp" /> kann man ein
-                    Inventar von
+                    In 
+                    <r rkey="PREPCON_temp" /> kann man 
                     Präposition-Nomen-Verbindungen anhand einer Präpositionen-Stichwortliste abrufen.
                 </p>
                 <template #explain>
                     <div>
                         <ul>
                             <li>
-                                <m>am</m> (Ende)
+                                <m>ab</m> (Mittag)
                             </li>
                             <li>
                                 <m>für</m> (Jahre)
                             </li>
                             <li>
-                                <m>im</m> (Augenblick)
+                                <m>bis</m> (Ostern)
                             </li>
                             <li>
                                 <m>vor</m> (Urzeiten)
@@ -123,7 +122,7 @@ export default {
                                 <m>Mit</m>-Juror
                             </li>
                             <li>
-                                <m>Mit</m>Drehbuchautor
+                                <m>Mit</m>-Drehbuchautor
                             </li>
                         </ul>
                     </div>
@@ -131,11 +130,10 @@ export default {
             </compare-item>
             <compare-item value="5" rkey="MAP">
             <p>
-            Beschreibungsgegenstand von <r rkey="MAP" /> sind Konstruktionen mit ursprünglich räumlichen Präpositionen in abstrakter Verwendung. Für jede 
-            behandelte Präposition gibt es einen Überblicksartikel, der das gesamte Spektrum ihrer abstrakten, „grammatischen“ Verwendungen zusammenfasst und einen Überblick über alle zugehörigen Muster und Musterfamilien bietet.
+            Beschreibungsgegenstand von <r rkey="MAP" /> sind Konstruktionen mit ursprünglich räumlichen Präpositionen in abstrakter Verwendung (<em>an etwas leiden, auf etwas beharren, um etwas kämpfen</em>; siehe unten stehende Beispiele). Für jede behandelte Präposition gibt es einen Überblicksartikel, der das gesamte Spektrum ihrer abstrakten, „grammatischen“ Verwendungen zusammenfasst und einen Überblick über alle zugehörigen Muster und Musterfamilien bietet.
             </p>
             <template #explain>
-                    <div>
+                    <div> 
                         <ul>
                             <li> Immer mehr Menschen leiden <m>an</m> Allergien. </li>
                             <li>

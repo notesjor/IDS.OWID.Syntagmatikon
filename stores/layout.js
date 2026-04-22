@@ -12,6 +12,7 @@ export const useLayoutStore = defineStore("layoutStore", {
         "Wort- und Ausdrucksarten": "#0DC513",
         Musterzugänge: "#DB6900",
         Fallbeispiele: "#2962ff",
+        None: "#000",
       },
 
       icons: {
@@ -54,6 +55,22 @@ export const useLayoutStore = defineStore("layoutStore", {
           },
         ],
         Informationstypen: [
+             {
+            name: "Frequenzangaben",
+            url: "/datatypes/frequency",
+          },
+          {
+            name: "KWICs",
+            url: "/datatypes/kwic",
+          },
+          {
+            name: "Kookkurrenzprofile",
+            url: "/datatypes/cooccurrence",
+          },
+          {
+            name: "Lückenfüllertabellen",
+            url: "/datatypes/patterntable",
+          },
           {
             name: "Kategoriale Label",
             url: "/datatypes/category",
@@ -78,22 +95,7 @@ export const useLayoutStore = defineStore("layoutStore", {
             name: "Fremdsprachige Äquivalenzen",
             url: "/datatypes/equivalence",
           },
-          {
-            name: "Frequenzangaben",
-            url: "/datatypes/frequency",
-          },
-          {
-            name: "KWICs",
-            url: "/datatypes/kwic",
-          },
-          {
-            name: "Kookkurrenzprofile",
-            url: "/datatypes/cooccurrence",
-          },
-          {
-            name: "Lückenfüllertabellen",
-            url: "/datatypes/patterntable",
-          },
+       
         ],
         "Wort- und Ausdrucksarten": [
           {
@@ -154,6 +156,7 @@ export const useLayoutStore = defineStore("layoutStore", {
   },
   getters: {
     getParentColor() {
+      if (this.parent == "") this.updateParent();
       return this.colors[this.parent] || "#2962ff";
     },
     getParentIcon() {
@@ -162,5 +165,18 @@ export const useLayoutStore = defineStore("layoutStore", {
     getPaths() {
       return this.paths[this.parent] || [];
     },
+  },
+  actions: {
+    updateParent(){
+      const currentUrl = window.location.pathname;
+      for (const [key, value] of Object.entries(this.validate)) {
+        var valid = value.slice(1, -1);
+        if (currentUrl.includes(valid)) {
+          this.parent = key;
+          break;
+        }
+        this.parent = "None";
+      }
+    }
   },
 });

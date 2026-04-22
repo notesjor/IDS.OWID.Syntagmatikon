@@ -34,7 +34,6 @@ export default {
   mounted() {
     this.resourcesStore = useResourcesStore();
     this.resources = this.resourcesStore.getResources(this.filter);
-    console.log(this.resources);
   },
 }
 </script>

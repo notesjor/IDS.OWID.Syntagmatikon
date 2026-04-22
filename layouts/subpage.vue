@@ -1,95 +1,54 @@
 <template>
-  <NuxtImg alt="Logo Syntagmatikon" src="/logo3.svg"
-    style="max-height:65px; position:fixed; top:5px; left: 10px; z-index: 1000;" />
   <v-app>
-    <div class="d-print-none"
-      style="z-index:100; max-height: 75px; min-height:75px; background-color: black; padding:7px 10px 5px 10px; display: grid; grid-template-columns: 1fr auto 250px; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right'; ">
-      <div class="inline" style="color:white; grid-area: left; margin-left:75px">
-        <div style="min-height: 10px;" v-if="useMobileView"></div>
-        <div class="text-2xl">
-          {{ appName }}
-        </div>
-        <div class="" style="text-align: left;">{{ useMobileView ? " " : appDescription }}</div>
-      </div>
+    <LayoutHeader></LayoutHeader>
 
-      <div style="grid-area: middle;"></div>
+    <main-menu :useMobileView="useMobileView" :onlyTopLevel="true" />
 
-      <div class="inline" style="grid-area: right;">
-        <a :href="leftIconHref" target="_blank">
-          <NuxtImg alt="Logo IDS" src="/ids-logo.svg"
-            style="margin-left: auto; max-height:50px; margin-right:10px; margin-top:5px" />
-        </a>
-      </div>
-    </div>
-
-    <main-menu :useMobileView="useMobileView" />
-
-    <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
-      <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
-        <div style="max-width: var(--TXT-WIDTH);">
-          <div class="nolink" style="margin:0px 0px 10px -15px">
-            <v-btn variant="text" class="nocaps" @click="goToParentPage"><v-icon
-                icon="mdi-step-backward"></v-icon>Zurück zu: "{{ parent }}"</v-btn>
-          </div>
-          <div style="margin-bottom: 0.6rem;">
-            <div style="display: grid; grid-template-columns: auto 1fr; align-items: center;">
-              <v-icon :color="color1" style="font-size: 2.5rem; margin-right: 10px;">{{ icon }}</v-icon>
-              <h1><span v-html="title" /></h1>
+    <v-main>
+      <div class="main" style="margin-left: auto; margin-right: auto; margin-bottom: 100px;">
+        <div style="margin:10px 10px 0px 275px" v-if="!useMobileView">
+          <div style="max-width: var(--TXT-WIDTH);">
+            <div class="nolink" style="margin:0px 0px 10px -15px">
+              <v-btn variant="text" class="nocaps" @click="goToParentPage"><v-icon
+                  icon="mdi-step-backward"></v-icon>Zurück zu: "{{ layoutVars?.parent }}"</v-btn>
             </div>
+            <div style="margin-bottom: 0.6rem;">
+              <div style="display: grid; grid-template-columns: auto 1fr; align-items: center;">
+                <v-icon :color="color1" style="font-size: 2.5rem; margin-right: 10px;">{{ icon }}</v-icon>
+                <h1><span v-html="layoutVars?.title" /></h1>
+              </div>
+            </div>
+            <v-row>
+              <v-col>
+                <slot />
+              </v-col>
+            </v-row>
+            <Cite v-show="layoutVars?.title != null" :ctitle="route?.meta?.ctitle == null ? layoutVars?.title : route?.meta?.ctitle"
+              :cauthor="route?.meta?.cauthor" :cdate="route?.meta?.cdate" />
           </div>
-          <v-row>
-            <v-col>
-              <slot />
-            </v-col>
-          </v-row>
+        </div>
+        <div style="margin:10px 10px 0px 85px;" v-else>
+          <div style="max-width: var(--TXT-WIDTH);">
+            <v-row>
+              <v-col>
+                <slot />
+              </v-col>
+            </v-row>
+            <Cite v-show="layoutVars?.title != null" :ctitle="route?.meta?.ctitle == null ? layoutVars?.title : route?.meta?.ctitle"
+              :cauthor="route?.meta?.cauthor" :cdate="route?.meta?.cdate" />
+          </div>
         </div>
       </div>
-      <div style="margin:10px 10px 0px 85px;" v-else>
-        <div style="max-width: var(--TXT-WIDTH);">
-          <v-row>
-            <v-col>
-              <slot />
-            </v-col>
-          </v-row>
-        </div>
-      </div>
-    </div>
+    </v-main>
 
-    <v-footer
-      style="z-index: 100; max-height: 80px; position: absolute; bottom: 0; width: 100%; background-color: black; padding-left:25px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 100%; gap: 0px 0px; grid-template-areas: 'left middle right';">
-      <div style="color:white; grid-area: left; margin-top: 20px; font-size: 12px;" v-if="!useMobileView">
-        <NuxtImg alt="Logo OWID" src="/owid-logo-dunkel.svg" style="max-height:15px; margin:-10px 0px 3px 0px"
-          float="left" />
-        <div>
-          <a style="color: #fff" :href="footerContact">Kontakt</a>
-          &middot;
-          <a style="color: #fff" :href="footerDsgvo">Datenschutzhinweis</a>
-          &middot;
-          <a style="color: #fff" :href="footerImpressum">Impressum</a>
-        </div>
-        <div>
-          &copy; Leibniz-Institut für Deutsche Sprache
-        </div>
-      </div>
-
-      <div style="grid-area: middle;"></div>
-
-      <div style="text-align: right; grid-area: right">
-        <a :href="rightIconHref" target="_blank">
-          <NuxtImg alt="Logo IDS" src="/logo_right.svg"
-            style="max-height:65px; min-height: 45px; min-width: 200px; margin-left: auto; " />
-        </a>
-      </div>
-    </v-footer>
+    <LayoutFooter></LayoutFooter>
 
   </v-app>
 </template>
 
 <script>
-import { de } from 'vuetify/locale';
-import cache from '~/api/cache.js';
-
 import { useLayoutStore } from '~/stores/layout';
+
 export default {
   name: "Index",
   theme: { dark: false },
@@ -107,17 +66,19 @@ export default {
       footerImpressum: null,
       footerDsgvo: null,
 
-      layoutVars: null
+      layoutVars: null,
+      route: null,
+      title: null,
     }
   },
 
-  setup() {
+  /*setup() {
     const props = useLayoutStore();
     useHead({
       htmlAttrs: {
         lang: 'de'
       },
-      title: `Syntagmatikon - ${props.parent} - ${props.title}`,
+      title: `Syntagmatikon - ${props?.parent} - ${props?.title}`,
       meta: [
         {
           name: 'description',
@@ -125,7 +86,7 @@ export default {
         }
       ]
     });
-  },
+  },*/
 
   mounted() {
     this.layoutVars = useLayoutStore();
@@ -140,10 +101,12 @@ export default {
     this.footerImpressum = this.$config.public.footerImpressum;
     this.footerDsgvo = this.$config.public.footerDsgvo;
 
+    this.route = useRoute()
+
     this.windowResize();
     window.addEventListener('resize', this.windowResize);
 
-    new cache().callCache(this.$route.path, "");
+    console.log(this.layoutVars);
   },
 
   beforeDestroy() {
@@ -152,7 +115,7 @@ export default {
 
   methods: {
     windowResize() {
-      this.useMobileView = this.$vuetify.display.width < 960;
+      this.useMobileView = this.$vuetify.display.width < 1050;
     },
     goToParentPage() {
       let path = this.$route.path.split("/");
@@ -168,12 +131,6 @@ export default {
       } else {
         return ""
       }
-    },
-    title() {
-      return this.layoutVars?.title;
-    },
-    parent() {
-      return this.layoutVars?.parent;
     },
     color1() {
       return this.layoutVars?.getParentColor;

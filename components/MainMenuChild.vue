@@ -15,6 +15,10 @@ export default {
             type: String,
             required: true
         },
+        useMobileView: {
+            type: Boolean,
+            default: false
+        },
     },
     data() {
         return {

@@ -5,13 +5,14 @@ export const useResourcesStore = defineStore("resourcesStore", {
     return {
       valuesSelected: {},
       resourcesDeselected: [],
+      // 'PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'Verlaufsformen',
       info: [
         {
           key: "PREPCON",
           nameShort: "PREPCON<sup>online</sup>",
           nameLong: "PREPCON - Präposition-Nomen-Verbindungen im Kontext",
           description:
-            "<b>PREPCON<sup>online</sup></b> ist ein neuartiges korpusgesteuertes Präsentationsformat. Es bietet Informationen zum Gebrauch von ca. 80.000 Präposition-Nomen-Verbindungen des Deutschen (z.B. <em>über Jahre; nach Belieben</em>). Abrufbar sind systematisierte Korpusdaten (Frequenzen, KWICs, Volltextstellen, Kookkurrenzprofile, <em>lexpan</em>-Mustertabellen) und narrative Kommentare. Diese verfestigten Ausdrücke und ihnen zugrunde liegende Muster werden in drei Modulen dokumentiert: PREPCON<sup>explorativ</sup>; PREPCON<sup>temporal</sup>; PREPCON<sup>kontrastiv</sup>.",
+            "<b>PREPCON<sup>online</sup></b> ist ein neuartiges korpusgesteuertes Präsentationsformat. Es bietet Informationen zum Gebrauch von ca. 80.000 Präposition-Nomen-Verbindungen des Deutschen (z.B. <em>über Jahre; nach Belieben</em>). Abrufbar sind systematisierte Korpusdaten (Frequenzen, KWICs, Volltextstellen, Kookkurrenzprofile, <em>lexpan</em>-Mustertabellen) und narrative Kommentare. Diese verfestigten Ausdrücke und ihnen zugrunde liegende Muster werden in drei Modulen dokumentiert: PREPCON<sup>explorativ</sup>; PREPCON<sup>temporal</sup> (mit den Unter-Rubriken \"Inventar temporaler PNs\" und \"Kurzartikel zu temporalen PNs\"); PREPCON<sup>kontrastiv</sup>.",
           img: "./img/sources/prepcon.png",
           url: "http://uwv.ids-mannheim.de/prepcon/prepcon_online.html",
           hideInSearch: true,
@@ -21,86 +22,35 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameShort: "PREPCON<sup>explorativ</sup>",
           nameLong:
             "PREPCON<sup>explorativ</sup> - Explorative Datenbank zu Präposition-Nomen-Verbindungen im Kontext",
-          description:
-            "",
+          description: "",
           img: "./img/sources/prepcon_ex.png",
           url: "http://uwv.ids-mannheim.de/prepcon/modul1/",
           tags: [],
           quest: "http://uwv.ids-mannheim.de/prepcon/modul1/tables.html?{q}",
-          search_type: "Explorative Datenbanken",
-          search_functions: [
-            "Frequenzen", 
-            "KWICs", 
-            "Belege"
-          ],
+          search_type: ["Explorative Datenbanken"],
+          search_functions: ["Frequenzen", "KWICs"],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Präpositionen"],
         },
         {
           key: "PREPCON_temp",
-          nameShort: "PREPCON<sup>temporal</sup>",
-          nameLong:
-            "PREPCON<sup>temporal</sup> - Kurzartikel und Inventar zu temporalen Präposition-Nomen-Verbindungen im Kontext",
-          description:
-            "",
+          nameShort: 'PREPCON<sup>temporal</sup>',
+          nameLong: "PREPCON<sup>temporal</sup> - Kurzartikel und Inventar zu temporalen Präposition-Nomen-Verbindungen im Kontext",
+          description: "",
           img: "./img/sources/prepcon_temp.png",
           url: "http://uwv.ids-mannheim.de/prepcon/modul2",
           tags: [],
           quest: "",
-          search_type: "Inventare und Sammlungen",
+          search_type: ["Inventare und Sammlungen"],
           search_functions: [
-            "Frequenzen",
-            "KWICs",
-            "Kookkurrenzprofile",
-            "Lückenfüllertabellen", 
+		    "Frequenzen", 
+			"KWICs", 
+			"Kategoriale Label", 
+			"Kookkurrenzprofile",
+            "Lückenfüllertabellen",
             "Komponenten",
             "Felder",
-            "Belege"
-          ],
-          search_patterns: ["dynamische Erschließung"],
-          search_parts: ["Nomina", "Präpositionen"],
-        },
-        {
-          key: "PREPCON_temp_inv",
-          nameShort: "PREPCON<sup>temporal</sup> Inventar",
-          nameLong:
-            "PREPCON<sup>temporal</sup> - Inventar zu temporalen Präposition-Nomen-Verbindungen im Kontext",
-          description:
-            "",
-          img: "./img/sources/prepcon_temp.png",
-          url: "http://uwv.ids-mannheim.de/prepcon/modul2/inventar/temporalangaben.html",
-          tags: [],
-          quest: "",
-          search_type: "Inventare und Sammlungen",
-          search_functions: [
-            "Frequenzen",
-            "KWICs",
-            "Kategoriale Label",
-          ],
-          search_patterns: ["dynamische Erschließung"],
-          search_parts: ["Nomina", "Präpositionen"],
-        },
-           {
-          key: "PREPCON_temp_art",
-          nameShort: "PREPCON<sup>temporal</sup> Artikel",
-          nameLong:
-            "PREPCON<sup>temporal</sup> - Kurzartikel zu temporalen Präposition-Nomen-Verbindungen im Kontext",
-          description:
-            "",
-          img: "./img/sources/prepcon_temp.png",
-          url: "http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Anfang/index.html",
-          tags: [],
-          quest: "",
-          search_type: "Inventare und Sammlungen",
-          search_functions: [
-            "Frequenzen",
-            "KWICs",
-            "Kookkurrenzprofile",
-            "Lückenfüllertabellen", 
-            "Komponenten",
-            "Felder",
-            "Belege"
-          ],
+            "Belege"],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Präpositionen"],
         },
@@ -109,25 +59,24 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameShort: "PREPCON<sup>kontrastiv</sup>",
           nameLong:
             "PREPCON<sup>kontrastiv</sup> - Kontrastive Darstellung von Präposition-Nomen-Verbindungen im Kontext",
-          description:
-            "",
+          description: "",
           img: "./img/sources/prepcon_kon.png",
           url: "http://uwv.ids-mannheim.de/prepcon/modul3/",
           tags: [],
           quest:
             "http://uwv.ids-mannheim.de/prepcon/modul3/quantitativ/{q}.html",
-          search_type: "Pilotstudien",
+          search_type: ["Pilotstudien"],
           search_functions: [
             "Frequenzen",
             "KWICs",
             "Kookkurrenzprofile",
-            "Lückenfüllertabellen", 
+            "Lückenfüllertabellen",
             "Kategoriale Label",
             "Narrative Beschreibungen",
             "Komponenten",
             "Felder",
             "Fremdsprachige Äquivalenz",
-            "Belege"
+            "Belege",
           ],
           search_patterns: ["Lexikografische Angabe"],
           search_parts: ["Nomina", "Präpositionen"],
@@ -142,14 +91,9 @@ export const useResourcesStore = defineStore("resourcesStore", {
           url: "https://www.owid.de/plus/komux/",
           tags: [],
           quest: "https://www.owid.de/plus/komux/?lem={q}",
-          search_type: "Explorative Datenbanken",
-          search_functions: [
-            "Frequenzen",
-            "Kategoriale Label",
-          ],
-          search_patterns: [
-            "dynamische Erschließung",
-          ],
+          search_type: ["Explorative Datenbanken"],
+          search_functions: ["Frequenzen", "Kategoriale Label"],
+          search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Verben", "Präpositionen", "Adjektive"],
         },
 
@@ -162,7 +106,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           img: "./img/sources/map.png",
           url: "https://www.owid.de/plus/map/",
           tags: [],
-          search_type: "Deskriptive Datenbanken",
+          search_type: ["Deskriptive Datenbanken"],
           search_functions: [
             "Belege",
             "Kategoriale Label",
@@ -182,11 +126,8 @@ export const useResourcesStore = defineStore("resourcesStore", {
           img: "./img/sources/spruchlist.png",
           url: "http://uwv.ids-mannheim.de/spruchlist/",
           tags: [],
-          search_type: "Inventare und Sammlungen",
-          search_functions: [
-            "Frequenzen",
-            "KWICs",
-            "Belege"],
+          search_type: ["Inventare und Sammlungen"],
+          search_functions: ["Frequenzen", "KWICs", "Belege"],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Feste Sätze"],
         },
@@ -200,21 +141,15 @@ export const useResourcesStore = defineStore("resourcesStore", {
           img: "./img/sources/phraskomp.png",
           url: "http://uwv.ids-mannheim.de/phraskomp/",
           tags: [],
-          search_type: "Inventare und Sammlungen",
+          search_type: ["Inventare und Sammlungen"],
           search_functions: [
-            "Frequenzen", 
+            "Frequenzen",
             "KWICs",
-            "Kategoriale Label", 
-            "Belege"
+            "Kategoriale Label",
+            "Belege",
           ],
-          search_patterns: [
-            "dynamische Erschließung",
-          ],
-          search_parts: [
-            "Nomina",
-            "Phraseme",
-            "Feste Sätze",
-          ],
+          search_patterns: ["dynamische Erschließung"],
+          search_parts: ["Nomina", "Phraseme", "Feste Sätze"],
         },
         {
           key: "Redeeinleiter",
@@ -225,12 +160,8 @@ export const useResourcesStore = defineStore("resourcesStore", {
           img: "./img/sources/redeeinleiter.png",
           url: "https://www.owid.de/plus/redeeinleiter",
           tags: [],
-          search_type: "Deskriptive Datenbanken",
-          search_functions: [
-            "Frequenzen", 
-            "Belege",
-            "Kategoriale Label"
-          ],
+          search_type: ["Deskriptive Datenbanken"],
+          search_functions: ["Frequenzen", "Belege", "Kategoriale Label"],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Verben", "Phraseme"],
         },
@@ -244,18 +175,15 @@ export const useResourcesStore = defineStore("resourcesStore", {
           url: "https://www.owid.de/wb/sprw/start.html",
           tags: [],
           quest: "https://www.owid.de/artikel/{q}",
-          search_type: "Online-Wörterbücher",
+          search_type: ["Online-Wörterbücher"],
           search_functions: [
-            "Belege", 
+            "Belege",
             "Narrative Beschreibungen",
             "Komponenten",
-            "Felder"],
-          search_patterns: [
-            "Lexikografische Angabe",
+            "Felder",
           ],
-          search_parts: [
-            "Feste Sätze"
-          ],
+          search_patterns: ["Lexikografische Angabe"],
+          search_parts: ["Feste Sätze"],
         },
         {
           key: "Verlaufsformen",
@@ -267,46 +195,32 @@ export const useResourcesStore = defineStore("resourcesStore", {
           url: "https://www.owid.de/wb/progdb/start.html",
           tags: [],
           quest: "https://www.owid.de/artikel/{q}",
-          search_type: "Deskriptive Datenbanken",
-          search_functions: [
-            "Kategoriale Label",
-            "Belege"
-          ],
-          search_patterns: [
-            "dynamische Erschließung",
-          ],
-          search_parts: [
-            "Verben",
-            "Präpositionen",
-          ],
+          search_type: ["Deskriptive Datenbanken"],
+          search_functions: ["Kategoriale Label", "Belege"],
+          search_patterns: ["dynamische Erschließung"],
+          search_parts: ["Verben", "Präpositionen"],
         },
         {
           key: "WVBF",
           nameShort: "WV-Feld Präp+GRUND",
           nameLong: "Wortverbindungsfeld zu Präposition+GRUND",
           description:
-            "<b>Wortverbindungsfeld Prep+GRUND</b> ist eine Online-Pilotstudie. Sie visualisiert die Vernetzung von Wortverbindungen und semiabstrakten Mustern des Bezugslexems GRUND in Kombination mit den Präpositionen <em>aus; auf; in; mit</em> und <em>ohne</em> (basierend auf Steyer 2013). Die hierarchisch angeordneten 50 Knoten bündeln jeweils automatisch ermittelte Angaben wie Frequenz; KWIC; Kookkurrenz; Slot-Füller und inhaltliche Beschreibungen. Bei diesem Präsentationsformat rücken die systematisierten Korpusdaten selbst ins Zentrum der Einträge.",
+            "<b>Wortverbindungsfeld Präp+GRUND</b> ist eine Online-Pilotstudie. Sie visualisiert die Vernetzung von Wortverbindungen und semiabstrakten Mustern des Bezugslexems GRUND in Kombination mit den Präpositionen <em>aus; auf; in; mit</em> und <em>ohne</em> (basierend auf Steyer 2013). Die hierarchisch angeordneten 50 Knoten bündeln jeweils automatisch ermittelte Angaben wie Frequenz; KWIC; Kookkurrenz; Slot-Füller und inhaltliche Beschreibungen. Bei diesem Präsentationsformat rücken die systematisierten Korpusdaten selbst ins Zentrum der Einträge.",
           img: "./img/sources/wvfeld.png",
           url: "http://wvonline.ids-mannheim.de/wvfelder-v3/grund-graphik.html",
           tags: [],
-          search_type: "Pilotstudien",
+          search_type: ["Pilotstudien"],
           search_functions: [
-            "Frequenzen", 
-            "KWICs", 
-            "Kookkurrenzprofile", 
+            "Frequenzen",
+            "KWICs",
+            "Kookkurrenzprofile",
             "Lückenfüllertabellen",
             "Kategoriale Label",
             "Belege",
-            "Narrative Beschreibungen"  
+            "Narrative Beschreibungen",
           ],
-          search_patterns: [
-            "Direkter Zugang"
-          ],
-          search_parts: [
-            "Nomina",
-            "Präpositionen",
-            "Phraseme",
-          ],
+          search_patterns: ["Direkter Zugang"],
+          search_parts: ["Nomina", "Präpositionen", "Phraseme"],
         },
         {
           key: "FesteWV",
@@ -318,20 +232,15 @@ export const useResourcesStore = defineStore("resourcesStore", {
           url: "https://www.owid.de/wb/uwv/start.html",
           tags: [],
           quest: "https://www.owid.de",
-          search_type: "Online-Wörterbücher",
+          search_type: ["Online-Wörterbücher"],
           search_functions: [
-            "Kategoriale Label", 
-            "Belege", 
+            "Kategoriale Label",
+            "Belege",
             "Narrative Beschreibungen",
             "Komponenten",
           ],
-          search_patterns: [
-            "Lexikografische Angabe",
-          ],
-          search_parts: [
-            "Adjektive",
-            "Phraseme",
-          ],
+          search_patterns: ["Lexikografische Angabe"],
+          search_parts: ["Adjektive", "Phraseme"],
         },
         {
           key: "DTWW",
@@ -342,18 +251,10 @@ export const useResourcesStore = defineStore("resourcesStore", {
           img: "./img/sources/dtww.png",
           url: "http://wvonline.ids-mannheim.de/dtww/dtww_komplett.htm",
           tags: [],
-          search_type: "Inventare und Sammlungen",
-          search_functions: [
-            "Belege",
-            "Fremdsprachige Äquivalenz"
-          ],
-          search_patterns: [
-            "Kein Musterzugang"
-          ],
-          search_parts: [
-           "Nomina",
-           "Phraseme"
-          ],
+          search_type: ["Inventare und Sammlungen"],
+          search_functions: ["Belege", "Fremdsprachige Äquivalenz"],
+          search_patterns: ["Kein Musterzugang"],
+          search_parts: ["Nomina", "Phraseme"],
         },
         // {
         //   key: "DRI",
@@ -364,7 +265,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
         //   img: "./img/sources/dri.png",
         //   url: "http://wvonline.ids-mannheim.de/idiome_russ/AKTE_zu_den_Akten_legen.htm",
         //   tags: [],
-        //   search_type: "Online-Wörterbücher",
+        //   search_type: ["Online-Wörterbücher"],
         //   search_functions: [
         //     "Belege",
         //     "Narrative Beschreibungen",
@@ -376,7 +277,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
         //   search_parts: [
         //     "Phraseme",
         //   ],
-        // },    
+        // },
       ],
     };
   },
@@ -462,7 +363,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
     resourcesState: function (state) {
       var res = {};
       for (var i = 0; i < state.info.length; i++) {
-        if(state.info[i].hideInSearch) continue;
+        if (state.info[i].hideInSearch) continue;
         var done = false;
         for (var key in state.valuesSelected)
           if (typeof state.info[i][key] === "string") {
@@ -472,7 +373,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
               break;
             }
           } else if (Array.isArray(state.info[i][key])) {
-            if (              
+            if (
               !state.info[i][key].some((value) =>
                 state.valuesSelected[key].includes(value)
               )

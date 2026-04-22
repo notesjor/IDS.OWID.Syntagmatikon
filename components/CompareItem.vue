@@ -1,5 +1,5 @@
 <template>
-    <v-tabs-window-item :value="value">
+    <v-window-item :key="`vwindow-${value}-${rkey}`">
         <div class="relink">
             <slot></slot>
         </div>
@@ -10,10 +10,11 @@
 
         <v-spacer></v-spacer>
         <div style="text-align: center;">
-            <nuxt-link v-if="!simple" :to="resource?.url"><v-btn prepend-icon="mdi-arrow-right-circle-outline"
-                variant="elevated" color=""><span class="nocaps">zur Ressource</span></v-btn></nuxt-link>
+            <nuxt-link v-if="!simple" :to="resource?.url" target="_blank">
+                <v-chip variant="outlined" density="compact">zur Ressource</v-chip>  
+            </nuxt-link>
         </div>
-    </v-tabs-window-item>
+    </v-window-item>
 </template>
 
 <script>

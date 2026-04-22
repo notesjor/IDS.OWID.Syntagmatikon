@@ -1,3 +1,9 @@
+<script setup>
+definePageMeta({
+  layout: "default",
+  ctitle: "Was ist das Syntagmatikon?",
+})
+</script>
 <template>
   <v-row>
     <v-col>
@@ -10,13 +16,13 @@
           <!-- <img src="/img/project-description/pd_01.png" alt="Beispiel 1 für das Syntagmatikon" /> -->
         </v-carousel-item>
         <v-carousel-item>
-          <img src="/img/project-description/pd_02.png" alt="Beispiel 2 für das Syntagmatikon" />
+          <NuxtImage src="/img/project-description/pd_02.png" alt="Beispiel 2 für das Syntagmatikon" />
         </v-carousel-item>
         <v-carousel-item>
-          <img src="/img/project-description/pd_03.png" alt="Beispiel 3 für das Syntagmatikon" />
+         <NuxtImage src="/img/project-description/pd_03.png" alt="Beispiel 3 für das Syntagmatikon" />
         </v-carousel-item>
         <v-carousel-item>
-          <img src="/img/project-description/pd_04.png" alt="Beispiel 4 für das Syntagmatikon" />
+          <NuxtImage src="/img/project-description/pd_04.png" alt="Beispiel 4 für das Syntagmatikon" />
         </v-carousel-item>
       </v-carousel>
     </v-col>
@@ -79,22 +85,3 @@
     </v-col>
   </v-row>
 </template>
-
-<script>
-export default {
-  setup() {
-    useHead({
-      htmlAttrs: {
-        lang: 'de'
-      },
-      title: 'Syntagmatikon - Was ist das Syntagmatikon?',
-      meta: [
-        {
-          name: 'description',
-          content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
-        }
-      ]
-    });
-  },
-}
-</script>

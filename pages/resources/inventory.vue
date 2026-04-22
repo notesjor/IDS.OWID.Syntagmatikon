@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <NuxtImage src="/img/resources/03.png" alt="Inventare und Sammlungen"
+    <NuxtImage src="/img/resources/inventory.png" alt="Inventare und Sammlungen"
         style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
     <p>Die Inventare im <hi>Syntagmatikon</hi> sind aus dem Korpus extrahierte oder im Korpus überprüfte große Sammlungen
         sprachlicher Ausdrücke ähnlichen Typs.</p>

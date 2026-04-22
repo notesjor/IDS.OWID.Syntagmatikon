@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <NuxtImage src="/img/resources/05.png" alt="Pilot- und Einzelstudien"
+    <NuxtImage src="/img/resources/prototypes.png" alt="Pilot- und Einzelstudien"
         style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
     <div>
         <p>Die Pilotstudien im <hi>Syntagmatikon</hi> sind exemplarische Fallstudien zu ausgewählten syntagmatischen Aspekten, bei denen neue datennahe Präsentationsformate entwickelt und ausgetestet wurden. Im Zentrum stehen Kookkurrenzprofile, Lückenfüllertabellen und KWICs.</p>
