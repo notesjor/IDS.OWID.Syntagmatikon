@@ -1,6 +1,6 @@
 export default class search {
   query = "*";
-  queryName = "match";
+  queryNameTODO = "match";
   sources = [];
 
   offset = 0;
@@ -11,35 +11,47 @@ export default class search {
   count = null;
   hits = [];
 
-  exact = true;
-  searchFuzzy = true;
-  fuzziness = 0;
-  transpositions = true;
+  exactTODO = true;
+  searchFuzzyTODO = true;
+  fuzzinessTODO = 0;
+  transpositionsTODO = true;
 
-  async search(query, sources, searchAll, searchMw, searchLayer, searchFuzzy) {
+  options = {
+    multiword: 1,
+    layer: 1,
+    fuzzy: 1
+  }
+
+  async search(query, sources, groupBySource, optionMultiword, optionLayer, optionFuzzy) {
     this.query = query;
     this.offset = 0;
     this.count = null;
 
-    this.searchFuzzy = searchFuzzy;
-    this.fuzziness = "0"; // searchFuzzy ? "AUTO" : "0";
-    this.transpositions = searchFuzzy ? true : false;
-    this.queryName = searchFuzzy ? "match" : "match_phrase";
+    this.options = {
+      multiword: optionMultiword,
+      layer: optionLayer,
+      fuzzy: optionFuzzy
+    }
 
-    if (searchAll) {
+    if (groupBySource) {
       this.sources = sources;
-      this.callSearch = this.__sendRequestMix;
+      this.callSearch = this.__searchBySource;
     } else {
       this.sources = sources;
-      this.callSearch = this.__sendRequestMerge;
+      this.callSearch = this.__searchByAbc;
     }
 
     return await this.callSearch();
   }
 
   async gotoPage(page) {
-    this.offset = (page - 1) * this.pageSize;
-    return await this.callSearch();
+    try {
+      this.offset = (page - 1) * this.pageSize;
+      return await this.callSearch();
+    } catch (e) {
+      console.log(e);
+      return [];
+    }
   }
 
   __ensureSearch() {
@@ -48,7 +60,11 @@ export default class search {
     }
   }
 
-  async __sendRequestMix() {
+  __buildQuery(){
+
+  }
+
+  async __searchBySource() {
     this.__ensureSearch();
     var res = [];
     var nmax = 0;
@@ -70,8 +86,6 @@ export default class search {
                   "dic.keyword": this.sources[i],
                 },
               },
-            ],
-            should: [
               {
                 match: {
                   lbl: {
@@ -79,7 +93,7 @@ export default class search {
                     boost: 0,
                   },
                 },
-              },
+              }
             ],
           },
         },
@@ -97,14 +111,14 @@ export default class search {
       };
 
       var q = {};
-      q[this.queryName] = {
+      q[this.queryNameTODO] = {
         key: {
           query: this.query,
         },
       };
-      if (this.searchFuzzy) {
-        q[this.queryName].key.fuzziness = this.fuzziness;
-        q[this.queryName].key.fuzzy_transpositions = this.transpositions;
+      if (this.searchFuzzyTODO) {
+        q[this.queryNameTODO].key.fuzziness = this.fuzzinessTODO;
+        q[this.queryNameTODO].key.fuzzy_transpositions = this.transpositionsTODO;
       }
       request.query.bool.must.push(q);
 
@@ -133,8 +147,8 @@ export default class search {
       };
       try {
         var response = await fetch(
-          "https://syntagmatikon.ids-mannheim.de/api/",          
-          requestOptions
+          "https://syntagmatikon.ids-mannheim.de/api/",
+          requestOptions,
         );
 
         var result = await response.json();
@@ -157,14 +171,14 @@ export default class search {
     return res;
   }
 
-  async __sendRequestMerge() {
+  async __searchByAbc() {
     this.__ensureSearch();
 
     var request = {
       track_total_hits: true,
       query: {
         bool: {
-          should: [
+          must: [
             {
               match: {
                 lbl: {
@@ -188,7 +202,7 @@ export default class search {
       },
     };
 
-    if (this.fuzziness) {
+    if (this.fuzzinessTODO) {
       request.query.bool["must"] = [
         {
           match: {
@@ -231,7 +245,7 @@ export default class search {
     try {
       var response = await fetch(
         "https://syntagmatikon.ids-mannheim.de/api/",
-        requestOptions
+        requestOptions,
       );
 
       var result = await response.json();
@@ -279,10 +293,14 @@ export default class search {
   }
 
   get countTotal() {
-    return typeof this.count === "number"
-      ? this.count === null
-        ? 0
-        : this.count
-      : Object.values(this.count).reduce((a, b) => a + b, 0);
+    try {
+      return typeof this.count === "number"
+        ? this.count === null
+          ? 0
+          : this.count
+        : Object.values(this.count).reduce((a, b) => a + b, 0);
+    } catch {
+      return 0;
+    }
   }
 }

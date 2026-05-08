@@ -97,7 +97,7 @@ useHead({
         </div>
 
         <!-- SUCH-Ergebnis -->
-        <v-tabs-window v-model="search_header" style="margin-top: -40px;">
+        <v-tabs-window v-model="search_header" style="margin-top: -40px;" v-if="results != null && results.length > 0">
           <v-tabs-window-item value="byAZ">
             <div v-for="x in results">
               <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x.lbl"></span> <span
@@ -415,7 +415,7 @@ export default {
     getResourcesShortNameGroup(key) {
       return this.resourcesStore?.getResource(key[0].dic)?.nameShort;
     },
-    /*TODO calcSearchExactness() {           
+    calcSearchExactness() {           
       this.search_exactness_syncLock = true;
       this.search_exactness_custom = "grey";
 
@@ -440,7 +440,9 @@ export default {
           this.search_exactness = 5;
           break;
       }
-    }*/
+
+      this.search_exactness_syncLock = false;
+    }
   },
   watch: {
     query: function (val) {
@@ -454,7 +456,7 @@ export default {
     page: function (val) {
       var self = this;
       self.searchApi.gotoPage(val).then(x => {
-        self.results = x;
+        self.results = x ?? [];
       });
     },
     pageSize_ByEntries: function (val) {
@@ -501,35 +503,35 @@ export default {
       this.newSearch();
       this.search_exactness_syncLock = false;
     },
-    // TODO
-    /*
     search_detail_multiword: function (val) {
-      if (val !== null && typeof val === 'object' && 'value' in val)
-        this.search_detail_multiword = val.value;
       if (this.search_exactness_syncLock)
         return;
-console.log(this.search_exactness_syncLock);
+
+      if (val !== null && typeof val === 'object' && 'value' in val)
+        this.search_detail_multiword = val.value;      
+
       this.calcSearchExactness();
       this.newSearch();
     },
     search_detail_layer: function (val) {
-      if (val !== null && typeof val === 'object' && 'value' in val)
-        this.search_detail_layer = val.value;
       if (this.search_exactness_syncLock)
         return;
-console.log(this.search_exactness_syncLock);
+
+      if (val !== null && typeof val === 'object' && 'value' in val)
+        this.search_detail_layer = val.value;
+      
       this.calcSearchExactness();
       this.newSearch();
     },
     search_detail_fuzzy: function (val) {
-      if (val !== null && typeof val === 'object' && 'value' in val)
-        this.search_detail_fuzzy = val.value;
       if (this.search_exactness_syncLock)
         return;
-console.log(this.search_exactness_syncLock);
+      if (val !== null && typeof val === 'object' && 'value' in val)
+        this.search_detail_fuzzy = val.value;
+      
       this.calcSearchExactness();
       this.newSearch();
-    }*/
+    }
   },
   computed: {
     resourcesList: function () {
