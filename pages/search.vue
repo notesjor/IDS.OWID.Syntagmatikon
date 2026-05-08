@@ -337,7 +337,7 @@ export default {
 
       search_exact: true,
 
-      search_exactness_panel: [0],
+      search_exactness_panel: [],
       search_exactness_custom: "black",
       search_exactness: 2,
       search_exactness_syncLock: false,
@@ -355,7 +355,7 @@ export default {
 
       search_detail_multiword: 1,
       search_detail_layer: 1,
-      search_detail_fuzzy: 1,
+      search_detail_fuzzy: 0,
     }
   },
   mounted() {
@@ -415,9 +415,10 @@ export default {
     getResourcesShortNameGroup(key) {
       return this.resourcesStore?.getResource(key[0].dic)?.nameShort;
     },
-    calcSearchExactness() {           
+    calcSearchExactness() {        
+      if (this.search_exactness_syncLock)
+        return;   
       this.search_exactness_syncLock = true;
-      this.search_exactness_custom = "grey";
 
       var val = this.search_detail_multiword + this.search_detail_layer + this.search_detail_fuzzy;
 
@@ -477,8 +478,7 @@ export default {
     search_exactness: function (val) {
       if (this.search_exactness_syncLock)
         return;
-      this.search_exactness_syncLock = true;
-      this.search_exactness_custom = "black";
+      this.search_exactness_syncLock = true;      
 
       switch (val) {
         case 1:
@@ -500,34 +500,35 @@ export default {
           break;
       }
 
-      this.newSearch();
+      this.newSearch();    
       this.search_exactness_syncLock = false;
     },
     search_detail_multiword: function (val) {
-      if (this.search_exactness_syncLock)
-        return;
-
       if (val !== null && typeof val === 'object' && 'value' in val)
         this.search_detail_multiword = val.value;      
+
+              if (this.search_exactness_syncLock)
+        return;
 
       this.calcSearchExactness();
       this.newSearch();
     },
     search_detail_layer: function (val) {
-      if (this.search_exactness_syncLock)
-        return;
-
       if (val !== null && typeof val === 'object' && 'value' in val)
         this.search_detail_layer = val.value;
+
+              if (this.search_exactness_syncLock)
+        return;
       
       this.calcSearchExactness();
       this.newSearch();
     },
     search_detail_fuzzy: function (val) {
-      if (this.search_exactness_syncLock)
-        return;
       if (val !== null && typeof val === 'object' && 'value' in val)
         this.search_detail_fuzzy = val.value;
+
+              if (this.search_exactness_syncLock)
+        return;
       
       this.calcSearchExactness();
       this.newSearch();

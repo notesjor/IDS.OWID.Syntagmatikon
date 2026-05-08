@@ -50,7 +50,7 @@ export default class search {
       this.offset = (page - 1) * this.pageSize;
       return await this.callSearch();
     } catch (e) {
-      console.log(e);
+      console.log("error", e);
       return [];
     }
   }
@@ -206,8 +206,6 @@ export default class search {
         request.query.bool.must.push(esQuery);
       }
 
-      console.log(JSON.stringify(request));
-
       var requestOptions = {
         method: "POST",
         headers: myHeaders,
@@ -286,8 +284,6 @@ export default class search {
       redirect: "follow",
     };
 
-    console.log(JSON.stringify(request));
-
     try {
       var response = await fetch(
         "https://syntagmatikon.ids-mannheim.de/api/",
@@ -309,7 +305,6 @@ export default class search {
   }
 
   __esHighlightToSource(result) {
-    console.log(result);
     var res = result.hits.hits.map((x) => x._source);
     for (var i = 0; i < res.length; i++) {
       if (
@@ -324,7 +319,6 @@ export default class search {
   }
 
   __esHighlightToSourceSingle(result, i) {
-    console.log(result);
     var res = result.hits.hits[i]._source;
     if (
       res.lbl &&
