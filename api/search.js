@@ -1,4 +1,5 @@
 export default class search {
+  baseUrl = "http://lexik02.ids-mannheim.de/syntagmatikon-beta-index/";
   query = "*";
   sources = [];
 
@@ -214,7 +215,7 @@ export default class search {
       };
       try {
         var response = await fetch(
-          "https://syntagmatikon.ids-mannheim.de/api/",
+          this.baseUrl,
           requestOptions,
         );
 
@@ -286,7 +287,7 @@ export default class search {
 
     try {
       var response = await fetch(
-        "https://syntagmatikon.ids-mannheim.de/api/",
+        this.baseUrl,
         requestOptions,
       );
 
