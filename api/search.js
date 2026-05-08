@@ -67,7 +67,7 @@ export default class search {
             must: [
               {
                 term: {
-                  "dic.keyword": this.sources[i],
+                  "dic": this.sources[i],
                 },
               },
             ],
@@ -85,7 +85,7 @@ export default class search {
         },
         size: this.pageSize,
         from: this.offset,
-        sort: [{ "key.keyword": "asc" }],
+        sort: [{ "key": "asc" }],
         highlight: {
           fields: {
             lbl: {
@@ -117,13 +117,15 @@ export default class search {
               },
               {
                 term: {
-                  "dic.keyword": this.sources[i],
+                  "dic": this.sources[i],
                 },
               },
             ],
           },
         };
       }
+
+      console.log(JSON.stringify(request));
 
       var requestOptions = {
         method: "POST",
@@ -178,7 +180,7 @@ export default class search {
       },
       size: this.pageSize,
       from: this.offset,
-      sort: [{ "key.keyword": "asc" }],
+      sort: [{ "key": "asc" }],
       highlight: {
         pre_tags: ["<span class='highlight'>"],
         post_tags: ["</span>"],
@@ -213,7 +215,7 @@ export default class search {
     if (this.sources.length > 0) {
       request.query.bool.must.push({
         terms: {
-          "dic.keyword": this.sources,
+          "dic": this.sources,
         },
       });
     }
