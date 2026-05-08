@@ -1,6 +1,5 @@
 export default class search {
   query = "*";
-  queryNameTODO = "match";
   sources = [];
 
   offset = 0;
@@ -11,18 +10,20 @@ export default class search {
   count = null;
   hits = [];
 
-  exactTODO = true;
-  searchFuzzyTODO = true;
-  fuzzinessTODO = 0;
-  transpositionsTODO = true;
-
   options = {
     multiword: 1,
     layer: 1,
-    fuzzy: 1
-  }
+    fuzzy: 1,
+  };
 
-  async search(query, sources, groupBySource, optionMultiword, optionLayer, optionFuzzy) {
+  async search(
+    query,
+    sources,
+    groupBySource,
+    optionMultiword,
+    optionLayer,
+    optionFuzzy,
+  ) {
     this.query = query;
     this.offset = 0;
     this.count = null;
@@ -30,8 +31,8 @@ export default class search {
     this.options = {
       multiword: optionMultiword,
       layer: optionLayer,
-      fuzzy: optionFuzzy
-    }
+      fuzzy: optionFuzzy,
+    };
 
     if (groupBySource) {
       this.sources = sources;
@@ -60,8 +61,73 @@ export default class search {
     }
   }
 
-  __buildQuery(){
+  __buildQuery() {
+    var queryString = (this.query || "").trim();
+    if (queryString === "") {
+      return { match_all: {} };
+    }
 
+    var field;
+    switch (this.options.layer) {
+      case 0:
+        field = "lbl.L0";
+        break;
+      case 1:
+        field = "lbl.L1";
+        break;
+      case 2:
+        field = "lbl.L2";
+        break;
+      default:
+        field = "lbl";
+    }
+
+    var fuzzy;
+    if (this.options.fuzzy === 1) {
+      fuzzy = "AUTO";
+    } else if (this.options.fuzzy === 2) {
+      fuzzy = 2;
+    }
+
+    // Wenn exakte Wortfolge gefordert ist, dann einfach match_phrase verwenden:
+    if (this.options.multiword === 0) {
+      var phraseQuery = { query: queryString };
+      if (fuzzy !== undefined) {
+        phraseQuery.fuzziness = fuzzy;
+      }      
+      return { match_phrase: { [field]: phraseQuery } };
+    }
+
+    // Ansonsten die Query in Tokens aufteilen und jedes Token separat matchen:
+    var tokens = queryString.split(/\s+/).filter(function (token) {
+      return token.length > 0;
+    });
+    if (tokens.length === 0) {
+      return { match_all: {} };
+    }
+
+    var matches = tokens.map(function (token) {
+      var matchQuery = { query: token };
+      if (fuzzy !== undefined) {
+        matchQuery.fuzziness = fuzzy;
+      }
+      return { match: { [field]: matchQuery } };
+    });
+
+    if (this.options.multiword === 2) {
+      return {
+        bool: {
+          should: matches,
+          minimum_should_match: 1,
+        },
+      };
+    }
+
+    return {
+      bool: {
+        must: matches,
+      },
+    };
   }
 
   async __searchBySource() {
@@ -75,69 +141,72 @@ export default class search {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
+    var esQuery = this.__buildQuery();
     for (var i = 0; i < this.sources.length; i++) {
-      var request = {
-        track_total_hits: true,
-        query: {
-          bool: {
-            must: [
-              {
-                term: {
-                  "dic.keyword": this.sources[i],
+      var request;
+      // Wenn Query leer:
+      if (!this.query || this.query.trim() === "") {
+        request = {
+          track_total_hits: true,
+          query: {
+            bool: {
+              must: [
+                {
+                  match_all: {},
                 },
-              },
-              {
-                match: {
-                  lbl: {
-                    query: this.query,
-                    boost: 0,
+                {
+                  term: {
+                    "dic": this.sources[i],
                   },
                 },
-              }
-            ],
-          },
-        },
-        size: this.pageSize,
-        from: this.offset,
-        sort: [{ "key.keyword": "asc" }],
-        highlight: {
-          fields: {
-            lbl: {
-              pre_tags: ["<span class='highlight'>"],
-              post_tags: ["</span>"],
+              ],
             },
           },
-        },
-      };
-
-      var q = {};
-      q[this.queryNameTODO] = {
-        key: {
-          query: this.query,
-        },
-      };
-      if (this.searchFuzzyTODO) {
-        q[this.queryNameTODO].key.fuzziness = this.fuzzinessTODO;
-        q[this.queryNameTODO].key.fuzzy_transpositions = this.transpositionsTODO;
-      }
-      request.query.bool.must.push(q);
-
-      if (!this.query || this.query.trim() === "") {
-        request.query = {
-          bool: {
-            must: [
-              {
-                match_all: {},
+          size: this.pageSize,
+          from: this.offset,
+          sort: [{ "lbl.icu": "asc" }],
+          highlight: {
+            fields: {
+              key: {
+                pre_tags: ["<span class='highlight'>"],
+                post_tags: ["</span>"],
               },
-              {
-                term: {
-                  "dic.keyword": this.sources[i],
-                },
-              },
-            ],
+            },
           },
         };
+      }       
+      else // Wenn Query gesetzt ist.
+      {
+        request = {
+          track_total_hits: true,
+          query: {
+            bool: {
+              must: [
+                {
+                  term: {
+                    "dic": this.sources[i],
+                  },
+                },
+              ],
+            },
+          },
+          size: this.pageSize,
+          from: this.offset,
+          sort: [{ "lbl.icu": "asc" }],
+          highlight: {
+            fields: {
+              key: {
+                pre_tags: ["<span class='highlight'>"],
+                post_tags: ["</span>"],
+              },
+            },
+          },
+        };
+
+        request.query.bool.must.push(esQuery);
       }
+
+      console.log(JSON.stringify(request));
 
       var requestOptions = {
         method: "POST",
@@ -174,25 +243,17 @@ export default class search {
   async __searchByAbc() {
     this.__ensureSearch();
 
+    var esQuery = this.__buildQuery();
     var request = {
       track_total_hits: true,
       query: {
         bool: {
-          must: [
-            {
-              match: {
-                lbl: {
-                  query: this.query,
-                  boost: 0,
-                },
-              },
-            },
-          ],
+          must: []
         },
       },
       size: this.pageSize,
       from: this.offset,
-      sort: [{ "key.keyword": "asc" }],
+      sort: [{ "lbl.icu": "asc" }],
       highlight: {
         pre_tags: ["<span class='highlight'>"],
         post_tags: ["</span>"],
@@ -201,24 +262,7 @@ export default class search {
         },
       },
     };
-
-    if (this.fuzzinessTODO) {
-      request.query.bool["must"] = [
-        {
-          match: {
-            key: this.query,
-          },
-        },
-      ];
-    } else {
-      request.query.bool["must"] = [
-        {
-          match_phrase: {
-            key: this.query,
-          },
-        },
-      ];
-    }
+    request.query.bool.must.push(esQuery);
 
     if (!this.query || this.query.trim() === "") {
       request.query = { bool: { must: [{ match_all: {} }] } };
@@ -227,7 +271,7 @@ export default class search {
     if (this.sources.length > 0) {
       request.query.bool.must.push({
         terms: {
-          "dic.keyword": this.sources,
+          "dic": this.sources,
         },
       });
     }
@@ -241,6 +285,8 @@ export default class search {
       body: JSON.stringify(request),
       redirect: "follow",
     };
+
+    console.log(JSON.stringify(request));
 
     try {
       var response = await fetch(
@@ -263,27 +309,29 @@ export default class search {
   }
 
   __esHighlightToSource(result) {
+    console.log(result);
     var res = result.hits.hits.map((x) => x._source);
     for (var i = 0; i < res.length; i++) {
       if (
         res[i].lbl &&
         result.hits.hits[i].highlight &&
-        result.hits.hits[i].highlight.lbl
+        result.hits.hits[i].highlight.key
       ) {
-        res[i].lbl = result.hits.hits[i].highlight.lbl[0];
+        res[i].lbl = result.hits.hits[i].highlight.key[0];
       }
     }
     return res;
   }
 
   __esHighlightToSourceSingle(result, i) {
+    console.log(result);
     var res = result.hits.hits[i]._source;
     if (
       res.lbl &&
       result.hits.hits[i].highlight &&
-      result.hits.hits[i].highlight.lbl
+      result.hits.hits[i].highlight.key
     ) {
-      res.lbl = result.hits.hits[i].highlight.lbl[0];
+      res.lbl = result.hits.hits[i].highlight.key[0];
     }
     return res;
   }

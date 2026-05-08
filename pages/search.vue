@@ -339,7 +339,7 @@ export default {
 
       search_exactness_panel: [0],
       search_exactness_custom: "black",
-      search_exactness: 3,
+      search_exactness: 2,
       search_exactness_syncLock: false,
       search_exactness_labels: {
         1: 'Exakt',
