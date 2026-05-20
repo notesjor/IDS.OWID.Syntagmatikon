@@ -1,5 +1,5 @@
 export default class search {
-  baseUrl = "http://lexik02.ids-mannheim.de/syntagmatikon-beta-index/";
+  baseUrl = "https://syntagmatikon.ids-mannheim.de/api/"; // "http://lexik02.ids-mannheim.de/syntagmatikon-beta-index/";
   query = "*";
   sources = [];
 
@@ -98,6 +98,17 @@ export default class search {
       }      
       return { match_phrase: { [field]: phraseQuery } };
     }
+    // Wenn eine exakte Zeichenfolge gefordert ist, dann nutze regular expressions:
+    if (this.options.multiword === 2) {
+      return {
+        regexp: {
+          [field]: {
+            value: `.*${queryString}.*`,
+            case_insensitive: true
+          }
+        }
+      };
+    }
 
     // Ansonsten die Query in Tokens aufteilen und jedes Token separat matchen:
     var tokens = queryString.split(/\s+/).filter(function (token) {
@@ -129,6 +140,19 @@ export default class search {
         must: matches,
       },
     };
+  }
+
+  __buildHighlightQuery() {
+    return {
+      lbl: {
+        require_field_match: false,
+        highlight_query: {
+          match: {
+            lbl: this.query,
+          }
+        }
+      },
+    }
   }
 
   async __searchBySource() {
@@ -166,14 +190,6 @@ export default class search {
           size: this.pageSize,
           from: this.offset,
           sort: [{ "lbl.icu": "asc" }],
-          highlight: {
-            fields: {
-              key: {
-                pre_tags: ["<span class='highlight'>"],
-                post_tags: ["</span>"],
-              },
-            },
-          },
         };
       }       
       else // Wenn Query gesetzt ist.
@@ -195,12 +211,7 @@ export default class search {
           from: this.offset,
           sort: [{ "lbl.icu": "asc" }],
           highlight: {
-            fields: {
-              key: {
-                pre_tags: ["<span class='highlight'>"],
-                post_tags: ["</span>"],
-              },
-            },
+            fields: this.__buildHighlightQuery()
           },
         };
 
@@ -224,7 +235,8 @@ export default class search {
           this.count[this.sources[i]] = result.hits.total.value;
         if (result.hits.total.value > nmax) nmax = result.hits.total.value;
         this.hits[this.sources[i]] = result.hits.total.value;
-
+if(result.hits.total.value > 0)
+  console.log(JSON.stringify(request))
         var tmp = [];
         for (var j = 0; j < result.hits.hits.length; j++)
           tmp.push(this.__esHighlightToSourceSingle(result, j));
@@ -256,9 +268,7 @@ export default class search {
       highlight: {
         pre_tags: ["<span class='highlight'>"],
         post_tags: ["</span>"],
-        fields: {
-          lbl: {},
-        },
+        fields: this.__buildHighlightQuery()
       },
     };
     request.query.bool.must.push(esQuery);
@@ -311,9 +321,9 @@ export default class search {
       if (
         res[i].lbl &&
         result.hits.hits[i].highlight &&
-        result.hits.hits[i].highlight.key
+        result.hits.hits[i].highlight.lbl
       ) {
-        res[i].lbl = result.hits.hits[i].highlight.key[0];
+        res[i].lbl = result.hits.hits[i].highlight.lbl[0];
       }
     }
     return res;
@@ -321,12 +331,13 @@ export default class search {
 
   __esHighlightToSourceSingle(result, i) {
     var res = result.hits.hits[i]._source;
+    
     if (
       res.lbl &&
       result.hits.hits[i].highlight &&
-      result.hits.hits[i].highlight.key
+      result.hits.hits[i].highlight.lbl
     ) {
-      res.lbl = result.hits.hits[i].highlight.key[0];
+      res.lbl = result.hits.hits[i].highlight.lbl[0];
     }
     return res;
   }
