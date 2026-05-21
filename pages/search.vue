@@ -416,6 +416,8 @@ export default {
       return this.resourcesStore?.getResource(key[0].dic)?.nameShort;
     },
     calcSearchExactness() {        
+      return; // vorerst auskommentiert, da die Detaileinstellungen noch nicht vollständig implementiert sind.
+
       if (this.search_exactness_syncLock)
         return;   
       this.search_exactness_syncLock = true;
