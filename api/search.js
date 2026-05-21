@@ -1,5 +1,5 @@
 export default class search {
-  baseUrl = "https://syntagmatikon.ids-mannheim.de/api/"; // "http://lexik02.ids-mannheim.de/syntagmatikon-beta-index/";
+  baseUrl = "https://syntagmatikon.ids-mannheim.de/api/"; // "http://lexik02.ids-mannheim.de/syntagmatikon-index/";
   query = "*";
   sources = [];
 
