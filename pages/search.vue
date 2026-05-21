@@ -349,8 +349,8 @@ export default {
         5: 'Kreativ'
       },
 
-      search_detail_multiword_labels: [{ text: 'Exakte Abfolge', value: 0 }, { text: 'Beliebige Reihenfolge', value: 1 }, { text: 'Beliebiges Wort', value: 2 }],
-      search_detail_layer_labels: [{ text: 'Exakte Wortform', value: 0 }, { text: 'Lemmatisiert', value: 1 }, { text: 'Reduziertes Lemma', value: 2 }],
+      search_detail_multiword_labels: [{ text: 'Exakte Wortfolge', value: 0 }, { text: 'Exakte Zeichenfolge', value: 1 }, { text: 'Beliebig', value: 2 }],
+      search_detail_layer_labels: [{ text: 'Exakte Wortform', value: 0 }, { text: 'Vereinfachte Form', value: 1 }, { text: 'Lemma', value: 2 }],
       search_detail_fuzzy_labels: [{ text: 'Deaktiviert', value: 0 }, { text: 'Dynamisch', value: 1 }, { text: 'Experimentell', value: 2 }],
 
       search_detail_multiword: 1,

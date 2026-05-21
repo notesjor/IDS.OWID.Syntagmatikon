@@ -33,6 +33,7 @@ export default class search {
       multiword: optionMultiword,
       layer: optionLayer,
       fuzzy: optionFuzzy,
+      highlightField: "lbl" // wird später gesetzt.
     };
 
     if (groupBySource) {
@@ -82,6 +83,7 @@ export default class search {
       default:
         field = "lbl";
     }
+    this.options.highlightField = field;
 
     var fuzzy;
     if (this.options.fuzzy === 1) {
@@ -99,7 +101,7 @@ export default class search {
       return { match_phrase: { [field]: phraseQuery } };
     }
     // Wenn eine exakte Zeichenfolge gefordert ist, dann nutze regular expressions:
-    if (this.options.multiword === 2) {
+    if (this.options.multiword === 1) {
       return {
         regexp: {
           [field]: {
@@ -144,11 +146,11 @@ export default class search {
 
   __buildHighlightQuery() {
     return {
-      lbl: {
+      [this.options.highlightField]: {
         require_field_match: false,
         highlight_query: {
           match: {
-            lbl: this.query,
+            [this.options.highlightField]: this.query,
           }
         }
       },
