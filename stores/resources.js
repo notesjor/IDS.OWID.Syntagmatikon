@@ -12,7 +12,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           nameShort: "PREPCON<sup>online</sup>",
           nameLong: "PREPCON - Präposition-Nomen-Verbindungen im Kontext",
           description:
-            "<b>PREPCON<sup>online</sup></b> ist ein neuartiges korpusgesteuertes Präsentationsformat. Es bietet Informationen zum Gebrauch von ca. 80.000 Präposition-Nomen-Verbindungen des Deutschen (z.B. <em>über Jahre; nach Belieben</em>). Abrufbar sind systematisierte Korpusdaten (Frequenzen, KWICs, Volltextstellen, Kookkurrenzprofile, <em>lexpan</em>-Mustertabellen) und narrative Kommentare. Diese verfestigten Ausdrücke und ihnen zugrunde liegende Muster werden in drei Modulen dokumentiert: PREPCON<sup>explorativ</sup>; PREPCON<sup>temporal</sup> (mit den Unter-Rubriken \"Inventar temporaler PNs\" und \"Kurzartikel zu temporalen PNs\"); PREPCON<sup>kontrastiv</sup>.",
+            '<b>PREPCON<sup>online</sup></b> ist ein neuartiges korpusgesteuertes Präsentationsformat. Es bietet Informationen zum Gebrauch von ca. 80.000 Präposition-Nomen-Verbindungen des Deutschen (z.B. <em>über Jahre; nach Belieben</em>). Abrufbar sind systematisierte Korpusdaten (Frequenzen, KWICs, Volltextstellen, Kookkurrenzprofile, <em>lexpan</em>-Mustertabellen) und narrative Kommentare. Diese verfestigten Ausdrücke und ihnen zugrunde liegende Muster werden in drei Modulen dokumentiert: PREPCON<sup>explorativ</sup>; PREPCON<sup>temporal</sup> (mit den Unter-Rubriken "Inventar temporaler PNs" und "Kurzartikel zu temporalen PNs"); PREPCON<sup>kontrastiv</sup>.',
           img: "./img/sources/prepcon.png",
           url: "http://uwv.ids-mannheim.de/prepcon/prepcon_online.html",
           hideInSearch: true,
@@ -34,8 +34,9 @@ export const useResourcesStore = defineStore("resourcesStore", {
         },
         {
           key: "PREPCON_temp",
-          nameShort: 'PREPCON<sup>temporal</sup>',
-          nameLong: "PREPCON<sup>temporal</sup> - Kurzartikel und Inventar zu temporalen Präposition-Nomen-Verbindungen im Kontext",
+          nameShort: "PREPCON<sup>temporal</sup>",
+          nameLong:
+            "PREPCON<sup>temporal</sup> - Kurzartikel und Inventar zu temporalen Präposition-Nomen-Verbindungen im Kontext",
           description: "",
           img: "./img/sources/prepcon_temp.png",
           url: "http://uwv.ids-mannheim.de/prepcon/modul2",
@@ -43,14 +44,15 @@ export const useResourcesStore = defineStore("resourcesStore", {
           quest: "",
           search_type: ["Inventare und Sammlungen"],
           search_functions: [
-		    "Frequenzen", 
-			"KWICs", 
-			"Kategoriale Label", 
-			"Kookkurrenzprofile",
+            "Frequenzen",
+            "KWICs",
+            "Kategoriale Label",
+            "Kookkurrenzprofile",
             "Lückenfüllertabellen",
             "Komponenten",
             "Felder",
-            "Belege"],
+            "Belege",
+          ],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Präpositionen"],
         },
@@ -331,7 +333,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
     switchResource: function (key) {
       if (this.resourcesDeselected.includes(key)) {
         this.resourcesDeselected = this.resourcesDeselected.filter(
-          (item) => item !== key
+          (item) => item !== key,
         );
       } else {
         this.resourcesDeselected.push(key);
@@ -375,7 +377,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           } else if (Array.isArray(state.info[i][key])) {
             if (
               !state.info[i][key].some((value) =>
-                state.valuesSelected[key].includes(value)
+                state.valuesSelected[key].includes(value),
               )
             ) {
               res[state.info[i].key] = -1;
