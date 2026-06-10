@@ -31,6 +31,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_functions: ["Frequenzen", "KWICs"],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Präpositionen"],
+          search_preset: [2, 2, 0],
         },
         {
           key: "PREPCON_temp",
@@ -55,6 +56,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           ],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Präpositionen"],
+          search_preset: [2, 2, 0],
         },
         {
           key: "PREPCON_kon",
@@ -82,6 +84,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           ],
           search_patterns: ["Lexikografische Angabe"],
           search_parts: ["Nomina", "Präpositionen"],
+          search_preset: [2, 2, 0],
         },
         {
           key: "KoMuX",
@@ -97,8 +100,8 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_functions: ["Frequenzen", "Kategoriale Label"],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Verben", "Präpositionen", "Adjektive"],
+          search_preset: [1, 1, 1],
         },
-
         {
           key: "MAP",
           nameShort: "MAP",
@@ -117,6 +120,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           ],
           search_patterns: ["Direkter Zugang"],
           search_parts: ["Verben", "Präpositionen", "Phraseme"],
+          search_preset: [1, 2, 0],
         },
         {
           key: "SpruchList",
@@ -132,6 +136,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_functions: ["Frequenzen", "KWICs", "Belege"],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Feste Sätze"],
+          search_preset: [1, 1, 1],
         },
         {
           key: "PhrasKomp",
@@ -152,6 +157,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           ],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Phraseme", "Feste Sätze"],
+          search_preset: [0, 2, 2],
         },
         {
           key: "Redeeinleiter",
@@ -166,6 +172,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_functions: ["Frequenzen", "Belege", "Kategoriale Label"],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Verben", "Phraseme"],
+          search_preset: [1, 1, 1],
         },
         {
           key: "SPRW",
@@ -186,6 +193,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           ],
           search_patterns: ["Lexikografische Angabe"],
           search_parts: ["Feste Sätze"],
+          search_preset: [2, 1, 2],
         },
         {
           key: "Verlaufsformen",
@@ -201,6 +209,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_functions: ["Kategoriale Label", "Belege"],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Verben", "Präpositionen"],
+          search_preset: [1, 2, 0],
         },
         {
           key: "WVBF",
@@ -223,6 +232,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           ],
           search_patterns: ["Direkter Zugang"],
           search_parts: ["Nomina", "Präpositionen", "Phraseme"],
+          search_preset: [1, 2, 0],
         },
         {
           key: "FesteWV",
@@ -243,6 +253,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           ],
           search_patterns: ["Lexikografische Angabe"],
           search_parts: ["Adjektive", "Phraseme"],
+          search_preset: [2, 2, 0],
         },
         {
           key: "DTWW",
@@ -257,6 +268,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_functions: ["Belege", "Fremdsprachige Äquivalenz"],
           search_patterns: ["Kein Musterzugang"],
           search_parts: ["Nomina", "Phraseme"],
+          search_preset: [2, 2, 1],
         },
         // {
         //   key: "DRI",

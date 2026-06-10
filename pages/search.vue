@@ -36,8 +36,7 @@ useHead({
         <div style="margin: -20px 0px 50px 0px;">
           <div style="display: table; width: 100%; table-layout: fixed;">
             <div style="display: table-cell; width: 130px; text-align: center;">
-              <div style="position: relative; top:10px"
-              >Genauigkeit:</div>
+              <div style="position: relative; top:10px">Genauigkeit:</div>
             </div>
             <div style="display: table-cell; width: auto;">
               <v-slider v-model="search_exactness" :min="1" :max="5" :step="1" :ticks="search_exactness_labels"
@@ -46,8 +45,7 @@ useHead({
               </v-slider>
             </div>
             <div style="display: table-cell; width: 60px; text-align: center;">
-              <v-btn rounded="true" elevation="1"
-              style="margin:10px 0px 0px 0px"
+              <v-btn rounded="true" elevation="1" style="margin:10px 0px 0px 0px"
                 :icon="search_exactness_panel.length > 0 ? 'mdi-menu-up' : 'mdi-menu-down'"
                 :color="search_exactness_panel.length > 0 ? 'blue' : 'white'"
                 @click="search_exactness_panel = search_exactness_panel.length > 0 ? [] : [0]"></v-btn>
@@ -286,6 +284,42 @@ useHead({
               </v-expansion-panels>
             </v-expansion-panel-text>
           </v-expansion-panel>
+          <v-expansion-panel elevation="0" value="searchProfile">
+            <v-expansion-panel-title style="font-weight: 500; font-size: 1.2em;">
+              Suchprofile
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <p style="font-size:0.85rem; margin-top:-5px">
+                Über den Schieberegler "Genauigkeit" können fünf allgemeine Profile gewählt und bei Bedarf manuell
+                angepasst werden.
+                Hier finden Sie zusätzlich speziell auf die aktuelle Ressource abgestimmte Profile zur Auswahl.
+              </p>
+              <div>
+                <div v-for="r in resourcesList" :key="r.key">
+                  <div>{{ r.key }}</div>
+                  <div style="margin:-15px 0px 20px 10px">
+                    <v-row>
+                      <v-col>
+                        <search-preset-chip :resource="this.resourcesStore.getResource(r.key)"
+                          :presetId="0" :selectedValue="this.search_detail_multiword"
+                          @detail="(val) => this.search_detail_multiword = val"></search-preset-chip>
+                      </v-col>
+                      <v-col>
+                        <search-preset-chip :resource="this.resourcesStore.getResource(r.key)"
+                          :presetId="1" :selectedValue="this.search_detail_layer"
+                          @detail="(val) => this.search_detail_layer = val"></search-preset-chip>
+                      </v-col>
+                      <v-col>
+                        <search-preset-chip :resource="this.resourcesStore.getResource(r.key)"
+                          :presetId="2" :selectedValue="this.search_detail_fuzzy"
+                          @detail="(val) => this.search_detail_fuzzy = val"></search-preset-chip>
+                      </v-col>
+                    </v-row>
+                  </div>
+                </div>
+              </div>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
         </v-expansion-panels>
       </v-col>
     </v-row>
@@ -415,11 +449,11 @@ export default {
     getResourcesShortNameGroup(key) {
       return this.resourcesStore?.getResource(key[0].dic)?.nameShort;
     },
-    calcSearchExactness() {        
+    calcSearchExactness() {
       return; // vorerst auskommentiert, da die Detaileinstellungen noch nicht vollständig implementiert sind.
 
       if (this.search_exactness_syncLock)
-        return;   
+        return;
       this.search_exactness_syncLock = true;
 
       var val = this.search_detail_multiword + this.search_detail_layer + this.search_detail_fuzzy;
@@ -480,7 +514,7 @@ export default {
     search_exactness: function (val) {
       if (this.search_exactness_syncLock)
         return;
-      this.search_exactness_syncLock = true;      
+      this.search_exactness_syncLock = true;
 
       switch (val) {
         case 1:
@@ -502,14 +536,14 @@ export default {
           break;
       }
 
-      this.newSearch();    
+      this.newSearch();
       this.search_exactness_syncLock = false;
     },
     search_detail_multiword: function (val) {
       if (val !== null && typeof val === 'object' && 'value' in val)
-        this.search_detail_multiword = val.value;      
+        this.search_detail_multiword = val.value;
 
-              if (this.search_exactness_syncLock)
+      if (this.search_exactness_syncLock)
         return;
 
       this.calcSearchExactness();
@@ -519,9 +553,9 @@ export default {
       if (val !== null && typeof val === 'object' && 'value' in val)
         this.search_detail_layer = val.value;
 
-              if (this.search_exactness_syncLock)
+      if (this.search_exactness_syncLock)
         return;
-      
+
       this.calcSearchExactness();
       this.newSearch();
     },
@@ -529,9 +563,9 @@ export default {
       if (val !== null && typeof val === 'object' && 'value' in val)
         this.search_detail_fuzzy = val.value;
 
-              if (this.search_exactness_syncLock)
+      if (this.search_exactness_syncLock)
         return;
-      
+
       this.calcSearchExactness();
       this.newSearch();
     }
