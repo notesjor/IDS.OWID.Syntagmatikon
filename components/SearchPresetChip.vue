@@ -1,22 +1,25 @@
 <template>
-  <div @click="$emit('detail', this.resource.search_preset[this.presetId])" style="cursor: pointer">
+  <div @click="$emit('detail', this.presetValue)" style="cursor: pointer">
     <div class="chip-card-title">{{ this.presetNames[this.presetId] }}</div>
     <div :class="this.color">
-      {{ this.prestDict[this.presetId][this.resource.search_preset[this.presetId]] }}
+      {{ this.prestDict[this.presetId][this.presetValue] }}
     </div>
   </div>
 </template>
 
 <script>
+import { useResourcesStore } from '~/stores/resources';
+
 export default {
   props: {
-    resource: { type: Object, default: () => ({}) },
+    rkey: { type: String, default: 'xxx' },
     presetId: { type: Number, default: 0 },
     selectedValue: { type: Number, default: 0 }
   },
   emits: ['detail'],
   data() {
     return {
+      resourcesStore: useResourcesStore(),
       presetNames: {
         0: "Mehrwortsuche",
         1: "Suchebene",
@@ -31,7 +34,7 @@ export default {
   },
   computed: {
     color() {
-      var diff = Math.abs(this.selectedValue - this.resource.search_preset[this.presetId]);
+      var diff = Math.abs(this.selectedValue - this.presetValue);
       if (diff === 0) {
         return 'chip-card-content-green';
       } else if (diff === 1) {
@@ -39,6 +42,12 @@ export default {
       } else {
         return 'chip-card-content-red';
       }
+    },
+    resource(){
+      return this.resourcesStore?.getResource(this.rkey) ?? {};
+    },
+    presetValue() {
+      return this.resourcesStore?.getResource(this.rkey)?.search_preset[this.presetId] ?? 1;
     }
   }
 }

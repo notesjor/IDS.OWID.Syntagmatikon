@@ -298,20 +298,20 @@ useHead({
                 <div v-for="r in resourcesList" :key="r.key">
                   <div>{{ r.key }}</div>
                   <div style="margin:-15px 0px 20px 10px">
-                    <v-row>
+                    <v-row>                      
                       <v-col>
-                        <search-preset-chip :resource="this.resourcesStore.getResource(r.key)"
-                          :presetId="0" :selectedValue="this.search_detail_multiword"
+                        <search-preset-chip :rkey="r.key"
+                          :presetId="0" :selectedValue="search_detail_multiword"
                           @detail="(val) => this.search_detail_multiword = val"></search-preset-chip>
                       </v-col>
                       <v-col>
-                        <search-preset-chip :resource="this.resourcesStore.getResource(r.key)"
-                          :presetId="1" :selectedValue="this.search_detail_layer"
+                        <search-preset-chip :rkey="r.key"
+                          :presetId="1" :selectedValue="search_detail_layer"
                           @detail="(val) => this.search_detail_layer = val"></search-preset-chip>
                       </v-col>
                       <v-col>
-                        <search-preset-chip :resource="this.resourcesStore.getResource(r.key)"
-                          :presetId="2" :selectedValue="this.search_detail_fuzzy"
+                        <search-preset-chip :rkey="r.key"
+                          :presetId="2" :selectedValue="search_detail_fuzzy"
                           @detail="(val) => this.search_detail_fuzzy = val"></search-preset-chip>
                       </v-col>
                     </v-row>
@@ -405,7 +405,7 @@ export default {
         this.page = 1;
         var self = this;
         self.searchApi.search(self.query,
-          self.resourcesStore.resourceUsedForSearch,
+          self.resourcesStore?.resourceUsedForSearch,
           self.search_header_switch,
           self.search_detail_multiword,
           self.search_detail_layer,
@@ -575,7 +575,7 @@ export default {
       if (this.resourcesStore == null)
         return [];
 
-      var data = this.resourcesStore.resourcesState;
+      var data = this.resourcesStore?.resourcesState;
       return Object.keys(data).map(x => {
         return {
           key: x,

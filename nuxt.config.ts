@@ -106,5 +106,9 @@ export default defineNuxtConfig({
     name: "Syntagmatikon"
   },
 
+  sitemap: {
+    zeroRuntime: true
+  },
+
   compatibilityDate: "2024-08-12",
 })

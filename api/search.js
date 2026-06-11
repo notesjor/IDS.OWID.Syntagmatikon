@@ -237,8 +237,7 @@ export default class search {
           this.count[this.sources[i]] = result.hits.total.value;
         if (result.hits.total.value > nmax) nmax = result.hits.total.value;
         this.hits[this.sources[i]] = result.hits.total.value;
-if(result.hits.total.value > 0)
-  console.log(JSON.stringify(request))
+
         var tmp = [];
         for (var j = 0; j < result.hits.hits.length; j++)
           tmp.push(this.__esHighlightToSourceSingle(result, j));

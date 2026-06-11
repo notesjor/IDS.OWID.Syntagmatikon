@@ -105,8 +105,6 @@ export default {
 
     this.windowResize();
     window.addEventListener('resize', this.windowResize);
-
-    console.log(this.layoutVars);
   },
 
   beforeDestroy() {
