@@ -302,17 +302,17 @@ useHead({
                       <v-col>
                         <search-preset-chip :rkey="r.key"
                           :presetId="0" :selectedValue="search_detail_multiword"
-                          @detail="(val) => this.search_detail_multiword = val"></search-preset-chip>
+                          @detail="(val) => search_detail_multiword = val"></search-preset-chip>
                       </v-col>
                       <v-col>
                         <search-preset-chip :rkey="r.key"
                           :presetId="1" :selectedValue="search_detail_layer"
-                          @detail="(val) => this.search_detail_layer = val"></search-preset-chip>
+                          @detail="(val) => search_detail_layer = val"></search-preset-chip>
                       </v-col>
                       <v-col>
                         <search-preset-chip :rkey="r.key"
                           :presetId="2" :selectedValue="search_detail_fuzzy"
-                          @detail="(val) => this.search_detail_fuzzy = val"></search-preset-chip>
+                          @detail="(val) => search_detail_fuzzy = val"></search-preset-chip>
                       </v-col>
                     </v-row>
                   </div>
