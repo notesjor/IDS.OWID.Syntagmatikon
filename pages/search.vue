@@ -563,7 +563,7 @@ export default {
         return;
       this.search_exactness_syncLock = true;
 
-      // search_detail_multiword: 'Exakte Wortfolge' = 0, 'Exakte Zeichenfolge' = 1, 'Beliebig' = 2
+      // search_detail_multiword: 'Wort oder Wörter' = 0, 'Exakte Zeichenfolge' = 1, 'Beliebig' = 2
       // search_detail_layer_labels: 'Exakte Wortform' = 0, 'Vereinfachte Form' = 1, 'Lemma' = 2
 
       switch (val) {

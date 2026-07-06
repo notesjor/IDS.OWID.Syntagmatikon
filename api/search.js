@@ -92,14 +92,18 @@ export default class search {
       fuzzy = 2;
     }
 
-    // Wenn exakte Wortfolge gefordert ist, dann einfach match_phrase verwenden:
-    if (this.options.multiword === 0) {
-      var phraseQuery = { query: queryString };
-      if (fuzzy !== undefined) {
-        phraseQuery.fuzziness = fuzzy;
-      }      
-      return { match_phrase: { [field]: phraseQuery } };
-    }
+    // Wurde deaktiviert - diese Suche nutzte exakte Phrase-Matches (Wortfolgen)
+    // An die Stelle wird die Suche auf eine UND-Verknüpfung (alle Worte) geändert. -> siehe unten
+    // // Wenn exakte Wortfolge gefordert ist, dann einfach match_phrase verwenden:
+    // if (this.options.multiword === 0) {
+    //   var phraseQuery = { query: queryString };
+    //   if (fuzzy !== undefined) {
+    //     phraseQuery.fuzziness = fuzzy;
+    //   }      
+    //   console.log("phraseQuery", phraseQuery);
+    //   return { match_phrase: { [field]: phraseQuery } };
+    // }
+    
     // Wenn eine exakte Zeichenfolge gefordert ist, dann nutze regular expressions:
     if (this.options.multiword === 1) {
       return {
@@ -118,7 +122,7 @@ export default class search {
     });
     if (tokens.length === 0) {
       return { match_all: {} };
-    }
+    }    
 
     var matches = tokens.map(function (token) {
       var matchQuery = { query: token };
@@ -128,6 +132,16 @@ export default class search {
       return { match: { [field]: matchQuery } };
     });
 
+    // Alle Worte müssen vorkommen: UND-Verknüpfung.
+    if(this.options.multiword === 0) {
+      return {
+        bool: {
+          must: matches,
+        },
+      };
+    }
+
+    // Beliebige Wortreihenfolge: mindestens ein Treffer pro Token, egal in welcher Reihenfolge.
     if (this.options.multiword === 2) {
       return {
         bool: {
