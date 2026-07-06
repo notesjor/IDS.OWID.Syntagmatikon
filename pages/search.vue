@@ -1,6 +1,7 @@
 <script setup>
 definePageMeta({
   layout: "full",
+  cauthor: 'Jan Oliver Rüdiger, Annelen Brunner und Kathrin Steyer',
 })
 useHead({
   htmlAttrs: {
@@ -33,13 +34,13 @@ useHead({
         </div>
 
         <!-- Genauigkeit der Suche -->
-        <div style="margin: -20px 0px 50px 0px;">
+        <!--<div style="margin: -20px 0px 50px 0px;">
           <div style="display: table; width: 100%; table-layout: fixed;">
             <div style="display: table-cell; width: 130px; text-align: center;">
               <div style="position: relative; top:10px">Genauigkeit:</div>
             </div>
             <div style="display: table-cell; width: auto;">
-              <v-slider v-model="search_exactness" :min="1" :max="5" :step="1" :ticks="search_exactness_labels"
+              <v-slider v-model="search_exactness" :min="1" :max="4" :step="1" :ticks="search_exactness_labels"
                 show-ticks="always" tick-size="4" :color="search_exactness_custom"
                 style="max-width: 100%; min-width: 0; margin: -30px 10px 0px 0px;">
               </v-slider>
@@ -65,37 +66,55 @@ useHead({
                   <v-combobox label="Suchebene" :items="search_detail_layer_labels" item-title="text" item-value="value"
                     variant="outlined" density="compact" v-model="search_detail_layer"></v-combobox>
                 </v-col>
-                <v-col cols="4" style="padding: 15px 0px;">
-                  <v-combobox label="Unscharfe Suche" :items="search_detail_fuzzy_labels" item-title="text"
-                    item-value="value" variant="outlined" density="compact" v-model="search_detail_fuzzy"></v-combobox>
-                </v-col>
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
-        </v-expansion-panels>
+        </v-expansion-panels>-->
 
         <!-- Anzeige-Optionen -->
-        <div
-          :style="search_exactness_panel.length === 1 ? 'margin: -45px 0px 50px 0px; text-align: center; z-index:9999' : 'margin: -80px 0px 50px 0px; text-align: center;'">
-          <span style="position: relative; top: 0px">Anzeige-Optionen:</span>
-          <span>
-            <v-btn variant="text" density="compact" class="nocaps"
-              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
-              @click="search_header_switch = false">
-              alphabetisch
-            </v-btn>
-            <v-switch v-model="search_header_switch" style="display: inline-block; position: relative; top: 35px"
-              density="compact"></v-switch>
-            <v-btn variant="text" density="compact" class="nocaps"
-              style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
-              @click="search_header_switch = true">
-              sortiert nach Ressourcen
-            </v-btn>
-          </span>
+        <div style="display: grid; grid-template-columns: auto 1fr">
+          <div style="margin: -12px 0px 0px 0px">
+            <v-speed-dial location="bottom center" transition="fade-transition">
+              <template v-slot:activator="{ props: activatorProps }">
+                <v-fab v-bind="activatorProps" size="large" icon="mdi-cog"></v-fab>
+              </template>
+
+              <v-card>
+                <v-card-text>
+                  <div style="margin: 20px 10px 0px 0px">
+                    <div style="font-weight: 600;">Suchprofil:</div>
+                    <v-radio-group v-model="search_exactness">
+                      <v-radio key="1" label="Lemmabasierte Suche" :value="1"></v-radio>
+                      <v-radio key="2" label="Exakte Wortformsuche" :value="2"></v-radio>
+                      <v-radio key="3" label="Unscharfe Wortsuche" :value="3"></v-radio>
+                      <v-radio key="4" label="Zeichenkettensuche" :value="4"></v-radio>
+                    </v-radio-group>
+                  </div>
+                </v-card-text>
+              </v-card>
+            </v-speed-dial>
+          </div>
+          <div style="margin: -42px 0px 0px 0px; text-align: right">
+            <span style="position: relative; top: 0px">Anzeige-Optionen:</span>
+            <span>
+              <v-btn variant="text" density="compact" class="nocaps"
+                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
+                @click="search_header_switch = false">
+                alphabetisch
+              </v-btn>
+              <v-switch v-model="search_header_switch" style="display: inline-block; position: relative; top: 35px"
+                density="compact"></v-switch>
+              <v-btn variant="text" density="compact" class="nocaps"
+                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
+                @click="search_header_switch = true">
+                sortiert nach Ressourcen
+              </v-btn>
+            </span>
+          </div>
         </div>
 
         <!-- SUCH-Ergebnis -->
-        <v-tabs-window v-model="search_header" style="margin-top: -40px;" v-if="results != null && results.length > 0">
+        <v-tabs-window v-model="search_header" style="margin-top: 20px;" v-if="results != null && results.length > 0">
           <v-tabs-window-item value="byAZ">
             <div v-for="x in results">
               <a :href="x.url" target="_blank" style="text-align: left;"><span v-html="x.lbl"></span> <span
@@ -290,31 +309,60 @@ useHead({
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <p style="font-size:0.85rem; margin-top:-5px">
-                Über den Schieberegler "Genauigkeit" können fünf allgemeine Profile gewählt und bei Bedarf manuell
-                angepasst werden.
-                Hier finden Sie zusätzlich speziell auf die aktuelle Ressource abgestimmte Profile zur Auswahl.
+                Insgesamt wurden vier Suchprofile implementiert, die unterschiedliche Voreinstellungen bereithalten.
+                Über das Zahlrad-Symbol unterhalb des Suchfeldes können die Suchprofile ausgewählt werden.
+                Im Folgenden werden die Suchprofile kurz erläutert. Außerdem für jedes Suchprofil die Ressourcen
+                aufgelistet, die am besten zu den jeweiligen Suchprofilen passen.
               </p>
               <div>
-                <div v-for="r in resourcesList" :key="r.key">
-                  <div>{{ r.key }}</div>
-                  <div style="margin:-15px 0px 20px 10px">
-                    <v-row>                      
-                      <v-col>
-                        <search-preset-chip :rkey="r.key"
-                          :presetId="0" :selectedValue="search_detail_multiword"
-                          @detail="(val) => search_detail_multiword = val"></search-preset-chip>
-                      </v-col>
-                      <v-col>
-                        <search-preset-chip :rkey="r.key"
-                          :presetId="1" :selectedValue="search_detail_layer"
-                          @detail="(val) => search_detail_layer = val"></search-preset-chip>
-                      </v-col>
-                      <v-col>
-                        <search-preset-chip :rkey="r.key"
-                          :presetId="2" :selectedValue="search_detail_fuzzy"
-                          @detail="(val) => search_detail_fuzzy = val"></search-preset-chip>
-                      </v-col>
-                    </v-row>
+                <div>
+                  <div>Lemmabasierte Suche</div>
+                  <p style="font-size:0.85rem; margin: 0px 0px 0px 10px">
+                    Die lemmabasierte Suche ist die Standardeinstellung. Sie sucht nach den Grundformen der Wörter und
+                    ist daher besonders für die Suche nach Wortschatz und festen Wendungen geeignet.
+                  </p>
+                  <div style="margin:5px 0px 20px 10px; text-align: left">
+                    <r rkey='PREPCON_ex' />,
+                    <r rkey='PREPCON_ex' />,
+                    <r rkey='PREPCON_ex' />
+                  </div>
+                </div>
+                <div>
+                  <div>Exakte Wortformsuche</div>
+                  <p style="font-size:0.85rem; margin: 0px 0px 0px 10px">
+                    Die exakte Wortformsuche sucht nach der eingegebenen Schreibweise. Sie ist besonders für die Suche
+                    nach Schreibvarianten und konkreten Wortformen geeignet.
+                  </p>
+                  <div style="margin:5px 0px 20px 10px; text-align: left">
+                    <r rkey='PREPCON_ex' />,
+                    <r rkey='PREPCON_ex' />,
+                    <r rkey='PREPCON_ex' />
+                  </div>
+                </div>
+                <div>
+                  <div>Unscharfe Wortsuche</div>
+                  <p style="font-size:0.85rem; margin: 0px 0px 0px 10px">
+                    Die unscharfe Wortsuche erlaubt leichte Abweichungen von der eingegebenen Schreibweise. 
+                    Sie ist besonders für die Suche nach Schreibvarianten und konkreten Wortformen geeignet.
+                  </p>
+                  <div style="margin:5px 0px 20px 10px; text-align: left">
+                    <r rkey='PREPCON_ex' />,
+                    <r rkey='PREPCON_ex' />,
+                    <r rkey='PREPCON_ex' />,
+                    <r rkey='PREPCON_ex' />,
+                    <r rkey='PREPCON_ex' />
+                  </div>
+                </div>
+                <div>
+                  <div>Zeichenkettensuche</div>
+                  <p style="font-size:0.85rem; margin: 0px 0px 0px 10px">
+                    Die Zeichenkettensuche sucht nach der eingegebenen Zeichenfolge. Sie ist besonders für die Suche
+                    von Teilen von Wörtern, Wortstämmen und Pre- oder Suffixen geeignet.
+                  </p>
+                  <div style="margin:5px 0px 20px 10px; text-align: left">
+                    <r rkey='PREPCON_ex' />,
+                    <r rkey='PREPCON_ex' />,
+                    <r rkey='PREPCON_ex' />
                   </div>
                 </div>
               </div>
@@ -373,23 +421,22 @@ export default {
 
       search_exactness_panel: [],
       search_exactness_custom: "black",
-      search_exactness: 2,
+      search_exactness: 1,
       search_exactness_syncLock: false,
-      search_exactness_labels: {
-        1: 'Exakt',
-        2: 'Eng',
-        3: 'Flexibel',
-        4: 'Vage',
-        5: 'Kreativ'
-      },
+      /*search_exactness_labels: {
+        1: 'Lemma',
+        2: 'Exakt',
+        3: 'Unscharf',
+        4: 'Zeichenkette'
+      },*/
 
       search_detail_multiword_labels: [{ text: 'Exakte Wortfolge', value: 0 }, { text: 'Exakte Zeichenfolge', value: 1 }, { text: 'Beliebig', value: 2 }],
       search_detail_layer_labels: [{ text: 'Exakte Wortform', value: 0 }, { text: 'Vereinfachte Form', value: 1 }, { text: 'Lemma', value: 2 }],
       search_detail_fuzzy_labels: [{ text: 'Deaktiviert', value: 0 }, { text: 'Dynamisch', value: 1 }, { text: 'Experimentell', value: 2 }],
 
-      search_detail_multiword: 1,
-      search_detail_layer: 1,
-      search_detail_fuzzy: 0,
+      search_detail_multiword: 0,
+      search_detail_layer: 2,
+      search_detail_fuzzy: 0, // wurde in v4 deaktiviert
     }
   },
   mounted() {
@@ -516,23 +563,25 @@ export default {
         return;
       this.search_exactness_syncLock = true;
 
+      // search_detail_multiword: 'Exakte Wortfolge' = 0, 'Exakte Zeichenfolge' = 1, 'Beliebig' = 2
+      // search_detail_layer_labels: 'Exakte Wortform' = 0, 'Vereinfachte Form' = 1, 'Lemma' = 2
+
       switch (val) {
         case 1:
-          this.search_detail_multiword = this.search_detail_layer = this.search_detail_fuzzy = 0;
+          this.search_detail_multiword = 0;
+          this.search_detail_layer = 2;
           break;
         case 2:
-          this.search_detail_multiword = this.search_detail_layer = 1;
-          this.search_detail_fuzzy = 0;
+          this.search_detail_multiword = 0;
+          this.search_detail_layer = 0;
           break;
         case 3:
-          this.search_detail_multiword = this.search_detail_layer = this.search_detail_fuzzy = 1;
+          this.search_detail_multiword = 0;
+          this.search_detail_layer = 1;
           break;
         case 4:
-          this.search_detail_multiword = this.search_detail_layer = 2;
-          this.search_detail_fuzzy = 1;
-          break;
-        case 5:
-          this.search_detail_multiword = this.search_detail_layer = this.search_detail_fuzzy = 2;
+          this.search_detail_multiword = 1;
+          this.search_detail_layer = 0;
           break;
       }
 

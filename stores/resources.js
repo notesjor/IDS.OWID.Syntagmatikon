@@ -31,7 +31,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_functions: ["Frequenzen", "KWICs"],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Präpositionen"],
-          search_preset: [2, 2, 0],
         },
         {
           key: "PREPCON_temp",
@@ -56,7 +55,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
           ],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Präpositionen"],
-          search_preset: [2, 2, 0],
         },
         {
           key: "PREPCON_kon",
@@ -84,7 +82,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
           ],
           search_patterns: ["Lexikografische Angabe"],
           search_parts: ["Nomina", "Präpositionen"],
-          search_preset: [2, 2, 0],
         },
         {
           key: "KoMuX",
@@ -100,7 +97,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_functions: ["Frequenzen", "Kategoriale Label"],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Verben", "Präpositionen", "Adjektive"],
-          search_preset: [1, 1, 1],
         },
         {
           key: "MAP",
@@ -120,7 +116,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
           ],
           search_patterns: ["Direkter Zugang"],
           search_parts: ["Verben", "Präpositionen", "Phraseme"],
-          search_preset: [1, 2, 0],
         },
         {
           key: "SpruchList",
@@ -136,7 +131,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_functions: ["Frequenzen", "KWICs", "Belege"],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Feste Sätze"],
-          search_preset: [1, 1, 1],
         },
         {
           key: "PhrasKomp",
@@ -157,7 +151,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
           ],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Phraseme", "Feste Sätze"],
-          search_preset: [0, 2, 2],
         },
         {
           key: "Redeeinleiter",
@@ -172,7 +165,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_functions: ["Frequenzen", "Belege", "Kategoriale Label"],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Nomina", "Verben", "Phraseme"],
-          search_preset: [1, 1, 1],
         },
         {
           key: "SPRW",
@@ -193,7 +185,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
           ],
           search_patterns: ["Lexikografische Angabe"],
           search_parts: ["Feste Sätze"],
-          search_preset: [2, 1, 2],
         },
         {
           key: "Verlaufsformen",
@@ -209,7 +200,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_functions: ["Kategoriale Label", "Belege"],
           search_patterns: ["dynamische Erschließung"],
           search_parts: ["Verben", "Präpositionen"],
-          search_preset: [1, 2, 0],
         },
         {
           key: "WVBF",
@@ -232,7 +222,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
           ],
           search_patterns: ["Direkter Zugang"],
           search_parts: ["Nomina", "Präpositionen", "Phraseme"],
-          search_preset: [1, 2, 0],
         },
         {
           key: "FesteWV",
@@ -253,7 +242,6 @@ export const useResourcesStore = defineStore("resourcesStore", {
           ],
           search_patterns: ["Lexikografische Angabe"],
           search_parts: ["Adjektive", "Phraseme"],
-          search_preset: [2, 2, 0],
         },
         {
           key: "DTWW",
@@ -268,30 +256,7 @@ export const useResourcesStore = defineStore("resourcesStore", {
           search_functions: ["Belege", "Fremdsprachige Äquivalenz"],
           search_patterns: ["Kein Musterzugang"],
           search_parts: ["Nomina", "Phraseme"],
-          search_preset: [2, 2, 1],
         },
-        // {
-        //   key: "DRI",
-        //   nameShort: "DRI",
-        //   nameLong: "Deutsch-russische Idiome online",
-        //   description:
-        //     "Bei <b>Deutsch-russische Idiome online</b> handelt es sich um einen – in Kooperation mit dem Projekt „Usuelle Wortverbindungen“ – erstellten Auszug aus „Moderne deutsch-russische Idiomatik: Ein Korpus-Wörterbuch“ (D. Dobrovol’skij und A.Šarandin; RAW, Moskau / ÖAW, Wien). Die Online-Ressource enthält 70 Artikel zu deutschen Idiomen wie <em>sich schwarz ärgern</em> russische Entsprechungen sowie deutsche Korpusbelege mit wortwörtlichen Übersetzungen ins Russische.",
-        //   img: "./img/sources/dri.png",
-        //   url: "http://wvonline.ids-mannheim.de/idiome_russ/AKTE_zu_den_Akten_legen.htm",
-        //   tags: [],
-        //   search_type: ["Online-Wörterbücher"],
-        //   search_functions: [
-        //     "Belege",
-        //     "Narrative Beschreibungen",
-        //     "Fremdsprachige Äquivalenz"
-        //   ],
-        //   search_patterns: [
-        //     "Kein Musterzugang"
-        //   ],
-        //   search_parts: [
-        //     "Phraseme",
-        //   ],
-        // },
       ],
     };
   },
