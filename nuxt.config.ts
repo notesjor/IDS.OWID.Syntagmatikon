@@ -88,7 +88,7 @@ export default defineNuxtConfig({
 
   app: {
     //baseURL: "/",
-    baseURL: "/syntagmatikon_2025-09/",
+    baseURL: "/syntagmatikon_2026-05/",
     head: {
       htmlAttrs: {
         lang: 'de',
@@ -104,6 +104,10 @@ export default defineNuxtConfig({
   site: {
     url: "https://syntagmatikon.ids-mannheim.de",
     name: "Syntagmatikon"
+  },
+
+  sitemap: {
+    zeroRuntime: true
   },
 
   compatibilityDate: "2024-08-12",

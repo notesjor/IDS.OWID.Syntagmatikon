@@ -29,25 +29,24 @@ export default {
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
     <compare
-      :filter="['PREPCON_temp_inv', 'PREPCON_kon', 'KoMuX', 'MAP', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'WVBF']">
+      :filter="['PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'MAP', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'FesteWV', 'WVBF']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/datatypes/categories/categories_all.png" style="text-align: center;" />
         </div>
       </compare-item>
 
-      <compare-item value="1" rkey="PREPCON_temp_inv">
+      <compare-item value="1" rkey="PREPCON_temp">
         <p>
-          In
-          <r rkey="PREPCON_temp_inv" /> werden die Einträge gemäß folgender Hauptktegorien geordnet: reine
+          In der Rubrik <b>Inventar</b> von
+          <r rkey="PREPCON_temp" /> werden die Einträge gemäß folgender Hauptktegorien geordnet: reine
           TEMPORALANGABEN; TEMPORALANGABEN MIT EIGENNAMEN (WOCHENTAGE, MONATE; FEIERTAGE; WOCHENTAGE ALS ZWEITGLIED,
           TAGESZEITEN ALS ZWEITGLIED).
         </p>
         <template #explain>
-          <NuxtImage src="/img/datatypes/categories/prepcon_temp_inv_feiertage.png" alt="Sortierung temporaler PNs"
-            to="http://uwv.ids-mannheim.de/prepcon/modul2/inventar/inventar_feier.html"> Sortierung temporaler PNs nach
-            der NOMEN-Kategorie FEIERTAGE in der Teilressource „Inventar temporaler
-            Präposition-Nomen-Verbindungen“
+          <NuxtImage src="/img/datatypes/categories/prepcon_temp_inv_feiertage.png" alt="Sortierung temporaler Präposition-Nomen-Verbindungen"
+            to="http://uwv.ids-mannheim.de/prepcon/modul2/inventar/inventar_feier.html"> Sortierung temporaler Präposition-Nomen-Verbindungen nach
+            der NOMEN-Kategorie FEIERTAGE (Rubrik „Inventar“)
           </NuxtImage>
         </template>
 

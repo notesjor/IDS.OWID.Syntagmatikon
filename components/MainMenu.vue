@@ -2,10 +2,14 @@
     <v-navigation-drawer :permanent="!useMobileView" :rail="useMobileView"
         style="z-index:1; transform: none; font-family: 'Fira Sans';">
         <!-- LOGO START -->
-        <div class="text-xl" style="margin: 20px 0px 5px 30px; opacity: 1" v-show="!useMobileView">
-            <div style="margin-left: 50px; margin-bottom: 40px;">
-                Syntagmatikon
+        <div class="text-xl" style="margin: 20px 0px 5px 30px; opacity: 1" v-if="!useMobileView">
+            <div style="margin-left: 50px; margin-bottom: 10px;">
+                <NuxtImg alt="Logo Syntagmatikon" src="/logo3.svg" :style="logoStyle" />
+                <span style="position: relative; top:-5px; left: 5px;">Syntagmatikon</span>
             </div>
+        </div>
+        <div v-else>
+            <NuxtImg alt="Logo Syntagmatikon" src="/logo3.svg" :style="logoStyle" />
         </div>
         <!-- LOGO END -->
 
@@ -103,6 +107,20 @@ export default {
             default: false
         }
     },
+    data() {
+        return {
+            scrollY: 0
+        }
+    },
+    mounted() {
+        window.addEventListener('scroll', this.updateScrollY);
+        this.updateScrollY();
+    },
+    methods: {
+        updateScrollY() {
+            this.scrollY = window.scrollY || window.pageYOffset;
+        }
+    },
     computed: {
         menuStyleMobileFix() {
             try {
@@ -113,6 +131,19 @@ export default {
                 }
             } catch (e) {
                 return ""
+            }
+        },
+        logoStyle() {
+            try {
+                const alpha = Math.min(Math.max(this.scrollY / 75, 0), 1);
+
+                if (this.useMobileView) {
+                    return `max-height:45px; position:relative; top:5px; left: 5px; opacity:${alpha};`
+                } else {                    
+                    return `max-height:65px; position:relative; margin:-15px 0px 0px -73px; opacity:${alpha}; display:inline-block;`;
+                }
+            } catch (e) {
+                return "max-height:65px; position:relative; top:5px; left: 10px; opacity:1;";
             }
         }
     },

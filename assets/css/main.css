@@ -309,10 +309,14 @@ div.main a {
   font-weight: 400;
 }
 
+div.main a:hover {
+  border-bottom: 1px dotted black;
+}
+
 div.main a::before {
   content: "\F0CE0  ";
   font: normal normal normal 18px/1 "Material Design Icons";
-  margin: 0px -5px 0px 0px;
+  margin: 0px -2px 0px 0px;
 }
 
 div.nolink a::before {

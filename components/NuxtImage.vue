@@ -14,9 +14,9 @@
       </div>      
     </span>
   </div>
-  <v-dialog v-model="isZoomed">
+  <v-dialog v-model="isZoomed" max-width="75vw" max-height="85vh">
     <v-card @click="isZoomed = false" v-if="isZoomed">
-      <div class="container"><img :src="src" :alt="alt" class="zoomedImg" /></div>
+      <div class="container"><img :src="src" :alt="alt" class="zoomedImg" style="max-width: 90%;"/></div>
       <span class="zoomedText">
         <div @click="isZoomed = true" style="cursor: zoom-in;">
           <slot></slot>

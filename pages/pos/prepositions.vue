@@ -19,7 +19,7 @@ export default {
         <!-- NOTE: in Filter werden die Ressourcen angegeben -->
         <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
         <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
-        <compare :filter="['PREPCON_ex', 'PREPCON_temp_inv', 'PREPCON_temp_art', 'PREPCON_kon', 'KoMuX', 'MAP', 'Verlaufsformen', 'WVBF']">
+        <compare :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'MAP', 'Verlaufsformen', 'WVBF']">
             <compare-item value="0">
                 <div style="text-align: center; width:100%">
                     <NuxtImage src="/img/pos/prepositions/prepositions_all.png" style="text-align: center;"
@@ -52,11 +52,10 @@ export default {
                 </template>
             </compare-item>
 
-             <compare-item value="2" rkey="PREPCON_temp_inv">
+             <compare-item value="2" rkey="PREPCON_temp">
                 <p>
-                    In
-                    <r rkey="PREPCON_temp_inv" /> kann man ein
-                    Inventar von
+                    In 
+                    <r rkey="PREPCON_temp" /> kann man 
                     Präposition-Nomen-Verbindungen anhand einer Präpositionen-Stichwortliste abrufen.
                 </p>
                 <template #explain>
@@ -66,37 +65,10 @@ export default {
                                 <m>ab</m> (Mittag)
                             </li>
                             <li>
-                                <m>an</m> (Wochenenden)
-                            </li>
-                            <li>
-                                <m>bis</m> (Ostern)
-                            </li>
-                            <li>
-                                <m>nach</m> (Sonnenuntergang)
-                            </li>
-                        </ul>
-                    </div>
-                </template>
-            </compare-item>
-
-            <compare-item value="2" rkey="PREPCON_temp_art">
-                <p>
-                    In
-                    <r rkey="PREPCON_temp_art" /> kann man
-                    Artikel zu
-                    Präposition-Nomen-Verbindungen anhand einer Präpositionen-Stichwortliste abrufen.
-                </p>
-                <template #explain>
-                    <div>
-                        <ul>
-                            <li>
-                                <m>am</m> (Ende)
-                            </li>
-                            <li>
                                 <m>für</m> (Jahre)
                             </li>
                             <li>
-                                <m>im</m> (Augenblick)
+                                <m>bis</m> (Ostern)
                             </li>
                             <li>
                                 <m>vor</m> (Urzeiten)

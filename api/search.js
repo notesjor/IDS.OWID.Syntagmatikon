@@ -1,6 +1,6 @@
 export default class search {
+  baseUrl = "http://lexik02.ids-mannheim.de/syntagmatikon-index/"; // "https://syntagmatikon.ids-mannheim.de/api/";
   query = "*";
-  queryName = "match";
   sources = [];
 
   offset = 0;
@@ -11,35 +11,50 @@ export default class search {
   count = null;
   hits = [];
 
-  exact = true;
-  searchFuzzy = true;
-  fuzziness = 0;
-  transpositions = true;
+  options = {
+    multiword: 1,
+    layer: 1,
+    fuzzy: 1,
+  };
 
-  async search(query, sources, searchAll, searchMw, searchLayer, searchFuzzy) {
+  async search(
+    query,
+    sources,
+    groupBySource,
+    optionMultiword,
+    optionLayer,
+    optionFuzzy,
+  ) {
     this.query = query;
     this.offset = 0;
     this.count = null;
 
-    this.searchFuzzy = searchFuzzy;
-    this.fuzziness = "0"; // searchFuzzy ? "AUTO" : "0";
-    this.transpositions = searchFuzzy ? true : false;
-    this.queryName = searchFuzzy ? "match" : "match_phrase";
+    this.options = {
+      multiword: optionMultiword,
+      layer: optionLayer,
+      fuzzy: optionFuzzy,
+      highlightField: "lbl" // wird später gesetzt.
+    };
 
-    if (searchAll) {
+    if (groupBySource) {
       this.sources = sources;
-      this.callSearch = this.__sendRequestMix;
+      this.callSearch = this.__searchBySource;
     } else {
       this.sources = sources;
-      this.callSearch = this.__sendRequestMerge;
+      this.callSearch = this.__searchByAbc;
     }
 
     return await this.callSearch();
   }
 
   async gotoPage(page) {
-    this.offset = (page - 1) * this.pageSize;
-    return await this.callSearch();
+    try {
+      this.offset = (page - 1) * this.pageSize;
+      return await this.callSearch();
+    } catch (e) {
+      console.log("error", e);
+      return [];
+    }
   }
 
   __ensureSearch() {
@@ -48,7 +63,101 @@ export default class search {
     }
   }
 
-  async __sendRequestMix() {
+  __buildQuery() {
+    var queryString = (this.query || "").trim();
+    if (queryString === "") {
+      return { match_all: {} };
+    }
+
+    var field;
+    switch (this.options.layer) {
+      case 0:
+        field = "lbl.L0";
+        break;
+      case 1:
+        field = "lbl.L1";
+        break;
+      case 2:
+        field = "lbl.L2";
+        break;
+      default:
+        field = "lbl";
+    }
+    this.options.highlightField = field;
+
+    var fuzzy;
+    if (this.options.fuzzy === 1) {
+      fuzzy = "AUTO";
+    } else if (this.options.fuzzy === 2) {
+      fuzzy = 2;
+    }
+
+    // Wenn exakte Wortfolge gefordert ist, dann einfach match_phrase verwenden:
+    if (this.options.multiword === 0) {
+      var phraseQuery = { query: queryString };
+      if (fuzzy !== undefined) {
+        phraseQuery.fuzziness = fuzzy;
+      }      
+      return { match_phrase: { [field]: phraseQuery } };
+    }
+    // Wenn eine exakte Zeichenfolge gefordert ist, dann nutze regular expressions:
+    if (this.options.multiword === 1) {
+      return {
+        regexp: {
+          [field]: {
+            value: `.*${queryString}.*`,
+            case_insensitive: true
+          }
+        }
+      };
+    }
+
+    // Ansonsten die Query in Tokens aufteilen und jedes Token separat matchen:
+    var tokens = queryString.split(/\s+/).filter(function (token) {
+      return token.length > 0;
+    });
+    if (tokens.length === 0) {
+      return { match_all: {} };
+    }
+
+    var matches = tokens.map(function (token) {
+      var matchQuery = { query: token };
+      if (fuzzy !== undefined) {
+        matchQuery.fuzziness = fuzzy;
+      }
+      return { match: { [field]: matchQuery } };
+    });
+
+    if (this.options.multiword === 2) {
+      return {
+        bool: {
+          should: matches,
+          minimum_should_match: 1,
+        },
+      };
+    }
+
+    return {
+      bool: {
+        must: matches,
+      },
+    };
+  }
+
+  __buildHighlightQuery() {
+    return {
+      [this.options.highlightField]: {
+        require_field_match: false,
+        highlight_query: {
+          match: {
+            [this.options.highlightField]: this.query,
+          }
+        }
+      },
+    }
+  }
+
+  async __searchBySource() {
     this.__ensureSearch();
     var res = [];
     var nmax = 0;
@@ -59,70 +168,56 @@ export default class search {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
+    var esQuery = this.__buildQuery();
     for (var i = 0; i < this.sources.length; i++) {
-      var request = {
-        track_total_hits: true,
-        query: {
-          bool: {
-            must: [
-              {
-                term: {
-                  "dic.keyword": this.sources[i],
+      var request;
+      // Wenn Query leer:
+      if (!this.query || this.query.trim() === "") {
+        request = {
+          track_total_hits: true,
+          query: {
+            bool: {
+              must: [
+                {
+                  match_all: {},
                 },
-              },
-            ],
-            should: [
-              {
-                match: {
-                  lbl: {
-                    query: this.query,
-                    boost: 0,
+                {
+                  term: {
+                    "dic": this.sources[i],
                   },
                 },
-              },
-            ],
-          },
-        },
-        size: this.pageSize,
-        from: this.offset,
-        sort: [{ "key.keyword": "asc" }],
-        highlight: {
-          fields: {
-            lbl: {
-              pre_tags: ["<span class='highlight'>"],
-              post_tags: ["</span>"],
+              ],
             },
           },
-        },
-      };
-
-      var q = {};
-      q[this.queryName] = {
-        key: {
-          query: this.query,
-        },
-      };
-      if (this.searchFuzzy) {
-        q[this.queryName].key.fuzziness = this.fuzziness;
-        q[this.queryName].key.fuzzy_transpositions = this.transpositions;
-      }
-      request.query.bool.must.push(q);
-
-      if (!this.query || this.query.trim() === "") {
-        request.query = {
-          bool: {
-            must: [
-              {
-                match_all: {},
-              },
-              {
-                term: {
-                  "dic.keyword": this.sources[i],
+          size: this.pageSize,
+          from: this.offset,
+          sort: [{ "lbl.icu": "asc" }],
+        };
+      }       
+      else // Wenn Query gesetzt ist.
+      {
+        request = {
+          track_total_hits: true,
+          query: {
+            bool: {
+              must: [
+                {
+                  term: {
+                    "dic": this.sources[i],
+                  },
                 },
-              },
-            ],
+              ],
+            },
+          },
+          size: this.pageSize,
+          from: this.offset,
+          sort: [{ "lbl.icu": "asc" }],
+          highlight: {
+            fields: this.__buildHighlightQuery()
           },
         };
+
+        request.query.bool.must.push(esQuery);
       }
 
       var requestOptions = {
@@ -133,9 +228,8 @@ export default class search {
       };
       try {
         var response = await fetch(
-          //TODO: "https://syntagmatikon.ids-mannheim.de/api/",
-          "http://lexik02.ids-mannheim.de/syntagmatikon/api/",
-          requestOptions
+          this.baseUrl,
+          requestOptions,
         );
 
         var result = await response.json();
@@ -158,54 +252,27 @@ export default class search {
     return res;
   }
 
-  async __sendRequestMerge() {
+  async __searchByAbc() {
     this.__ensureSearch();
 
+    var esQuery = this.__buildQuery();
     var request = {
       track_total_hits: true,
       query: {
         bool: {
-          should: [
-            {
-              match: {
-                lbl: {
-                  query: this.query,
-                  boost: 0,
-                },
-              },
-            },
-          ],
+          must: []
         },
       },
       size: this.pageSize,
       from: this.offset,
-      sort: [{ "key.keyword": "asc" }],
+      sort: [{ "lbl.icu": "asc" }],
       highlight: {
         pre_tags: ["<span class='highlight'>"],
         post_tags: ["</span>"],
-        fields: {
-          lbl: {},
-        },
+        fields: this.__buildHighlightQuery()
       },
     };
-
-    if (this.fuzziness) {
-      request.query.bool["must"] = [
-        {
-          match: {
-            key: this.query,
-          },
-        },
-      ];
-    } else {
-      request.query.bool["must"] = [
-        {
-          match_phrase: {
-            key: this.query,
-          },
-        },
-      ];
-    }
+    request.query.bool.must.push(esQuery);
 
     if (!this.query || this.query.trim() === "") {
       request.query = { bool: { must: [{ match_all: {} }] } };
@@ -214,7 +281,7 @@ export default class search {
     if (this.sources.length > 0) {
       request.query.bool.must.push({
         terms: {
-          "dic.keyword": this.sources,
+          "dic": this.sources,
         },
       });
     }
@@ -231,9 +298,8 @@ export default class search {
 
     try {
       var response = await fetch(
-        //TODO: "https://syntagmatikon.ids-mannheim.de/api/",
-        "http://lexik02.ids-mannheim.de/syntagmatikon/api/",
-        requestOptions
+        this.baseUrl,
+        requestOptions,
       );
 
       var result = await response.json();
@@ -266,6 +332,7 @@ export default class search {
 
   __esHighlightToSourceSingle(result, i) {
     var res = result.hits.hits[i]._source;
+    
     if (
       res.lbl &&
       result.hits.hits[i].highlight &&
@@ -281,10 +348,14 @@ export default class search {
   }
 
   get countTotal() {
-    return typeof this.count === "number"
-      ? this.count === null
-        ? 0
-        : this.count
-      : Object.values(this.count).reduce((a, b) => a + b, 0);
+    try {
+      return typeof this.count === "number"
+        ? this.count === null
+          ? 0
+          : this.count
+        : Object.values(this.count).reduce((a, b) => a + b, 0);
+    } catch {
+      return 0;
+    }
   }
 }

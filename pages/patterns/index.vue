@@ -1,6 +1,7 @@
 <script setup>
 definePageMeta({
   layout: "full",
+  ctitle: "Musterzugänge",
 })
 useHead({
   htmlAttrs: {
@@ -57,7 +58,7 @@ useHead({
           </info-box>
 
           <info-box title="Dynamische Erschließung" :color1="color1" link="/patterns/dynamic"
-            :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp_art', 'Redeeinleiter']">
+            :filter="['KoMuX', 'PREPCON_ex', 'PREPCON_temp', 'Redeeinleiter']">
             In vielen Ressourcen kann man sich selbst Muster erschließen, zum einen durch automatische Suchen und
             Sortierungen auf der Basis von vorgegebenen Kategorien; zum anderen durch eigene analytische Gruppierungen.
           </info-box>

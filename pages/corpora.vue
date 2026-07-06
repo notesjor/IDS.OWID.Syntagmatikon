@@ -1,3 +1,9 @@
+<script setup>
+definePageMeta({
+  layout: "default",
+  ctitle: "Korpora im Syntagmatikon",
+})
+</script>
 <template>
   <v-row>
     <v-col>
@@ -12,42 +18,53 @@
         annotierte Teilkorpora zugrunde:</p>
     
       <v-row>
-        <v-col cols="4">
-          <r rkey="KoMuX" />
-        </v-col>
-        <v-col><a href="https://grammis.ids-mannheim.de/korpusgrammatik/6615">KoGra
+        <v-col>
+          <div>
+            <r rkey="KoMuX" />
+          </div>
+          <div style="margin: 5px 0px 0px 20px; font-size: 0.9em; font-weight: 300;">
+            <a href="https://grammis.ids-mannheim.de/korpusgrammatik/6615">KoGra
             Untersuchungskorpus</a> (Ausschnitt aus <a
             href="https://www.ids-mannheim.de/digspra/kl/projekte/korpora/">DeReKo)</a>
+          </div>
         </v-col>
       </v-row>
 
       <v-row>
-        <v-col cols="4">
-          <r rkey="Redeeinleiter" />
+        <v-col>
+          <div>
+            <r rkey="Redeeinleiter" />
+          </div>
+          <div style="margin: 5px 0px 0px 20px; font-size: 0.9em; font-weight: 300;">
+            <a href="https://github.com/redewiedergabe/corpus">Redewiedergabe-Korpus</a>
+          </div>
         </v-col>
-        <v-col><a href="https://github.com/redewiedergabe/corpus">Redewiedergabe-Korpus</a></v-col>
       </v-row>
 
       <v-row>
-        <v-col cols="4">
-          <r rkey="PREPCON_ex" />
-        </v-col>
-        <v-col> <a href="https://www2.ids-mannheim.de/cosmas2/projekt/referenz/archive.html">Tagged-T</a>
+        <v-col>
+          <div>
+            <r rkey="PREPCON_ex" />
+          </div>
+          <div style="margin: 5px 0px 0px 20px; font-size: 0.9em; font-weight: 300;">
+            <a href="https://www2.ids-mannheim.de/cosmas2/projekt/referenz/archive.html">Tagged-T</a>
           (DeReKo-Teilkorpus)
+          </div>
         </v-col>
       </v-row>
-
 
       <v-row>
-        <v-col cols="4">
-          <r rkey="PREPCON_kon" />
+        <v-col>
+          <div>
+            <r rkey="PREPCON_kon" />
+          </div>
+          <div style="margin: 5px 0px 0px 20px; font-size: 0.9em; font-weight: 300;">
+            Webkorpora <a href="https://www.sketchengine.eu/estenten-spanish-corpus/">esTenTen18</a> und
+          <a href="https://www.sketchengine.eu/sktenten-slovak-corpus/">skTenTen11</a>;<br/> Slowakisches Nationalkorpus <a
+            href="https://korpus.sk/index_en.html">SNK</a>
+          </div>
         </v-col>
-        <v-col>Webkorpora <a href="https://www.sketchengine.eu/estenten-spanish-corpus/">esTenTen18</a> und
-          <a href="https://www.sketchengine.eu/sktenten-slovak-corpus/">skTenTen11</a>; Slowakisches Nationalkorpus <a
-            href="https://korpus.sk/index_en.html">SNK</a></v-col>
       </v-row>
-
-
 
       <p>Alle anderen Ressourcen basieren unterschiedlichen Ausgaben der
         <a href="https://www.ids-mannheim.de/digspra/kl/projekte/korpora/releases">DeReKo-W-Archive</a>.
@@ -98,24 +115,3 @@
     </v-col>
   </v-row>
 </template>
-
-<script>
-export default {
-  name: 'Corpora',
-
-  setup() {
-    useHead({
-      htmlAttrs: {
-        lang: 'de'
-      },
-      title: 'Syntagmatikon - Korpora im Syntagmatikon',
-      meta: [
-        {
-          name: 'description',
-          content: 'Das korpusbasierte Portal Syntagmatikon bietet Informationen zum Gebrauch von sprachlichen Ausdrücken, die durch ihre wiederkehrende lineare Abfolge zu mehr oder weniger festen Wortschatzeinheiten geworden sind.'
-        }
-      ]
-    });
-  },
-}
-</script>

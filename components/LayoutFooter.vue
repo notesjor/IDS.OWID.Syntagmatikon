@@ -3,8 +3,6 @@
     <v-row>
       <v-col cols="6" style="padding: 0px;">
         <div style="color:white; margin: 35px 0px 10px 0px; font-size: 12px;">
-          <NuxtImg alt="Logo OWID" src="/owid-logo-dunkel.svg" style="max-height:15px; margin:-10px 0px 3px 0px"
-            float="left" to="https://www.owid.de/" />
           <div>
             <a style="color: #fff" :href="footerContact">Kontakt</a>
             &middot;
@@ -58,7 +56,7 @@ export default {
 
   methods: {
     windowResize() {
-      this.useMobileView = this.$vuetify.display.width < 960;
+      this.useMobileView = this.$vuetify.display.width < 1050;
     }
   },
 }

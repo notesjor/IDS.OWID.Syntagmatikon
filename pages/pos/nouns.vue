@@ -20,7 +20,7 @@ export default {
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
     <compare
-      :filter="['PREPCON_ex', 'PREPCON_temp_inv', 'PREPCON_temp_art', 'PREPCON_kon', 'KoMuX', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'WVBF', 'DTWW']">
+      :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'PhrasKomp', 'Redeeinleiter', 'Verlaufsformen', 'WVBF', 'DTWW']">
       <compare-item value="0">
         <div style="text-align: center; width:100%">
           <NuxtImage src="/img/pos/nouns/nouns_all.png" style="text-align: center;" alt="Beispielgrafik" />
@@ -51,11 +51,11 @@ export default {
 
     
 
-       <compare-item value="2" rkey="PREPCON_temp_inv"
+       <compare-item value="2" rkey="PREPCON_temp"
         description="Feste Wortverbindungen des Deutschen - Modul: Wortverbindungen mit Adjektiv">
         <p>
           In
-          <r rkey="PREPCON_temp_inv" /> kann man ein Inventar von
+          <r rkey="PREPCON_temp" /> kann man 
           Präposition-Nomen-Verbindungen mit Zeit-Nomina abrufen.
         </p>
 
@@ -67,34 +67,9 @@ export default {
               </li>
               <li>(an) <m>Heiligabend</m>
               </li>
-              <li>(nach) <m>Februar</m>
-              </li>
-              <li>(vor) <m>Sonnenuntergang</m>
-              </li>
-            </ul>
-          </div>
-        </template>
-      </compare-item>
-
-        <compare-item value="3" rkey="PREPCON_temp_art"
-        description="Feste Wortverbindungen des Deutschen - Modul: Wortverbindungen mit Adjektiv">
-        <p>
-          In
-          <r rkey="PREPCON_temp_art" /> kann man Artikel zu
-          Präposition-Nomen-Verbindungen mit Zeit-Nomina abrufen.
-        </p>
-
-        <template #explain>
-          <div>
-
-            <ul>
-              <li>(am) <m>Anfang</m>
-              </li>
-              <li>(im) <m>Moment</m>
-              </li>
               <li>(über) <m>Nacht</m>
               </li>
-              <li>(ohne) <m>Unterlass</m>
+              <li>(vor) <m>Sonnenuntergang</m>
               </li>
             </ul>
           </div>
@@ -107,7 +82,7 @@ export default {
           In
           <r rkey="PREPCON_kon" /> bilden vier Nomina in
           Verbindung mit
-          einer Präposition den Ausgangspunkt für die kontrastive Beschreibung deutsch – spanisch; deutsch-slowakisch.
+          einer Präposition den Ausgangspunkt für die kontrastive Beschreibung deutsch - spanisch; deutsch - slowakisch.
         </p>
 
         <template #explain>

@@ -1,6 +1,7 @@
 <script setup>
 definePageMeta({
   layout: "full",
+  ctitle: "Wort- und Ausdrucksarten",
 })
 useHead({
   htmlAttrs: {
@@ -41,7 +42,7 @@ useHead({
         <headline :h="4">Wort- und Ausdrucksarten im <hi>Syntagmatikon</hi>
         </headline>
         <div class="container">
-          <info-box title="Nomina" :color1="color1" link="pos/nouns" :filter="['PREPCON_ex', 'PREPCON_temp_inv', 'PREPCON_temp_art', 'PREPCON_kon', 'KoMuX', 'WVBF',
+          <info-box title="Nomina" :color1="color1" link="pos/nouns" :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'KoMuX', 'WVBF',
             'PhrasKomp', 'DTWW', 'Redeeinleiter', 'Verlaufsformen']">
           </info-box>
 
@@ -50,7 +51,7 @@ useHead({
           </info-box>
 
           <info-box title="Präpositionen" :color1="color1" link="pos/prepositions"
-            :filter="['PREPCON_ex', 'PREPCON_temp_inv', 'PREPCON_temp_art', 'PREPCON_kon', 'MAP', 'Verlaufsformen', 'WVBF', 'KoMuX']">
+            :filter="['PREPCON_ex', 'PREPCON_temp', 'PREPCON_kon', 'MAP', 'Verlaufsformen', 'WVBF', 'KoMuX']">
           </info-box>
 
           <info-box title="Adjektive" :color1="color1" link="pos/adjectives" :filter="['FesteWV', 'KoMuX']">
