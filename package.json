@@ -32,6 +32,7 @@
     "cytoscape-navigator": "^2.0.2",
     "cytoscape-node-html-label": "^1.2.2",
     "cytoscape-panzoom": "^2.5.3",
+    "driver.js": "^1.6.0",
     "magicast": "^0.5.3",
     "nuxt-link-checker": "^4.3.9",
     "nuxt-og-image": "^4.2.0",

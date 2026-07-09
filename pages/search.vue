@@ -76,13 +76,15 @@ useHead({
           <div style="margin: -12px 0px 0px 0px">
             <v-speed-dial location="bottom center" transition="fade-transition">
               <template v-slot:activator="{ props: activatorProps }">
-                <v-fab v-bind="activatorProps" size="large" icon="mdi-cog"></v-fab>
+                <v-btn v-bind="activatorProps" size="large" prepend-icon="mdi-cog" variant="outlined" style="text-transform: none;">
+                  Suchprofil
+                </v-btn>
               </template>
 
               <v-card>
                 <v-card-text>
                   <div style="margin: 20px 10px 0px 0px">
-                    <div style="font-weight: 600;">Suchprofil:</div>
+                    <div style="font-weight: 600;">Ausgewähltes Suchprofil:</div>
                     <v-radio-group v-model="search_exactness">
                       <v-radio key="1" label="Lemmabasierte Suche" :value="1"></v-radio>
                       <v-radio key="2" label="Exakte Wortformsuche" :value="2"></v-radio>
@@ -95,19 +97,19 @@ useHead({
             </v-speed-dial>
           </div>
           <div style="margin: -42px 0px 0px 0px; text-align: right">
-            <span style="position: relative; top: 0px">Anzeige-Optionen:</span>
+            <span style="position: relative; top: 0px">Sortierung:</span>
             <span>
               <v-btn variant="text" density="compact" class="nocaps"
-                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
+                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px; text-transform: none;"
                 @click="search_header_switch = false">
                 alphabetisch
               </v-btn>
-              <v-switch v-model="search_header_switch" style="display: inline-block; position: relative; top: 35px"
+              <v-switch v-model="search_header_switch" style="display: inline-block; position: relative; top: 35px;"
                 density="compact"></v-switch>
               <v-btn variant="text" density="compact" class="nocaps"
-                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px"
+                style="font-size: 0.9em; color:#999; display: inline-block; position: relative; top: 0px; text-transform: none;"
                 @click="search_header_switch = true">
-                sortiert nach Ressourcen
+                nach Ressourcen
               </v-btn>
             </span>
           </div>
