@@ -33,64 +33,81 @@ useHead({
             append-inner-icon="mdi-magnify"></v-text-field>
         </div>
 
-        <!-- Genauigkeit der Suche -->
-        <!--<div style="margin: -20px 0px 50px 0px;">
-          <div style="display: table; width: 100%; table-layout: fixed;">
-            <div style="display: table-cell; width: 130px; text-align: center;">
-              <div style="position: relative; top:10px">Genauigkeit:</div>
-            </div>
-            <div style="display: table-cell; width: auto;">
-              <v-slider v-model="search_exactness" :min="1" :max="4" :step="1" :ticks="search_exactness_labels"
-                show-ticks="always" tick-size="4" :color="search_exactness_custom"
-                style="max-width: 100%; min-width: 0; margin: -30px 10px 0px 0px;">
-              </v-slider>
-            </div>
-            <div style="display: table-cell; width: 60px; text-align: center;">
-              <v-btn rounded="true" elevation="1" style="margin:10px 0px 0px 0px"
-                :icon="search_exactness_panel.length > 0 ? 'mdi-menu-up' : 'mdi-menu-down'"
-                :color="search_exactness_panel.length > 0 ? 'blue' : 'white'"
-                @click="search_exactness_panel = search_exactness_panel.length > 0 ? [] : [0]"></v-btn>
-            </div>
-          </div>
-        </div>
-        <v-expansion-panels v-model="search_exactness_panel" elevation="0" v-if="search_exactness_panel.length > 0">
-          <v-expansion-panel style="margin-top: -55px; padding-bottom: -10px;">
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col cols="4" style="padding: 15px 0px;">
-                  <v-combobox label="Mehrwortsuche" :items="search_detail_multiword_labels" item-title="text"
-                    item-value="value" variant="outlined" density="compact"
-                    v-model="search_detail_multiword"></v-combobox>
-                </v-col>
-                <v-col cols="4" style="padding: 15px 5px;">
-                  <v-combobox label="Suchebene" :items="search_detail_layer_labels" item-title="text" item-value="value"
-                    variant="outlined" density="compact" v-model="search_detail_layer"></v-combobox>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-        </v-expansion-panels>-->
-
         <!-- Anzeige-Optionen -->
         <div style="display: grid; grid-template-columns: auto 1fr">
           <div style="margin: -12px 0px 0px 0px">
             <v-speed-dial location="bottom center" transition="fade-transition">
               <template v-slot:activator="{ props: activatorProps }">
-                <v-btn v-bind="activatorProps" size="large" prepend-icon="mdi-cog" variant="outlined" style="text-transform: none;">
-                  Suchprofil
+                <v-btn v-bind="activatorProps" size="large" prepend-icon="mdi-cog" variant="outlined"
+                  style="text-transform: none;">
+                  Sucharten
                 </v-btn>
               </template>
 
               <v-card>
                 <v-card-text>
-                  <div style="margin: 20px 10px 0px 0px">
-                    <div style="font-weight: 600;">Ausgewähltes Suchprofil:</div>
-                    <v-radio-group v-model="search_exactness">
-                      <v-radio key="1" label="Lemmabasierte Suche" :value="1"></v-radio>
-                      <v-radio key="2" label="Exakte Wortformsuche" :value="2"></v-radio>
-                      <v-radio key="3" label="Unscharfe Wortsuche" :value="3"></v-radio>
-                      <v-radio key="4" label="Zeichenkettensuche" :value="4"></v-radio>
-                    </v-radio-group>
+                  <div style="display: grid; grid-template-columns: auto 1fr">
+                    <div>
+                      <div style="margin: 20px 10px 0px 0px">
+                        <div style="font-weight: 600;">Ausgewähltes Suchart:</div>
+                        <v-radio-group v-model="search_exactness">
+                          <div class="search-exactness-radio" @mouseenter="searchSampleSelect = 0">
+                            <v-radio key="1" :label="searchNames[0]" :value="1"></v-radio>
+                            <p style="margin: -10px 0px 0px 40px; font-size: 0.85rem; font-weight: 300;" @click="search_exactness = 1">Findet alle
+                              Flexionsformen
+                              eines Lemmas.</p>
+                          </div>
+                          <div class="search-exactness-radio" @mouseenter="searchSampleSelect = 1">
+                            <v-radio key="2" :label="searchNames[1]" :value="2"></v-radio>
+                            <p style="margin: -10px 0px 0px 40px; font-size: 0.85rem; font-weight: 300" @click="search_exactness = 2">Findet nur die
+                              eingegebene
+                              Wortform.<br />Flexionsformen werden nicht berücksichtigt.</p>
+                          </div>
+                          <div class="search-exactness-radio" @mouseenter="searchSampleSelect = 2">
+                            <v-radio key="3" :label="searchNames[2]" :value="3"></v-radio>
+                            <p style="margin: -10px 0px 0px 40px; font-size: 0.85rem; font-weight: 300" @click="search_exactness = 3">Findet Wörter
+                              mit
+                              ähnlicher
+                              Schreibung.<br />Dadurch können auch Treffer erscheinen,<br />die zu einem anderen Lemma
+                              gehören.</p>
+                          </div>
+                          <div class="search-exactness-radio" @mouseenter="searchSampleSelect = 3">
+                            <v-radio key="4" :label="searchNames[3]" :value="4"></v-radio>
+                            <p style="margin: -10px 0px 0px 40px; font-size: 0.85rem; font-weight: 300" @click="search_exactness = 4">Findet beliebige
+                              Zeichenfolgen.
+                              Unabhängig <br /> davon, ob sie ein vollständiges Wort<br />oder nur einen Wortteil
+                              bilden.
+                            </p>
+                          </div>
+                        </v-radio-group>
+                      </div>
+                    </div>
+                    <div>
+                      <div style="margin: 20px 10px 0px 0px">
+                        <div style="font-weight: 600;">Beispiele für "{{searchNames[searchSampleSelect]}}":</div>
+                        <v-radio-group v-model="search_exactness">
+                          <v-list>
+                            <v-list-item v-for="(item, index) in selectedSearchSample" :key="index"
+                            style="margin:-10px 0px 0px 0px">
+                              <v-list-item-title>
+                                <span style="font-weight: 400; font-size: 0.85rem;">
+                                  <v-icon icon="mdi-magnify"></v-icon>&nbsp;"{{ item.query }}" findet:
+                                </span>
+                                <v-list>
+                                  <v-list-item v-for="(item2, index2) in item.results" :key="index2"
+                                    style="font-size: 0.75rem; font-weight: 300; margin: -15px 0px 0px 10px; padding: 0px;">
+                                    <v-list-item-title><v-icon icon="mdi-pan-right"></v-icon>
+                                      &nbsp;
+                                      <span v-html="item2" style="font-size: 0.79rem; font-weight: 300;"></span>
+                                    </v-list-item-title>
+                                  </v-list-item>
+                                </v-list>
+                              </v-list-item-title>
+                            </v-list-item>
+                          </v-list>
+                        </v-radio-group>
+                      </div>
+                    </div>
                   </div>
                 </v-card-text>
               </v-card>
@@ -163,89 +180,19 @@ useHead({
             <v-expansion-panel-title style="font-weight: 500; font-size: 1.2em;">
               Wie funktioniert die Suche?
             </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <p style="font-size: 0.9em; margin-bottom: 10px; word-wrap: break-word;">Mit einer Eingabe im Suchfeld
-                ("Stichwort hier eingeben...") können alle Ressourcen im <hi>Syntagmatikon</hi> gleichzeitig durchsucht
-                werden.
-                Wird kein Stichwort eingegeben, sieht man die Gesamtstichwortlisten. Der Klick auf einen Treffer führt
-                direkt zur entsprechenden Ressource.
+            <v-expansion-panel-text style="font-size: 0.8em; margin:-15px 0px -40px 0px;">
+              <p style="font-size: 0.9em; margin-bottom: 10px; word-wrap: break-word;">
+                Mit der Stichwortsuche können Sie gleichzeitig in allen Ressourcen des <hi>Syntagmatikon</hi> oder
+                gezielt in
+                ausgewählten Ressourcen recherchieren.
               </p>
-              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <b>Ressourcen:</b> Hier können einzelne Ressourcen direkt aktiviert
-                <v-icon>mdi-check-circle</v-icon> oder deaktiviert <v-icon>mdi-circle-outline</v-icon> werden. Treffer
-                in deaktivierten Ressourcen werden ausgeblendet.
-              </p>
-              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <b>Facetten:</b> Hier können Ressourcen anhand ihrer Merkmale ('Facetten') gefiltert werden.
-                Beschreibungen der Facetten findet man im Ressourcenkompass. Ist eine Ressource aufgrund des
-                Facetten-Filters deaktiviert, wird sie mit dem folgenden Symbol markiert:
-                <v-icon>mdi-circle-off-outline</v-icon>
-              </p>
-              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <b>Anzeige-Optionen:</b> Die Anzeige "sortiert nach Ressourcen" zeigt jeweils drei Treffer pro Ressource
-                pro Seite und erlaubt so einen Überblick über die Treffermengen der jeweiligen Ressourcen. Die Anzeige
-                "alphabetisch" zeigt alle Treffer in alphabetischer Reihenfolge.
-              </p>
-              <p style="font-size: 0.9em; margin-bottom: 10px; border-left: #999 3px solid; padding-left: 5px;">
-                <span><b>Genauigkeit:</b> Über den Parameter Genauigkeit kann bestimmt werden, wie genau sich die Suche
-                  an die Eingaben hält. Es gibt fünf <strong>Suchprofile</strong> (<em>Exakt, Eng, Flexibel, Vage</em>
-                  oder <em>Kreativ</em>) die unterschiedliche Voreinstellungen bereithalten.&nbsp;
-                </span>
-                <span>Über den Button rechts neben dem Schieberegler öffnen Sie die
-                  <strong>Detaileinstellungen</strong> zur manuellen Einstellung der Suche.<br /><br /></span>
-                <span>Drei Einstellungsebenen stehen zur Verfügung:</span>
-
-              <ul
-                style="word-break: break-word; overflow-wrap: anywhere; hyphens: auto; text-align: left; margin-left: 5px;">
-                <li style="margin-left: 0;">
-                  <em>Mehrwortsuche:</em>
-                  <ul style="margin-left: 35px; list-style-position: outside;">
-                    <li>
-                      <strong>Exakte Abfolge:</strong> sucht genau die eingegebene Wortfolge.
-                    </li>
-                    <li>
-                      <strong>Beliebige Reihenfolge:</strong> alle Wörter müssen vorkommen,
-                      Reihenfolge egal.
-                    </li>
-                    <li>
-                      <strong>Beliebiges Wort:</strong> es genügt, wenn ein Wort gefunden wird
-                      (mehr ist besser).
-                    </li>
-                  </ul>
-                </li>
-                <li style="margin-left: 0;">
-                  <em>Suchebene:</em>
-                  <ul style="margin-left: 35px; list-style-position: outside;">
-                    <li>
-                      <strong>Exakte Wortform:</strong> sucht nach der eingegebenen
-                      Schreibweise.
-                    </li>
-                    <li>
-                      <strong>Lemmatisiert:</strong> berücksichtigt Grundformen.
-                    </li>
-                    <li>
-                      <strong>Reduziertes Lemma:</strong> sucht noch allgemeiner.
-                    </li>
-                  </ul>
-                </li>
-                <li style="margin-left: 0;">
-                  <em>Unscharfe Suche:</em>
-                  <ul style="margin-left: 35px; list-style-position: outside;">
-                    <li>
-                      <strong>Deaktiviert:</strong> nur genaue Treffer.
-                    </li>
-                    <li>
-                      <strong>Dynamisch:</strong> erlaubt leichte Abweichungen, abhängig von
-                      der Wortlänge.
-                    </li>
-                    <li>
-                      <strong>Experimentell:</strong> sehr weite Suche, Ergebnisse oft
-                      ungenau.
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              </p>
+              <p>Gesucht werden einzelne Wörter, Wortformen oder Zeichenketten sowie mehrere Wörter in beliebiger
+                Reihenfolge in einem Satz. Die Groß- und Kleinschreibung wird dabei nicht berücksichtigt.</p>
+              <p>Suchfilter ermöglichen die Auswahl verschiedener Ressourcen und Facetten (Ressourcentypen,
+                Informationstypen,
+                Wort- und Ausdrucksarten sowie Musterzugänge).</p>
+              <p>Alle Trefferlisten (gesamt oder gefiltert) können nach Ressourcen oder alphabetisch sortiert werden.
+              </p>              
             </v-expansion-panel-text>
           </v-expansion-panel>
           <!-- Auswahl der Ressourcen -->
@@ -254,6 +201,10 @@ useHead({
               Ressourcen
             </v-expansion-panel-title>
             <v-expansion-panel-text>
+              <p style="margin:-10px 0px 30px 0px; font-size: 0.8rem;">Ressourcen können durch anklicken aktiviert <v-icon>mdi-check-circle</v-icon> oder deaktiviert <v-icon>mdi-circle-outline</v-icon> werden. 
+              Ist eine Ressource aufgrund eines Facetten-Filters deaktiviert, wird sie automatisch ausgeblendet <v-icon>mdi-circle-off-outline</v-icon>.
+              Nur aktive Ressourcen werden bei der Suche berücksichtigt.
+              </p>
               <div style="margin-top: -20px;">
                 <v-row style="margin:-20px 0px 20px -35px;">
                   <div class="nolink">
@@ -294,6 +245,9 @@ useHead({
               Facetten
             </v-expansion-panel-title>
             <v-expansion-panel-text>
+              <p style="font-size: 0.8rem; margin:-10px 0px 20px 0px;">
+                Hier lässt sich die Suche auf bestimmte Merkmale, die im Ressourcenkompass behandelt werden, zuschneiden. Mehrere Filter können miteinander kombiniert werden.
+              </p>
               <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels1">
                 <!-- <search-box title="Zugänge" rkey="search_display" color1="#c79b31" color2="#a0ac67"></search-box>
                 <search-box title="Ressourcentypen (Zugang)" rkey="search_subtype" color1="#a0ac67"
@@ -303,71 +257,6 @@ useHead({
                 <search-box title="Wort- und Ausdrucksarten" rkey="search_parts" color1="#0DC513"></search-box>
                 <search-box title="Musterzugänge" rkey="search_patterns" color1="#DB6900"></search-box>
               </v-expansion-panels>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel elevation="0" value="searchProfile">
-            <v-expansion-panel-title style="font-weight: 500; font-size: 1.2em;">
-              Suchprofile
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <p style="font-size:0.85rem; margin-top:-5px">
-                Insgesamt wurden vier Suchprofile implementiert, die unterschiedliche Voreinstellungen bereithalten.
-                Über das Zahlrad-Symbol unterhalb des Suchfeldes können die Suchprofile ausgewählt werden.
-                Im Folgenden werden die Suchprofile kurz erläutert. Außerdem für jedes Suchprofil die Ressourcen
-                aufgelistet, die am besten zu den jeweiligen Suchprofilen passen.
-              </p>
-              <div>
-                <div>
-                  <div>Lemmabasierte Suche</div>
-                  <p style="font-size:0.85rem; margin: 0px 0px 0px 10px">
-                    Die lemmabasierte Suche ist die Standardeinstellung. Sie sucht nach den Grundformen der Wörter und
-                    ist daher besonders für die Suche nach Wortschatz und festen Wendungen geeignet.
-                  </p>
-                  <div style="margin:5px 0px 20px 10px; text-align: left">
-                    <r rkey='PREPCON_ex' />,
-                    <r rkey='PREPCON_ex' />,
-                    <r rkey='PREPCON_ex' />
-                  </div>
-                </div>
-                <div>
-                  <div>Exakte Wortformsuche</div>
-                  <p style="font-size:0.85rem; margin: 0px 0px 0px 10px">
-                    Die exakte Wortformsuche sucht nach der eingegebenen Schreibweise. Sie ist besonders für die Suche
-                    nach Schreibvarianten und konkreten Wortformen geeignet.
-                  </p>
-                  <div style="margin:5px 0px 20px 10px; text-align: left">
-                    <r rkey='PREPCON_ex' />,
-                    <r rkey='PREPCON_ex' />,
-                    <r rkey='PREPCON_ex' />
-                  </div>
-                </div>
-                <div>
-                  <div>Unscharfe Wortsuche</div>
-                  <p style="font-size:0.85rem; margin: 0px 0px 0px 10px">
-                    Die unscharfe Wortsuche erlaubt leichte Abweichungen von der eingegebenen Schreibweise. 
-                    Sie ist besonders für die Suche nach Schreibvarianten und konkreten Wortformen geeignet.
-                  </p>
-                  <div style="margin:5px 0px 20px 10px; text-align: left">
-                    <r rkey='PREPCON_ex' />,
-                    <r rkey='PREPCON_ex' />,
-                    <r rkey='PREPCON_ex' />,
-                    <r rkey='PREPCON_ex' />,
-                    <r rkey='PREPCON_ex' />
-                  </div>
-                </div>
-                <div>
-                  <div>Zeichenkettensuche</div>
-                  <p style="font-size:0.85rem; margin: 0px 0px 0px 10px">
-                    Die Zeichenkettensuche sucht nach der eingegebenen Zeichenfolge. Sie ist besonders für die Suche
-                    von Teilen von Wörtern, Wortstämmen und Pre- oder Suffixen geeignet.
-                  </p>
-                  <div style="margin:5px 0px 20px 10px; text-align: left">
-                    <r rkey='PREPCON_ex' />,
-                    <r rkey='PREPCON_ex' />,
-                    <r rkey='PREPCON_ex' />
-                  </div>
-                </div>
-              </div>
             </v-expansion-panel-text>
           </v-expansion-panel>
         </v-expansion-panels>
@@ -439,6 +328,30 @@ export default {
       search_detail_multiword: 0,
       search_detail_layer: 2,
       search_detail_fuzzy: 0, // wurde in v4 deaktiviert
+
+      searchSampleSelect: 0,
+      searchNames: ["Lemmabasierte Suche", "Exakte Wortformsuche", "Unscharfe Wortsuche", "Zeichenkettensuche"],
+      searchSamples: [
+        [
+          { query: "schlagen", results: ["ein Rad <b>schlagen</b> vor Freude", "Pack <b>schlägt</b> sich, Pack verträgt sich", "<span style=\"font-variant: small-caps;\">Präposition</span> <b>Schlagen</b>"] },
+          { query: "sein", results: ["Aller Anfang <b>ist</b> schwer", "gewahr <b>sein</b>", "im Vollbesitz <b>seiner</b> geistigen Kräfte", "auf der Hut <b>sein</b> vor Dieben", "Früher-<b>war</b>-alles-besser-Gerede"] },
+          { query: "alle sein", results: ["<b>Aller</b> Anfang <b>ist</b> schwer", "<b>Alles</b> hat <b>seine</b> Zeit", "<b>Alle-sind</b>-gut-drauf-Gerede"] },
+        ],
+        [
+          { query: "waren", results: ["Das <b>waren</b> noch Zeiten", "greifen nach <b>Waren</b>", "<b>Waren</b>-Verwaltung"] },
+          { query: "alle ist", results: ["Grau <b>ist alle</b> Theorie"] },
+          { query: "aller ist", results: ["<b>Aller</b> Anfang <b>ist</b> schwer", "Müßiggang <b>ist aller</b> Laster Anfang"] },
+          { query: "alles ist", results: ["<b>Alles-ist</b>-möglich-Ruf", "Dabeisein <b>ist alles</b>"] },
+          { query: "allen ist", results: ["<b>Allen</b> Leuten recht getan, <b>ist</b> eine Kunst die niemand kann"] }
+        ],
+        [
+          { query: "Grab", results: ["<span style=\"font-variant: small-caps;\">Präposition</span> <b>Gräben</b>", "Alexander-<b>Grab</b>", "<b>graben</b> nach Gold"] },
+          { query: "rosten", results: ["<b>rosten</b> <span style=\"font-variant: small-caps;\">Präposition</span>", "<span style=\"font-variant: small-caps;\">Präposition</span> <b>Rost</b>", "<span style=\"font-variant: small-caps;\">Präposition</span> <b>Rösten</b>"] }
+        ],
+        [
+          { query: "ab", results: ["<b>ab</b> Werk", "Der Bart ist <b>ab</b>", "<b>Ab</b>sicht äußern", "<b>ab</b>bauen <span style=\"font-variant: small-caps;\">Präposition</span>", "Die-N<b>ab</b>el-der-Welt-Woche", "Klein, <b>ab</b>er fein", "Alexander-Gr<b>ab</b>"] }
+        ]
+      ]
     }
   },
   mounted() {
@@ -565,6 +478,8 @@ export default {
         return;
       this.search_exactness_syncLock = true;
 
+      this.searchSampleSelect = val - 1;
+
       // search_detail_multiword: 'Wort oder Wörter' = 0, 'Exakte Zeichenfolge' = 1, 'Beliebig' = 2
       // search_detail_layer_labels: 'Exakte Wortform' = 0, 'Vereinfachte Form' = 1, 'Lemma' = 2
 
@@ -642,20 +557,24 @@ export default {
         res[x.dic].push(x);
       });
       return res;
+    },
+    selectedSearchSample: function () {
+      try {
+        return this.searchSamples[this.searchSampleSelect];
+      } catch {
+        return this.searchSamples[0];
+      }
     }
   }
 }
 </script>
 
 <style scoped>
-.v-list-subheader {}
-
-.v-pagination__list>.v-pagination__item {
-  background-color: red;
+div.search-exactness-radio::hover {
+  background-color: #d1d1d1;
+  cursor: pointer;
 }
-</style>
 
-<style>
 .highlight {
   font-style: italic;
   border-bottom: 1px dotted #000;
