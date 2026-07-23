@@ -402,8 +402,15 @@ export default {
           grouped = this.resourcesStore?.resourceUsedForSearch || [];
         }
 
+        // choose payload depending on current view: ABC -> flat list, Group -> grouped
+        var sourcesForApi = grouped;
+        if (!self.search_header_switch) {
+          // ABC view: send flat list of active resource keys (children expanded)
+          sourcesForApi = this.resourcesStore?.resourceUsedForSearch || [];
+        }
+
         self.searchApi.search(self.query,
-          grouped,
+          sourcesForApi,
           self.search_header_switch,
           self.search_detail_multiword,
           self.search_detail_layer,
