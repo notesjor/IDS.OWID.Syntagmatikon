@@ -366,8 +366,44 @@ export default {
       try {
         this.page = 1;
         var self = this;
+        // build grouped sources: for parents with active children, pass an array of child keys;
+        // for standalone resources, pass the single key string.
+        var grouped = [];
+        try {
+          var data = this.resourcesStore?.resourcesState || {};
+          // build children map
+          var childrenMap = {};
+          for (var i = 0; i < this.resourcesStore.info.length; i++) {
+            var item = this.resourcesStore.info[i];
+            if (item.key_relation) {
+              childrenMap[item.key_relation] = childrenMap[item.key_relation] || [];
+              childrenMap[item.key_relation].push(item.key);
+            }
+          }
+
+          // iterate over top-level resources (parents and standalones)
+          for (var i = 0; i < this.resourcesStore.info.length; i++) {
+            var item = this.resourcesStore.info[i];
+            if (item.hideInSearch) continue;
+            // only consider parents (no key_relation) to avoid duplicates
+            if (item.key_relation) continue;
+
+            var children = childrenMap[item.key] || [];
+            if (children.length > 0) {
+              // collect active child keys
+              var activeChildren = children.filter((k) => data[k] === 1);
+              if (activeChildren.length > 0) grouped.push(activeChildren);
+            } else {
+              // standalone: include if active
+              if (data[item.key] === 1) grouped.push(item.key);
+            }
+          }
+        } catch (e) {
+          grouped = this.resourcesStore?.resourceUsedForSearch || [];
+        }
+
         self.searchApi.search(self.query,
-          self.resourcesStore?.resourceUsedForSearch,
+          grouped,
           self.search_header_switch,
           self.search_detail_multiword,
           self.search_detail_layer,
@@ -538,17 +574,21 @@ export default {
   },
   computed: {
     resourcesList: function () {
-      if (this.resourcesStore == null)
-        return [];
+      if (this.resourcesStore == null) return [];
 
       var data = this.resourcesStore?.resourcesState;
-      return Object.keys(data).map(x => {
-        return {
-          key: x,
-          nameShort: this.getResourcesShortName(x),
-          icon: data[x] == 1 ? "mdi-check-circle" : data[x] == 0 ? "mdi-circle-outline" : "mdi-circle-off-outline"
-        }
-      });
+
+      // Only show parent resources (no key_relation) as chips
+      return this.resourcesStore.info
+        .filter((item) => !item.key_relation && !item.hideInSearch)
+        .map((item) => {
+          var state = data[item.key];
+          return {
+            key: item.key,
+            nameShort: this.getResourcesShortName(item.key),
+            icon: state == 1 ? "mdi-check-circle" : state == 0 ? "mdi-circle-outline" : "mdi-circle-off-outline",
+          };
+        });
     },
     resultGroups: function () {
       var res = {};

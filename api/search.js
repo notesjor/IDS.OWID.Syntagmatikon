@@ -183,23 +183,93 @@ export default class search {
     myHeaders.append("Content-Type", "application/json");
 
     var esQuery = this.__buildQuery();
+    // Iterate over provided sources entries. Each entry can be a string (single source)
+    // or an array of strings (multiple child sources belonging to one parent).
     for (var i = 0; i < this.sources.length; i++) {
+      var src = this.sources[i];
+
+      // group of child sources (array)
+      if (Array.isArray(src)) {
+        try {
+          var combinedRequest = null;
+          if (!this.query || this.query.trim() === "") {
+            combinedRequest = {
+              track_total_hits: true,
+              query: {
+                bool: {
+                  must: [
+                    { match_all: {} },
+                    { terms: { dic: src } },
+                  ],
+                },
+              },
+              size: this.pageSize,
+              from: this.offset,
+              sort: [{ _score: "desc" }, { "lbl.icu": "asc" }],
+              highlight: { fields: this.__buildHighlightQuery() },
+              aggs: { per_dic: { terms: { field: "dic", size: src.length } } },
+            };
+          } else {
+            combinedRequest = {
+              track_total_hits: true,
+              query: {
+                bool: {
+                  must: [
+                    { terms: { dic: src } },
+                  ],
+                },
+              },
+              size: this.pageSize,
+              from: this.offset,
+              sort: [{ _score: "desc" }, { "lbl.icu": "asc" }],
+              highlight: { fields: this.__buildHighlightQuery() },
+              aggs: { per_dic: { terms: { field: "dic", size: src.length } } },
+            };
+
+            combinedRequest.query.bool.must.push(esQuery);
+          }
+
+          var requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: JSON.stringify(combinedRequest),
+            redirect: "follow",
+          };
+
+          var response = await fetch(this.baseUrl, requestOptions);
+          var result = await response.json();
+
+          // update counts per child from aggregation if present
+          if (result.aggregations && result.aggregations.per_dic && result.aggregations.per_dic.buckets) {
+            var buckets = result.aggregations.per_dic.buckets;
+            for (var b = 0; b < buckets.length; b++) {
+              this.count[buckets[b].key] = buckets[b].doc_count;
+              this.hits[buckets[b].key] = buckets[b].doc_count;
+              if (buckets[b].doc_count > nmax) nmax = buckets[b].doc_count;
+            }
+          }
+
+          // convert hits and append
+          var tmp = [];
+          for (var j = 0; j < result.hits.hits.length; j++) tmp.push(this.__esHighlightToSourceSingle(result, j));
+          res = res.concat(tmp);
+        } catch (error) {
+          console.log("error", error);
+        }
+
+        continue;
+      }
+
+      // single source (string)
       var request;
-      // Wenn Query leer:
       if (!this.query || this.query.trim() === "") {
         request = {
           track_total_hits: true,
           query: {
             bool: {
               must: [
-                {
-                  match_all: {},
-                },
-                {
-                  term: {
-                    "dic": this.sources[i],
-                  },
-                },
+                { match_all: {} },
+                { term: { dic: src } },
               ],
             },
           },
@@ -207,55 +277,29 @@ export default class search {
           from: this.offset,
           sort: [{ "lbl.icu": "asc" }],
         };
-      }       
-      else // Wenn Query gesetzt ist.
-      {
+      } else {
         request = {
           track_total_hits: true,
-          query: {
-            bool: {
-              must: [
-                {
-                  term: {
-                    "dic": this.sources[i],
-                  },
-                },
-              ],
-            },
-          },
+          query: { bool: { must: [{ term: { dic: src } }] } },
           size: this.pageSize,
           from: this.offset,
           sort: [{ "lbl.icu": "asc" }],
-          highlight: {
-            fields: this.__buildHighlightQuery()
-          },
+          highlight: { fields: this.__buildHighlightQuery() },
         };
 
         request.query.bool.must.push(esQuery);
       }
 
-      var requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: JSON.stringify(request),
-        redirect: "follow",
-      };
+      var requestOptions = { method: "POST", headers: myHeaders, body: JSON.stringify(request), redirect: "follow" };
       try {
-        var response = await fetch(
-          this.baseUrl,
-          requestOptions,
-        );
-
+        var response = await fetch(this.baseUrl, requestOptions);
         var result = await response.json();
-        if (this.count != null)
-          this.count[this.sources[i]] = result.hits.total.value;
+        if (this.count != null) this.count[src] = result.hits.total.value;
         if (result.hits.total.value > nmax) nmax = result.hits.total.value;
-        this.hits[this.sources[i]] = result.hits.total.value;
+        this.hits[src] = result.hits.total.value;
 
         var tmp = [];
-        for (var j = 0; j < result.hits.hits.length; j++)
-          tmp.push(this.__esHighlightToSourceSingle(result, j));
-
+        for (var j = 0; j < result.hits.hits.length; j++) tmp.push(this.__esHighlightToSourceSingle(result, j));
         res = res.concat(tmp);
       } catch (error) {
         console.log("error", error);
