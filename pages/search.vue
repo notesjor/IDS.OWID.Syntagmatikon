@@ -201,8 +201,10 @@ useHead({
               Ressourcen
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <p style="margin:-10px 0px 30px 0px; font-size: 0.8rem;">Ressourcen können durch anklicken aktiviert <v-icon>mdi-check-circle</v-icon> oder deaktiviert <v-icon>mdi-circle-outline</v-icon> werden. 
-              Ist eine Ressource aufgrund eines Facetten-Filters deaktiviert, wird sie automatisch ausgeblendet <v-icon>mdi-circle-off-outline</v-icon>.
+              <p style="margin:-10px 0px 30px 0px; font-size: 0.8rem;">
+              Hier kann man die Suche auf eine oder mehrere ausgewählte Ressourcen beschränken.
+              Ressourcen können durch anklicken aktiviert <v-icon>mdi-check-circle</v-icon> oder deaktiviert <v-icon>mdi-circle-outline</v-icon> werden. 
+              Ist eine Ressource aufgrund eines Facetten-Filters deaktiviert, wird sie automatisch deaktiviert <v-icon>mdi-circle-off-outline</v-icon>.
               Nur aktive Ressourcen werden bei der Suche berücksichtigt.
               </p>
               <div style="margin-top: -20px;">
