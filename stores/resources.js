@@ -40,34 +40,24 @@ export const useResourcesStore = defineStore("resourcesStore", {
           img: "./img/sources/prepcon_temp.png",
           url: "http://uwv.ids-mannheim.de/prepcon/modul2",
           quest: "",
+          // This is a parent resource, so it doesn't have search functions or patterns itself
+          // see the child resources PREPCON_temp_inv and PREPCON_temp_art for those
         },
         {
+          // This is a child resource, so it doesn't have its own nameShort, nameLong, description, img, url, or quest
+          // see the parent resource PREPCON_temp for those
           key: "PREPCON_temp_inv",
-          key_relation: "PREPCON_temp",
-          nameShort:
-            'PREPCON<sup>temporal</sup> <span style="font-weight:300">Inventar</span>',
-          nameLong:
-            "PREPCON<sup>temporal</sup> - Inventar zu temporalen Präposition-Nomen-Verbindungen im Kontext",
-          description: "",
-          img: "./img/sources/prepcon_temp.png",
-          url: "http://uwv.ids-mannheim.de/prepcon/modul2/inventar/temporalangaben.html",
-          quest: "",
+          key_relation: "PREPCON_temp",  // This is a child of PREPCON_temp
           search_type: ["Inventare und Sammlungen"],
           search_functions: ["Frequenzen", "KWICs", "Kategoriale Label"],
           search_patterns: ["dynamische Erschließung"],
-          search_parts: ["Nomina", "Präpositionen"],
+          search_parts: ["Nomina", "Präpositionen"],          
         },
         {
+          // This is a child resource, so it doesn't have its own nameShort, nameLong, description, img, url, or quest
+          // see the parent resource PREPCON_temp for those
           key: "PREPCON_temp_art",
-          key_relation: "PREPCON_temp",
-          nameShort:
-            'PREPCON<sup>temporal</sup> <span style="font-weight:300">Artikel</span>',
-          nameLong:
-            "PREPCON<sup>temporal</sup> - Kurzartikel zu temporalen Präposition-Nomen-Verbindungen im Kontext",
-          description: "",
-          img: "./img/sources/prepcon_temp.png",
-          url: "http://uwv.ids-mannheim.de/prepcon/modul2/artikel/am_Anfang/index.html",
-          quest: "",
+          key_relation: "PREPCON_temp", // This is a child of PREPCON_temp
           search_type: ["Inventare und Sammlungen"],
           search_functions: [
             "Frequenzen",
