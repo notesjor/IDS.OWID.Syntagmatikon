@@ -1,3 +1,12 @@
+<script>
+import { useLayoutStore } from '~/stores/layout';
+export default {
+    mounted() {
+        const props = useLayoutStore();
+        props.title = 'Dokumentation zur Suche';
+    },
+}
+</script>
 <template>
     <h1>Dokumentation zur Suche</h1>
     <p>
@@ -265,8 +274,19 @@
             </v-list>
         </li>
     </ul>
-    <h2>Sucharten</h2>
+    <h2>Facetten</h2>
     <p>
-        lorem ipsum - Es gibt verschiedene Arten von Suchanfragen, die Sie durchführen können:
+        lorem ipsum - Hier lässt sich die Suche auf bestimmte Merkmale, die im Ressourcenkompass behandelt werden, zuschneiden. Mehrere Filter können miteinander kombiniert werden.
     </p>
+    <NuxtImage src="/img/search/facetten.jpg" alt="Lorem ipsum dolor sit amet"
+        style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
+    <h2>Ressourcen</h2>
+    <p>
+        lorem ipsum - Hier kann man die Suche auf eine oder mehrere ausgewählte Ressourcen beschränken.
+              Ressourcen können durch anklicken aktiviert <v-icon>mdi-check-circle</v-icon> oder deaktiviert <v-icon>mdi-circle-outline</v-icon> werden. 
+              Ist eine Ressource aufgrund eines Facetten-Filters deaktiviert, wird sie automatisch deaktiviert <v-icon>mdi-circle-off-outline</v-icon>.
+              Nur aktive Ressourcen werden bei der Suche berücksichtigt.
+    </p>
+    <NuxtImage src="/img/search/ressourcen.jpg" alt="Lorem ipsum dolor sit amet"
+        style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
 </template>
