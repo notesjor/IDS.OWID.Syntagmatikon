@@ -100,28 +100,20 @@
             <v-list>
                 <v-list-item style="margin:-10px 0px 0px 0px">
                     <span style="font-weight: 400; font-size: 0.90rem;">
-                        <v-icon icon="mdi-magnify" />&nbsp;"schlagen" findet:
+                        <v-icon icon="mdi-magnify" />&nbsp;"waren" findet:
                     </span>
                     <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
+                            <span>Das <b>waren</b> noch Zeiten</span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
+                            <span>greifen nach <b>Waren</b></span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
+                            <span><b>Waren</b>-Verwaltung</span>
                         </v-list-item>
                     </v-list>
                 </v-list-item>
@@ -129,28 +121,12 @@
             <v-list>
                 <v-list-item style="margin:-10px 0px 0px 0px">
                     <span style="font-weight: 400; font-size: 0.90rem;">
-                        <v-icon icon="mdi-magnify" />&nbsp;"schlagen" findet:
+                        <v-icon icon="mdi-magnify" />&nbsp;"alle ist" findet:
                     </span>
                     <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
+                            <span>Grau <b>ist alle</b> Theorie</span>
                         </v-list-item>
                     </v-list>
                 </v-list-item>
@@ -158,28 +134,16 @@
             <v-list>
                 <v-list-item style="margin:-10px 0px 0px 0px">
                     <span style="font-weight: 400; font-size: 0.90rem;">
-                        <v-icon icon="mdi-magnify" />&nbsp;"schlagen" findet:
+                        <v-icon icon="mdi-magnify" />&nbsp;"aller ist" findet:
                     </span>
                     <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
+                            <span><b>Aller</b> Anfang <b>ist</b> schwer</span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
+                            <span>Müßiggang <b>ist aller</b> Laster Anfang</span>
                         </v-list-item>
                     </v-list>
                 </v-list-item>
@@ -187,28 +151,16 @@
             <v-list>
                 <v-list-item style="margin:-10px 0px 0px 0px">
                     <span style="font-weight: 400; font-size: 0.90rem;">
-                        <v-icon icon="mdi-magnify" />&nbsp;"schlagen" findet:
+                        <v-icon icon="mdi-magnify" />&nbsp;"alles ist" findet:
                     </span>
                     <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
+                            <span><b>Alles-ist</b>-möglich-Ruf</span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
+                            <span>Dabeisein <b>ist alles</b></span>
                         </v-list-item>
                     </v-list>
                 </v-list-item>
@@ -216,43 +168,105 @@
             <v-list>
                 <v-list-item style="margin:-10px 0px 0px 0px">
                     <span style="font-weight: 400; font-size: 0.90rem;">
-                        <v-icon icon="mdi-magnify" />&nbsp;"schlagen" findet:
+                        <v-icon icon="mdi-magnify" />&nbsp;"allen ist" findet:
                     </span>
                     <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>xxx</span>
+                            <span><b>Allen</b> Leuten recht getan, <b>ist</b> eine Kunst die niemand kann</span>
                         </v-list-item>
                     </v-list>
                 </v-list-item>
             </v-list>
         </li>
         <li>
-            <p> <b>Exakte Wortformsuche:</b> Findet Wörter mit ähnlicher Schreibung. Dadurch können auch Treffer
+            <p> <b>Unscharfe Wortsuche:</b> Findet Wörter mit ähnlicher Schreibung. Dadurch können auch Treffer
                 erscheinen,
                 die zu einem anderen Lemma gehören. Beispiele: </p>
+            <v-list>
+                <v-list-item style="margin:-10px 0px 0px 0px">
+                    <span style="font-weight: 400; font-size: 0.90rem;">
+                        <v-icon icon="mdi-magnify" />&nbsp;"Grab" findet:
+                    </span>
+                    <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
+                        <v-list-item>
+                            <v-icon icon="mdi-pan-right" />&nbsp;
+                            <span><span style="font-variant: small-caps;">Präposition</span> <b>Gräben</b></span>
+                        </v-list-item>
+                        <v-list-item>
+                            <v-icon icon="mdi-pan-right" />&nbsp;
+                            <span>Alexander-<b>Grab</b></span>
+                        </v-list-item>
+                        <v-list-item>
+                            <v-icon icon="mdi-pan-right" />&nbsp;
+                            <span><b>graben</b> nach Gold</span>
+                        </v-list-item>
+                    </v-list>
+                </v-list-item>
+            </v-list>
+            <v-list>
+                <v-list-item style="margin:-10px 0px 0px 0px">
+                    <span style="font-weight: 400; font-size: 0.90rem;">
+                        <v-icon icon="mdi-magnify" />&nbsp;"rosten" findet:
+                    </span>
+                    <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
+                        <v-list-item>
+                            <v-icon icon="mdi-pan-right" />&nbsp;
+                            <span><b>rosten</b> <span style="font-variant: small-caps;">Präposition</span></span>
+                        </v-list-item>
+                        <v-list-item>
+                            <v-icon icon="mdi-pan-right" />&nbsp;
+                            <span><span style="font-variant: small-caps;">Präposition</span> <b>Rost</b></span>
+                        </v-list-item>
+                        <v-list-item>
+                            <v-icon icon="mdi-pan-right" />&nbsp;
+                            <span><span style="font-variant: small-caps;">Präposition</span> <b>Rösten</b></span>
+                        </v-list-item>
+                    </v-list>
+                </v-list-item>
+            </v-list>
         </li>
         <li>
-            <p><b>Exakte Wortformsuche:</b> Findet beliebige Zeichenfolgen. Unabhängig davon, ob sie ein vollständiges
+            <p><b>Zeichenkettensuche:</b> Findet beliebige Zeichenfolgen. Unabhängig davon, ob sie ein vollständiges
                 Wort
                 oder nur einen Wortteil bilden. Beispiele:</p>
+            <v-list>
+                <v-list-item style="margin:-10px 0px 0px 0px">
+                    <span style="font-weight: 400; font-size: 0.90rem;">
+                        <v-icon icon="mdi-magnify" />&nbsp;"ab" findet:
+                    </span>
+                    <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
+                        <v-list-item>
+                            <v-icon icon="mdi-pan-right" />&nbsp;
+                            <span><b>ab</b> Werk</span>
+                        </v-list-item>
+                        <v-list-item>
+                            <v-icon icon="mdi-pan-right" />&nbsp;
+                            <span>Der Bart ist <b>ab</b></span>
+                        </v-list-item>
+                        <v-list-item>
+                            <v-icon icon="mdi-pan-right" />&nbsp;
+                            <span><b>Ab</b>sicht äußern</span>
+                        </v-list-item>
+                        <v-list-item>
+                            <v-icon icon="mdi-pan-right" />&nbsp;
+                            <span><b>ab</b>bauen <span style="font-variant: small-caps;">Präposition</span></span>
+                        </v-list-item>
+                        <v-list-item>
+                            <v-icon icon="mdi-pan-right" />&nbsp;
+                            <span>Die-N<b>ab</b>el-der-Welt-Woche</span>
+                        </v-list-item>
+                        <v-list-item>
+                            <v-icon icon="mdi-pan-right" />&nbsp;
+                            <span>Alexander-Gr<b>ab</b></span>
+                        </v-list-item>
+                    </v-list>
+                </v-list-item>
+            </v-list>
         </li>
     </ul>
-
+    <h2>Sucharten</h2>
+    <p>
+        lorem ipsum - Es gibt verschiedene Arten von Suchanfragen, die Sie durchführen können:
+    </p>
 </template>

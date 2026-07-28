@@ -44,7 +44,7 @@
                 alabel="Stichwortsuche">
                 Suche
             </main-menu-item>
-            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-book-open" to="/search/info"
+            <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-book-open" to="/info"
                 alabel="Stichwortsuche">
                 Dokumentation
             </main-menu-item>
