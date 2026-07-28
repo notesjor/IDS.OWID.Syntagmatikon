@@ -252,16 +252,8 @@ export default {
 
       search_exact: true,
 
-      search_exactness_panel: [],
-      search_exactness_custom: "black",
       search_exactness: 1,
       search_exactness_syncLock: false,
-      /*search_exactness_labels: {
-        1: 'Lemma',
-        2: 'Exakt',
-        3: 'Unscharf',
-        4: 'Zeichenkette'
-      },*/
 
       search_detail_multiword_labels: [{ text: 'Exakte Wortfolge', value: 0 }, { text: 'Exakte Zeichenfolge', value: 1 }, { text: 'Beliebig', value: 2 }],
       search_detail_layer_labels: [{ text: 'Exakte Wortform', value: 0 }, { text: 'Vereinfachte Form', value: 1 }, { text: 'Lemma', value: 2 }],
@@ -371,37 +363,6 @@ export default {
     },
     getResourcesShortNameGroup(key) {
       return this.resourcesStore?.getResource(key[0].dic)?.nameShort;
-    },
-    calcSearchExactness() {
-      return; // vorerst auskommentiert, da die Detaileinstellungen noch nicht vollständig implementiert sind.
-
-      if (this.search_exactness_syncLock)
-        return;
-      this.search_exactness_syncLock = true;
-
-      var val = this.search_detail_multiword + this.search_detail_layer + this.search_detail_fuzzy;
-
-      switch (val) {
-        case 0:
-          this.search_exactness = 1;
-          break;
-        case 1:
-        case 2:
-          this.search_exactness = 2;
-          break;
-        case 3:
-          this.search_exactness = 3;
-          break;
-        case 4:
-        case 5:
-          this.search_exactness = 4;
-          break;
-        case 6:
-          this.search_exactness = 5;
-          break;
-      }
-
-      this.search_exactness_syncLock = false;
     }
   },
   watch: {
@@ -471,7 +432,6 @@ export default {
       if (this.search_exactness_syncLock)
         return;
 
-      this.calcSearchExactness();
       this.newSearch();
     },
     search_detail_layer: function (val) {
@@ -481,7 +441,6 @@ export default {
       if (this.search_exactness_syncLock)
         return;
 
-      this.calcSearchExactness();
       this.newSearch();
     },
     search_detail_fuzzy: function (val) {
@@ -491,7 +450,6 @@ export default {
       if (this.search_exactness_syncLock)
         return;
 
-      this.calcSearchExactness();
       this.newSearch();
     }
   },
