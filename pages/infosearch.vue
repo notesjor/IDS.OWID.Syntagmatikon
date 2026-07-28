@@ -4,6 +4,7 @@ export default {
     mounted() {
         const props = useLayoutStore();
         props.title = 'Dokumentation zur Suche';
+        props.parent = 'Fallbeispiele'; // Das muss so bleiben - damit die Farbe korrekt ist.
     },
 }
 </script>
@@ -33,20 +34,20 @@ export default {
             <v-list>
                 <v-list-item style="margin:-10px 0px 0px 0px">
                     <span style="font-weight: 400; font-size: 0.90rem;">
-                        <v-icon icon="mdi-magnify" />&nbsp;"schlagen" findet:
+                        <v-icon icon="mdi-magnify" />&nbsp;<b>"schlagen"</b> findet:
                     </span>
                     <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>ein Rad <b>schlagen</b> vor Freude</span>
+                            <span>ein Rad <m>schlagen</m> vor Freude</span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>Pack <b>schlägt</b> sich, Pack verträgt sich</span>
+                            <span>Pack <m>schlägt</m> sich, Pack verträgt sich</span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span><span style="font-variant: small-caps;">Präposition</span> <b>Schlagen</b></span>
+                            <span><span style="font-variant: small-caps;">Präposition</span> <m>Schlagen</m></span>
                         </v-list-item>
                     </v-list>
                 </v-list-item>
@@ -54,28 +55,28 @@ export default {
             <v-list>
                 <v-list-item style="margin:-10px 0px 0px 0px">
                     <span style="font-weight: 400; font-size: 0.90rem;">
-                        <v-icon icon="mdi-magnify" />&nbsp;"sein" findet:
+                        <v-icon icon="mdi-magnify" />&nbsp;<b>"sein"</b> findet:
                     </span>
                     <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>Aller Anfang <b>ist</b> schwer</span>
+                            <span>Aller Anfang <m>ist</m> schwer</span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>gewahr <b>sein</b></span>
+                            <span>gewahr <m>sein</m></span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>im Vollbesitz <b>seiner</b> geistigen Kräfte</span>
+                            <span>im Vollbesitz <m>seiner</m> geistigen Kräfte</span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>auf der Hut <b>sein</b> vor Dieben</span>
+                            <span>auf der Hut <m>sein</m> vor Dieben</span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>Früher-<b>war</b>-alles-besser-Gerede</span>
+                            <span>Früher-<m>war</m>-alles-besser-Gerede</span>
                         </v-list-item>
                     </v-list>
                 </v-list-item>
@@ -83,20 +84,20 @@ export default {
             <v-list>
                 <v-list-item style="margin:-10px 0px 0px 0px">
                     <span style="font-weight: 400; font-size: 0.90rem;">
-                        <v-icon icon="mdi-magnify" />&nbsp;"alle sein" findet:
+                        <v-icon icon="mdi-magnify" />&nbsp;<b>"alle sein"</b> findet:
                     </span>
                     <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span><b>Aller</b> Anfang <b>ist</b> schwer</span>
+                            <span><m>Aller</m> Anfang <m>ist</m> schwer</span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span><b>Alles</b> hat <b>seine</b> Zeit</span>
+                            <span><m>Alles</m> hat <m>seine</m> Zeit</span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span><b>Alle-sind</b>-gut-drauf-Gerede</span>
+                            <span><m>Alle-sind</m>-gut-drauf-Gerede</span>
                         </v-list-item>
                     </v-list>
                 </v-list-item>
@@ -109,20 +110,20 @@ export default {
             <v-list>
                 <v-list-item style="margin:-10px 0px 0px 0px">
                     <span style="font-weight: 400; font-size: 0.90rem;">
-                        <v-icon icon="mdi-magnify" />&nbsp;"waren" findet:
+                        <v-icon icon="mdi-magnify" />&nbsp;<b>"waren"</b> findet:
                     </span>
                     <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>Das <b>waren</b> noch Zeiten</span>
+                            <span>Das <m>waren</m> noch Zeiten</span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>greifen nach <b>Waren</b></span>
+                            <span>greifen nach <m>Waren</m></span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span><b>Waren</b>-Verwaltung</span>
+                            <span><m>Waren</m>-Verwaltung</span>
                         </v-list-item>
                     </v-list>
                 </v-list-item>
@@ -130,12 +131,12 @@ export default {
             <v-list>
                 <v-list-item style="margin:-10px 0px 0px 0px">
                     <span style="font-weight: 400; font-size: 0.90rem;">
-                        <v-icon icon="mdi-magnify" />&nbsp;"alle ist" findet:
+                        <v-icon icon="mdi-magnify" />&nbsp;<b>"alle ist"</b> findet:
                     </span>
                     <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>Grau <b>ist alle</b> Theorie</span>
+                            <span>Grau <m>ist alle</m> Theorie</span>
                         </v-list-item>
                     </v-list>
                 </v-list-item>
@@ -143,16 +144,16 @@ export default {
             <v-list>
                 <v-list-item style="margin:-10px 0px 0px 0px">
                     <span style="font-weight: 400; font-size: 0.90rem;">
-                        <v-icon icon="mdi-magnify" />&nbsp;"aller ist" findet:
+                        <v-icon icon="mdi-magnify" />&nbsp;<b>"aller ist"</b> findet:
                     </span>
                     <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span><b>Aller</b> Anfang <b>ist</b> schwer</span>
+                            <span><m>Aller</m> Anfang <m>ist</m> schwer</span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>Müßiggang <b>ist aller</b> Laster Anfang</span>
+                            <span>Müßiggang <m>ist aller</m> Laster Anfang</span>
                         </v-list-item>
                     </v-list>
                 </v-list-item>
@@ -160,16 +161,16 @@ export default {
             <v-list>
                 <v-list-item style="margin:-10px 0px 0px 0px">
                     <span style="font-weight: 400; font-size: 0.90rem;">
-                        <v-icon icon="mdi-magnify" />&nbsp;"alles ist" findet:
+                        <v-icon icon="mdi-magnify" />&nbsp;<b>"alles ist"</b> findet:
                     </span>
                     <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span><b>Alles-ist</b>-möglich-Ruf</span>
+                            <span><m>Alles-ist</m>-möglich-Ruf</span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>Dabeisein <b>ist alles</b></span>
+                            <span>Dabeisein <m>ist alles</m></span>
                         </v-list-item>
                     </v-list>
                 </v-list-item>
@@ -177,38 +178,38 @@ export default {
             <v-list>
                 <v-list-item style="margin:-10px 0px 0px 0px">
                     <span style="font-weight: 400; font-size: 0.90rem;">
-                        <v-icon icon="mdi-magnify" />&nbsp;"allen ist" findet:
+                        <v-icon icon="mdi-magnify" />&nbsp;<b>"allen ist"</b> findet:
                     </span>
                     <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span><b>Allen</b> Leuten recht getan, <b>ist</b> eine Kunst die niemand kann</span>
+                            <span><m>Allen</m> Leuten recht getan, <m>ist</m> eine Kunst die niemand kann</span>
                         </v-list-item>
                     </v-list>
                 </v-list-item>
             </v-list>
         </li>
         <li>
-            <p> <b>Unscharfe Wortsuche:</b> Findet Wörter mit ähnlicher Schreibung. Dadurch können auch Treffer
+            <p><b>Unscharfe Wortsuche:</b> Findet Wörter mit ähnlicher Schreibung. Dadurch können auch Treffer
                 erscheinen,
                 die zu einem anderen Lemma gehören. Beispiele: </p>
             <v-list>
                 <v-list-item style="margin:-10px 0px 0px 0px">
                     <span style="font-weight: 400; font-size: 0.90rem;">
-                        <v-icon icon="mdi-magnify" />&nbsp;"Grab" findet:
+                        <v-icon icon="mdi-magnify" />&nbsp;<b>"Grab"</b> findet:
                     </span>
                     <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span><span style="font-variant: small-caps;">Präposition</span> <b>Gräben</b></span>
+                            <span><span style="font-variant: small-caps;">Präposition</span> <m>Gräben</m></span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>Alexander-<b>Grab</b></span>
+                            <span>Alexander-<m>Grab</m></span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span><b>graben</b> nach Gold</span>
+                            <span><m>graben</m> nach Gold</span>
                         </v-list-item>
                     </v-list>
                 </v-list-item>
@@ -216,20 +217,20 @@ export default {
             <v-list>
                 <v-list-item style="margin:-10px 0px 0px 0px">
                     <span style="font-weight: 400; font-size: 0.90rem;">
-                        <v-icon icon="mdi-magnify" />&nbsp;"rosten" findet:
+                        <v-icon icon="mdi-magnify" />&nbsp;<b>"rosten"</b> findet:
                     </span>
                     <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span><b>rosten</b> <span style="font-variant: small-caps;">Präposition</span></span>
+                            <span><m>rosten</m> <span style="font-variant: small-caps;">Präposition</span></span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span><span style="font-variant: small-caps;">Präposition</span> <b>Rost</b></span>
+                            <span><span style="font-variant: small-caps;">Präposition</span> <m>Rost</m></span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span><span style="font-variant: small-caps;">Präposition</span> <b>Rösten</b></span>
+                            <span><span style="font-variant: small-caps;">Präposition</span> <m>Rösten</m></span>
                         </v-list-item>
                     </v-list>
                 </v-list-item>
@@ -242,32 +243,32 @@ export default {
             <v-list>
                 <v-list-item style="margin:-10px 0px 0px 0px">
                     <span style="font-weight: 400; font-size: 0.90rem;">
-                        <v-icon icon="mdi-magnify" />&nbsp;"ab" findet:
+                        <v-icon icon="mdi-magnify" />&nbsp;<b>"ab"</b> findet:
                     </span>
                     <v-list style="font-size: 0.90rem; font-weight: 300; margin: 0px 0px 0px 10px; padding: 0px;">
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span><b>ab</b> Werk</span>
+                            <span><m>ab</m> Werk</span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>Der Bart ist <b>ab</b></span>
+                            <span>Der Bart ist <m>ab</m></span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span><b>Ab</b>sicht äußern</span>
+                            <span><m>Ab</m>sicht äußern</span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span><b>ab</b>bauen <span style="font-variant: small-caps;">Präposition</span></span>
+                            <span><m>ab</m>bauen <span style="font-variant: small-caps;">Präposition</span></span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>Die-N<b>ab</b>el-der-Welt-Woche</span>
+                            <span>Die-N<m>ab</m>el-der-Welt-Woche</span>
                         </v-list-item>
                         <v-list-item>
                             <v-icon icon="mdi-pan-right" />&nbsp;
-                            <span>Alexander-Gr<b>ab</b></span>
+                            <span>Alexander-Gr<m>ab</m></span>
                         </v-list-item>
                     </v-list>
                 </v-list-item>
