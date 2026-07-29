@@ -25,7 +25,8 @@ export default {
   },
   mounted() {
     var resourcesStore = useResourcesStore();
-    this.item = resourcesStore.getResource(this.rkey);
+    const res = resourcesStore.getResource(this.rkey);
+    this.item = res ? res : { nameShort: '' };
     this.layoutVars = useLayoutStore();
     this.layoutVars.updateParent();
   },

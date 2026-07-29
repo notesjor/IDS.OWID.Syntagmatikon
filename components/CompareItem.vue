@@ -10,9 +10,9 @@
 
         <v-spacer></v-spacer>
         <div style="text-align: center;">
-            <nuxt-link v-if="!simple" :to="resource?.url" target="_blank">
-                <v-chip variant="outlined" density="compact">zur Ressource</v-chip>  
-            </nuxt-link>
+                <nuxt-link v-if="!simple && resourceUrl" :to="resourceUrl" target="_blank">
+                    <v-chip variant="outlined" density="compact">zur Ressource</v-chip>
+                </nuxt-link>
         </div>
     </v-window-item>
 </template>
@@ -51,7 +51,11 @@ export default {
         resource() {
             if (this.resourcesStore == null)
                 return { url: "" };
-            return this.resourcesStore.getResource(this.$props.rkey);
+            const res = this.resourcesStore.getResource(this.$props.rkey);
+            return res ? res : { url: "" };
+        },
+        resourceUrl() {
+            return this.resource && this.resource.url ? this.resource.url : "";
         }
     }
 }

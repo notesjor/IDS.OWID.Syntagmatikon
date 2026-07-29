@@ -95,11 +95,15 @@ export default {
       this.resourcesStore = useResourcesStore();
       var tabs = [];      
       tabs.push("Übersicht");
-      if (this.resourcesStore == null)
-        return tabs;
+      if (this.resourcesStore == null) {
+        this.tabs = tabs;
+        return;
+      }
 
       for (let i = 0; i < this.filter.length; i++) {
-        tabs.push(this.resourcesStore.getResource(this.filter[i]).nameShort);
+        const rkey = this.filter[i];
+        const res = this.resourcesStore.getResource(rkey);
+        tabs.push(res && res.nameShort ? res.nameShort : rkey);
       }
       this.tabs = tabs;
     },
