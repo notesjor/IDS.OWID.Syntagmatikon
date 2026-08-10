@@ -147,7 +147,7 @@ useHead({
           <!-- Auswahl der Ressourcen -->
           <v-expansion-panel elevation="0" value="resourcesSelection">
             <v-expansion-panel-title style="font-weight: 500; font-size: 1.2em;">
-              Ressourcen
+              Ressourcenfilter
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <div style="margin-top: -20px;">
@@ -187,7 +187,7 @@ useHead({
           <!-- Facetten -->
           <v-expansion-panel elevation="0" value="fineGrain">
             <v-expansion-panel-title style="font-weight: 500; font-size: 1.2em;">
-              Facetten
+              Facettenfilter
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-expansion-panels style="padding: 5px;" multiple v-model="openPanels1">

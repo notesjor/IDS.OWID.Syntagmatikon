@@ -11,33 +11,20 @@ export default {
 <template>
     <h1>Dokumentation zur Suche</h1>
     <p>
-        Hier finden Sie Informationen zur Funktionsweise der Suchfunktion auf unserer Website. Sie können nach
-        verschiedenen Kriterien suchen, einschließlich Schlüsselwörtern, Kategorien und Tags. Nutzen Sie die
-        Filteroptionen, um Ihre Suchergebnisse weiter einzugrenzen und relevante Inhalte schneller zu finden.
+        Hier finden Sie weiterführende Informationen zur <a href="/search">Suchfunktion</a> des <hi>Syntagmatikons</hi>. Erklärt werden die verschiedenen <b>Sucharten</b>, die zur Verfügung stehen, sowie die Möglichkeiten, die Suche durch den <b>Ressourcenfilter</b> und den <b>Facettenfilter</b> zu verfeinern.
     </p>
-    <p>
-        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
-    </p>
-    <NuxtImage src="/img/search/demo.jpg" alt="Lorem ipsum dolor sit amet"
-        style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
     <h2>Sucharten</h2>
-    <p>
-        lorem ipsum - Es gibt verschiedene Arten von Suchanfragen, die Sie durchführen können:
-    </p>
-
+    <p>Die Sucharten unterscheiden sich in der Art, wie die eingegebenen Suchbegriffe verarbeitet werden.
+    Verschiedene Sucharten sind für unterschiedliche Fragestellungen geeignet.</p>
     <!-- NOTE: in Filter werden die Ressourcen angegeben -->
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
     <compare :filter="['Lemmabasierte Suche', 'Exakte Wortformsuche', 'Unscharfe Wortsuche', 'Zeichenkettensuche']">
         <compare-item value="0">
-            <p>lorem ipsum - Es gibt verschiedene Arten von Suchanfragen, die Sie durchführen können</p>
-            <div style="text-align: center; width:100%">
-                <NuxtImage src="/img/datatypes/frequency/frequencies_all.png" alt="Beispielgrafik 1" />
-            </div>
+            
+               <div style="text-align: center; width:100%">
+          <NuxtImage src="/img/search/searchtypes.png" style="text-align: center;" alt="Beispielgrafik 1" />
+        </div>
         </compare-item>
 
         <compare-item value="1"> <!-- Lemmabasierte Suche -->
@@ -161,6 +148,10 @@ export default {
                             <v-list-item>
                                 <v-icon icon="mdi-pan-right" />&nbsp;
                                 <span>Grau <m>ist alle</m> Theorie</span>
+                            </v-list-item>
+                            <v-list-item>
+                                <v-icon icon="mdi-pan-right" />&nbsp;
+                                <span><m>Alle-sind</m>-gut-drauf-Gerede</span>
                             </v-list-item>
                         </v-list>
                     </v-list-item>
@@ -329,22 +320,29 @@ export default {
         </compare-item>
     </compare>
 
-    <h2>Facetten</h2>
+    <h2>Ressourcenfilter</h2>
+
     <p>
-        lorem ipsum - Hier lässt sich die Suche auf bestimmte Merkmale, die im Ressourcenkompass behandelt werden,
-        zuschneiden. Mehrere Filter können miteinander kombiniert werden.
-    </p>
-    <NuxtImage src="/img/search/facetten.jpg" alt="Lorem ipsum dolor sit amet"
-        style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
-    <h2>Ressourcen</h2>
-    <p>
-        lorem ipsum - Hier kann man die Suche auf eine oder mehrere ausgewählte Ressourcen beschränken.
+        Mit Hilfe des Ressourcenfilters kann man die Suche auf eine oder mehrere ausgewählte Ressourcen beschränken.</p>
+    <p>Beispiel: „Finde alle Treffer für das Lemma <em>und</em>, die in <r rkey="SPRW" /> und <r rkey="FesteWV" /> vorkommen“  &rarr; 26 Einträge</p>
+<p>
         Ressourcen können durch anklicken aktiviert <v-icon>mdi-check-circle</v-icon> oder deaktiviert
         <v-icon>mdi-circle-outline</v-icon> werden.
-        Ist eine Ressource aufgrund eines Facetten-Filters deaktiviert, wird sie automatisch deaktiviert
-        <v-icon>mdi-circle-off-outline</v-icon>.
-        Nur aktive Ressourcen werden bei der Suche berücksichtigt.
+        Ist eine Ressource aufgrund einer Einstellung im Facettenfilter ausgeschlossen, wird sie automatisch deaktiviert und mit folgendem Symbol markiert: <v-icon>mdi-circle-off-outline</v-icon>.
     </p>
-    <NuxtImage src="/img/search/ressourcen.jpg" alt="Lorem ipsum dolor sit amet"
-        style="float:right; margin: 1em 1em 0 1em; width: 40%;" />
+     <div style="text-align: center; width:100%">
+          <NuxtImage src="/img/search/ressourcenfilter.png" style="text-align: center;" alt="Beispielgrafik 1" />
+        </div>
+
+    <h2>Facettenfilter</h2>
+    <p>
+        Mit Hilfe des Facettenfilters lässt sich die Suche auf bestimmte Merkmale zuschneiden, die im Ressourcenkompass (siehe Menü links) behandelt werden. Mehrere Filter können miteinander kombiniert werden.
+    </p>
+    <p>
+        Beispiel: „Finde alle Treffer für das Lemma <em>nach</em>, zu denen es <b>narrative Beschreibungen</b> gibt“  &rarr; 984 Einträge und zwar in <r rkey="SPRW" />, <r rkey="FesteWV" /> und <r rkey="PREPCON_kon" />. Es gibt auch Treffer für <em>nach</em> in anderen Ressourcen, diese erscheinen aber nicht in den Ergebnissen, da sie nicht das geforderte Merkmal (narrative Beschreibungen) aufweisen.
+    </p>
+    <p>Wenn eine Ressource aufgrund eines Facettenfilters deaktiviert ist, wird sie im Ressourcenfilter mit diesem Symbol markiert: <v-icon>mdi-circle-off-outline</v-icon></p>
+     <div style="text-align: center; width:100%">
+          <NuxtImage src="/img/search/facettenfilter.png" style="text-align: center;" alt="Beispielgrafik 1" />
+        </div>
 </template>
