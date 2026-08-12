@@ -14,8 +14,7 @@ export default {
         Hier finden Sie weiterführende Informationen zur <a href="/search">Suchfunktion</a> des <hi>Syntagmatikons</hi>. Erklärt werden die verschiedenen <b>Sucharten</b>, die zur Verfügung stehen, sowie die Möglichkeiten, die Suche durch den <b>Ressourcenfilter</b> und den <b>Facettenfilter</b> zu verfeinern.
     </p>
     <h2>Sucharten</h2>
-    <p>Die Sucharten unterscheiden sich in der Art, wie die eingegebenen Suchbegriffe verarbeitet werden.
-    Verschiedene Sucharten sind für unterschiedliche Fragestellungen geeignet.</p>
+    <p>Die Sucharten unterscheiden sich in der Art, wie die eingegebenen Suchbegriffe verarbeitet werden.</p>
     <!-- NOTE: in Filter werden die Ressourcen angegeben -->
     <!-- NOTE: Es wird automatisch ein "Übersicht"-Tab angelegt - dieser hat den value="0" -->
     <!-- NOTE: Für jeden v-tab muss es ein <compare-item> geben - der value muss mit der Reihe in :filter übereinstimmen -->
@@ -339,9 +338,9 @@ export default {
         Mit Hilfe des Facettenfilters lässt sich die Suche auf bestimmte Merkmale zuschneiden, die im Ressourcenkompass (siehe Menü links) behandelt werden. Mehrere Filter können miteinander kombiniert werden.
     </p>
     <p>
-        Beispiel: „Finde alle Treffer für das Lemma <em>nach</em>, zu denen es <b>narrative Beschreibungen</b> gibt“  &rarr; 984 Einträge und zwar in <r rkey="SPRW" />, <r rkey="FesteWV" /> und <r rkey="PREPCON_kon" />. Es gibt auch Treffer für <em>nach</em> in anderen Ressourcen, diese erscheinen aber nicht in den Ergebnissen, da sie nicht das geforderte Merkmal (narrative Beschreibungen) aufweisen.
+        Beispiel: „Finde alle Treffer für das Lemma <em>nach</em> in Ressourcen, die <b>narrative Beschreibungen</b> enthalten.“ &rarr; 984 Einträge und zwar in <r rkey="SPRW" />, <r rkey="FesteWV" /> und <r rkey="PREPCON_kon" />.
     </p>
-    <p>Wenn eine Ressource aufgrund eines Facettenfilters deaktiviert ist, wird sie im Ressourcenfilter mit diesem Symbol markiert: <v-icon>mdi-circle-off-outline</v-icon></p>
+    <p>Wenn eine Ressource aufgrund eines Facettenfilters deaktiviert ist, wird sie im Ressourcenfilter mit diesem Symbol markiert: <v-icon>mdi-circle-off-outline</v-icon>.</p>
      <div style="text-align: center; width:100%">
           <NuxtImage src="/img/search/facettenfilter.png" style="text-align: center;" alt="Beispielgrafik 1" />
         </div>
