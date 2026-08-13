@@ -11,7 +11,7 @@ export default {
 <template>
     <h1>Dokumentation zur Suche</h1>
     <p>
-        Hier finden Sie weiterführende Informationen zur <a href="/search">Suchfunktion</a> des <hi>Syntagmatikons</hi>. Erklärt werden die verschiedenen <b>Sucharten</b>, die zur Verfügung stehen, sowie die Möglichkeiten, die Suche durch den <b>Ressourcenfilter</b> und den <b>Facettenfilter</b> zu verfeinern.
+        Hier finden Sie weiterführende Informationen zur <NuxtLink to="/search">Suchfunktion</NuxtLink> des <hi>Syntagmatikons</hi>. Erklärt werden die verschiedenen <b>Sucharten</b>, die zur Verfügung stehen, sowie die Möglichkeiten, die Suche durch den <b>Ressourcenfilter</b> und den <b>Facettenfilter</b> zu verfeinern.
     </p>
     <h2>Sucharten</h2>
     <p>Die Sucharten unterscheiden sich in der Art, wie die eingegebenen Suchbegriffe verarbeitet werden.</p>

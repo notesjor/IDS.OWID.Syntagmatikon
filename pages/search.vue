@@ -140,7 +140,7 @@ useHead({
               <p>Alle Trefferlisten (gesamt oder gefiltert) können nach Ressourcen oder alphabetisch sortiert werden.
               </p>
               <div style="margin-bottom: 15px;">
-                <a href="/search/info">Detaillierte Informationen zur Suche finden Sie hier.</a>
+                <NuxtLink to="/infosearch">Detaillierte Informationen zur Suche finden Sie hier.</NuxtLink>
               </div>
             </v-expansion-panel-text>
           </v-expansion-panel>
