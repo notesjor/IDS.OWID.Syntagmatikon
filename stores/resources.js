@@ -48,6 +48,9 @@ export const useResourcesStore = defineStore("resourcesStore", {
           // see the parent resource PREPCON_temp for those
           key: "PREPCON_temp_inv",
           key_relation: "PREPCON_temp",  // This is a child of PREPCON_temp
+          nameShort: "PREPCON<sup>temporal</sup>",
+          nameLong:
+            "PREPCON<sup>temporal</sup> - Kurzartikel und Inventar zu temporalen Präposition-Nomen-Verbindungen im Kontext",
           search_type: ["Inventare und Sammlungen"],
           search_functions: ["Frequenzen", "KWICs", "Kategoriale Label"],
           search_patterns: ["dynamische Erschließung"],
@@ -58,6 +61,9 @@ export const useResourcesStore = defineStore("resourcesStore", {
           // see the parent resource PREPCON_temp for those
           key: "PREPCON_temp_art",
           key_relation: "PREPCON_temp", // This is a child of PREPCON_temp
+          nameShort: "PREPCON<sup>temporal</sup>",
+          nameLong:
+            "PREPCON<sup>temporal</sup> - Kurzartikel und Inventar zu temporalen Präposition-Nomen-Verbindungen im Kontext",
           search_type: ["Inventare und Sammlungen"],
           search_functions: [
             "Frequenzen",
