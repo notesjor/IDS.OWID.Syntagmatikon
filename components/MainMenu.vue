@@ -46,7 +46,7 @@
             </main-menu-item>
             <main-menu-item :useMobileView="useMobileView" color2="#2962FF" icon="mdi-book-open" to="/infosearch"
                 alabel="Stichwortsuche">
-                Dokumentation
+                Hilfe zur Suche
             </main-menu-item>
         </v-list>
         <!-- ADDITIONAL INFORMATION END -->

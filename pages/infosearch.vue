@@ -3,13 +3,13 @@ import { useLayoutStore } from '~/stores/layout';
 export default {
     mounted() {
         const props = useLayoutStore();
-        props.title = 'Dokumentation zur Suche';
+        props.title = 'Hilfe zur Suche';
         props.parent = 'Fallbeispiele'; // Das muss so bleiben - damit die Farbe korrekt ist.
     },
 }
 </script>
 <template>
-    <h1>Dokumentation zur Suche</h1>
+    <h1>Hilfe zur Suche</h1>
     <p>
         Hier finden Sie weiterführende Informationen zur <NuxtLink to="/search">Suchfunktion</NuxtLink> des <hi>Syntagmatikons</hi>. Erklärt werden die verschiedenen <b>Sucharten</b>, die zur Verfügung stehen, sowie die Möglichkeiten, die Suche durch den <b>Ressourcenfilter</b> und den <b>Facettenfilter</b> zu verfeinern.
     </p>
